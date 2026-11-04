@@ -459,36 +459,47 @@
     const lines=spreadByGame(game.id);
     if(!lines.length){const empty=document.createElement('div');empty.className='spread-empty';empty.textContent='这场比赛暂无让分数据，请检查 spreads.json 是否已更新。';wrapper.append(empty);return;}
     const side=states.get(game.id)||{tab:'moneyline',showAll:false,filter:'ALL'};
-    const sorted=lines.filter(x=>side.filter==='ALL'||x.team===side.filter)
+    const choices=lines.filter(x=>side.filter==='ALL'||x.team===side.filter)
       .sort((a,b)=>a.team.localeCompare(b.team)||a.margin-b.margin);
     const picked=selected.get(game.id);
     const highlightedIds=new Set();
     for(const code of [game.away.code,game.home.code]){
-      const closest=sorted.filter(x=>x.team===code&&validPrice(x.pricePercent))
-        .sort((a,b)=>Math.abs(a.pricePercent-50)-Math.abs(b.pricePercent-50));
-      closest.slice(0,3).forEach(x=>highlightedIds.add(x.id));
+      // Pick a few mainstream lines of each direction, for each team.
+      for(const sign of [-1,1]){
+        choices.filter(x=>x.team===code&&Math.sign(x.margin)===sign&&validPrice(x.pricePercent))
+          .sort((a,b)=>Math.abs(a.pricePercent-50)-Math.abs(b.pricePercent-50))
+          .slice(0,2).forEach(x=>highlightedIds.add(x.id));
+      }
     }
-    const visible=side.showAll?sorted:sorted.filter(x=>highlightedIds.has(x.id)||picked?.contractId===x.id).sort((a,b)=>a.team.localeCompare(b.team)||a.margin-b.margin);
+    const visible=side.showAll?choices:choices.filter(x=>highlightedIds.has(x.id)||picked?.contractId===x.id);
     const controls=document.createElement('div');controls.className='spread-controls';
     for(const [text,team] of [['全部','ALL'],[teamNames[game.away.code]||game.away.code,game.away.code],[teamNames[game.home.code]||game.home.code,game.home.code]]){
       const btn=document.createElement('button');btn.type='button';btn.textContent=text;btn.className='filter-chip'+(side.filter===team?' active':'');
       btn.addEventListener('click',()=>{side.filter=team;states.set(game.id,side);makeSpreadRows(game,wrapper);});controls.append(btn);
     }
     wrapper.append(controls);
-    const count=document.createElement('div');count.className='spread-count';count.textContent=`${visible.length}/${sorted.length} 条盘口 · 让分表示球队至少赢过指定分差`;wrapper.append(count);
+    const count=document.createElement('div');count.className='spread-count';
+    count.textContent=`${visible.length}/${choices.length} 个方向（含让分 − / 受让 +） · YES/NO 分别使用 RH 实际买入价`;
+    wrapper.append(count);
     const rows=document.createElement('div');rows.className='spread-rows';
     for(const x of visible){
       const row=document.createElement('div');row.className='spread-row';
       const ident=document.createElement('div');ident.className='spread-ident';
-      const name=document.createElement('div');name.className='spread-title';name.textContent=(x.teamNameZh||teamNames[x.team]||x.team)+' -'+fmt(x.margin);
-      const sub=document.createElement('div');sub.className='spread-caption';sub.textContent=`${x.team} 赢超过 ${fmt(x.margin)} 分`;
+      const teamName=x.teamNameZh||teamNames[x.team]||x.team;
+      const line=Number(x.margin);
+      const signed=line<0?'+'+fmt(-line):'-'+fmt(line);
+      const label=teamName+' '+signed;
+      const name=document.createElement('div');name.className='spread-title';name.textContent=label;
+      const sub=document.createElement('div');sub.className='spread-caption';
+      sub.textContent=line<0?`受让 ${fmt(-line)} 分 · ${x.team} 赢球或输分未超过盘口`:`让分 ${fmt(line)} 分 · ${x.team} 需赢超过盘口`;
       ident.append(name,sub);
-      const btn=rowButton((x.teamNameZh||teamNames[x.team]||x.team)+' -'+fmt(x.margin),x.pricePercent,game.id,'spread',x.team,x.id,'odd spread-odd');
+      const btn=rowButton(label,x.pricePercent,game.id,'spread',x.team,x.id,'odd spread-odd');
       row.append(ident,btn);rows.append(row);
     }
     wrapper.append(rows);
-    if(!side.showAll){const more=document.createElement('button');more.className='spread-more';more.type='button';more.textContent=`展开全部 ${sorted.length} 条让分盘口 ↓`;more.addEventListener('click',()=>{side.showAll=true;states.set(game.id,side);makeSpreadRows(game,wrapper);});wrapper.append(more);}
-    else{const less=document.createElement('button');less.className='spread-more';less.type='button';less.textContent='收起，仅显示主流盘口 ↑';less.addEventListener('click',()=>{side.showAll=false;states.set(game.id,side);makeSpreadRows(game,wrapper);});wrapper.append(less);}
+    const more=document.createElement('button');more.className='spread-more';more.type='button';
+    more.textContent=side.showAll?'收起，仅显示主流盘口 ↑':`展开全部 ${choices.length} 个让分/受让方向 ↓`;
+    more.addEventListener('click',()=>{side.showAll=!side.showAll;states.set(game.id,side);makeSpreadRows(game,wrapper);});wrapper.append(more);
     syncButtons();
   }
   function render() {
@@ -527,7 +538,7 @@
     const count=spreads?.date===odds.date?spreads.games.reduce((s,g)=>s+g.lines.length,0):0;
     const fmtDate=s=>{const dt=new Date(s);return isNaN(dt.getTime())?'未知':new Intl.DateTimeFormat('zh-CN',{timeZone:'Asia/Shanghai',month:'numeric',day:'numeric',hour:'2-digit',minute:'2-digit',hour12:false}).format(dt);};
     const totalCount=totals?.date===odds.date?totals.games.reduce((s,g)=>s+g.lines.length,0):0;
-    document.getElementById('data-note').textContent=`RH 公开网页缓存（非官方 API） · 胜负：${fmtDate(odds.capturedAt)} · 让分：${spreads?.date===odds.date?fmtDate(spreads.capturedAt):'未获得'}（${count} 条） · 大小球：${totals?.date===odds.date?fmtDate(totals.capturedAt):'未获得'}（${totalCount} 条总分线）。胜负/让分按 YES 买入价，大小球按 Over YES / Under NO 实际买入价。串关为理论独立倍率相乘，不等于 RH Combo 实际报价，未计费用和滑点。`;
+    document.getElementById('data-note').textContent=`RH 公开网页缓存（非官方 API） · 胜负：${fmtDate(odds.capturedAt)} · 让分：${spreads?.date===odds.date?fmtDate(spreads.capturedAt):'未获得'}（${count} 条） · 大小球：${totals?.date===odds.date?fmtDate(totals.capturedAt):'未获得'}（${totalCount} 条总分线）。胜负按 YES、让分/受让按 YES/NO、大小球按 Over YES / Under NO 实际买入价。串关为理论独立倍率相乘，不等于 RH Combo 实际报价，未计费用和滑点。`;
     updateSlip();
   }
   function syncButtons(){
@@ -549,7 +560,7 @@
     document.getElementById('slip-preview-profit').textContent='净赚 '+(picks.length?money(stake*(mult-1)):'—');
     const choices=document.getElementById('choices');
     choices.replaceChildren();
-    if(!picks.length){choices.className='choices empty';choices.textContent='选择胜负、让分或大小球盘口，每场限选一个';}
+    if(!picks.length){choices.className='choices empty';choices.textContent='选择胜负、让分、受让或大小球盘口，每场限选一个';}
     else {choices.className='choices';for(const p of picks){const chip=document.createElement('span');chip.className='chip';chip.textContent=p.label+' · '+fmt(p.pricePercent)+'%';choices.append(chip);}}
     document.getElementById('combo-type').textContent=picks.length>=2?'混合盘口理论串关':picks.length===1?'单场理论收益':'选择比赛';
     document.getElementById('cart-add').disabled=!picks.length;
@@ -694,9 +705,9 @@
     for(const [id,pick] of selected){
       if(!gameIds.has(id)){selected.delete(id);continue;}
       if(pick.kind==='spread'){
-        const x=spreadByGame(id).find(line=>line.id===pick.contractId);
+        const x=spreadByGame(id).find(line=>line.id===pick.contractId || (line.side==='yes' && line.contractId===pick.contractId));
         if(!x||!validPrice(x.pricePercent))selected.delete(id);
-        else pick.pricePercent=x.pricePercent;
+        else { pick.pricePercent=x.pricePercent; pick.contractId=x.id; }
       } else if(pick.kind==='total'){
         const originalId=pick.contractId.slice(0,-(pick.team.length+1));
         const x=totalByGame(id).find(line=>line.id===originalId);
