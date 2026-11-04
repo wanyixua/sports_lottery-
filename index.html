@@ -226,6 +226,14 @@
 .spread-empty{font-size:12px;color:#b2c0d9;line-height:1.7;padding:15px;background:rgba(255,255,255,.035);border-radius:13px;}
 @media(max-width:430px){.spread-row{gap:8px;padding:8px}.spread-odd{width:112px}.spread-title{font-size:14px}.spread-caption{font-size:10px}}
 
+
+.total-row{padding:10px;border:1px solid rgba(255,255,255,.065);background:rgba(255,255,255,.035);border-radius:14px;display:flex;gap:12px;align-items:center;justify-content:space-between;}
+.total-line{flex:0 0 65px;color:#f1f6ff;font-weight:850;font-size:15px;}
+.total-choices{flex:1;display:grid;grid-template-columns:1fr 1fr;gap:8px;min-width:0;}
+.total-odd{width:100%;min-width:0;min-height:66px;padding:6px 4px;}
+.total-odd strong{font-size:17px}.total-odd small{font-size:10px;}
+.total-odd::before{content:attr(data-side);display:block;font-weight:850;font-size:12px;color:#b6cce8;margin-bottom:1px;}
+@media(max-width:420px){.total-row{gap:7px;padding:7px}.total-line{flex-basis:57px;font-size:13px}.total-choices{gap:5px}.total-odd strong{font-size:15px}.total-odd small{font-size:9px}}
   </style>
 </head>
 <body>
@@ -249,7 +257,7 @@
       <div class="summary-card">
         <div class="summary-label">使用说明</div>
         <div class="summary-value" style="font-size:18px">点击赔率按钮选串</div>
-        <div class="summary-sub">同场限选一项；胜负、让分可混串。</div>
+        <div class="summary-sub">同场限选一项；胜负、让分、大小球可混串。</div>
       </div>
     </section>
 
@@ -282,7 +290,7 @@
         <div class="stat"><small>总返还</small><b id="payout">—</b></div>
         <div class="stat"><small>净利润</small><b class="positive" id="profit">—</b></div>
       </div>
-      <div id="choices" class="choices empty">点击比赛中的赔率按钮选择球队（每场限选一队）</div>
+      <div id="choices" class="choices empty">点击赔率按钮选串（每场限选一个盘口）</div>
       <div class="disclaimer">说明：这里显示的是根据单队买入价格计算的理论串关收益，不等于 Robinhood 实际 Combo 报价；未计手续费、滑点与成交差异。</div>
       </div>
     </div>
@@ -304,6 +312,7 @@
   const fmt = n => Number.isInteger(n) ? String(n) : Number(n).toFixed(1);
   let odds = JSON.parse(document.getElementById('fallback-data').textContent);
   let spreads = null;
+  let totals = null;
   let stake = 10;
   const netProfit = p => stake * (100 / Number(p) - 1);
   const getBJ = (date, time) => {
@@ -340,6 +349,40 @@
     row.append(jersey,identity,record,btn);return row;
   }
   const spreadByGame=id=>spreads?.date===odds?.date ? spreads.games.find(x=>x.id===id)?.lines||[] : [];
+  const totalByGame=id=>totals?.date===odds?.date ? totals.games.find(x=>x.id===id)?.lines||[] : [];
+  function makeTotalRows(game, wrapper){
+    wrapper.replaceChildren();
+    const lines=totalByGame(game.id);
+    if(!lines.length){const el=document.createElement('div');el.className='spread-empty';el.textContent='这场比赛暂无大小球数据，请检查 totals.json 是否更新。';wrapper.append(el);return;}
+    const side=states.get(game.id)||{tab:'moneyline',showAll:false,filter:'ALL'};
+    const items=lines.slice().sort((a,b)=>a.points-b.points);
+    const picked=selected.get(game.id);
+    // Start with mainstream lines (ask closest to 50%). Show every line when expanded.
+    const best=items.slice().filter(x=>validPrice(x.overPricePercent)||validPrice(x.underPricePercent))
+      .sort((a,b)=>Math.min(Math.abs((a.overPricePercent??0)-50),Math.abs((a.underPricePercent??0)-50))-
+                       Math.min(Math.abs((b.overPricePercent??0)-50),Math.abs((b.underPricePercent??0)-50))).slice(0,5);
+    const ids=new Set(best.map(x=>x.id));
+    if(picked?.kind==='total')ids.add(picked.contractId);
+    const visible=side.showAll?items:items.filter(x=>ids.has(x.id));
+    const count=document.createElement('div');count.className='spread-count';count.textContent=`${visible.length}/${items.length} 条总分线 · 包含加时赛 · 大球与小球分别按 RH YES/NO 买入价计算`;wrapper.append(count);
+    const rows=document.createElement('div');rows.className='spread-rows';
+    for(const x of visible){
+      const row=document.createElement('div');row.className='total-row';
+      const label=document.createElement('div');label.className='total-line';label.textContent=fmt(x.points)+' 分';
+      const both=document.createElement('div');both.className='total-choices';
+      for(const [type,text,price] of [['over','大球',x.overPricePercent],['under','小球',x.underPricePercent]]){
+        const btn=rowButton(text+' '+fmt(x.points),price,game.id,'total',type,x.id+':'+type,'odd total-odd');
+        // Keep original contract ID separately, used when fresh cache arrives.
+        btn.dataset.contract=x.id+':'+type;btn.dataset.side=text;
+        both.append(btn);
+      }
+      row.append(label,both);rows.append(row);
+    }
+    wrapper.append(rows);
+    const more=document.createElement('button');more.className='spread-more';more.type='button';more.textContent=side.showAll?'收起，仅显示主流总分线 ↑':`展开全部 ${items.length} 条总分线 ↓`;
+    more.addEventListener('click',()=>{side.showAll=!side.showAll;states.set(game.id,side);makeTotalRows(game,wrapper);});wrapper.append(more);
+    syncButtons();
+  }
   function makeSpreadRows(game, wrapper) {
     wrapper.replaceChildren();
     const lines=spreadByGame(game.id);
@@ -393,10 +436,11 @@
       const drawContent=()=>{
         content.replaceChildren();
         if(state.tab==='moneyline'){content.append(createWinner(game,'away'),createWinner(game,'home'));}
-        else {makeSpreadRows(game,content);}
+        else if(state.tab==='spread'){makeSpreadRows(game,content);}
+        else {makeTotalRows(game,content);}
         syncButtons();
       };
-      for(const [label,key] of [['胜负','moneyline'],['让分','spread']]){
+      for(const [label,key] of [['胜负','moneyline'],['让分','spread'],['大小球','total']]){
         const t=document.createElement('button');t.type='button';t.className='market-tab'+(state.tab===key?' active':'');t.textContent=label;
         t.addEventListener('click',()=>{state.tab=key;states.set(game.id,state);tabs.querySelectorAll('.market-tab').forEach(b=>b.classList.toggle('active',b===t));drawContent();});tabs.append(t);
       }
@@ -407,11 +451,12 @@
     const date=(bj.match(/\d+月\d+日/)||[])[0]||odds.date;
     document.getElementById('summary-date').textContent=date+' · 北京时间';
     document.getElementById('summary-meta').textContent=`${odds.games.length} 场比赛`;
-    document.getElementById('hero-sub').textContent='胜负与让分都能选串，每场比赛限选一个盘口。';
-    status.textContent=spreads?.date===odds.date?'RH 胜负 / 让分缓存':'胜负缓存 · 让分待更新';
+    document.getElementById('hero-sub').textContent='胜负、让分、大小球都能选串，每场比赛限选一个盘口。';
+    status.textContent=totals?.date===odds.date?'RH 三种盘口缓存':'RH 胜负 / 让分缓存';
     const count=spreads?.date===odds.date?spreads.games.reduce((s,g)=>s+g.lines.length,0):0;
     const fmtDate=s=>{const dt=new Date(s);return isNaN(dt.getTime())?'未知':new Intl.DateTimeFormat('zh-CN',{timeZone:'Asia/Shanghai',month:'numeric',day:'numeric',hour:'2-digit',minute:'2-digit',hour12:false}).format(dt);};
-    document.getElementById('data-note').textContent=`RH 公开网页缓存（非官方 API） · 胜负更新时间：${fmtDate(odds.capturedAt)} · 让分更新时间：${spreads?.date===odds.date?fmtDate(spreads.capturedAt):'未获得'} · ${count} 条让分合约。价格为 YES 买入报价，部分合约可能暂无报价。串关为独立合约倍率相乘的理论值，不等于 RH Combo 实际报价，未计费用和滑点。`;
+    const totalCount=totals?.date===odds.date?totals.games.reduce((s,g)=>s+g.lines.length,0):0;
+    document.getElementById('data-note').textContent=`RH 公开网页缓存（非官方 API） · 胜负：${fmtDate(odds.capturedAt)} · 让分：${spreads?.date===odds.date?fmtDate(spreads.capturedAt):'未获得'}（${count} 条） · 大小球：${totals?.date===odds.date?fmtDate(totals.capturedAt):'未获得'}（${totalCount} 条总分线）。胜负/让分按 YES 买入价，大小球按 Over YES / Under NO 实际买入价。串关为理论独立倍率相乘，不等于 RH Combo 实际报价，未计费用和滑点。`;
     updateSlip();
   }
   function syncButtons(){
@@ -433,9 +478,9 @@
     document.getElementById('slip-preview-profit').textContent='净赚 '+(picks.length?money(stake*(mult-1)):'—');
     const choices=document.getElementById('choices');
     choices.replaceChildren();
-    if(!picks.length){choices.className='choices empty';choices.textContent='选择胜负或让分盘口，每场限选一个';}
+    if(!picks.length){choices.className='choices empty';choices.textContent='选择胜负、让分或大小球盘口，每场限选一个';}
     else {choices.className='choices';for(const p of picks){const chip=document.createElement('span');chip.className='chip';chip.textContent=p.label+' · '+fmt(p.pricePercent)+'%';choices.append(chip);}}
-    document.getElementById('combo-type').textContent=picks.length>=2?'胜负 + 让分理论串关':picks.length===1?'单场理论收益':'选择比赛';
+    document.getElementById('combo-type').textContent=picks.length>=2?'混合盘口理论串关':picks.length===1?'单场理论收益':'选择比赛';
     syncButtons();
   }
   list.addEventListener('click',ev=>{
@@ -455,10 +500,12 @@
   render();
   Promise.allSettled([
     fetch('odds.json',{cache:'no-store'}).then(r=>r.ok?r.json():Promise.reject(Error('odds HTTP '+r.status))),
-    fetch('spreads.json',{cache:'no-store'}).then(r=>r.ok?r.json():Promise.reject(Error('spreads HTTP '+r.status)))
-  ]).then(([a,b])=>{
+    fetch('spreads.json',{cache:'no-store'}).then(r=>r.ok?r.json():Promise.reject(Error('spreads HTTP '+r.status))),
+    fetch('totals.json',{cache:'no-store'}).then(r=>r.ok?r.json():Promise.reject(Error('totals HTTP '+r.status)))
+  ]).then(([a,b,c])=>{
     if(a.status==='fulfilled'&&Array.isArray(a.value.games)) odds=a.value;
     if(b.status==='fulfilled'&&Array.isArray(b.value.games)) spreads=b.value;
+    if(c.status==='fulfilled'&&Array.isArray(c.value.games)) totals=c.value;
     // Remove selections whose price no longer exists in the current source.
     const gameIds=new Set((odds.games||[]).map(g=>g.id));
     for(const [id,pick] of selected){
@@ -467,6 +514,12 @@
         const x=spreadByGame(id).find(line=>line.id===pick.contractId);
         if(!x||!validPrice(x.pricePercent))selected.delete(id);
         else pick.pricePercent=x.pricePercent;
+      } else if(pick.kind==='total'){
+        const originalId=pick.contractId.slice(0,-(pick.team.length+1));
+        const x=totalByGame(id).find(line=>line.id===originalId);
+        const p=x?.[pick.team==='over'?'overPricePercent':'underPricePercent'];
+        if(!validPrice(p))selected.delete(id);
+        else pick.pricePercent=p;
       } else {
         const g=odds.games.find(x=>x.id===id); const t=[g.away,g.home].find(x=>x.code===pick.team);
         if(!t||!validPrice(t.pricePercent))selected.delete(id);
