@@ -157,6 +157,18 @@
     .stake-wrap input { width:100%; padding:7px 9px; border-radius:10px; border:1px solid rgba(255,255,255,.10); background:rgba(4,9,18,.72); color:#fff; font-size:17px; font-weight:850; }
     .stat b { display:block; font-size:18px; font-weight:900; letter-spacing:-0.03em; }
     .positive { color:#90f0bb; }
+    .fee-panel{margin-top:11px;padding:11px 12px;border:1px solid rgba(143,232,183,.22);border-radius:16px;background:linear-gradient(130deg,rgba(68,153,115,.14),rgba(20,38,60,.25));}
+    .fee-head{display:flex;align-items:center;justify-content:space-between;gap:9px;margin-bottom:9px;flex-wrap:wrap}
+    .fee-head strong{font-size:13px;color:#c8ffe1}.fee-head small{font-size:10px;color:#a2bed1}
+    .fee-inputs{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px}
+    .fee-inputs label{display:block;color:#b6c8dc;font-size:11px;line-height:1.5}
+    .fee-inputs input,.fee-inputs select{display:block;margin-top:4px;width:100%;max-width:100%;min-height:35px;padding:6px 9px;background:rgba(3,9,20,.66);color:#eef5ff;border:1px solid rgba(255,255,255,.15);border-radius:9px;font-size:13px}
+    .fee-results{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+    .fee-results>div{padding:9px 8px;background:rgba(255,255,255,.045);border-radius:10px;min-width:0}
+    .fee-results small{display:block;color:#9cb5cb;font-size:10px;margin-bottom:5px}
+    .fee-results b{font-size:15px;font-weight:900;white-space:nowrap}
+    .fee-sub{font-size:11px;color:#b2c8d7;line-height:1.6;margin-top:9px}
+    @media(max-width:700px){.fee-results{grid-template-columns:repeat(2,minmax(0,1fr))}}
     .choices { margin-top:10px; display:flex; flex-wrap:wrap; gap:8px; }
     .chip { padding:7px 10px; border-radius:999px; background:rgba(90,184,255,.14); color:#d8ebff; border:1px solid rgba(90,184,255,.22); font-size:12px; font-weight:700; }
     .choices.empty { display:block; color:#8fa0bc; font-size:12px; }
@@ -289,7 +301,7 @@
       </div>
       <div class="lucky-banner"><span class="sparkle">✦</span>小王体彩 · 祝王老板发大财！<span class="sparkle"> ✦</span></div>
       <h1>北京时间 NBA 比赛赔率</h1>
-      <p id="hero-sub">选择多个球队按钮，可查看理论串关倍率、总返还和净收益。</p>
+      <p id="hero-sub">选择比赛组合，查看理论倍率与 RH 普通账户手续费后的预估收益。</p>
     </header>
 
     <section class="summary-row" aria-label="概要信息">
@@ -350,11 +362,29 @@
         <div class="stat"><small>已选</small><b id="pick-count">0选</b></div>
         <div class="stat"><small>理论倍率</small><b id="multiple">—</b></div>
         <div class="stat"><small>总返还</small><b id="payout">—</b></div>
-        <div class="stat"><small>净利润</small><b class="positive" id="profit">—</b></div>
+        <div class="stat"><small>未扣费净利润</small><b class="positive" id="profit">—</b></div>
       </div>
+      <section class="fee-panel" aria-label="Robinhood普通账户手续费估算">
+        <div class="fee-head"><strong>💰 RH 普通账户 · 扣费后预估</strong><small>非 Gold · 预算包含手续费</small></div>
+        <div class="fee-inputs">
+          <label>RH Combo 实际买入价（美分，可选）
+            <input id="rh-price" type="number" inputmode="decimal" min="0.01" max="99.99" step="0.01" placeholder="留空按理论组合价格" />
+          </label>
+          <label>交易所费用（每份）
+            <select id="exchange-fee"><option value="1">1¢（默认估算）</option><option value="0">0¢</option></select>
+          </label>
+        </div>
+        <div class="fee-results">
+          <div><small>可买合约</small><b id="fee-qty">—</b></div>
+          <div><small>佣金＋交易所费</small><b id="fee-total">—</b></div>
+          <div><small>含费实际支出</small><b id="fee-spent">—</b></div>
+          <div><small>命中后预估净赚</small><b class="positive" id="fee-profit">—</b></div>
+        </div>
+        <div class="fee-sub" id="fee-detail">选择比赛后显示费用估算。</div>
+      </section>
       <div id="choices" class="choices empty">点击赔率按钮选串（每场限选一个盘口）</div>
       <div class="cart-actions"><button class="cart-add" id="cart-add" type="button" disabled>🛒 加入购物车</button><button class="cart-btn-subtle" id="cart-show-bottom" type="button">查看购物车 <span id="cart-count-bottom">(0)</span></button></div>
-      <div class="disclaimer">说明：这里显示的是根据单队买入价格计算的理论串关收益，不等于 Robinhood 实际 Combo 报价；未计手续费、滑点与成交差异。</div>
+      <div class="disclaimer">说明：上方理论倍率不含费用；扣费后预估按 RH 普通账户佣金公式和整数份数计算。实际 Combo 报价、交易所费用、限价成交、结算规则可能不同，请以 RH 订单预览为准。</div>
       </div>
     </div>
   </aside>
@@ -538,7 +568,7 @@
     const count=spreads?.date===odds.date?spreads.games.reduce((s,g)=>s+g.lines.length,0):0;
     const fmtDate=s=>{const dt=new Date(s);return isNaN(dt.getTime())?'未知':new Intl.DateTimeFormat('zh-CN',{timeZone:'Asia/Shanghai',month:'numeric',day:'numeric',hour:'2-digit',minute:'2-digit',hour12:false}).format(dt);};
     const totalCount=totals?.date===odds.date?totals.games.reduce((s,g)=>s+g.lines.length,0):0;
-    document.getElementById('data-note').textContent=`RH 公开网页缓存（非官方 API） · 胜负：${fmtDate(odds.capturedAt)} · 让分：${spreads?.date===odds.date?fmtDate(spreads.capturedAt):'未获得'}（${count} 条） · 大小球：${totals?.date===odds.date?fmtDate(totals.capturedAt):'未获得'}（${totalCount} 条总分线）。胜负按 YES、让分/受让按 YES/NO、大小球按 Over YES / Under NO 实际买入价。串关为理论独立倍率相乘，不等于 RH Combo 实际报价，未计费用和滑点。`;
+    document.getElementById('data-note').textContent=`RH 公开网页缓存（非官方 API） · 胜负：${fmtDate(odds.capturedAt)} · 让分：${spreads?.date===odds.date?fmtDate(spreads.capturedAt):'未获得'}（${count} 条） · 大小球：${totals?.date===odds.date?fmtDate(totals.capturedAt):'未获得'}（${totalCount} 条总分线）。胜负按 YES、让分/受让按 YES/NO、大小球按 Over YES / Under NO 实际买入价。串关为理论独立倍率相乘，不等于 RH Combo 实际报价，已提供普通账户费用估算，实际费用与 RH 下单预览可能不同。`;
     updateSlip();
   }
   function syncButtons(){
@@ -549,6 +579,37 @@
       if(!el.disabled) el.querySelector('small').textContent='净赚 '+money(netProfit(Number(el.dataset.price)));
     }
   }
+  // Robinhood event contracts (June 2026): non-Gold commission = min(10% * p * (1-p) * n, $0.01 * n),
+  // rounded UP to cents per order; exchange fee separately modeled at 0c or 1c per contract.
+  // This calculator models a single Combo contract, not independent purchases of each leg.
+  function feeQuote(mult, budget, overrideCents, exchangeFeeCents){
+    if(!(mult>0) || !(budget>0))return null;
+    const p = overrideCents!==null ? overrideCents/100 : 1/mult;
+    if(!(p>0 && p<1))return null;
+    const exchange=Number(exchangeFeeCents)===0?0:1;
+    const comm = n => Math.ceil((Math.min(.10*p*(1-p)*n, .01*n)*100)-1e-9)/100;
+    const cost = n => p*n + comm(n) + exchange*n/100;
+    // Binary search: maximum whole number of contracts within the chosen all-in budget.
+    let lo=0,hi=Math.max(0,Math.floor(budget/p)+1);
+    while(lo<hi){const mid=Math.ceil((lo+hi)/2);if(cost(mid)<=budget+1e-9)lo=mid;else hi=mid-1;}
+    const n=lo,commission=comm(n),exchangeTotal=exchange*n/100,spent=cost(n);
+    return {price:p,qty:n,commission,exchangeTotal,fees:commission+exchangeTotal,spent,payout:n,profit:n-spent,unspent:Math.max(0,budget-spent)};
+  }
+  const feePriceInput=document.getElementById('rh-price');
+  const exchangeInput=document.getElementById('exchange-fee');
+  function feeOverride(){const raw=feePriceInput.value.trim();if(!raw)return null;const n=Number(raw);return Number.isFinite(n)&&n>0&&n<100?n:NaN;}
+  function showFees(mult,picksCount){
+    const fallback=()=>{for(const id of ['fee-qty','fee-total','fee-spent','fee-profit'])document.getElementById(id).textContent='—';};
+    if(!picksCount){fallback();document.getElementById('fee-detail').textContent='选择盘口后显示估算费用。';return;}
+    const manual=feeOverride();const q=feeQuote(mult,stake,manual,exchangeInput.value);
+    if(!q){fallback();document.getElementById('fee-detail').textContent='请输入有效的 RH Combo 买入价（0～100美分之间）。';return;}
+    document.getElementById('fee-qty').textContent=q.qty+'份';
+    document.getElementById('fee-total').textContent=money(q.fees);
+    document.getElementById('fee-spent').textContent=money(q.spent);
+    document.getElementById('fee-profit').textContent=money(q.profit);
+    const mark=manual===null?'基于单项赔率相乘推算':'使用手填 RH Combo 报价';
+    document.getElementById('fee-detail').textContent=`${mark}：${(q.price*100).toFixed(2)}¢/份 · RH佣金 ${money(q.commission)} · 交易所费 ${money(q.exchangeTotal)} · 返还 ${money(q.payout)} · 未用预算 ${money(q.unspent)}。假设持有至正确结算，每份返还$1，不计提前卖出费用。`;
+  }
   function updateSlip(){
     const picks=[...selected.values()];let mult=1;
     for(const p of picks) mult*=100/Number(p.pricePercent);
@@ -556,6 +617,7 @@
     document.getElementById('multiple').textContent=picks.length?mult.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2})+'×':'—';
     document.getElementById('payout').textContent=picks.length?money(stake*mult):'—';
     document.getElementById('profit').textContent=picks.length?money(stake*(mult-1)):'—';
+    showFees(mult,picks.length);
     document.getElementById('slip-preview-count').textContent=picks.length+'选 · '+(document.getElementById('slip').classList.contains('expanded')?'点击收起':'点击展开');
     document.getElementById('slip-preview-profit').textContent='净赚 '+(picks.length?money(stake*(mult-1)):'—');
     const choices=document.getElementById('choices');
@@ -580,6 +642,8 @@
   });
   document.getElementById('clear-btn').addEventListener('click',()=>{selected.clear();updateSlip();});
   stakeInput.addEventListener('input',()=>{const n=Number(stakeInput.value);if(Number.isFinite(n)&&n>0)stake=n;updateSlip();});
+  feePriceInput.addEventListener('input',updateSlip);
+  exchangeInput.addEventListener('change',updateSlip);
 
 
   // Shopping cart is only stored in this browser. It is not a real order or bet.
@@ -623,11 +687,13 @@
       calculations.append(newEl('span','','保存时投入 '+money(s)+' · 理论倍率 '+mult.toFixed(2)+'×'));
       calculations.append(newEl('div','', '总返还 '+money(s*mult)+' · 理论净赚 '));
       calculations.lastChild.append(newEl('strong','',money(s*(mult-1))));
+      const cq=feeQuote(mult,s,plan.comboPriceCents??null,plan.exchangeFeeCents??1);
+      if(cq)calculations.append(newEl('div','','普通账户含费预估净赚 '+money(cq.profit)+' · 费用 '+money(cq.fees)+' · '+cq.qty+'份'));
       const controls=newEl('div','cart-plan-buttons');
       const restore=newEl('button','cart-mini-button','加载到计算器');restore.type='button';
       restore.addEventListener('click',()=>{
         selected.clear();for(const p of plan.picks){if(!selected.has(p.gameId))selected.set(p.gameId,{...p});}
-        stake=s;stakeInput.value=String(s);closeCart();render();
+        stake=s;stakeInput.value=String(s);feePriceInput.value=plan.comboPriceCents==null?'':String(plan.comboPriceCents);exchangeInput.value=String(plan.exchangeFeeCents??1);closeCart();render();
         if(window.matchMedia('(max-width:700px)').matches){document.getElementById('slip').classList.add('expanded');document.getElementById('slip-toggle').setAttribute('aria-expanded','true');updateSlip();}
       });controls.append(restore);foot.append(calculations,controls);card.append(foot);cartContent.append(card);
     }
@@ -642,7 +708,9 @@
   document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!cartBackdrop.hidden)closeCart();});
   document.getElementById('cart-add').addEventListener('click',()=>{
     const picks=[...selected.values()];if(!picks.length)return;
-    cart.unshift({id:String(Date.now())+'-'+Math.random().toString(36).slice(2,8),savedAt:new Date().toISOString(),stake,picks:picks.map(p=>({...p}))});
+    const custom=feeOverride();
+    if(Number.isNaN(custom)){alert('请填写有效的 Combo 买入价格，或留空。');return;}
+    cart.unshift({id:String(Date.now())+'-'+Math.random().toString(36).slice(2,8),savedAt:new Date().toISOString(),stake,comboPriceCents:custom,exchangeFeeCents:Number(exchangeInput.value),picks:picks.map(p=>({...p}))});
     cart=cart.slice(0,100);persistCart();openCart();
   });
   renderCart();
