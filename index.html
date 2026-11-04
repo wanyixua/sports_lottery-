@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>NBA Odds · 北京时间</title>
+  <title>小王体彩 · NBA Odds</title>
   <meta name="theme-color" content="#0b1220" />
   <style>
     :root {
@@ -87,6 +87,15 @@
       padding:8px 12px; border-radius:999px; font-size:12px; font-weight:700;
     }
     .status::before { content:""; width:8px; height:8px; border-radius:50%; background:#5adf95; box-shadow:0 0 12px rgba(90,223,149,.75); }
+    .lucky-banner {
+      margin-top:16px; padding:13px 16px; border-radius:16px;
+      background:linear-gradient(105deg,rgba(255,214,131,.20),rgba(255,176,80,.10));
+      border:1px solid rgba(255,213,135,.28);
+      color:#ffe1a7; font-weight:850; font-size:16px;
+      letter-spacing:.025em; line-height:1.5;
+      box-shadow:inset 0 1px 0 rgba(255,255,255,.09);
+    }
+    .lucky-banner .sparkle { color:#ffcd70; margin-right:7px; }
     .hero h1 { margin:16px 0 8px; font-size:24px; line-height:1.15; letter-spacing:-0.03em; }
     .hero p { margin:0; color:#b6c3dd; line-height:1.65; font-size:14px; max-width:540px; }
     .summary-row { display:flex; align-items:stretch; gap:12px; margin:16px 0 18px; }
@@ -174,6 +183,29 @@
       .stake-wrap { grid-column: span 2; }
       .meta { font-size:11px; }
     }
+
+    /* On phones, keep the betting slip compact until opened. */
+    .slip-preview { display:none; }
+    @media (max-width:700px) {
+      .app { padding-bottom:115px; }
+      .slip-inner { padding:0 12px calc(8px + env(safe-area-inset-bottom)); }
+      .slip-preview {
+        display:flex; width:100%; min-height:64px; align-items:center; justify-content:space-between;
+        gap:12px; padding:12px 2px 8px; border:0; background:transparent; color:var(--text);
+        cursor:pointer; text-align:left;
+      }
+      .slip-preview-title { font-size:15px; font-weight:900; }
+      .slip-preview-detail { display:block; margin-top:4px; color:#92a7c8; font-size:12px; }
+      .slip-preview-right { display:flex; gap:12px; align-items:center; }
+      .slip-preview-profit { color:#90f0bb; font-size:17px; font-weight:900; white-space:nowrap; }
+      .slip-arrow { font-size:19px; transition: transform .15s; color:#a9bedc; }
+      .slip.expanded .slip-arrow { transform:rotate(180deg); }
+      .slip-body { display:none; max-height: min(68dvh, 620px); overflow-y:auto; overscroll-behavior:contain; padding-bottom:10px; }
+      .slip.expanded .slip-body { display:block; }
+      .slip-head { padding-top:6px; }
+      .slip-stats { grid-template-columns:repeat(2,minmax(0,1fr)); }
+      .stake-wrap { grid-column:span 2; }
+    }
   </style>
 </head>
 <body>
@@ -183,6 +215,7 @@
         <div class="brand">NBA <span>Odds</span></div>
         <span class="status" id="data-status">RH 赔率缓存</span>
       </div>
+      <div class="lucky-banner"><span class="sparkle">✦</span>小王体彩 · 祝王老板发大财！<span class="sparkle"> ✦</span></div>
       <h1>北京时间 NBA 比赛赔率</h1>
       <p id="hero-sub">选择多个球队按钮，可查看理论串关倍率、总返还和净收益。</p>
     </header>
@@ -205,8 +238,13 @@
     <section class="note" id="data-note">正在加载最新赔率数据…</section>
   </main>
 
-  <aside class="slip" aria-label="串关计算器">
+  <aside class="slip" aria-label="串关计算器" id="slip">
     <div class="slip-inner">
+      <button class="slip-preview" id="slip-toggle" type="button" aria-expanded="false" aria-controls="slip-body">
+        <span><span class="slip-preview-title">串关计算器</span><span class="slip-preview-detail" id="slip-preview-count">0选 · 点击展开</span></span>
+        <span class="slip-preview-right"><span class="slip-preview-profit" id="slip-preview-profit">净赚 —</span><span class="slip-arrow">⌃</span></span>
+      </button>
+      <div class="slip-body" id="slip-body">
       <div class="slip-head">
         <div class="slip-title-wrap">
           <div class="slip-title">串关计算器</div>
@@ -226,6 +264,7 @@
       </div>
       <div id="choices" class="choices empty">点击比赛中的赔率按钮选择球队（每场限选一队）</div>
       <div class="disclaimer">说明：这里显示的是根据单队买入价格计算的理论串关收益，不等于 Robinhood 实际 Combo 报价；未计手续费、滑点与成交差异。</div>
+      </div>
     </div>
   </aside>
 
@@ -345,6 +384,8 @@
         document.getElementById('multiple').textContent = picks.length ? mult.toLocaleString('en-US',{minimumFractionDigits:2, maximumFractionDigits:2}) + '×' : '—';
         document.getElementById('payout').textContent = picks.length ? money(stake * mult) : '—';
         document.getElementById('profit').textContent = picks.length ? money(stake * (mult - 1)) : '—';
+        document.getElementById('slip-preview-count').textContent = picks.length + '选 · ' + (document.getElementById('slip').classList.contains('expanded') ? '点击收起' : '点击展开');
+        document.getElementById('slip-preview-profit').textContent = '净赚 ' + (picks.length ? money(stake * (mult - 1)) : '—');
         const choices = document.getElementById('choices');
         if (!picks.length) {
           choices.className = 'choices empty';
@@ -376,6 +417,12 @@
         const side = btn.dataset.side;
         if (selected.get(id) === side) selected.delete(id); else selected.set(id, side);
         updateSlip();
+      });
+      const slipToggle = document.getElementById('slip-toggle');
+      slipToggle.addEventListener('click', () => {
+        const expanded = document.getElementById('slip').classList.toggle('expanded');
+        slipToggle.setAttribute('aria-expanded', String(expanded));
+        document.getElementById('slip-preview-count').textContent = selected.size + '选 · ' + (expanded ? '点击收起' : '点击展开');
       });
       document.getElementById('clear-btn').addEventListener('click', () => { selected.clear(); updateSlip(); });
       stakeInput.addEventListener('input', () => {
