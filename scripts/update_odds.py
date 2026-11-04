@@ -12,10 +12,12 @@ from pathlib import Path
 from urllib.request import Request, urlopen
 from zoneinfo import ZoneInfo
 from html.parser import HTMLParser
+from spread_extract import spread_groups
 
 URL = 'https://robinhood.com/us/en/prediction-markets/nba/games/'
 PT = ZoneInfo('America/Los_Angeles')
 DEST = Path(__file__).resolve().parents[1] / 'odds.json'
+SPREAD_DEST = DEST.parent / 'spreads.json'
 TEAMS = dict(zip(
     'ATL BOS BKN CHA CHI CLE DAL DEN DET GSW HOU IND LAC LAL MEM MIA MIL MIN NOP NYK OKC ORL PHI PHX POR SAC SAS TOR UTA WAS'.split(),
     '老鹰 凯尔特人 篮网 黄蜂 公牛 骑士 独行侠 掘金 活塞 勇士 火箭 步行者 快船 湖人 灰熊 热火 雄鹿 森林狼 鹈鹕 尼克斯 雷霆 魔术 76人 太阳 开拓者 国王 马刺 猛龙 爵士 奇才'.split()
@@ -94,43 +96,75 @@ def build_games(events, states, quotes):
     return {day: sorted(rows.values(), key=lambda x:(x['startTimePT'],x['id'])) for day, rows in dates.items()}
 
 
-def main():
-    now = datetime.now(PT)
-    groups = build_games(*parse(fetch_page()))
+def save_if_changed(path, payload, unchanged_fields):
+    # Keep capturedAt stable unless actual contents change (no noisy commits).
+    previous = None
+    if path.exists():
+        try: previous = json.loads(path.read_text(encoding='utf-8'))
+        except (json.JSONDecodeError, OSError): pass
+    if previous and all(previous.get(k) == payload.get(k) for k in unchanged_fields):
+        print(f'No changes: {path.name}')
+        return False
+    path.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+    print(f'Updated: {path.name}')
+    return True
+
+
+def process_html(html, now, *, dest=DEST, spread_dest=SPREAD_DEST):
+    events, states, quotes = parse(html)
+    groups = build_games(events, states, quotes)
     today = now.date()
-    # RH can show future days ahead. Prefer today's games, else nearest upcoming day.
     candidates = sorted(d for d in groups if today.isoformat() <= d <= (today + timedelta(days=7)).isoformat())
     if not candidates: raise RuntimeError('No current or upcoming NBA games in RH HTML')
     target = candidates[0]
     games = groups[target]
     if not (1 <= len(games) <= 15): raise RuntimeError(f'Invalid game count: {len(games)}')
-    # Known verification fixture: 2026-11-04 has exactly 14 NBA games.
     if target == '2026-11-04' and len(games) != 14:
-        raise RuntimeError(f'Expected 14 Nov 4 games but parsed {len(games)}; cache unchanged')
-    # Protect against partial fetches for the same date; never shrink an already published full slate.
-    if DEST.exists():
-        prev = json.loads(DEST.read_text(encoding='utf-8'))
+        raise RuntimeError(f'Expected 14 Nov 4 games but parsed {len(games)}')
+    if dest.exists():
+        prev = json.loads(dest.read_text(encoding='utf-8'))
         if prev.get('date') == target and len(prev.get('games', [])) > len(games):
-            raise RuntimeError('Source game count smaller than existing cache; not overwriting')
-    payload = {
+            raise RuntimeError('Source game count smaller than existing cache')
+
+    spreads = spread_groups(events, quotes, target, TEAMS)
+    # Important: allow some unavailable ask prices, but require complete market discovery.
+    # Do not overwrite good spread cache with partial market lists.
+    if set(spreads) != {g['id'] for g in games}:
+        raise RuntimeError(f'Incomplete spread discovery: {len(spreads)}/{len(games)} games; caches preserved')
+    if spread_dest.exists():
+        try: previous_spreads = json.loads(spread_dest.read_text(encoding='utf-8'))
+        except (json.JSONDecodeError, OSError): previous_spreads = None
+        if previous_spreads and previous_spreads.get('date') == target:
+            old_by_game = {g['id']: len(g.get('lines', [])) for g in previous_spreads.get('games', [])}
+            if any(len(spreads[k]['lines']) < old_by_game.get(k, 0) for k in spreads):
+                raise RuntimeError('Spread contract counts shrank; caches preserved')
+    nowstr = now.isoformat(timespec='seconds')
+    odds_payload = {
         'date': target, 'timezone': 'America/Los_Angeles',
-        'source': 'Robinhood public webpage (unofficial)',
-        'capturedAt': now.isoformat(timespec='seconds'), 'isLive': False,
-        'stakeUSD': 10, 'games': games
+        'source': 'Robinhood public webpage (unofficial)', 'capturedAt': nowstr,
+        'isLive': False, 'stakeUSD': 10, 'games': games,
     }
-    # Prevent repetitive commits when prices and game metadata haven't changed.
-    prev = None
-    if DEST.exists():
-        try: prev = json.loads(DEST.read_text(encoding='utf-8'))
-        except Exception: pass
-    if prev and prev.get('date') == target and prev.get('games') == games and prev.get('source') == payload['source']:
-        print(f'No price changes: {target}, {len(games)} games')
-        return
-    DEST.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
-    print(f'Updated odds.json: {target}, {len(games)} games, {len(games)*2} quotes')
+    spread_payload = {
+        'date': target, 'timezone': 'America/Los_Angeles',
+        'source': 'Robinhood public webpage (unofficial)', 'capturedAt': nowstr,
+        'games': [spreads[g['id']] for g in games],
+    }
+    quoted = sum(line['pricePercent'] is not None for g in spread_payload['games'] for line in g['lines'])
+    count = sum(len(g['lines']) for g in spread_payload['games'])
+    if quoted == 0:
+        raise RuntimeError('No valid spread ask quotes; caches preserved')
+    print(f'{target}: {len(games)} games, {count} spread contracts, {quoted} valid ask prices')
+    save_if_changed(dest, odds_payload, ('date', 'source', 'games'))
+    save_if_changed(spread_dest, spread_payload, ('date', 'source', 'games'))
+    return odds_payload, spread_payload
+
+
+def main():
+    now = datetime.now(PT)
+    process_html(fetch_page(), now)
 
 if __name__ == '__main__':
     try: main()
     except Exception as exc:
-        print(f'RH data update failed, odds.json preserved: {exc}', file=sys.stderr)
+        print(f'RH data update failed, caches preserved where possible: {exc}', file=sys.stderr)
         sys.exit(1)
