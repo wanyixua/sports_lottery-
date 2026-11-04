@@ -14,14 +14,14 @@ from zoneinfo import ZoneInfo
 from html.parser import HTMLParser
 from spread_extract import spread_groups
 from total_extract import total_groups
-from total_extract import total_groups
+from champions_extract import championships
 
 URL = 'https://robinhood.com/us/en/prediction-markets/nba/games/'
 PT = ZoneInfo('America/Los_Angeles')
 DEST = Path(__file__).resolve().parents[1] / 'odds.json'
 SPREAD_DEST = DEST.parent / 'spreads.json'
 TOTAL_DEST = DEST.parent / 'totals.json'
-TOTAL_DEST = DEST.parent / 'totals.json'
+CHAMPION_DEST = DEST.parent / 'champions.json'
 TEAMS = dict(zip(
     'ATL BOS BKN CHA CHI CLE DAL DEN DET GSW HOU IND LAC LAL MEM MIA MIL MIN NOP NYK OKC ORL PHI PHX POR SAC SAS TOR UTA WAS'.split(),
     '老鹰 凯尔特人 篮网 黄蜂 公牛 骑士 独行侠 掘金 活塞 勇士 火箭 步行者 快船 湖人 灰熊 热火 雄鹿 森林狼 鹈鹕 尼克斯 雷霆 魔术 76人 太阳 开拓者 国王 马刺 猛龙 爵士 奇才'.split()
@@ -114,7 +114,7 @@ def save_if_changed(path, payload, unchanged_fields):
     return True
 
 
-def process_html(html, now, *, dest=DEST, spread_dest=SPREAD_DEST, total_dest=TOTAL_DEST):
+def process_html(html, now, *, dest=DEST, spread_dest=SPREAD_DEST, total_dest=TOTAL_DEST, champion_dest=CHAMPION_DEST):
     events, states, quotes = parse(html)
     groups = build_games(events, states, quotes)
     today = now.date()
@@ -152,16 +152,6 @@ def process_html(html, now, *, dest=DEST, spread_dest=SPREAD_DEST, total_dest=TO
             old_sizes = {g['id']: len(g.get('lines', [])) for g in previous_totals.get('games', [])}
             if any(len(totals[key]['lines']) < old_sizes.get(key, 0) for key in totals):
                 raise RuntimeError('Totals contract counts shrank; caches preserved')
-    totals = total_groups(events, quotes, target, TEAMS)
-    if set(totals) != {g['id'] for g in games}:
-        raise RuntimeError(f'Incomplete total discovery: {len(totals)}/{len(games)} games; caches preserved')
-    if total_dest.exists():
-        try: previous_totals = json.loads(total_dest.read_text(encoding='utf-8'))
-        except (json.JSONDecodeError, OSError): previous_totals = None
-        if previous_totals and previous_totals.get('date') == target:
-            old_sizes = {g['id']: len(g.get('lines', [])) for g in previous_totals.get('games', [])}
-            if any(len(totals[key]['lines']) < old_sizes.get(key, 0) for key in totals):
-                raise RuntimeError('Totals contract counts shrank; caches preserved')
     nowstr = now.isoformat(timespec='seconds')
     odds_payload = {
         'date': target, 'timezone': 'America/Los_Angeles',
@@ -184,26 +174,27 @@ def process_html(html, now, *, dest=DEST, spread_dest=SPREAD_DEST, total_dest=TO
     if not total_quotes:
         raise RuntimeError('No valid total ask quotes; caches preserved')
     print(f'{total_contracts} total lines; {total_quotes} valid Over/Under ask prices')
-    total_payload = {
-        'date': target, 'timezone': 'America/Los_Angeles',
-        'source': 'Robinhood public webpage (unofficial)', 'capturedAt': nowstr,
-        'games': [totals[g['id']] for g in games],
-    }
-    total_contracts = sum(len(g['lines']) for g in total_payload['games'])
-    total_quotes = sum(line[side] is not None for g in total_payload['games'] for line in g['lines']
-                       for side in ('overPricePercent','underPricePercent'))
-    if not total_quotes:
-        raise RuntimeError('No valid total ask quotes; caches preserved')
-    print(f'{total_contracts} total lines; {total_quotes} valid Over/Under ask prices')
     quoted = sum(line['pricePercent'] is not None for g in spread_payload['games'] for line in g['lines'])
     count = sum(len(g['lines']) for g in spread_payload['games'])
     if quoted == 0:
         raise RuntimeError('No valid spread ask quotes; caches preserved')
     print(f'{target}: {len(games)} games, {count} spread contracts, {quoted} valid ask prices')
+    champion_markets = championships(events, quotes, TEAMS)
+    quoted_champions = sum(t['pricePercent'] is not None for m in champion_markets.values() for t in m['teams'])
+    if not quoted_champions: raise RuntimeError('No champion YES ask quotes; caches preserved')
     save_if_changed(dest, odds_payload, ('date', 'source', 'games'))
     save_if_changed(spread_dest, spread_payload, ('date', 'source', 'games'))
     save_if_changed(total_dest, total_payload, ('date', 'source', 'games'))
-    return odds_payload, spread_payload, total_payload
+    champion_payload = {
+        'season': '2026-27', 'source': 'Robinhood public webpage (unofficial)',
+        'capturedAt': nowstr, 'markets': champion_markets,
+    }
+    quoted_champions = sum(t['pricePercent'] is not None for m in champion_markets.values() for t in m['teams'])
+    if not quoted_champions:
+        raise RuntimeError('No champion YES ask quotes; cache preserved')
+    print(f'Champions: {sum(len(m["teams"]) for m in champion_markets.values())} contracts, {quoted_champions} valid ask prices')
+    save_if_changed(champion_dest, champion_payload, ('season', 'source', 'markets'))
+    return odds_payload, spread_payload, total_payload, champion_payload
 
 
 def main():
