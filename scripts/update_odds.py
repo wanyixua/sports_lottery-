@@ -178,7 +178,7 @@ def process_html(html, now, *, dest=DEST, spread_dest=SPREAD_DEST, total_dest=TO
     count = sum(len(g['lines']) for g in spread_payload['games'])
     if quoted == 0:
         raise RuntimeError('No valid spread ask quotes; caches preserved')
-    print(f'{target}: {len(games)} games, {count} spread contracts, {quoted} valid ask prices')
+    print(f'{target}: {len(games)} games, {count // 2} spread contracts, {count} spread directions (YES/NO), {quoted} valid ask prices')
     champion_markets = championships(events, quotes, TEAMS)
     quoted_champions = sum(t['pricePercent'] is not None for m in champion_markets.values() for t in m['teams'])
     if not quoted_champions: raise RuntimeError('No champion YES ask quotes; caches preserved')

@@ -1,6 +1,8 @@
 """Read NBA spread contracts from Robinhood public Next.js page data.
 
 A spread YES contract represents 'TEAM wins by more than X.5 points'.
+Its NO side represents the opponent receiving +X.5 points.
+Read both quoted ask prices independently; never infer NO from 1-YES.
 No estimates are invented for missing asks. Not a supported Robinhood API.
 """
 import re
@@ -41,22 +43,32 @@ def spread_groups(events, quotes, date, teams):
                 continue
             if margin <= 0 or margin > 100:
                 continue
-            price = None
-            raw_price = (quotes.get(contract.get('id')) or {}).get('yes_ask_price')
-            if raw_price is not None:
+            def ask_price(field):
+                raw = (quotes.get(contract.get('id')) or {}).get(field)
+                if raw is None:
+                    return None
                 try:
-                    n = Decimal(str(raw_price))
-                    if Decimal('0') < n <= Decimal('1'):
-                        price = float(n * 100)
-                except InvalidOperation:
-                    pass
-            rows.append({
-                'id': contract['id'],
-                'team': team,
-                'teamNameZh': teams[team],
-                'margin': float(margin),
-                'pricePercent': price,
-            })
+                    value = Decimal(str(raw))
+                    return float(value * 100) if Decimal('0') < value <= Decimal('1') else None
+                except (InvalidOperation, ValueError):
+                    return None
+
+            opponent = home if team == away else away
+            # Each RH binary contract creates two independent purchase directions.
+            # Distinct IDs prevent YES and NO from colliding in the shopping cart.
+            for suffix, code, signed_margin, field in (
+                ('yes', team, margin, 'yes_ask_price'),
+                ('no', opponent, -margin, 'no_ask_price'),
+            ):
+                rows.append({
+                    'id': contract['id'] + ':' + suffix,
+                    'contractId': contract['id'],
+                    'side': suffix,
+                    'team': code,
+                    'teamNameZh': teams[code],
+                    'margin': float(signed_margin),
+                    'pricePercent': ask_price(field),
+                })
         if not rows or not game_id:
             continue
         if game_id in output:
