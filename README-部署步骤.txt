@@ -1,20 +1,24 @@
-NBA Odds 自动发布准备版（仍未接通 RH 自动数据采集）
+小王体彩 · 胜负 + 让分（测试版）
 
-一、上传 GitHub
-把 index.html、odds.json、scripts/update_odds.py、.github/workflows/update-odds.yml 放到仓库相同路径。
-GitHub 网页上传时要保留子目录路径，最简单办法是本地解压后 git add/commit/push。
+替换 / 上传到 GitHub 仓库根目录，保留下面路径：
+  index.html
+  odds.json             (不需要覆盖你仓库已更新的 odds.json；仅第一次测试可选)
+  spreads.json
+  scripts/update_odds.py
+  scripts/spread_extract.py
+  .github/workflows/update-odds.yml
 
-二、GitHub -> Settings -> Pages
-把 Source 从 "Deploy from a branch" 改成 "GitHub Actions"。
-这一步很重要：定时 workflow 自己负责发布 Pages，避免 GITHUB_TOKEN push 不触发分支构建。
+操作顺序：
+1. 上传 index.html、spreads.json，提交。
+2. 创建 scripts/spread_extract.py 并替换 scripts/update_odds.py，提交。
+3. 更新 .github/workflows/update-odds.yml（保留目录），提交。
+4. Actions -> Update NBA odds cache and publish -> Run workflow。
+5. 在 Actions 日志中确认 14 games / 868 spread contracts 和报价数。
+6. 刷新 GitHub Pages。
 
-三、GitHub -> Actions -> Update NBA odds cache and publish -> Run workflow
-运行成功后站点仍展示原有 5 场截图缓存，因为未设置数据源。
+注意：随包 spreads.json 是 2026-11-03 的历史快照，不是最新实时报价。
+未报价的盘口标记待报价。RH 非官方公共网页数据可能随时改变；页面上的
+串关仅按单项 YES 买入价格计算理论倍率，不是实际 Combo 下单价格。
 
-四、接入真实数据
-需要一个允许被访问、输出与 odds.json 相同结构且有合法访问/再分发权限的 HTTPS JSON 数据源。
-在 Settings -> Secrets and variables -> Actions -> Variables 中创建 ODDS_SOURCE_URL 变量。
-之后定时任务约每15分钟抓取一次、校验、写入 odds.json 并部署。
-当前并未核实 Robinhood 提供可用官方赔率 API，不得将其他来源标为 RH 原始赔率。
-
-注意：GitHub Actions 定时触发可能延迟；GitHub Pages 中国大陆访问不保证稳定；报价不含交易手续费。
+如果部署失败，先检查 .github/workflows/update-odds.yml 和 Actions 日志，
+原有网站可用 GitHub 历史版本回滚。
