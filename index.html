@@ -252,6 +252,32 @@
 .champion-source{font-size:11px;color:#a2b4cd;margin-top:12px;line-height:1.7}
 .champion-source a{color:#ecd292}
 @media(max-width:430px){.champion-board{padding:15px 11px}.champion-row{gap:7px;grid-template-columns:25px minmax(0,1fr) 104px;padding:8px}.champion-name{font-size:14px}.champion-price strong{font-size:17px}}
+
+/* Local shopping cart; no server and no payment handling */
+.cart-entry{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:14px 0 4px;padding:13px 15px;border-radius:17px;background:rgba(103,175,255,.09);border:1px solid rgba(116,180,255,.21)}
+.cart-entry-label{font-size:14px;font-weight:850;color:#e2edff}.cart-entry-sub{font-size:11px;color:#99acce;margin-top:4px}
+.cart-open,.cart-add{border:1px solid rgba(255,206,120,.44);background:linear-gradient(135deg,#ffe5a0,#d7aa59);color:#1d2532;font-weight:900;border-radius:12px;padding:11px 14px;cursor:pointer;white-space:nowrap}
+.cart-add{flex:1}.cart-add:disabled{opacity:.45;cursor:not-allowed}.cart-actions{display:flex;gap:9px;margin-top:11px;align-items:stretch}
+.cart-btn-subtle{background:rgba(255,255,255,.05);color:#cfdef4;border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:10px 12px;font-size:12px;font-weight:800;cursor:pointer}
+.cart-backdrop[hidden]{display:none}.cart-backdrop{position:fixed;inset:0;z-index:80;display:flex;align-items:center;justify-content:center;padding:16px;background:rgba(2,7,18,.77);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.cart-modal{width:min(620px,100%);max-height:min(87dvh,850px);display:flex;flex-direction:column;border:1px solid rgba(173,206,255,.18);border-radius:23px;background:linear-gradient(165deg,#17253d,#0a1427);color:#eaf1fc;box-shadow:0 28px 100px rgba(0,0,0,.55);overflow:hidden}
+.cart-modal-head{padding:17px 18px 14px;border-bottom:1px solid rgba(255,255,255,.09);display:flex;align-items:center;justify-content:space-between;gap:10px}
+.cart-modal-head h2{font-size:20px;margin:0}.cart-modal-head small{display:block;color:#9cb0cb;font-size:11px;margin-top:5px}
+.cart-close{width:37px;height:37px;border:1px solid rgba(255,255,255,.13);border-radius:11px;background:rgba(255,255,255,.07);color:white;font-size:21px;cursor:pointer}
+.cart-modal-content{overflow-y:auto;overscroll-behavior:contain;padding:14px 17px 19px}
+.cart-empty{padding:30px 15px;text-align:center;color:#a9bbd7;line-height:1.8;font-size:13px}
+.cart-plan{border:1px solid rgba(255,255,255,.1);border-radius:17px;background:rgba(255,255,255,.035);padding:13px;margin-bottom:12px}
+.cart-plan-title{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:9px}.cart-plan-title b{font-size:14px}.cart-plan-date{color:#8fa5c4;font-size:10px;margin-top:4px}
+.cart-plan-line{padding:10px 0;display:flex;align-items:center;justify-content:space-between;gap:9px;border-bottom:1px solid rgba(255,255,255,.065)}
+.cart-plan-line b{font-size:13px;display:block}.cart-plan-line small{color:#9cb0cb;font-size:10px;display:block;margin-top:4px;line-height:1.5}
+.cart-mini-button{flex-shrink:0;background:rgba(255,255,255,.07);color:#d9e8f9;border:1px solid rgba(255,255,255,.09);border-radius:9px;padding:8px 10px;font-size:11px;font-weight:800;cursor:pointer}
+.cart-danger{color:#ffb9b9;border-color:rgba(255,129,129,.25)}
+.cart-plan-footer{display:flex;justify-content:space-between;gap:10px;align-items:center;flex-wrap:wrap;margin-top:12px}
+.cart-plan-return{font-size:12px;color:#a5b7d3;line-height:1.65}.cart-plan-return strong{color:#99eebd;font-size:15px}
+.cart-plan-buttons{display:flex;gap:7px;flex-wrap:wrap}
+.cart-warning{font-size:11px;line-height:1.6;color:#a3b5d0;margin-top:13px}
+@media(max-width:700px){.cart-modal{max-height:90dvh}.cart-backdrop{padding:8px}.cart-modal-content{padding:12px}.cart-modal-head{padding:14px}.cart-actions{position:sticky;bottom:0;padding-bottom:3px;background:#0b1424}}
+
   </style>
 </head>
 <body>
@@ -279,6 +305,11 @@
       </div>
     </section>
 
+
+    <div class="cart-entry">
+      <div><div class="cart-entry-label">🛒 王老板的串关购物车 <span id="cart-badge">(0)</span></div><div class="cart-entry-sub">保存多组串关 · 可删除选项或整组 · 本机浏览器保存</div></div>
+      <button class="cart-open" id="cart-open" type="button">查看购物车</button>
+    </div>
 
     <section class="champion-board" id="champion-board" aria-label="2027 NBA 冠军预测">
       <div class="champion-heading"><h2>🏆 2027 冠军预测</h2><span class="league-tag">2026–27赛季</span></div>
@@ -322,10 +353,19 @@
         <div class="stat"><small>净利润</small><b class="positive" id="profit">—</b></div>
       </div>
       <div id="choices" class="choices empty">点击赔率按钮选串（每场限选一个盘口）</div>
+      <div class="cart-actions"><button class="cart-add" id="cart-add" type="button" disabled>🛒 加入购物车</button><button class="cart-btn-subtle" id="cart-show-bottom" type="button">查看购物车 <span id="cart-count-bottom">(0)</span></button></div>
       <div class="disclaimer">说明：这里显示的是根据单队买入价格计算的理论串关收益，不等于 Robinhood 实际 Combo 报价；未计手续费、滑点与成交差异。</div>
       </div>
     </div>
   </aside>
+
+
+  <div class="cart-backdrop" id="cart-backdrop" hidden>
+    <section class="cart-modal" role="dialog" aria-modal="true" aria-labelledby="cart-title">
+      <div class="cart-modal-head"><div><h2 id="cart-title">🛒 王老板的串关购物车</h2><small>已保存的串关方案 · 可删除整组或其中一个选项</small></div><button class="cart-close" type="button" id="cart-close" aria-label="关闭购物车">×</button></div>
+      <div class="cart-modal-content" id="cart-content"></div>
+    </section>
+  </div>
 
   <script id="fallback-data" type="application/json">{"date":"2026-11-04","timezone":"America/Los_Angeles","source":"Robinhood 用户截图","capturedAt":"2026-11-03T15:46:00-08:00","isLive":false,"stakeUSD":10,"games":[{"id":"2026-11-04-PHI-DET","startTimePT":"16:00","away":{"code":"PHI","nameZh":"76人","record":"7-1","color":"#e83c56","pricePercent":50},"home":{"code":"DET","nameZh":"活塞","record":"6-1","color":"#275bc8","pricePercent":54}},{"id":"2026-11-04-ATL-WAS","startTimePT":"16:00","away":{"code":"ATL","nameZh":"老鹰","record":"4-4","color":"#d52e38","pricePercent":55},"home":{"code":"WAS","nameZh":"奇才","record":"4-3","color":"#244781","pricePercent":44}},{"id":"2026-11-04-MIL-BOS","startTimePT":"16:30","away":{"code":"MIL","nameZh":"雄鹿","record":"1-6","color":"#406348","pricePercent":21},"home":{"code":"BOS","nameZh":"凯尔特人","record":"5-2","color":"#27804d","pricePercent":83}},{"id":"2026-11-04-CHA-BKN","startTimePT":"16:30","away":{"code":"CHA","nameZh":"黄蜂","record":"3-5","color":"#26879a","pricePercent":61},"home":{"code":"BKN","nameZh":"篮网","record":"1-6","color":"#24252a","pricePercent":43}},{"id":"2026-11-04-CHI-NYK","startTimePT":"16:30","away":{"code":"CHI","nameZh":"公牛","record":"1-6","color":"#ce3146","pricePercent":19},"home":{"code":"NYK","nameZh":"尼克斯","record":"3-4","color":"#e48126","pricePercent":84}},{"id":"2026-11-04-IND-MEM","startTimePT":"17:00","away":{"code":"IND","nameZh":"步行者","record":"","color":"#476c88","pricePercent":null},"home":{"code":"MEM","nameZh":"灰熊","record":"","color":"#476c88","pricePercent":null}},{"id":"2026-11-04-UTA-NOP","startTimePT":"17:00","away":{"code":"UTA","nameZh":"爵士","record":"","color":"#476c88","pricePercent":null},"home":{"code":"NOP","nameZh":"鹈鹕","record":"","color":"#476c88","pricePercent":null}},{"id":"2026-11-04-CLE-OKC","startTimePT":"17:00","away":{"code":"CLE","nameZh":"骑士","record":"","color":"#476c88","pricePercent":null},"home":{"code":"OKC","nameZh":"雷霆","record":"","color":"#476c88","pricePercent":null}},{"id":"2026-11-04-MIN-HOU","startTimePT":"17:30","away":{"code":"MIN","nameZh":"森林狼","record":"","color":"#476c88","pricePercent":null},"home":{"code":"HOU","nameZh":"火箭","record":"","color":"#476c88","pricePercent":null}},{"id":"2026-11-04-TOR-DEN","startTimePT":"18:00","away":{"code":"TOR","nameZh":"猛龙","record":"","color":"#476c88","pricePercent":null},"home":{"code":"DEN","nameZh":"掘金","record":"","color":"#476c88","pricePercent":null}},{"id":"2026-11-04-POR-PHX","startTimePT":"18:00","away":{"code":"POR","nameZh":"开拓者","record":"","color":"#476c88","pricePercent":null},"home":{"code":"PHX","nameZh":"太阳","record":"","color":"#476c88","pricePercent":null}},{"id":"2026-11-04-DAL-SAS","startTimePT":"18:30","away":{"code":"DAL","nameZh":"独行侠","record":"","color":"#476c88","pricePercent":null},"home":{"code":"SAS","nameZh":"马刺","record":"","color":"#476c88","pricePercent":null}},{"id":"2026-11-04-LAL-SAC","startTimePT":"19:00","away":{"code":"LAL","nameZh":"湖人","record":"","color":"#476c88","pricePercent":null},"home":{"code":"SAC","nameZh":"国王","record":"","color":"#476c88","pricePercent":null}},{"id":"2026-11-04-MIA-LAC","startTimePT":"19:30","away":{"code":"MIA","nameZh":"热火","record":"","color":"#476c88","pricePercent":null},"home":{"code":"LAC","nameZh":"快船","record":"","color":"#476c88","pricePercent":null}}]}</script>
   <script>
@@ -512,6 +552,7 @@
     if(!picks.length){choices.className='choices empty';choices.textContent='选择胜负、让分或大小球盘口，每场限选一个';}
     else {choices.className='choices';for(const p of picks){const chip=document.createElement('span');chip.className='chip';chip.textContent=p.label+' · '+fmt(p.pricePercent)+'%';choices.append(chip);}}
     document.getElementById('combo-type').textContent=picks.length>=2?'混合盘口理论串关':picks.length===1?'单场理论收益':'选择比赛';
+    document.getElementById('cart-add').disabled=!picks.length;
     syncButtons();
   }
   list.addEventListener('click',ev=>{
@@ -528,6 +569,72 @@
   });
   document.getElementById('clear-btn').addEventListener('click',()=>{selected.clear();updateSlip();});
   stakeInput.addEventListener('input',()=>{const n=Number(stakeInput.value);if(Number.isFinite(n)&&n>0)stake=n;updateSlip();});
+
+
+  // Shopping cart is only stored in this browser. It is not a real order or bet.
+  const CART_KEY='xiaowang-nba-cart-v1';
+  const cartBackdrop=document.getElementById('cart-backdrop');
+  const cartContent=document.getElementById('cart-content');
+  let cart=[];
+  try {
+    const stored=JSON.parse(localStorage.getItem(CART_KEY)||'[]');
+    if(Array.isArray(stored))cart=stored.filter(x=>x&&typeof x.id==='string'&&Array.isArray(x.picks)&&x.picks.length>0).slice(0,100);
+  }catch(err){console.warn('购物车数据不可读取',err);}
+  function persistCart(){
+    try{localStorage.setItem(CART_KEY,JSON.stringify(cart));}
+    catch(err){alert('购物车保存失败：请检查浏览器是否允许本地存储，或存储空间是否已满。');}
+    renderCart();
+  }
+  function displayDate(iso){const d=new Date(iso);return isNaN(d.getTime())?'保存时间未知':new Intl.DateTimeFormat('zh-CN',{timeZone:'Asia/Shanghai',month:'numeric',day:'numeric',hour:'2-digit',minute:'2-digit',hour12:false}).format(d)+' 北京时间';}
+  function priceMultiple(picks){return picks.reduce((acc,p)=>acc*(validPrice(p.pricePercent)?100/Number(p.pricePercent):1),1);}
+  function newEl(tag,cls,textValue){const x=document.createElement(tag);if(cls)x.className=cls;if(textValue!==undefined)x.textContent=textValue;return x;}
+  function renderCart(){
+    document.getElementById('cart-badge').textContent='('+cart.length+')';
+    document.getElementById('cart-count-bottom').textContent='('+cart.length+')';
+    cartContent.replaceChildren();
+    if(!cart.length){cartContent.append(newEl('div','cart-empty','购物车还是空的。先在比赛中选择赔率，再点击「加入购物车」就能保存一组串关。'));return;}
+    for(const plan of cart){
+      const card=newEl('article','cart-plan');
+      const head=newEl('div','cart-plan-title');
+      const info=newEl('div');info.append(newEl('b','',plan.picks.length+'选 · '+(plan.picks.length>=2?plan.picks.length+'串1':'单场')),
+        newEl('div','cart-plan-date',displayDate(plan.savedAt)));head.append(info);
+      const del=newEl('button','cart-mini-button cart-danger','删除整组');del.type='button';del.setAttribute('aria-label','删除此串关方案');
+      del.addEventListener('click',()=>{cart=cart.filter(x=>x.id!==plan.id);persistCart();});head.append(del);card.append(head);
+      for(const [idx,p] of plan.picks.entries()){
+        const line=newEl('div','cart-plan-line');
+        const desc=newEl('div');desc.append(newEl('b','',p.label),newEl('small','',({moneyline:'胜负',spread:'让分',total:'大小球'}[p.kind]||p.kind)+' · 保存时 YES/NO 买入价 '+fmt(Number(p.pricePercent))+'¢'));
+        const remove=newEl('button','cart-mini-button','移除');remove.type='button';remove.setAttribute('aria-label','移除 '+p.label);
+        remove.addEventListener('click',()=>{plan.picks.splice(idx,1);if(!plan.picks.length)cart=cart.filter(x=>x.id!==plan.id);persistCart();});line.append(desc,remove);card.append(line);
+      }
+      const foot=newEl('div','cart-plan-footer');
+      const calculations=newEl('div','cart-plan-return');
+      const mult=priceMultiple(plan.picks), s=Number(plan.stake)||10;
+      calculations.append(newEl('span','','保存时投入 '+money(s)+' · 理论倍率 '+mult.toFixed(2)+'×'));
+      calculations.append(newEl('div','', '总返还 '+money(s*mult)+' · 理论净赚 '));
+      calculations.lastChild.append(newEl('strong','',money(s*(mult-1))));
+      const controls=newEl('div','cart-plan-buttons');
+      const restore=newEl('button','cart-mini-button','加载到计算器');restore.type='button';
+      restore.addEventListener('click',()=>{
+        selected.clear();for(const p of plan.picks){if(!selected.has(p.gameId))selected.set(p.gameId,{...p});}
+        stake=s;stakeInput.value=String(s);closeCart();render();
+        if(window.matchMedia('(max-width:700px)').matches){document.getElementById('slip').classList.add('expanded');document.getElementById('slip-toggle').setAttribute('aria-expanded','true');updateSlip();}
+      });controls.append(restore);foot.append(calculations,controls);card.append(foot);cartContent.append(card);
+    }
+    cartContent.append(newEl('p','cart-warning','仅保存选择时的报价快照，并非真实投注订单。历史赔率可能过期；加载到计算器后请核对现价。理论串关收益不等于 RH 实际 Combo 报价。'));
+  }
+  function openCart(){renderCart();cartBackdrop.hidden=false;document.body.style.overflow='hidden';document.getElementById('cart-close').focus();}
+  function closeCart(){cartBackdrop.hidden=true;document.body.style.overflow='';}
+  document.getElementById('cart-open').addEventListener('click',openCart);
+  document.getElementById('cart-show-bottom').addEventListener('click',openCart);
+  document.getElementById('cart-close').addEventListener('click',closeCart);
+  cartBackdrop.addEventListener('click',e=>{if(e.target===cartBackdrop)closeCart();});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!cartBackdrop.hidden)closeCart();});
+  document.getElementById('cart-add').addEventListener('click',()=>{
+    const picks=[...selected.values()];if(!picks.length)return;
+    cart.unshift({id:String(Date.now())+'-'+Math.random().toString(36).slice(2,8),savedAt:new Date().toISOString(),stake,picks:picks.map(p=>({...p}))});
+    cart=cart.slice(0,100);persistCart();openCart();
+  });
+  renderCart();
 
   // Championships are season-long correlated markets and are displayed separately
   // from the daily matchup theoretical combo calculator.
