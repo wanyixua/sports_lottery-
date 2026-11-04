@@ -1,140 +1,395 @@
 <!doctype html>
-<html lang="zh-CN"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>NBA 赔率 · 北京时间</title><style>
-:root{color-scheme:light}*{box-sizing:border-box}html{background:#f7f8fa}body{margin:0;color:#171a21;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",Arial,sans-serif}.container{max-width:700px;margin:0 auto;padding:24px 14px 132px}.head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:6px 0 24px}.brand{font-weight:800;font-size:27px;letter-spacing:-.5px}.brand span{font-weight:400}.status{background:#eaeef3;color:#66717e;padding:8px 11px;border-radius:100px;font-size:12px}.date-pill{display:inline-block;background:#111317;color:#fff;border-radius:100px;padding:12px 20px;font-weight:750;margin-bottom:19px}.overview{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:15px}.overview b{font-size:19px}.overview span{font-size:12px;color:#8b95a2}.game{background:white;border:1px solid #e0e6ee;border-radius:17px;padding:16px 16px 14px;margin-bottom:12px;box-shadow:0 1px 5px #00000004}.meta{display:flex;justify-content:space-between;color:#8894a2;font-size:12px;margin-bottom:11px}.line{display:grid;grid-template-columns:27px minmax(0,1fr) 45px 125px;align-items:center;gap:8px;margin:8px 0}.jersey{width:26px;height:30px;clip-path:polygon(25% 0,39% 10%,61% 10%,75% 0,100% 13%,87% 39%,87% 100%,13% 100%,13% 39%,0 13%);background:var(--team-color,#718096)}.teamname{font-weight:700;font-size:17px}.code{color:#939caa;font-size:11px;margin-top:3px}.record{text-align:center;color:#83909e;font-size:13px}.odd{background:#f1f4f8;border:2px solid transparent;border-radius:12px;padding:8px 4px;width:100%;cursor:pointer;min-height:65px;color:#141821;transition:background .12s, border-color .12s;touch-action:manipulation}.odd strong{display:block;font-weight:800;font-size:19px}.odd small{display:block;margin-top:4px;font-size:11px;font-weight:700;color:#11804a}.odd:hover:not(:disabled){background:#e6ecf4}.odd.selected{background:#e8f5ee;border-color:#15935b}.odd.selected:after{content:'✓ 已选';display:block;color:#137c4b;font-size:11px;margin-top:3px;font-weight:750}.odd:disabled{cursor:default;opacity:.6}.odd:focus-visible,.clear:focus-visible,input:focus-visible{outline:3px solid #789bdc;outline-offset:2px}.note{font-size:12px;color:#697786;line-height:1.7;background:#eef1f5;border-radius:13px;padding:15px;margin-top:19px}.empty{color:#7b8593;font-size:12px}footer{text-align:center;font-size:11px;color:#9aa4ae;padding-top:25px}.slip{position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid #dce4ed;box-shadow:0 -8px 26px #16283b15;z-index:20}.slip-inner{max-width:700px;margin:auto;padding:12px 16px calc(12px + env(safe-area-inset-bottom))}.slip-head{display:flex;align-items:center;gap:9px;justify-content:space-between}.slip-title{font-size:17px;font-weight:800}.clear{border:0;background:#f1f3f6;border-radius:8px;padding:8px 10px;color:#657182;font-weight:650;cursor:pointer}.slip-stats{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:10px}.stake-wrap{display:flex;align-items:center;gap:6px;background:#f4f6f8;border-radius:10px;padding:6px 8px;color:#697687;font-size:12px}.stake-wrap input{background:#fff;border:1px solid #d7dee7;border-radius:7px;padding:6px;width:68px;font-size:16px;font-weight:750;color:#111}.stat{flex:1;min-width:80px}.stat small{display:block;color:#8290a0;font-size:11px;margin-bottom:3px}.stat b{font-size:18px;font-weight:800}.positive{color:#11804a}.choices{margin-top:7px;font-size:12px;color:#657182;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.disclaimer{font-size:11px;color:#8c96a3;margin-top:6px}.offline{background:#fff2e9;color:#924c1e}.loading{opacity:.7}@media(max-width:420px){.container{padding:17px 11px 155px}.game{padding:13px 12px}.line{grid-template-columns:25px minmax(0,1fr) 35px 105px;gap:6px}.teamname{font-size:16px}.odd strong{font-size:18px}.odd small{font-size:10px}.record{font-size:12px}.brand{font-size:25px}.status{font-size:11px}.stat b{font-size:16px}.slip-inner{padding-left:12px;padding-right:12px}}
-</style></head>
-<body><main class="container"><header class="head"><div class="brand">NBA <span>Odds</span></div><span class="status" id="data-status">备用历史数据 · 11月4日</span></header>
-<div id="date-pill" class="date-pill">11月5日</div>
-<div class="overview"><b id="overview-count">14场比赛</b><span>北京时间 · 点击赔率选择</span></div>
-<section id="games" aria-label="NBA比赛列表"><article class="game"><div class="meta"><span>11月5日 · 08:00 北京时间</span><span>NBA</span></div><div class="line"><span class="jersey" style="--team-color:#e83c56"></span><div><div class="teamname">76人</div><div class="code">PHI</div></div><span class="record">7-1</span><button class="odd" type="button" data-game="2026-11-04-PHI-DET" data-side="away" data-price="50"  aria-pressed="false"><strong>50%</strong><small>净赚 $10.00</small></button></div><div class="line"><span class="jersey" style="--team-color:#275bc8"></span><div><div class="teamname">活塞</div><div class="code">DET</div></div><span class="record">6-1</span><button class="odd" type="button" data-game="2026-11-04-PHI-DET" data-side="home" data-price="54"  aria-pressed="false"><strong>54%</strong><small>净赚 $8.52</small></button></div></article>
-<article class="game"><div class="meta"><span>11月5日 · 08:00 北京时间</span><span>NBA</span></div><div class="line"><span class="jersey" style="--team-color:#d52e38"></span><div><div class="teamname">老鹰</div><div class="code">ATL</div></div><span class="record">4-4</span><button class="odd" type="button" data-game="2026-11-04-ATL-WAS" data-side="away" data-price="55"  aria-pressed="false"><strong>55%</strong><small>净赚 $8.18</small></button></div><div class="line"><span class="jersey" style="--team-color:#244781"></span><div><div class="teamname">奇才</div><div class="code">WAS</div></div><span class="record">4-3</span><button class="odd" type="button" data-game="2026-11-04-ATL-WAS" data-side="home" data-price="44"  aria-pressed="false"><strong>44%</strong><small>净赚 $12.73</small></button></div></article>
-<article class="game"><div class="meta"><span>11月5日 · 08:30 北京时间</span><span>NBA</span></div><div class="line"><span class="jersey" style="--team-color:#406348"></span><div><div class="teamname">雄鹿</div><div class="code">MIL</div></div><span class="record">1-6</span><button class="odd" type="button" data-game="2026-11-04-MIL-BOS" data-side="away" data-price="21"  aria-pressed="false"><strong>21%</strong><small>净赚 $37.62</small></button></div><div class="line"><span class="jersey" style="--team-color:#27804d"></span><div><div class="teamname">凯尔特人</div><div class="code">BOS</div></div><span class="record">5-2</span><button class="odd" type="button" data-game="2026-11-04-MIL-BOS" data-side="home" data-price="83"  aria-pressed="false"><strong>83%</strong><small>净赚 $2.05</small></button></div></article>
-<article class="game"><div class="meta"><span>11月5日 · 08:30 北京时间</span><span>NBA</span></div><div class="line"><span class="jersey" style="--team-color:#26879a"></span><div><div class="teamname">黄蜂</div><div class="code">CHA</div></div><span class="record">3-5</span><button class="odd" type="button" data-game="2026-11-04-CHA-BKN" data-side="away" data-price="61"  aria-pressed="false"><strong>61%</strong><small>净赚 $6.39</small></button></div><div class="line"><span class="jersey" style="--team-color:#24252a"></span><div><div class="teamname">篮网</div><div class="code">BKN</div></div><span class="record">1-6</span><button class="odd" type="button" data-game="2026-11-04-CHA-BKN" data-side="home" data-price="43"  aria-pressed="false"><strong>43%</strong><small>净赚 $13.26</small></button></div></article>
-<article class="game"><div class="meta"><span>11月5日 · 08:30 北京时间</span><span>NBA</span></div><div class="line"><span class="jersey" style="--team-color:#ce3146"></span><div><div class="teamname">公牛</div><div class="code">CHI</div></div><span class="record">1-6</span><button class="odd" type="button" data-game="2026-11-04-CHI-NYK" data-side="away" data-price="19"  aria-pressed="false"><strong>19%</strong><small>净赚 $42.63</small></button></div><div class="line"><span class="jersey" style="--team-color:#e48126"></span><div><div class="teamname">尼克斯</div><div class="code">NYK</div></div><span class="record">3-4</span><button class="odd" type="button" data-game="2026-11-04-CHI-NYK" data-side="home" data-price="84"  aria-pressed="false"><strong>84%</strong><small>净赚 $1.90</small></button></div></article>
-<article class="game"><div class="meta"><span>11月5日 · 09:00 北京时间</span><span>NBA</span></div><div class="line"><span class="jersey" style="--team-color:#476c88"></span><div><div class="teamname">步行者</div><div class="code">IND</div></div><span class="record">—</span><button class="odd" type="button" data-game="2026-11-04-IND-MEM" data-side="away" data-price="" disabled aria-pressed="false"><strong>待更新</strong><small>暂无报价</small></button></div><div class="line"><span class="jersey" style="--team-color:#476c88"></span><div><div class="teamname">灰熊</div><div class="code">MEM</div></div><span class="record">—</span><button class="odd" type="button" data-game="2026-11-04-IND-MEM" data-side="home" data-price="" disabled aria-pressed="false"><strong>待更新</strong><small>暂无报价</small></button></div></article>
-<article class="game"><div class="meta"><span>11月5日 · 09:00 北京时间</span><span>NBA</span></div><div class="line"><span class="jersey" style="--team-color:#476c88"></span><div><div class="teamname">爵士</div><div class="code">UTA</div></div><span class="record">—</span><button class="odd" type="button" data-game="2026-11-04-UTA-NOP" data-side="away" data-price="" disabled aria-pressed="false"><strong>待更新</strong><small>暂无报价</small></button></div><div class="line"><span class="jersey" style="--team-color:#476c88"></span><div><div class="teamname">鹈鹕</div><div class="code">NOP</div></div><span class="record">—</span><button class="odd" type="button" data-game="2026-11-04-UTA-NOP" data-side="home" data-price="" disabled aria-pressed="false"><strong>待更新</strong><small>暂无报价</small></button></div></article>
-<article class="game"><div class="meta"><span>11月5日 · 09:00 北京时间</span><span>NBA</span></div><div class="line"><span class="jersey" style="--team-color:#476c88"></span><div><div class="teamname">骑士</div><div class="code">CLE</div></div><span class="record">—</span><button class="odd" type="button" data-game="2026-11-04-CLE-OKC" data-side="away" data-price="" disabled aria-pressed="false"><strong>待更新</strong><small>暂无报价</small></button></div><div class="line"><span class="jersey" style="--team-color:#476c88"></span><div><div class="teamname">雷霆</div><div class="code">OKC</div></div><span class="record">—</span><button class="odd" type="button" data-game="2026-11-04-CLE-OKC" data-side="home" data-price="" disabled aria-pressed="false"><strong>待更新</strong><small>暂无报价</small></button></div></article>
-<article class="game"><div class="meta"><span>11月5日 · 09:30 北京时间</span><span>NBA</span></div><div class="line"><span class="jersey" style="--team-color:#476c88"></span><div><div class="teamname">森林狼</div><div class="code">MIN</div></div><span class="record">—</span><button class="odd" type="button" data-game="2026-11-04-MIN-HOU" data-side="away" data-price="" disabled aria-pressed="false"><strong>待更新</strong><small>暂无报价</small></button></div><div class="line"><span class="jersey" style="--team-color:#476c88"></span><div><div class="teamname">火箭</div><div class="code">HOU</div></div><span class="record">—</span><button class="odd" type="button" data-game="2026-11-04-MIN-HOU" data-side="home" data-price="" disabled aria-pressed="false"><strong>待更新</strong><small>暂无报价</small></button></div></article>
-<article class="game"><div class="meta"><span>11月5日 · 10:00 北京时间</span><span>NBA</span></div><div class="line"><span class="jersey" style="--team-color:#476c88"></span><div><div class="teamname">猛龙</div><div class="code">TOR</div></div><span class="record">—</span><button class="odd" type="button" data-game="2026-11-04-TOR-DEN" data-side="away" data-price="" disabled aria-pressed="false"><strong>待更新</strong><small>暂无报价</small></button></div><div class="line"><span class="jersey" style="--team-color:#476c88"></span><div><div class="teamname">掘金</div><div class="code">DEN</div></div><span class="record">—</span><button class="odd" type="button" data-game="2026-11-04-TOR-DEN" data-side="home" data-price="" disabled aria-pressed="false"><strong>待更新</strong><small>暂无报价</small></button></div></article>
-<article class="game"><div class="meta"><span>11月5日 · 10:00 北京时间</span><span>NBA</span></div><div class="line"><span class="jersey" style="--team-color:#476c88"></span><div><div class="teamname">开拓者</div><div class="code">POR</div></div><span class="record">—</span><button class="odd" type="button" data-game="2026-11-04-POR-PHX" data-side="away" data-price="" disabled aria-pressed="false"><strong>待更新</strong><small>暂无报价</small></button></div><div class="line"><span class="jersey" style="--team-color:#476c88"></span><div><div class="teamname">太阳</div><div class="code">PHX</div></div><span class="record">—</span><button class="odd" type="button" data-game="2026-11-04-POR-PHX" data-side="home" data-price="" disabled aria-pressed="false"><strong>待更新</strong><small>暂无报价</small></button></div></article>
-<article class="game"><div class="meta"><span>11月5日 · 10:30 北京时间</span><span>NBA</span></div><div class="line"><span class="jersey" style="--team-color:#476c88"></span><div><div class="teamname">独行侠</div><div class="code">DAL</div></div><span class="record">—</span><button class="odd" type="button" data-game="2026-11-04-DAL-SAS" data-side="away" data-price="" disabled aria-pressed="false"><strong>待更新</strong><small>暂无报价</small></button></div><div class="line"><span class="jersey" style="--team-color:#476c88"></span><div><div class="teamname">马刺</div><div class="code">SAS</div></div><span class="record">—</span><button class="odd" type="button" data-game="2026-11-04-DAL-SAS" data-side="home" data-price="" disabled aria-pressed="false"><strong>待更新</strong><small>暂无报价</small></button></div></article>
-<article class="game"><div class="meta"><span>11月5日 · 11:00 北京时间</span><span>NBA</span></div><div class="line"><span class="jersey" style="--team-color:#476c88"></span><div><div class="teamname">湖人</div><div class="code">LAL</div></div><span class="record">—</span><button class="odd" type="button" data-game="2026-11-04-LAL-SAC" data-side="away" data-price="" disabled aria-pressed="false"><strong>待更新</strong><small>暂无报价</small></button></div><div class="line"><span class="jersey" style="--team-color:#476c88"></span><div><div class="teamname">国王</div><div class="code">SAC</div></div><span class="record">—</span><button class="odd" type="button" data-game="2026-11-04-LAL-SAC" data-side="home" data-price="" disabled aria-pressed="false"><strong>待更新</strong><small>暂无报价</small></button></div></article>
-<article class="game"><div class="meta"><span>11月5日 · 11:30 北京时间</span><span>NBA</span></div><div class="line"><span class="jersey" style="--team-color:#476c88"></span><div><div class="teamname">热火</div><div class="code">MIA</div></div><span class="record">—</span><button class="odd" type="button" data-game="2026-11-04-MIA-LAC" data-side="away" data-price="" disabled aria-pressed="false"><strong>待更新</strong><small>暂无报价</small></button></div><div class="line"><span class="jersey" style="--team-color:#476c88"></span><div><div class="teamname">快船</div><div class="code">LAC</div></div><span class="record">—</span><button class="odd" type="button" data-game="2026-11-04-MIA-LAC" data-side="home" data-price="" disabled aria-pressed="false"><strong>待更新</strong><small>暂无报价</small></button></div></article></section>
-<div class="note" id="data-note">页面内置的是11月4日比赛的历史备份。联网后自动从同目录 odds.json 读取最新报价。串关倍率仅为按各场 YES 买入报价相乘推算的理论结果，不是 RH Combo 的实际市场报价；未计费用与滑点。</div>
-<footer>NBA Odds · 数据缓存展示</footer>
-</main>
-<aside class="slip" aria-label="组合收益计算器"><div class="slip-inner">
-<div class="slip-head"><span class="slip-title"><span id="combo-type">选择比赛</span> <span id="pick-count" style="color:#8291a0;font-size:14px">0选</span></span><button class="clear" type="button" id="clear">清空选择</button></div>
-<div id="choices" class="choices">点击比赛中的赔率按钮选择球队（每场限选一队）</div>
-<div class="slip-stats"><label class="stake-wrap">投入 $ <input type="number" id="stake" value="10" min="0.01" max="1000000" step="1" inputmode="decimal" aria-label="投入美元金额"/></label><div class="stat"><small>理论倍率</small><b id="multiple">—</b></div><div class="stat"><small>总返还</small><b id="payout">—</b></div><div class="stat"><small>净利润</small><b id="profit" class="positive">—</b></div></div>
-<div class="disclaimer">仅供计算：多场必须全部猜中；非 RH 实际 Combo 报价，不提供下注。</div></div></aside>
-<script id="fallback-data" type="application/json">{"date": "2026-11-04", "timezone": "America/Los_Angeles", "source": "Robinhood 用户截图", "capturedAt": "2026-11-03T15:46:00-08:00", "isLive": false, "stakeUSD": 10, "games": [{"id": "2026-11-04-PHI-DET", "startTimePT": "16:00", "away": {"code": "PHI", "nameZh": "76人", "record": "7-1", "color": "#e83c56", "pricePercent": 50}, "home": {"code": "DET", "nameZh": "活塞", "record": "6-1", "color": "#275bc8", "pricePercent": 54}}, {"id": "2026-11-04-ATL-WAS", "startTimePT": "16:00", "away": {"code": "ATL", "nameZh": "老鹰", "record": "4-4", "color": "#d52e38", "pricePercent": 55}, "home": {"code": "WAS", "nameZh": "奇才", "record": "4-3", "color": "#244781", "pricePercent": 44}}, {"id": "2026-11-04-MIL-BOS", "startTimePT": "16:30", "away": {"code": "MIL", "nameZh": "雄鹿", "record": "1-6", "color": "#406348", "pricePercent": 21}, "home": {"code": "BOS", "nameZh": "凯尔特人", "record": "5-2", "color": "#27804d", "pricePercent": 83}}, {"id": "2026-11-04-CHA-BKN", "startTimePT": "16:30", "away": {"code": "CHA", "nameZh": "黄蜂", "record": "3-5", "color": "#26879a", "pricePercent": 61}, "home": {"code": "BKN", "nameZh": "篮网", "record": "1-6", "color": "#24252a", "pricePercent": 43}}, {"id": "2026-11-04-CHI-NYK", "startTimePT": "16:30", "away": {"code": "CHI", "nameZh": "公牛", "record": "1-6", "color": "#ce3146", "pricePercent": 19}, "home": {"code": "NYK", "nameZh": "尼克斯", "record": "3-4", "color": "#e48126", "pricePercent": 84}}, {"id": "2026-11-04-IND-MEM", "startTimePT": "17:00", "away": {"code": "IND", "nameZh": "步行者", "record": "", "color": "#476c88", "pricePercent": null}, "home": {"code": "MEM", "nameZh": "灰熊", "record": "", "color": "#476c88", "pricePercent": null}}, {"id": "2026-11-04-UTA-NOP", "startTimePT": "17:00", "away": {"code": "UTA", "nameZh": "爵士", "record": "", "color": "#476c88", "pricePercent": null}, "home": {"code": "NOP", "nameZh": "鹈鹕", "record": "", "color": "#476c88", "pricePercent": null}}, {"id": "2026-11-04-CLE-OKC", "startTimePT": "17:00", "away": {"code": "CLE", "nameZh": "骑士", "record": "", "color": "#476c88", "pricePercent": null}, "home": {"code": "OKC", "nameZh": "雷霆", "record": "", "color": "#476c88", "pricePercent": null}}, {"id": "2026-11-04-MIN-HOU", "startTimePT": "17:30", "away": {"code": "MIN", "nameZh": "森林狼", "record": "", "color": "#476c88", "pricePercent": null}, "home": {"code": "HOU", "nameZh": "火箭", "record": "", "color": "#476c88", "pricePercent": null}}, {"id": "2026-11-04-TOR-DEN", "startTimePT": "18:00", "away": {"code": "TOR", "nameZh": "猛龙", "record": "", "color": "#476c88", "pricePercent": null}, "home": {"code": "DEN", "nameZh": "掘金", "record": "", "color": "#476c88", "pricePercent": null}}, {"id": "2026-11-04-POR-PHX", "startTimePT": "18:00", "away": {"code": "POR", "nameZh": "开拓者", "record": "", "color": "#476c88", "pricePercent": null}, "home": {"code": "PHX", "nameZh": "太阳", "record": "", "color": "#476c88", "pricePercent": null}}, {"id": "2026-11-04-DAL-SAS", "startTimePT": "18:30", "away": {"code": "DAL", "nameZh": "独行侠", "record": "", "color": "#476c88", "pricePercent": null}, "home": {"code": "SAS", "nameZh": "马刺", "record": "", "color": "#476c88", "pricePercent": null}}, {"id": "2026-11-04-LAL-SAC", "startTimePT": "19:00", "away": {"code": "LAL", "nameZh": "湖人", "record": "", "color": "#476c88", "pricePercent": null}, "home": {"code": "SAC", "nameZh": "国王", "record": "", "color": "#476c88", "pricePercent": null}}, {"id": "2026-11-04-MIA-LAC", "startTimePT": "19:30", "away": {"code": "MIA", "nameZh": "热火", "record": "", "color": "#476c88", "pricePercent": null}, "home": {"code": "LAC", "nameZh": "快船", "record": "", "color": "#476c88", "pricePercent": null}}]}</script><script>
-(() => {
-  'use strict';
-  const list = document.getElementById('games');
-  const status = document.getElementById('data-status');
-  const selected = new Map(); // gameId -> side; at most one team per game
-  let games = [];
-  let stake = 10;
-  const stakeInput = document.getElementById('stake');
-  const teamNames = {ATL:'老鹰',BOS:'凯尔特人',BKN:'篮网',CHA:'黄蜂',CHI:'公牛',CLE:'骑士',DAL:'独行侠',DEN:'掘金',DET:'活塞',GSW:'勇士',HOU:'火箭',IND:'步行者',LAC:'快船',LAL:'湖人',MEM:'灰熊',MIA:'热火',MIL:'雄鹿',MIN:'森林狼',NOP:'鹈鹕',NYK:'尼克斯',OKC:'雷霆',ORL:'魔术',PHI:'76人',PHX:'太阳',POR:'开拓者',SAC:'国王',SAS:'马刺',TOR:'猛龙',UTA:'爵士',WAS:'奇才'};
-  const money = x => Number.isFinite(x) ? '$' + x.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2}) : '—';
-  const validPrice = p => p!==null && p!==undefined && p!=='' && Number.isFinite(Number(p)) && Number(p)>0 && Number(p)<=100;
-  const safeColor = c => /^#[0-9a-f]{6}$/i.test(c||'') ? c : '#718096';
-  const formatBJ = (date, time) => {
-    const parts = String(time||'').split(':').map(Number);
-    if(!/^\d{4}-\d{2}-\d{2}$/.test(date)||parts.length!==2 || !Number.isInteger(parts[0]) || parts[0]>23 || parts[0]<0 || !Number.isInteger(parts[1]) || parts[1]>59 || parts[1]<0) return '开赛时间待定';
-    const [y,m,d] = date.split('-').map(Number);
-    // Determine PT UTC offset at this date; DST is handled by America/Los_Angeles.
-    const offsetParts = new Intl.DateTimeFormat('en-US',{timeZone:'America/Los_Angeles',timeZoneName:'shortOffset',hour:'2-digit'}).formatToParts(new Date(Date.UTC(y,m-1,d,12)));
-    const tz = offsetParts.find(x=>x.type==='timeZoneName')?.value || 'GMT-8';
-    const mt = tz.match(/GMT([+-])(\d{1,2})(?::(\d{2}))?/);
-    const offsetMin = mt ? (mt[1]==='+'?1:-1)*(Number(mt[2])*60+Number(mt[3]||0)) : -480;
-    const utc = new Date(Date.UTC(y,m-1,d,parts[0],parts[1]) - offsetMin*60000);
-    const bj = new Intl.DateTimeFormat('zh-CN',{timeZone:'Asia/Shanghai',month:'numeric',day:'numeric',hour:'2-digit',minute:'2-digit',hour12:false}).format(utc);
-    return bj + ' 北京时间';
-  };
-  const oneLine=(team,game,side)=>{
-    const el=document.createElement('div');el.className='line';
-    const jersey=document.createElement('span');jersey.className='jersey';jersey.style.setProperty('--team-color',safeColor(team.color));
-    const identity=document.createElement('div');
-    const name=document.createElement('div');name.className='teamname';name.textContent=team.nameZh||teamNames[team.code]||team.code||'待定';
-    const abbr=document.createElement('div');abbr.className='code';abbr.textContent=team.code||'';
-    identity.append(name,abbr);
-    const record=document.createElement('span');record.className='record';record.textContent=team.record||'—';
-    const button=document.createElement('button');button.type='button';button.className='odd';button.dataset.game=game.id;button.dataset.side=side;button.dataset.price=validPrice(team.pricePercent)?Number(team.pricePercent):'';
-    const big=document.createElement('strong');const small=document.createElement('small');
-    if(validPrice(team.pricePercent)){
-      const p=Number(team.pricePercent);big.textContent=Number.isInteger(p)?p+'%':p.toFixed(1)+'%';small.textContent='净赚 '+money(stake*(100/p-1));
-    }else{big.textContent='待更新';small.textContent='暂无报价';button.disabled=true;}
-    button.setAttribute('aria-label',name.textContent+'赢，'+big.textContent+'，点击选择');
-    button.setAttribute('aria-pressed','false');button.append(big,small);el.append(jersey,identity,record,button);return el;
-  };
-  const renderGames=(data)=>{
-    games=data.games;
-    const frag=document.createDocumentFragment();
-    for(const game of games){
-      const card=document.createElement('article');card.className='game';
-      const meta=document.createElement('div');meta.className='meta';
-      const time=document.createElement('span');time.textContent=formatBJ(data.date,game.startTimePT);
-      const league=document.createElement('span');league.textContent='NBA';meta.append(time,league);
-      card.append(meta,oneLine(game.away||{},game,'away'),oneLine(game.home||{},game,'home'));frag.append(card);
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NBA Odds · 北京时间</title>
+  <meta name="theme-color" content="#0b1220" />
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg:#09111f;
+      --bg2:#0e1a2f;
+      --panel:rgba(10,18,34,.74);
+      --panel-strong:rgba(14,23,42,.88);
+      --line:rgba(255,255,255,.08);
+      --soft:#9eacc8;
+      --text:#eef4ff;
+      --accent:#55d48f;
+      --accent-2:#5ab8ff;
+      --danger:#f38b8b;
+      --shadow:0 18px 40px rgba(0,0,0,.26);
+      --radius:24px;
     }
-    list.replaceChildren(frag);
-    document.getElementById('overview-count').textContent=games.length+'场比赛';
-    const first=games[0];
-    const bjText=first?formatBJ(data.date,first.startTimePT):'';
-    const shortDate=(bjText.match(/\d+月\d+日/)||[])[0]||data.date;
-    document.getElementById('date-pill').textContent=shortDate;
-    document.title='NBA 比赛 · '+shortDate;
-    const fetched=data.capturedAt?new Date(data.capturedAt):null;
-    const refreshed=fetched&&!Number.isNaN(fetched.getTime())?new Intl.DateTimeFormat('zh-CN',{timeZone:'Asia/Shanghai',month:'numeric',day:'numeric',hour:'2-digit',minute:'2-digit',hour12:false}).format(fetched)+' 北京时间':'时间未知';
-    status.textContent=String(data.source||'').includes('Robinhood public webpage')?'RH 报价缓存':'赔率缓存';
-    document.getElementById('data-note').textContent='数据来源：'+(data.source||'历史缓存')+'；采集时间：'+refreshed+'。页面提供理论收益换算，非下单功能；报价会波动，未计手续费、滑点。';
-    // Remove any selection whose game/side is not available or no longer quoteable.
-    for(const [id,side] of selected){let g=games.find(x=>x.id===id);if(!g||!validPrice(g[side]?.pricePercent))selected.delete(id);}
-    updateSlip();
-  };
-  const getPicks=()=>[...selected].flatMap(([id,side])=>{
-    const game=games.find(g=>g.id===id);const t=game?.[side];return (t&&validPrice(t.pricePercent))?[{id,side,team:t}]:[];
-  });
-  function updateSlip(){
-    const picks=getPicks();
-    let mult=1;for(const p of picks)mult*=100/Number(p.team.pricePercent);
-    document.getElementById('pick-count').textContent=picks.length+'选';
-    document.getElementById('multiple').textContent=picks.length?mult.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2})+'×':'—';
-    document.getElementById('payout').textContent=picks.length?money(stake*mult):'—';
-    document.getElementById('profit').textContent=picks.length?money(stake*(mult-1)):'—';
-    document.getElementById('choices').textContent=picks.length?picks.map(p=>p.team.nameZh||teamNames[p.team.code]||p.team.code).join(' × '):'点击比赛中的赔率按钮选择球队（每场限选一队）';
-    document.getElementById('combo-type').textContent=picks.length>=2?'理论串关':picks.length===1?'单场理论收益':'选择比赛';
-    document.querySelectorAll('.odd[data-game]').forEach(el=>{
-      const picked=selected.get(el.dataset.game)===el.dataset.side;
-      el.classList.toggle('selected',picked);el.setAttribute('aria-pressed',String(picked));
-      if(!el.disabled){const p=Number(el.dataset.price);el.querySelector('small').textContent='净赚 '+money(stake*(100/p-1));}
-    });
-  }
-  list.addEventListener('click',ev=>{
-    const btn=ev.target.closest('button.odd[data-game]');
-    if(!btn||btn.disabled) return;
-    const id=btn.dataset.game,side=btn.dataset.side;
-    if(selected.get(id)===side)selected.delete(id);else selected.set(id,side);
-    updateSlip();
-  });
-  document.getElementById('clear').addEventListener('click',()=>{selected.clear();updateSlip();});
-  stakeInput.addEventListener('input',()=>{const n=Number(stakeInput.value);if(Number.isFinite(n)&&n>0&&n<=1000000){stake=n;updateSlip();}});
-  // initialize JS fallback picks from embedded JSON
-  const fallbackElement=document.getElementById('fallback-data');
-  if(fallbackElement){try{const initial=JSON.parse(fallbackElement.textContent);games=initial.games;updateSlip();}catch(e){console.warn('Fallback data unavailable',e);}}
-  async function load(){
-    try{
-      const response=await fetch('./odds.json?ts='+Date.now(),{cache:'no-store'});
-      if(!response.ok)throw Error('HTTP '+response.status);
-      const data=await response.json();
-      if(!/^\d{4}-\d{2}-\d{2}$/.test(data.date||'')||!Array.isArray(data.games)||!data.games.length)throw Error('Invalid odds JSON');
-      renderGames(data);
-    }catch(err){status.textContent='备用历史数据 · 未更新';status.classList.add('offline');console.warn('Failed to load odds.json, showing historical fallback',err);}
-  }
-  load();
-  // The static page can stay open while Actions publishes a new odds.json.
-  setInterval(load, 60000);
-})();
-</script></body></html>
+    * { box-sizing:border-box; }
+    html,body { min-height:100%; }
+    body {
+      margin:0;
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(circle at 10% 15%, rgba(80,149,255,.18), transparent 22%),
+        radial-gradient(circle at 82% 8%, rgba(84,212,143,.16), transparent 22%),
+        radial-gradient(circle at 88% 65%, rgba(255,146,83,.14), transparent 24%),
+        linear-gradient(180deg, #07101d 0%, #0b1323 42%, #0f1930 100%);
+      overflow-x:hidden;
+    }
+    body::before, body::after {
+      content:""; position:fixed; inset:auto; pointer-events:none; z-index:0;
+    }
+    body::before {
+      top:-22vmin; right:-18vmin; width:56vmin; height:56vmin; border-radius:50%;
+      background:
+        radial-gradient(circle at center, rgba(255,255,255,.06) 0 2%, transparent 2.2%),
+        radial-gradient(circle at center, transparent 0 53%, rgba(255,255,255,.08) 53.4% 54.2%, transparent 54.6%),
+        radial-gradient(circle at center, transparent 0 70%, rgba(255,255,255,.06) 70.4% 71%, transparent 71.4%),
+        linear-gradient(135deg, rgba(255,154,84,.28), rgba(255,154,84,.05));
+      filter: blur(2px);
+      opacity:.7;
+    }
+    body::after {
+      left:-10vmin; bottom:12vmin; width:42vmin; height:42vmin; border-radius:50%;
+      background:
+        linear-gradient(0deg, rgba(255,255,255,.03), rgba(255,255,255,.03)),
+        repeating-linear-gradient(90deg, transparent 0 32px, rgba(255,255,255,.04) 32px 33px),
+        linear-gradient(135deg, rgba(71,103,255,.14), rgba(91,184,255,.06));
+      mask: radial-gradient(circle at center, black 0 68%, transparent 69%);
+      opacity:.55;
+      transform: rotate(18deg);
+    }
+    .app { max-width:760px; margin:0 auto; padding:20px 14px 170px; position:relative; z-index:1; }
+    .hero {
+      padding:18px 18px 20px;
+      border:1px solid rgba(255,255,255,.08);
+      background:linear-gradient(180deg, rgba(16,26,48,.84), rgba(8,15,29,.72));
+      box-shadow:var(--shadow);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border-radius:28px;
+      position:relative;
+      overflow:hidden;
+      margin-bottom:16px;
+    }
+    .hero::after {
+      content:""; position:absolute; inset:auto -40px -48px auto; width:170px; height:170px; border-radius:50%;
+      background:
+        radial-gradient(circle at center, transparent 0 57%, rgba(255,255,255,.14) 57.6% 58.6%, transparent 59%),
+        linear-gradient(135deg, rgba(255,255,255,.07), rgba(255,255,255,.02));
+      opacity:.55;
+      transform: rotate(-14deg);
+    }
+    .hero-top { display:flex; align-items:center; justify-content:space-between; gap:12px; }
+    .brand { font-size:30px; font-weight:900; letter-spacing:-0.03em; }
+    .brand span { color:#8fa2c2; font-weight:650; }
+    .status {
+      display:inline-flex; align-items:center; gap:7px; white-space:nowrap;
+      background:rgba(255,255,255,.08); color:#d9e4ff; border:1px solid rgba(255,255,255,.08);
+      padding:8px 12px; border-radius:999px; font-size:12px; font-weight:700;
+    }
+    .status::before { content:""; width:8px; height:8px; border-radius:50%; background:#5adf95; box-shadow:0 0 12px rgba(90,223,149,.75); }
+    .hero h1 { margin:16px 0 8px; font-size:24px; line-height:1.15; letter-spacing:-0.03em; }
+    .hero p { margin:0; color:#b6c3dd; line-height:1.65; font-size:14px; max-width:540px; }
+    .summary-row { display:flex; align-items:stretch; gap:12px; margin:16px 0 18px; }
+    .summary-card {
+      flex:1; min-width:0; border:1px solid rgba(255,255,255,.08); border-radius:20px; padding:14px 16px;
+      background:rgba(11,19,35,.58); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+      box-shadow:0 10px 30px rgba(0,0,0,.16);
+    }
+    .summary-label { color:#90a1bf; font-size:12px; margin-bottom:7px; }
+    .summary-value { font-size:21px; font-weight:850; letter-spacing:-0.03em; }
+    .summary-sub { margin-top:5px; color:#aab6cb; font-size:12px; }
+    #games { display:flex; flex-direction:column; gap:14px; }
+    .game {
+      background:var(--panel); border:1px solid rgba(255,255,255,.08); border-radius:24px;
+      padding:16px; box-shadow:var(--shadow); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+      position:relative; overflow:hidden;
+    }
+    .game::before { content:""; position:absolute; inset:0 0 auto 0; height:1px; background:linear-gradient(90deg, transparent, rgba(255,255,255,.25), transparent); opacity:.5; }
+    .meta { display:flex; justify-content:space-between; align-items:center; gap:10px; margin-bottom:10px; color:#9eb0ce; font-size:12px; }
+    .league-tag { padding:4px 9px; border-radius:999px; background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.06); font-size:11px; color:#d8e0ef; }
+    .line { display:grid; grid-template-columns:30px minmax(0,1fr) 54px 132px; gap:10px; align-items:center; padding:8px 0; }
+    .jersey { width:28px; height:32px; clip-path:polygon(25% 0,39% 10%,61% 10%,75% 0,100% 13%,87% 39%,87% 100%,13% 100%,13% 39%,0 13%); background:var(--team-color,#718096); box-shadow: inset 0 0 0 1px rgba(255,255,255,.2), 0 4px 10px rgba(0,0,0,.18); }
+    .teamname { font-weight:800; font-size:17px; letter-spacing:-0.02em; }
+    .code { color:#8f9cb4; font-size:11px; margin-top:4px; }
+    .record { text-align:center; color:#a5b2c8; font-size:12px; font-weight:700; }
+    .odd {
+      width:100%; min-height:72px; border:1px solid rgba(255,255,255,.08); border-radius:16px; cursor:pointer;
+      background:linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.04)); color:#f7fbff;
+      transition:transform .12s ease, border-color .12s ease, background .12s ease, box-shadow .12s ease;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.05);
+      padding:8px 8px 9px;
+    }
+    .odd:hover:not(:disabled) { transform:translateY(-1px); border-color:rgba(90,184,255,.45); background:linear-gradient(180deg, rgba(90,184,255,.18), rgba(255,255,255,.05)); box-shadow:0 10px 18px rgba(0,0,0,.14); }
+    .odd strong { display:block; font-size:20px; font-weight:900; letter-spacing:-0.03em; }
+    .odd small { display:block; margin-top:5px; color:#86f0b2; font-size:11px; font-weight:800; }
+    .odd.selected { border-color:rgba(90,223,149,.62); background:linear-gradient(180deg, rgba(90,223,149,.18), rgba(255,255,255,.05)); box-shadow:0 0 0 3px rgba(90,223,149,.14); }
+    .odd.selected::after { content:"已选"; display:block; margin-top:5px; font-size:11px; font-weight:800; color:#aef3ca; }
+    .odd:disabled { cursor:default; opacity:.58; }
+    .empty-note { font-size:12px; color:#a5b3cb; line-height:1.7; }
+    .note { margin-top:18px; padding:16px 18px; border-radius:20px; background:rgba(255,255,255,.055); border:1px solid rgba(255,255,255,.06); color:#b1bfd8; font-size:12px; line-height:1.8; }
+    .slip {
+      position:fixed; left:0; right:0; bottom:0; z-index:30;
+      background:linear-gradient(180deg, rgba(10,17,31,.78), rgba(7,12,24,.94));
+      backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); border-top:1px solid rgba(255,255,255,.08);
+      box-shadow:0 -14px 40px rgba(0,0,0,.32);
+    }
+    .slip-inner { max-width:760px; margin:0 auto; padding:12px 16px calc(12px + env(safe-area-inset-bottom)); }
+    .slip-head { display:flex; justify-content:space-between; align-items:center; gap:12px; margin-bottom:10px; }
+    .slip-title-wrap { display:flex; flex-direction:column; gap:3px; }
+    .slip-title { font-size:18px; font-weight:900; letter-spacing:-0.03em; }
+    .slip-sub { color:#93a3c1; font-size:12px; }
+    .clear { border:1px solid rgba(255,255,255,.08); color:#dce5f6; background:rgba(255,255,255,.06); border-radius:12px; padding:9px 12px; font-weight:800; cursor:pointer; }
+    .slip-stats { display:grid; grid-template-columns: 116px repeat(4, minmax(0,1fr)); gap:10px; align-items:stretch; }
+    .stake-wrap, .stat {
+      padding:10px 12px; border-radius:16px; background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.06);
+      min-width:0;
+    }
+    .stake-wrap label, .stat small { display:block; color:#8ea1c0; font-size:11px; margin-bottom:5px; }
+    .stake-wrap input { width:100%; padding:7px 9px; border-radius:10px; border:1px solid rgba(255,255,255,.10); background:rgba(4,9,18,.72); color:#fff; font-size:17px; font-weight:850; }
+    .stat b { display:block; font-size:18px; font-weight:900; letter-spacing:-0.03em; }
+    .positive { color:#90f0bb; }
+    .choices { margin-top:10px; display:flex; flex-wrap:wrap; gap:8px; }
+    .chip { padding:7px 10px; border-radius:999px; background:rgba(90,184,255,.14); color:#d8ebff; border:1px solid rgba(90,184,255,.22); font-size:12px; font-weight:700; }
+    .choices.empty { display:block; color:#8fa0bc; font-size:12px; }
+    .disclaimer { margin-top:10px; color:#7f90ac; font-size:11px; line-height:1.6; }
+    button:focus-visible, input:focus-visible { outline:3px solid rgba(90,184,255,.65); outline-offset:2px; }
+    @media (max-width: 700px) {
+      .app { padding:16px 12px 190px; }
+      .summary-row { gap:10px; }
+      .brand { font-size:28px; }
+      .hero h1 { font-size:22px; }
+      .slip-stats { grid-template-columns: repeat(2, minmax(0,1fr)); }
+      .stake-wrap { grid-column: span 2; }
+    }
+    @media (max-width: 430px) {
+      .hero { padding:16px; border-radius:24px; }
+      .hero-top { align-items:flex-start; flex-direction:column; }
+      .summary-row { flex-direction:column; }
+      .line { grid-template-columns:28px minmax(0,1fr) 42px 116px; gap:8px; }
+      .teamname { font-size:16px; }
+      .odd strong { font-size:18px; }
+      .slip-inner { padding-left:12px; padding-right:12px; }
+      .slip-title { font-size:17px; }
+      .slip-stats { grid-template-columns: 1fr 1fr; }
+      .stake-wrap { grid-column: span 2; }
+      .meta { font-size:11px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="app">
+    <header class="hero">
+      <div class="hero-top">
+        <div class="brand">NBA <span>Odds</span></div>
+        <span class="status" id="data-status">RH 赔率缓存</span>
+      </div>
+      <h1>北京时间 NBA 比赛赔率</h1>
+      <p id="hero-sub">选择多个球队按钮，可查看理论串关倍率、总返还和净收益。</p>
+    </header>
+
+    <section class="summary-row" aria-label="概要信息">
+      <div class="summary-card">
+        <div class="summary-label">今日赛程</div>
+        <div class="summary-value" id="summary-date">北京时间加载中…</div>
+        <div class="summary-sub" id="summary-meta">14 场比赛</div>
+      </div>
+      <div class="summary-card">
+        <div class="summary-label">使用说明</div>
+        <div class="summary-value" style="font-size:18px">点击赔率按钮选串</div>
+        <div class="summary-sub">同一场比赛只能选择一支球队；再次点击可取消。</div>
+      </div>
+    </section>
+
+    <section id="games" aria-label="NBA 比赛列表"></section>
+
+    <section class="note" id="data-note">正在加载最新赔率数据…</section>
+  </main>
+
+  <aside class="slip" aria-label="串关计算器">
+    <div class="slip-inner">
+      <div class="slip-head">
+        <div class="slip-title-wrap">
+          <div class="slip-title">串关计算器</div>
+          <div class="slip-sub" id="combo-type">选择比赛</div>
+        </div>
+        <button class="clear" type="button" id="clear-btn">清空</button>
+      </div>
+      <div class="slip-stats">
+        <div class="stake-wrap">
+          <label for="stake">投入金额（USD）</label>
+          <input id="stake" inputmode="decimal" value="10" />
+        </div>
+        <div class="stat"><small>已选</small><b id="pick-count">0选</b></div>
+        <div class="stat"><small>理论倍率</small><b id="multiple">—</b></div>
+        <div class="stat"><small>总返还</small><b id="payout">—</b></div>
+        <div class="stat"><small>净利润</small><b class="positive" id="profit">—</b></div>
+      </div>
+      <div id="choices" class="choices empty">点击比赛中的赔率按钮选择球队（每场限选一队）</div>
+      <div class="disclaimer">说明：这里显示的是根据单队买入价格计算的理论串关收益，不等于 Robinhood 实际 Combo 报价；未计手续费、滑点与成交差异。</div>
+    </div>
+  </aside>
+
+  <script id="fallback-data" type="application/json">{"date":"2026-11-04","timezone":"America/Los_Angeles","source":"Robinhood 用户截图","capturedAt":"2026-11-03T15:46:00-08:00","isLive":false,"stakeUSD":10,"games":[{"id":"2026-11-04-PHI-DET","startTimePT":"16:00","away":{"code":"PHI","nameZh":"76人","record":"7-1","color":"#e83c56","pricePercent":50},"home":{"code":"DET","nameZh":"活塞","record":"6-1","color":"#275bc8","pricePercent":54}},{"id":"2026-11-04-ATL-WAS","startTimePT":"16:00","away":{"code":"ATL","nameZh":"老鹰","record":"4-4","color":"#d52e38","pricePercent":55},"home":{"code":"WAS","nameZh":"奇才","record":"4-3","color":"#244781","pricePercent":44}},{"id":"2026-11-04-MIL-BOS","startTimePT":"16:30","away":{"code":"MIL","nameZh":"雄鹿","record":"1-6","color":"#406348","pricePercent":21},"home":{"code":"BOS","nameZh":"凯尔特人","record":"5-2","color":"#27804d","pricePercent":83}},{"id":"2026-11-04-CHA-BKN","startTimePT":"16:30","away":{"code":"CHA","nameZh":"黄蜂","record":"3-5","color":"#26879a","pricePercent":61},"home":{"code":"BKN","nameZh":"篮网","record":"1-6","color":"#24252a","pricePercent":43}},{"id":"2026-11-04-CHI-NYK","startTimePT":"16:30","away":{"code":"CHI","nameZh":"公牛","record":"1-6","color":"#ce3146","pricePercent":19},"home":{"code":"NYK","nameZh":"尼克斯","record":"3-4","color":"#e48126","pricePercent":84}},{"id":"2026-11-04-IND-MEM","startTimePT":"17:00","away":{"code":"IND","nameZh":"步行者","record":"","color":"#476c88","pricePercent":null},"home":{"code":"MEM","nameZh":"灰熊","record":"","color":"#476c88","pricePercent":null}},{"id":"2026-11-04-UTA-NOP","startTimePT":"17:00","away":{"code":"UTA","nameZh":"爵士","record":"","color":"#476c88","pricePercent":null},"home":{"code":"NOP","nameZh":"鹈鹕","record":"","color":"#476c88","pricePercent":null}},{"id":"2026-11-04-CLE-OKC","startTimePT":"17:00","away":{"code":"CLE","nameZh":"骑士","record":"","color":"#476c88","pricePercent":null},"home":{"code":"OKC","nameZh":"雷霆","record":"","color":"#476c88","pricePercent":null}},{"id":"2026-11-04-MIN-HOU","startTimePT":"17:30","away":{"code":"MIN","nameZh":"森林狼","record":"","color":"#476c88","pricePercent":null},"home":{"code":"HOU","nameZh":"火箭","record":"","color":"#476c88","pricePercent":null}},{"id":"2026-11-04-TOR-DEN","startTimePT":"18:00","away":{"code":"TOR","nameZh":"猛龙","record":"","color":"#476c88","pricePercent":null},"home":{"code":"DEN","nameZh":"掘金","record":"","color":"#476c88","pricePercent":null}},{"id":"2026-11-04-POR-PHX","startTimePT":"18:00","away":{"code":"POR","nameZh":"开拓者","record":"","color":"#476c88","pricePercent":null},"home":{"code":"PHX","nameZh":"太阳","record":"","color":"#476c88","pricePercent":null}},{"id":"2026-11-04-DAL-SAS","startTimePT":"18:30","away":{"code":"DAL","nameZh":"独行侠","record":"","color":"#476c88","pricePercent":null},"home":{"code":"SAS","nameZh":"马刺","record":"","color":"#476c88","pricePercent":null}},{"id":"2026-11-04-LAL-SAC","startTimePT":"19:00","away":{"code":"LAL","nameZh":"湖人","record":"","color":"#476c88","pricePercent":null},"home":{"code":"SAC","nameZh":"国王","record":"","color":"#476c88","pricePercent":null}},{"id":"2026-11-04-MIA-LAC","startTimePT":"19:30","away":{"code":"MIA","nameZh":"热火","record":"","color":"#476c88","pricePercent":null},"home":{"code":"LAC","nameZh":"快船","record":"","color":"#476c88","pricePercent":null}}]}</script>
+  <script>
+    (() => {
+      'use strict';
+      const list = document.getElementById('games');
+      const status = document.getElementById('data-status');
+      const selected = new Map();
+      let games = [];
+      let currentData = null;
+      let stake = 10;
+      const stakeInput = document.getElementById('stake');
+      const teamNames = {ATL:'老鹰',BOS:'凯尔特人',BKN:'篮网',CHA:'黄蜂',CHI:'公牛',CLE:'骑士',DAL:'独行侠',DEN:'掘金',DET:'活塞',GSW:'勇士',HOU:'火箭',IND:'步行者',LAC:'快船',LAL:'湖人',MEM:'灰熊',MIA:'热火',MIL:'雄鹿',MIN:'森林狼',NOP:'鹈鹕',NYK:'尼克斯',OKC:'雷霆',ORL:'魔术',PHI:'76人',PHX:'太阳',POR:'开拓者',SAC:'国王',SAS:'马刺',TOR:'猛龙',UTA:'爵士',WAS:'奇才'};
+      const money = x => Number.isFinite(x) ? '$' + x.toLocaleString('en-US',{minimumFractionDigits:2, maximumFractionDigits:2}) : '—';
+      const validPrice = p => p !== null && p !== undefined && p !== '' && Number.isFinite(Number(p)) && Number(p) > 0 && Number(p) <= 100;
+      const safeColor = c => /^#[0-9a-f]{6}$/i.test(c || '') ? c : '#718096';
+      const getBJTDateInfo = (date, time) => {
+        const parts = String(time || '').split(':').map(Number);
+        if (!/^\d{4}-\d{2}-\d{2}$/.test(date) || parts.length !== 2 || !Number.isInteger(parts[0]) || !Number.isInteger(parts[1])) return null;
+        const [y,m,d] = date.split('-').map(Number);
+        const offsetParts = new Intl.DateTimeFormat('en-US',{timeZone:'America/Los_Angeles', timeZoneName:'shortOffset', hour:'2-digit'}).formatToParts(new Date(Date.UTC(y,m-1,d,12)));
+        const tz = offsetParts.find(x=>x.type==='timeZoneName')?.value || 'GMT-8';
+        const mt = tz.match(/GMT([+-])(\d{1,2})(?::(\d{2}))?/);
+        const offsetMin = mt ? (mt[1] === '+' ? 1 : -1) * (Number(mt[2]) * 60 + Number(mt[3] || 0)) : -480;
+        const utc = new Date(Date.UTC(y,m-1,d,parts[0],parts[1]) - offsetMin * 60000);
+        const partsBj = new Intl.DateTimeFormat('zh-CN',{timeZone:'Asia/Shanghai', month:'numeric', day:'numeric', hour:'2-digit', minute:'2-digit', hour12:false}).formatToParts(utc);
+        const pick = t => partsBj.find(x=>x.type===t)?.value || '';
+        return { month: pick('month'), day: pick('day'), hour: pick('hour'), minute: pick('minute'), text: `${pick('month')}月${pick('day')}日 ${pick('hour')}:${pick('minute')} 北京时间` };
+      };
+      const netProfit = (pricePercent) => stake * (100 / Number(pricePercent) - 1);
+      const createTeamRow = (team, game, side) => {
+        const row = document.createElement('div');
+        row.className = 'line';
+        const jersey = document.createElement('span');
+        jersey.className = 'jersey';
+        jersey.style.setProperty('--team-color', safeColor(team.color));
+        const identity = document.createElement('div');
+        const name = document.createElement('div');
+        name.className = 'teamname';
+        name.textContent = team.nameZh || teamNames[team.code] || team.code || '待定';
+        const code = document.createElement('div');
+        code.className = 'code';
+        code.textContent = team.code || '';
+        identity.append(name, code);
+        const record = document.createElement('div');
+        record.className = 'record';
+        record.textContent = team.record || '—';
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.className = 'odd';
+        button.dataset.game = game.id;
+        button.dataset.side = side;
+        button.dataset.price = validPrice(team.pricePercent) ? String(Number(team.pricePercent)) : '';
+        const big = document.createElement('strong');
+        const small = document.createElement('small');
+        if (validPrice(team.pricePercent)) {
+          const p = Number(team.pricePercent);
+          big.textContent = (Number.isInteger(p) ? p : p.toFixed(1)) + '%';
+          small.textContent = '净赚 ' + money(netProfit(p));
+          button.setAttribute('aria-label', `${name.textContent} 胜，赔率 ${big.textContent}，点击选择`);
+        } else {
+          big.textContent = '待更新';
+          small.textContent = '暂无报价';
+          button.disabled = true;
+        }
+        button.setAttribute('aria-pressed', 'false');
+        button.append(big, small);
+        row.append(jersey, identity, record, button);
+        return row;
+      };
+      const renderGames = (data) => {
+        currentData = data;
+        games = Array.isArray(data.games) ? data.games : [];
+        const frag = document.createDocumentFragment();
+        for (const game of games) {
+          const card = document.createElement('article');
+          card.className = 'game';
+          const meta = document.createElement('div');
+          meta.className = 'meta';
+          const left = document.createElement('span');
+          const info = getBJTDateInfo(data.date, game.startTimePT);
+          left.textContent = info ? info.text : '开赛时间待定';
+          const right = document.createElement('span');
+          right.className = 'league-tag';
+          right.textContent = 'NBA';
+          meta.append(left, right);
+          card.append(meta, createTeamRow(game.away || {}, game, 'away'), createTeamRow(game.home || {}, game, 'home'));
+          frag.append(card);
+        }
+        list.replaceChildren(frag);
+        const first = games[0] ? getBJTDateInfo(data.date, games[0].startTimePT) : null;
+        document.getElementById('summary-date').textContent = first ? `${first.month}月${first.day}日 · 北京时间` : '北京时间';
+        document.getElementById('summary-meta').textContent = `${games.length} 场比赛`;
+        document.getElementById('hero-sub').textContent = first ? `${first.month}月${first.day}日赛程已加载 · 选择多个球队按钮，可查看理论串关倍率、总返还和净收益。` : '选择多个球队按钮，可查看理论串关倍率、总返还和净收益。';
+        const fetched = data.capturedAt ? new Date(data.capturedAt) : null;
+        const refreshed = fetched && !Number.isNaN(fetched.getTime()) ? new Intl.DateTimeFormat('zh-CN',{timeZone:'Asia/Shanghai', month:'numeric', day:'numeric', hour:'2-digit', minute:'2-digit', hour12:false}).format(fetched) + ' 北京时间' : '时间未知';
+        status.textContent = String(data.source || '').includes('Robinhood public webpage') ? 'RH 公开网页缓存' : '赔率缓存';
+        document.getElementById('data-note').textContent = `数据来源：${data.source || '历史缓存'}；采集时间：${refreshed}。页面展示中文队名、北京时间与理论串关收益，实际报价可能随时变化，且未计手续费、滑点与成交差异。`;
+        for (const [id, side] of selected) {
+          const game = games.find(x => x.id === id);
+          if (!game || !validPrice(game[side]?.pricePercent)) selected.delete(id);
+        }
+        updateSlip();
+      };
+      const getPicks = () => [...selected].flatMap(([id, side]) => {
+        const game = games.find(g => g.id === id);
+        const team = game?.[side];
+        return team && validPrice(team.pricePercent) ? [{id, side, team}] : [];
+      });
+      function updateSlip() {
+        const picks = getPicks();
+        let mult = 1;
+        for (const p of picks) mult *= 100 / Number(p.team.pricePercent);
+        document.getElementById('pick-count').textContent = `${picks.length}选`;
+        document.getElementById('multiple').textContent = picks.length ? mult.toLocaleString('en-US',{minimumFractionDigits:2, maximumFractionDigits:2}) + '×' : '—';
+        document.getElementById('payout').textContent = picks.length ? money(stake * mult) : '—';
+        document.getElementById('profit').textContent = picks.length ? money(stake * (mult - 1)) : '—';
+        const choices = document.getElementById('choices');
+        if (!picks.length) {
+          choices.className = 'choices empty';
+          choices.textContent = '点击比赛中的赔率按钮选择球队（每场限选一队）';
+        } else {
+          choices.className = 'choices';
+          choices.replaceChildren(...picks.map(p => {
+            const chip = document.createElement('span');
+            chip.className = 'chip';
+            chip.textContent = p.team.nameZh || teamNames[p.team.code] || p.team.code;
+            return chip;
+          }));
+        }
+        document.getElementById('combo-type').textContent = picks.length >= 2 ? '理论串关' : (picks.length === 1 ? '单场理论收益' : '选择比赛');
+        document.querySelectorAll('.odd[data-game]').forEach(el => {
+          const picked = selected.get(el.dataset.game) === el.dataset.side;
+          el.classList.toggle('selected', picked);
+          el.setAttribute('aria-pressed', String(picked));
+          if (!el.disabled) {
+            const p = Number(el.dataset.price);
+            el.querySelector('small').textContent = '净赚 ' + money(netProfit(p));
+          }
+        });
+      }
+      list.addEventListener('click', (ev) => {
+        const btn = ev.target.closest('button.odd[data-game]');
+        if (!btn || btn.disabled) return;
+        const id = btn.dataset.game;
+        const side = btn.dataset.side;
+        if (selected.get(id) === side) selected.delete(id); else selected.set(id, side);
+        updateSlip();
+      });
+      document.getElementById('clear-btn').addEventListener('click', () => { selected.clear(); updateSlip(); });
+      stakeInput.addEventListener('input', () => {
+        const n = Number(stakeInput.value);
+        if (Number.isFinite(n) && n > 0) stake = n;
+        updateSlip();
+      });
+      const fallback = JSON.parse(document.getElementById('fallback-data').textContent);
+      renderGames(fallback);
+      fetch('odds.json', { cache: 'no-store' })
+        .then(r => r.ok ? r.json() : Promise.reject(new Error('HTTP ' + r.status)))
+        .then(data => { renderGames(data); })
+        .catch(() => { status.textContent = '使用本地备用缓存'; });
+    })();
+  </script>
+</body>
+</html>
