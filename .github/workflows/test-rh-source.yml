@@ -1,0 +1,21 @@
+name: Test RH NBA public data source
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test-public-rh-html:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Test Robinhood NBA page HTML
+        run: python scripts/check_rh_nba.py 2026-11-04
