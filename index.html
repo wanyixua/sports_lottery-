@@ -290,6 +290,37 @@
 .cart-warning{font-size:11px;line-height:1.6;color:#a3b5d0;margin-top:13px}
 @media(max-width:700px){.cart-modal{max-height:90dvh}.cart-backdrop{padding:8px}.cart-modal-content{padding:12px}.cart-modal-head{padding:14px}.cart-actions{position:sticky;bottom:0;padding-bottom:3px;background:#0b1424}}
 
+  
+    /* Compact betting slip on desktop and mobile. Open only when requested. */
+    .app { padding-bottom:125px; }
+    .slip-inner { padding:0 16px calc(8px + env(safe-area-inset-bottom)); }
+    .slip-preview {
+      display:flex; width:100%; min-height:60px; align-items:center; justify-content:space-between;
+      gap:12px; padding:10px 2px 7px; border:0; background:transparent; color:var(--text);
+      cursor:pointer; text-align:left;
+    }
+    .slip-preview-title { font-size:15px; font-weight:900; }
+    .slip-preview-detail { display:block; margin-top:4px; color:#92a7c8; font-size:12px; }
+    .slip-preview-right { display:flex; gap:12px; align-items:center; }
+    .slip-preview-profit { color:#90f0bb; font-size:17px; font-weight:900; white-space:nowrap; }
+    .slip-arrow { font-size:19px; transition:transform .15s; color:#a9bedc; }
+    .slip.expanded .slip-arrow { transform:rotate(180deg); }
+    .slip-body { display:none; max-height:min(62dvh, 580px); overflow-y:auto; overscroll-behavior:contain; padding-bottom:12px; }
+    .slip.expanded .slip-body { display:block; }
+    .slip-head { padding-top:6px; }
+    .fee-panel { padding:0; overflow:hidden; }
+    .fee-summary { list-style:none; display:flex; align-items:center; justify-content:space-between; gap:8px; padding:11px 12px; font-size:13px; font-weight:850; cursor:pointer; }
+    .fee-summary::-webkit-details-marker { display:none; }
+    .fee-summary-hint { color:#9db6ca; font-size:11px; font-weight:600; white-space:nowrap; }
+    .fee-panel[open] .fee-summary-hint { color:#c5e8d4; }
+    .fee-content { border-top:1px solid rgba(143,232,183,.17); padding:11px 12px 12px; }
+    @media(max-width:700px) {
+      .app { padding-bottom:108px; }
+      .slip-body { max-height:min(62dvh, 510px); }
+      .fee-summary { font-size:12px; }
+      .fee-summary-hint { font-size:10px; }
+    }
+
   </style>
 </head>
 <body>
@@ -364,8 +395,9 @@
         <div class="stat"><small>总返还</small><b id="payout">—</b></div>
         <div class="stat"><small>未扣费净利润</small><b class="positive" id="profit">—</b></div>
       </div>
-      <section class="fee-panel" aria-label="Robinhood普通账户手续费估算">
-        <div class="fee-head"><strong>💰 RH 普通账户 · 扣费后预估</strong><small>非 Gold · 预算包含手续费</small></div>
+      <details class="fee-panel" aria-label="Robinhood普通账户手续费估算">
+        <summary class="fee-summary"><span>💰 扣费后预估净赚 <b class="positive" id="fee-summary-profit">—</b></span><span class="fee-summary-hint">查看手续费明细⌄</span></summary>
+        <div class="fee-content"><div class="fee-head"><strong>RH 普通账户 · 手续费明细</strong><small>非 Gold · 预算包含手续费</small></div>
         <div class="fee-inputs">
           <label>RH Combo 实际买入价（美分，可选）
             <input id="rh-price" type="number" inputmode="decimal" min="0.01" max="99.99" step="0.01" placeholder="留空按理论组合价格" />
@@ -380,8 +412,8 @@
           <div><small>含费实际支出</small><b id="fee-spent">—</b></div>
           <div><small>命中后预估净赚</small><b class="positive" id="fee-profit">—</b></div>
         </div>
-        <div class="fee-sub" id="fee-detail">选择比赛后显示费用估算。</div>
-      </section>
+        <div class="fee-sub" id="fee-detail">选择比赛后显示费用估算。</div></div>
+      </details>
       <div id="choices" class="choices empty">点击赔率按钮选串（每场限选一个盘口）</div>
       <div class="cart-actions"><button class="cart-add" id="cart-add" type="button" disabled>🛒 加入购物车</button><button class="cart-btn-subtle" id="cart-show-bottom" type="button">查看购物车 <span id="cart-count-bottom">(0)</span></button></div>
       <div class="disclaimer">说明：上方理论倍率不含费用；扣费后预估按 RH 普通账户佣金公式和整数份数计算。实际 Combo 报价、交易所费用、限价成交、结算规则可能不同，请以 RH 订单预览为准。</div>
@@ -599,7 +631,7 @@
   const exchangeInput=document.getElementById('exchange-fee');
   function feeOverride(){const raw=feePriceInput.value.trim();if(!raw)return null;const n=Number(raw);return Number.isFinite(n)&&n>0&&n<100?n:NaN;}
   function showFees(mult,picksCount){
-    const fallback=()=>{for(const id of ['fee-qty','fee-total','fee-spent','fee-profit'])document.getElementById(id).textContent='—';};
+    const fallback=()=>{for(const id of ['fee-qty','fee-total','fee-spent','fee-profit','fee-summary-profit'])document.getElementById(id).textContent='—';};
     if(!picksCount){fallback();document.getElementById('fee-detail').textContent='选择盘口后显示估算费用。';return;}
     const manual=feeOverride();const q=feeQuote(mult,stake,manual,exchangeInput.value);
     if(!q){fallback();document.getElementById('fee-detail').textContent='请输入有效的 RH Combo 买入价（0～100美分之间）。';return;}
@@ -607,6 +639,7 @@
     document.getElementById('fee-total').textContent=money(q.fees);
     document.getElementById('fee-spent').textContent=money(q.spent);
     document.getElementById('fee-profit').textContent=money(q.profit);
+    document.getElementById('fee-summary-profit').textContent=money(q.profit);
     const mark=manual===null?'基于单项赔率相乘推算':'使用手填 RH Combo 报价';
     document.getElementById('fee-detail').textContent=`${mark}：${(q.price*100).toFixed(2)}¢/份 · RH佣金 ${money(q.commission)} · 交易所费 ${money(q.exchangeTotal)} · 返还 ${money(q.payout)} · 未用预算 ${money(q.unspent)}。假设持有至正确结算，每份返还$1，不计提前卖出费用。`;
   }
