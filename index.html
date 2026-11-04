@@ -375,7 +375,7 @@
     <div class="slip-inner">
       <button class="slip-preview" id="slip-toggle" type="button" aria-expanded="false" aria-controls="slip-body">
         <span><span class="slip-preview-title">串关计算器</span><span class="slip-preview-detail" id="slip-preview-count">0选 · 点击展开</span></span>
-        <span class="slip-preview-right"><span class="slip-preview-profit" id="slip-preview-profit">净赚 —</span><span class="slip-arrow">⌃</span></span>
+        <span class="slip-preview-right"><span class="slip-preview-profit" id="slip-preview-profit">扣费净赚 —</span><span class="slip-arrow">⌃</span></span>
       </button>
       <div class="slip-body" id="slip-body">
       <div class="slip-head">
@@ -652,7 +652,8 @@
     document.getElementById('profit').textContent=picks.length?money(stake*(mult-1)):'—';
     showFees(mult,picks.length);
     document.getElementById('slip-preview-count').textContent=picks.length+'选 · '+(document.getElementById('slip').classList.contains('expanded')?'点击收起':'点击展开');
-    document.getElementById('slip-preview-profit').textContent='净赚 '+(picks.length?money(stake*(mult-1)):'—');
+    const feePreview = picks.length ? feeQuote(mult, stake, feeOverride(), exchangeInput.value) : null;
+    document.getElementById('slip-preview-profit').textContent='扣费净赚 '+(feePreview ? money(feePreview.profit) : '—');
     const choices=document.getElementById('choices');
     choices.replaceChildren();
     if(!picks.length){choices.className='choices empty';choices.textContent='选择胜负、让分、受让或大小球盘口，每场限选一个';}
