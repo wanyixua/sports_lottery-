@@ -1,77 +1,136 @@
 #!/usr/bin/env python3
-"""Safely sync normalized NBA odds from a configured HTTPS JSON source.
+"""Update GitHub Pages odds.json from Robinhood's public NBA page Next.js data.
 
-Source JSON must use the schema of odds.json. Does not scrape Robinhood.
-If source absent or invalid, odds.json is left untouched; error is visible in Actions.
+Experimental, unofficial public-page access. Fail closed on incomplete data.
+No credentials required. The frontend continues to read odds.json as before.
 """
 import json
-import os
+import sys
+from datetime import datetime, timedelta, timezone
+from decimal import Decimal, InvalidOperation
 from pathlib import Path
 from urllib.request import Request, urlopen
-from urllib.parse import urlsplit
-from datetime import datetime
 from zoneinfo import ZoneInfo
+from html.parser import HTMLParser
 
-OUT = Path(__file__).resolve().parents[1] / 'odds.json'
-SOURCE = os.getenv('ODDS_SOURCE_URL', '').strip()
+URL = 'https://robinhood.com/us/en/prediction-markets/nba/games/'
+PT = ZoneInfo('America/Los_Angeles')
+DEST = Path(__file__).resolve().parents[1] / 'odds.json'
+TEAMS = dict(zip(
+    'ATL BOS BKN CHA CHI CLE DAL DEN DET GSW HOU IND LAC LAL MEM MIA MIL MIN NOP NYK OKC ORL PHI PHX POR SAC SAS TOR UTA WAS'.split(),
+    '老鹰 凯尔特人 篮网 黄蜂 公牛 骑士 独行侠 掘金 活塞 勇士 火箭 步行者 快船 湖人 灰熊 热火 雄鹿 森林狼 鹈鹕 尼克斯 雷霆 魔术 76人 太阳 开拓者 国王 马刺 猛龙 爵士 奇才'.split()
+))
+
+class NextData(HTMLParser):
+    def __init__(self):
+        super().__init__(); self.active = False; self.parts = []
+    def handle_starttag(self, tag, attrs):
+        if tag == 'script' and dict(attrs).get('id') == '__NEXT_DATA__': self.active = True
+    def handle_endtag(self, tag):
+        if tag == 'script': self.active = False
+    def handle_data(self, data):
+        if self.active: self.parts.append(data)
 
 
-def validate(data):
-    if not isinstance(data, dict):
-        raise ValueError('root must be a JSON object')
-    date = data.get('date')
-    if not isinstance(date, str):
-        raise ValueError('date must be YYYY-MM-DD')
-    datetime.strptime(date, '%Y-%m-%d')
-    games = data.get('games')
-    if not isinstance(games, list) or not 1 <= len(games) <= 30:
-        raise ValueError('games must contain 1–30 games')
-    seen = set()
-    for i, game in enumerate(games):
-        if not isinstance(game, dict) or not isinstance(game.get('id'), str):
-            raise ValueError(f'game[{i}] requires id')
-        if game['id'] in seen:
-            raise ValueError(f'duplicate game id: {game["id"]}')
-        seen.add(game['id'])
-        for side in ('away', 'home'):
-            team = game.get(side)
-            if not isinstance(team, dict):
-                raise ValueError(f'game[{i}].{side} must be object')
-            for key in ('code', 'nameZh'):
-                if not isinstance(team.get(key), str) or not team[key].strip():
-                    raise ValueError(f'game[{i}].{side}.{key} required')
-            price = team.get('pricePercent')
-            if price is not None and (type(price) not in (int, float) or not 0 < price <= 100):
-                raise ValueError(f'game[{i}].{side}.pricePercent outside (0,100]')
-    return data
+def fetch_page():
+    req = Request(URL, headers={'User-Agent': 'Mozilla/5.0', 'Accept': 'text/html'})
+    with urlopen(req, timeout=35) as resp:
+        if resp.status != 200: raise RuntimeError(f'HTTP {resp.status}')
+        return resp.read().decode('utf-8')
+
+
+def parse(html):
+    p = NextData(); p.feed(html)
+    if not p.parts: raise RuntimeError('Robinhood __NEXT_DATA__ missing')
+    root = json.loads(''.join(p.parts))['props']['pageProps']
+    return root['events'], root['eventStates'], root['quotes']
+
+
+def build_games(events, states, quotes):
+    dates = {}
+    for event in events:
+        state = states.get(event.get('id'), {})
+        start = state.get('gameStart')
+        if not start or not event.get('isSports'): continue
+        local = datetime.fromisoformat(start.replace('Z','+00:00')).astimezone(PT)
+        contracts = [c for c in event.get('eventContracts', {}).values()
+                     if c.get('isTeamContract') and not c.get('isCombo')]
+        if len(contracts) != 2: continue
+        teams = {}
+        for c in contracts:
+            code = c.get('displayShortName', '').upper()
+            if code not in TEAMS: break
+            q = quotes.get(c.get('id'), {})
+            price_str = q.get('yes_ask_price')
+            if price_str is None: break
+            try: price = Decimal(str(price_str))
+            except InvalidOperation: break
+            if not (Decimal('0') < price <= Decimal('1')): break
+            # Report ask quote as percentage (RH display may show different rounded market price).
+            teams[code] = {
+                'code': code,
+                'nameZh': TEAMS[code],
+                'record': state.get('contractIdToQuaternaryText', {}).get(c['id'], ''),
+                'color': c.get('color', {}).get('hex', {}).get('light', '#64748b'),
+                'pricePercent': float(price * 100)
+            }
+        if len(teams) != 2: continue
+        # Away/home order from NBAGAME symbol, e.g. PHIDET. If absent, use stable event name order.
+        match = None
+        for c in contracts:
+            import re
+            match = re.search(r'NBAGAME-\d{2}[A-Z]{3}\d{2}([A-Z]{6})-', c.get('symbol', ''))
+            if match: break
+        if match:
+            away, home = match.group(1)[:3], match.group(1)[3:]
+        else:
+            # Fallback to event contract display order, not alphabetic.
+            away, home = [c['displayShortName'].upper() for c in contracts]
+        if away not in teams or home not in teams: continue
+        day = local.date().isoformat()
+        games = dates.setdefault(day, {})
+        key = f'{day}-{away}-{home}'
+        games[key] = {'id': key, 'startTimePT': local.strftime('%H:%M'), 'away': teams[away], 'home': teams[home]}
+    return {day: sorted(rows.values(), key=lambda x:(x['startTimePT'],x['id'])) for day, rows in dates.items()}
 
 
 def main():
-    if not SOURCE:
-        print('ODDS_SOURCE_URL not configured: keeping existing snapshot, no RH data fetched.')
+    now = datetime.now(PT)
+    groups = build_games(*parse(fetch_page()))
+    today = now.date()
+    # RH can show future days ahead. Prefer today's games, else nearest upcoming day.
+    candidates = sorted(d for d in groups if today.isoformat() <= d <= (today + timedelta(days=7)).isoformat())
+    if not candidates: raise RuntimeError('No current or upcoming NBA games in RH HTML')
+    target = candidates[0]
+    games = groups[target]
+    if not (1 <= len(games) <= 15): raise RuntimeError(f'Invalid game count: {len(games)}')
+    # Known verification fixture: 2026-11-04 has exactly 14 NBA games.
+    if target == '2026-11-04' and len(games) != 14:
+        raise RuntimeError(f'Expected 14 Nov 4 games but parsed {len(games)}; cache unchanged')
+    # Protect against partial fetches for the same date; never shrink an already published full slate.
+    if DEST.exists():
+        prev = json.loads(DEST.read_text(encoding='utf-8'))
+        if prev.get('date') == target and len(prev.get('games', [])) > len(games):
+            raise RuntimeError('Source game count smaller than existing cache; not overwriting')
+    payload = {
+        'date': target, 'timezone': 'America/Los_Angeles',
+        'source': 'Robinhood public webpage (unofficial)',
+        'capturedAt': now.isoformat(timespec='seconds'), 'isLive': False,
+        'stakeUSD': 10, 'games': games
+    }
+    # Prevent repetitive commits when prices and game metadata haven't changed.
+    prev = None
+    if DEST.exists():
+        try: prev = json.loads(DEST.read_text(encoding='utf-8'))
+        except Exception: pass
+    if prev and prev.get('date') == target and prev.get('games') == games and prev.get('source') == payload['source']:
+        print(f'No price changes: {target}, {len(games)} games')
         return
-    p = urlsplit(SOURCE)
-    if p.scheme != 'https' or not p.hostname or p.username or p.password:
-        raise ValueError('ODDS_SOURCE_URL must be an HTTPS URL without embedded credentials')
-    request = Request(SOURCE, headers={'User-Agent': 'NBA-Odds-Cache/1.0', 'Accept': 'application/json'})
-    with urlopen(request, timeout=20) as response:
-        raw = response.read(512_001)
-    if len(raw) > 512_000:
-        raise ValueError('remote JSON too large')
-    data = validate(json.loads(raw.decode('utf-8')))
-    # Source is responsible for accurate source attribution and price timestamp.
-    # Never assert RH origin or fresh quotes without reliable upstream evidence.
-    data['isLive'] = False
-    data['lastSyncedAt'] = datetime.now(ZoneInfo('America/Los_Angeles')).isoformat(timespec='seconds')
-    serialized = json.dumps(data, indent=2, ensure_ascii=False) + '\n'
-    if OUT.exists() and OUT.read_text(encoding='utf-8') == serialized:
-        print('No changes to odds data')
-        return
-    temp = OUT.with_suffix('.json.tmp')
-    temp.write_text(serialized, encoding='utf-8')
-    temp.replace(OUT)
-    print(f'Updated {OUT} from configured HTTPS JSON source: {len(data["games"])} games')
-
+    DEST.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+    print(f'Updated odds.json: {target}, {len(games)} games, {len(games)*2} quotes')
 
 if __name__ == '__main__':
-    main()
+    try: main()
+    except Exception as exc:
+        print(f'RH data update failed, odds.json preserved: {exc}', file=sys.stderr)
+        sys.exit(1)
