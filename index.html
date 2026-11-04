@@ -234,6 +234,24 @@
 .total-odd strong{font-size:17px}.total-odd small{font-size:10px;}
 .total-odd::before{content:attr(data-side);display:block;font-weight:850;font-size:12px;color:#b6cce8;margin-bottom:1px;}
 @media(max-width:420px){.total-row{gap:7px;padding:7px}.total-line{flex-basis:57px;font-size:13px}.total-choices{gap:5px}.total-odd strong{font-size:15px}.total-odd small{font-size:9px}}
+
+/* Season championship board */
+.champion-board{margin-top:20px;padding:18px 15px 16px;border:1px solid rgba(255,218,125,.19);border-radius:24px;background:linear-gradient(155deg,rgba(39,36,40,.86),rgba(10,20,38,.83));box-shadow:var(--shadow)}
+.champion-heading{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:7px}
+.champion-heading h2{margin:0;font-size:21px;font-weight:900;color:#ffe2a3}
+.champion-caption{font-size:12px;color:#bac8de;line-height:1.7;margin-bottom:13px}
+.champion-tabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px;padding:5px;border-radius:15px;background:rgba(4,10,20,.42);margin-bottom:12px}
+.champion-tab{border:0;background:transparent;color:#b8c9de;font-size:13px;font-weight:850;border-radius:11px;padding:11px 3px;cursor:pointer}
+.champion-tab.active{color:#171d27;background:linear-gradient(125deg,#fff0bd,#e4bd69)}
+.champion-list{display:flex;flex-direction:column;gap:7px;max-height:640px;overflow-y:auto;overscroll-behavior:contain;padding:1px}
+.champion-row{display:grid;grid-template-columns:30px minmax(0,1fr) 112px;align-items:center;gap:11px;border:1px solid rgba(255,255,255,.065);background:rgba(255,255,255,.035);border-radius:13px;padding:9px 10px}
+.champion-rank{font-size:13px;font-weight:900;color:#e5c37d;text-align:center}
+.champion-name{font-size:15px;font-weight:850}.champion-code{font-size:11px;color:#98abc8;margin-top:4px}
+.champion-price{justify-self:stretch;text-align:center;padding:8px 5px;border:1px solid rgba(238,195,105,.24);border-radius:11px;background:rgba(250,205,116,.065)}
+.champion-price strong{font-size:19px;font-weight:950;display:block}.champion-price small{font-size:10px;color:#91edb6;font-weight:800;display:block;margin-top:4px}
+.champion-source{font-size:11px;color:#a2b4cd;margin-top:12px;line-height:1.7}
+.champion-source a{color:#ecd292}
+@media(max-width:430px){.champion-board{padding:15px 11px}.champion-row{gap:7px;grid-template-columns:25px minmax(0,1fr) 104px;padding:8px}.champion-name{font-size:14px}.champion-price strong{font-size:17px}}
   </style>
 </head>
 <body>
@@ -259,6 +277,19 @@
         <div class="summary-value" style="font-size:18px">点击赔率按钮选串</div>
         <div class="summary-sub">同场限选一项；胜负、让分、大小球可混串。</div>
       </div>
+    </section>
+
+
+    <section class="champion-board" id="champion-board" aria-label="2027 NBA 冠军预测">
+      <div class="champion-heading"><h2>🏆 2027 冠军预测</h2><span class="league-tag">2026–27赛季</span></div>
+      <div class="champion-caption">总冠军、东西部冠军全部球队赔率 · 按买入价从高到低排列 · 投入 $10 理论净赚</div>
+      <div class="champion-tabs" role="tablist" aria-label="冠军市场选择">
+        <button class="champion-tab active" type="button" role="tab" data-champ="finals" aria-selected="true">NBA总冠军</button>
+        <button class="champion-tab" type="button" role="tab" data-champ="west" aria-selected="false">西部冠军</button>
+        <button class="champion-tab" type="button" role="tab" data-champ="east" aria-selected="false">东部冠军</button>
+      </div>
+      <div class="champion-list" id="champion-list" role="tabpanel"><div class="spread-empty">正在加载冠军市场报价…</div></div>
+      <div class="champion-source" id="champion-source">冠军为赛季长期合约，独立于每日比赛串关；报价缓存可能延迟。</div>
     </section>
 
     <section id="games" aria-label="NBA 比赛列表"></section>
@@ -497,6 +528,51 @@
   });
   document.getElementById('clear-btn').addEventListener('click',()=>{selected.clear();updateSlip();});
   stakeInput.addEventListener('input',()=>{const n=Number(stakeInput.value);if(Number.isFinite(n)&&n>0)stake=n;updateSlip();});
+
+  // Championships are season-long correlated markets and are displayed separately
+  // from the daily matchup theoretical combo calculator.
+  let championData = null;
+  let championTab = 'finals';
+  const championList = document.getElementById('champion-list');
+  const championSource = document.getElementById('champion-source');
+  function renderChampions(){
+    championList.replaceChildren();
+    const market=championData?.markets?.[championTab];
+    if(!market||!Array.isArray(market.teams)){
+      const msg=document.createElement('div');msg.className='spread-empty';msg.textContent='尚未获得冠军赔率。请确认 champions.json 已上传并运行一次 GitHub Actions。';championList.append(msg);return;
+    }
+    market.teams.forEach((t,i)=>{
+      const row=document.createElement('div');row.className='champion-row';
+      const rank=document.createElement('div');rank.className='champion-rank';rank.textContent=String(i+1).padStart(2,'0');
+      const name=document.createElement('div');const title=document.createElement('div');title.className='champion-name';title.textContent=t.nameZh||teamNames[t.code]||t.code;
+      const code=document.createElement('div');code.className='champion-code';code.textContent=t.code;name.append(title,code);
+      const val=document.createElement('div');val.className='champion-price';
+      const strong=document.createElement('strong');const small=document.createElement('small');
+      if(validPrice(t.pricePercent)){
+        strong.textContent=fmt(Number(t.pricePercent))+'%';
+        small.textContent='净赚 '+money(10*(100/Number(t.pricePercent)-1));
+      } else {strong.textContent='待报价';small.textContent='暂无买入价';}
+      val.append(strong,small);row.append(rank,name,val);championList.append(row);
+    });
+    const stamp=new Date(championData.capturedAt);
+    const updated=isNaN(stamp.getTime())?'未知':new Intl.DateTimeFormat('zh-CN',{timeZone:'Asia/Shanghai',month:'numeric',day:'numeric',hour:'2-digit',minute:'2-digit',hour12:false}).format(stamp)+'（北京时间）';
+    championSource.replaceChildren();
+    championSource.append(document.createTextNode('缓存采集：'+updated+' · YES 买入价，仅为理论收益，不含费用、滑点。 '));
+    if(market.url && /^https:\/\/robinhood\.com\//.test(market.url)){
+      const a=document.createElement('a');a.href=market.url;a.target='_blank';a.rel='noopener noreferrer';a.textContent='查看 RH 原始市场';championSource.append(a);
+    }
+  }
+  document.querySelectorAll('.champion-tab').forEach(btn=>btn.addEventListener('click',()=>{
+    championTab=btn.dataset.champ;
+    document.querySelectorAll('.champion-tab').forEach(b=>{
+      const active=b===btn;b.classList.toggle('active',active);b.setAttribute('aria-selected',String(active));
+    });
+    renderChampions();
+  }));
+  fetch('champions.json',{cache:'no-store'}).then(r=>r.ok?r.json():Promise.reject(new Error('champions.json HTTP '+r.status)))
+    .then(data=>{if(data?.markets?.finals&&data?.markets?.west&&data?.markets?.east){championData=data;renderChampions();}})
+    .catch(()=>renderChampions());
+
   render();
   Promise.allSettled([
     fetch('odds.json',{cache:'no-store'}).then(r=>r.ok?r.json():Promise.reject(Error('odds HTTP '+r.status))),
