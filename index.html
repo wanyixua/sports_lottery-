@@ -518,7 +518,7 @@
         body.append(grid);
         body.append(makeText('history-note',`仅包含已完赛常规赛，不包含季前赛、未结束比赛。比分来源：ESPN；抓取时间：${new Intl.DateTimeFormat('zh-CN',{timeZone:'Asia/Shanghai',month:'numeric',day:'numeric',hour:'2-digit',minute:'2-digit'}).format(new Date(data.capturedAt))}（北京时间）。`));
         details.dataset.loaded='1';
-      }).catch(err=>{if(details.isConnected)body.textContent='历史比分暂时无法加载，请检查 season_history.json 是否已生成。';});
+      }).catch(err=>{if(details.isConnected)body.textContent=`历史比分未能读取（${err.message}）。请检查 GitHub Actions 的「Refresh completed NBA season history」步骤，以及 season_history.json 是否已发布。`;});
     });
     return details;
   }
