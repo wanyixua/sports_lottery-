@@ -608,9 +608,23 @@
       card.append(tabs,content);drawContent();frag.append(card);
     }
     list.replaceChildren(frag);
-    const first=odds.games?.[0];const bj=first?getBJ(odds.date,first.startTimePT):'';
-    const date=(bj.match(/\d+月\d+日/)||[])[0]||odds.date;
-    document.getElementById('summary-date').textContent=date+' · 北京时间';
+    // odds.date is the US Pacific slate date, NOT the Beijing calendar date.
+    // Derive the Beijing slate date from real PT tipoff times. Never label the
+    // raw PT date as 北京时间 when the start time is unavailable.
+    const gameBJDates=(odds.games||[]).map(g=>{
+      if(!/^\d{1,2}:\d{2}$/.test(String(g.startTimePT||'')))return null;
+      const value=getBJ(odds.date,g.startTimePT);
+      const parts=value.match(/(\d{1,2})月(\d{1,2})日/);
+      return parts?`${Number(parts[1])}月${Number(parts[2])}日`:null;
+    }).filter(Boolean);
+    const distinctDates=[...new Set(gameBJDates)];
+    const yearFromSlate=Number(String(odds.date||'').slice(0,4));
+    const dateLabel=distinctDates.length===1
+      ? `${yearFromSlate}年${distinctDates[0]} · 北京时间`
+      : distinctDates.length>1
+        ? `${yearFromSlate}年${distinctDates.join(' / ')} · 北京时间`
+        : `${odds.date} · 美国西海岸赛程日期（北京时间待确认）`;
+    document.getElementById('summary-date').textContent=dateLabel;
     document.getElementById('summary-meta').textContent=`${odds.games.length} 场比赛`;
     document.getElementById('hero-sub').textContent='胜负、让分、大小球都能选串，每场比赛限选一个盘口。';
     status.textContent=totals?.date===odds.date?'RH 三种盘口缓存':'RH 胜负 / 让分缓存';
@@ -794,7 +808,7 @@
     const stamp=new Date(championData.capturedAt);
     const updated=isNaN(stamp.getTime())?'未知':new Intl.DateTimeFormat('zh-CN',{timeZone:'Asia/Shanghai',month:'numeric',day:'numeric',hour:'2-digit',minute:'2-digit',hour12:false}).format(stamp)+'（北京时间）';
     championSource.replaceChildren();
-    championSource.append(document.createTextNode('缓存采集：'+updated+' · YES 买入价，仅为理论收益，不含费用、滑点。 '));
+    championSource.append(document.createTextNode('冠军赔率抓取时间：'+updated+' · 这是数据采集时间，并非比赛日期。YES 买入价，仅为理论收益，不含费用、滑点。 '));
     if(market.url && /^https:\/\/robinhood\.com\//.test(market.url)){
       const a=document.createElement('a');a.href=market.url;a.target='_blank';a.rel='noopener noreferrer';a.textContent='查看 RH 原始市场';championSource.append(a);
     }
