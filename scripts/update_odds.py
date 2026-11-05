@@ -10,6 +10,7 @@ from datetime import datetime, timedelta, timezone
 from decimal import Decimal, InvalidOperation
 from pathlib import Path
 from urllib.request import Request, urlopen
+from urllib.parse import urlencode
 from zoneinfo import ZoneInfo
 from html.parser import HTMLParser
 from spread_extract import spread_groups
@@ -141,6 +142,9 @@ def build_games(events, states, quotes, existing_times=None):
         progress = str(state.get('eventProgress') or '').strip()
         # Only publish a clock when RH explicitly marks this game as in progress.
         live = rh_status == 'EVENT_STATUS_IN_PROGRESS'
+        if rh_status in ('EVENT_STATUS_COMPLETED', 'EVENT_STATUS_SETTLED', 'EVENT_STATUS_FINAL'):
+            for side in teams.values():
+                side['pricePercent'] = None
         games[key] = {
             'id': key, 'startTimePT': start_time,
             'status': 'live' if live else ('final' if rh_status in ('EVENT_STATUS_COMPLETED', 'EVENT_STATUS_SETTLED', 'EVENT_STATUS_FINAL') else 'upcoming'),
@@ -165,46 +169,173 @@ def save_if_changed(path, payload, unchanged_fields):
     return True
 
 
+def read_previous(path, date):
+    """Return only a valid previous cache for the exact same slate date."""
+    try:
+        obj = json.loads(path.read_text(encoding='utf-8'))
+        if obj.get('date') == date and isinstance(obj.get('games'), list):
+            return obj
+    except (OSError, ValueError, AttributeError):
+        pass
+    return None
+
+
+# ESPN publishes the final outcome independently of RH's tradable markets.
+# This public scoreboard endpoint is unofficial and may be unavailable.
+ESPN_SCOREBOARD = 'https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard'
+ESPN_CODES = {
+    'NY': 'NYK', 'GS': 'GSW', 'SA': 'SAS', 'NO': 'NOP',
+    'WSH': 'WAS', 'UTAH': 'UTA', 'PHO': 'PHX',
+}
+
+
+def fetch_espn_scoreboard(day):
+    url = ESPN_SCOREBOARD + '?' + urlencode({'dates': day.replace('-', ''), 'limit': '100'})
+    req = Request(url, headers={'User-Agent': 'Mozilla/5.0', 'Accept': 'application/json'})
+    with urlopen(req, timeout=15) as resp:
+        if resp.status != 200:
+            raise RuntimeError(f'ESPN scoreboard HTTP {resp.status}')
+        return json.load(resp)
+
+
+def completed_espn_games(scoreboard, day):
+    """Only unambiguous *final* events on the PT schedule day."""
+    finals = set()
+    for event in scoreboard.get('events', []):
+        try:
+            status = (event.get('status') or {}).get('type') or {}
+            # A cancelled/abandoned event is not a normal final even when post-game.
+            if not (status.get('completed') is True and
+                    (status.get('name') == 'STATUS_FINAL' or str(status.get('id')) == '3')):
+                continue
+            comps = event.get('competitions') or []
+            if not comps:
+                continue
+            comp = comps[0]
+            competitors = comp.get('competitors') or []
+            if len(competitors) != 2:
+                continue
+            teams = {}
+            for c in competitors:
+                code = str((c.get('team') or {}).get('abbreviation') or '').upper()
+                code = ESPN_CODES.get(code, code)
+                teams[c.get('homeAway')] = code
+            home, away = teams.get('home'), teams.get('away')
+            if home not in TEAMS or away not in TEAMS:
+                continue
+            start = datetime.fromisoformat(str(event['date']).replace('Z', '+00:00'))
+            if start.astimezone(PT).date().isoformat() != day:
+                continue
+            finals.add(f'{day}-{away}-{home}')
+        except (KeyError, ValueError, TypeError, AttributeError):
+            continue
+    return finals
+
+
+def retain_missing_games(current, previous, *, fetch_scores=fetch_espn_scoreboard):
+    """Keep removed games visible, but NEVER present old quotes as tradable.
+
+    RH removes markets after tipoff/settlement. Disappearance alone is not
+    proof of final; verify the exact matchup/date with ESPN instead.
+    """
+    by_id = {g['id']: g for g in current}
+    missing = [g for g in (previous or {}).get('games', []) if g.get('id') not in by_id]
+    verified_finals = set()
+    if missing:
+        day = previous.get('date')
+        if day:
+            try:
+                verified_finals = completed_espn_games(fetch_scores(day), day)
+                print(f'ESPN confirmed {len(verified_finals)} final matchups on {day}')
+            except (OSError, ValueError, RuntimeError, KeyError, TypeError) as exc:
+                print(f'Warning: ESPN results unavailable ({exc}); missing RH games stay unavailable')
+    if previous:
+        for old in previous.get('games', []):
+            key = old.get('id')
+            if not key or key in by_id:
+                continue
+            preserved = json.loads(json.dumps(old))
+            # A previously confirmed final remains final even if ESPN is down.
+            preserved['status'] = 'final' if (key in verified_finals or old.get('status') == 'final') else 'unavailable'
+            preserved['progress'] = ''
+            for side in ('away', 'home'):
+                if isinstance(preserved.get(side), dict):
+                    preserved[side]['pricePercent'] = None
+            by_id[key] = preserved
+            print(f'RH removed game {key}; status={preserved["status"]}; quotes unavailable')
+    return sorted(by_id.values(), key=lambda g: (g.get('startTimePT') or '99:99', g['id']))
+
+
+def retain_missing_market_lines(current, previous, *, kind):
+    """Preserve contract labels for removed markets with all quotes cleared."""
+    old_by_id = {g['id']: g for g in (previous or {}).get('games', [])}
+    by_id = {key: json.loads(json.dumps(g)) for key, g in current.items()}
+    price_fields = ('pricePercent',) if kind == 'spread' else ('overPricePercent', 'underPricePercent')
+    for game_id, old in old_by_id.items():
+        existing = by_id.setdefault(game_id, {'id': game_id, 'lines': []})
+        fresh_lines = existing['lines']
+        fresh_ids = {line.get('id') for line in fresh_lines}
+        for line in old.get('lines', []):
+            if line.get('id') in fresh_ids:
+                continue
+            stale = dict(line)
+            for field in price_fields:
+                stale[field] = None
+            fresh_lines.append(stale)
+        if kind == 'spread':
+            fresh_lines.sort(key=lambda line: (line.get('team', ''), line.get('margin', 0)))
+        else:
+            fresh_lines.sort(key=lambda line: line.get('points', 0))
+    return by_id
+
+
 def process_html(html, now, *, dest=DEST, spread_dest=SPREAD_DEST, total_dest=TOTAL_DEST, champion_dest=CHAMPION_DEST):
     events, states, quotes = parse(html)
     groups = build_games(events, states, quotes, load_existing_game_times(dest))
     today = now.date()
     candidates = sorted(d for d in groups if today.isoformat() <= d <= (today + timedelta(days=7)).isoformat())
-    if not candidates: raise RuntimeError('No current or upcoming NBA games in RH HTML')
-    target = candidates[0]
-    games = groups[target]
-    if not (1 <= len(games) <= 15): raise RuntimeError(f'Invalid game count: {len(games)}')
+    # Keep today's cached slate when RH removed *all* its markets.
+    # Otherwise the page could jump to tomorrow without ever marking the
+    # remaining matchups final. Tomorrow becomes active on the next PT day.
+    cached_today = read_previous(dest, today.isoformat())
+    if today.isoformat() in groups:
+        target = today.isoformat()
+    elif cached_today and (candidates or not groups):
+        target = today.isoformat()
+        print('RH has no markets for today; checking cached slate against ESPN finals')
+    elif candidates:
+        target = candidates[0]
+    else:
+        raise RuntimeError('No current or upcoming NBA games in RH HTML')
+    games = groups.get(target, [])
+    if len(games) > 15 or (not games and not cached_today):
+        raise RuntimeError(f'Invalid game count: {len(games)}')
     valid_winner_quotes = sum(team['pricePercent'] is not None for game in games for team in (game['away'], game['home']))
     if valid_winner_quotes == 0:
-        raise RuntimeError('No valid winner ask quotes; caches preserved')
+        print('Warning: no active winner ask quotes; preserving available game identities')
     print(f'Parsed {len(games)} scheduled games, {valid_winner_quotes}/{2 * len(games)} winner ask quotes')
-    if dest.exists():
-        prev = json.loads(dest.read_text(encoding='utf-8'))
-        if prev.get('date') == target and len(prev.get('games', [])) > len(games):
-            raise RuntimeError('Source game count smaller than existing cache')
+    previous_odds = read_previous(dest, target)
+    merged_games = retain_missing_games(games, previous_odds)
 
+    # RH legitimately removes some spread/total contracts as games start or
+    # finish. Removed contracts retain their labels but NOT obsolete prices.
     spreads = spread_groups(events, quotes, target, TEAMS)
-    # Important: allow some unavailable ask prices, but require complete market discovery.
-    # Do not overwrite good spread cache with partial market lists.
-    if set(spreads) != {g['id'] for g in games}:
-        raise RuntimeError(f'Incomplete spread discovery: {len(spreads)}/{len(games)} games; caches preserved')
-    if spread_dest.exists():
-        try: previous_spreads = json.loads(spread_dest.read_text(encoding='utf-8'))
-        except (json.JSONDecodeError, OSError): previous_spreads = None
-        if previous_spreads and previous_spreads.get('date') == target:
-            old_by_game = {g['id']: len(g.get('lines', [])) for g in previous_spreads.get('games', [])}
-            if any(len(spreads[k]['lines']) < old_by_game.get(k, 0) for k in spreads):
-                raise RuntimeError('Spread contract counts shrank; caches preserved')
     totals = total_groups(events, quotes, target, TEAMS)
-    if set(totals) != {g['id'] for g in games}:
-        raise RuntimeError(f'Incomplete total discovery: {len(totals)}/{len(games)} games; caches preserved')
-    if total_dest.exists():
-        try: previous_totals = json.loads(total_dest.read_text(encoding='utf-8'))
-        except (json.JSONDecodeError, OSError): previous_totals = None
-        if previous_totals and previous_totals.get('date') == target:
-            old_sizes = {g['id']: len(g.get('lines', [])) for g in previous_totals.get('games', [])}
-            if any(len(totals[key]['lines']) < old_sizes.get(key, 0) for key in totals):
-                raise RuntimeError('Totals contract counts shrank; caches preserved')
+    spreads = retain_missing_market_lines(spreads, read_previous(spread_dest, target), kind='spread')
+    totals = retain_missing_market_lines(totals, read_previous(total_dest, target), kind='total')
+    for game in merged_games:
+        spread = spreads.setdefault(game['id'], {'id': game['id'], 'lines': []})
+        total = totals.setdefault(game['id'], {'id': game['id'], 'lines': []})
+        if game.get('status') in ('final', 'unavailable'):
+            for line in spread['lines']:
+                line['pricePercent'] = None
+            for line in total['lines']:
+                line['overPricePercent'] = None
+                line['underPricePercent'] = None
+
+    # If an entire game vanished, old lines were retained with no old asks.
+    # Do not overwrite a healthy full slate with a zero-game parse.
+    games = merged_games
     nowstr = now.isoformat(timespec='seconds')
     odds_payload = {
         'date': target, 'timezone': 'America/Los_Angeles',
@@ -225,12 +356,12 @@ def process_html(html, now, *, dest=DEST, spread_dest=SPREAD_DEST, total_dest=TO
     total_quotes = sum(line[side] is not None for g in total_payload['games'] for line in g['lines']
                        for side in ('overPricePercent','underPricePercent'))
     if not total_quotes:
-        raise RuntimeError('No valid total ask quotes; caches preserved')
+        print('Warning: no live totals ask quotes; publishing unavailable prices')
     print(f'{total_contracts} total lines; {total_quotes} valid Over/Under ask prices')
     quoted = sum(line['pricePercent'] is not None for g in spread_payload['games'] for line in g['lines'])
     count = sum(len(g['lines']) for g in spread_payload['games'])
     if quoted == 0:
-        raise RuntimeError('No valid spread ask quotes; caches preserved')
+        print('Warning: no live spread ask quotes; publishing unavailable prices')
     print(f'{target}: {len(games)} games, {count // 2} spread contracts, {count} spread directions (YES/NO), {quoted} valid ask prices')
     champion_markets = championships(events, quotes, TEAMS)
     quoted_champions = sum(t['pricePercent'] is not None for m in champion_markets.values() for t in m['teams'])
