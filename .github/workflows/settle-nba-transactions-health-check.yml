@@ -1,0 +1,112 @@
+name: Settle NBA transactions (10 PM PT)
+
+on:
+  schedule:
+    - cron: '0 22 * * *'
+      timezone: 'America/Los_Angeles'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+# Both publishing workflows must use the SAME concurrency group.
+concurrency:
+  group: nba-odds-pages
+  cancel-in-progress: false
+
+jobs:
+  settle:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Get newest committed ledger before settlement
+        shell: bash
+        run: |
+          git fetch origin "${GITHUB_REF_NAME}"
+          git reset --hard "origin/${GITHUB_REF_NAME}"
+      - name: Validate ledger before settlement
+        run: python scripts/check_transactions.py --previous-git
+      - name: Snapshot ledger for before-after regression detection
+        run: cp transactions.json /tmp/ledger-before-settlement.json
+      - name: Save ledger IDs for safety check
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          data=json.loads(Path('transactions.json').read_text(encoding='utf-8'))
+          ids=[str(r['id']) for r in data['records']]
+          if len(ids)!=len(set(ids)):
+              raise SystemExit('Duplicate transaction IDs detected before settlement')
+          Path('/tmp/ledger-ids-before.json').write_text(json.dumps(ids))
+          print(f'Before settlement: {len(ids)} transactions')
+          PY
+      - name: Settle pending transactions from final scores
+        run: python scripts/settle_transactions.py
+      - name: Abort if any transaction disappeared
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          old=set(json.loads(Path('/tmp/ledger-ids-before.json').read_text()))
+          data=json.loads(Path('transactions.json').read_text(encoding='utf-8'))
+          rows=data['records']
+          new_ids=[str(r['id']) for r in rows]
+          if len(new_ids)!=len(set(new_ids)):
+              raise SystemExit('Duplicate transaction IDs after settlement')
+          missing=old-set(new_ids)
+          if missing:
+              raise SystemExit(f'ABORT: settlement removed transaction IDs: {sorted(missing)}')
+          print(f'After settlement: {len(rows)} transactions; no deleted IDs')
+          PY
+      - name: Validate settlement did not erase or reset completed orders
+        run: python scripts/check_transactions.py --before-file /tmp/ledger-before-settlement.json
+      - name: Commit settlement changes and safely reconcile concurrent edits
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add transactions.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Settle NBA transactions from final scores'
+            git pull --rebase origin "${GITHUB_REF_NAME}"
+            git push origin "HEAD:${GITHUB_REF_NAME}"
+          else
+            echo 'No settlement changes.'
+          fi
+      - name: Refresh all site files from newest remote commit before upload
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch origin "${GITHUB_REF_NAME}"
+          git reset --hard "origin/${GITHUB_REF_NAME}"
+          python - <<'PY'
+          import json
+          data=json.load(open('transactions.json',encoding='utf-8'))
+          print('Publishing ledger count:',len(data['records']))
+          print('Latest IDs:',sorted(r['id'] for r in data['records'])[-5:])
+          PY
+      - name: Recheck newest ledger before Pages upload
+        run: python scripts/check_transactions.py --previous-git
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: .
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: settle
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

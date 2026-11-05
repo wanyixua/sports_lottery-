@@ -25,6 +25,8 @@ jobs:
         run: |
           git fetch origin "${GITHUB_REF_NAME}"
           git reset --hard "origin/${GITHUB_REF_NAME}"
+      - name: Validate ledger before any site publish
+        run: python scripts/check_transactions.py --previous-git
       - name: Refresh NBA winner, spread and total caches
         id: refresh
         continue-on-error: true
@@ -80,6 +82,8 @@ jobs:
           print('Publishing ledger count:',len(data['records']))
           print('Latest IDs:',sorted(r['id'] for r in data['records'])[-5:])
           PY
+      - name: Recheck newest ledger before Pages upload
+        run: python scripts/check_transactions.py --previous-git
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v4
         with:
