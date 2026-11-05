@@ -18,6 +18,17 @@ PT = ZoneInfo('America/Los_Angeles')
 OUT = Path(__file__).resolve().parents[1] / 'season_history.json'
 URL = 'https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard'
 
+# Normalized 30-team NBA IDs shared with RH. ESPN often abbreviates Warriors as GS.
+TEAM_CODES = set('ATL BOS BKN CHA CHI CLE DAL DEN DET GSW HOU IND LAC LAL MEM MIA MIL MIN NOP NYK OKC ORL PHI PHX POR SAC SAS TOR UTA WAS'.split())
+TEAM_ALIASES = {'GS':'GSW','NY':'NYK','SA':'SAS','NO':'NOP','WSH':'WAS',
+                'UTAH':'UTA','UT':'UTA','PHO':'PHX','BRK':'BKN','BK':'BKN',
+                'NJ':'BKN','NJN':'BKN'}
+
+def canonical_team(code):
+    code = str(code or '').strip().upper()
+    return TEAM_ALIASES.get(code, code)
+
+
 
 def date_range(start, end):
     day = start
@@ -87,8 +98,9 @@ def parse_event(event, first_day, now):
     if set(by_side) != {'home', 'away'}:
         return None
     a, h = by_side['away'], by_side['home']
-    away, home = a.get('team', {}).get('abbreviation', '').upper(), h.get('team', {}).get('abbreviation', '').upper()
-    if not away or not home or away == home:
+    away = canonical_team(a.get('team', {}).get('abbreviation'))
+    home = canonical_team(h.get('team', {}).get('abbreviation'))
+    if away not in TEAM_CODES or home not in TEAM_CODES or away == home:
         return None
     sa, sh = int(a['score']), int(h['score'])
     if sa == sh:
@@ -112,6 +124,7 @@ def build(events_by_month, now):
 
 
 def build_from_parsed(parsed, now):
+    parsed = [{**g, 'away': canonical_team(g['away']), 'home': canonical_team(g['home']), 'winner': canonical_team(g['winner'])} for g in parsed]
     pt_today = now.astimezone(PT).date()
     start_year = pt_today.year if pt_today.month >= 7 else pt_today.year - 1
     games = sorted(parsed, key=lambda x: (x['date'], x['id']), reverse=True)
