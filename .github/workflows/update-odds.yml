@@ -15,28 +15,71 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Start with latest committed version
+        shell: bash
+        run: |
+          git fetch origin "${GITHUB_REF_NAME}"
+          git reset --hard "origin/${GITHUB_REF_NAME}"
       - name: Refresh NBA winner, spread and total caches
         id: refresh
         continue-on-error: true
         run: python scripts/update_odds.py
-      - name: Commit updated data when changed
-        if: steps.refresh.outcome == 'success'
+      - name: Refresh completed NBA season history
+        id: history
+        continue-on-error: true
+        run: python scripts/update_season_history.py
+      - name: Show season history cache status
+        if: always()
+        shell: bash
         run: |
-          if ! git diff --quiet -- odds.json spreads.json totals.json; then
-            git config user.name 'github-actions[bot]'
-            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-            git add odds.json spreads.json totals.json
-            git commit -m 'Update NBA market cache'
-            git push
+          if [ -f season_history.json ]; then
+            python - <<'PY_CHECK'
+          import json
+          d=json.load(open('season_history.json',encoding='utf-8'))
+          print('Season history status:',d.get('season'),len(d.get('games',[])),'games',len(d.get('teams',{})),'teams')
+          PY_CHECK
           else
-            echo 'No cache changes'
+            echo '::warning::season_history.json missing. See Refresh completed NBA season history logs.'
+          fi
+      - name: Warn if history source unavailable
+        if: steps.history.outcome == 'failure'
+        run: echo '::warning::ESPN season history refresh failed; existing cache remains unchanged.'
+      - name: Commit odds changes if refresh succeeded
+        if: steps.refresh.outcome == 'success' || steps.history.outcome == 'success'
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add odds.json spreads.json totals.json champions.json
+          if [ -f season_history.json ]; then git add season_history.json; fi
+          if ! git diff --cached --quiet; then
+            git commit -m 'Update NBA market cache'
+            git pull --rebase origin "${GITHUB_REF_NAME}"
+            git push origin "HEAD:${GITHUB_REF_NAME}"
+          else
+            echo 'No cache changes.'
           fi
       - name: Explain preserved odds cache
         if: steps.refresh.outcome == 'failure'
-        run: echo "::warning::Odds refresh failed; existing caches preserved. Publishing committed site files anyway."
+        run: echo '::warning::Odds refresh failed; preserving existing cache and publishing newest committed files.'
+      - name: Refresh all site files from newest remote commit before upload
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch origin "${GITHUB_REF_NAME}"
+          git reset --hard "origin/${GITHUB_REF_NAME}"
+          python - <<'PY'
+          import json
+          data=json.load(open('transactions.json',encoding='utf-8'))
+          print('Publishing ledger count:',len(data['records']))
+          print('Latest IDs:',sorted(r['id'] for r in data['records'])[-5:])
+          PY
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v4
         with:
