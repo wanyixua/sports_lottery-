@@ -82,8 +82,20 @@ function renderRecords(rows){
 }
 document.querySelectorAll('[data-owner]').forEach(btn=>btn.addEventListener('click',()=>{owner=btn.dataset.owner;document.querySelectorAll('[data-owner]').forEach(b=>b.classList.toggle('active',b===btn));render()}));
 function startDashboard(){
-  fetch('transactions.json?v='+Date.now(),{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('HTTP '+r.status);return r.json()}).then(x=>{if(Array.isArray(x.records)){const onlineIds=new Set(x.records.map(r=>String(r.id)));const missing=db.records.filter(r=>!onlineIds.has(String(r.id)));if(missing.length){console.warn('线上 transactions.json 缺少内嵌账本的交易，保留较完整的内嵌数据；缺少 ID:',missing.map(r=>r.id));return;}db=x;render()}}).catch(e=>console.warn('使用内嵌记录快照',e));
-  render();
+  // The repository JSON is the single source of truth. An embedded fallback is used ONLY
+  // when the network file cannot be loaded, never based on record count: a newer JSON
+  // can have fewer records but more recent settlement states.
+  fetch('transactions.json?v='+Date.now(),{cache:'no-store'})
+    .then(r=>{if(!r.ok)throw Error('HTTP '+r.status);return r.json()})
+    .then(x=>{
+      if(!x || !Array.isArray(x.records)) throw Error('Invalid transactions.json');
+      const ids=new Set(x.records.map(r=>String(r.id)));
+      const missing=db.records.filter(r=>!ids.has(String(r.id)));
+      if(missing.length) console.warn('Online JSON missing embedded backup IDs (check GitHub if unexpected):',missing.map(r=>r.id));
+      db=x;
+    })
+    .catch(e=>console.warn('Unable to load online transactions.json, showing embedded backup:',e))
+    .finally(()=>render());
 }
 // 仅是前端显示门槛，不是数据加密或真正访问控制。
 const ACCESS_PASSWORD='wwb690727';
