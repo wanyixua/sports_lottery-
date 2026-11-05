@@ -52,52 +52,97 @@ def parse(html):
     return root['events'], root['eventStates'], root['quotes']
 
 
-def build_games(events, states, quotes):
+def load_existing_game_times(dest):
+    """Keep original start times for games whose live state has no gameStart."""
+    try:
+        saved = json.loads(dest.read_text(encoding='utf-8'))
+        return {g['id']: g['startTimePT'] for g in saved.get('games', [])
+                if g.get('id') and g.get('startTimePT')}
+    except (OSError, ValueError, TypeError, KeyError):
+        return {}
+
+
+def build_games(events, states, quotes, existing_times=None):
+    """Discover NBA game dates from contract symbols, including live games.
+
+    RH removes eventStates[event_id].gameStart after tipoff, while retaining
+    event, team contracts, eventStatus, and quotes. The game symbol still
+    provides its date and away/home pairing. Reuse cached exact start time
+    if gameStart is unavailable; never drop the game merely for that reason.
+    """
+    import re
+    existing_times = existing_times or {}
     dates = {}
     for event in events:
+        if not event.get('isSports'):
+            continue
         state = states.get(event.get('id'), {})
-        start = state.get('gameStart')
-        if not start or not event.get('isSports'): continue
-        local = datetime.fromisoformat(start.replace('Z','+00:00')).astimezone(PT)
-        contracts = [c for c in event.get('eventContracts', {}).values()
+        contracts = [c for c in (event.get('eventContracts') or {}).values()
                      if c.get('isTeamContract') and not c.get('isCombo')]
-        if len(contracts) != 2: continue
+        if len(contracts) != 2:
+            continue
+        matches = [re.fullmatch(r'NBAGAME-(\d{2}[A-Z]{3}\d{2})([A-Z]{6})-([A-Z]{3})',
+                               str(c.get('symbol', ''))) for c in contracts]
+        if any(m is None for m in matches):
+            continue
+        stamp, pair, _ = matches[0].groups()
+        if any(m.group(1) != stamp or m.group(2) != pair for m in matches):
+            continue
+        try:
+            symbol_day = datetime.strptime(stamp, '%y%b%d').date().isoformat()
+        except ValueError:
+            continue
+        away, home = pair[:3], pair[3:]
+        if away not in TEAMS or home not in TEAMS:
+            continue
         teams = {}
         for c in contracts:
-            code = c.get('displayShortName', '').upper()
-            if code not in TEAMS: break
-            q = quotes.get(c.get('id'), {})
+            code = str(c.get('displayShortName', '')).upper()
+            if code not in (away, home):
+                break
+            q = quotes.get(c.get('id'), {}) or {}
             price_str = q.get('yes_ask_price')
-            if price_str is None: break
-            try: price = Decimal(str(price_str))
-            except InvalidOperation: break
-            if not (Decimal('0') < price <= Decimal('1')): break
-            # Report ask quote as percentage (RH display may show different rounded market price).
+            price_percent = None
+            if price_str is not None:
+                try:
+                    price = Decimal(str(price_str))
+                    if Decimal('0') < price <= Decimal('1'):
+                        price_percent = float(price * 100)
+                except (InvalidOperation, ValueError, TypeError):
+                    pass
             teams[code] = {
                 'code': code,
                 'nameZh': TEAMS[code],
-                'record': state.get('contractIdToQuaternaryText', {}).get(c['id'], ''),
+                'record': (state.get('contractIdToQuaternaryText') or {}).get(c['id'], ''),
                 'color': c.get('color', {}).get('hex', {}).get('light', '#64748b'),
-                'pricePercent': float(price * 100)
+                'pricePercent': price_percent,
             }
-        if len(teams) != 2: continue
-        # Away/home order from NBAGAME symbol, e.g. PHIDET. If absent, use stable event name order.
-        match = None
-        for c in contracts:
-            import re
-            match = re.search(r'NBAGAME-\d{2}[A-Z]{3}\d{2}([A-Z]{6})-', c.get('symbol', ''))
-            if match: break
-        if match:
-            away, home = match.group(1)[:3], match.group(1)[3:]
+        if set(teams) != {away, home}:
+            continue
+        key = f'{symbol_day}-{away}-{home}'
+        start = state.get('gameStart')
+        if start:
+            try:
+                local = datetime.fromisoformat(start.replace('Z', '+00:00')).astimezone(PT)
+                if local.date().isoformat() != symbol_day:
+                    raise ValueError(f'Game start / symbol date mismatch: {key}')
+                start_time = local.strftime('%H:%M')
+            except (ValueError, AttributeError):
+                start_time = existing_times.get(key)
         else:
-            # Fallback to event contract display order, not alphabetic.
-            away, home = [c['displayShortName'].upper() for c in contracts]
-        if away not in teams or home not in teams: continue
-        day = local.date().isoformat()
-        games = dates.setdefault(day, {})
-        key = f'{day}-{away}-{home}'
-        games[key] = {'id': key, 'startTimePT': local.strftime('%H:%M'), 'away': teams[away], 'home': teams[home]}
-    return {day: sorted(rows.values(), key=lambda x:(x['startTimePT'],x['id'])) for day, rows in dates.items()}
+            start_time = existing_times.get(key)
+        if not start_time:
+            # The initial RH page lacks kickoff time for some live events.
+            # Preserve those games and explicitly mark kickoff as unknown.
+            start_time = '00:00'
+            print(f'Warning: no gameStart/cache for {key}; kickoff unknown (live game retained)')
+        games = dates.setdefault(symbol_day, {})
+        games[key] = {
+            'id': key, 'startTimePT': start_time,
+            'away': teams[away], 'home': teams[home],
+        }
+    return {day: sorted(rows.values(), key=lambda x: (x['startTimePT'], x['id']))
+            for day, rows in dates.items()}
 
 
 def save_if_changed(path, payload, unchanged_fields):
@@ -116,15 +161,17 @@ def save_if_changed(path, payload, unchanged_fields):
 
 def process_html(html, now, *, dest=DEST, spread_dest=SPREAD_DEST, total_dest=TOTAL_DEST, champion_dest=CHAMPION_DEST):
     events, states, quotes = parse(html)
-    groups = build_games(events, states, quotes)
+    groups = build_games(events, states, quotes, load_existing_game_times(dest))
     today = now.date()
     candidates = sorted(d for d in groups if today.isoformat() <= d <= (today + timedelta(days=7)).isoformat())
     if not candidates: raise RuntimeError('No current or upcoming NBA games in RH HTML')
     target = candidates[0]
     games = groups[target]
     if not (1 <= len(games) <= 15): raise RuntimeError(f'Invalid game count: {len(games)}')
-    if target == '2026-11-04' and len(games) != 14:
-        raise RuntimeError(f'Expected 14 Nov 4 games but parsed {len(games)}')
+    valid_winner_quotes = sum(team['pricePercent'] is not None for game in games for team in (game['away'], game['home']))
+    if valid_winner_quotes == 0:
+        raise RuntimeError('No valid winner ask quotes; caches preserved')
+    print(f'Parsed {len(games)} scheduled games, {valid_winner_quotes}/{2 * len(games)} winner ask quotes')
     if dest.exists():
         prev = json.loads(dest.read_text(encoding='utf-8'))
         if prev.get('date') == target and len(prev.get('games', [])) > len(games):
