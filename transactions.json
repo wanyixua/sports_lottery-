@@ -329,7 +329,34 @@
       "payout": null,
       "status": "pending",
       "note": "文字记录：6串1；已确认命中净赚 $120",
-      "profitIfWin": 120
+      "profitIfWin": 120,
+      "legs": [
+        {
+          "team": "NYK",
+          "market": "moneyline"
+        },
+        {
+          "team": "MEM",
+          "market": "moneyline"
+        },
+        {
+          "team": "LAL",
+          "market": "moneyline"
+        },
+        {
+          "team": "SAS",
+          "market": "moneyline"
+        },
+        {
+          "team": "BOS",
+          "market": "spread",
+          "line": -4.5
+        },
+        {
+          "team": "MIA",
+          "market": "moneyline"
+        }
+      ]
     },
     {
       "id": 37,
@@ -340,7 +367,14 @@
       "payout": null,
       "status": "pending",
       "note": "文字记录：76人受让14.5；已确认命中净赚 $6",
-      "profitIfWin": 6
+      "profitIfWin": 6,
+      "legs": [
+        {
+          "team": "PHI",
+          "market": "spread",
+          "line": 14.5
+        }
+      ]
     },
     {
       "id": 38,
@@ -348,10 +382,21 @@
       "usDate": "2026-11-04",
       "bet": "ATL +6.5",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 27.0,
+      "status": "win",
       "note": "文字记录：老鹰受让6.5；已确认命中净赚 $7",
-      "profitIfWin": 7
+      "profitIfWin": 7,
+      "legs": [
+        {
+          "team": "ATL",
+          "market": "spread",
+          "line": 6.5
+        }
+      ],
+      "legResults": [
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores); verify special RH settlement rules"
     },
     {
       "id": 39,
@@ -362,7 +407,14 @@
       "payout": null,
       "status": "pending",
       "note": "文字记录：黄蜂受让5.5；投入金额已确认 $20；已确认命中净赚 $5",
-      "profitIfWin": 5
+      "profitIfWin": 5,
+      "legs": [
+        {
+          "team": "CHA",
+          "market": "spread",
+          "line": 5.5
+        }
+      ]
     },
     {
       "id": 40,
@@ -373,7 +425,14 @@
       "payout": null,
       "status": "pending",
       "note": "文字记录：尼克斯让5.5；投入金额已确认 $20；已确认命中净赚 $6",
-      "profitIfWin": 6
+      "profitIfWin": 6,
+      "legs": [
+        {
+          "team": "NYK",
+          "market": "spread",
+          "line": -5.5
+        }
+      ]
     },
     {
       "id": 41,
@@ -384,7 +443,19 @@
       "payout": null,
       "status": "pending",
       "note": "微信截图：两串1，已确认买好；20赚18为确认的命中净利润",
-      "profitIfWin": 18
+      "profitIfWin": 18,
+      "legs": [
+        {
+          "team": "BOS",
+          "market": "spread",
+          "line": -4.5
+        },
+        {
+          "team": "CLE",
+          "market": "spread",
+          "line": 8.5
+        }
+      ]
     },
     {
       "id": 42,
@@ -395,7 +466,14 @@
       "payout": null,
       "status": "pending",
       "note": "微信截图：灰熊让8.5；确认的命中净赚26",
-      "profitIfWin": 26
+      "profitIfWin": 26,
+      "legs": [
+        {
+          "team": "MEM",
+          "market": "spread",
+          "line": -8.5
+        }
+      ]
     },
     {
       "id": 43,
@@ -406,7 +484,14 @@
       "payout": null,
       "status": "pending",
       "note": "微信截图：鹈鹕受让6.5；确认的命中净赚4",
-      "profitIfWin": 4
+      "profitIfWin": 4,
+      "legs": [
+        {
+          "team": "NOP",
+          "market": "spread",
+          "line": 6.5
+        }
+      ]
     },
     {
       "id": 44,
@@ -417,7 +502,14 @@
       "payout": null,
       "status": "pending",
       "note": "微信截图：森林狼受让10.5；确认的命中净赚11",
-      "profitIfWin": 11
+      "profitIfWin": 11,
+      "legs": [
+        {
+          "team": "MIN",
+          "market": "spread",
+          "line": 10.5
+        }
+      ]
     },
     {
       "id": 45,
@@ -428,7 +520,14 @@
       "payout": null,
       "status": "pending",
       "note": "微信截图：猛龙受让8.5；确认的命中净赚10",
-      "profitIfWin": 10
+      "profitIfWin": 10,
+      "legs": [
+        {
+          "team": "TOR",
+          "market": "spread",
+          "line": 8.5
+        }
+      ]
     },
     {
       "id": 46,
@@ -439,7 +538,14 @@
       "payout": null,
       "status": "pending",
       "note": "微信截图：独行侠受让18.5；确认的命中净赚8",
-      "profitIfWin": 8
+      "profitIfWin": 8,
+      "legs": [
+        {
+          "team": "DAL",
+          "market": "spread",
+          "line": 18.5
+        }
+      ]
     },
     {
       "id": 47,
@@ -450,7 +556,14 @@
       "payout": null,
       "status": "pending",
       "note": "微信截图：国王受让13.5；确认的命中净赚14",
-      "profitIfWin": 14
+      "profitIfWin": 14,
+      "legs": [
+        {
+          "team": "SAC",
+          "market": "spread",
+          "line": 13.5
+        }
+      ]
     },
     {
       "id": 48,
@@ -461,7 +574,25 @@
       "payout": null,
       "status": "pending",
       "note": "4串1；已买入 $30，微信确认命中净赚 $29",
-      "profitIfWin": 29
+      "profitIfWin": 29,
+      "legs": [
+        {
+          "team": "NYK",
+          "market": "moneyline"
+        },
+        {
+          "team": "SAS",
+          "market": "moneyline"
+        },
+        {
+          "team": "LAL",
+          "market": "moneyline"
+        },
+        {
+          "team": "BOS",
+          "market": "moneyline"
+        }
+      ]
     }
   ]
 }
