@@ -325,7 +325,24 @@
     }
 
     .dashboard-entry{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:14px 0 18px;padding:15px 17px;border-radius:20px;background:linear-gradient(110deg,rgba(246,206,130,.16),rgba(90,184,255,.10));border:1px solid rgba(246,206,130,.28);color:#eef4ff;text-decoration:none}.dashboard-entry strong{font-size:16px}.dashboard-entry small{display:block;color:#bac9db;font-size:12px;margin-top:5px;line-height:1.5}.dashboard-entry .go{white-space:nowrap;color:#ffe2a5;font-size:13px;font-weight:800}
-  </style>
+  
+  /* Read-only NBA regular-season results; independent of Robinhood quotes. */
+  .history-panel{margin:0 0 13px;border:1px solid rgba(125,164,214,.18);background:rgba(14,29,51,.45);border-radius:14px;overflow:hidden}
+  .history-panel summary{cursor:pointer;padding:10px 12px;color:#b9dcff;font-size:12px;font-weight:800;list-style-position:inside;user-select:none}
+  .history-panel[open] summary{border-bottom:1px solid rgba(255,255,255,.08)}
+  .history-inner{padding:12px;display:grid;gap:14px}
+  .history-cols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .history-team{min-width:0}
+  .history-title{font-size:13px;font-weight:800;color:#e7eefb}
+  .history-record{font-size:13px;color:#b9d0ed;margin:4px 0 8px}
+  .history-record strong{color:#93f2bb}
+  .history-list{max-height:230px;overflow:auto;display:grid;gap:5px;overscroll-behavior:contain}
+  .history-game{display:flex;justify-content:space-between;gap:6px;background:rgba(255,255,255,.04);border-radius:7px;padding:7px 8px;color:#b7c8e0;font-size:11px}
+  .history-game .win{color:#8ef0b6;font-weight:900}
+  .history-game .loss{color:#ffabb3;font-weight:900}
+  .history-note{color:#8fa7c8;font-size:11px;line-height:1.6}
+  @media(max-width:480px){.history-cols{grid-template-columns:1fr}.history-list{max-height:200px}}
+</style>
 </head>
 <body>
   <main class="app">
@@ -449,6 +466,62 @@
   const validPrice = p => p !== null && p !== undefined && p !== '' && Number.isFinite(Number(p)) && Number(p)>0 && Number(p)<=100;
   const safeColor = c => /^#[0-9a-f]{6}$/i.test(c||'') ? c : '#64748b';
   const fmt = n => Number.isInteger(n) ? String(n) : Number(n).toFixed(1);
+  let historyPromise = null;
+  function historyData(){
+    if(!historyPromise){
+      historyPromise = fetch('season_history.json',{cache:'no-store'}).then(r=>{
+        if(!r.ok) throw new Error('HTTP '+r.status);
+        return r.json();
+      }).then(d=>{if(!d || !d.teams || !Array.isArray(d.games)) throw Error('历史战绩格式异常');return d;})
+        .catch(e=>{historyPromise=null;throw e;});
+    }
+    return historyPromise;
+  }
+  function buildHistoryPanel(game){
+    const details=document.createElement('details');details.className='history-panel';
+    const summary=document.createElement('summary');summary.textContent='📊 查看双方本赛季历史战绩与交手记录';
+    const body=document.createElement('div');body.className='history-inner';
+    details.append(summary,body);
+    details.addEventListener('toggle',()=>{
+      if(!details.open || details.dataset.loaded==='1') return;
+      body.textContent='正在读取本赛季已结束的比赛…';
+      historyData().then(data=>{
+        if(!details.isConnected)return;
+        const away=game.away.code, home=game.home.code;
+        const makeText=(cls,txt)=>{const x=document.createElement('div');x.className=cls;x.textContent=txt;return x;};
+        body.replaceChildren();
+        const headToHead=data.games.filter(g=>(g.away===away&&g.home===home)||(g.away===home&&g.home===away));
+        const head=makeText('history-note',`本赛季 ${data.season} 常规赛 · 两队已交手 ${headToHead.length} 次`);
+        body.append(head);
+        if(headToHead.length){
+          const h2h=makeText('history-note',headToHead.map(g=>`${g.date.slice(5)} ${teamNames[g.away]||g.away} ${g.awayScore}–${g.homeScore} ${teamNames[g.home]||g.home}`).join('  ·  '));
+          body.append(h2h);
+        }
+        const grid=document.createElement('div');grid.className='history-cols';
+        for(const team of [away,home]){
+          const rec=data.teams[team]||{wins:0,losses:0,games:[]};
+          const col=document.createElement('section');col.className='history-team';
+          col.append(makeText('history-title',`${teamNames[team]||team}（${team}）`));
+          const record=document.createElement('div');record.className='history-record';
+          const strong=document.createElement('strong');strong.textContent=`${rec.wins} 胜 ${rec.losses} 负`;
+          record.append(strong, document.createTextNode(` · 已完成 ${rec.games.length} 场`));col.append(record);
+          const games=document.createElement('div');games.className='history-list';
+          if(!rec.games.length)games.append(makeText('history-note','尚无已结束的常规赛记录'));
+          for(const g of rec.games){
+            const row=document.createElement('div');row.className='history-game';
+            row.append(makeText('',`${g.date.slice(5)} ${g.home?'vs':'@'} ${teamNames[g.opponent]||g.opponent}`));
+            const result=makeText(g.result==='W'?'win':'loss',`${g.result==='W'?'胜':'负'} ${g.score}–${g.opponentScore}`);
+            row.append(result);games.append(row);
+          }
+          col.append(games);grid.append(col);
+        }
+        body.append(grid);
+        body.append(makeText('history-note',`仅包含已完赛常规赛，不包含季前赛、未结束比赛。比分来源：ESPN；抓取时间：${new Intl.DateTimeFormat('zh-CN',{timeZone:'Asia/Shanghai',month:'numeric',day:'numeric',hour:'2-digit',minute:'2-digit'}).format(new Date(data.capturedAt))}（北京时间）。`));
+        details.dataset.loaded='1';
+      }).catch(err=>{if(details.isConnected)body.textContent='历史比分暂时无法加载，请检查 season_history.json 是否已生成。';});
+    });
+    return details;
+  }
   let odds = JSON.parse(document.getElementById('fallback-data').textContent);
   let spreads = null;
   let totals = null;
@@ -592,6 +665,7 @@
       const right=document.createElement('span');right.className='league-tag';right.textContent='NBA';meta.append(left,right);card.append(meta);
       const title=document.createElement('div');title.className='matchup';title.textContent=(game.away.nameZh||teamNames[game.away.code]||game.away.code)+' vs '+(game.home.nameZh||teamNames[game.home.code]||game.home.code);
       card.append(title);
+      card.append(buildHistoryPanel(game));
       const tabs=document.createElement('div');tabs.className='market-tabs';
       const content=document.createElement('div');
       const drawContent=()=>{
