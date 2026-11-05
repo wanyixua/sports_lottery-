@@ -1,0 +1,62 @@
+name: Settle NBA transactions (10 PM PT)
+
+on:
+  schedule:
+    - cron: '0 22 * * *'
+      timezone: 'America/Los_Angeles'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: nba-odds-pages
+  cancel-in-progress: false
+
+jobs:
+  settle:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Check all pending NBA wagers against final scores
+        run: python scripts/settle_transactions.py
+      - name: Commit results, if changed
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add transactions.json
+          if git diff --cached --quiet; then
+            echo 'No transaction changes.'
+            exit 0
+          fi
+          git commit -m 'Settle NBA transactions from final scores'
+          for attempt in 1 2 3; do
+            git pull --rebase origin "${GITHUB_REF_NAME}" && git push origin HEAD:"${GITHUB_REF_NAME}" && exit 0
+            sleep 3
+          done
+          echo 'Could not push settlement; please rerun the workflow.' >&2
+          exit 1
+      - name: Prepare GitHub Pages
+        uses: actions/configure-pages@v5
+      - name: Upload latest site (including settled ledger)
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: .
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: settle
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
