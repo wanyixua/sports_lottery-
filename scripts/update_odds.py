@@ -137,8 +137,14 @@ def build_games(events, states, quotes, existing_times=None):
             start_time = '00:00'
             print(f'Warning: no gameStart/cache for {key}; kickoff unknown (live game retained)')
         games = dates.setdefault(symbol_day, {})
+        rh_status = str(state.get('eventStatus') or '')
+        progress = str(state.get('eventProgress') or '').strip()
+        # Only publish a clock when RH explicitly marks this game as in progress.
+        live = rh_status == 'EVENT_STATUS_IN_PROGRESS'
         games[key] = {
             'id': key, 'startTimePT': start_time,
+            'status': 'live' if live else ('final' if rh_status in ('EVENT_STATUS_COMPLETED', 'EVENT_STATUS_SETTLED', 'EVENT_STATUS_FINAL') else 'upcoming'),
+            'progress': progress if live else '',
             'away': teams[away], 'home': teams[home],
         }
     return {day: sorted(rows.values(), key=lambda x: (x['startTimePT'], x['id']))
