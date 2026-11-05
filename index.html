@@ -115,6 +115,9 @@
     }
     .game::before { content:""; position:absolute; inset:0 0 auto 0; height:1px; background:linear-gradient(90deg, transparent, rgba(255,255,255,.25), transparent); opacity:.5; }
     .meta { display:flex; justify-content:space-between; align-items:center; gap:10px; margin-bottom:10px; color:#9eb0ce; font-size:12px; }
+    .game-live { color:#ffb6b9; font-weight:800; display:inline-flex; align-items:center; gap:7px; }
+    .game-live::before { content:""; width:8px; height:8px; border-radius:50%; background:#ff3b4e; box-shadow:0 0 0 3px rgba(255,59,78,.13); flex:none; }
+    .game-final { color:#aab9d0; font-weight:750; }
     .league-tag { padding:4px 9px; border-radius:999px; background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.06); font-size:11px; color:#d8e0ef; }
     .line { display:grid; grid-template-columns:30px minmax(0,1fr) 54px 132px; gap:10px; align-items:center; padding:8px 0; }
     .jersey { width:28px; height:32px; clip-path:polygon(25% 0,39% 10%,61% 10%,75% 0,100% 13%,87% 39%,87% 100%,13% 100%,13% 39%,0 13%); background:var(--team-color,#718096); box-shadow: inset 0 0 0 1px rgba(255,255,255,.2), 0 4px 10px rgba(0,0,0,.18); }
@@ -574,7 +577,18 @@
       const state=states.get(game.id);
       const card=document.createElement('article');card.className='game';
       const meta=document.createElement('div');meta.className='meta';
-      const left=document.createElement('span');left.textContent=getBJ(odds.date,game.startTimePT);
+      const left=document.createElement('span');
+      if(game.status==='live'){
+        const raw=String(game.progress||'').trim();
+        const period={'1st':'第1节','2nd':'第2节','3rd':'第3节','4th':'第4节','OT':'加时','1OT':'第1加时','2OT':'第2加时'};
+        const progress=raw.replace(/\b(1st|2nd|3rd|4th|1OT|2OT|OT)\b/gi, word=>period[word]||period[word.toUpperCase()]||word);
+        left.className='game-live';left.textContent=progress||'进行中';
+        left.title='RH 最近一次抓取时的比赛进度，并非实时秒级倒计时';
+      } else if(game.status==='final'){
+        left.className='game-final';left.textContent='已结束';
+      } else {
+        left.textContent=getBJ(odds.date,game.startTimePT);
+      }
       const right=document.createElement('span');right.className='league-tag';right.textContent='NBA';meta.append(left,right);card.append(meta);
       const title=document.createElement('div');title.className='matchup';title.textContent=(game.away.nameZh||teamNames[game.away.code]||game.away.code)+' vs '+(game.home.nameZh||teamNames[game.home.code]||game.home.code);
       card.append(title);
