@@ -462,6 +462,29 @@
   const selected = new Map(); // gameId -> { kind, team, label, pricePercent, contractId }
   const states = new Map();   // gameId -> {tab, showAll, filter}
   const teamNames = {ATL:'老鹰',BOS:'凯尔特人',BKN:'篮网',CHA:'黄蜂',CHI:'公牛',CLE:'骑士',DAL:'独行侠',DEN:'掘金',DET:'活塞',GSW:'勇士',HOU:'火箭',IND:'步行者',LAC:'快船',LAL:'湖人',MEM:'灰熊',MIA:'热火',MIL:'雄鹿',MIN:'森林狼',NOP:'鹈鹕',NYK:'尼克斯',OKC:'雷霆',ORL:'魔术',PHI:'76人',PHX:'太阳',POR:'开拓者',SAC:'国王',SAS:'马刺',TOR:'猛龙',UTA:'爵士',WAS:'奇才'};
+  // RH and ESPN sometimes use different abbreviations for the same NBA team.
+  const teamAliases = {GS:'GSW',GOLDENSTATE:'GSW',NY:'NYK',SA:'SAS',NO:'NOP',WSH:'WAS',UTAH:'UTA',UT:'UTA',PHO:'PHX',PHOENIX:'PHX',BRK:'BKN',BK:'BKN',NJ:'BKN',NJN:'BKN'};
+  const canonicalTeam = code => teamAliases[String(code||'').trim().toUpperCase()] || String(code||'').trim().toUpperCase();
+  // Canonicalize old cached ESPN data too, before building the season record.
+  function normalizeHistory(data){
+    const normalized = (data.games||[]).map(g=>{
+      const away=canonicalTeam(g.away),home=canonicalTeam(g.home);
+      return {...g,away,home,winner:canonicalTeam(g.winner)};
+    });
+    const teams={};
+    for(const g of normalized){
+      if(!teamNames[g.away]||!teamNames[g.home]||g.away===g.home)continue;
+      const as=Number(g.awayScore),hs=Number(g.homeScore);
+      if(!Number.isFinite(as)||!Number.isFinite(hs)||as===hs)continue;
+      for(const [code,opp,isHome,score,oppScore] of [[g.away,g.home,false,as,hs],[g.home,g.away,true,hs,as]]){
+        const r=teams[code]||(teams[code]={wins:0,losses:0,games:[]});
+        const win=score>oppScore;
+        r[win?'wins':'losses']++;
+        r.games.push({id:g.id,date:g.date,opponent:opp,home:isHome,score,opponentScore:oppScore,result:win?'W':'L'});
+      }
+    }
+    return {...data,games:normalized,teams};
+  }
   const money = x => Number.isFinite(x) ? '$' + x.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2}) : '—';
   const validPrice = p => p !== null && p !== undefined && p !== '' && Number.isFinite(Number(p)) && Number(p)>0 && Number(p)<=100;
   const safeColor = c => /^#[0-9a-f]{6}$/i.test(c||'') ? c : '#64748b';
@@ -472,7 +495,7 @@
       historyPromise = fetch('season_history.json',{cache:'no-store'}).then(r=>{
         if(!r.ok) throw new Error('HTTP '+r.status);
         return r.json();
-      }).then(d=>{if(!d || !d.teams || !Array.isArray(d.games)) throw Error('历史战绩格式异常');return d;})
+      }).then(d=>{if(!d || !d.teams || !Array.isArray(d.games)) throw Error('历史战绩格式异常');return normalizeHistory(d);})
         .catch(e=>{historyPromise=null;throw e;});
     }
     return historyPromise;
@@ -487,7 +510,7 @@
       body.textContent='正在读取本赛季已结束的比赛…';
       historyData().then(data=>{
         if(!details.isConnected)return;
-        const away=game.away.code, home=game.home.code;
+        const away=canonicalTeam(game.away.code), home=canonicalTeam(game.home.code);
         const makeText=(cls,txt)=>{const x=document.createElement('div');x.className=cls;x.textContent=txt;return x;};
         body.replaceChildren();
         const headToHead=data.games.filter(g=>(g.away===away&&g.home===home)||(g.away===home&&g.home===away));
@@ -554,10 +577,10 @@
     const row=document.createElement('div');row.className='line';
     const jersey=document.createElement('span');jersey.className='jersey';jersey.style.setProperty('--team-color',safeColor(team.color));
     const identity=document.createElement('div');identity.innerHTML='';
-    const name=document.createElement('div');name.className='teamname';name.textContent=team.nameZh||teamNames[code]||code;
+    const name=document.createElement('div');name.className='teamname';name.textContent=team.nameZh||teamNames[canonicalTeam(code)]||code;
     const abbr=document.createElement('div');abbr.className='code';abbr.textContent=code;identity.append(name,abbr);
     const record=document.createElement('div');record.className='record';record.textContent=team.record||'—';
-    const btn=rowButton((team.nameZh||teamNames[code]||code)+'胜',team.pricePercent,game.id,'moneyline',code,'winner:'+code);
+    const btn=rowButton((team.nameZh||teamNames[canonicalTeam(code)]||code)+'胜',team.pricePercent,game.id,'moneyline',code,'winner:'+code);
     row.append(jersey,identity,record,btn);return row;
   }
   const spreadByGame=id=>spreads?.date===odds?.date ? spreads.games.find(x=>x.id===id)?.lines||[] : [];
@@ -614,7 +637,7 @@
     }
     const visible=side.showAll?choices:choices.filter(x=>highlightedIds.has(x.id)||picked?.contractId===x.id);
     const controls=document.createElement('div');controls.className='spread-controls';
-    for(const [text,team] of [['全部','ALL'],[teamNames[game.away.code]||game.away.code,game.away.code],[teamNames[game.home.code]||game.home.code,game.home.code]]){
+    for(const [text,team] of [['全部','ALL'],[teamNames[canonicalTeam(game.away.code)]||game.away.code,game.away.code],[teamNames[canonicalTeam(game.home.code)]||game.home.code,game.home.code]]){
       const btn=document.createElement('button');btn.type='button';btn.textContent=text;btn.className='filter-chip'+(side.filter===team?' active':'');
       btn.addEventListener('click',()=>{side.filter=team;states.set(game.id,side);makeSpreadRows(game,wrapper);});controls.append(btn);
     }
@@ -626,7 +649,7 @@
     for(const x of visible){
       const row=document.createElement('div');row.className='spread-row';
       const ident=document.createElement('div');ident.className='spread-ident';
-      const teamName=x.teamNameZh||teamNames[x.team]||x.team;
+      const teamName=x.teamNameZh||teamNames[canonicalTeam(x.team)]||x.team;
       const line=Number(x.margin);
       const signed=line<0?'+'+fmt(-line):'-'+fmt(line);
       const label=teamName+' '+signed;
@@ -663,7 +686,7 @@
         left.textContent=getBJ(odds.date,game.startTimePT);
       }
       const right=document.createElement('span');right.className='league-tag';right.textContent='NBA';meta.append(left,right);card.append(meta);
-      const title=document.createElement('div');title.className='matchup';title.textContent=(game.away.nameZh||teamNames[game.away.code]||game.away.code)+' vs '+(game.home.nameZh||teamNames[game.home.code]||game.home.code);
+      const title=document.createElement('div');title.className='matchup';title.textContent=(game.away.nameZh||teamNames[canonicalTeam(game.away.code)]||game.away.code)+' vs '+(game.home.nameZh||teamNames[canonicalTeam(game.home.code)]||game.home.code);
       card.append(title);
       card.append(buildHistoryPanel(game));
       const tabs=document.createElement('div');tabs.className='market-tabs';
@@ -868,7 +891,7 @@
     market.teams.forEach((t,i)=>{
       const row=document.createElement('div');row.className='champion-row';
       const rank=document.createElement('div');rank.className='champion-rank';rank.textContent=String(i+1).padStart(2,'0');
-      const name=document.createElement('div');const title=document.createElement('div');title.className='champion-name';title.textContent=t.nameZh||teamNames[t.code]||t.code;
+      const name=document.createElement('div');const title=document.createElement('div');title.className='champion-name';title.textContent=t.nameZh||teamNames[canonicalTeam(t.code)]||t.code;
       const code=document.createElement('div');code.className='champion-code';code.textContent=t.code;name.append(title,code);
       const val=document.createElement('div');val.className='champion-price';
       const strong=document.createElement('strong');const small=document.createElement('small');
