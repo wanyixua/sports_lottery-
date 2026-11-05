@@ -326,10 +326,46 @@
       "usDate": "2026-11-04",
       "bet": "NYK + MEM + LAL + SAS + BOS -4.5 + MIA",
       "stake": 30,
-      "payout": null,
-      "status": "pending",
+      "payout": 0,
+      "status": "loss",
       "note": "文字记录：6串1；已确认命中净赚 $120",
-      "profitIfWin": 120
+      "profitIfWin": 120,
+      "legs": [
+        {
+          "team": "NYK",
+          "market": "moneyline"
+        },
+        {
+          "team": "MEM",
+          "market": "moneyline"
+        },
+        {
+          "team": "LAL",
+          "market": "moneyline"
+        },
+        {
+          "team": "SAS",
+          "market": "moneyline"
+        },
+        {
+          "team": "BOS",
+          "market": "spread",
+          "line": -4.5
+        },
+        {
+          "team": "MIA",
+          "market": "moneyline"
+        }
+      ],
+      "legResults": [
+        "win",
+        "loss",
+        "win",
+        "win",
+        "win",
+        null
+      ],
+      "resultSource": "ESPN scoreboard (final scores); verify special RH settlement rules"
     },
     {
       "id": 37,
@@ -337,10 +373,21 @@
       "usDate": "2026-11-04",
       "bet": "PHI +14.5",
       "stake": 50,
-      "payout": null,
-      "status": "pending",
+      "payout": 56.0,
+      "status": "win",
       "note": "文字记录：76人受让14.5；已确认命中净赚 $6",
-      "profitIfWin": 6
+      "profitIfWin": 6,
+      "legs": [
+        {
+          "team": "PHI",
+          "market": "spread",
+          "line": 14.5
+        }
+      ],
+      "legResults": [
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores); verify special RH settlement rules"
     },
     {
       "id": 38,
@@ -348,10 +395,21 @@
       "usDate": "2026-11-04",
       "bet": "ATL +6.5",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 27.0,
+      "status": "win",
       "note": "文字记录：老鹰受让6.5；已确认命中净赚 $7",
-      "profitIfWin": 7
+      "profitIfWin": 7,
+      "legs": [
+        {
+          "team": "ATL",
+          "market": "spread",
+          "line": 6.5
+        }
+      ],
+      "legResults": [
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores); verify special RH settlement rules"
     },
     {
       "id": 39,
@@ -359,10 +417,21 @@
       "usDate": "2026-11-04",
       "bet": "CHA +5.5",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 0,
+      "status": "loss",
       "note": "文字记录：黄蜂受让5.5；投入金额已确认 $20；已确认命中净赚 $5",
-      "profitIfWin": 5
+      "profitIfWin": 5,
+      "legs": [
+        {
+          "team": "CHA",
+          "market": "spread",
+          "line": 5.5
+        }
+      ],
+      "legResults": [
+        "loss"
+      ],
+      "resultSource": "ESPN scoreboard (final scores); verify special RH settlement rules"
     },
     {
       "id": 40,
@@ -370,10 +439,21 @@
       "usDate": "2026-11-04",
       "bet": "NYK -5.5",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 26.0,
+      "status": "win",
       "note": "文字记录：尼克斯让5.5；投入金额已确认 $20；已确认命中净赚 $6",
-      "profitIfWin": 6
+      "profitIfWin": 6,
+      "legs": [
+        {
+          "team": "NYK",
+          "market": "spread",
+          "line": -5.5
+        }
+      ],
+      "legResults": [
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores); verify special RH settlement rules"
     },
     {
       "id": 41,
@@ -381,10 +461,27 @@
       "usDate": "2026-11-04",
       "bet": "BOS -4.5 + CLE +8.5",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 38.0,
+      "status": "win",
       "note": "微信截图：两串1，已确认买好；20赚18为确认的命中净利润",
-      "profitIfWin": 18
+      "profitIfWin": 18,
+      "legs": [
+        {
+          "team": "BOS",
+          "market": "spread",
+          "line": -4.5
+        },
+        {
+          "team": "CLE",
+          "market": "spread",
+          "line": 8.5
+        }
+      ],
+      "legResults": [
+        "win",
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores); verify special RH settlement rules"
     },
     {
       "id": 42,
@@ -392,10 +489,21 @@
       "usDate": "2026-11-04",
       "bet": "MEM -8.5",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 0,
+      "status": "loss",
       "note": "微信截图：灰熊让8.5；确认的命中净赚26",
-      "profitIfWin": 26
+      "profitIfWin": 26,
+      "legs": [
+        {
+          "team": "MEM",
+          "market": "spread",
+          "line": -8.5
+        }
+      ],
+      "legResults": [
+        "loss"
+      ],
+      "resultSource": "ESPN scoreboard (final scores); verify special RH settlement rules"
     },
     {
       "id": 43,
@@ -403,10 +511,21 @@
       "usDate": "2026-11-04",
       "bet": "NOP +6.5",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 24.0,
+      "status": "win",
       "note": "微信截图：鹈鹕受让6.5；确认的命中净赚4",
-      "profitIfWin": 4
+      "profitIfWin": 4,
+      "legs": [
+        {
+          "team": "NOP",
+          "market": "spread",
+          "line": 6.5
+        }
+      ],
+      "legResults": [
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores); verify special RH settlement rules"
     },
     {
       "id": 44,
@@ -414,10 +533,21 @@
       "usDate": "2026-11-04",
       "bet": "MIN +10.5",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 31.0,
+      "status": "win",
       "note": "微信截图：森林狼受让10.5；确认的命中净赚11",
-      "profitIfWin": 11
+      "profitIfWin": 11,
+      "legs": [
+        {
+          "team": "MIN",
+          "market": "spread",
+          "line": 10.5
+        }
+      ],
+      "legResults": [
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores); verify special RH settlement rules"
     },
     {
       "id": 45,
@@ -425,10 +555,21 @@
       "usDate": "2026-11-04",
       "bet": "TOR +8.5",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 0,
+      "status": "loss",
       "note": "微信截图：猛龙受让8.5；确认的命中净赚10",
-      "profitIfWin": 10
+      "profitIfWin": 10,
+      "legs": [
+        {
+          "team": "TOR",
+          "market": "spread",
+          "line": 8.5
+        }
+      ],
+      "legResults": [
+        "loss"
+      ],
+      "resultSource": "ESPN scoreboard (final scores); verify special RH settlement rules"
     },
     {
       "id": 46,
@@ -436,10 +577,21 @@
       "usDate": "2026-11-04",
       "bet": "DAL +18.5",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 28.0,
+      "status": "win",
       "note": "微信截图：独行侠受让18.5；确认的命中净赚8",
-      "profitIfWin": 8
+      "profitIfWin": 8,
+      "legs": [
+        {
+          "team": "DAL",
+          "market": "spread",
+          "line": 18.5
+        }
+      ],
+      "legResults": [
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores); verify special RH settlement rules"
     },
     {
       "id": 47,
@@ -447,10 +599,21 @@
       "usDate": "2026-11-04",
       "bet": "SAC +13.5",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 34.0,
+      "status": "win",
       "note": "微信截图：国王受让13.5；确认的命中净赚14",
-      "profitIfWin": 14
+      "profitIfWin": 14,
+      "legs": [
+        {
+          "team": "SAC",
+          "market": "spread",
+          "line": 13.5
+        }
+      ],
+      "legResults": [
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores); verify special RH settlement rules"
     },
     {
       "id": 48,
@@ -458,10 +621,35 @@
       "usDate": "2026-11-04",
       "bet": "NYK + SAS + LAL + BOS",
       "stake": 30,
-      "payout": null,
-      "status": "pending",
+      "payout": 59.0,
+      "status": "win",
       "note": "4串1；已买入 $30，微信确认命中净赚 $29",
-      "profitIfWin": 29
+      "profitIfWin": 29,
+      "legs": [
+        {
+          "team": "NYK",
+          "market": "moneyline"
+        },
+        {
+          "team": "SAS",
+          "market": "moneyline"
+        },
+        {
+          "team": "LAL",
+          "market": "moneyline"
+        },
+        {
+          "team": "BOS",
+          "market": "moneyline"
+        }
+      ],
+      "legResults": [
+        "win",
+        "win",
+        "win",
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores); verify special RH settlement rules"
     },
     {
       "id": 49,
@@ -472,7 +660,14 @@
       "payout": null,
       "status": "pending",
       "profitIfWin": 16,
-      "note": "微信截图：王老板「热火让5点5，20刀」；小王回复「20赚16」；已确认买入，等待比赛结果"
+      "note": "微信截图：王老板「热火让5点5，20刀」；小王回复「20赚16」；已确认买入，等待比赛结果",
+      "legs": [
+        {
+          "team": "MIA",
+          "market": "spread",
+          "line": -5.5
+        }
+      ]
     },
     {
       "id": 50,
@@ -483,7 +678,21 @@
       "payout": null,
       "status": "pending",
       "profitIfWin": 10,
-      "note": "本人已确认买入：马刺 + 湖人 + 快船 3串1，投入 $10，命中净赚 $10；待结算"
+      "note": "本人已确认买入：马刺 + 湖人 + 快船 3串1，投入 $10，命中净赚 $10；待结算",
+      "legs": [
+        {
+          "team": "SAS",
+          "market": "moneyline"
+        },
+        {
+          "team": "LAL",
+          "market": "moneyline"
+        },
+        {
+          "team": "LAC",
+          "market": "moneyline"
+        }
+      ]
     }
   ]
 }
