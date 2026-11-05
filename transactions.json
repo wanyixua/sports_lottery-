@@ -657,8 +657,8 @@
       "usDate": "2026-11-04",
       "bet": "MIA -5.5",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 0,
+      "status": "loss",
       "profitIfWin": 16,
       "note": "微信截图：王老板「热火让5点5，20刀」；小王回复「20赚16」；已确认买入，等待比赛结果",
       "legs": [
@@ -667,7 +667,11 @@
           "market": "spread",
           "line": -5.5
         }
-      ]
+      ],
+      "legResults": [
+        "loss"
+      ],
+      "resultSource": "ESPN scoreboard (final scores); verify special RH settlement rules"
     },
     {
       "id": 50,
@@ -675,8 +679,8 @@
       "usDate": "2026-11-04",
       "bet": "SAS + LAL + LAC",
       "stake": 10,
-      "payout": null,
-      "status": "pending",
+      "payout": 0,
+      "status": "loss",
       "profitIfWin": 10,
       "note": "本人已确认买入：马刺 + 湖人 + 快船 3串1，投入 $10，命中净赚 $10；待结算",
       "legs": [
@@ -692,7 +696,13 @@
           "team": "LAC",
           "market": "moneyline"
         }
-      ]
+      ],
+      "legResults": [
+        "win",
+        "win",
+        "loss"
+      ],
+      "resultSource": "ESPN scoreboard (final scores); verify special RH settlement rules"
     },
     {
       "id": 51,
@@ -700,8 +710,8 @@
       "usDate": "2026-11-04",
       "bet": "MIA",
       "stake": 5,
-      "payout": null,
-      "status": "pending",
+      "payout": 11.0,
+      "status": "win",
       "profitIfWin": 6,
       "note": "本人已确认买入：热火独赢（Moneyline），投入 $5，命中净赚 $6；对冲此前串关；单独结算",
       "legs": [
@@ -709,7 +719,11 @@
           "team": "MIA",
           "market": "moneyline"
         }
-      ]
+      ],
+      "legResults": [
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores); verify special RH settlement rules"
     }
   ]
 }
