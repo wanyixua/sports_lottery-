@@ -19,8 +19,11 @@ jobs:
         with:
           python-version: '3.12'
       - name: Refresh NBA winner, spread and total caches
+        id: refresh
+        continue-on-error: true
         run: python scripts/update_odds.py
       - name: Commit updated data when changed
+        if: steps.refresh.outcome == 'success'
         run: |
           if ! git diff --quiet -- odds.json spreads.json totals.json; then
             git config user.name 'github-actions[bot]'
@@ -31,6 +34,9 @@ jobs:
           else
             echo 'No cache changes'
           fi
+      - name: Explain preserved odds cache
+        if: steps.refresh.outcome == 'failure'
+        run: echo "::warning::Odds refresh failed; existing caches preserved. Publishing committed site files anyway."
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v4
         with:
