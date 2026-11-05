@@ -456,7 +456,7 @@
   const netProfit = p => stake * (100 / Number(p) - 1);
   const getBJ = (date, time) => {
     const [y,m,d] = date.split('-').map(Number);
-    const [h,min] = time.split(':').map(Number);
+    const [h,min] = String(time||'').split(':').map(Number);
     if (![y,m,d,h,min].every(Number.isFinite)) return '开赛时间待定';
     const offsetParts = new Intl.DateTimeFormat('en-US',{timeZone:'America/Los_Angeles',timeZoneName:'shortOffset',hour:'2-digit'}).formatToParts(new Date(Date.UTC(y,m-1,d,12)));
     const offset = offsetParts.find(x=>x.type==='timeZoneName')?.value || 'GMT-8';
@@ -611,19 +611,18 @@
     // odds.date is the US Pacific slate date, NOT the Beijing calendar date.
     // Derive the Beijing slate date from real PT tipoff times. Never label the
     // raw PT date as 北京时间 when the start time is unavailable.
-    const gameBJDates=(odds.games||[]).map(g=>{
-      if(!/^\d{1,2}:\d{2}$/.test(String(g.startTimePT||'')))return null;
-      const value=getBJ(odds.date,g.startTimePT);
-      const parts=value.match(/(\d{1,2})月(\d{1,2})日/);
-      return parts?`${Number(parts[1])}月${Number(parts[2])}日`:null;
+    // The header must use the same getBJ() conversion as each game card.
+    // Do not reject valid displayed times with an extra format-only regex.
+    const bjDateParts=(odds.games||[]).map(g=>{
+      const displayed=getBJ(odds.date,g.startTimePT);
+      const match=displayed.match(/(\d{1,2})月(\d{1,2})日/);
+      return match ? {month:Number(match[1]),day:Number(match[2])} : null;
     }).filter(Boolean);
-    const distinctDates=[...new Set(gameBJDates)];
+    const uniqueDates=[...new Set(bjDateParts.map(p=>`${p.month}月${p.day}日`))];
     const yearFromSlate=Number(String(odds.date||'').slice(0,4));
-    const dateLabel=distinctDates.length===1
-      ? `${yearFromSlate}年${distinctDates[0]} · 北京时间`
-      : distinctDates.length>1
-        ? `${yearFromSlate}年${distinctDates.join(' / ')} · 北京时间`
-        : `${odds.date} · 美国西海岸赛程日期（北京时间待确认）`;
+    const dateLabel=uniqueDates.length
+      ? `${yearFromSlate}年${uniqueDates.join(' / ')} · 北京时间`
+      : `${odds.date} · 美国西海岸比赛日`;
     document.getElementById('summary-date').textContent=dateLabel;
     document.getElementById('summary-meta').textContent=`${odds.games.length} 场比赛`;
     document.getElementById('hero-sub').textContent='胜负、让分、大小球都能选串，每场比赛限选一个盘口。';
