@@ -253,7 +253,12 @@ def main():
  has_asks=sum(len(m.get('choices',[])) for g in records for p in g['markets'].values() for m in p.values())
  from collections import Counter
  reasons=Counter(m.get('reason') or 'OK' for g in records for p in g['markets'].values() for m in p.values())
- print('Period market fetch diagnostics:', dict(reasons.most_common(8)), flush=True)
+ print('Period market fetch diagnostics:', dict(reasons.most_common(12)), flush=True)
+ for game in records:
+  sample=game['markets'].get('h1',{}).get('winner',{})
+  print('H1 winner diagnostic:',game['id'],'URL:',sample.get('url'),'choices:',len(sample.get('choices',[])),'reason:',sample.get('reason'),flush=True)
+  if sample.get('choices'):
+   print('H1 winner labels/asks:',[(x.get('label'),x.get('yesAsk')) for x in sample['choices']],flush=True)
  for game in records[:2]:
   for key in ('h1','h2'):
    r=game['markets'][key].get('winner',{})
