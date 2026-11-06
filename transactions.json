@@ -579,8 +579,8 @@
       "usDate": "2026-11-05",
       "bet": "MIA +8.5",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 0,
+      "status": "loss",
       "profitIfWin": 8,
       "legs": [
         {
@@ -589,7 +589,11 @@
           "line": 8.5
         }
       ],
-      "note": "微信11/5 18:57：王老板「再买点热火受让8点5，20刀」，小王回复「买好了 20赚8」。独立新增单，不是#53串关。"
+      "note": "微信11/5 18:57：王老板「再买点热火受让8点5，20刀」，小王回复「买好了 20赚8」。独立新增单，不是#53串关。",
+      "legResults": [
+        "loss"
+      ],
+      "resultSource": "ESPN scoreboard (final scores); verify special RH settlement rules"
     },
     {
       "id": 56,
