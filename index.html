@@ -222,6 +222,10 @@
       .stake-wrap { grid-column:span 2; }
     }
   /* NBA spreads feature; reuses the existing premium dark styling. */
+.venue-badge{display:inline-flex;align-items:center;justify-content:center;vertical-align:middle;margin-left:5px;padding:2px 5px;border-radius:5px;border:1px solid rgba(154,177,214,.25);background:rgba(154,177,214,.08);color:#a9bcd8;font-size:10px;font-weight:750;line-height:1.25}
+.venue-badge.home{border-color:rgba(115,194,158,.32);background:rgba(92,174,139,.12);color:#a6e5c4}
+.history-venue{font-size:10px;font-weight:800;border-radius:4px;padding:1px 4px;margin:0 3px;color:#bbcee7;background:rgba(165,192,225,.11)}
+.history-venue.home{color:#a6e5c4;background:rgba(92,174,139,.14)}
 .matchup{font-size:15px;font-weight:800;letter-spacing:.01em;color:#e5edf9;margin:-1px 0 12px;}
 .market-tabs{display:flex;gap:7px;margin:1px 0 13px;background:rgba(4,10,20,.43);padding:5px;border:1px solid rgba(255,255,255,.06);border-radius:15px;}
 .market-tab{flex:1;border:0;background:transparent;color:#9baecb;border-radius:11px;padding:10px 12px;font-size:14px;font-weight:800;cursor:pointer;}
@@ -536,7 +540,7 @@
         const head=makeText('history-note',`本赛季 ${data.season} 常规赛 · 两队已交手 ${headToHead.length} 次`);
         body.append(head);
         if(headToHead.length){
-          const h2h=makeText('history-note',headToHead.map(g=>`${g.date.slice(5)} ${teamNames[g.away]||g.away} ${g.awayScore}–${g.homeScore} ${teamNames[g.home]||g.home}`).join('  ·  '));
+          const h2h=makeText('history-note',headToHead.map(g=>`${g.date.slice(5)} 客 ${teamNames[g.away]||g.away} ${g.awayScore}–${g.homeScore} ${teamNames[g.home]||g.home} 主`).join('  ·  '));
           body.append(h2h);
         }
         const grid=document.createElement('div');grid.className='history-cols';
@@ -551,7 +555,11 @@
           if(!rec.games.length)games.append(makeText('history-note','尚无已结束的常规赛记录'));
           for(const g of rec.games){
             const row=document.createElement('div');row.className='history-game';
-            row.append(makeText('',`${g.date.slice(5)} ${g.home?'vs':'@'} ${teamNames[g.opponent]||g.opponent}`));
+            const matchup=document.createElement('span');
+            matchup.append(document.createTextNode(g.date.slice(5)+' '));
+            const venue=document.createElement('span');venue.className='history-venue'+(g.home?' home':'');venue.textContent=g.home?'主':'客';venue.title=g.home?'该队当时是主场':'该队当时是客场';
+            matchup.append(venue,document.createTextNode(' '+(g.home?'vs ':'@ ')+(teamNames[g.opponent]||g.opponent)));
+            row.append(matchup);
             const result=makeText(g.result==='W'?'win':'loss',`${g.result==='W'?'胜':'负'} ${g.score}–${g.opponentScore}`);
             row.append(result);games.append(row);
           }
@@ -772,7 +780,14 @@
         left.textContent=getBJ(odds.date,game.startTimePT);
       }
       const right=document.createElement('span');right.className='league-tag';right.textContent='NBA';meta.append(left,right);card.append(meta);
-      const title=document.createElement('div');title.className='matchup';title.textContent=(game.away.nameZh||teamNames[canonicalTeam(game.away.code)]||game.away.code)+' vs '+(game.home.nameZh||teamNames[canonicalTeam(game.home.code)]||game.home.code);
+      const title=document.createElement('div');title.className='matchup';
+      const awayName=game.away.nameZh||teamNames[canonicalTeam(game.away.code)]||game.away.code;
+      const homeName=game.home.nameZh||teamNames[canonicalTeam(game.home.code)]||game.home.code;
+      const awayNameSpan=document.createElement('span');awayNameSpan.textContent=awayName;
+      const awayBadge=document.createElement('span');awayBadge.className='venue-badge';awayBadge.textContent='客';awayBadge.title='客场球队';
+      const homeNameSpan=document.createElement('span');homeNameSpan.textContent=homeName;
+      const homeBadge=document.createElement('span');homeBadge.className='venue-badge home';homeBadge.textContent='主';homeBadge.title='主场球队';
+      title.append(awayNameSpan,awayBadge,document.createTextNode(' vs '),homeNameSpan,homeBadge);
       card.append(title);
       card.append(buildHistoryPanel(game));
       // One primary category bar and a compact period selector: no nested competing tab rows.
