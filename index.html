@@ -358,7 +358,7 @@
 .period-actions .odd{min-width:81px}
 .period-source{display:block;margin-top:9px;color:#84bdf7;font-size:12px;text-decoration:underline}
 .period-nodata{font-size:13px;color:#b6c6df;padding:12px;background:#111f35;border-radius:10px;line-height:1.65}
-.period-more{border:1px solid #324a68;border-radius:9px;padding:8px 12px;color:#c3daf7;background:#17283f;width:100%;margin:9px 0;cursor:pointer}
+.period-reference{min-width:104px;padding:9px 10px;border:1px solid #344662;border-radius:10px;background:#152238;text-align:right;color:#c2d5ee}.period-reference strong{display:block;color:#e9f2ff;font-size:17px}.period-reference small{display:block;color:#8faacb;font-size:11px;margin-top:3px}.period-more{border:1px solid #324a68;border-radius:9px;padding:8px 12px;color:#c3daf7;background:#17283f;width:100%;margin:9px 0;cursor:pointer}
 @media(max-width:600px){.period-row{grid-template-columns:1fr}.period-actions{justify-content:stretch}.period-actions .odd{flex:1}.period-tab{min-width:25%}}
 </style>
 </head>
@@ -692,7 +692,7 @@
   function drawPeriodMarket(game, state, wrapper){
     wrapper.replaceChildren();
     const info=document.createElement('div');info.className='period-market-note';
-    info.textContent=`${periodName(state.period)} · ${state.periodType==='winner'?'阶段独立胜负，可能出现平局':state.periodType==='spread'?'按该时段的得分差结算':'按该时段的总得分结算'}。下半场合约可能包含加时，请核对 RH 条款。价格仅来自实际买入 ask；不可用不沿用旧价。`;
+    info.textContent=`${periodName(state.period)} · ${state.periodType==='winner'?'阶段独立胜负，可能出现平局':state.periodType==='spread'?'按该时段的得分差结算':'按该时段的总得分结算'}。下半场合约可能包含加时，请核对 RH 条款。已核实 Ask 才可加入计算器；其余仅显示 RH 页面参考价（不是可成交价）。`;
     if(periodMarkets?.date===odds?.date&&periodMarkets.capturedAt){const dt=new Date(periodMarkets.capturedAt);if(!isNaN(dt))info.textContent+=' 分节报价采集：'+new Intl.DateTimeFormat('zh-CN',{timeZone:'Asia/Shanghai',month:'numeric',day:'numeric',hour:'2-digit',minute:'2-digit',hour12:false}).format(dt)+'（北京时间）。';}
     wrapper.append(info);
     const market=periodMarket(game,state.period,state.periodType);
@@ -702,17 +702,27 @@
       wrapper.append(msg);
     }else{
       const choices=market.choices.slice().sort((a,b)=>{
-        const pa=a.yesAsk??a.noAsk??100,pb=b.yesAsk??b.noAsk??100;return Math.abs(pa-50)-Math.abs(pb-50);
+        const pa=a.displayPrice??a.yesAsk??a.noAsk??100,pb=b.displayPrice??b.yesAsk??b.noAsk??100;
+        return Math.abs(pa-50)-Math.abs(pb-50);
       });
       const selectedPick=selected.get(game.id);
       const visible=state.periodShowAll?choices:choices.filter((x,i)=>i<5 || (selectedPick?.kind==='period'&&selectedPick.contractId?.startsWith(`${state.period}:${state.periodType}:${x.id}:`)));
       for(const item of visible){
         const row=document.createElement('div');row.className='period-row';
-        const label=document.createElement('div');label.className='period-label';label.textContent=item.label;row.append(label);
+        const label=document.createElement('div');label.className='period-label';const code=item.owner||({Phoenix:'PHX',Orlando:'ORL', 'Golden State':'GSW',Tie:'tie'}[item.label]);
+        label.textContent=code==='tie'?'平局':teamNames[canonicalTeam(code)]||item.label;row.append(label);
         const btns=document.createElement('div');btns.className='period-actions';
+        if(item.displayPrice!==null&&item.displayPrice!==undefined&&!validPrice(item.yesAsk)){
+          const ref=document.createElement('div');ref.className='period-reference';
+          const strong=document.createElement('strong');strong.textContent=fmt(Number(item.displayPrice))+'¢';
+          const small=document.createElement('small');small.textContent='RH 页面参考价';
+          ref.append(strong,small);btns.append(ref);
+        }
+        const hasBuy=validPrice(item.yesAsk)||validPrice(item.noAsk);
+        if(!hasBuy){row.append(btns);wrapper.append(row);continue;}
         for(const [side,value] of [['yes',item.yesAsk],['no',item.noAsk]]){
           if(side==='no'&&state.periodType==='winner')continue; // 3-way winner NO is not simply 'other team wins'
-          const text=side==='yes'?'YES':'NO';const contractId=`${state.period}:${state.periodType}:${item.id}:${side}`;
+          const text=side==='yes'?'YES Ask':'NO Ask';const contractId=`${state.period}:${state.periodType}:${item.id}:${side}`;
           const btn=rowButton(text+' · '+periodName(state.period)+' · '+item.label,value,game.id,'period',side,contractId,'odd period-odd');
           btn.dataset.period=state.period;btn.dataset.market=state.periodType;btn.dataset.side=side;
           btns.append(btn);
