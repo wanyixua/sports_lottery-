@@ -11,6 +11,7 @@ import re
 import sys
 from datetime import datetime, timezone
 from html.parser import HTMLParser
+from html import unescape
 from pathlib import Path
 from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
@@ -38,17 +39,20 @@ MARKETS = ('winner','spread','total')
 
 class NextData(HTMLParser):
  def __init__(self):
-  super().__init__(); self.in_next=False; self.in_title=False; self.next=[]; self.title=[]
+  super().__init__(); self.in_next=False; self.in_title=False; self.ignore=0; self.next=[]; self.title=[]; self.visible=[]
  def handle_starttag(self,tag,attrs):
   attrs=dict(attrs)
   if tag=='script' and attrs.get('id')=='__NEXT_DATA__':self.in_next=True
   if tag=='title':self.in_title=True
+  if tag in ('script','style','noscript'):self.ignore+=1
  def handle_endtag(self,tag):
   if tag=='script':self.in_next=False
   if tag=='title':self.in_title=False
+  if tag in ('script','style','noscript'):self.ignore=max(self.ignore-1,0)
  def handle_data(self,data):
   if self.in_next:self.next.append(data)
   if self.in_title:self.title.append(data)
+  if not self.ignore and data.strip():self.visible.append(unescape(data.strip()))
 
 def fetch(url):
  req=Request(url, headers={'User-Agent':'Mozilla/5.0 (compatible; sports-lottery/1.0)', 'Accept':'text/html'})
@@ -74,33 +78,109 @@ def price(q,field):
  except (TypeError,ValueError):pass
  return None
 
+# These mappings only identify a contract label already present in the event page;
+# they never turn a headline/last-trade price into an ask.
+NAMES = {
+ 'ATL':('Atlanta','Hawks'),'BOS':('Boston','Celtics'),'BKN':('Brooklyn','Nets'),
+ 'CHA':('Charlotte','Hornets'),'CHI':('Chicago','Bulls'),'CLE':('Cleveland','Cavaliers'),
+ 'DAL':('Dallas','Mavericks'),'DEN':('Denver','Nuggets'),'DET':('Detroit','Pistons'),
+ 'GSW':('Golden State','Warriors'),'HOU':('Houston','Rockets'),'IND':('Indiana','Pacers'),
+ 'LAC':('LA Clippers','Clippers'),'LAL':('LA Lakers','Lakers','Los Angeles'),
+ 'MEM':('Memphis','Grizzlies'),'MIA':('Miami','Heat'),'MIL':('Milwaukee','Bucks'),
+ 'MIN':('Minnesota','Timberwolves'),'NOP':('New Orleans','Pelicans'),
+ 'NYK':('New York','Knicks'),'OKC':('Oklahoma City','Thunder'),
+ 'ORL':('Orlando','Magic'),'PHI':('Philadelphia','76ers'),'PHX':('Phoenix','Suns'),
+ 'POR':('Portland','Trail Blazers'),'SAC':('Sacramento','Kings'),
+ 'SAS':('San Antonio','Spurs'),'TOR':('Toronto','Raptors'),
+ 'UTA':('Utah','Jazz'),'WAS':('Washington','Wizards')
+}
+
+def explicit_price(v):
+ """Read explicit cent, decimal, or fractional ask; reject absent/ambiguous values."""
+ if isinstance(v,bool) or v is None:return None
+ try:
+  if isinstance(v,str) and ('¢' in v or 'cent' in v.lower()):
+   x=float(re.search(r'\d+(?:\.\d+)?',v).group(0))
+  else:
+   x=float(v)
+   if 0<x<1:x*=100
+  return round(x,4) if 0<x<100 else None
+ except (TypeError,ValueError,AttributeError):return None
+
+def label_owner(label,away,home):
+ x=re.sub(r'[^a-z0-9]','',label.lower())
+ if x in ('tie','draw','tied'):return 'tie'
+ for code in (away,home):
+  for name in NAMES[code]:
+   n=re.sub(r'[^a-z0-9]','',name.lower())
+   if x==n:return code
+ return None
+
+def parse_explicit_visible_ask(parser,away,home,kind):
+ """Conservative fallback: use only the actually selected RH contract's Bid/Ask.
+
+ The headline 51¢/46¢/4¢ is NOT necessarily the executable ask. If RH
+ doesn't server-render the selected contract and its ask, this stays empty.
+ """
+ if kind!='winner':return []
+ t=parser.visible
+ text=' '.join(t)
+ # RH's selected trade ticket appears after the contract terms. We require
+ # a labeled bid and ask, not price snippets from the market summary.
+ pattern=re.compile(r'\bBid\s*(\d+(?:\.\d+)?)\s*¢\s*[·•|/]?\s*Ask\s*(\d+(?:\.\d+)?)\s*¢',re.I)
+ quotes=list(pattern.finditer(text))
+ if len(quotes)!=1:return []   # avoid selecting a wrong ticket if ambiguous
+ m=quotes[0]
+ # Determine ticket's selected team from the nearest visible known label
+ # *after* the page's market summary / legal text, just before Bid/Ask.
+ segment=text[max(0,m.start()-1000):m.start()]
+ hits=[]
+ for code in (away,home):
+  for name in NAMES[code]:
+   for found in re.finditer(r'(?<!\w)'+re.escape(name)+r'(?!\w)',segment,re.I):hits.append((found.start(),code,name))
+ if not hits:return []
+ hits.sort(reverse=True)
+ # Only publish when nearest recognizable label is in the ticket vicinity.
+ pos,code,label=hits[0]
+ if len(segment)-pos>350:return []
+ ask=explicit_price(m.group(2))
+ return [{'id':'visible-ticket-'+code,'label':label,'yesAsk':ask,'noAsk':None}] if ask else []
+
 def parse_market(html,away,home,period,kind,url,day):
  parser=NextData();parser.feed(html)
  page_title=''.join(parser.title).lower()
- # Do not confuse a redirect/similar-event page with the requested event.
- for segment in (CITY[away],CITY[home],PERIODS[period].replace('-',' '),kind):
-  if segment.replace('-',' ') not in page_title.replace('-',' '):
-   # RH may use alternate location names in title. Verify event via precise slug
-   # and check period/kind; team identity is also checked below where possible.
-   if segment in (PERIODS[period].replace('-',' '),kind):
-    return {'url':url,'choices':[],'reason':'event mismatch'}
- if not parser.next:return {'url':url,'choices':[],'reason':'RH page has no Next.js quote data'}
- root=json.loads(''.join(parser.next))
- # Locate eventContracts, and yes/no ask quote dictionaries. Market pages can
- # store contracts and quotes in separate pageProps trees.
+ title=page_title.replace('-',' ')
+ if not all(token in title for token in (PERIODS[period].replace('-',' '),kind)):
+  return {'url':url,'choices':[],'reason':'RH event title differs from requested period/market'}
+ # Do not parse an unrelated redirected event.
+ if not all(any(n.lower() in title for n in NAMES[code]) for code in (away,home)):
+  return {'url':url,'choices':[],'reason':'RH event teams do not match'}
+ fallback=parse_explicit_visible_ask(parser,away,home,kind)
+ if not parser.next:
+  return {'url':url,'choices':fallback,'reason':None if fallback else 'No __NEXT_DATA__ and no explicit ticket ask in HTML'}
+ try:root=json.loads(''.join(parser.next))
+ except (ValueError,TypeError):
+  return {'url':url,'choices':fallback,'reason':None if fallback else 'Invalid __NEXT_DATA__'}
  contracts=[]; quote_by_id={}; contract_sets=set()
+ ask_keys=(('yes_ask_price','yesAskPrice','yes_ask','yesAsk'),('no_ask_price','noAskPrice','no_ask','noAsk'))
+ def getask(obj,keys):
+  for k in keys:
+   if k in obj:
+    value=explicit_price(obj[k])
+    if value is not None:return value
+  return None
+ def hasask(obj):return any(getask(obj,keys) is not None for keys in ask_keys)
  for obj in walk(root):
   for k in ('quotes','contractQuotes','marketQuotes'):
    coll=obj.get(k)
    if isinstance(coll,dict):
     for cid,q in coll.items():
-     if isinstance(q,dict) and (price(q,'yes_ask_price') is not None or price(q,'no_ask_price') is not None):
-      quote_by_id[str(cid)]=q
+     if isinstance(q,dict) and hasask(q):quote_by_id[str(cid)]=q
    elif isinstance(coll,list):
     for q in coll:
      if isinstance(q,dict):
       cid=q.get('contractId') or q.get('contract_id') or q.get('id')
-      if cid and (price(q,'yes_ask_price') is not None or price(q,'no_ask_price') is not None):quote_by_id[str(cid)]=q
+      if cid and hasask(q):quote_by_id[str(cid)]=q
   coll=obj.get('eventContracts')
   if isinstance(coll,dict) and coll:
    contract_sets.add(frozenset(str(x.get('id') or k) for k,x in coll.items() if isinstance(x,dict)))
@@ -108,24 +188,23 @@ def parse_market(html,away,home,period,kind,url,day):
   elif isinstance(coll,list) and coll:
    contract_sets.add(frozenset(str(x.get('id')) for x in coll if isinstance(x,dict) and x.get('id')))
    contracts.extend(x for x in coll if isinstance(x,dict))
-  if 'yes_ask_price' in obj or 'no_ask_price' in obj:
+  if hasask(obj):
    cid=obj.get('contractId') or obj.get('contract_id') or obj.get('id')
    if cid:quote_by_id[str(cid)]=obj
- # Never combine prices from unrelated events when a detail page embeds multiple
- # distinct contract groups. The page must be unambiguous to publish quotes.
+ # Several embedded events can appear in related-events widgets: don't
+ # combine their quotes with the main selected event.
  if len({v for v in contract_sets if v})>1:
-  return {'url':url,'choices':[],'reason':'Multiple embedded contract groups; cannot safely identify selected market'}
- # Unique contracts. Keep ONLY explicit ask prices, never the headline/last-trade price.
+  return {'url':url,'choices':fallback,'reason':None if fallback else 'Ambiguous embedded event contract groups'}
  unique={str(c.get('id')):c for c in contracts if c.get('id')}
  choices=[]
  for cid,c in unique.items():
   q=quote_by_id.get(cid,{})
-  yes,no=price(q,'yes_ask_price'),price(q,'no_ask_price')
+  yes,no=getask(q,ask_keys[0]),getask(q,ask_keys[1])
   if yes is None and no is None:continue
-  title=str(c.get('displayName') or c.get('name') or c.get('displayShortName') or c.get('title') or c.get('displayText') or c.get('subtitle') or '').strip()
-  if not title:continue
-  choices.append({'id':cid,'label':title,'yesAsk':yes,'noAsk':no})
- return {'url':url,'choices':choices,'reason':None if choices else 'No explicit buy-side ask'}
+  label=str(c.get('displayName') or c.get('name') or c.get('displayShortName') or c.get('title') or c.get('displayText') or c.get('subtitle') or '').strip()
+  if not label:continue
+  choices.append({'id':cid,'label':label,'yesAsk':yes,'noAsk':no})
+ return {'url':url,'choices':choices or fallback,'reason':None if choices or fallback else 'No explicit buy-side ask in HTML/Next.js'}
 
 def urls(away,home,period,kind,day):
  date=datetime.strptime(day,'%Y-%m-%d').strftime('%b-%d-%Y').lower()
@@ -172,6 +251,13 @@ def main():
  print(f'Checking up to {len(games)*18} RH period event pages for {day}',flush=True)
  records=build(games,day)
  has_asks=sum(len(m.get('choices',[])) for g in records for p in g['markets'].values() for m in p.values())
+ from collections import Counter
+ reasons=Counter(m.get('reason') or 'OK' for g in records for p in g['markets'].values() for m in p.values())
+ print('Period market fetch diagnostics:', dict(reasons.most_common(8)), flush=True)
+ for game in records[:2]:
+  for key in ('h1','h2'):
+   r=game['markets'][key].get('winner',{})
+   print('Sample',game['id'],key,'winner:',r.get('reason') or f"{len(r.get('choices',[]))} ask choices",flush=True)
  payload={'date':day,'capturedAt':datetime.now(timezone.utc).isoformat(timespec='seconds'),'source':'RH public event pages, explicit ask prices only','games':records}
  # A total source failure should not overwrite a healthy SAME-DAY cache.
  if not has_asks and previous.get('date')==day and sum(len(m.get('choices',[])) for g in previous.get('games',[]) for p in g.get('markets',{}).values() for m in p.values()):
