@@ -342,6 +342,23 @@
   .history-game .loss{color:#ffabb3;font-weight:900}
   .history-note{color:#8fa7c8;font-size:11px;line-height:1.6}
   @media(max-width:480px){.history-cols{grid-template-columns:1fr}.history-list{max-height:200px}}
+
+/* Six quarter/half submarkets stay behind a compact per-game switcher. */
+.scope-tabs{display:flex;gap:6px;margin:12px 0 8px;padding:4px;border:1px solid #2c3e59;border-radius:13px;background:#080f20}
+.scope-tab{border:0;flex:1;padding:9px 6px;color:#a6bad8;background:none;border-radius:9px;font-weight:750;cursor:pointer}
+.scope-tab.active{background:#294363;color:#fff}
+.period-tabs{display:flex;flex-wrap:wrap;gap:6px;margin:9px 0 12px}
+.period-tab{flex:1;min-width:20%;border:1px solid #2a3c57;border-radius:9px;padding:9px 4px;background:#0c182d;color:#b7c9e3;cursor:pointer;font-size:13px;font-weight:700}
+.period-tab.active{background:#263f60;border-color:#5583bf;color:white}
+.period-market-note{font-size:12px;line-height:1.55;color:#8ea5c8;margin:8px 0 13px}
+.period-row{padding:11px 9px;border-bottom:1px solid #23334c;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px;align-items:center}
+.period-label{font-size:14px;font-weight:700;color:#dce8fa;overflow-wrap:anywhere}
+.period-actions{display:flex;gap:6px}
+.period-actions .odd{min-width:81px}
+.period-source{display:block;margin-top:9px;color:#84bdf7;font-size:12px;text-decoration:underline}
+.period-nodata{font-size:13px;color:#b6c6df;padding:12px;background:#111f35;border-radius:10px;line-height:1.65}
+.period-more{border:1px solid #324a68;border-radius:9px;padding:8px 12px;color:#c3daf7;background:#17283f;width:100%;margin:9px 0;cursor:pointer}
+@media(max-width:600px){.period-row{grid-template-columns:1fr}.period-actions{justify-content:stretch}.period-actions .odd{flex:1}.period-tab{min-width:25%}}
 </style>
 </head>
 <body>
@@ -460,7 +477,8 @@
   const status = document.getElementById('data-status');
   const stakeInput = document.getElementById('stake');
   const selected = new Map(); // gameId -> { kind, team, label, pricePercent, contractId }
-  const states = new Map();   // gameId -> {tab, showAll, filter}
+  const states = new Map();   // gameId -> {tab, showAll, filter, scope, period}
+  let periodMarkets = null;
   const teamNames = {ATL:'老鹰',BOS:'凯尔特人',BKN:'篮网',CHA:'黄蜂',CHI:'公牛',CLE:'骑士',DAL:'独行侠',DEN:'掘金',DET:'活塞',GSW:'勇士',HOU:'火箭',IND:'步行者',LAC:'快船',LAL:'湖人',MEM:'灰熊',MIA:'热火',MIL:'雄鹿',MIN:'森林狼',NOP:'鹈鹕',NYK:'尼克斯',OKC:'雷霆',ORL:'魔术',PHI:'76人',PHX:'太阳',POR:'开拓者',SAC:'国王',SAS:'马刺',TOR:'猛龙',UTA:'爵士',WAS:'奇才'};
   // RH and ESPN sometimes use different abbreviations for the same NBA team.
   const teamAliases = {GS:'GSW',GOLDENSTATE:'GSW',NY:'NYK',SA:'SAS',NO:'NOP',WSH:'WAS',UTAH:'UTA',UT:'UTA',PHO:'PHX',PHOENIX:'PHX',BRK:'BKN',BK:'BKN',NJ:'BKN',NJN:'BKN'};
@@ -666,10 +684,64 @@
     more.addEventListener('click',()=>{side.showAll=!side.showAll;states.set(game.id,side);makeSpreadRows(game,wrapper);});wrapper.append(more);
     syncButtons();
   }
+  const periodOptions=[['上半场','h1'],['下半场','h2'],['第一节','q1'],['第二节','q2'],['第三节','q3'],['第四节','q4']];
+  const periodName=p=>Object.fromEntries(periodOptions.map(([n,k])=>[k,n]))[p]||p;
+  const periodMarket=(game,period,kind)=>periodMarkets?.date===odds?.date ?
+    periodMarkets.games?.find(g=>g.id===game.id)?.markets?.[period]?.[kind] : null;
+  function drawPeriodMarket(game, state, wrapper){
+    wrapper.replaceChildren();
+    const row=document.createElement('div');row.className='period-tabs';
+    const isHalf=state.scope==='half';
+    for(const [title,code] of periodOptions.filter(([_,code])=>isHalf?code.startsWith('h'):code.startsWith('q'))){
+      const b=document.createElement('button');b.type='button';b.className='period-tab'+(state.period===code?' active':'');
+      b.textContent=title;b.addEventListener('click',()=>{state.period=code;state.periodShowAll=false;drawPeriodMarket(game,state,wrapper);});row.append(b);
+    }
+    wrapper.append(row);
+    const tbar=document.createElement('div');tbar.className='market-tabs';
+    for(const [title,code] of [['胜负','winner'],['让分','spread'],['大小球','total']]){
+      const b=document.createElement('button');b.type='button';b.className='market-tab'+(state.periodType===code?' active':'');b.textContent=title;
+      b.addEventListener('click',()=>{state.periodType=code;state.periodShowAll=false;drawPeriodMarket(game,state,wrapper);});tbar.append(b);
+    }
+    wrapper.append(tbar);
+    const info=document.createElement('div');info.className='period-market-note';
+    info.textContent=`${periodName(state.period)} · ${state.periodType==='winner'?'阶段独立胜负，可能出现平局':state.periodType==='spread'?'按该时段的得分差结算':'按该时段的总得分结算'}。下半场合约可能包含加时，请核对 RH 条款。价格仅来自实际买入 ask；不可用不沿用旧价。`;
+    if(periodMarkets?.date===odds?.date&&periodMarkets.capturedAt){const dt=new Date(periodMarkets.capturedAt);if(!isNaN(dt))info.textContent+=' 分节报价采集：'+new Intl.DateTimeFormat('zh-CN',{timeZone:'Asia/Shanghai',month:'numeric',day:'numeric',hour:'2-digit',minute:'2-digit',hour12:false}).format(dt)+'（北京时间）。';}
+    wrapper.append(info);
+    const market=periodMarket(game,state.period,state.periodType);
+    if(!market?.choices?.length){
+      const msg=document.createElement('div');msg.className='period-nodata';
+      msg.textContent=periodMarkets?.date===odds?.date ? '暂未抓到这个时段的有效 RH 买入价。可能尚未开放、已经关闭，或事件页结构未能解析。' : '分节赔率还没有生成或与当前赛程日期不一致。请运行 GitHub Actions 的分节盘口更新。';
+      wrapper.append(msg);
+    }else{
+      const choices=market.choices.slice().sort((a,b)=>{
+        const pa=a.yesAsk??a.noAsk??100,pb=b.yesAsk??b.noAsk??100;return Math.abs(pa-50)-Math.abs(pb-50);
+      });
+      const selectedPick=selected.get(game.id);
+      const visible=state.periodShowAll?choices:choices.filter((x,i)=>i<5 || (selectedPick?.kind==='period'&&selectedPick.contractId?.startsWith(`${state.period}:${state.periodType}:${x.id}:`)));
+      for(const item of visible){
+        const row=document.createElement('div');row.className='period-row';
+        const label=document.createElement('div');label.className='period-label';label.textContent=item.label;row.append(label);
+        const btns=document.createElement('div');btns.className='period-actions';
+        for(const [side,value] of [['yes',item.yesAsk],['no',item.noAsk]]){
+          if(side==='no'&&state.periodType==='winner')continue; // 3-way winner NO is not simply 'other team wins'
+          const text=side==='yes'?'YES':'NO';const contractId=`${state.period}:${state.periodType}:${item.id}:${side}`;
+          const btn=rowButton(text+' · '+periodName(state.period)+' · '+item.label,value,game.id,'period',side,contractId,'odd period-odd');
+          btn.dataset.period=state.period;btn.dataset.market=state.periodType;btn.dataset.side=side;
+          btns.append(btn);
+        }
+        row.append(btns);wrapper.append(row);
+      }
+      if(choices.length>5){const more=document.createElement('button');more.type='button';more.className='period-more';more.textContent=state.periodShowAll?'收起盘口 ↑':`展开全部 ${choices.length} 个合约 ↓`;more.addEventListener('click',()=>{state.periodShowAll=!state.periodShowAll;drawPeriodMarket(game,state,wrapper);});wrapper.append(more);}
+    }
+    if(market?.url && market.url.startsWith('https://robinhood.com/')){
+      const a=document.createElement('a');a.className='period-source';a.href=market.url;a.target='_blank';a.rel='noopener noreferrer';a.textContent='在 RH 查看此时段原始市场';wrapper.append(a);
+    }
+    syncButtons();
+  }
   function render() {
     const frag=document.createDocumentFragment();
     for(const game of (odds.games||[])){
-      if(!states.has(game.id)) states.set(game.id,{tab:'moneyline',showAll:false,filter:'ALL'});
+      if(!states.has(game.id)) states.set(game.id,{tab:'moneyline',showAll:false,filter:'ALL',scope:'full',period:'h1',periodType:'winner',periodShowAll:false});
       const state=states.get(game.id);
       const card=document.createElement('article');card.className='game';
       const meta=document.createElement('div');meta.className='meta';
@@ -689,20 +761,32 @@
       const title=document.createElement('div');title.className='matchup';title.textContent=(game.away.nameZh||teamNames[canonicalTeam(game.away.code)]||game.away.code)+' vs '+(game.home.nameZh||teamNames[canonicalTeam(game.home.code)]||game.home.code);
       card.append(title);
       card.append(buildHistoryPanel(game));
+      const scopeBar=document.createElement('div');scopeBar.className='scope-tabs';
       const tabs=document.createElement('div');tabs.className='market-tabs';
       const content=document.createElement('div');
       const drawContent=()=>{
         content.replaceChildren();
-        if(state.tab==='moneyline'){content.append(createWinner(game,'away'),createWinner(game,'home'));}
-        else if(state.tab==='spread'){makeSpreadRows(game,content);}
-        else {makeTotalRows(game,content);}
+        tabs.hidden=state.scope!=='full';
+        if(state.scope==='full'){
+          if(state.tab==='moneyline')content.append(createWinner(game,'away'),createWinner(game,'home'));
+          else if(state.tab==='spread')makeSpreadRows(game,content);
+          else makeTotalRows(game,content);
+        }else drawPeriodMarket(game,state,content);
         syncButtons();
       };
+      for(const [label,key] of [['全场','full'],['半场','half'],['单节','quarter']]){
+        const b=document.createElement('button');b.type='button';b.className='scope-tab'+(state.scope===key?' active':'');b.textContent=label;
+        b.addEventListener('click',()=>{
+          state.scope=key;if(key==='half'&&!state.period.startsWith('h'))state.period='h1';
+          if(key==='quarter'&&!state.period.startsWith('q'))state.period='q1';
+          scopeBar.querySelectorAll('.scope-tab').forEach(t=>t.classList.toggle('active',t===b));drawContent();
+        });scopeBar.append(b);
+      }
       for(const [label,key] of [['胜负','moneyline'],['让分','spread'],['大小球','total']]){
         const t=document.createElement('button');t.type='button';t.className='market-tab'+(state.tab===key?' active':'');t.textContent=label;
         t.addEventListener('click',()=>{state.tab=key;states.set(game.id,state);tabs.querySelectorAll('.market-tab').forEach(b=>b.classList.toggle('active',b===t));drawContent();});tabs.append(t);
       }
-      card.append(tabs,content);drawContent();frag.append(card);
+      card.append(scopeBar,tabs,content);drawContent();frag.append(card);
     }
     list.replaceChildren(frag);
     // odds.date is the US Pacific slate date, NOT the Beijing calendar date.
@@ -722,7 +806,7 @@
       : `${odds.date} · 美国西海岸比赛日`;
     document.getElementById('summary-date').textContent=dateLabel;
     document.getElementById('summary-meta').textContent=`${odds.games.length} 场比赛`;
-    document.getElementById('hero-sub').textContent='胜负、让分、大小球都能选串，每场比赛限选一个盘口。';
+    document.getElementById('hero-sub').textContent='全场、半场、单节可切换；每场比赛限选一个盘口。';
     status.textContent=totals?.date===odds.date?'RH 三种盘口缓存':'RH 胜负 / 让分缓存';
     const count=spreads?.date===odds.date?spreads.games.reduce((s,g)=>s+g.lines.length,0):0;
     const fmtDate=s=>{const dt=new Date(s);return isNaN(dt.getTime())?'未知':new Intl.DateTimeFormat('zh-CN',{timeZone:'Asia/Shanghai',month:'numeric',day:'numeric',hour:'2-digit',minute:'2-digit',hour12:false}).format(dt);};
@@ -783,7 +867,7 @@
     document.getElementById('slip-preview-profit').textContent='扣费净赚 '+(feePreview ? money(feePreview.profit) : '—');
     const choices=document.getElementById('choices');
     choices.replaceChildren();
-    if(!picks.length){choices.className='choices empty';choices.textContent='选择胜负、让分、受让或大小球盘口，每场限选一个';}
+    if(!picks.length){choices.className='choices empty';choices.textContent='选择全场、半场或单节盘口，每场限选一个';}
     else {choices.className='choices';for(const p of picks){const chip=document.createElement('span');chip.className='chip';chip.textContent=p.label+' · '+fmt(p.pricePercent)+'%';choices.append(chip);}}
     document.getElementById('combo-type').textContent=picks.length>=2?'混合盘口理论串关':picks.length===1?'单场理论收益':'选择比赛';
     document.getElementById('cart-add').disabled=!picks.length;
@@ -794,7 +878,7 @@
     const gameId=b.dataset.game;
     const prev=selected.get(gameId);
     if(prev?.contractId===b.dataset.contract&&prev.kind===b.dataset.kind) selected.delete(gameId);
-    else selected.set(gameId,{gameId,kind:b.dataset.kind,team:b.dataset.team,label:b.dataset.label,contractId:b.dataset.contract,pricePercent:Number(b.dataset.price)});
+    else selected.set(gameId,{gameId,kind:b.dataset.kind,team:b.dataset.team,label:b.dataset.label,contractId:b.dataset.contract,pricePercent:Number(b.dataset.price),period:b.dataset.period||null,market:b.dataset.market||null,side:b.dataset.side||null});
     updateSlip();
   });
   document.getElementById('slip-toggle').addEventListener('click',()=>{
@@ -838,7 +922,7 @@
       del.addEventListener('click',()=>{cart=cart.filter(x=>x.id!==plan.id);persistCart();});head.append(del);card.append(head);
       for(const [idx,p] of plan.picks.entries()){
         const line=newEl('div','cart-plan-line');
-        const desc=newEl('div');desc.append(newEl('b','',p.label),newEl('small','',({moneyline:'胜负',spread:'让分',total:'大小球'}[p.kind]||p.kind)+' · 保存时 YES/NO 买入价 '+fmt(Number(p.pricePercent))+'¢'));
+        const desc=newEl('div');desc.append(newEl('b','',p.label),newEl('small','',({moneyline:'胜负',spread:'让分',total:'大小球',period:'分节盘口'}[p.kind]||p.kind)+' · 保存时 YES/NO 买入价 '+fmt(Number(p.pricePercent))+'¢'));
         const remove=newEl('button','cart-mini-button','移除');remove.type='button';remove.setAttribute('aria-label','移除 '+p.label);
         remove.addEventListener('click',()=>{plan.picks.splice(idx,1);if(!plan.picks.length)cart=cart.filter(x=>x.id!==plan.id);persistCart();});line.append(desc,remove);card.append(line);
       }
@@ -924,8 +1008,10 @@
   Promise.allSettled([
     fetch('odds.json',{cache:'no-store'}).then(r=>r.ok?r.json():Promise.reject(Error('odds HTTP '+r.status))),
     fetch('spreads.json',{cache:'no-store'}).then(r=>r.ok?r.json():Promise.reject(Error('spreads HTTP '+r.status))),
-    fetch('totals.json',{cache:'no-store'}).then(r=>r.ok?r.json():Promise.reject(Error('totals HTTP '+r.status)))
-  ]).then(([a,b,c])=>{
+    fetch('totals.json',{cache:'no-store'}).then(r=>r.ok?r.json():Promise.reject(Error('totals HTTP '+r.status))),
+    fetch('period_markets.json',{cache:'no-store'}).then(r=>r.ok?r.json():Promise.reject(Error('period markets HTTP '+r.status)))
+  ]).then(([a,b,c,d])=>{
+    if(d.status==='fulfilled'&&Array.isArray(d.value.games))periodMarkets=d.value;
     if(a.status==='fulfilled'&&Array.isArray(a.value.games)) odds=a.value;
     if(b.status==='fulfilled'&&Array.isArray(b.value.games)) spreads=b.value;
     if(c.status==='fulfilled'&&Array.isArray(c.value.games)) totals=c.value;
@@ -933,7 +1019,13 @@
     const gameIds=new Set((odds.games||[]).map(g=>g.id));
     for(const [id,pick] of selected){
       if(!gameIds.has(id)){selected.delete(id);continue;}
-      if(pick.kind==='spread'){
+      if(pick.kind==='period'){
+        const m=periodMarket(odds.games.find(g=>g.id===id),pick.period,pick.market);
+        const parts=String(pick.contractId).split(':');const contract=parts.slice(2,-1).join(':');
+        const row=m?.choices?.find(x=>String(x.id)===contract);
+        const newPrice=row?.[pick.side==='no'?'noAsk':'yesAsk'];
+        if(!validPrice(newPrice))selected.delete(id);else pick.pricePercent=newPrice;
+      } else if(pick.kind==='spread'){
         const x=spreadByGame(id).find(line=>line.id===pick.contractId || (line.side==='yes' && line.contractId===pick.contractId));
         if(!x||!validPrice(x.pricePercent))selected.delete(id);
         else { pick.pricePercent=x.pricePercent; pick.contractId=x.id; }
