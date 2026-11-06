@@ -696,6 +696,11 @@
     if(periodMarkets?.date===odds?.date&&periodMarkets.capturedAt){const dt=new Date(periodMarkets.capturedAt);if(!isNaN(dt))info.textContent+=' 分节报价采集：'+new Intl.DateTimeFormat('zh-CN',{timeZone:'Asia/Shanghai',month:'numeric',day:'numeric',hour:'2-digit',minute:'2-digit',hour12:false}).format(dt)+'（北京时间）。';}
     wrapper.append(info);
     const market=periodMarket(game,state.period,state.periodType);
+    if(market?.hiddenCount>0){
+      const notice=document.createElement('div');notice.className='period-market-note';
+      notice.textContent=`RH 原页面还有至少 ${market.hiddenCount} 个折叠合约未成功展开，目前显示的是部分盘口；可点击下方 RH 原始市场查看。`;
+      wrapper.append(notice);
+    }
     if(!market?.choices?.length){
       const msg=document.createElement('div');msg.className='period-nodata';
       msg.textContent=periodMarkets?.date===odds?.date ? '尚未抓到此时段的 RH 合约报价：可能市场未开放、已关闭，或页面未返回可解析的选项。' : '分节赔率还没有生成或与当前赛程日期不一致。请运行 GitHub Actions 的分节盘口更新。';
