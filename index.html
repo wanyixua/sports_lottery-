@@ -692,13 +692,13 @@
   function drawPeriodMarket(game, state, wrapper){
     wrapper.replaceChildren();
     const info=document.createElement('div');info.className='period-market-note';
-    info.textContent=`${periodName(state.period)} · ${state.periodType==='winner'?'阶段独立胜负，可能出现平局':state.periodType==='spread'?'按该时段的得分差结算':'按该时段的总得分结算'}。下半场合约可能包含加时，请核对 RH 条款。已核实 Ask 才可加入计算器；其余仅显示 RH 页面参考价（不是可成交价）。`;
+    info.textContent=`${periodName(state.period)} · ${state.periodType==='winner'?'阶段独立胜负，可能出现平局':state.periodType==='spread'?'按该时段的得分差结算':'按该时段的总得分结算'}。下半场合约可能包含加时，请核对 RH 条款。RH 页面展示价也可用于净赚估算；未核实 Ask 时，收益只是参考，不代表实际成交价。`;
     if(periodMarkets?.date===odds?.date&&periodMarkets.capturedAt){const dt=new Date(periodMarkets.capturedAt);if(!isNaN(dt))info.textContent+=' 分节报价采集：'+new Intl.DateTimeFormat('zh-CN',{timeZone:'Asia/Shanghai',month:'numeric',day:'numeric',hour:'2-digit',minute:'2-digit',hour12:false}).format(dt)+'（北京时间）。';}
     wrapper.append(info);
     const market=periodMarket(game,state.period,state.periodType);
     if(!market?.choices?.length){
       const msg=document.createElement('div');msg.className='period-nodata';
-      msg.textContent=periodMarkets?.date===odds?.date ? '暂未抓到这个时段的有效 RH 买入价。可能尚未开放、已经关闭，或事件页结构未能解析。' : '分节赔率还没有生成或与当前赛程日期不一致。请运行 GitHub Actions 的分节盘口更新。';
+      msg.textContent=periodMarkets?.date===odds?.date ? '尚未抓到此时段的 RH 合约报价：可能市场未开放、已关闭，或页面未返回可解析的选项。' : '分节赔率还没有生成或与当前赛程日期不一致。请运行 GitHub Actions 的分节盘口更新。';
       wrapper.append(msg);
     }else{
       const choices=market.choices.slice().sort((a,b)=>{
@@ -709,22 +709,33 @@
       const visible=state.periodShowAll?choices:choices.filter((x,i)=>i<5 || (selectedPick?.kind==='period'&&selectedPick.contractId?.startsWith(`${state.period}:${state.periodType}:${x.id}:`)));
       for(const item of visible){
         const row=document.createElement('div');row.className='period-row';
-        const label=document.createElement('div');label.className='period-label';const code=item.owner||({Phoenix:'PHX',Orlando:'ORL', 'Golden State':'GSW',Tie:'tie'}[item.label]);
-        label.textContent=code==='tie'?'平局':teamNames[canonicalTeam(code)]||item.label;row.append(label);
+        const label=document.createElement('div');label.className='period-label';
+        const code=canonicalTeam(item.owner||'');
+        const aliases={Phoenix:'PHX',Orlando:'ORL','Golden State':'GSW',Tie:'tie'};
+        const displayTeam=teamNames[code]||teamNames[aliases[item.label]]||item.label;
+        if(state.periodType==='spread'){
+          const m=item.label.match(/^(.+?)\s+wins\s+by\s+(?:over|more than)\s+(\d+(?:\.\d+)?)\s+points?/i);
+          label.textContent=m?`${teamNames[code]||m[1]} 净胜超过 ${m[2]} 分` : item.label;
+        } else if(state.periodType==='total'){
+          const m=item.label.match(/^(over|under)\s+(\d+(?:\.\d+)?)\s+points?/i);
+          label.textContent=m?`${m[1].toLowerCase()==='over'?'大于':'小于'} ${m[2]} 分`:item.label;
+        } else label.textContent=code==='TIE'||item.owner==='tie'?'平局':displayTeam;
+        row.append(label);
         const btns=document.createElement('div');btns.className='period-actions';
-        if(item.displayPrice!==null&&item.displayPrice!==undefined&&!validPrice(item.yesAsk)){
-          const ref=document.createElement('div');ref.className='period-reference';
-          const strong=document.createElement('strong');strong.textContent=fmt(Number(item.displayPrice))+'¢';
-          const small=document.createElement('small');small.textContent='RH 页面参考价';
-          ref.append(strong,small);btns.append(ref);
-        }
-        const hasBuy=validPrice(item.yesAsk)||validPrice(item.noAsk);
-        if(!hasBuy){row.append(btns);wrapper.append(row);continue;}
-        for(const [side,value] of [['yes',item.yesAsk],['no',item.noAsk]]){
-          if(side==='no'&&state.periodType==='winner')continue; // 3-way winner NO is not simply 'other team wins'
-          const text=side==='yes'?'YES Ask':'NO Ask';const contractId=`${state.period}:${state.periodType}:${item.id}:${side}`;
+        // RH displayed quote is allowed as a user-requested estimate, NOT verified Ask.
+        const indicative=!validPrice(item.yesAsk)&&validPrice(item.displayPrice);
+        const yesPrice=validPrice(item.yesAsk)?item.yesAsk:(indicative?item.displayPrice:null);
+        for(const [side,value] of [['yes',yesPrice],['no',item.noAsk]]){
+          if(side==='no'&&state.periodType==='winner')continue; // 3-way winner NO is not the other team's win
+          if(!validPrice(value))continue;
+          const text=side==='yes'?(indicative?'页面价估算':'YES Ask'):'NO Ask';
+          const contractId=`${state.period}:${state.periodType}:${item.id}:${side}`;
           const btn=rowButton(text+' · '+periodName(state.period)+' · '+item.label,value,game.id,'period',side,contractId,'odd period-odd');
           btn.dataset.period=state.period;btn.dataset.market=state.periodType;btn.dataset.side=side;
+          if(indicative&&side==='yes'){
+            btn.title='按 RH 页面展示价估算，不保证以该价成交';
+            const small=btn.querySelector('small');if(small)small.textContent+=' · 展示价估算';
+          }
           btns.append(btn);
         }
         row.append(btns);wrapper.append(row);
@@ -1032,7 +1043,7 @@
         const m=periodMarket(odds.games.find(g=>g.id===id),pick.period,pick.market);
         const parts=String(pick.contractId).split(':');const contract=parts.slice(2,-1).join(':');
         const row=m?.choices?.find(x=>String(x.id)===contract);
-        const newPrice=row?.[pick.side==='no'?'noAsk':'yesAsk'];
+        const newPrice=pick.side==='no'?row?.noAsk:(validPrice(row?.yesAsk)?row.yesAsk:row?.displayPrice);
         if(!validPrice(newPrice))selected.delete(id);else pick.pricePercent=newPrice;
       } else if(pick.kind==='spread'){
         const x=spreadByGame(id).find(line=>line.id===pick.contractId || (line.side==='yes' && line.contractId===pick.contractId));
