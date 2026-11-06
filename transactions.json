@@ -502,10 +502,20 @@
       "usDate": "2026-11-05",
       "bet": "GSW",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 32.0,
+      "status": "win",
       "profitIfWin": 12,
-      "note": "本人已确认买入：金州勇士 GSW 独赢（Moneyline），投入 $20，命中净赚 $12；待结算"
+      "note": "本人已确认买入：金州勇士 GSW 独赢（Moneyline），投入 $20，命中净赚 $12；待结算",
+      "legs": [
+        {
+          "team": "GSW",
+          "market": "moneyline"
+        }
+      ],
+      "legResults": [
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores); verify special RH settlement rules"
     },
     {
       "id": 53,
@@ -513,8 +523,8 @@
       "usDate": "2026-11-05",
       "bet": "ORL +5.5 + MIA +8.5",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 0,
+      "status": "loss",
       "profitIfWin": 25,
       "legs": [
         {
@@ -528,7 +538,12 @@
           "line": 8.5
         }
       ],
-      "note": "已确认买入：魔术受让5.5 + 热火受让8.5，2串1；投入$20，命中净赚$25"
+      "note": "已确认买入：魔术受让5.5 + 热火受让8.5，2串1；投入$20，命中净赚$25",
+      "legResults": [
+        "loss",
+        "loss"
+      ],
+      "resultSource": "ESPN scoreboard (final scores); verify special RH settlement rules"
     },
     {
       "id": 54,
@@ -536,8 +551,8 @@
       "usDate": "2026-11-05",
       "bet": "GSW +3.5 + PHX +5.5",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 42.0,
+      "status": "win",
       "profitIfWin": 22,
       "legs": [
         {
@@ -551,7 +566,12 @@
           "line": 5.5
         }
       ],
-      "note": "已确认买入：勇士受让3.5 + 太阳受让5.5，2串1；投入$20，命中净赚$22"
+      "note": "已确认买入：勇士受让3.5 + 太阳受让5.5，2串1；投入$20，命中净赚$22",
+      "legResults": [
+        "win",
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores); verify special RH settlement rules"
     }
   ]
 }
