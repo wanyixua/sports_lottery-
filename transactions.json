@@ -572,6 +572,141 @@
         "win"
       ],
       "resultSource": "ESPN scoreboard (final scores); verify special RH settlement rules"
+    },
+    {
+      "id": 55,
+      "owner": "王老板",
+      "usDate": "2026-11-05",
+      "bet": "MIA +8.5",
+      "stake": 20,
+      "payout": null,
+      "status": "pending",
+      "profitIfWin": 8,
+      "legs": [
+        {
+          "team": "MIA",
+          "market": "spread",
+          "line": 8.5
+        }
+      ],
+      "note": "微信11/5 18:57：王老板「再买点热火受让8点5，20刀」，小王回复「买好了 20赚8」。独立新增单，不是#53串关。"
+    },
+    {
+      "id": 56,
+      "owner": "王老板",
+      "usDate": "2026-11-06",
+      "bet": "ATL + TOR + PHI + OKC + MIN + BOS + SAS",
+      "stake": 30,
+      "payout": null,
+      "status": "pending",
+      "profitIfWin": 296,
+      "legs": [
+        {
+          "team": "ATL",
+          "market": "moneyline"
+        },
+        {
+          "team": "TOR",
+          "market": "moneyline"
+        },
+        {
+          "team": "PHI",
+          "market": "moneyline"
+        },
+        {
+          "team": "OKC",
+          "market": "moneyline"
+        },
+        {
+          "team": "MIN",
+          "market": "moneyline"
+        },
+        {
+          "team": "BOS",
+          "market": "moneyline"
+        },
+        {
+          "team": "SAS",
+          "market": "moneyline"
+        }
+      ],
+      "note": "微信11/6 14:53明确确认「买好了 七串一 都不让分 30赚296」；根据最后成交确认，七队全部独赢，先前讨论的马刺让3.5已取消。"
+    },
+    {
+      "id": 57,
+      "owner": "王老板",
+      "usDate": "2026-11-06",
+      "bet": "ATL + BOS + PHI + OKC + SAS + TOR +2.5 + MIN +2.5",
+      "stake": 30,
+      "payout": null,
+      "status": "pending",
+      "profitIfWin": 252,
+      "legs": [
+        {
+          "team": "ATL",
+          "market": "moneyline"
+        },
+        {
+          "team": "BOS",
+          "market": "moneyline"
+        },
+        {
+          "team": "PHI",
+          "market": "moneyline"
+        },
+        {
+          "team": "OKC",
+          "market": "moneyline"
+        },
+        {
+          "team": "SAS",
+          "market": "moneyline"
+        },
+        {
+          "team": "TOR",
+          "market": "spread",
+          "line": 2.5
+        },
+        {
+          "team": "MIN",
+          "market": "spread",
+          "line": 2.5
+        }
+      ],
+      "note": "微信11/6 14:53另笔确认「买好了 30赚252」；引用王老板「老鹰、凯尔特人、76人、雷霆、马刺，胜，猛龙、森林狼，受让2点5分」。"
+    },
+    {
+      "id": 58,
+      "owner": "小王",
+      "usDate": "2026-11-06",
+      "bet": "BOS + SAS + TOR + DAL + ATL",
+      "stake": 20,
+      "payout": null,
+      "status": "pending",
+      "profitIfWin": 57,
+      "legs": [
+        {
+          "team": "BOS",
+          "market": "moneyline"
+        },
+        {
+          "team": "SAS",
+          "market": "moneyline"
+        },
+        {
+          "team": "TOR",
+          "market": "moneyline"
+        },
+        {
+          "team": "DAL",
+          "market": "moneyline"
+        },
+        {
+          "team": "ATL",
+          "market": "moneyline"
+        }
+      ],
+      "note": "本人确认五串一，$20命中净赚$57；RH截图显示BOS/SAS/TOR/DAL/ATL Yes，5-leg combo。"
     }
   ]
 }
