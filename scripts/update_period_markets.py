@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """Best-effort RH NBA half/quarter market snapshots.
 
-Only public event pages, no account/login/unofficial private API. A price is
-published only if an explicit YES/NO ask is present in the page's Next.js data.
-Unavailable/closed markets remain as links without stale/tradable prices.
+Only public event pages, no account/login. Public contract-selection prices
+are stored as indicative displayPrice distinct from verified yesAsk/noAsk.
+Unavailable markets remain links without fabricated quotes.
 """
 import concurrent.futures
 import json
@@ -147,14 +147,11 @@ def parse_explicit_visible_ask(parser,away,home,kind):
  return [{'id':'visible-ticket-'+code,'label':label,'yesAsk':ask,'noAsk':None}] if ask else []
 
 def parse_visible_contract_choices(parser, away, home, kind):
- """Recover ALL server-rendered selection choices, never calling them asks.
+ """Read all publicly displayed contract choices for winner/spread/total.
 
- RH offers a `Select a contract` list with displayed cents per choice,
- whereas its Bid/Ask ticket belongs only to the default selected contract.
- Display prices here are indicative and are NEVER passed into yesAsk.
+ displayPrice is a reference quote, NOT independently verified executable ask.
+ The client may use it for an explicitly-labelled estimated return.
  """
- if kind != 'winner':
-  return []
  parts=[str(x).strip() for x in parser.visible if str(x).strip()]
  start=next((i for i,x in enumerate(parts) if x.lower()=='select a contract'),None)
  if start is None:return []
@@ -162,15 +159,30 @@ def parse_visible_contract_choices(parser, away, home, kind):
  sub=parts[start+1:end]
  choices=[]
  for i in range(len(sub)-1):
-  owner=label_owner(sub[i],away,home)
-  if owner is None:continue
-  m=re.fullmatch(r'\s*(\d+(?:\.\d+)?)\s*¢\s*',sub[i+1])
-  if not m:continue
-  cents=explicit_price(m.group(1)+'¢')
+  label=sub[i]
+  owner=label_owner(label,away,home) if kind=='winner' else None
+  if kind=='winner' and owner is None:continue
+  if kind=='spread':
+   # RH often uses 'Boston wins by over 5.5 points'; line belongs to Boston.
+   m=re.fullmatch(r'(.+?)\s+wins\s+by\s+(?:over|more than)\s+(\d+(?:\.\d+)?)\s+points?',label,re.I)
+   if not m:continue
+   owner=label_owner(m.group(1),away,home)
+   if owner not in (away,home):continue
+  if kind=='total':
+   m=re.fullmatch(r'(over|under)\s+(\d+(?:\.\d+)?)\s+points?',label,re.I)
+   if not m:continue
+   owner=m.group(1).lower()
+  price_match=re.fullmatch(r'\s*(\d+(?:\.\d+)?)\s*¢\s*',sub[i+1])
+  if not price_match:continue
+  cents=explicit_price(price_match.group(1)+'¢')
   if cents is None:continue
-  if owner not in [x.get('owner') for x in choices]:
-   choices.append({'id':'display-'+owner,'owner':owner,'label':sub[i],
-                   'displayPrice':cents,'yesAsk':None,'noAsk':None})
+  # Stable semantic ID: different spread lines or totals remain distinct.
+  cid= ('display-'+owner if kind=='winner' else
+        'display-'+kind+'-'+owner+'-'+(m.group(2).replace('.','p')))
+  if cid not in [x['id'] for x in choices]:
+   choices.append({'id':cid,'owner':owner,'label':label,
+                   'displayPrice':cents,'yesAsk':None,'noAsk':None,
+                   'priceSource':'RH public event selection (indicative)'})
  return choices
 
 def combine_display_with_ask(displayed, verified, away,home):
