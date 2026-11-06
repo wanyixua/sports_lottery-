@@ -343,13 +343,14 @@
   .history-note{color:#8fa7c8;font-size:11px;line-height:1.6}
   @media(max-width:480px){.history-cols{grid-template-columns:1fr}.history-list{max-height:200px}}
 
-/* Six quarter/half submarkets stay behind a compact per-game switcher. */
-.scope-tabs{display:flex;gap:6px;margin:12px 0 8px;padding:4px;border:1px solid #2c3e59;border-radius:13px;background:#080f20}
-.scope-tab{border:0;flex:1;padding:9px 6px;color:#a6bad8;background:none;border-radius:9px;font-weight:750;cursor:pointer}
-.scope-tab.active{background:#294363;color:#fff}
-.period-tabs{display:flex;flex-wrap:wrap;gap:6px;margin:9px 0 12px}
-.period-tab{flex:1;min-width:20%;border:1px solid #2a3c57;border-radius:9px;padding:9px 4px;background:#0c182d;color:#b7c9e3;cursor:pointer;font-size:13px;font-weight:700}
-.period-tab.active{background:#263f60;border-color:#5583bf;color:white}
+/* Quiet hierarchy: one main market tab row, and one small period dropdown. */
+.market-toolbar{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:14px 0 9px}
+.market-heading{font-size:12px;font-weight:800;letter-spacing:.08em;color:#91a5c3}
+.period-select-wrap{display:flex;align-items:center;gap:9px;color:#90a7c9;font-size:12px;font-weight:650}
+.period-select{appearance:none;-webkit-appearance:none;min-width:115px;padding:9px 31px 9px 13px;border:1px solid #304462;border-radius:11px;background:#111e33;color:#eaf2ff;font-size:13px;font-weight:850;cursor:pointer;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='none'%3E%3Cpath d='m5 7 5 5 5-5' stroke='%23abc5e8' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 9px center;background-size:17px}
+.period-select:focus-visible{outline:2px solid #7cb7ff;outline-offset:2px}
+.market-tabs{margin-bottom:12px}
+@media(max-width:480px){.market-toolbar{margin-top:11px}.period-select{min-width:103px}.period-select-wrap{gap:6px}}
 .period-market-note{font-size:12px;line-height:1.55;color:#8ea5c8;margin:8px 0 13px}
 .period-row{padding:11px 9px;border-bottom:1px solid #23334c;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px;align-items:center}
 .period-label{font-size:14px;font-weight:700;color:#dce8fa;overflow-wrap:anywhere}
@@ -690,19 +691,6 @@
     periodMarkets.games?.find(g=>g.id===game.id)?.markets?.[period]?.[kind] : null;
   function drawPeriodMarket(game, state, wrapper){
     wrapper.replaceChildren();
-    const row=document.createElement('div');row.className='period-tabs';
-    const isHalf=state.scope==='half';
-    for(const [title,code] of periodOptions.filter(([_,code])=>isHalf?code.startsWith('h'):code.startsWith('q'))){
-      const b=document.createElement('button');b.type='button';b.className='period-tab'+(state.period===code?' active':'');
-      b.textContent=title;b.addEventListener('click',()=>{state.period=code;state.periodShowAll=false;drawPeriodMarket(game,state,wrapper);});row.append(b);
-    }
-    wrapper.append(row);
-    const tbar=document.createElement('div');tbar.className='market-tabs';
-    for(const [title,code] of [['胜负','winner'],['让分','spread'],['大小球','total']]){
-      const b=document.createElement('button');b.type='button';b.className='market-tab'+(state.periodType===code?' active':'');b.textContent=title;
-      b.addEventListener('click',()=>{state.periodType=code;state.periodShowAll=false;drawPeriodMarket(game,state,wrapper);});tbar.append(b);
-    }
-    wrapper.append(tbar);
     const info=document.createElement('div');info.className='period-market-note';
     info.textContent=`${periodName(state.period)} · ${state.periodType==='winner'?'阶段独立胜负，可能出现平局':state.periodType==='spread'?'按该时段的得分差结算':'按该时段的总得分结算'}。下半场合约可能包含加时，请核对 RH 条款。价格仅来自实际买入 ask；不可用不沿用旧价。`;
     if(periodMarkets?.date===odds?.date&&periodMarkets.capturedAt){const dt=new Date(periodMarkets.capturedAt);if(!isNaN(dt))info.textContent+=' 分节报价采集：'+new Intl.DateTimeFormat('zh-CN',{timeZone:'Asia/Shanghai',month:'numeric',day:'numeric',hour:'2-digit',minute:'2-digit',hour12:false}).format(dt)+'（北京时间）。';}
@@ -761,12 +749,24 @@
       const title=document.createElement('div');title.className='matchup';title.textContent=(game.away.nameZh||teamNames[canonicalTeam(game.away.code)]||game.away.code)+' vs '+(game.home.nameZh||teamNames[canonicalTeam(game.home.code)]||game.home.code);
       card.append(title);
       card.append(buildHistoryPanel(game));
-      const scopeBar=document.createElement('div');scopeBar.className='scope-tabs';
+      // One primary category bar and a compact period selector: no nested competing tab rows.
+      const toolbar=document.createElement('div');toolbar.className='market-toolbar';
+      const heading=document.createElement('span');heading.className='market-heading';heading.textContent='盘口';
+      const selector=document.createElement('label');selector.className='period-select-wrap';
+      const selectTitle=document.createElement('span');selectTitle.textContent='比赛时段';
+      const periodSelect=document.createElement('select');periodSelect.className='period-select';
+      periodSelect.setAttribute('aria-label','选择比赛时段');
+      const options=[['全场','full'],['上半场','h1'],['下半场','h2'],['第一节','q1'],['第二节','q2'],['第三节','q3'],['第四节','q4']];
+      for(const [label,key] of options){const option=document.createElement('option');option.value=key;option.textContent=label;periodSelect.append(option);}
+      periodSelect.value=state.scope==='full'?'full':state.period;
+      selector.append(selectTitle,periodSelect);toolbar.append(heading,selector);
       const tabs=document.createElement('div');tabs.className='market-tabs';
       const content=document.createElement('div');
+      const labels=[['胜负','moneyline','winner'],['让分','spread','spread'],['大小球','total','total']];
       const drawContent=()=>{
         content.replaceChildren();
-        tabs.hidden=state.scope!=='full';
+        const currentType=state.scope==='full'?state.tab:({'winner':'moneyline','spread':'spread','total':'total'}[state.periodType]||'moneyline');
+        tabs.querySelectorAll('.market-tab').forEach(t=>t.classList.toggle('active',t.dataset.type===currentType));
         if(state.scope==='full'){
           if(state.tab==='moneyline')content.append(createWinner(game,'away'),createWinner(game,'home'));
           else if(state.tab==='spread')makeSpreadRows(game,content);
@@ -774,19 +774,18 @@
         }else drawPeriodMarket(game,state,content);
         syncButtons();
       };
-      for(const [label,key] of [['全场','full'],['半场','half'],['单节','quarter']]){
-        const b=document.createElement('button');b.type='button';b.className='scope-tab'+(state.scope===key?' active':'');b.textContent=label;
-        b.addEventListener('click',()=>{
-          state.scope=key;if(key==='half'&&!state.period.startsWith('h'))state.period='h1';
-          if(key==='quarter'&&!state.period.startsWith('q'))state.period='q1';
-          scopeBar.querySelectorAll('.scope-tab').forEach(t=>t.classList.toggle('active',t===b));drawContent();
-        });scopeBar.append(b);
+      periodSelect.addEventListener('change',()=>{
+        const key=periodSelect.value;
+        state.scope=key==='full'?'full':key.startsWith('h')?'half':'quarter';
+        if(key!=='full')state.period=key;
+        state.periodShowAll=false;
+        drawContent();
+      });
+      for(const [label,key,periodKey] of labels){
+        const t=document.createElement('button');t.type='button';t.className='market-tab';t.dataset.type=key;t.textContent=label;
+        t.addEventListener('click',()=>{state.tab=key;state.periodType=periodKey;state.periodShowAll=false;drawContent();});tabs.append(t);
       }
-      for(const [label,key] of [['胜负','moneyline'],['让分','spread'],['大小球','total']]){
-        const t=document.createElement('button');t.type='button';t.className='market-tab'+(state.tab===key?' active':'');t.textContent=label;
-        t.addEventListener('click',()=>{state.tab=key;states.set(game.id,state);tabs.querySelectorAll('.market-tab').forEach(b=>b.classList.toggle('active',b===t));drawContent();});tabs.append(t);
-      }
-      card.append(scopeBar,tabs,content);drawContent();frag.append(card);
+      card.append(toolbar,tabs,content);drawContent();frag.append(card);
     }
     list.replaceChildren(frag);
     // odds.date is the US Pacific slate date, NOT the Beijing calendar date.
