@@ -146,6 +146,49 @@ def parse_explicit_visible_ask(parser,away,home,kind):
  ask=explicit_price(m.group(2))
  return [{'id':'visible-ticket-'+code,'label':label,'yesAsk':ask,'noAsk':None}] if ask else []
 
+def parse_visible_contract_choices(parser, away, home, kind):
+ """Recover ALL server-rendered selection choices, never calling them asks.
+
+ RH offers a `Select a contract` list with displayed cents per choice,
+ whereas its Bid/Ask ticket belongs only to the default selected contract.
+ Display prices here are indicative and are NEVER passed into yesAsk.
+ """
+ if kind != 'winner':
+  return []
+ parts=[str(x).strip() for x in parser.visible if str(x).strip()]
+ start=next((i for i,x in enumerate(parts) if x.lower()=='select a contract'),None)
+ if start is None:return []
+ end=next((i for i in range(start+1,len(parts)) if parts[i].lower() in ('timeline','about','trading hours','similar events')),len(parts))
+ sub=parts[start+1:end]
+ choices=[]
+ for i in range(len(sub)-1):
+  owner=label_owner(sub[i],away,home)
+  if owner is None:continue
+  m=re.fullmatch(r'\s*(\d+(?:\.\d+)?)\s*¢\s*',sub[i+1])
+  if not m:continue
+  cents=explicit_price(m.group(1)+'¢')
+  if cents is None:continue
+  if owner not in [x.get('owner') for x in choices]:
+   choices.append({'id':'display-'+owner,'owner':owner,'label':sub[i],
+                   'displayPrice':cents,'yesAsk':None,'noAsk':None})
+ return choices
+
+def combine_display_with_ask(displayed, verified, away,home):
+ """Only merge an actual selected-ticket ask into its matching contract."""
+ result=[dict(item) for item in displayed]
+ for quote in verified:
+  owner=label_owner(str(quote.get('label','')),away,home)
+  if owner is None:continue
+  match=next((x for x in result if x.get('owner')==owner),None)
+  if match:
+   if quote.get('yesAsk') is not None:match['yesAsk']=quote['yesAsk']
+   if quote.get('noAsk') is not None:match['noAsk']=quote['noAsk']
+   if str(quote.get('id','')).startswith('visible-ticket-'):
+    match['askVerifiedFrom']='ticket'
+  else:
+   result.append({**quote,'owner':owner,'displayPrice':None})
+ return result
+
 def parse_market(html,away,home,period,kind,url,day):
  parser=NextData();parser.feed(html)
  page_title=''.join(parser.title).lower()
@@ -155,7 +198,8 @@ def parse_market(html,away,home,period,kind,url,day):
  # Do not parse an unrelated redirected event.
  if not all(any(n.lower() in title for n in NAMES[code]) for code in (away,home)):
   return {'url':url,'choices':[],'reason':'RH event teams do not match'}
- fallback=parse_explicit_visible_ask(parser,away,home,kind)
+ displayed=parse_visible_contract_choices(parser,away,home,kind)
+ fallback=combine_display_with_ask(displayed,parse_explicit_visible_ask(parser,away,home,kind),away,home)
  if not parser.next:
   return {'url':url,'choices':fallback,'reason':None if fallback else 'No __NEXT_DATA__ and no explicit ticket ask in HTML'}
  try:root=json.loads(''.join(parser.next))
@@ -204,7 +248,8 @@ def parse_market(html,away,home,period,kind,url,day):
   label=str(c.get('displayName') or c.get('name') or c.get('displayShortName') or c.get('title') or c.get('displayText') or c.get('subtitle') or '').strip()
   if not label:continue
   choices.append({'id':cid,'label':label,'yesAsk':yes,'noAsk':no})
- return {'url':url,'choices':choices or fallback,'reason':None if choices or fallback else 'No explicit buy-side ask in HTML/Next.js'}
+ verified=combine_display_with_ask(displayed,choices or parse_explicit_visible_ask(parser,away,home,kind),away,home)
+ return {'url':url,'choices':verified,'reason':None if verified else 'No contract selections or explicit asks found in HTML/Next.js'}
 
 def urls(away,home,period,kind,day):
  date=datetime.strptime(day,'%Y-%m-%d').strftime('%b-%d-%Y').lower()
@@ -250,10 +295,11 @@ def main():
   except (KeyError,TypeError,ValueError):pass
  print(f'Checking up to {len(games)*18} RH period event pages for {day}',flush=True)
  records=build(games,day)
- has_asks=sum(len(m.get('choices',[])) for g in records for p in g['markets'].values() for m in p.values())
+ has_asks=sum(sum(1 for x in m.get('choices',[]) if x.get('yesAsk') is not None or x.get('noAsk') is not None) for g in records for p in g['markets'].values() for m in p.values())
+ displayed_count=sum(sum(1 for x in m.get('choices',[]) if x.get('displayPrice') is not None) for g in records for p in g['markets'].values() for m in p.values())
  from collections import Counter
  reasons=Counter(m.get('reason') or 'OK' for g in records for p in g['markets'].values() for m in p.values())
- print('Period market fetch diagnostics:', dict(reasons.most_common(12)), flush=True)
+ print('Period market fetch diagnostics:', dict(reasons.most_common(12)), 'displayed selections:',displayed_count,'verified asks:',has_asks,flush=True)
  for game in records:
   sample=game['markets'].get('h1',{}).get('winner',{})
   print('H1 winner diagnostic:',game['id'],'URL:',sample.get('url'),'choices:',len(sample.get('choices',[])),'reason:',sample.get('reason'),flush=True)
@@ -263,12 +309,12 @@ def main():
   for key in ('h1','h2'):
    r=game['markets'][key].get('winner',{})
    print('Sample',game['id'],key,'winner:',r.get('reason') or f"{len(r.get('choices',[]))} ask choices",flush=True)
- payload={'date':day,'capturedAt':datetime.now(timezone.utc).isoformat(timespec='seconds'),'source':'RH public event pages, explicit ask prices only','games':records}
+ payload={'date':day,'capturedAt':datetime.now(timezone.utc).isoformat(timespec='seconds'),'source':'RH public event pages; displayPrice is INDICATIVE, yesAsk/noAsk only when verified','games':records}
  # A total source failure should not overwrite a healthy SAME-DAY cache.
- if not has_asks and previous.get('date')==day and sum(len(m.get('choices',[])) for g in previous.get('games',[]) for p in g.get('markets',{}).values() for m in p.values()):
+ if not has_asks and not displayed_count and previous.get('date')==day and sum(len(m.get('choices',[])) for g in previous.get('games',[]) for p in g.get('markets',{}).values() for m in p.values()):
   print('Warning: no RH ask prices across all requested pages; keeping existing cache unchanged',flush=True)
   return
  DEST.write_text(json.dumps(payload,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
- print(f'Period markets: {len(records)} games, {has_asks} buy-side quotes, saved {DEST.name}',flush=True)
+ print(f'Period markets: {len(records)} games, {has_asks} verified buy-side asks, {displayed_count} indicative choice quotes, saved {DEST.name}',flush=True)
 
 if __name__=='__main__':main()
