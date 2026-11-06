@@ -269,15 +269,111 @@ def urls(away,home,period,kind,day):
  # Return only the canonical candidate; missing pages become unavailable.
  return f'{BASE}{CITY[away]}-vs-{CITY[home]}-{PERIODS[period]}-{kind}-{date}/'
 
+def detected_hidden_count(raw_html):
+ """The public RH event page often server-renders just five contracts.
+
+ Detect the collapsed list so we can decide whether to expand with a real
+ browser. This is a completeness signal, not a source of unobserved prices.
+ """
+ parser=NextData();parser.feed(raw_html)
+ for line in parser.visible:
+  match=re.search(r'\bShow\s+(\d+)\s+more\b',line,re.I)
+  if match:return int(match.group(1))
+ return 0
+
+
+def expand_collapsed_markets(records):
+ """Use one headless browser to open RH's *visible* Show-more controls.
+
+ This is intentionally a separate best-effort pass, confined to the period
+ workflow. A browser error never damages the earlier HTML cache or full-game
+ data. No login, cookies from accounts, or undocumented trading endpoints.
+ """
+ candidates=[]
+ for game in records:
+  for period,markets in game['markets'].items():
+   for kind,market in markets.items():
+    if market.get('hiddenCount',0)>0 and market.get('url'):
+     candidates.append((game,period,kind,market))
+ if not candidates:
+  print('RH period expand: no collapsed contract menus found',flush=True)
+  return
+ try:
+  from playwright.sync_api import sync_playwright
+ except ImportError:
+  print('::warning::Playwright is not installed; leaving collapsed menus incomplete',flush=True)
+  return
+ print(f'RH period expand: {len(candidates)} menus have Show-more links; checking browser expansion',flush=True)
+ success=0
+ try:
+  with sync_playwright() as p:
+   browser=p.chromium.launch(headless=True,args=['--no-sandbox'])
+   page=browser.new_page(viewport={'width':1150,'height':900}, locale='en-US')
+   page.set_default_timeout(4000)
+   for game,period,kind,market in candidates:
+    original=len(market.get('choices',[]))
+    try:
+     page.goto(market['url'],wait_until='domcontentloaded',timeout=14000)
+     # RH hydrates these menus client-side. Click until nothing remains.
+     clicks=0
+     for _ in range(5):
+      more=page.get_by_text(re.compile(r'Show\s+\d+\s+more',re.I)).first
+      try:
+       more.wait_for(state='visible',timeout=1800)
+       more.click(timeout=3500)
+       page.wait_for_timeout(250)
+       clicks+=1
+      except Exception:
+       break
+     expanded=page.content()
+     away=game.get('away')
+     home=game.get('home')
+     # The script keeps team codes as private metadata in this stage.
+     if not away or not home:continue
+     new=parse_market(expanded,away,home,period,kind,market['url'],game.get('day'))
+     old_by_id={x['id']:x for x in market.get('choices',[])}
+     for item in new.get('choices',[]):
+      if item['id'] in old_by_id:
+       old=old_by_id[item['id']]
+       for k in ('yesAsk','noAsk','displayPrice'):
+        if item.get(k) is None and old.get(k) is not None:item[k]=old[k]
+      old_by_id[item['id']]=item
+     if len(old_by_id)>original:
+      market['choices']=list(old_by_id.values())
+      success+=1
+     market['expandedWithBrowser']=bool(clicks)
+     market['stillCollapsed']=bool(detected_hidden_count(expanded))
+     market['hiddenCount']=detected_hidden_count(expanded)
+     market['expectedMinChoices']=len(market['choices'])+market['hiddenCount']
+     if market['hiddenCount']:
+      market['completeness']='partial'
+     else:
+      market['completeness']='expanded' if clicks else 'unverified'
+     print(f'Expanded {game["id"]} {period}/{kind}: {original} -> {len(market["choices"])} choices, clicks={clicks}, remaining={market["hiddenCount"]}',flush=True)
+    except Exception as e:
+     print(f'::warning::RH expand failed {game["id"]} {period}/{kind}: {str(e)[:150]}',flush=True)
+   browser.close()
+ except Exception as e:
+  print(f'::warning::RH browser could not start: {str(e)[:180]}',flush=True)
+ print(f'RH period expand: enlarged {success}/{len(candidates)} markets',flush=True)
+
+
 def fetch_market(task):
  game_id,day,away,home,period,kind=task
  url=urls(away,home,period,kind,day)
- try:return game_id,period,kind,parse_market(fetch(url),away,home,period,kind,url,day)
+ try:
+  html=fetch(url)
+  item=parse_market(html,away,home,period,kind,url,day)
+  hidden=detected_hidden_count(html)
+  item['hiddenCount']=hidden
+  item['expectedMinChoices']=len(item.get('choices',[]))+hidden
+  item['completeness']='partial' if hidden else 'unverified'
+  return game_id,period,kind,item
  except (HTTPError,URLError,OSError,ValueError,KeyError,TypeError) as ex:
   return game_id,period,kind,{'url':None if isinstance(ex,HTTPError) and ex.code==404 else url,'choices':[],'reason':str(ex)[:100]}
 
 def build(games,day,fetcher=fetch_market):
- result={g['id']:{'id':g['id'],'markets':{p:{} for p in PERIODS}} for g in games}
+ result={g['id']:{'id':g['id'],'away':g['away']['code'],'home':g['home']['code'],'day':day,'markets':{p:{} for p in PERIODS}} for g in games}
  jobs=[]
  for g in games:
   away=g['away']['code'];home=g['home']['code']
@@ -307,6 +403,10 @@ def main():
   except (KeyError,TypeError,ValueError):pass
  print(f'Checking up to {len(games)*18} RH period event pages for {day}',flush=True)
  records=build(games,day)
+ expand_collapsed_markets(records)
+ for g in records:
+  # Retain only public display fields in the saved JSON.
+  for key in ('away','home','day'):g.pop(key,None)
  has_asks=sum(sum(1 for x in m.get('choices',[]) if x.get('yesAsk') is not None or x.get('noAsk') is not None) for g in records for p in g['markets'].values() for m in p.values())
  displayed_count=sum(sum(1 for x in m.get('choices',[]) if x.get('displayPrice') is not None) for g in records for p in g['markets'].values() for m in p.values())
  from collections import Counter
