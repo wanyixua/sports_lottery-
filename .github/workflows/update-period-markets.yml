@@ -31,6 +31,10 @@ jobs:
           git fetch origin "${GITHUB_REF_NAME}"
           git reset --hard "origin/${GITHUB_REF_NAME}"
           test -s odds.json
+      - name: Install browser for RH collapsed contract menus
+        run: |
+          python -m pip install playwright
+          python -m playwright install --with-deps chromium
       - name: Fetch RH half and quarter quotes
         id: period_fetch
         shell: bash
