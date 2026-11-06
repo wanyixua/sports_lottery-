@@ -1,6 +1,6 @@
 {
   "date": "2026-11-05",
-  "capturedAt": "2026-11-06T01:18:59+00:00",
+  "capturedAt": "2026-11-06T01:27:03+00:00",
   "source": "RH public event pages; displayPrice is INDICATIVE, yesAsk/noAsk only when verified",
   "games": [
     {
@@ -16,36 +16,132 @@
                 "label": "Phoenix",
                 "displayPrice": 51.0,
                 "yesAsk": 51.0,
-                "noAsk": 50.0
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)",
+                "askVerifiedFrom": "ticket"
               },
               {
                 "id": "display-ORL",
                 "owner": "ORL",
                 "label": "Orlando",
                 "displayPrice": 46.0,
-                "yesAsk": 46.0,
-                "noAsk": 56.0
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
               },
               {
                 "id": "display-tie",
                 "owner": "tie",
                 "label": "Tie",
                 "displayPrice": 5.0,
-                "yesAsk": 5.0,
-                "noAsk": 97.0
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
               }
             ],
             "reason": null
           },
           "spread": {
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/orlando-vs-phoenix-1st-half-spread-nov-05-2026/",
-            "choices": [],
-            "reason": "Ambiguous embedded event contract groups"
+            "choices": [
+              {
+                "id": "display-spread-PHX-1p5",
+                "owner": "PHX",
+                "label": "Phoenix wins by over 1.5 points",
+                "displayPrice": 47.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-ORL-1p5",
+                "owner": "ORL",
+                "label": "Orlando wins by over 1.5 points",
+                "displayPrice": 43.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-PHX-3p5",
+                "owner": "PHX",
+                "label": "Phoenix wins by over 3.5 points",
+                "displayPrice": 39.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-ORL-2p5",
+                "owner": "ORL",
+                "label": "Orlando wins by over 2.5 points",
+                "displayPrice": 38.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-ORL-4p5",
+                "owner": "ORL",
+                "label": "Orlando wins by over 4.5 points",
+                "displayPrice": 33.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              }
+            ],
+            "reason": null
           },
           "total": {
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/orlando-vs-phoenix-1st-half-total-nov-05-2026/",
-            "choices": [],
-            "reason": "No contract selections or explicit asks found in HTML/Next.js"
+            "choices": [
+              {
+                "id": "display-total-over-109p5",
+                "owner": "over",
+                "label": "Over 109.5 points",
+                "displayPrice": 65.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-total-over-111p5",
+                "owner": "over",
+                "label": "Over 111.5 points",
+                "displayPrice": 61.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-total-over-113p5",
+                "owner": "over",
+                "label": "Over 113.5 points",
+                "displayPrice": 52.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-total-over-115p5",
+                "owner": "over",
+                "label": "Over 115.5 points",
+                "displayPrice": 44.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-total-over-117p5",
+                "owner": "over",
+                "label": "Over 117.5 points",
+                "displayPrice": 40.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              }
+            ],
+            "reason": null
           }
         },
         "h2": {
@@ -53,26 +149,10 @@
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/orlando-vs-phoenix-2nd-half-winner-nov-05-2026/",
             "choices": [
               {
-                "id": "c0b9fd74-6c47-4e76-a41c-16dd4ea10037",
-                "label": "Tie",
-                "yesAsk": 7.0,
-                "noAsk": 99.0,
-                "owner": "tie",
-                "displayPrice": null
-              },
-              {
-                "id": "132b1ed4-b974-4ac0-a6f9-cf3b6d533cd4",
-                "label": "Phoenix",
-                "yesAsk": 52.0,
-                "noAsk": 53.0,
-                "owner": "PHX",
-                "displayPrice": null
-              },
-              {
-                "id": "5ad502c5-b50a-4e85-8a5d-a874f6d6d481",
+                "id": "visible-ticket-ORL",
                 "label": "Orlando",
                 "yesAsk": 49.0,
-                "noAsk": 56.0,
+                "noAsk": null,
                 "owner": "ORL",
                 "displayPrice": null
               }
@@ -86,8 +166,18 @@
           },
           "total": {
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/orlando-vs-phoenix-2nd-half-total-nov-05-2026/",
-            "choices": [],
-            "reason": "Ambiguous embedded event contract groups"
+            "choices": [
+              {
+                "id": "display-total-over-102p5",
+                "owner": "over",
+                "label": "Over 102.5 points",
+                "displayPrice": 65.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              }
+            ],
+            "reason": null
           }
         },
         "q1": {
@@ -100,36 +190,132 @@
                 "label": "Phoenix",
                 "displayPrice": 50.0,
                 "yesAsk": 50.0,
-                "noAsk": 51.0
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)",
+                "askVerifiedFrom": "ticket"
               },
               {
                 "id": "display-ORL",
                 "owner": "ORL",
                 "label": "Orlando",
                 "displayPrice": 44.0,
-                "yesAsk": 44.0,
-                "noAsk": 57.0
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
               },
               {
                 "id": "display-tie",
                 "owner": "tie",
                 "label": "Tie",
                 "displayPrice": 7.0,
-                "yesAsk": 7.0,
-                "noAsk": 96.0
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
               }
             ],
             "reason": null
           },
           "spread": {
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/orlando-vs-phoenix-1st-quarter-spread-nov-05-2026/",
-            "choices": [],
-            "reason": "Ambiguous embedded event contract groups"
+            "choices": [
+              {
+                "id": "display-spread-PHX-1p5",
+                "owner": "PHX",
+                "label": "Phoenix wins by over 1.5 points",
+                "displayPrice": 44.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-ORL-1p5",
+                "owner": "ORL",
+                "label": "Orlando wins by over 1.5 points",
+                "displayPrice": 40.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-ORL-2p5",
+                "owner": "ORL",
+                "label": "Orlando wins by over 2.5 points",
+                "displayPrice": 35.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-PHX-3p5",
+                "owner": "PHX",
+                "label": "Phoenix wins by over 3.5 points",
+                "displayPrice": 33.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-PHX-7p5",
+                "owner": "PHX",
+                "label": "Phoenix wins by over 7.5 points",
+                "displayPrice": 20.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              }
+            ],
+            "reason": null
           },
           "total": {
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/orlando-vs-phoenix-1st-quarter-total-nov-05-2026/",
-            "choices": [],
-            "reason": "Ambiguous embedded event contract groups"
+            "choices": [
+              {
+                "id": "display-total-over-54p5",
+                "owner": "over",
+                "label": "Over 54.5 points",
+                "displayPrice": 63.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-total-over-56p5",
+                "owner": "over",
+                "label": "Over 56.5 points",
+                "displayPrice": 55.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-total-over-58p5",
+                "owner": "over",
+                "label": "Over 58.5 points",
+                "displayPrice": 46.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-total-over-60p5",
+                "owner": "over",
+                "label": "Over 60.5 points",
+                "displayPrice": 35.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-total-over-62p5",
+                "owner": "over",
+                "label": "Over 62.5 points",
+                "displayPrice": 30.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              }
+            ],
+            "reason": null
           }
         },
         "q2": {
@@ -142,36 +328,51 @@
                 "label": "Phoenix",
                 "displayPrice": 50.0,
                 "yesAsk": 50.0,
-                "noAsk": 53.0
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)",
+                "askVerifiedFrom": "ticket"
               },
               {
                 "id": "display-ORL",
                 "owner": "ORL",
                 "label": "Orlando",
                 "displayPrice": 47.0,
-                "yesAsk": 48.0,
-                "noAsk": 55.0
-              },
-              {
-                "id": "53021f7a-dd7f-4169-a6e8-470a9d7c87b6",
-                "label": "Tie",
-                "yesAsk": 7.0,
-                "noAsk": 98.0,
-                "owner": "tie",
-                "displayPrice": null
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
               }
             ],
             "reason": null
           },
           "spread": {
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/orlando-vs-phoenix-2nd-quarter-spread-nov-05-2026/",
-            "choices": [],
-            "reason": "No contract selections or explicit asks found in HTML/Next.js"
+            "choices": [
+              {
+                "id": "display-spread-ORL-1p5",
+                "owner": "ORL",
+                "label": "Orlando wins by over 1.5 points",
+                "displayPrice": 42.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              }
+            ],
+            "reason": null
           },
           "total": {
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/orlando-vs-phoenix-2nd-quarter-total-nov-05-2026/",
-            "choices": [],
-            "reason": "Ambiguous embedded event contract groups"
+            "choices": [
+              {
+                "id": "display-total-over-52p5",
+                "owner": "over",
+                "label": "Over 52.5 points",
+                "displayPrice": 64.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              }
+            ],
+            "reason": null
           }
         },
         "q3": {
@@ -185,6 +386,7 @@
                 "displayPrice": 51.0,
                 "yesAsk": 51.0,
                 "noAsk": null,
+                "priceSource": "RH public event selection (indicative)",
                 "askVerifiedFrom": "ticket"
               },
               {
@@ -193,7 +395,8 @@
                 "label": "Orlando",
                 "displayPrice": 49.0,
                 "yesAsk": null,
-                "noAsk": null
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
               },
               {
                 "id": "display-tie",
@@ -201,20 +404,41 @@
                 "label": "Tie",
                 "displayPrice": 8.0,
                 "yesAsk": null,
-                "noAsk": null
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
               }
             ],
             "reason": null
           },
           "spread": {
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/orlando-vs-phoenix-3rd-quarter-spread-nov-05-2026/",
-            "choices": [],
-            "reason": "Ambiguous embedded event contract groups"
+            "choices": [
+              {
+                "id": "display-spread-PHX-1p5",
+                "owner": "PHX",
+                "label": "Phoenix wins by over 1.5 points",
+                "displayPrice": 45.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              }
+            ],
+            "reason": null
           },
           "total": {
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/orlando-vs-phoenix-3rd-quarter-total-nov-05-2026/",
-            "choices": [],
-            "reason": "No contract selections or explicit asks found in HTML/Next.js"
+            "choices": [
+              {
+                "id": "display-total-over-54p5",
+                "owner": "over",
+                "label": "Over 54.5 points",
+                "displayPrice": 50.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              }
+            ],
+            "reason": null
           }
         },
         "q4": {
@@ -222,26 +446,10 @@
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/orlando-vs-phoenix-4th-quarter-winner-nov-05-2026/",
             "choices": [
               {
-                "id": "b19c2bcc-2355-423a-83cb-4013f611d300",
-                "label": "Phoenix",
-                "yesAsk": 50.0,
-                "noAsk": 55.0,
-                "owner": "PHX",
-                "displayPrice": null
-              },
-              {
-                "id": "5fabe2ed-62e2-46f0-8651-ea1ceef9942d",
-                "label": "Tie",
-                "yesAsk": 8.0,
-                "noAsk": 98.0,
-                "owner": "tie",
-                "displayPrice": null
-              },
-              {
-                "id": "a97fcc9d-a7c1-45fb-b90b-d007a17e00d7",
+                "id": "visible-ticket-ORL",
                 "label": "Orlando",
                 "yesAsk": 50.0,
-                "noAsk": 55.0,
+                "noAsk": null,
                 "owner": "ORL",
                 "displayPrice": null
               }
@@ -250,13 +458,51 @@
           },
           "spread": {
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/orlando-vs-phoenix-4th-quarter-spread-nov-05-2026/",
-            "choices": [],
-            "reason": "No contract selections or explicit asks found in HTML/Next.js"
+            "choices": [
+              {
+                "id": "display-spread-PHX-1p5",
+                "owner": "PHX",
+                "label": "Phoenix wins by over 1.5 points",
+                "displayPrice": 47.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              }
+            ],
+            "reason": null
           },
           "total": {
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/orlando-vs-phoenix-4th-quarter-total-nov-05-2026/",
-            "choices": [],
-            "reason": "No contract selections or explicit asks found in HTML/Next.js"
+            "choices": [
+              {
+                "id": "display-total-over-49p5",
+                "owner": "over",
+                "label": "Over 49.5 points",
+                "displayPrice": 67.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-total-over-51p5",
+                "owner": "over",
+                "label": "Over 51.5 points",
+                "displayPrice": 64.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-total-over-53p5",
+                "owner": "over",
+                "label": "Over 53.5 points",
+                "displayPrice": 51.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              }
+            ],
+            "reason": null
           }
         }
       }
@@ -275,6 +521,7 @@
                 "displayPrice": 58.0,
                 "yesAsk": 58.0,
                 "noAsk": null,
+                "priceSource": "RH public event selection (indicative)",
                 "askVerifiedFrom": "ticket"
               },
               {
@@ -283,7 +530,8 @@
                 "label": "Miami",
                 "displayPrice": 40.0,
                 "yesAsk": null,
-                "noAsk": null
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
               },
               {
                 "id": "display-tie",
@@ -291,20 +539,113 @@
                 "label": "Tie",
                 "displayPrice": 5.0,
                 "yesAsk": null,
-                "noAsk": null
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
               }
             ],
             "reason": null
           },
           "spread": {
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/miami-vs-golden-state-1st-half-spread-nov-05-2026/",
-            "choices": [],
-            "reason": "No contract selections or explicit asks found in HTML/Next.js"
+            "choices": [
+              {
+                "id": "display-spread-GSW-1p5",
+                "owner": "GSW",
+                "label": "Golden State wins by over 1.5 points",
+                "displayPrice": 55.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-GSW-3p5",
+                "owner": "GSW",
+                "label": "Golden State wins by over 3.5 points",
+                "displayPrice": 45.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-GSW-5p5",
+                "owner": "GSW",
+                "label": "Golden State wins by over 5.5 points",
+                "displayPrice": 40.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-MIA-1p5",
+                "owner": "MIA",
+                "label": "Miami wins by over 1.5 points",
+                "displayPrice": 38.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-GSW-7p5",
+                "owner": "GSW",
+                "label": "Golden State wins by over 7.5 points",
+                "displayPrice": 34.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              }
+            ],
+            "reason": null
           },
           "total": {
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/miami-vs-golden-state-1st-half-total-nov-05-2026/",
-            "choices": [],
-            "reason": "No contract selections or explicit asks found in HTML/Next.js"
+            "choices": [
+              {
+                "id": "display-total-over-117p5",
+                "owner": "over",
+                "label": "Over 117.5 points",
+                "displayPrice": 58.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-total-over-119p5",
+                "owner": "over",
+                "label": "Over 119.5 points",
+                "displayPrice": 55.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-total-over-121p5",
+                "owner": "over",
+                "label": "Over 121.5 points",
+                "displayPrice": 48.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-total-over-123p5",
+                "owner": "over",
+                "label": "Over 123.5 points",
+                "displayPrice": 41.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-total-over-127p5",
+                "owner": "over",
+                "label": "Over 127.5 points",
+                "displayPrice": 30.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              }
+            ],
+            "reason": null
           }
         },
         "h2": {
@@ -318,6 +659,7 @@
                 "displayPrice": 57.0,
                 "yesAsk": 56.0,
                 "noAsk": null,
+                "priceSource": "RH public event selection (indicative)",
                 "askVerifiedFrom": "ticket"
               },
               {
@@ -326,7 +668,8 @@
                 "label": "Miami",
                 "displayPrice": 42.0,
                 "yesAsk": null,
-                "noAsk": null
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
               },
               {
                 "id": "display-tie",
@@ -334,20 +677,86 @@
                 "label": "Tie",
                 "displayPrice": 7.0,
                 "yesAsk": null,
-                "noAsk": null
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
               }
             ],
             "reason": null
           },
           "spread": {
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/miami-vs-golden-state-2nd-half-spread-nov-05-2026/",
-            "choices": [],
-            "reason": "No contract selections or explicit asks found in HTML/Next.js"
+            "choices": [
+              {
+                "id": "display-spread-GSW-1p5",
+                "owner": "GSW",
+                "label": "Golden State wins by over 1.5 points",
+                "displayPrice": 54.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-GSW-6p5",
+                "owner": "GSW",
+                "label": "Golden State wins by over 6.5 points",
+                "displayPrice": 41.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-GSW-4p5",
+                "owner": "GSW",
+                "label": "Golden State wins by over 4.5 points",
+                "displayPrice": 39.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-MIA-1p5",
+                "owner": "MIA",
+                "label": "Miami wins by over 1.5 points",
+                "displayPrice": 31.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-GSW-8p5",
+                "owner": "GSW",
+                "label": "Golden State wins by over 8.5 points",
+                "displayPrice": 29.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              }
+            ],
+            "reason": null
           },
           "total": {
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/miami-vs-golden-state-2nd-half-total-nov-05-2026/",
-            "choices": [],
-            "reason": "Ambiguous embedded event contract groups"
+            "choices": [
+              {
+                "id": "display-total-over-116p5",
+                "owner": "over",
+                "label": "Over 116.5 points",
+                "displayPrice": 49.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-total-over-132p5",
+                "owner": "over",
+                "label": "Over 132.5 points",
+                "displayPrice": 24.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              }
+            ],
+            "reason": null
           }
         },
         "q1": {
@@ -360,36 +769,132 @@
                 "label": "Golden State",
                 "displayPrice": 53.0,
                 "yesAsk": 53.0,
-                "noAsk": 49.0
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)",
+                "askVerifiedFrom": "ticket"
               },
               {
                 "id": "display-MIA",
                 "owner": "MIA",
                 "label": "Miami",
                 "displayPrice": 43.0,
-                "yesAsk": 43.0,
-                "noAsk": 60.0
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
               },
               {
                 "id": "display-tie",
                 "owner": "tie",
                 "label": "Tie",
                 "displayPrice": 7.0,
-                "yesAsk": 6.0,
-                "noAsk": 97.0
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
               }
             ],
             "reason": null
           },
           "spread": {
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/miami-vs-golden-state-1st-quarter-spread-nov-05-2026/",
-            "choices": [],
-            "reason": "No contract selections or explicit asks found in HTML/Next.js"
+            "choices": [
+              {
+                "id": "display-spread-GSW-1p5",
+                "owner": "GSW",
+                "label": "Golden State wins by over 1.5 points",
+                "displayPrice": 49.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-GSW-3p5",
+                "owner": "GSW",
+                "label": "Golden State wins by over 3.5 points",
+                "displayPrice": 39.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-MIA-1p5",
+                "owner": "MIA",
+                "label": "Miami wins by over 1.5 points",
+                "displayPrice": 39.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-MIA-2p5",
+                "owner": "MIA",
+                "label": "Miami wins by over 2.5 points",
+                "displayPrice": 34.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-GSW-5p5",
+                "owner": "GSW",
+                "label": "Golden State wins by over 5.5 points",
+                "displayPrice": 33.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              }
+            ],
+            "reason": null
           },
           "total": {
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/miami-vs-golden-state-1st-quarter-total-nov-05-2026/",
-            "choices": [],
-            "reason": "No contract selections or explicit asks found in HTML/Next.js"
+            "choices": [
+              {
+                "id": "display-total-over-57p5",
+                "owner": "over",
+                "label": "Over 57.5 points",
+                "displayPrice": 66.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-total-over-59p5",
+                "owner": "over",
+                "label": "Over 59.5 points",
+                "displayPrice": 60.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-total-over-61p5",
+                "owner": "over",
+                "label": "Over 61.5 points",
+                "displayPrice": 50.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-total-over-63p5",
+                "owner": "over",
+                "label": "Over 63.5 points",
+                "displayPrice": 39.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-total-over-65p5",
+                "owner": "over",
+                "label": "Over 65.5 points",
+                "displayPrice": 30.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              }
+            ],
+            "reason": null
           }
         },
         "q2": {
@@ -403,6 +908,7 @@
                 "displayPrice": 55.0,
                 "yesAsk": 54.0,
                 "noAsk": null,
+                "priceSource": "RH public event selection (indicative)",
                 "askVerifiedFrom": "ticket"
               },
               {
@@ -411,7 +917,8 @@
                 "label": "Miami",
                 "displayPrice": 44.0,
                 "yesAsk": null,
-                "noAsk": null
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
               },
               {
                 "id": "display-tie",
@@ -419,20 +926,95 @@
                 "label": "Tie",
                 "displayPrice": 9.0,
                 "yesAsk": null,
-                "noAsk": null
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
               }
             ],
             "reason": null
           },
           "spread": {
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/miami-vs-golden-state-2nd-quarter-spread-nov-05-2026/",
-            "choices": [],
-            "reason": "No contract selections or explicit asks found in HTML/Next.js"
+            "choices": [
+              {
+                "id": "display-spread-GSW-1p5",
+                "owner": "GSW",
+                "label": "Golden State wins by over 1.5 points",
+                "displayPrice": 51.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-MIA-1p5",
+                "owner": "MIA",
+                "label": "Miami wins by over 1.5 points",
+                "displayPrice": 41.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-GSW-5p5",
+                "owner": "GSW",
+                "label": "Golden State wins by over 5.5 points",
+                "displayPrice": 34.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-MIA-2p5",
+                "owner": "MIA",
+                "label": "Miami wins by over 2.5 points",
+                "displayPrice": 32.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              }
+            ],
+            "reason": null
           },
           "total": {
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/miami-vs-golden-state-2nd-quarter-total-nov-05-2026/",
-            "choices": [],
-            "reason": "Ambiguous embedded event contract groups"
+            "choices": [
+              {
+                "id": "display-total-over-53p5",
+                "owner": "over",
+                "label": "Over 53.5 points",
+                "displayPrice": 75.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-total-over-59p5",
+                "owner": "over",
+                "label": "Over 59.5 points",
+                "displayPrice": 54.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-total-over-63p5",
+                "owner": "over",
+                "label": "Over 63.5 points",
+                "displayPrice": 35.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-total-over-65p5",
+                "owner": "over",
+                "label": "Over 65.5 points",
+                "displayPrice": 27.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              }
+            ],
+            "reason": null
           }
         },
         "q3": {
@@ -445,36 +1027,87 @@
                 "label": "Golden State",
                 "displayPrice": 56.0,
                 "yesAsk": 56.0,
-                "noAsk": 50.0
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)",
+                "askVerifiedFrom": "ticket"
               },
               {
                 "id": "display-tie",
                 "owner": "tie",
                 "label": "Tie",
                 "displayPrice": 7.0,
-                "yesAsk": 7.0,
-                "noAsk": 97.0
-              },
-              {
-                "id": "9e246cef-1529-49b9-a24c-ebea447ff141",
-                "label": "Miami",
-                "yesAsk": 45.0,
-                "noAsk": 61.0,
-                "owner": "MIA",
-                "displayPrice": null
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
               }
             ],
             "reason": null
           },
           "spread": {
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/miami-vs-golden-state-3rd-quarter-spread-nov-05-2026/",
-            "choices": [],
-            "reason": "No contract selections or explicit asks found in HTML/Next.js"
+            "choices": [
+              {
+                "id": "display-spread-GSW-1p5",
+                "owner": "GSW",
+                "label": "Golden State wins by over 1.5 points",
+                "displayPrice": 52.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-GSW-2p5",
+                "owner": "GSW",
+                "label": "Golden State wins by over 2.5 points",
+                "displayPrice": 46.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-GSW-4p5",
+                "owner": "GSW",
+                "label": "Golden State wins by over 4.5 points",
+                "displayPrice": 35.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-MIA-5p5",
+                "owner": "MIA",
+                "label": "Miami wins by over 5.5 points",
+                "displayPrice": 20.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-GSW-10p5",
+                "owner": "GSW",
+                "label": "Golden State wins by over 10.5 points",
+                "displayPrice": 17.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              }
+            ],
+            "reason": null
           },
           "total": {
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/miami-vs-golden-state-3rd-quarter-total-nov-05-2026/",
-            "choices": [],
-            "reason": "Ambiguous embedded event contract groups"
+            "choices": [
+              {
+                "id": "display-total-over-57p5",
+                "owner": "over",
+                "label": "Over 57.5 points",
+                "displayPrice": 57.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              }
+            ],
+            "reason": null
           }
         },
         "q4": {
@@ -487,7 +1120,8 @@
                 "label": "Miami",
                 "displayPrice": 62.0,
                 "yesAsk": 46.0,
-                "noAsk": 60.0
+                "noAsk": 60.0,
+                "priceSource": "RH public event selection (indicative)"
               },
               {
                 "id": "display-GSW",
@@ -495,7 +1129,8 @@
                 "label": "Golden State",
                 "displayPrice": 51.0,
                 "yesAsk": 51.0,
-                "noAsk": 55.0
+                "noAsk": 55.0,
+                "priceSource": "RH public event selection (indicative)"
               },
               {
                 "id": "display-tie",
@@ -503,20 +1138,68 @@
                 "label": "Tie",
                 "displayPrice": 9.0,
                 "yesAsk": 7.0,
-                "noAsk": 98.0
+                "noAsk": 98.0,
+                "priceSource": "RH public event selection (indicative)"
               }
             ],
             "reason": null
           },
           "spread": {
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/miami-vs-golden-state-4th-quarter-spread-nov-05-2026/",
-            "choices": [],
-            "reason": "No contract selections or explicit asks found in HTML/Next.js"
+            "choices": [
+              {
+                "id": "display-spread-MIA-1p5",
+                "owner": "MIA",
+                "label": "Miami wins by over 1.5 points",
+                "displayPrice": 46.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-GSW-3p5",
+                "owner": "GSW",
+                "label": "Golden State wins by over 3.5 points",
+                "displayPrice": 36.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              }
+            ],
+            "reason": null
           },
           "total": {
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/miami-vs-golden-state-4th-quarter-total-nov-05-2026/",
-            "choices": [],
-            "reason": "No contract selections or explicit asks found in HTML/Next.js"
+            "choices": [
+              {
+                "id": "display-total-over-51p5",
+                "owner": "over",
+                "label": "Over 51.5 points",
+                "displayPrice": 71.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-total-over-53p5",
+                "owner": "over",
+                "label": "Over 53.5 points",
+                "displayPrice": 62.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-total-over-55p5",
+                "owner": "over",
+                "label": "Over 55.5 points",
+                "displayPrice": 52.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              }
+            ],
+            "reason": null
           }
         }
       }
