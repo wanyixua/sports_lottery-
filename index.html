@@ -365,7 +365,7 @@
 .period-reference{min-width:104px;padding:9px 10px;border:1px solid #344662;border-radius:10px;background:#152238;text-align:right;color:#c2d5ee}.period-reference strong{display:block;color:#e9f2ff;font-size:17px}.period-reference small{display:block;color:#8faacb;font-size:11px;margin-top:3px}.period-more{border:1px solid #324a68;border-radius:9px;padding:8px 12px;color:#c3daf7;background:#17283f;width:100%;margin:9px 0;cursor:pointer}
 @media(max-width:600px){.period-row{grid-template-columns:1fr}.period-actions{justify-content:stretch}.period-actions .odd{flex:1}.period-tab{min-width:25%}}
 </style>
-</head>
+<style>.slate-day-heading{margin:26px 4px 8px;font-size:16px;color:#f6ce82;letter-spacing:.02em}</style></head>
 <body>
   <main class="app">
     <header class="hero">
@@ -762,7 +762,15 @@
   }
   function render() {
     const frag=document.createDocumentFragment();
+    let previousUSDay='';
     for(const game of (odds.games||[])){
+      const usDay=game.usDate||odds.date;
+      if(usDay!==previousUSDay){
+        const dateHeader=document.createElement('h2');
+        dateHeader.className='slate-day-heading';
+        dateHeader.textContent=usDay+' · 美国西海岸比赛日';
+        frag.append(dateHeader);previousUSDay=usDay;
+      }
       if(!states.has(game.id)) states.set(game.id,{tab:'moneyline',showAll:false,filter:'ALL',scope:'full',period:'h1',periodType:'winner',periodShowAll:false});
       const state=states.get(game.id);
       const card=document.createElement('article');card.className='game';
@@ -777,9 +785,9 @@
       } else if(game.status==='final'){
         left.className='game-final';left.textContent='已结束';
       } else {
-        left.textContent=getBJ(odds.date,game.startTimePT);
+        left.textContent=getBJ(game.usDate||odds.date,game.startTimePT);
       }
-      const right=document.createElement('span');right.className='league-tag';right.textContent='NBA';meta.append(left,right);card.append(meta);
+      const right=document.createElement('span');right.className='league-tag';right.textContent='NBA · '+(game.usDate||odds.date)+' 美西';meta.append(left,right);card.append(meta);
       const title=document.createElement('div');title.className='matchup';
       const awayName=game.away.nameZh||teamNames[canonicalTeam(game.away.code)]||game.away.code;
       const homeName=game.home.nameZh||teamNames[canonicalTeam(game.home.code)]||game.home.code;
@@ -835,7 +843,7 @@
     // The header must use the same getBJ() conversion as each game card.
     // Do not reject valid displayed times with an extra format-only regex.
     const bjDateParts=(odds.games||[]).map(g=>{
-      const displayed=getBJ(odds.date,g.startTimePT);
+      const displayed=getBJ(g.usDate||odds.date,g.startTimePT);
       const match=displayed.match(/(\d{1,2})月(\d{1,2})日/);
       return match ? {month:Number(match[1]),day:Number(match[2])} : null;
     }).filter(Boolean);
@@ -845,7 +853,7 @@
       ? `${yearFromSlate}年${uniqueDates.join(' / ')} · 北京时间`
       : `${odds.date} · 美国西海岸比赛日`;
     document.getElementById('summary-date').textContent=dateLabel;
-    document.getElementById('summary-meta').textContent=`${odds.games.length} 场比赛`;
+    document.getElementById('summary-meta').textContent=`${odds.games.length} 场比赛 · ${new Set(odds.games.map(g=>g.usDate||odds.date)).size} 个美国比赛日`;
     document.getElementById('hero-sub').textContent='全场、半场、单节可切换；每场比赛限选一个盘口。';
     status.textContent=totals?.date===odds.date?'RH 三种盘口缓存':'RH 胜负 / 让分缓存';
     const count=spreads?.date===odds.date?spreads.games.reduce((s,g)=>s+g.lines.length,0):0;
@@ -1049,12 +1057,48 @@
     fetch('odds.json',{cache:'no-store'}).then(r=>r.ok?r.json():Promise.reject(Error('odds HTTP '+r.status))),
     fetch('spreads.json',{cache:'no-store'}).then(r=>r.ok?r.json():Promise.reject(Error('spreads HTTP '+r.status))),
     fetch('totals.json',{cache:'no-store'}).then(r=>r.ok?r.json():Promise.reject(Error('totals HTTP '+r.status))),
-    fetch('period_markets.json',{cache:'no-store'}).then(r=>r.ok?r.json():Promise.reject(Error('period markets HTTP '+r.status)))
-  ]).then(([a,b,c,d])=>{
+    fetch('period_markets.json',{cache:'no-store'}).then(r=>r.ok?r.json():Promise.reject(Error('period markets HTTP '+r.status))),
+     fetch('upcoming_markets.json',{cache:'no-store'}).then(r=>r.ok?r.json():Promise.reject(Error('upcoming markets HTTP '+r.status)))
+  ]).then(([a,b,c,d,e])=>{
     if(d.status==='fulfilled'&&Array.isArray(d.value.games))periodMarkets=d.value;
     if(a.status==='fulfilled'&&Array.isArray(a.value.games)) odds=a.value;
     if(b.status==='fulfilled'&&Array.isArray(b.value.games)) spreads=b.value;
     if(c.status==='fulfilled'&&Array.isArray(c.value.games)) totals=c.value;
+    // Merge only the dates actually returned by RH; this is not a fabricated schedule.
+    // Today's already-cached slate takes precedence, so games/finals remain visible.
+    if(e.status==='fulfilled'&&Array.isArray(e.value.games)){
+      const future=e.value;
+      const today=odds.date;
+      const currentIds=new Set((odds.games||[]).map(g=>g.id));
+      const validExtra=future.games.filter(g=>
+        g && /^\d{4}-\d{2}-\d{2}$/.test(g.usDate||'') &&
+        g.usDate>today && g.id && g.away && g.home && !currentIds.has(g.id));
+      // Do not treat stale cached future-market quotes as live.
+      const age=Date.now()-new Date(future.capturedAt).getTime();
+      const fresh=Number.isFinite(age)&&age>=0&&age<20*60*1000;
+      for(const g of validExtra){
+        const copy={...g};
+        if(!fresh){
+          copy.away={...g.away,pricePercent:null};
+          copy.home={...g.home,pricePercent:null};
+        }
+        odds.games.push(copy);
+      }
+      odds.games.sort((x,y)=>(x.usDate||today).localeCompare(y.usDate||today)||String(x.startTimePT).localeCompare(String(y.startTimePT)));
+      const extraIds=new Set(validExtra.map(g=>g.id));
+      if(spreads?.date===today&&Array.isArray(future.spreads)){
+        for(const item of future.spreads){
+          if(!extraIds.has(item.id))continue;
+          spreads.games.push(fresh?item:{...item,lines:[]});
+        }
+      }
+      if(totals?.date===today&&Array.isArray(future.totals)){
+        for(const item of future.totals){
+          if(!extraIds.has(item.id))continue;
+          totals.games.push(fresh?item:{...item,lines:[]});
+        }
+      }
+    }
     // Remove selections whose price no longer exists in the current source.
     const gameIds=new Set((odds.games||[]).map(g=>g.id));
     for(const [id,pick] of selected){
