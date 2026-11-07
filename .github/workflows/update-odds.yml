@@ -31,6 +31,10 @@ jobs:
         id: refresh
         continue-on-error: true
         run: python scripts/update_odds.py
+      - name: Refresh all listed upcoming NBA RH markets (best effort)
+        id: upcoming
+        continue-on-error: true
+        run: python scripts/update_upcoming_odds.py
       - name: Refresh quarter and half market caches (best effort)
         id: periods
         continue-on-error: true
@@ -56,7 +60,7 @@ jobs:
         if: steps.history.outcome == 'failure'
         run: echo '::warning::ESPN season history refresh failed; existing cache remains unchanged.'
       - name: Commit odds changes if refresh succeeded
-        if: steps.refresh.outcome == 'success' || steps.history.outcome == 'success' || steps.periods.outcome == 'success'
+        if: steps.refresh.outcome == 'success' || steps.history.outcome == 'success' || steps.periods.outcome == 'success' || steps.upcoming.outcome == 'success'
         shell: bash
         run: |
           set -euo pipefail
@@ -64,6 +68,7 @@ jobs:
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add odds.json spreads.json totals.json champions.json
           if [ -f period_markets.json ]; then git add period_markets.json; fi
+          if [ -f upcoming_markets.json ]; then git add upcoming_markets.json; fi
           if [ -f season_history.json ]; then git add season_history.json; fi
           if ! git diff --cached --quiet; then
             git commit -m 'Update NBA market cache'
