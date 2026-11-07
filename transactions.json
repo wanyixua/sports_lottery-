@@ -738,7 +738,7 @@
       "usDate": "2026-11-06",
       "bet": "ATL -3.5 + BOS -3.5",
       "stake": 20,
-      "payout": 30.0,
+      "payout": 30,
       "status": "win",
       "profitIfWin": 10,
       "legs": [
@@ -788,7 +788,7 @@
       "usDate": "2026-11-06",
       "bet": "ATL -3.5 + BOS -3.5",
       "stake": 20,
-      "payout": 30.0,
+      "payout": 30,
       "status": "win",
       "profitIfWin": 10,
       "legs": [
@@ -809,6 +809,96 @@
         "win"
       ],
       "resultSource": "ESPN scoreboard (final scores); verify special RH settlement rules"
+    },
+    {
+      "id": 62,
+      "owner": "王老板",
+      "usDate": "2026-11-06",
+      "bet": "DAL -6.5 + OKC -6.5 + TOR -3.5 + MIN",
+      "stake": 20,
+      "payout": null,
+      "status": "pending",
+      "profitIfWin": 214,
+      "legs": [
+        {
+          "team": "DAL",
+          "market": "spread",
+          "line": -6.5
+        },
+        {
+          "team": "OKC",
+          "market": "spread",
+          "line": -6.5
+        },
+        {
+          "team": "TOR",
+          "market": "spread",
+          "line": -3.5
+        },
+        {
+          "team": "MIN",
+          "market": "moneyline"
+        }
+      ],
+      "note": "微信11/6 17:10四串一：独行侠让6.5、雷霆让6.5、猛龙让3.5、森林狼独赢；17:14小王确认「买好了 20赚214」。"
+    },
+    {
+      "id": 63,
+      "owner": "王老板",
+      "usDate": "2026-11-06",
+      "bet": "LAL",
+      "stake": 20,
+      "payout": null,
+      "status": "pending",
+      "profitIfWin": 12,
+      "legs": [
+        {
+          "team": "LAL",
+          "market": "moneyline"
+        }
+      ],
+      "note": "微信11/6 18:52：王老板「湖人胜，20刀」；小王确认「买好了 20赚12」。"
+    },
+    {
+      "id": 64,
+      "owner": "王老板",
+      "usDate": "2026-11-06",
+      "bet": "SAS -6.5",
+      "stake": 20,
+      "payout": null,
+      "status": "pending",
+      "profitIfWin": 3,
+      "legs": [
+        {
+          "team": "SAS",
+          "market": "spread",
+          "line": -6.5
+        }
+      ],
+      "note": "微信11/6 18:52：王老板「马刺让6点5胜，20刀」；小王确认「买好了 20赚3」。"
+    },
+    {
+      "id": 65,
+      "owner": "小王",
+      "usDate": "2026-11-06",
+      "bet": "POR -3.5 + SAS -10.5",
+      "stake": 20,
+      "payout": null,
+      "status": "pending",
+      "profitIfWin": 18,
+      "legs": [
+        {
+          "team": "POR",
+          "market": "spread",
+          "line": -3.5
+        },
+        {
+          "team": "SAS",
+          "market": "spread",
+          "line": -10.5
+        }
+      ],
+      "note": "本人RH截图：2-leg combo，POR -3.5 + SAS -10.5；11/6 20:17 Filled，投入$20，成交38份。用户确认命中返还$38、净赚$18（按每份$1兑付计），待结算。"
     }
   ]
 }
