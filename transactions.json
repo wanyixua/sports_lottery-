@@ -705,8 +705,8 @@
       "usDate": "2026-11-06",
       "bet": "BOS + SAS + TOR + DAL + ATL",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 77.0,
+      "status": "win",
       "profitIfWin": 57,
       "legs": [
         {
@@ -730,7 +730,15 @@
           "market": "moneyline"
         }
       ],
-      "note": "本人确认五串一，$20命中净赚$57；RH截图显示BOS/SAS/TOR/DAL/ATL Yes，5-leg combo。"
+      "note": "本人确认五串一，$20命中净赚$57；RH截图显示BOS/SAS/TOR/DAL/ATL Yes，5-leg combo。",
+      "legResults": [
+        "win",
+        "win",
+        "win",
+        "win",
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores); verify special RH settlement rules"
     },
     {
       "id": 59,
@@ -872,8 +880,8 @@
       "usDate": "2026-11-06",
       "bet": "SAS -6.5",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 23.0,
+      "status": "win",
       "profitIfWin": 3,
       "legs": [
         {
@@ -882,7 +890,11 @@
           "line": -6.5
         }
       ],
-      "note": "微信11/6 18:52：王老板「马刺让6点5胜，20刀」；小王确认「买好了 20赚3」。"
+      "note": "微信11/6 18:52：王老板「马刺让6点5胜，20刀」；小王确认「买好了 20赚3」。",
+      "legResults": [
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores); verify special RH settlement rules"
     },
     {
       "id": 65,
