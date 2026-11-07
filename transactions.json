@@ -863,8 +863,8 @@
       "usDate": "2026-11-06",
       "bet": "LAL",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 32.0,
+      "status": "win",
       "profitIfWin": 12,
       "legs": [
         {
@@ -872,7 +872,11 @@
           "market": "moneyline"
         }
       ],
-      "note": "微信11/6 18:52：王老板「湖人胜，20刀」；小王确认「买好了 20赚12」。"
+      "note": "微信11/6 18:52：王老板「湖人胜，20刀」；小王确认「买好了 20赚12」。",
+      "legResults": [
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores); verify special RH settlement rules"
     },
     {
       "id": 64,
@@ -902,8 +906,8 @@
       "usDate": "2026-11-06",
       "bet": "POR -3.5 + SAS -10.5",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 0,
+      "status": "loss",
       "profitIfWin": 18,
       "legs": [
         {
@@ -917,7 +921,12 @@
           "line": -10.5
         }
       ],
-      "note": "本人RH截图：2-leg combo，POR -3.5 + SAS -10.5；11/6 20:17 Filled，投入$20，成交38份。用户确认命中返还$38、净赚$18（按每份$1兑付计），待结算。"
+      "note": "本人RH截图：2-leg combo，POR -3.5 + SAS -10.5；11/6 20:17 Filled，投入$20，成交38份。用户确认命中返还$38、净赚$18（按每份$1兑付计），待结算。",
+      "legResults": [
+        "loss",
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores); verify special RH settlement rules"
     }
   ]
 }
