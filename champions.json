@@ -1,27 +1,13 @@
 {
   "season": "2026-27",
   "source": "Robinhood public webpage (unofficial)",
-  "capturedAt": "2026-11-07T10:18:42-08:00",
+  "capturedAt": "2026-11-07T11:07:32-08:00",
   "markets": {
     "finals": {
       "title": "NBA总冠军",
       "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/2027-pro-mens-basketball-championship-jun-22-2027/",
       "eventId": "8690b83b-0446-4d3b-8659-7d44cdee3311",
       "teams": [
-        {
-          "id": "e18da83b-52e2-486d-a828-40e78e3a5c3f",
-          "code": "SAS",
-          "nameZh": "马刺",
-          "pricePercent": 23.0,
-          "color": "#6B7A80"
-        },
-        {
-          "id": "aa62449f-7ca5-41d6-9dfe-012668040a35",
-          "code": "PHI",
-          "nameZh": "76人",
-          "pricePercent": 18.0,
-          "color": "#ED174C"
-        },
         {
           "id": "0119ee19-f19e-4430-81ad-71effa9e6eac",
           "code": "OKC",
@@ -217,6 +203,20 @@
           "nameZh": "奇才",
           "pricePercent": 1.0,
           "color": "#002B5C"
+        },
+        {
+          "id": "aa62449f-7ca5-41d6-9dfe-012668040a35",
+          "code": "PHI",
+          "nameZh": "76人",
+          "pricePercent": null,
+          "color": "#ED174C"
+        },
+        {
+          "id": "e18da83b-52e2-486d-a828-40e78e3a5c3f",
+          "code": "SAS",
+          "nameZh": "马刺",
+          "pricePercent": null,
+          "color": "#6B7A80"
         }
       ]
     },
@@ -225,48 +225,6 @@
       "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/2027-pro-mens-basketball-western-conference-champion-jun-04-2027/",
       "eventId": "a3ce2002-4fac-4600-8eaf-8bb3d1e0c477",
       "teams": [
-        {
-          "id": "609f44a7-866a-4638-92fc-4f1ff2d2a0d5",
-          "code": "SAS",
-          "nameZh": "马刺",
-          "pricePercent": 35.0,
-          "color": "#6B7A80"
-        },
-        {
-          "id": "a83370e4-6964-4cda-b830-f18f1987a496",
-          "code": "OKC",
-          "nameZh": "雷霆",
-          "pricePercent": 23.0,
-          "color": "#007AC1"
-        },
-        {
-          "id": "28b820cd-ed1b-45f6-b3ed-49dcaa891d96",
-          "code": "HOU",
-          "nameZh": "火箭",
-          "pricePercent": 14.0,
-          "color": "#CE1141"
-        },
-        {
-          "id": "3aa28544-28ad-4243-8eb8-cde01a076a0c",
-          "code": "MIN",
-          "nameZh": "森林狼",
-          "pricePercent": 11.0,
-          "color": "#0C2340"
-        },
-        {
-          "id": "08599885-d226-4544-8016-32b5bdd2de06",
-          "code": "LAL",
-          "nameZh": "湖人",
-          "pricePercent": 8.0,
-          "color": "#552583"
-        },
-        {
-          "id": "13a6ae6d-23a4-48f9-8d03-b823aa5a2808",
-          "code": "DEN",
-          "nameZh": "掘金",
-          "pricePercent": 7.0,
-          "color": "#0E2240"
-        },
         {
           "id": "5d75e4c7-a768-4706-8d81-179f61bbd65b",
           "code": "POR",
@@ -285,49 +243,91 @@
           "id": "fa571547-bee2-4daa-8b3b-60da05eb3f53",
           "code": "DAL",
           "nameZh": "独行侠",
-          "pricePercent": 3.0,
+          "pricePercent": null,
           "color": "#00538C"
         },
         {
-          "id": "54aa489c-1e10-4979-81cd-35ef5212da25",
-          "code": "MEM",
-          "nameZh": "灰熊",
-          "pricePercent": 2.0,
-          "color": "#5D76A9"
+          "id": "13a6ae6d-23a4-48f9-8d03-b823aa5a2808",
+          "code": "DEN",
+          "nameZh": "掘金",
+          "pricePercent": null,
+          "color": "#0E2240"
+        },
+        {
+          "id": "28b820cd-ed1b-45f6-b3ed-49dcaa891d96",
+          "code": "HOU",
+          "nameZh": "火箭",
+          "pricePercent": null,
+          "color": "#CE1141"
         },
         {
           "id": "8ca71ba8-f075-4a39-b51d-60d88830cc71",
           "code": "LAC",
           "nameZh": "快船",
-          "pricePercent": 1.0,
+          "pricePercent": null,
           "color": "#C8102E"
+        },
+        {
+          "id": "08599885-d226-4544-8016-32b5bdd2de06",
+          "code": "LAL",
+          "nameZh": "湖人",
+          "pricePercent": null,
+          "color": "#552583"
+        },
+        {
+          "id": "54aa489c-1e10-4979-81cd-35ef5212da25",
+          "code": "MEM",
+          "nameZh": "灰熊",
+          "pricePercent": null,
+          "color": "#5D76A9"
+        },
+        {
+          "id": "3aa28544-28ad-4243-8eb8-cde01a076a0c",
+          "code": "MIN",
+          "nameZh": "森林狼",
+          "pricePercent": null,
+          "color": "#0C2340"
         },
         {
           "id": "e52cf0ba-1f63-4624-b1ee-39b05652f392",
           "code": "NOP",
           "nameZh": "鹈鹕",
-          "pricePercent": 1.0,
+          "pricePercent": null,
           "color": "#0C2340"
+        },
+        {
+          "id": "a83370e4-6964-4cda-b830-f18f1987a496",
+          "code": "OKC",
+          "nameZh": "雷霆",
+          "pricePercent": null,
+          "color": "#007AC1"
         },
         {
           "id": "83ec40a3-e392-457e-97eb-2932367517ae",
           "code": "PHX",
           "nameZh": "太阳",
-          "pricePercent": 1.0,
+          "pricePercent": null,
           "color": "#1D1160"
         },
         {
           "id": "f86a7b42-bd01-4442-9e4d-4e12d187b8d5",
           "code": "SAC",
           "nameZh": "国王",
-          "pricePercent": 1.0,
+          "pricePercent": null,
           "color": "#5A2D81"
+        },
+        {
+          "id": "609f44a7-866a-4638-92fc-4f1ff2d2a0d5",
+          "code": "SAS",
+          "nameZh": "马刺",
+          "pricePercent": null,
+          "color": "#6B7A80"
         },
         {
           "id": "50170384-84b6-4c10-bacf-730ab563da23",
           "code": "UTA",
           "nameZh": "爵士",
-          "pricePercent": 1.0,
+          "pricePercent": null,
           "color": "#3E2680"
         }
       ]
@@ -338,109 +338,109 @@
       "eventId": "b8b02892-dfa5-4c67-b953-93c9998daef5",
       "teams": [
         {
-          "id": "cddf3701-de22-4840-a9c6-1f8aca6627dd",
-          "code": "PHI",
-          "nameZh": "76人",
-          "pricePercent": 26.0,
-          "color": "#ED174C"
+          "id": "20bd52f4-fb74-48e0-97b0-7a1c2299b829",
+          "code": "ATL",
+          "nameZh": "老鹰",
+          "pricePercent": null,
+          "color": "#C8102E"
         },
         {
-          "id": "68d132aa-3290-4718-a73a-bece75e5d4aa",
-          "code": "NYK",
-          "nameZh": "尼克斯",
-          "pricePercent": 20.0,
-          "color": "#F58426"
+          "id": "cedae315-100a-4ea1-98f8-254d31d1c236",
+          "code": "BKN",
+          "nameZh": "篮网",
+          "pricePercent": null,
+          "color": "#000000"
         },
         {
           "id": "966ce1a8-0258-439c-acb5-be3e15ed5d01",
           "code": "BOS",
           "nameZh": "凯尔特人",
-          "pricePercent": 17.0,
+          "pricePercent": null,
           "color": "#007A33"
         },
         {
-          "id": "42072e37-1861-4456-b209-a9e31873ee38",
-          "code": "DET",
-          "nameZh": "活塞",
-          "pricePercent": 12.0,
-          "color": "#1D42BA"
+          "id": "f15fe8e8-6420-4ca8-863f-ebde913a335a",
+          "code": "CHA",
+          "nameZh": "黄蜂",
+          "pricePercent": null,
+          "color": "#00788C"
         },
         {
-          "id": "5eace7a3-da3f-4f59-b10d-158498a9b0ae",
-          "code": "TOR",
-          "nameZh": "猛龙",
-          "pricePercent": 12.0,
+          "id": "e074692a-e18e-4ccc-8ff9-dbe4ea2f9bdf",
+          "code": "CHI",
+          "nameZh": "公牛",
+          "pricePercent": null,
           "color": "#CE1141"
         },
         {
           "id": "d8eda2db-35fc-478e-a8d9-f708b255850a",
           "code": "CLE",
           "nameZh": "骑士",
-          "pricePercent": 7.0,
+          "pricePercent": null,
           "color": "#860038"
         },
         {
-          "id": "b15db623-f600-49ba-9c93-b6030c47a012",
-          "code": "MIA",
-          "nameZh": "热火",
-          "pricePercent": 6.0,
-          "color": "#98002E"
-        },
-        {
-          "id": "20bd52f4-fb74-48e0-97b0-7a1c2299b829",
-          "code": "ATL",
-          "nameZh": "老鹰",
-          "pricePercent": 5.0,
-          "color": "#C8102E"
+          "id": "42072e37-1861-4456-b209-a9e31873ee38",
+          "code": "DET",
+          "nameZh": "活塞",
+          "pricePercent": null,
+          "color": "#1D42BA"
         },
         {
           "id": "e9b9dc3e-4a14-4cb9-9099-e2eacde251c7",
           "code": "IND",
           "nameZh": "步行者",
-          "pricePercent": 5.0,
+          "pricePercent": null,
           "color": "#002D62"
         },
         {
-          "id": "f15fe8e8-6420-4ca8-863f-ebde913a335a",
-          "code": "CHA",
-          "nameZh": "黄蜂",
-          "pricePercent": 2.0,
-          "color": "#00788C"
-        },
-        {
-          "id": "dafccd40-8be4-48b1-b2f7-c53a6111dd4d",
-          "code": "ORL",
-          "nameZh": "魔术",
-          "pricePercent": 2.0,
-          "color": "#0077C0"
-        },
-        {
-          "id": "97941f2e-3c6c-4644-9ac3-b50621e4f440",
-          "code": "WAS",
-          "nameZh": "奇才",
-          "pricePercent": 2.0,
-          "color": "#002B5C"
-        },
-        {
-          "id": "cedae315-100a-4ea1-98f8-254d31d1c236",
-          "code": "BKN",
-          "nameZh": "篮网",
-          "pricePercent": 1.0,
-          "color": "#000000"
-        },
-        {
-          "id": "e074692a-e18e-4ccc-8ff9-dbe4ea2f9bdf",
-          "code": "CHI",
-          "nameZh": "公牛",
-          "pricePercent": 1.0,
-          "color": "#CE1141"
+          "id": "b15db623-f600-49ba-9c93-b6030c47a012",
+          "code": "MIA",
+          "nameZh": "热火",
+          "pricePercent": null,
+          "color": "#98002E"
         },
         {
           "id": "befc6c61-6e75-4a74-b69d-8d1f4b8944d8",
           "code": "MIL",
           "nameZh": "雄鹿",
-          "pricePercent": 1.0,
+          "pricePercent": null,
           "color": "#00471B"
+        },
+        {
+          "id": "68d132aa-3290-4718-a73a-bece75e5d4aa",
+          "code": "NYK",
+          "nameZh": "尼克斯",
+          "pricePercent": null,
+          "color": "#F58426"
+        },
+        {
+          "id": "dafccd40-8be4-48b1-b2f7-c53a6111dd4d",
+          "code": "ORL",
+          "nameZh": "魔术",
+          "pricePercent": null,
+          "color": "#0077C0"
+        },
+        {
+          "id": "cddf3701-de22-4840-a9c6-1f8aca6627dd",
+          "code": "PHI",
+          "nameZh": "76人",
+          "pricePercent": null,
+          "color": "#ED174C"
+        },
+        {
+          "id": "5eace7a3-da3f-4f59-b10d-158498a9b0ae",
+          "code": "TOR",
+          "nameZh": "猛龙",
+          "pricePercent": null,
+          "color": "#CE1141"
+        },
+        {
+          "id": "97941f2e-3c6c-4644-9ac3-b50621e4f440",
+          "code": "WAS",
+          "nameZh": "奇才",
+          "pricePercent": null,
+          "color": "#002B5C"
         }
       ]
     }
