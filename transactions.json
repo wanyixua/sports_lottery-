@@ -601,8 +601,8 @@
       "usDate": "2026-11-06",
       "bet": "ATL + TOR + PHI + OKC + MIN + BOS + SAS",
       "stake": 30,
-      "payout": null,
-      "status": "pending",
+      "payout": 0,
+      "status": "loss",
       "profitIfWin": 296,
       "legs": [
         {
@@ -634,7 +634,17 @@
           "market": "moneyline"
         }
       ],
-      "note": "微信11/6 14:53明确确认「买好了 七串一 都不让分 30赚296」；根据最后成交确认，七队全部独赢，先前讨论的马刺让3.5已取消。"
+      "note": "微信11/6 14:53明确确认「买好了 七串一 都不让分 30赚296」；根据最后成交确认，七队全部独赢，先前讨论的马刺让3.5已取消。",
+      "legResults": [
+        "win",
+        "win",
+        "loss",
+        "win",
+        "win",
+        "win",
+        null
+      ],
+      "resultSource": "ESPN scoreboard (final scores); verify special RH settlement rules"
     },
     {
       "id": 57,
@@ -642,8 +652,8 @@
       "usDate": "2026-11-06",
       "bet": "ATL + BOS + PHI + OKC + SAS + TOR +2.5 + MIN +2.5",
       "stake": 30,
-      "payout": null,
-      "status": "pending",
+      "payout": 0,
+      "status": "loss",
       "profitIfWin": 252,
       "legs": [
         {
@@ -677,7 +687,17 @@
           "line": 2.5
         }
       ],
-      "note": "微信11/6 14:53另笔确认「买好了 30赚252」；引用王老板「老鹰、凯尔特人、76人、雷霆、马刺，胜，猛龙、森林狼，受让2点5分」。"
+      "note": "微信11/6 14:53另笔确认「买好了 30赚252」；引用王老板「老鹰、凯尔特人、76人、雷霆、马刺，胜，猛龙、森林狼，受让2点5分」。",
+      "legResults": [
+        "win",
+        "win",
+        "loss",
+        "win",
+        null,
+        "win",
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores); verify special RH settlement rules"
     },
     {
       "id": 58,
@@ -718,8 +738,8 @@
       "usDate": "2026-11-06",
       "bet": "ATL -3.5 + BOS -3.5",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 30.0,
+      "status": "win",
       "profitIfWin": 10,
       "legs": [
         {
@@ -733,7 +753,12 @@
           "line": -3.5
         }
       ],
-      "note": "微信11/6 16:23：王老板确认老鹰与凯尔特人都让3.5，二串一；小王回复「买好了 20赚10」。"
+      "note": "微信11/6 16:23：王老板确认老鹰与凯尔特人都让3.5，二串一；小王回复「买好了 20赚10」。",
+      "legResults": [
+        "win",
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores); verify special RH settlement rules"
     },
     {
       "id": 60,
@@ -741,8 +766,8 @@
       "usDate": "2026-11-06",
       "bet": "PHI -5.5",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 0,
+      "status": "loss",
       "profitIfWin": 26,
       "legs": [
         {
@@ -751,7 +776,11 @@
           "line": -5.5
         }
       ],
-      "note": "微信11/6 16:43：王老板「76人胜让5点5分，20刀」；小王回复「买好了 20赚26」。"
+      "note": "微信11/6 16:43：王老板「76人胜让5点5分，20刀」；小王回复「买好了 20赚26」。",
+      "legResults": [
+        "loss"
+      ],
+      "resultSource": "ESPN scoreboard (final scores); verify special RH settlement rules"
     },
     {
       "id": 61,
@@ -759,8 +788,8 @@
       "usDate": "2026-11-06",
       "bet": "ATL -3.5 + BOS -3.5",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 30.0,
+      "status": "win",
       "profitIfWin": 10,
       "legs": [
         {
@@ -774,7 +803,12 @@
           "line": -3.5
         }
       ],
-      "note": "本人确认跟买王老板的 ATL -3.5 + BOS -3.5 二串一，投入$20，命中净赚$10。"
+      "note": "本人确认跟买王老板的 ATL -3.5 + BOS -3.5 二串一，投入$20，命中净赚$10。",
+      "legResults": [
+        "win",
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores); verify special RH settlement rules"
     }
   ]
 }
