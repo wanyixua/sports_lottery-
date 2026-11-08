@@ -975,7 +975,7 @@
       "usDate": "2026-11-07",
       "bet": "DEN -7.5",
       "stake": 20,
-      "payout": 40.0,
+      "payout": 40,
       "status": "win",
       "profitIfWin": 20,
       "legs": [
@@ -1131,6 +1131,88 @@
         }
       ],
       "note": "本人确认老鹰独赢单关，投入$20、命中净赚$18。"
+    },
+    {
+      "id": 74,
+      "owner": "王老板",
+      "usDate": "2026-11-07",
+      "bet": "GSW -2.5 + HOU -4.5 + SAS -5.5",
+      "stake": 20,
+      "payout": null,
+      "status": "pending",
+      "profitIfWin": 72,
+      "legs": [
+        {
+          "team": "GSW",
+          "market": "spread",
+          "line": -2.5
+        },
+        {
+          "team": "HOU",
+          "market": "spread",
+          "line": -4.5
+        },
+        {
+          "team": "SAS",
+          "market": "spread",
+          "line": -5.5
+        }
+      ],
+      "note": "微信11/7 17点多：勇士让2.5、火箭让4.5、马刺让5.5三串一；小王确认「买好了 20赚72」。"
+    },
+    {
+      "id": 75,
+      "owner": "王老板",
+      "usDate": "2026-11-07",
+      "bet": "GSW -5.5",
+      "stake": 20,
+      "payout": null,
+      "status": "pending",
+      "profitIfWin": 8,
+      "legs": [
+        {
+          "team": "GSW",
+          "market": "spread",
+          "line": -5.5
+        }
+      ],
+      "note": "微信11/7 17:40：勇士让5.5，20刀；小王回复「都买好了」「20赚8」。"
+    },
+    {
+      "id": 76,
+      "owner": "王老板",
+      "usDate": "2026-11-07",
+      "bet": "HOU -9.5",
+      "stake": 20,
+      "payout": null,
+      "status": "pending",
+      "profitIfWin": 27,
+      "legs": [
+        {
+          "team": "HOU",
+          "market": "spread",
+          "line": -9.5
+        }
+      ],
+      "note": "微信11/7 17:40：火箭让9.5，20刀；小王回复「都买好了」「20赚27」。"
+    },
+    {
+      "id": 77,
+      "owner": "王老板",
+      "usDate": "2026-11-07",
+      "bet": "SAS -2.5",
+      "stake": 20,
+      "payout": null,
+      "status": "pending",
+      "profitIfWin": 12,
+      "legs": [
+        {
+          "team": "SAS",
+          "market": "spread",
+          "line": -2.5
+        }
+      ],
+      "note": "微信11/7 17:40：马刺让2.5，20刀；小王回复已全部买入，用户明确补充「马刺是20赚12」。"
     }
   ]
 }
