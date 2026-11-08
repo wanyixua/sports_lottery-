@@ -705,7 +705,7 @@
       "usDate": "2026-11-06",
       "bet": "BOS + SAS + TOR + DAL + ATL",
       "stake": 20,
-      "payout": 77.0,
+      "payout": 77,
       "status": "win",
       "profitIfWin": 57,
       "legs": [
@@ -824,7 +824,7 @@
       "usDate": "2026-11-06",
       "bet": "DAL -6.5 + OKC -6.5 + TOR -3.5 + MIN",
       "stake": 20,
-      "payout": 234.0,
+      "payout": 234,
       "status": "win",
       "profitIfWin": 214,
       "legs": [
@@ -863,7 +863,7 @@
       "usDate": "2026-11-06",
       "bet": "LAL",
       "stake": 20,
-      "payout": 32.0,
+      "payout": 32,
       "status": "win",
       "profitIfWin": 12,
       "legs": [
@@ -884,7 +884,7 @@
       "usDate": "2026-11-06",
       "bet": "SAS -6.5",
       "stake": 20,
-      "payout": 23.0,
+      "payout": 23,
       "status": "win",
       "profitIfWin": 3,
       "legs": [
@@ -927,6 +927,206 @@
         "win"
       ],
       "resultSource": "ESPN scoreboard (final scores); verify special RH settlement rules"
+    },
+    {
+      "id": 66,
+      "owner": "王老板",
+      "usDate": "2026-11-07",
+      "bet": "DEN -5.5 + OKC -6.5 + ATL -1.5 + GSW + HOU -3.5 + SAS",
+      "stake": 30,
+      "payout": null,
+      "status": "pending",
+      "profitIfWin": 278,
+      "legs": [
+        {
+          "team": "DEN",
+          "market": "spread",
+          "line": -5.5
+        },
+        {
+          "team": "OKC",
+          "market": "spread",
+          "line": -6.5
+        },
+        {
+          "team": "ATL",
+          "market": "spread",
+          "line": -1.5
+        },
+        {
+          "team": "GSW",
+          "market": "moneyline"
+        },
+        {
+          "team": "HOU",
+          "market": "spread",
+          "line": -3.5
+        },
+        {
+          "team": "SAS",
+          "market": "moneyline"
+        }
+      ],
+      "note": "微信11/7 11:29六串一：掘金让5.5、雷霆让6.5、老鹰让1.5、勇士独赢、火箭让3.5、马刺独赢；11:40回复「买好了 30赚278」。"
+    },
+    {
+      "id": 67,
+      "owner": "王老板",
+      "usDate": "2026-11-07",
+      "bet": "DEN -7.5",
+      "stake": 20,
+      "payout": null,
+      "status": "pending",
+      "profitIfWin": 20,
+      "legs": [
+        {
+          "team": "DEN",
+          "market": "spread",
+          "line": -7.5
+        }
+      ],
+      "note": "微信11/7 14:15：王老板「买掘金让7点5胜20刀」；小王回复「买好了 20赚20」。"
+    },
+    {
+      "id": 68,
+      "owner": "王老板",
+      "usDate": "2026-11-07",
+      "bet": "ATL -9.5",
+      "stake": 20,
+      "payout": null,
+      "status": "pending",
+      "profitIfWin": 27,
+      "legs": [
+        {
+          "team": "ATL",
+          "market": "spread",
+          "line": -9.5
+        }
+      ],
+      "note": "微信11/7 14:39：王老板「老鹰让9点5胜20刀」；小王回复「买好了 20赚27」。"
+    },
+    {
+      "id": 69,
+      "owner": "王老板",
+      "usDate": "2026-11-07",
+      "bet": "NYK -2.5",
+      "stake": 20,
+      "payout": null,
+      "status": "pending",
+      "profitIfWin": 12,
+      "legs": [
+        {
+          "team": "NYK",
+          "market": "spread",
+          "line": -2.5
+        }
+      ],
+      "note": "微信11/7 17:10：王老板「尼克斯让2点5，20刀」；小王回复「都买好了」「20赚12」（对应尼克斯）。"
+    },
+    {
+      "id": 70,
+      "owner": "王老板",
+      "usDate": "2026-11-07",
+      "bet": "OKC -9.5",
+      "stake": 20,
+      "payout": null,
+      "status": "pending",
+      "profitIfWin": 8,
+      "legs": [
+        {
+          "team": "OKC",
+          "market": "spread",
+          "line": -9.5
+        }
+      ],
+      "note": "微信11/7 17:15：王老板「雷霆让9点5分胜，20刀」；小王回复「都买好了」「20赚8」（对应雷霆）。"
+    },
+    {
+      "id": 71,
+      "owner": "小王",
+      "usDate": "2026-11-07",
+      "bet": "ATL + GSW + OKC + BOS + PHI + MIN",
+      "stake": 20,
+      "payout": null,
+      "status": "pending",
+      "profitIfWin": 63,
+      "legs": [
+        {
+          "team": "ATL",
+          "market": "moneyline"
+        },
+        {
+          "team": "GSW",
+          "market": "moneyline"
+        },
+        {
+          "team": "OKC",
+          "market": "moneyline"
+        },
+        {
+          "team": "BOS",
+          "market": "moneyline"
+        },
+        {
+          "team": "PHI",
+          "market": "moneyline"
+        },
+        {
+          "team": "MIN",
+          "market": "moneyline"
+        }
+      ],
+      "note": "本人RH持仓截图：6-leg combo，83 Yes @21.9¢；本人确认投入$20、命中净赚$63。"
+    },
+    {
+      "id": 72,
+      "owner": "小王",
+      "usDate": "2026-11-07",
+      "bet": "ATL + DEN + HOU + GSW + OKC",
+      "stake": 20,
+      "payout": null,
+      "status": "pending",
+      "profitIfWin": 50,
+      "legs": [
+        {
+          "team": "ATL",
+          "market": "moneyline"
+        },
+        {
+          "team": "DEN",
+          "market": "moneyline"
+        },
+        {
+          "team": "HOU",
+          "market": "moneyline"
+        },
+        {
+          "team": "GSW",
+          "market": "moneyline"
+        },
+        {
+          "team": "OKC",
+          "market": "moneyline"
+        }
+      ],
+      "note": "本人RH持仓截图：5-leg combo，70 Yes @26.5¢；本人确认投入$20、命中净赚$50。"
+    },
+    {
+      "id": 73,
+      "owner": "小王",
+      "usDate": "2026-11-07",
+      "bet": "ATL",
+      "stake": 20,
+      "payout": null,
+      "status": "pending",
+      "profitIfWin": 18,
+      "legs": [
+        {
+          "team": "ATL",
+          "market": "moneyline"
+        }
+      ],
+      "note": "本人确认老鹰独赢单关，投入$20、命中净赚$18。"
     }
   ]
 }
