@@ -934,8 +934,8 @@
       "usDate": "2026-11-07",
       "bet": "DEN -5.5 + OKC -6.5 + ATL -1.5 + GSW + HOU -3.5 + SAS",
       "stake": 30,
-      "payout": null,
-      "status": "pending",
+      "payout": 0,
+      "status": "loss",
       "profitIfWin": 278,
       "legs": [
         {
@@ -967,7 +967,16 @@
           "market": "moneyline"
         }
       ],
-      "note": "微信11/7 11:29六串一：掘金让5.5、雷霆让6.5、老鹰让1.5、勇士独赢、火箭让3.5、马刺独赢；11:40回复「买好了 30赚278」。"
+      "note": "微信11/7 11:29六串一：掘金让5.5、雷霆让6.5、老鹰让1.5、勇士独赢、火箭让3.5、马刺独赢；11:40回复「买好了 30赚278」。",
+      "legResults": [
+        "win",
+        "win",
+        "win",
+        "win",
+        "loss",
+        null
+      ],
+      "resultSource": "ESPN scoreboard (final scores); verify special RH settlement rules"
     },
     {
       "id": 67,
@@ -1019,8 +1028,8 @@
       "usDate": "2026-11-07",
       "bet": "NYK -2.5",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 32.0,
+      "status": "win",
       "profitIfWin": 12,
       "legs": [
         {
@@ -1029,7 +1038,11 @@
           "line": -2.5
         }
       ],
-      "note": "微信11/7 17:10：王老板「尼克斯让2点5，20刀」；小王回复「都买好了」「20赚12」（对应尼克斯）。"
+      "note": "微信11/7 17:10：王老板「尼克斯让2点5，20刀」；小王回复「都买好了」「20赚12」（对应尼克斯）。",
+      "legResults": [
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores); verify special RH settlement rules"
     },
     {
       "id": 70,
@@ -1037,8 +1050,8 @@
       "usDate": "2026-11-07",
       "bet": "OKC -9.5",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 28.0,
+      "status": "win",
       "profitIfWin": 8,
       "legs": [
         {
@@ -1047,7 +1060,11 @@
           "line": -9.5
         }
       ],
-      "note": "微信11/7 17:15：王老板「雷霆让9点5分胜，20刀」；小王回复「都买好了」「20赚8」（对应雷霆）。"
+      "note": "微信11/7 17:15：王老板「雷霆让9点5分胜，20刀」；小王回复「都买好了」「20赚8」（对应雷霆）。",
+      "legResults": [
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores); verify special RH settlement rules"
     },
     {
       "id": 71,
@@ -1092,8 +1109,8 @@
       "usDate": "2026-11-07",
       "bet": "ATL + DEN + HOU + GSW + OKC",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 0,
+      "status": "loss",
       "profitIfWin": 50,
       "legs": [
         {
@@ -1117,7 +1134,15 @@
           "market": "moneyline"
         }
       ],
-      "note": "本人RH持仓截图：5-leg combo，70 Yes @26.5¢；本人确认投入$20、命中净赚$50。"
+      "note": "本人RH持仓截图：5-leg combo，70 Yes @26.5¢；本人确认投入$20、命中净赚$50。",
+      "legResults": [
+        "win",
+        "win",
+        "loss",
+        "win",
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores); verify special RH settlement rules"
     },
     {
       "id": 73,
@@ -1146,8 +1171,8 @@
       "usDate": "2026-11-07",
       "bet": "GSW -2.5 + HOU -4.5 + SAS -5.5",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 0,
+      "status": "loss",
       "profitIfWin": 72,
       "legs": [
         {
@@ -1166,7 +1191,13 @@
           "line": -5.5
         }
       ],
-      "note": "微信11/7 17点多：勇士让2.5、火箭让4.5、马刺让5.5三串一；小王确认「买好了 20赚72」。"
+      "note": "微信11/7 17点多：勇士让2.5、火箭让4.5、马刺让5.5三串一；小王确认「买好了 20赚72」。",
+      "legResults": [
+        "win",
+        "loss",
+        null
+      ],
+      "resultSource": "ESPN scoreboard (final scores); verify special RH settlement rules"
     },
     {
       "id": 75,
@@ -1174,8 +1205,8 @@
       "usDate": "2026-11-07",
       "bet": "GSW -5.5",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 28.0,
+      "status": "win",
       "profitIfWin": 8,
       "legs": [
         {
@@ -1184,7 +1215,11 @@
           "line": -5.5
         }
       ],
-      "note": "微信11/7 17:40：勇士让5.5，20刀；小王回复「都买好了」「20赚8」。"
+      "note": "微信11/7 17:40：勇士让5.5，20刀；小王回复「都买好了」「20赚8」。",
+      "legResults": [
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores); verify special RH settlement rules"
     },
     {
       "id": 76,
@@ -1192,8 +1227,8 @@
       "usDate": "2026-11-07",
       "bet": "HOU -9.5",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 0,
+      "status": "loss",
       "profitIfWin": 27,
       "legs": [
         {
@@ -1202,7 +1237,11 @@
           "line": -9.5
         }
       ],
-      "note": "微信11/7 17:40：火箭让9.5，20刀；小王回复「都买好了」「20赚27」。"
+      "note": "微信11/7 17:40：火箭让9.5，20刀；小王回复「都买好了」「20赚27」。",
+      "legResults": [
+        "loss"
+      ],
+      "resultSource": "ESPN scoreboard (final scores); verify special RH settlement rules"
     },
     {
       "id": 77,
@@ -1228,8 +1267,8 @@
       "usDate": "2026-11-07",
       "bet": "GSW",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 39.0,
+      "status": "win",
       "profitIfWin": 19,
       "legs": [
         {
@@ -1237,7 +1276,11 @@
           "market": "moneyline"
         }
       ],
-      "note": "中场加仓，20赚19。"
+      "note": "中场加仓，20赚19。",
+      "legResults": [
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores); verify special RH settlement rules"
     }
   ]
 }
