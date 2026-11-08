@@ -975,8 +975,8 @@
       "usDate": "2026-11-07",
       "bet": "DEN -7.5",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 40.0,
+      "status": "win",
       "profitIfWin": 20,
       "legs": [
         {
@@ -985,7 +985,11 @@
           "line": -7.5
         }
       ],
-      "note": "微信11/7 14:15：王老板「买掘金让7点5胜20刀」；小王回复「买好了 20赚20」。"
+      "note": "微信11/7 14:15：王老板「买掘金让7点5胜20刀」；小王回复「买好了 20赚20」。",
+      "legResults": [
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores); verify special RH settlement rules"
     },
     {
       "id": 68,
