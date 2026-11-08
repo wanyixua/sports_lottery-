@@ -997,8 +997,8 @@
       "usDate": "2026-11-07",
       "bet": "ATL -9.5",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 0,
+      "status": "loss",
       "profitIfWin": 27,
       "legs": [
         {
@@ -1007,7 +1007,11 @@
           "line": -9.5
         }
       ],
-      "note": "微信11/7 14:39：王老板「老鹰让9点5胜20刀」；小王回复「买好了 20赚27」。"
+      "note": "微信11/7 14:39：王老板「老鹰让9点5胜20刀」；小王回复「买好了 20赚27」。",
+      "legResults": [
+        "loss"
+      ],
+      "resultSource": "ESPN scoreboard (final scores); verify special RH settlement rules"
     },
     {
       "id": 69,
@@ -1121,8 +1125,8 @@
       "usDate": "2026-11-07",
       "bet": "ATL",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 38.0,
+      "status": "win",
       "profitIfWin": 18,
       "legs": [
         {
@@ -1130,7 +1134,11 @@
           "market": "moneyline"
         }
       ],
-      "note": "本人确认老鹰独赢单关，投入$20、命中净赚$18。"
+      "note": "本人确认老鹰独赢单关，投入$20、命中净赚$18。",
+      "legResults": [
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores); verify special RH settlement rules"
     },
     {
       "id": 74,
