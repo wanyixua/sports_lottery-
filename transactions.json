@@ -502,7 +502,7 @@
       "usDate": "2026-11-05",
       "bet": "GSW",
       "stake": 20,
-      "payout": 32.0,
+      "payout": 32,
       "status": "win",
       "profitIfWin": 12,
       "note": "本人已确认买入：金州勇士 GSW 独赢（Moneyline），投入 $20，命中净赚 $12；待结算",
@@ -551,7 +551,7 @@
       "usDate": "2026-11-05",
       "bet": "GSW +3.5 + PHX +5.5",
       "stake": 20,
-      "payout": 42.0,
+      "payout": 42,
       "status": "win",
       "profitIfWin": 22,
       "legs": [
@@ -1072,36 +1072,51 @@
       "usDate": "2026-11-07",
       "bet": "ATL + GSW + OKC + BOS + PHI + MIN",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 83,
+      "status": "win",
       "profitIfWin": 63,
       "legs": [
         {
           "team": "ATL",
-          "market": "moneyline"
+          "market": "moneyline",
+          "gameDate": "2026-11-07"
         },
         {
           "team": "GSW",
-          "market": "moneyline"
+          "market": "moneyline",
+          "gameDate": "2026-11-07"
         },
         {
           "team": "OKC",
-          "market": "moneyline"
+          "market": "moneyline",
+          "gameDate": "2026-11-07"
         },
         {
           "team": "BOS",
-          "market": "moneyline"
+          "market": "moneyline",
+          "gameDate": "2026-11-08"
         },
         {
           "team": "PHI",
-          "market": "moneyline"
+          "market": "moneyline",
+          "gameDate": "2026-11-08"
         },
         {
           "team": "MIN",
-          "market": "moneyline"
+          "market": "moneyline",
+          "gameDate": "2026-11-08"
         }
       ],
-      "note": "本人RH持仓截图：6-leg combo，83 Yes @21.9¢；本人确认投入$20、命中净赚$63。"
+      "note": "本人RH持仓截图：6-leg combo，83 Yes @21.9¢；本人确认投入$20、命中净赚$63。 跨日串关：ATL/GSW/OKC（11/7）、BOS/PHI/MIN（11/8），六腿均胜；净赚$63，返还$83。",
+      "legResults": [
+        "win",
+        "win",
+        "win",
+        "win",
+        "win",
+        "win"
+      ],
+      "resultSource": "ESPN final scoreboards for Nov 7 and Nov 8, 2026; verify RH settlement"
     },
     {
       "id": 72,
@@ -1344,7 +1359,7 @@
       "usDate": "2026-11-08",
       "bet": "PHI -4.5",
       "stake": 20,
-      "payout": 28.0,
+      "payout": 28,
       "status": "win",
       "profitIfWin": 8,
       "legs": [
@@ -1366,7 +1381,7 @@
       "usDate": "2026-11-08",
       "bet": "LAL",
       "stake": 20,
-      "payout": 50.0,
+      "payout": 50,
       "status": "win",
       "profitIfWin": 30,
       "legs": [
@@ -1387,7 +1402,7 @@
       "usDate": "2026-11-08",
       "bet": "MIN -5.5",
       "stake": 20,
-      "payout": 28.0,
+      "payout": 28,
       "status": "win",
       "profitIfWin": 8,
       "legs": [
@@ -1409,7 +1424,7 @@
       "usDate": "2026-11-08",
       "bet": "PHI -2.5 + MIN -4.5 + BOS -4.5 + MIA",
       "stake": 30,
-      "payout": 89.0,
+      "payout": 89,
       "status": "win",
       "profitIfWin": 59,
       "legs": [
@@ -1513,7 +1528,7 @@
       "usDate": "2026-11-08",
       "bet": "DAL + BOS + MIN",
       "stake": 20,
-      "payout": 50.0,
+      "payout": 50,
       "status": "win",
       "profitIfWin": 30,
       "legs": [
@@ -1544,7 +1559,7 @@
       "usDate": "2026-11-08",
       "bet": "BOS -2.5",
       "stake": 20,
-      "payout": 33.0,
+      "payout": 33,
       "status": "win",
       "profitIfWin": 13,
       "legs": [
@@ -1587,7 +1602,7 @@
       "usDate": "2026-11-08",
       "bet": "MIA",
       "stake": 20,
-      "payout": 24.0,
+      "payout": 24,
       "status": "win",
       "profitIfWin": 4,
       "legs": [
