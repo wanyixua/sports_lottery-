@@ -1292,8 +1292,8 @@
       "usDate": "2026-11-08",
       "bet": "PHI -12.5 + MIN -10.5 + DAL -10.5 + BOS -13.5 + MIA -9.5 + NOP +3.5",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 0,
+      "status": "loss",
       "profitIfWin": 767,
       "legs": [
         {
@@ -1327,7 +1327,16 @@
           "line": 3.5
         }
       ],
-      "note": "微信11/8：王老板六串一：76人让12.5、森林狼让10.5、独行侠让10.5、凯尔特人让13.5、热火让9.5、鹈鹕受让3.5；小王00:32回复「买好了 20赚767」。"
+      "note": "微信11/8：王老板六串一：76人让12.5、森林狼让10.5、独行侠让10.5、凯尔特人让13.5、热火让9.5、鹈鹕受让3.5；小王00:32回复「买好了 20赚767」。",
+      "legResults": [
+        "loss",
+        "win",
+        "win",
+        "win",
+        "loss",
+        "loss"
+      ],
+      "resultSource": "ESPN scoreboard (final scores); verify special RH settlement rules"
     },
     {
       "id": 80,
@@ -1335,8 +1344,8 @@
       "usDate": "2026-11-08",
       "bet": "PHI -4.5",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 28.0,
+      "status": "win",
       "profitIfWin": 8,
       "legs": [
         {
@@ -1345,7 +1354,11 @@
           "line": -4.5
         }
       ],
-      "note": "微信11/8：王老板「76人让4点5，胜，20刀」；小王回复「20赚8」「都买好了」。"
+      "note": "微信11/8：王老板「76人让4点5，胜，20刀」；小王回复「20赚8」「都买好了」。",
+      "legResults": [
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores); verify special RH settlement rules"
     },
     {
       "id": 81,
@@ -1353,8 +1366,8 @@
       "usDate": "2026-11-08",
       "bet": "LAL",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 50.0,
+      "status": "win",
       "profitIfWin": 30,
       "legs": [
         {
@@ -1362,7 +1375,11 @@
           "market": "moneyline"
         }
       ],
-      "note": "微信11/8：王老板「湖人胜，20刀」；小王回复「20赚30」「都买好了」。"
+      "note": "微信11/8：王老板「湖人胜，20刀」；小王回复「20赚30」「都买好了」。",
+      "legResults": [
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores); verify special RH settlement rules"
     },
     {
       "id": 82,
@@ -1370,8 +1387,8 @@
       "usDate": "2026-11-08",
       "bet": "MIN -5.5",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 28.0,
+      "status": "win",
       "profitIfWin": 8,
       "legs": [
         {
@@ -1380,7 +1397,11 @@
           "line": -5.5
         }
       ],
-      "note": "微信11/8：王老板「森林狼让5点5胜20刀」；小王回复「20赚8」「都买好了」。"
+      "note": "微信11/8：王老板「森林狼让5点5胜20刀」；小王回复「20赚8」「都买好了」。",
+      "legResults": [
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores); verify special RH settlement rules"
     },
     {
       "id": 83,
@@ -1388,8 +1409,8 @@
       "usDate": "2026-11-08",
       "bet": "PHI -2.5 + MIN -4.5 + BOS -4.5 + MIA",
       "stake": 30,
-      "payout": null,
-      "status": "pending",
+      "payout": 89.0,
+      "status": "win",
       "profitIfWin": 59,
       "legs": [
         {
@@ -1412,7 +1433,14 @@
           "market": "moneyline"
         }
       ],
-      "note": "微信11/8：王老板四串一：76人让2.5、森林狼让4.5、凯尔特人让4.5、热火独赢；小王回复「买好了 30赚59」。"
+      "note": "微信11/8：王老板四串一：76人让2.5、森林狼让4.5、凯尔特人让4.5、热火独赢；小王回复「买好了 30赚59」。",
+      "legResults": [
+        "win",
+        "win",
+        "win",
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores); verify special RH settlement rules"
     },
     {
       "id": 84,
@@ -1420,8 +1448,8 @@
       "usDate": "2026-11-08",
       "bet": "PHI -7.5",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 0,
+      "status": "loss",
       "profitIfWin": 14,
       "legs": [
         {
@@ -1430,7 +1458,11 @@
           "line": -7.5
         }
       ],
-      "note": "微信11/8：王老板「76人让7点5，20刀」；小王回复「买好了 20赚14」。"
+      "note": "微信11/8：王老板「76人让7点5，20刀」；小王回复「买好了 20赚14」。",
+      "legResults": [
+        "loss"
+      ],
+      "resultSource": "ESPN scoreboard (final scores); verify special RH settlement rules"
     },
     {
       "id": 85,
@@ -1438,8 +1470,8 @@
       "usDate": "2026-11-08",
       "bet": "DET",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 0,
+      "status": "loss",
       "profitIfWin": 32,
       "legs": [
         {
@@ -1447,7 +1479,11 @@
           "market": "moneyline"
         }
       ],
-      "note": "微信11/8：王老板「买活塞胜20刀」；小王回复「买好了」「20赚32」。"
+      "note": "微信11/8：王老板「买活塞胜20刀」；小王回复「买好了」「20赚32」。",
+      "legResults": [
+        "loss"
+      ],
+      "resultSource": "ESPN scoreboard (final scores); verify special RH settlement rules"
     },
     {
       "id": 86,
@@ -1455,8 +1491,8 @@
       "usDate": "2026-11-08",
       "bet": "DET -3.5",
       "stake": 50,
-      "payout": null,
-      "status": "pending",
+      "payout": 0,
+      "status": "loss",
       "profitIfWin": 120,
       "legs": [
         {
@@ -1465,7 +1501,11 @@
           "line": -3.5
         }
       ],
-      "note": "微信11/8：王老板另加「再买50刀活塞让3点5胜」；小王回复「买好了 50赚120」，独立订单。"
+      "note": "微信11/8：王老板另加「再买50刀活塞让3点5胜」；小王回复「买好了 50赚120」，独立订单。",
+      "legResults": [
+        "loss"
+      ],
+      "resultSource": "ESPN scoreboard (final scores); verify special RH settlement rules"
     },
     {
       "id": 87,
@@ -1473,8 +1513,8 @@
       "usDate": "2026-11-08",
       "bet": "DAL + BOS + MIN",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 50.0,
+      "status": "win",
       "profitIfWin": 30,
       "legs": [
         {
@@ -1490,7 +1530,13 @@
           "market": "moneyline"
         }
       ],
-      "note": "微信11/8：王老板「买独行侠、凯尔特人胜串」并补充「加森林狼，三串一」；小王回复「买好了 20赚30」。"
+      "note": "微信11/8：王老板「买独行侠、凯尔特人胜串」并补充「加森林狼，三串一」；小王回复「买好了 20赚30」。",
+      "legResults": [
+        "win",
+        "win",
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores); verify special RH settlement rules"
     },
     {
       "id": 88,
@@ -1498,8 +1544,8 @@
       "usDate": "2026-11-08",
       "bet": "BOS -2.5",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 33.0,
+      "status": "win",
       "profitIfWin": 13,
       "legs": [
         {
@@ -1508,7 +1554,11 @@
           "line": -2.5
         }
       ],
-      "note": "微信11/8：王老板「买凯尔特人让2点5胜，20刀」；小王回复「买好了 20赚13」。"
+      "note": "微信11/8：王老板「买凯尔特人让2点5胜，20刀」；小王回复「买好了 20赚13」。",
+      "legResults": [
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores); verify special RH settlement rules"
     },
     {
       "id": 89,
@@ -1516,8 +1566,8 @@
       "usDate": "2026-11-08",
       "bet": "NOP",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 0,
+      "status": "loss",
       "profitIfWin": 14,
       "legs": [
         {
@@ -1525,7 +1575,11 @@
           "market": "moneyline"
         }
       ],
-      "note": "微信11/8：王老板「鹈鹕胜，20刀」；小王回复「买好了 20赚14」。"
+      "note": "微信11/8：王老板「鹈鹕胜，20刀」；小王回复「买好了 20赚14」。",
+      "legResults": [
+        "loss"
+      ],
+      "resultSource": "ESPN scoreboard (final scores); verify special RH settlement rules"
     },
     {
       "id": 90,
@@ -1533,8 +1587,8 @@
       "usDate": "2026-11-08",
       "bet": "MIA",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 24.0,
+      "status": "win",
       "profitIfWin": 4,
       "legs": [
         {
@@ -1542,7 +1596,11 @@
           "market": "moneyline"
         }
       ],
-      "note": "微信11/8：王老板「热火胜20刀」；小王回复「20赚4」。"
+      "note": "微信11/8：王老板「热火胜20刀」；小王回复「20赚4」。",
+      "legResults": [
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores); verify special RH settlement rules"
     },
     {
       "id": 91,
@@ -1550,8 +1608,8 @@
       "usDate": "2026-11-08",
       "bet": "NOP -2.5 + MIA -3.5",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 0,
+      "status": "loss",
       "profitIfWin": 30,
       "legs": [
         {
@@ -1565,7 +1623,12 @@
           "line": -3.5
         }
       ],
-      "note": "微信11/8：王老板「鹈鹕让2点5胜，热火让3点5胜二串一」；小王回复「买好了 20赚30」。"
+      "note": "微信11/8：王老板「鹈鹕让2点5胜，热火让3点5胜二串一」；小王回复「买好了 20赚30」。",
+      "legResults": [
+        "loss",
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores); verify special RH settlement rules"
     }
   ]
 }
