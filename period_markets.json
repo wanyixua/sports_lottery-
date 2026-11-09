@@ -1,6 +1,6 @@
 {
   "date": "2026-11-09",
-  "capturedAt": "2026-11-09T08:07:08+00:00",
+  "capturedAt": "2026-11-09T10:10:11+00:00",
   "source": "RH public event pages; displayPrice is INDICATIVE, yesAsk/noAsk only when verified",
   "games": [
     {
@@ -13,7 +13,7 @@
               {
                 "id": "visible-ticket-CHA",
                 "label": "Charlotte",
-                "yesAsk": 32.0,
+                "yesAsk": 30.0,
                 "noAsk": null,
                 "owner": "CHA",
                 "displayPrice": null
@@ -28,6 +28,15 @@
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/cleveland-vs-charlotte-1st-half-spread-nov-09-2026/",
             "choices": [
               {
+                "id": "display-spread-CLE-2p5",
+                "owner": "CLE",
+                "label": "Cleveland wins by over 2.5 points",
+                "displayPrice": 61.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
                 "id": "display-spread-CLE-6p5",
                 "owner": "CLE",
                 "label": "Cleveland wins by over 6.5 points",
@@ -35,11 +44,20 @@
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-CLE-8p5",
+                "owner": "CLE",
+                "label": "Cleveland wins by over 8.5 points",
+                "displayPrice": 37.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
               }
             ],
             "reason": null,
             "hiddenCount": 14,
-            "expectedMinChoices": 15,
+            "expectedMinChoices": 17,
             "completeness": "partial"
           },
           "total": {
@@ -105,10 +123,19 @@
                 "owner": "CLE",
                 "label": "Cleveland",
                 "displayPrice": 60.0,
-                "yesAsk": 61.0,
+                "yesAsk": 63.0,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)",
                 "askVerifiedFrom": "ticket"
+              },
+              {
+                "id": "display-CHA",
+                "owner": "CHA",
+                "label": "Charlotte",
+                "displayPrice": 34.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
               },
               {
                 "id": "display-tie",
@@ -122,7 +149,7 @@
             ],
             "reason": null,
             "hiddenCount": 0,
-            "expectedMinChoices": 2,
+            "expectedMinChoices": 3,
             "completeness": "unverified"
           },
           "spread": {
@@ -149,7 +176,7 @@
               {
                 "id": "visible-ticket-CHA",
                 "label": "Charlotte",
-                "yesAsk": 41.0,
+                "yesAsk": 43.0,
                 "noAsk": null,
                 "owner": "CHA",
                 "displayPrice": null
@@ -186,7 +213,7 @@
                 "owner": "CLE",
                 "label": "Cleveland",
                 "displayPrice": 63.0,
-                "yesAsk": 62.0,
+                "yesAsk": 60.0,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)",
                 "askVerifiedFrom": "ticket"
@@ -221,7 +248,7 @@
               {
                 "id": "visible-ticket-CHA",
                 "label": "Charlotte",
-                "yesAsk": 55.0,
+                "yesAsk": 54.0,
                 "noAsk": null,
                 "owner": "CHA",
                 "displayPrice": null
@@ -368,7 +395,7 @@
               {
                 "id": "visible-ticket-DET",
                 "label": "Detroit",
-                "yesAsk": 69.0,
+                "yesAsk": 71.0,
                 "noAsk": null,
                 "owner": "DET",
                 "displayPrice": null
@@ -450,7 +477,7 @@
                 "owner": "DET",
                 "label": "Detroit",
                 "displayPrice": 64.0,
-                "yesAsk": 63.0,
+                "yesAsk": 62.0,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)",
                 "askVerifiedFrom": "ticket"
@@ -480,10 +507,20 @@
           },
           "total": {
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/washington-vs-detroit-1st-quarter-total-nov-09-2026/",
-            "choices": [],
-            "reason": "Ambiguous embedded event contract groups",
+            "choices": [
+              {
+                "id": "display-total-over-60p5",
+                "owner": "over",
+                "label": "Over 60.5 points",
+                "displayPrice": 37.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              }
+            ],
+            "reason": null,
             "hiddenCount": 8,
-            "expectedMinChoices": 8,
+            "expectedMinChoices": 9,
             "completeness": "partial"
           }
         },
@@ -496,7 +533,7 @@
                 "owner": "DET",
                 "label": "Detroit",
                 "displayPrice": 62.0,
-                "yesAsk": 65.0,
+                "yesAsk": 62.0,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)",
                 "askVerifiedFrom": "ticket"
@@ -568,7 +605,7 @@
                 "owner": "DET",
                 "label": "Detroit",
                 "displayPrice": 76.0,
-                "yesAsk": 70.0,
+                "yesAsk": 61.0,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)",
                 "askVerifiedFrom": "ticket"
@@ -607,7 +644,7 @@
                 "owner": "MEM",
                 "label": "Memphis",
                 "displayPrice": 54.0,
-                "yesAsk": 43.0,
+                "yesAsk": 42.0,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)",
                 "askVerifiedFrom": "ticket"
@@ -757,7 +794,7 @@
               {
                 "id": "visible-ticket-MEM",
                 "label": "Memphis",
-                "yesAsk": 45.0,
+                "yesAsk": 48.0,
                 "noAsk": null,
                 "owner": "MEM",
                 "displayPrice": null
@@ -889,7 +926,7 @@
               {
                 "id": "visible-ticket-DAL",
                 "label": "Dallas",
-                "yesAsk": 72.0,
+                "yesAsk": 71.0,
                 "noAsk": null,
                 "owner": "DAL",
                 "displayPrice": null
@@ -926,7 +963,7 @@
                 "owner": "IND",
                 "label": "Indiana",
                 "displayPrice": 53.0,
-                "yesAsk": 44.0,
+                "yesAsk": 45.0,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)",
                 "askVerifiedFrom": "ticket"
@@ -1005,7 +1042,7 @@
               {
                 "id": "visible-ticket-DAL",
                 "label": "Dallas",
-                "yesAsk": 55.0,
+                "yesAsk": 58.0,
                 "noAsk": null,
                 "owner": "DAL",
                 "displayPrice": null
@@ -1136,7 +1173,7 @@
               {
                 "id": "visible-ticket-DEN",
                 "label": "Denver",
-                "yesAsk": 52.0,
+                "yesAsk": 53.0,
                 "noAsk": null,
                 "owner": "DEN",
                 "displayPrice": null
@@ -1189,6 +1226,15 @@
                 "askVerifiedFrom": "ticket"
               },
               {
+                "id": "display-DEN",
+                "owner": "DEN",
+                "label": "Denver",
+                "displayPrice": 37.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
                 "id": "display-tie",
                 "owner": "tie",
                 "label": "Tie",
@@ -1200,7 +1246,7 @@
             ],
             "reason": null,
             "hiddenCount": 0,
-            "expectedMinChoices": 2,
+            "expectedMinChoices": 3,
             "completeness": "unverified"
           },
           "spread": {
@@ -1353,6 +1399,15 @@
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/san-antonio-vs-phoenix-1st-half-spread-nov-09-2026/",
             "choices": [
               {
+                "id": "display-spread-SAS-2p5",
+                "owner": "SAS",
+                "label": "San Antonio wins by over 2.5 points",
+                "displayPrice": 60.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
                 "id": "display-spread-SAS-4p5",
                 "owner": "SAS",
                 "label": "San Antonio wins by over 4.5 points",
@@ -1364,7 +1419,7 @@
             ],
             "reason": null,
             "hiddenCount": 14,
-            "expectedMinChoices": 15,
+            "expectedMinChoices": 16,
             "completeness": "partial"
           },
           "total": {
@@ -1466,7 +1521,7 @@
                 "owner": "SAS",
                 "label": "San Antonio",
                 "displayPrice": 59.0,
-                "yesAsk": 61.0,
+                "yesAsk": 57.0,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)",
                 "askVerifiedFrom": "ticket"
@@ -1498,7 +1553,7 @@
               {
                 "id": "visible-ticket-PHX",
                 "label": "Phoenix",
-                "yesAsk": 41.0,
+                "yesAsk": 42.0,
                 "noAsk": null,
                 "owner": "PHX",
                 "displayPrice": null
@@ -1533,7 +1588,7 @@
               {
                 "id": "visible-ticket-PHX",
                 "label": "Phoenix",
-                "yesAsk": 53.0,
+                "yesAsk": 50.0,
                 "noAsk": null,
                 "owner": "PHX",
                 "displayPrice": null
@@ -1621,10 +1676,20 @@
           },
           "total": {
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/new-orleans-vs-golden-state-1st-half-total-nov-09-2026/",
-            "choices": [],
-            "reason": "Ambiguous embedded event contract groups",
+            "choices": [
+              {
+                "id": "display-total-over-119p5",
+                "owner": "over",
+                "label": "Over 119.5 points",
+                "displayPrice": 47.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              }
+            ],
+            "reason": null,
             "hiddenCount": 14,
-            "expectedMinChoices": 14,
+            "expectedMinChoices": 15,
             "completeness": "partial"
           }
         },
