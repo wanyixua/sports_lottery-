@@ -1,6 +1,6 @@
 {
   "date": "2026-11-09",
-  "capturedAt": "2026-11-10T04:14:16+00:00",
+  "capturedAt": "2026-11-10T06:46:52+00:00",
   "source": "RH public event pages; displayPrice is INDICATIVE, yesAsk/noAsk only when verified",
   "games": [
     {
@@ -3791,17 +3791,7 @@
                 "id": "display-DEN",
                 "owner": "DEN",
                 "label": "Denver",
-                "displayPrice": 95.0,
-                "yesAsk": 96.0,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)",
-                "askVerifiedFrom": "ticket"
-              },
-              {
-                "id": "display-HOU",
-                "owner": "HOU",
-                "label": "Houston",
-                "displayPrice": 7.0,
+                "displayPrice": 99.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -3811,6 +3801,15 @@
                 "owner": "tie",
                 "label": "Tie",
                 "displayPrice": 4.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-HOU",
+                "owner": "HOU",
+                "label": "Houston",
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -3828,7 +3827,7 @@
                 "id": "display-spread-DEN-1p5",
                 "owner": "DEN",
                 "label": "Denver wins by over 1.5 points",
-                "displayPrice": 83.0,
+                "displayPrice": 99.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -3837,25 +3836,7 @@
                 "id": "display-spread-DEN-2p5",
                 "owner": "DEN",
                 "label": "Denver wins by over 2.5 points",
-                "displayPrice": 75.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
-                "id": "display-spread-DEN-4p5",
-                "owner": "DEN",
-                "label": "Denver wins by over 4.5 points",
-                "displayPrice": 49.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
-                "id": "display-spread-DEN-6p5",
-                "owner": "DEN",
-                "label": "Denver wins by over 6.5 points",
-                "displayPrice": 16.0,
+                "displayPrice": 99.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -3865,6 +3846,24 @@
                 "owner": "DEN",
                 "label": "Denver wins by over 12.5 points",
                 "displayPrice": 11.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-HOU-9p5",
+                "owner": "HOU",
+                "label": "Houston wins by over 9.5 points",
+                "displayPrice": 11.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-HOU-11p5",
+                "owner": "HOU",
+                "label": "Houston wins by over 11.5 points",
+                "displayPrice": 8.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -4673,11 +4672,10 @@
                 "id": "display-SAS",
                 "owner": "SAS",
                 "label": "San Antonio",
-                "displayPrice": 97.0,
-                "yesAsk": 99.0,
+                "displayPrice": 99.0,
+                "yesAsk": null,
                 "noAsk": null,
-                "priceSource": "RH public event selection (indicative)",
-                "askVerifiedFrom": "ticket"
+                "priceSource": "RH public event selection (indicative)"
               },
               {
                 "id": "display-PHX",
@@ -4698,46 +4696,46 @@
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/san-antonio-vs-phoenix-2nd-half-spread-nov-09-2026/",
             "choices": [
               {
+                "id": "display-spread-SAS-3p5",
+                "owner": "SAS",
+                "label": "San Antonio wins by over 3.5 points",
+                "displayPrice": 98.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
                 "id": "display-spread-SAS-9p5",
                 "owner": "SAS",
                 "label": "San Antonio wins by over 9.5 points",
-                "displayPrice": 87.0,
+                "displayPrice": 94.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
               },
               {
-                "id": "display-spread-SAS-7p5",
+                "id": "display-spread-SAS-15p5",
                 "owner": "SAS",
-                "label": "San Antonio wins by over 7.5 points",
-                "displayPrice": 60.0,
+                "label": "San Antonio wins by over 15.5 points",
+                "displayPrice": 18.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
               },
               {
-                "id": "display-spread-SAS-17p5",
-                "owner": "SAS",
-                "label": "San Antonio wins by over 17.5 points",
-                "displayPrice": 57.0,
+                "id": "display-spread-PHX-8p5",
+                "owner": "PHX",
+                "label": "Phoenix wins by over 8.5 points",
+                "displayPrice": 8.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
               },
               {
-                "id": "display-spread-SAS-13p5",
-                "owner": "SAS",
-                "label": "San Antonio wins by over 13.5 points",
-                "displayPrice": 38.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
-                "id": "display-spread-SAS-11p5",
-                "owner": "SAS",
-                "label": "San Antonio wins by over 11.5 points",
-                "displayPrice": 24.0,
+                "id": "display-spread-PHX-6p5",
+                "owner": "PHX",
+                "label": "Phoenix wins by over 6.5 points",
+                "displayPrice": 6.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -4752,28 +4750,19 @@
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/san-antonio-vs-phoenix-2nd-half-total-nov-09-2026/",
             "choices": [
               {
-                "id": "display-total-over-104p5",
+                "id": "display-total-over-96p5",
                 "owner": "over",
-                "label": "Over 104.5 points",
-                "displayPrice": 93.0,
+                "label": "Over 96.5 points",
+                "displayPrice": 99.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
               },
               {
-                "id": "display-total-over-106p5",
+                "id": "display-total-over-98p5",
                 "owner": "over",
-                "label": "Over 106.5 points",
-                "displayPrice": 81.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
-                "id": "display-total-over-108p5",
-                "owner": "over",
-                "label": "Over 108.5 points",
-                "displayPrice": 55.0,
+                "label": "Over 98.5 points",
+                "displayPrice": 99.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -4788,10 +4777,19 @@
                 "priceSource": "RH public event selection (indicative)"
               },
               {
-                "id": "display-total-over-110p5",
+                "id": "display-total-over-116p5",
                 "owner": "over",
-                "label": "Over 110.5 points",
-                "displayPrice": 33.0,
+                "label": "Over 116.5 points",
+                "displayPrice": 27.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-total-over-120p5",
+                "owner": "over",
+                "label": "Over 120.5 points",
+                "displayPrice": 23.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -5103,17 +5101,16 @@
                 "id": "display-SAS",
                 "owner": "SAS",
                 "label": "San Antonio",
-                "displayPrice": 91.0,
-                "yesAsk": 91.0,
+                "displayPrice": 99.0,
+                "yesAsk": null,
                 "noAsk": null,
-                "priceSource": "RH public event selection (indicative)",
-                "askVerifiedFrom": "ticket"
+                "priceSource": "RH public event selection (indicative)"
               },
               {
                 "id": "display-PHX",
                 "owner": "PHX",
                 "label": "Phoenix",
-                "displayPrice": 4.0,
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -5122,7 +5119,7 @@
                 "id": "display-tie",
                 "owner": "tie",
                 "label": "Tie",
-                "displayPrice": 3.0,
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -5247,20 +5244,19 @@
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/san-antonio-vs-phoenix-4th-quarter-winner-nov-09-2026/",
             "choices": [
               {
-                "id": "display-PHX",
-                "owner": "PHX",
-                "label": "Phoenix",
-                "displayPrice": 45.0,
-                "yesAsk": 52.0,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)",
-                "askVerifiedFrom": "ticket"
-              },
-              {
                 "id": "display-SAS",
                 "owner": "SAS",
                 "label": "San Antonio",
-                "displayPrice": 42.0,
+                "displayPrice": 99.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-PHX",
+                "owner": "PHX",
+                "label": "Phoenix",
+                "displayPrice": 9.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -5269,7 +5265,7 @@
                 "id": "display-tie",
                 "owner": "tie",
                 "label": "Tie",
-                "displayPrice": 10.0,
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -5284,19 +5280,28 @@
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/san-antonio-vs-phoenix-4th-quarter-spread-nov-09-2026/",
             "choices": [
               {
-                "id": "display-spread-PHX-1p5",
-                "owner": "PHX",
-                "label": "Phoenix wins by over 1.5 points",
-                "displayPrice": 44.0,
+                "id": "display-spread-SAS-9p5",
+                "owner": "SAS",
+                "label": "San Antonio wins by over 9.5 points",
+                "displayPrice": 6.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
               },
               {
-                "id": "display-spread-SAS-1p5",
-                "owner": "SAS",
-                "label": "San Antonio wins by over 1.5 points",
-                "displayPrice": 33.0,
+                "id": "display-spread-PHX-1p5",
+                "owner": "PHX",
+                "label": "Phoenix wins by over 1.5 points",
+                "displayPrice": 1.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-PHX-10p5",
+                "owner": "PHX",
+                "label": "Phoenix wins by over 10.5 points",
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -5305,16 +5310,7 @@
                 "id": "display-spread-PHX-2p5",
                 "owner": "PHX",
                 "label": "Phoenix wins by over 2.5 points",
-                "displayPrice": 29.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
-                "id": "display-spread-SAS-3p5",
-                "owner": "SAS",
-                "label": "San Antonio wins by over 3.5 points",
-                "displayPrice": 23.0,
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -5323,7 +5319,7 @@
                 "id": "display-spread-PHX-4p5",
                 "owner": "PHX",
                 "label": "Phoenix wins by over 4.5 points",
-                "displayPrice": 11.0,
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -5338,46 +5334,46 @@
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/san-antonio-vs-phoenix-4th-quarter-total-nov-09-2026/",
             "choices": [
               {
-                "id": "display-total-over-50p5",
+                "id": "display-total-over-42p5",
                 "owner": "over",
-                "label": "Over 50.5 points",
-                "displayPrice": 95.0,
+                "label": "Over 42.5 points",
+                "displayPrice": 97.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
               },
               {
-                "id": "display-total-over-52p5",
+                "id": "display-total-over-46p5",
                 "owner": "over",
-                "label": "Over 52.5 points",
-                "displayPrice": 75.0,
+                "label": "Over 46.5 points",
+                "displayPrice": 97.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
               },
               {
-                "id": "display-total-over-54p5",
+                "id": "display-total-over-66p5",
                 "owner": "over",
-                "label": "Over 54.5 points",
-                "displayPrice": 55.0,
+                "label": "Over 66.5 points",
+                "displayPrice": 6.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
               },
               {
-                "id": "display-total-over-56p5",
+                "id": "display-total-over-60p5",
                 "owner": "over",
-                "label": "Over 56.5 points",
-                "displayPrice": 35.0,
+                "label": "Over 60.5 points",
+                "displayPrice": 2.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
               },
               {
-                "id": "display-total-over-58p5",
+                "id": "display-total-over-62p5",
                 "owner": "over",
-                "label": "Over 58.5 points",
-                "displayPrice": 15.0,
+                "label": "Over 62.5 points",
+                "displayPrice": 2.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -5548,17 +5544,16 @@
                 "id": "display-GSW",
                 "owner": "GSW",
                 "label": "Golden State",
-                "displayPrice": 53.0,
-                "yesAsk": 53.0,
+                "displayPrice": 99.0,
+                "yesAsk": null,
                 "noAsk": null,
-                "priceSource": "RH public event selection (indicative)",
-                "askVerifiedFrom": "ticket"
+                "priceSource": "RH public event selection (indicative)"
               },
               {
                 "id": "display-NOP",
                 "owner": "NOP",
                 "label": "New Orleans",
-                "displayPrice": 45.0,
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -5567,7 +5562,7 @@
                 "id": "display-tie",
                 "owner": "tie",
                 "label": "Tie",
-                "displayPrice": 4.0,
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -5582,28 +5577,10 @@
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/new-orleans-vs-golden-state-2nd-half-spread-nov-09-2026/",
             "choices": [
               {
-                "id": "display-spread-GSW-1p5",
+                "id": "display-spread-GSW-8p5",
                 "owner": "GSW",
-                "label": "Golden State wins by over 1.5 points",
-                "displayPrice": 48.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
-                "id": "display-spread-GSW-2p5",
-                "owner": "GSW",
-                "label": "Golden State wins by over 2.5 points",
-                "displayPrice": 45.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
-                "id": "display-spread-NOP-1p5",
-                "owner": "NOP",
-                "label": "New Orleans wins by over 1.5 points",
-                "displayPrice": 45.0,
+                "label": "Golden State wins by over 8.5 points",
+                "displayPrice": 99.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -5612,16 +5589,34 @@
                 "id": "display-spread-GSW-4p5",
                 "owner": "GSW",
                 "label": "Golden State wins by over 4.5 points",
-                "displayPrice": 34.0,
+                "displayPrice": 98.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
               },
               {
-                "id": "display-spread-GSW-6p5",
+                "id": "display-spread-NOP-1p5",
+                "owner": "NOP",
+                "label": "New Orleans wins by over 1.5 points",
+                "displayPrice": 5.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-NOP-11p5",
+                "owner": "NOP",
+                "label": "New Orleans wins by over 11.5 points",
+                "displayPrice": 2.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-GSW-22p5",
                 "owner": "GSW",
-                "label": "Golden State wins by over 6.5 points",
-                "displayPrice": 30.0,
+                "label": "Golden State wins by over 22.5 points",
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -5636,19 +5631,28 @@
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/new-orleans-vs-golden-state-2nd-half-total-nov-09-2026/",
             "choices": [
               {
-                "id": "display-total-over-104p5",
+                "id": "display-total-over-96p5",
                 "owner": "over",
-                "label": "Over 104.5 points",
-                "displayPrice": 71.0,
+                "label": "Over 96.5 points",
+                "displayPrice": 99.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
               },
               {
-                "id": "display-total-over-108p5",
+                "id": "display-total-over-98p5",
                 "owner": "over",
-                "label": "Over 108.5 points",
-                "displayPrice": 57.0,
+                "label": "Over 98.5 points",
+                "displayPrice": 99.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-total-over-120p5",
+                "owner": "over",
+                "label": "Over 120.5 points",
+                "displayPrice": 2.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -5657,16 +5661,7 @@
                 "id": "display-total-over-110p5",
                 "owner": "over",
                 "label": "Over 110.5 points",
-                "displayPrice": 49.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
-                "id": "display-total-over-114p5",
-                "owner": "over",
-                "label": "Over 114.5 points",
-                "displayPrice": 41.0,
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -5675,7 +5670,7 @@
                 "id": "display-total-over-112p5",
                 "owner": "over",
                 "label": "Over 112.5 points",
-                "displayPrice": 39.0,
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -5843,7 +5838,7 @@
                 "label": "Golden State",
                 "displayPrice": 99.0,
                 "yesAsk": null,
-                "noAsk": 1.0,
+                "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
               },
               {
@@ -5851,7 +5846,7 @@
                 "owner": "tie",
                 "label": "Tie",
                 "displayPrice": 3.0,
-                "yesAsk": 1.0,
+                "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
               },
@@ -5860,7 +5855,7 @@
                 "owner": "NOP",
                 "label": "New Orleans",
                 "displayPrice": 1.0,
-                "yesAsk": 1.0,
+                "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
               }
@@ -5874,19 +5869,19 @@
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/new-orleans-vs-golden-state-2nd-quarter-spread-nov-09-2026/",
             "choices": [
               {
-                "id": "display-spread-GSW-8p5",
+                "id": "display-spread-GSW-6p5",
                 "owner": "GSW",
-                "label": "Golden State wins by over 8.5 points",
+                "label": "Golden State wins by over 6.5 points",
                 "displayPrice": 99.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
               },
               {
-                "id": "display-spread-GSW-2p5",
+                "id": "display-spread-GSW-8p5",
                 "owner": "GSW",
-                "label": "Golden State wins by over 2.5 points",
-                "displayPrice": 98.0,
+                "label": "Golden State wins by over 8.5 points",
+                "displayPrice": 99.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -5928,46 +5923,46 @@
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/new-orleans-vs-golden-state-2nd-quarter-total-nov-09-2026/",
             "choices": [
               {
-                "id": "display-total-over-56p5",
+                "id": "display-total-over-46p5",
                 "owner": "over",
-                "label": "Over 56.5 points",
+                "label": "Over 46.5 points",
                 "displayPrice": 99.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
               },
               {
-                "id": "display-total-over-58p5",
+                "id": "display-total-over-48p5",
                 "owner": "over",
-                "label": "Over 58.5 points",
+                "label": "Over 48.5 points",
                 "displayPrice": 99.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
               },
               {
-                "id": "display-total-over-64p5",
+                "id": "display-total-over-50p5",
                 "owner": "over",
-                "label": "Over 64.5 points",
-                "displayPrice": 2.0,
+                "label": "Over 50.5 points",
+                "displayPrice": 99.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
               },
               {
-                "id": "display-total-over-60p5",
+                "id": "display-total-over-52p5",
                 "owner": "over",
-                "label": "Over 60.5 points",
-                "displayPrice": 1.0,
+                "label": "Over 52.5 points",
+                "displayPrice": 99.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
               },
               {
-                "id": "display-total-over-62p5",
+                "id": "display-total-over-54p5",
                 "owner": "over",
-                "label": "Over 62.5 points",
-                "displayPrice": 1.0,
+                "label": "Over 54.5 points",
+                "displayPrice": 99.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -5987,27 +5982,27 @@
                 "id": "display-GSW",
                 "owner": "GSW",
                 "label": "Golden State",
-                "displayPrice": 54.0,
-                "yesAsk": 54.0,
-                "noAsk": 47.0,
+                "displayPrice": 99.0,
+                "yesAsk": null,
+                "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
               },
               {
                 "id": "display-NOP",
                 "owner": "NOP",
                 "label": "New Orleans",
-                "displayPrice": 43.0,
-                "yesAsk": 43.0,
-                "noAsk": 59.0,
+                "displayPrice": 1.0,
+                "yesAsk": null,
+                "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
               },
               {
                 "id": "display-tie",
                 "owner": "tie",
                 "label": "Tie",
-                "displayPrice": 6.0,
-                "yesAsk": 5.0,
-                "noAsk": 96.0,
+                "displayPrice": 1.0,
+                "yesAsk": null,
+                "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
               }
             ],
@@ -6020,19 +6015,28 @@
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/new-orleans-vs-golden-state-3rd-quarter-spread-nov-09-2026/",
             "choices": [
               {
-                "id": "display-spread-GSW-1p5",
+                "id": "display-spread-GSW-6p5",
                 "owner": "GSW",
-                "label": "Golden State wins by over 1.5 points",
-                "displayPrice": 49.0,
+                "label": "Golden State wins by over 6.5 points",
+                "displayPrice": 99.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
               },
               {
-                "id": "display-spread-GSW-2p5",
+                "id": "display-spread-GSW-8p5",
                 "owner": "GSW",
-                "label": "Golden State wins by over 2.5 points",
-                "displayPrice": 45.0,
+                "label": "Golden State wins by over 8.5 points",
+                "displayPrice": 99.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-NOP-9p5",
+                "owner": "NOP",
+                "label": "New Orleans wins by over 9.5 points",
+                "displayPrice": 2.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -6041,16 +6045,7 @@
                 "id": "display-spread-NOP-1p5",
                 "owner": "NOP",
                 "label": "New Orleans wins by over 1.5 points",
-                "displayPrice": 43.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
-                "id": "display-spread-GSW-4p5",
-                "owner": "GSW",
-                "label": "Golden State wins by over 4.5 points",
-                "displayPrice": 35.0,
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -6059,7 +6054,7 @@
                 "id": "display-spread-NOP-3p5",
                 "owner": "NOP",
                 "label": "New Orleans wins by over 3.5 points",
-                "displayPrice": 30.0,
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -6074,37 +6069,10 @@
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/new-orleans-vs-golden-state-3rd-quarter-total-nov-09-2026/",
             "choices": [
               {
-                "id": "display-total-over-52p5",
-                "owner": "over",
-                "label": "Over 52.5 points",
-                "displayPrice": 72.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
-                "id": "display-total-over-54p5",
-                "owner": "over",
-                "label": "Over 54.5 points",
-                "displayPrice": 61.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
-                "id": "display-total-over-56p5",
-                "owner": "over",
-                "label": "Over 56.5 points",
-                "displayPrice": 53.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
                 "id": "display-total-over-58p5",
                 "owner": "over",
                 "label": "Over 58.5 points",
-                "displayPrice": 43.0,
+                "displayPrice": 99.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -6113,7 +6081,34 @@
                 "id": "display-total-over-60p5",
                 "owner": "over",
                 "label": "Over 60.5 points",
-                "displayPrice": 33.0,
+                "displayPrice": 99.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-total-over-48p5",
+                "owner": "over",
+                "label": "Over 48.5 points",
+                "displayPrice": 98.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-total-over-62p5",
+                "owner": "over",
+                "label": "Over 62.5 points",
+                "displayPrice": 1.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-total-over-64p5",
+                "owner": "over",
+                "label": "Over 64.5 points",
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -6130,30 +6125,31 @@
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/new-orleans-vs-golden-state-4th-quarter-winner-nov-09-2026/",
             "choices": [
               {
-                "id": "display-NOP",
-                "owner": "NOP",
-                "label": "New Orleans",
-                "displayPrice": 49.0,
-                "yesAsk": 50.0,
-                "noAsk": 53.0,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
                 "id": "display-GSW",
                 "owner": "GSW",
                 "label": "Golden State",
-                "displayPrice": 46.0,
-                "yesAsk": 46.0,
-                "noAsk": 57.0,
+                "displayPrice": 99.0,
+                "yesAsk": null,
+                "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
               },
               {
-                "id": "4d54c547-5425-4c30-af2d-d3b0d6f056bf",
-                "label": "Tie",
-                "yesAsk": 6.0,
-                "noAsk": 97.0,
+                "id": "display-NOP",
+                "owner": "NOP",
+                "label": "New Orleans",
+                "displayPrice": 1.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-tie",
                 "owner": "tie",
-                "displayPrice": null
+                "label": "Tie",
+                "displayPrice": 1.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
               }
             ],
             "reason": null,
@@ -6165,19 +6161,10 @@
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/new-orleans-vs-golden-state-4th-quarter-spread-nov-09-2026/",
             "choices": [
               {
-                "id": "display-spread-NOP-1p5",
-                "owner": "NOP",
-                "label": "New Orleans wins by over 1.5 points",
-                "displayPrice": 43.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
                 "id": "display-spread-GSW-1p5",
                 "owner": "GSW",
                 "label": "Golden State wins by over 1.5 points",
-                "displayPrice": 41.0,
+                "displayPrice": 99.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -6186,25 +6173,34 @@
                 "id": "display-spread-GSW-3p5",
                 "owner": "GSW",
                 "label": "Golden State wins by over 3.5 points",
-                "displayPrice": 35.0,
+                "displayPrice": 99.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
               },
               {
-                "id": "display-spread-NOP-2p5",
-                "owner": "NOP",
-                "label": "New Orleans wins by over 2.5 points",
-                "displayPrice": 34.0,
+                "id": "display-spread-GSW-5p5",
+                "owner": "GSW",
+                "label": "Golden State wins by over 5.5 points",
+                "displayPrice": 30.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
               },
               {
-                "id": "display-spread-NOP-4p5",
-                "owner": "NOP",
-                "label": "New Orleans wins by over 4.5 points",
-                "displayPrice": 29.0,
+                "id": "display-spread-GSW-11p5",
+                "owner": "GSW",
+                "label": "Golden State wins by over 11.5 points",
+                "displayPrice": 3.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-GSW-13p5",
+                "owner": "GSW",
+                "label": "Golden State wins by over 13.5 points",
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -6219,10 +6215,37 @@
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/new-orleans-vs-golden-state-4th-quarter-total-nov-09-2026/",
             "choices": [
               {
+                "id": "display-total-over-47p5",
+                "owner": "over",
+                "label": "Over 47.5 points",
+                "displayPrice": 99.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-total-over-45p5",
+                "owner": "over",
+                "label": "Over 45.5 points",
+                "displayPrice": 98.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-total-over-67p5",
+                "owner": "over",
+                "label": "Over 67.5 points",
+                "displayPrice": 7.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
                 "id": "display-total-over-49p5",
                 "owner": "over",
                 "label": "Over 49.5 points",
-                "displayPrice": 73.0,
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -6231,34 +6254,7 @@
                 "id": "display-total-over-51p5",
                 "owner": "over",
                 "label": "Over 51.5 points",
-                "displayPrice": 64.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
-                "id": "display-total-over-53p5",
-                "owner": "over",
-                "label": "Over 53.5 points",
-                "displayPrice": 53.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
-                "id": "display-total-over-55p5",
-                "owner": "over",
-                "label": "Over 55.5 points",
-                "displayPrice": 43.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
-                "id": "display-total-over-57p5",
-                "owner": "over",
-                "label": "Over 57.5 points",
-                "displayPrice": 38.0,
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
