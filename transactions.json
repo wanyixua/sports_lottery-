@@ -1651,8 +1651,8 @@
       "usDate": "2026-11-09",
       "bet": "CLE -5.5 + LAL -2.5 + DET -4.5 + TOR + DAL + HOU + SAS",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 0,
+      "status": "loss",
       "profitIfWin": 446,
       "legs": [
         {
@@ -1687,7 +1687,17 @@
           "market": "moneyline"
         }
       ],
-      "note": "微信11/9 11:28七串一，11:41确认「买好了20赚446」；RH Filled 466份，$20本金，全部命中净赚$446。"
+      "note": "微信11/9 11:28七串一，11:41确认「买好了20赚446」；RH Filled 466份，$20本金，全部命中净赚$446。",
+      "legResults": [
+        "loss",
+        "win",
+        "win",
+        "loss",
+        "win",
+        "win",
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "id": 93,
@@ -1695,8 +1705,8 @@
       "usDate": "2026-11-09",
       "bet": "CLE -5.5 + DET -6.5",
       "stake": 30,
-      "payout": null,
-      "status": "pending",
+      "payout": 0,
+      "status": "loss",
       "profitIfWin": 35,
       "legs": [
         {
@@ -1710,7 +1720,12 @@
           "line": -6.5
         }
       ],
-      "note": "微信11/9 16:12二串一，确认「买好了30赚35」。与小王$20跟单合计一张RH成交：$50、114份、总命中返还$114；王老板份额本金$30净赚$35。"
+      "note": "微信11/9 16:12二串一，确认「买好了30赚35」。与小王$20跟单合计一张RH成交：$50、114份、总命中返还$114；王老板份额本金$30净赚$35。",
+      "legResults": [
+        "loss",
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "id": 94,
@@ -1718,8 +1733,8 @@
       "usDate": "2026-11-09",
       "bet": "TOR -3.5",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 0,
+      "status": "loss",
       "profitIfWin": 29,
       "legs": [
         {
@@ -1728,7 +1743,11 @@
           "line": -3.5
         }
       ],
-      "note": "微信11/9 16:23猛龙让3.5，确认「20赚29」；RH Filled 49份，投入$20。"
+      "note": "微信11/9 16:23猛龙让3.5，确认「20赚29」；RH Filled 49份，投入$20。",
+      "legResults": [
+        "loss"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "id": 95,
@@ -1736,8 +1755,8 @@
       "usDate": "2026-11-09",
       "bet": "DAL -6.5 + HOU -3.5",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 0,
+      "status": "loss",
       "profitIfWin": 56,
       "legs": [
         {
@@ -1751,7 +1770,12 @@
           "line": -3.5
         }
       ],
-      "note": "微信11/9 16:23后提出独行侠让6.5、火箭让3.5二串一，确认「20赚56」；RH Filled 76份，投入$20。"
+      "note": "微信11/9 16:23后提出独行侠让6.5、火箭让3.5二串一，确认「20赚56」；RH Filled 76份，投入$20。",
+      "legResults": [
+        "loss",
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "id": 96,
@@ -1759,8 +1783,8 @@
       "usDate": "2026-11-09",
       "bet": "DAL -2.5",
       "stake": 50,
-      "payout": null,
-      "status": "pending",
+      "payout": 97.0,
+      "status": "win",
       "profitIfWin": 47,
       "legs": [
         {
@@ -1769,7 +1793,11 @@
           "line": -2.5
         }
       ],
-      "note": "微信11/9 17:10独行侠让2.5，确认「50赚47」；RH Filled 97份、$50本金。"
+      "note": "微信11/9 17:10独行侠让2.5，确认「50赚47」；RH Filled 97份、$50本金。",
+      "legResults": [
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "id": 97,
@@ -1806,8 +1834,8 @@
       "usDate": "2026-11-09",
       "bet": "CLE -5.5 + DET -6.5",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 0,
+      "status": "loss",
       "profitIfWin": 29,
       "legs": [
         {
@@ -1821,7 +1849,12 @@
           "line": -6.5
         }
       ],
-      "note": "本人确认跟买王老板骑士-5.5+活塞-6.5二串一$20；RH与王老板合计成交$50/114份，按已确认王老板返还$65分配，本人命中返还$49，净赚$29。"
+      "note": "本人确认跟买王老板骑士-5.5+活塞-6.5二串一$20；RH与王老板合计成交$50/114份，按已确认王老板返还$65分配，本人命中返还$49，净赚$29。",
+      "legResults": [
+        "loss",
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "id": 99,
@@ -1886,8 +1919,8 @@
       "usDate": "2026-11-09",
       "bet": "SAS -4.5",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 29.0,
+      "status": "win",
       "profitIfWin": 9,
       "legs": [
         {
@@ -1896,7 +1929,11 @@
           "line": -4.5
         }
       ],
-      "note": "微信11/9 17:57：王老板「马刺让4点五，胜20刀」，小王确认「20赚9」。RH Filled 29份 @ $0.67，Commissions and fees $0.42，投入约$20，命中净赚$9。"
+      "note": "微信11/9 17:57：王老板「马刺让4点五，胜20刀」，小王确认「20赚9」。RH Filled 29份 @ $0.67，Commissions and fees $0.42，投入约$20，命中净赚$9。",
+      "legResults": [
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "id": 102,
@@ -1904,8 +1941,8 @@
       "usDate": "2026-11-09",
       "bet": "HOU -3.5",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 30.0,
+      "status": "win",
       "profitIfWin": 10,
       "legs": [
         {
@@ -1914,7 +1951,11 @@
           "line": -3.5
         }
       ],
-      "note": "微信11/9 17:57：王老板「火箭让3点5胜，20刀」，小王确认「20赚10」。RH Filled 30份 @ $0.64，Commissions and fees $0.44，命中净赚$10。"
+      "note": "微信11/9 17:57：王老板「火箭让3点5胜，20刀」，小王确认「20赚10」。RH Filled 30份 @ $0.64，Commissions and fees $0.44，命中净赚$10。",
+      "legResults": [
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "id": 103,
