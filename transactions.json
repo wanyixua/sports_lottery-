@@ -1805,8 +1805,8 @@
       "usDate": "2026-11-09",
       "bet": "DAL + HOU + SAS + GSW",
       "stake": 30,
-      "payout": null,
-      "status": "pending",
+      "payout": 111.0,
+      "status": "win",
       "profitIfWin": 81,
       "legs": [
         {
@@ -1826,7 +1826,14 @@
           "market": "moneyline"
         }
       ],
-      "note": "微信11/9 17:31独行侠/火箭/马刺/勇士四串一，确认「30赚81」。与小王$20跟单合计一张RH成交：$50、181份、总命中返还$181；王老板份额本金$30净赚$81。"
+      "note": "微信11/9 17:31独行侠/火箭/马刺/勇士四串一，确认「30赚81」。与小王$20跟单合计一张RH成交：$50、181份、总命中返还$181；王老板份额本金$30净赚$81。",
+      "legResults": [
+        "win",
+        "win",
+        "win",
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "id": 98,
@@ -1862,8 +1869,8 @@
       "usDate": "2026-11-09",
       "bet": "DAL + HOU + SAS + GSW",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 70.0,
+      "status": "win",
       "profitIfWin": 50,
       "legs": [
         {
@@ -1883,7 +1890,14 @@
           "market": "moneyline"
         }
       ],
-      "note": "本人确认跟买王老板独行侠/火箭/马刺/勇士独赢四串一$20；RH与王老板合计成交$50/181份，按已确认王老板返还$111分配，本人命中返还$70，净赚$50。"
+      "note": "本人确认跟买王老板独行侠/火箭/马刺/勇士独赢四串一$20；RH与王老板合计成交$50/181份，按已确认王老板返还$111分配，本人命中返还$70，净赚$50。",
+      "legResults": [
+        "win",
+        "win",
+        "win",
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "id": 100,
@@ -1963,8 +1977,8 @@
       "usDate": "2026-11-09",
       "bet": "GSW",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 23.0,
+      "status": "win",
       "profitIfWin": 3,
       "legs": [
         {
@@ -1972,7 +1986,11 @@
           "market": "moneyline"
         }
       ],
-      "note": "微信11/9 19:01：王老板「勇士胜20刀」，小王确认「20赚3」。RH Filled 23份 @ $0.84，Commissions and fees $0.29，命中净赚$3。"
+      "note": "微信11/9 19:01：王老板「勇士胜20刀」，小王确认「20赚3」。RH Filled 23份 @ $0.84，Commissions and fees $0.29，命中净赚$3。",
+      "legResults": [
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     }
   ]
 }
