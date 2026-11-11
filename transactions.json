@@ -1905,8 +1905,8 @@
       "usDate": "2026-11-09",
       "bet": "GSW + DET + NYK",
       "stake": 50,
-      "payout": null,
-      "status": "pending",
+      "payout": 88.0,
+      "status": "win",
       "profitIfWin": 38,
       "legs": [
         {
@@ -1925,7 +1925,13 @@
           "gameDate": "2026-11-10"
         }
       ],
-      "note": "本人独立三串一：勇士、活塞、尼克斯独赢；RH Filled 88份，Entered amount $50，命中总返还$88，净赚$38。 注意跨日：GSW/DET比赛日11/9，NYK比赛日11/10；按各腿gameDate结算。"
+      "note": "本人独立三串一：勇士、活塞、尼克斯独赢；RH Filled 88份，Entered amount $50，命中总返还$88，净赚$38。 注意跨日：GSW/DET比赛日11/9，NYK比赛日11/10；按各腿gameDate结算。",
+      "legResults": [
+        "win",
+        "win",
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "id": 101,
@@ -2092,8 +2098,8 @@
       "usDate": "2026-11-10",
       "bet": "NYK -5.5",
       "stake": 50,
-      "payout": null,
-      "status": "pending",
+      "payout": 62.0,
+      "status": "win",
       "profitIfWin": 12,
       "legs": [
         {
@@ -2103,7 +2109,11 @@
           "gameDate": "2026-11-10"
         }
       ],
-      "note": "微信王老板「尼克斯让5点5，胜，50刀」，小王回复「50赚12」。本批 RH 截图未提供该单的单独 Filled 详情；按微信成交回复登记，待补 RH 交叉核验。"
+      "note": "微信王老板「尼克斯让5点5，胜，50刀」，小王回复「50赚12」。本批 RH 截图未提供该单的单独 Filled 详情；按微信成交回复登记，待补 RH 交叉核验。",
+      "legResults": [
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "id": 108,
