@@ -1783,7 +1783,7 @@
       "usDate": "2026-11-09",
       "bet": "DAL -2.5",
       "stake": 50,
-      "payout": 97.0,
+      "payout": 97,
       "status": "win",
       "profitIfWin": 47,
       "legs": [
@@ -1805,7 +1805,7 @@
       "usDate": "2026-11-09",
       "bet": "DAL + HOU + SAS + GSW",
       "stake": 30,
-      "payout": 111.0,
+      "payout": 111,
       "status": "win",
       "profitIfWin": 81,
       "legs": [
@@ -1869,7 +1869,7 @@
       "usDate": "2026-11-09",
       "bet": "DAL + HOU + SAS + GSW",
       "stake": 20,
-      "payout": 70.0,
+      "payout": 70,
       "status": "win",
       "profitIfWin": 50,
       "legs": [
@@ -1933,7 +1933,7 @@
       "usDate": "2026-11-09",
       "bet": "SAS -4.5",
       "stake": 20,
-      "payout": 29.0,
+      "payout": 29,
       "status": "win",
       "profitIfWin": 9,
       "legs": [
@@ -1955,7 +1955,7 @@
       "usDate": "2026-11-09",
       "bet": "HOU -3.5",
       "stake": 20,
-      "payout": 30.0,
+      "payout": 30,
       "status": "win",
       "profitIfWin": 10,
       "legs": [
@@ -1977,7 +1977,7 @@
       "usDate": "2026-11-09",
       "bet": "GSW",
       "stake": 20,
-      "payout": 23.0,
+      "payout": 23,
       "status": "win",
       "profitIfWin": 3,
       "legs": [
@@ -1991,6 +1991,175 @@
         "win"
       ],
       "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
+    },
+    {
+      "id": 104,
+      "owner": "王老板",
+      "usDate": "2026-11-10",
+      "bet": "LAL + SAS + DET + PHX -2.5 + MIA -2.5 + NYK -7.5 + ORL -2.5",
+      "stake": 20,
+      "payout": null,
+      "status": "pending",
+      "profitIfWin": 115,
+      "legs": [
+        {
+          "team": "LAL",
+          "market": "moneyline",
+          "gameDate": "2026-11-11"
+        },
+        {
+          "team": "SAS",
+          "market": "moneyline",
+          "gameDate": "2026-11-11"
+        },
+        {
+          "team": "DET",
+          "market": "moneyline",
+          "gameDate": "2026-11-12"
+        },
+        {
+          "team": "PHX",
+          "market": "spread",
+          "line": -2.5,
+          "gameDate": "2026-11-10"
+        },
+        {
+          "team": "MIA",
+          "market": "spread",
+          "line": -2.5,
+          "gameDate": "2026-11-10"
+        },
+        {
+          "team": "NYK",
+          "market": "spread",
+          "line": -7.5,
+          "gameDate": "2026-11-10"
+        },
+        {
+          "team": "ORL",
+          "market": "spread",
+          "line": -2.5,
+          "gameDate": "2026-11-10"
+        }
+      ],
+      "note": "微信王老板七串一最终确认：保留太阳PHX -2.5，只将热火MIA让分从-3.5改为-2.5；其他腿保持原要求。RH实际Filled 7-leg 135份，投入$20，命中净赚$115。实际买入七腿与最终确认一致。比赛跨11/10、11/11、11/12。"
+    },
+    {
+      "id": 105,
+      "owner": "王老板",
+      "usDate": "2026-11-10",
+      "bet": "NYK -7.5 + OKC",
+      "stake": 20,
+      "payout": null,
+      "status": "pending",
+      "profitIfWin": 26,
+      "legs": [
+        {
+          "team": "NYK",
+          "market": "spread",
+          "line": -7.5,
+          "gameDate": "2026-11-10"
+        },
+        {
+          "team": "OKC",
+          "market": "moneyline",
+          "gameDate": "2026-11-10"
+        }
+      ],
+      "note": "微信追加「十一号比赛尼克斯让7.5，雷霆胜二串一」20刀，答「买好了 20赚26」；RH Filled 2-leg，46份，Entered amount $20。"
+    },
+    {
+      "id": 106,
+      "owner": "王老板",
+      "usDate": "2026-11-10",
+      "bet": "PHI",
+      "stake": 20,
+      "payout": null,
+      "status": "pending",
+      "profitIfWin": 20,
+      "legs": [
+        {
+          "team": "PHI",
+          "market": "moneyline",
+          "gameDate": "2026-11-10"
+        }
+      ],
+      "note": "微信王老板「买76人胜，20刀」，随后说「不买了」；小王回复「已经买进去了」「20赚20」。RH Filled PHI Yes 40份、$20。属于取消发生在已成交之后，仍须入账。"
+    },
+    {
+      "id": 107,
+      "owner": "王老板",
+      "usDate": "2026-11-10",
+      "bet": "NYK -5.5",
+      "stake": 50,
+      "payout": null,
+      "status": "pending",
+      "profitIfWin": 12,
+      "legs": [
+        {
+          "team": "NYK",
+          "market": "spread",
+          "line": -5.5,
+          "gameDate": "2026-11-10"
+        }
+      ],
+      "note": "微信王老板「尼克斯让5点5，胜，50刀」，小王回复「50赚12」。本批 RH 截图未提供该单的单独 Filled 详情；按微信成交回复登记，待补 RH 交叉核验。"
+    },
+    {
+      "id": 108,
+      "owner": "王老板",
+      "usDate": "2026-11-10",
+      "bet": "PHX + MIA",
+      "stake": 20,
+      "payout": null,
+      "status": "pending",
+      "profitIfWin": 21,
+      "legs": [
+        {
+          "team": "PHX",
+          "market": "moneyline",
+          "gameDate": "2026-11-10"
+        },
+        {
+          "team": "MIA",
+          "market": "moneyline",
+          "gameDate": "2026-11-10"
+        }
+      ],
+      "note": "微信王老板「太阳胜、热火胜，二串一，20刀」，小王确认「20赚21」；RH Filled 2-leg PHX/MIA 41份，$20。"
+    },
+    {
+      "id": 109,
+      "owner": "小王",
+      "usDate": "2026-11-09",
+      "bet": "BOS + NOP + LAL + SAS",
+      "stake": 20,
+      "payout": null,
+      "status": "pending",
+      "profitIfWin": 48,
+      "legs": [
+        {
+          "team": "BOS",
+          "market": "moneyline",
+          "gameDate": "2026-11-11"
+        },
+        {
+          "team": "NOP",
+          "market": "moneyline",
+          "gameDate": "2026-11-11"
+        },
+        {
+          "team": "LAL",
+          "market": "moneyline",
+          "gameDate": "2026-11-11"
+        },
+        {
+          "team": "SAS",
+          "market": "moneyline",
+          "gameDate": "2026-11-11"
+        }
+      ],
+      "note": "本人明确四串一归属小王；RH Filled 4-leg BOS/NOP/LAL/SAS 68份、Entered amount $20，命中净赚$48。RH Submitted 2026-11-09，比赛日均11/11。"
     }
   ]
 }
