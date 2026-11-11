@@ -2080,8 +2080,8 @@
       "usDate": "2026-11-10",
       "bet": "PHI",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 0,
+      "status": "loss",
       "profitIfWin": 20,
       "legs": [
         {
@@ -2090,7 +2090,11 @@
           "gameDate": "2026-11-10"
         }
       ],
-      "note": "微信王老板「买76人胜，20刀」，随后说「不买了」；小王回复「已经买进去了」「20赚20」。RH Filled PHI Yes 40份、$20。属于取消发生在已成交之后，仍须入账。"
+      "note": "微信王老板「买76人胜，20刀」，随后说「不买了」；小王回复「已经买进去了」「20赚20」。RH Filled PHI Yes 40份、$20。属于取消发生在已成交之后，仍须入账。",
+      "legResults": [
+        "loss"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "id": 107,
@@ -2121,8 +2125,8 @@
       "usDate": "2026-11-10",
       "bet": "PHX + MIA",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 41.0,
+      "status": "win",
       "profitIfWin": 21,
       "legs": [
         {
@@ -2136,7 +2140,12 @@
           "gameDate": "2026-11-10"
         }
       ],
-      "note": "微信王老板「太阳胜、热火胜，二串一，20刀」，小王确认「20赚21」；RH Filled 2-leg PHX/MIA 41份，$20。"
+      "note": "微信王老板「太阳胜、热火胜，二串一，20刀」，小王确认「20赚21」；RH Filled 2-leg PHX/MIA 41份，$20。",
+      "legResults": [
+        "win",
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "id": 109,
