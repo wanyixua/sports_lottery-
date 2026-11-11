@@ -2056,8 +2056,8 @@
       "usDate": "2026-11-10",
       "bet": "NYK -7.5 + OKC",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 0,
+      "status": "loss",
       "profitIfWin": 26,
       "legs": [
         {
@@ -2072,7 +2072,12 @@
           "gameDate": "2026-11-10"
         }
       ],
-      "note": "微信追加「十一号比赛尼克斯让7.5，雷霆胜二串一」20刀，答「买好了 20赚26」；RH Filled 2-leg，46份，Entered amount $20。"
+      "note": "微信追加「十一号比赛尼克斯让7.5，雷霆胜二串一」20刀，答「买好了 20赚26」；RH Filled 2-leg，46份，Entered amount $20。",
+      "legResults": [
+        "win",
+        "loss"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "id": 106,
@@ -2186,8 +2191,8 @@
       "usDate": "2026-11-10",
       "bet": "ORL + OKC",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 0,
+      "status": "loss",
       "profitIfWin": 28,
       "legs": [
         {
@@ -2201,7 +2206,12 @@
           "gameDate": "2026-11-10"
         }
       ],
-      "note": "微信11/10 19:19：王老板「魔术胜，雷霆胜，二串一20刀」，小王答「20-28」。RH Filled 2-leg ORL/OKC，Entered $20，48份 @ $0.399。实际成交与微信一致。"
+      "note": "微信11/10 19:19：王老板「魔术胜，雷霆胜，二串一20刀」，小王答「20-28」。RH Filled 2-leg ORL/OKC，Entered $20，48份 @ $0.399。实际成交与微信一致。",
+      "legResults": [
+        "win",
+        "loss"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "id": 111,
@@ -2209,8 +2219,8 @@
       "usDate": "2026-11-10",
       "bet": "OKC",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 0,
+      "status": "loss",
       "profitIfWin": 16,
       "legs": [
         {
@@ -2219,7 +2229,11 @@
           "gameDate": "2026-11-10"
         }
       ],
-      "note": "微信11/10 19:19：王老板「雷霆胜20刀」，小王答「20-16」。RH Filled OKC Yes，Entered $20，36份 @ $0.54；Commissions and fees $0.54。实际成交与微信一致。"
+      "note": "微信11/10 19:19：王老板「雷霆胜20刀」，小王答「20-16」。RH Filled OKC Yes，Entered $20，36份 @ $0.54；Commissions and fees $0.54。实际成交与微信一致。",
+      "legResults": [
+        "loss"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "id": 112,
@@ -2227,8 +2241,8 @@
       "usDate": "2026-11-10",
       "bet": "ORL + PHX + OKC + MIA",
       "stake": 10,
-      "payout": null,
-      "status": "pending",
+      "payout": 0,
+      "status": "loss",
       "profitIfWin": 19,
       "legs": [
         {
@@ -2252,7 +2266,14 @@
           "gameDate": "2026-11-10"
         }
       ],
-      "note": "本人单独投注：RH Filled 4-leg ORL/PHX/OKC/MIA moneyline；Entered amount $10，29份 @ $0.326，11/10 19:41成交；全部命中返还$29，净赚$19（按输入本金计）。"
+      "note": "本人单独投注：RH Filled 4-leg ORL/PHX/OKC/MIA moneyline；Entered amount $10，29份 @ $0.326，11/10 19:41成交；全部命中返还$29，净赚$19（按输入本金计）。",
+      "legResults": [
+        "win",
+        "win",
+        "loss",
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     }
   ]
 }
