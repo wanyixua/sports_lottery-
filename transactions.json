@@ -1905,7 +1905,7 @@
       "usDate": "2026-11-09",
       "bet": "GSW + DET + NYK",
       "stake": 50,
-      "payout": 88.0,
+      "payout": 88,
       "status": "win",
       "profitIfWin": 38,
       "legs": [
@@ -2098,7 +2098,7 @@
       "usDate": "2026-11-10",
       "bet": "NYK -5.5",
       "stake": 50,
-      "payout": 62.0,
+      "payout": 62,
       "status": "win",
       "profitIfWin": 12,
       "legs": [
@@ -2141,7 +2141,7 @@
     {
       "id": 109,
       "owner": "小王",
-      "usDate": "2026-11-11",
+      "usDate": "2026-11-09",
       "bet": "BOS + NOP + LAL + SAS",
       "stake": 20,
       "payout": null,
@@ -2170,6 +2170,80 @@
         }
       ],
       "note": "本人明确四串一归属小王；RH Filled 4-leg BOS/NOP/LAL/SAS 68份、Entered amount $20，命中净赚$48。RH Submitted 2026-11-09，比赛日均11/11。"
+    },
+    {
+      "id": 110,
+      "owner": "王老板",
+      "usDate": "2026-11-10",
+      "bet": "ORL + OKC",
+      "stake": 20,
+      "payout": null,
+      "status": "pending",
+      "profitIfWin": 28,
+      "legs": [
+        {
+          "team": "ORL",
+          "market": "moneyline",
+          "gameDate": "2026-11-10"
+        },
+        {
+          "team": "OKC",
+          "market": "moneyline",
+          "gameDate": "2026-11-10"
+        }
+      ],
+      "note": "微信11/10 19:19：王老板「魔术胜，雷霆胜，二串一20刀」，小王答「20-28」。RH Filled 2-leg ORL/OKC，Entered $20，48份 @ $0.399。实际成交与微信一致。"
+    },
+    {
+      "id": 111,
+      "owner": "王老板",
+      "usDate": "2026-11-10",
+      "bet": "OKC",
+      "stake": 20,
+      "payout": null,
+      "status": "pending",
+      "profitIfWin": 16,
+      "legs": [
+        {
+          "team": "OKC",
+          "market": "moneyline",
+          "gameDate": "2026-11-10"
+        }
+      ],
+      "note": "微信11/10 19:19：王老板「雷霆胜20刀」，小王答「20-16」。RH Filled OKC Yes，Entered $20，36份 @ $0.54；Commissions and fees $0.54。实际成交与微信一致。"
+    },
+    {
+      "id": 112,
+      "owner": "小王",
+      "usDate": "2026-11-10",
+      "bet": "ORL + PHX + OKC + MIA",
+      "stake": 10,
+      "payout": null,
+      "status": "pending",
+      "profitIfWin": 19,
+      "legs": [
+        {
+          "team": "ORL",
+          "market": "moneyline",
+          "gameDate": "2026-11-10"
+        },
+        {
+          "team": "PHX",
+          "market": "moneyline",
+          "gameDate": "2026-11-10"
+        },
+        {
+          "team": "OKC",
+          "market": "moneyline",
+          "gameDate": "2026-11-10"
+        },
+        {
+          "team": "MIA",
+          "market": "moneyline",
+          "gameDate": "2026-11-10"
+        }
+      ],
+      "note": "本人单独投注：RH Filled 4-leg ORL/PHX/OKC/MIA moneyline；Entered amount $10，29份 @ $0.326，11/10 19:41成交；全部命中返还$29，净赚$19（按输入本金计）。"
     }
   ]
 }
