@@ -1,6 +1,6 @@
 {
   "date": "2026-11-10",
-  "capturedAt": "2026-11-11T03:57:01+00:00",
+  "capturedAt": "2026-11-11T06:41:07+00:00",
   "source": "RH public event pages; displayPrice is INDICATIVE, yesAsk/noAsk only when verified",
   "games": [
     {
@@ -1622,20 +1622,19 @@
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/boston-vs-philadelphia-4th-quarter-winner-nov-10-2026/",
             "choices": [
               {
-                "id": "display-PHI",
-                "owner": "PHI",
-                "label": "Philadelphia",
-                "displayPrice": 49.0,
-                "yesAsk": 52.0,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)",
-                "askVerifiedFrom": "ticket"
-              },
-              {
                 "id": "display-BOS",
                 "owner": "BOS",
                 "label": "Boston",
-                "displayPrice": 44.0,
+                "displayPrice": 99.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-PHI",
+                "owner": "PHI",
+                "label": "Philadelphia",
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -1644,7 +1643,7 @@
                 "id": "display-tie",
                 "owner": "tie",
                 "label": "Tie",
-                "displayPrice": 4.0,
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -2027,20 +2026,19 @@
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/miami-vs-utah-2nd-half-winner-nov-10-2026/",
             "choices": [
               {
-                "id": "display-MIA",
-                "owner": "MIA",
-                "label": "Miami",
-                "displayPrice": 91.0,
-                "yesAsk": 91.0,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)",
-                "askVerifiedFrom": "ticket"
-              },
-              {
                 "id": "display-UTA",
                 "owner": "UTA",
                 "label": "Utah",
-                "displayPrice": 14.0,
+                "displayPrice": 99.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-MIA",
+                "owner": "MIA",
+                "label": "Miami",
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -2049,7 +2047,7 @@
                 "id": "display-tie",
                 "owner": "tie",
                 "label": "Tie",
-                "displayPrice": 5.0,
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -2064,19 +2062,37 @@
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/miami-vs-utah-2nd-half-spread-nov-10-2026/",
             "choices": [
               {
-                "id": "display-spread-MIA-1p5",
-                "owner": "MIA",
-                "label": "Miami wins by over 1.5 points",
-                "displayPrice": 72.0,
+                "id": "display-spread-UTA-1p5",
+                "owner": "UTA",
+                "label": "Utah wins by over 1.5 points",
+                "displayPrice": 99.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
               },
               {
-                "id": "display-spread-MIA-6p5",
+                "id": "display-spread-UTA-3p5",
+                "owner": "UTA",
+                "label": "Utah wins by over 3.5 points",
+                "displayPrice": 99.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-UTA-7p5",
+                "owner": "UTA",
+                "label": "Utah wins by over 7.5 points",
+                "displayPrice": 11.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-MIA-22p5",
                 "owner": "MIA",
-                "label": "Miami wins by over 6.5 points",
-                "displayPrice": 72.0,
+                "label": "Miami wins by over 22.5 points",
+                "displayPrice": 6.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -2085,25 +2101,7 @@
                 "id": "display-spread-MIA-10p5",
                 "owner": "MIA",
                 "label": "Miami wins by over 10.5 points",
-                "displayPrice": 57.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
-                "id": "display-spread-MIA-14p5",
-                "owner": "MIA",
-                "label": "Miami wins by over 14.5 points",
-                "displayPrice": 38.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
-                "id": "display-spread-MIA-8p5",
-                "owner": "MIA",
-                "label": "Miami wins by over 8.5 points",
-                "displayPrice": 24.0,
+                "displayPrice": 3.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -2118,46 +2116,46 @@
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/miami-vs-utah-2nd-half-total-nov-10-2026/",
             "choices": [
               {
-                "id": "display-total-over-101p5",
+                "id": "display-total-over-97p5",
                 "owner": "over",
-                "label": "Over 101.5 points",
-                "displayPrice": 69.0,
+                "label": "Over 97.5 points",
+                "displayPrice": 99.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
               },
               {
-                "id": "display-total-over-107p5",
+                "id": "display-total-over-99p5",
                 "owner": "over",
-                "label": "Over 107.5 points",
-                "displayPrice": 62.0,
+                "label": "Over 99.5 points",
+                "displayPrice": 99.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
               },
               {
-                "id": "display-total-over-109p5",
+                "id": "display-total-over-113p5",
                 "owner": "over",
-                "label": "Over 109.5 points",
-                "displayPrice": 42.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
-                "id": "display-total-over-111p5",
-                "owner": "over",
-                "label": "Over 111.5 points",
-                "displayPrice": 42.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
-                "id": "display-total-over-105p5",
-                "owner": "over",
-                "label": "Over 105.5 points",
+                "label": "Over 113.5 points",
                 "displayPrice": 39.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-total-over-115p5",
+                "owner": "over",
+                "label": "Over 115.5 points",
+                "displayPrice": 30.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-total-over-125p5",
+                "owner": "over",
+                "label": "Over 125.5 points",
+                "displayPrice": 15.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -2469,17 +2467,7 @@
                 "id": "display-MIA",
                 "owner": "MIA",
                 "label": "Miami",
-                "displayPrice": 63.0,
-                "yesAsk": 62.0,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)",
-                "askVerifiedFrom": "ticket"
-              },
-              {
-                "id": "display-UTA",
-                "owner": "UTA",
-                "label": "Utah",
-                "displayPrice": 31.0,
+                "displayPrice": 99.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -2488,7 +2476,16 @@
                 "id": "display-tie",
                 "owner": "tie",
                 "label": "Tie",
-                "displayPrice": 4.0,
+                "displayPrice": 1.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-UTA",
+                "owner": "UTA",
+                "label": "Utah",
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -2503,10 +2500,28 @@
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/miami-vs-utah-3rd-quarter-spread-nov-10-2026/",
             "choices": [
               {
+                "id": "display-spread-MIA-6p5",
+                "owner": "MIA",
+                "label": "Miami wins by over 6.5 points",
+                "displayPrice": 99.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
                 "id": "display-spread-MIA-8p5",
                 "owner": "MIA",
                 "label": "Miami wins by over 8.5 points",
-                "displayPrice": 85.0,
+                "displayPrice": 99.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-MIA-1p5",
+                "owner": "MIA",
+                "label": "Miami wins by over 1.5 points",
+                "displayPrice": 97.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -2515,7 +2530,7 @@
                 "id": "display-spread-MIA-10p5",
                 "owner": "MIA",
                 "label": "Miami wins by over 10.5 points",
-                "displayPrice": 74.0,
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -2524,25 +2539,7 @@
                 "id": "display-spread-MIA-12p5",
                 "owner": "MIA",
                 "label": "Miami wins by over 12.5 points",
-                "displayPrice": 53.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
-                "id": "display-spread-MIA-14p5",
-                "owner": "MIA",
-                "label": "Miami wins by over 14.5 points",
-                "displayPrice": 33.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
-                "id": "display-spread-UTA-7p5",
-                "owner": "UTA",
-                "label": "Utah wins by over 7.5 points",
-                "displayPrice": 10.0,
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -2560,7 +2557,34 @@
                 "id": "display-total-over-44p5",
                 "owner": "over",
                 "label": "Over 44.5 points",
-                "displayPrice": 98.0,
+                "displayPrice": 99.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-total-over-66p5",
+                "owner": "over",
+                "label": "Over 66.5 points",
+                "displayPrice": 10.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-total-over-62p5",
+                "owner": "over",
+                "label": "Over 62.5 points",
+                "displayPrice": 5.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-total-over-68p5",
+                "owner": "over",
+                "label": "Over 68.5 points",
+                "displayPrice": 5.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -2569,34 +2593,7 @@
                 "id": "display-total-over-46p5",
                 "owner": "over",
                 "label": "Over 46.5 points",
-                "displayPrice": 76.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
-                "id": "display-total-over-48p5",
-                "owner": "over",
-                "label": "Over 48.5 points",
-                "displayPrice": 55.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
-                "id": "display-total-over-50p5",
-                "owner": "over",
-                "label": "Over 50.5 points",
-                "displayPrice": 34.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
-                "id": "display-total-over-52p5",
-                "owner": "over",
-                "label": "Over 52.5 points",
-                "displayPrice": 19.0,
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -2616,17 +2613,16 @@
                 "id": "display-UTA",
                 "owner": "UTA",
                 "label": "Utah",
-                "displayPrice": 51.0,
-                "yesAsk": 51.0,
+                "displayPrice": 99.0,
+                "yesAsk": null,
                 "noAsk": null,
-                "priceSource": "RH public event selection (indicative)",
-                "askVerifiedFrom": "ticket"
+                "priceSource": "RH public event selection (indicative)"
               },
               {
                 "id": "display-MIA",
                 "owner": "MIA",
                 "label": "Miami",
-                "displayPrice": 46.0,
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -2635,7 +2631,7 @@
                 "id": "display-tie",
                 "owner": "tie",
                 "label": "Tie",
-                "displayPrice": 4.0,
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -2650,46 +2646,46 @@
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/miami-vs-utah-4th-quarter-spread-nov-10-2026/",
             "choices": [
               {
-                "id": "display-spread-UTA-1p5",
+                "id": "display-spread-UTA-6p5",
                 "owner": "UTA",
-                "label": "Utah wins by over 1.5 points",
-                "displayPrice": 45.0,
+                "label": "Utah wins by over 6.5 points",
+                "displayPrice": 99.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
               },
               {
-                "id": "display-spread-MIA-1p5",
-                "owner": "MIA",
-                "label": "Miami wins by over 1.5 points",
-                "displayPrice": 42.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
-                "id": "display-spread-UTA-2p5",
+                "id": "display-spread-UTA-8p5",
                 "owner": "UTA",
-                "label": "Utah wins by over 2.5 points",
-                "displayPrice": 35.0,
+                "label": "Utah wins by over 8.5 points",
+                "displayPrice": 99.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
               },
               {
-                "id": "display-spread-MIA-3p5",
+                "id": "display-spread-MIA-11p5",
                 "owner": "MIA",
-                "label": "Miami wins by over 3.5 points",
-                "displayPrice": 33.0,
+                "label": "Miami wins by over 11.5 points",
+                "displayPrice": 8.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
               },
               {
-                "id": "display-spread-MIA-5p5",
+                "id": "display-spread-MIA-13p5",
                 "owner": "MIA",
-                "label": "Miami wins by over 5.5 points",
-                "displayPrice": 25.0,
+                "label": "Miami wins by over 13.5 points",
+                "displayPrice": 4.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-MIA-9p5",
+                "owner": "MIA",
+                "label": "Miami wins by over 9.5 points",
+                "displayPrice": 3.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -2704,46 +2700,46 @@
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/miami-vs-utah-4th-quarter-total-nov-10-2026/",
             "choices": [
               {
+                "id": "display-total-over-42p5",
+                "owner": "over",
+                "label": "Over 42.5 points",
+                "displayPrice": 99.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-total-over-44p5",
+                "owner": "over",
+                "label": "Over 44.5 points",
+                "displayPrice": 99.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-total-over-46p5",
+                "owner": "over",
+                "label": "Over 46.5 points",
+                "displayPrice": 99.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-total-over-48p5",
+                "owner": "over",
+                "label": "Over 48.5 points",
+                "displayPrice": 99.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
                 "id": "display-total-over-50p5",
                 "owner": "over",
                 "label": "Over 50.5 points",
-                "displayPrice": 71.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
-                "id": "display-total-over-52p5",
-                "owner": "over",
-                "label": "Over 52.5 points",
-                "displayPrice": 58.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
-                "id": "display-total-over-54p5",
-                "owner": "over",
-                "label": "Over 54.5 points",
-                "displayPrice": 52.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
-                "id": "display-total-over-56p5",
-                "owner": "over",
-                "label": "Over 56.5 points",
-                "displayPrice": 39.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
-                "id": "display-total-over-58p5",
-                "owner": "over",
-                "label": "Over 58.5 points",
-                "displayPrice": 35.0,
+                "displayPrice": 99.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -2768,17 +2764,7 @@
                 "id": "display-ORL",
                 "owner": "ORL",
                 "label": "Orlando",
-                "displayPrice": 75.0,
-                "yesAsk": 74.0,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)",
-                "askVerifiedFrom": "ticket"
-              },
-              {
-                "id": "display-SAC",
-                "owner": "SAC",
-                "label": "Sacramento",
-                "displayPrice": 17.0,
+                "displayPrice": 99.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -2787,7 +2773,16 @@
                 "id": "display-tie",
                 "owner": "tie",
                 "label": "Tie",
-                "displayPrice": 7.0,
+                "displayPrice": 3.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-SAC",
+                "owner": "SAC",
+                "label": "Sacramento",
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -2802,19 +2797,10 @@
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/orlando-vs-sacramento-1st-half-spread-nov-10-2026/",
             "choices": [
               {
-                "id": "display-spread-ORL-1p5",
-                "owner": "ORL",
-                "label": "Orlando wins by over 1.5 points",
-                "displayPrice": 56.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
                 "id": "display-spread-ORL-2p5",
                 "owner": "ORL",
                 "label": "Orlando wins by over 2.5 points",
-                "displayPrice": 50.0,
+                "displayPrice": 99.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -2823,25 +2809,34 @@
                 "id": "display-spread-ORL-4p5",
                 "owner": "ORL",
                 "label": "Orlando wins by over 4.5 points",
-                "displayPrice": 42.0,
+                "displayPrice": 99.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
               },
               {
-                "id": "display-spread-ORL-6p5",
-                "owner": "ORL",
-                "label": "Orlando wins by over 6.5 points",
-                "displayPrice": 37.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
-                "id": "display-spread-SAC-1p5",
+                "id": "display-spread-SAC-15p5",
                 "owner": "SAC",
-                "label": "Sacramento wins by over 1.5 points",
-                "displayPrice": 36.0,
+                "label": "Sacramento wins by over 15.5 points",
+                "displayPrice": 2.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-ORL-10p5",
+                "owner": "ORL",
+                "label": "Orlando wins by over 10.5 points",
+                "displayPrice": 1.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-ORL-12p5",
+                "owner": "ORL",
+                "label": "Orlando wins by over 12.5 points",
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -2856,10 +2851,37 @@
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/orlando-vs-sacramento-1st-half-total-nov-10-2026/",
             "choices": [
               {
+                "id": "display-total-over-96p5",
+                "owner": "over",
+                "label": "Over 96.5 points",
+                "displayPrice": 99.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-total-over-98p5",
+                "owner": "over",
+                "label": "Over 98.5 points",
+                "displayPrice": 99.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-total-over-128p5",
+                "owner": "over",
+                "label": "Over 128.5 points",
+                "displayPrice": 2.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
                 "id": "display-total-over-110p5",
                 "owner": "over",
                 "label": "Over 110.5 points",
-                "displayPrice": 68.0,
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -2868,34 +2890,7 @@
                 "id": "display-total-over-112p5",
                 "owner": "over",
                 "label": "Over 112.5 points",
-                "displayPrice": 57.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
-                "id": "display-total-over-114p5",
-                "owner": "over",
-                "label": "Over 114.5 points",
-                "displayPrice": 50.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
-                "id": "display-total-over-116p5",
-                "owner": "over",
-                "label": "Over 116.5 points",
-                "displayPrice": 37.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
-                "id": "display-total-over-118p5",
-                "owner": "over",
-                "label": "Over 118.5 points",
-                "displayPrice": 28.0,
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -2915,17 +2910,16 @@
                 "id": "display-ORL",
                 "owner": "ORL",
                 "label": "Orlando",
-                "displayPrice": 60.0,
-                "yesAsk": 60.0,
+                "displayPrice": 99.0,
+                "yesAsk": null,
                 "noAsk": null,
-                "priceSource": "RH public event selection (indicative)",
-                "askVerifiedFrom": "ticket"
+                "priceSource": "RH public event selection (indicative)"
               },
               {
                 "id": "display-SAC",
                 "owner": "SAC",
                 "label": "Sacramento",
-                "displayPrice": 37.0,
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -2934,7 +2928,7 @@
                 "id": "display-tie",
                 "owner": "tie",
                 "label": "Tie",
-                "displayPrice": 6.0,
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -2952,43 +2946,43 @@
                 "id": "display-spread-ORL-1p5",
                 "owner": "ORL",
                 "label": "Orlando wins by over 1.5 points",
-                "displayPrice": 58.0,
+                "displayPrice": 99.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
               },
               {
-                "id": "display-spread-ORL-4p5",
-                "owner": "ORL",
-                "label": "Orlando wins by over 4.5 points",
-                "displayPrice": 52.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
-                "id": "display-spread-ORL-6p5",
-                "owner": "ORL",
-                "label": "Orlando wins by over 6.5 points",
-                "displayPrice": 38.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
-                "id": "display-spread-ORL-8p5",
-                "owner": "ORL",
-                "label": "Orlando wins by over 8.5 points",
-                "displayPrice": 31.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
-                "id": "display-spread-SAC-7p5",
+                "id": "display-spread-SAC-5p5",
                 "owner": "SAC",
-                "label": "Sacramento wins by over 7.5 points",
-                "displayPrice": 26.0,
+                "label": "Sacramento wins by over 5.5 points",
+                "displayPrice": 12.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-ORL-2p5",
+                "owner": "ORL",
+                "label": "Orlando wins by over 2.5 points",
+                "displayPrice": 11.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-SAC-11p5",
+                "owner": "SAC",
+                "label": "Sacramento wins by over 11.5 points",
+                "displayPrice": 11.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-SAC-3p5",
+                "owner": "SAC",
+                "label": "Sacramento wins by over 3.5 points",
+                "displayPrice": 11.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -3003,28 +2997,46 @@
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/orlando-vs-sacramento-2nd-half-total-nov-10-2026/",
             "choices": [
               {
+                "id": "display-total-over-95p5",
+                "owner": "over",
+                "label": "Over 95.5 points",
+                "displayPrice": 99.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-total-over-97p5",
+                "owner": "over",
+                "label": "Over 97.5 points",
+                "displayPrice": 99.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
                 "id": "display-total-over-105p5",
                 "owner": "over",
                 "label": "Over 105.5 points",
-                "displayPrice": 54.0,
+                "displayPrice": 58.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
               },
               {
-                "id": "display-total-over-121p5",
+                "id": "display-total-over-109p5",
                 "owner": "over",
-                "label": "Over 121.5 points",
-                "displayPrice": 10.0,
+                "label": "Over 109.5 points",
+                "displayPrice": 39.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
               },
               {
-                "id": "display-total-over-125p5",
+                "id": "display-total-over-113p5",
                 "owner": "over",
-                "label": "Over 125.5 points",
-                "displayPrice": 4.0,
+                "label": "Over 113.5 points",
+                "displayPrice": 28.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -3032,7 +3044,7 @@
             ],
             "reason": null,
             "hiddenCount": 14,
-            "expectedMinChoices": 17,
+            "expectedMinChoices": 19,
             "completeness": "partial"
           }
         },
@@ -3044,17 +3056,16 @@
                 "id": "display-ORL",
                 "owner": "ORL",
                 "label": "Orlando",
-                "displayPrice": 98.0,
-                "yesAsk": 99.0,
+                "displayPrice": 99.0,
+                "yesAsk": null,
                 "noAsk": null,
-                "priceSource": "RH public event selection (indicative)",
-                "askVerifiedFrom": "ticket"
+                "priceSource": "RH public event selection (indicative)"
               },
               {
                 "id": "display-SAC",
                 "owner": "SAC",
                 "label": "Sacramento",
-                "displayPrice": 4.0,
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -3191,17 +3202,16 @@
                 "id": "display-SAC",
                 "owner": "SAC",
                 "label": "Sacramento",
-                "displayPrice": 68.0,
-                "yesAsk": 68.0,
+                "displayPrice": 99.0,
+                "yesAsk": null,
                 "noAsk": null,
-                "priceSource": "RH public event selection (indicative)",
-                "askVerifiedFrom": "ticket"
+                "priceSource": "RH public event selection (indicative)"
               },
               {
                 "id": "display-ORL",
                 "owner": "ORL",
                 "label": "Orlando",
-                "displayPrice": 25.0,
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -3210,7 +3220,7 @@
                 "id": "display-tie",
                 "owner": "tie",
                 "label": "Tie",
-                "displayPrice": 6.0,
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -3228,34 +3238,7 @@
                 "id": "display-spread-SAC-1p5",
                 "owner": "SAC",
                 "label": "Sacramento wins by over 1.5 points",
-                "displayPrice": 78.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
-                "id": "display-spread-SAC-2p5",
-                "owner": "SAC",
-                "label": "Sacramento wins by over 2.5 points",
-                "displayPrice": 59.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
-                "id": "display-spread-SAC-4p5",
-                "owner": "SAC",
-                "label": "Sacramento wins by over 4.5 points",
-                "displayPrice": 40.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
-                "id": "display-spread-SAC-6p5",
-                "owner": "SAC",
-                "label": "Sacramento wins by over 6.5 points",
-                "displayPrice": 32.0,
+                "displayPrice": 99.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -3264,7 +3247,34 @@
                 "id": "display-spread-ORL-1p5",
                 "owner": "ORL",
                 "label": "Orlando wins by over 1.5 points",
-                "displayPrice": 21.0,
+                "displayPrice": 1.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-ORL-11p5",
+                "owner": "ORL",
+                "label": "Orlando wins by over 11.5 points",
+                "displayPrice": 1.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-ORL-13p5",
+                "owner": "ORL",
+                "label": "Orlando wins by over 13.5 points",
+                "displayPrice": 1.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-ORL-3p5",
+                "owner": "ORL",
+                "label": "Orlando wins by over 3.5 points",
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -3279,10 +3289,28 @@
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/orlando-vs-sacramento-2nd-quarter-total-nov-10-2026/",
             "choices": [
               {
+                "id": "display-total-over-44p5",
+                "owner": "over",
+                "label": "Over 44.5 points",
+                "displayPrice": 99.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-total-over-46p5",
+                "owner": "over",
+                "label": "Over 46.5 points",
+                "displayPrice": 99.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
                 "id": "display-total-over-48p5",
                 "owner": "over",
                 "label": "Over 48.5 points",
-                "displayPrice": 81.0,
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -3291,7 +3319,7 @@
                 "id": "display-total-over-50p5",
                 "owner": "over",
                 "label": "Over 50.5 points",
-                "displayPrice": 60.0,
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -3300,25 +3328,7 @@
                 "id": "display-total-over-52p5",
                 "owner": "over",
                 "label": "Over 52.5 points",
-                "displayPrice": 54.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
-                "id": "display-total-over-54p5",
-                "owner": "over",
-                "label": "Over 54.5 points",
-                "displayPrice": 39.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
-                "id": "display-total-over-56p5",
-                "owner": "over",
-                "label": "Over 56.5 points",
-                "displayPrice": 22.0,
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -3338,17 +3348,16 @@
                 "id": "display-ORL",
                 "owner": "ORL",
                 "label": "Orlando",
-                "displayPrice": 58.0,
-                "yesAsk": 58.0,
+                "displayPrice": 99.0,
+                "yesAsk": null,
                 "noAsk": null,
-                "priceSource": "RH public event selection (indicative)",
-                "askVerifiedFrom": "ticket"
+                "priceSource": "RH public event selection (indicative)"
               },
               {
                 "id": "display-SAC",
                 "owner": "SAC",
                 "label": "Sacramento",
-                "displayPrice": 38.0,
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -3357,7 +3366,7 @@
                 "id": "display-tie",
                 "owner": "tie",
                 "label": "Tie",
-                "displayPrice": 4.0,
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -3375,7 +3384,25 @@
                 "id": "display-spread-ORL-1p5",
                 "owner": "ORL",
                 "label": "Orlando wins by over 1.5 points",
-                "displayPrice": 52.0,
+                "displayPrice": 99.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-ORL-11p5",
+                "owner": "ORL",
+                "label": "Orlando wins by over 11.5 points",
+                "displayPrice": 1.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-ORL-13p5",
+                "owner": "ORL",
+                "label": "Orlando wins by over 13.5 points",
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -3384,7 +3411,7 @@
                 "id": "display-spread-ORL-3p5",
                 "owner": "ORL",
                 "label": "Orlando wins by over 3.5 points",
-                "displayPrice": 42.0,
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -3393,25 +3420,7 @@
                 "id": "display-spread-ORL-5p5",
                 "owner": "ORL",
                 "label": "Orlando wins by over 5.5 points",
-                "displayPrice": 33.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
-                "id": "display-spread-SAC-1p5",
-                "owner": "SAC",
-                "label": "Sacramento wins by over 1.5 points",
-                "displayPrice": 33.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
-                "id": "display-spread-SAC-2p5",
-                "owner": "SAC",
-                "label": "Sacramento wins by over 2.5 points",
-                "displayPrice": 29.0,
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -3426,28 +3435,19 @@
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/orlando-vs-sacramento-3rd-quarter-total-nov-10-2026/",
             "choices": [
               {
+                "id": "display-total-over-48p5",
+                "owner": "over",
+                "label": "Over 48.5 points",
+                "displayPrice": 99.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
                 "id": "display-total-over-50p5",
                 "owner": "over",
                 "label": "Over 50.5 points",
-                "displayPrice": 65.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
-                "id": "display-total-over-52p5",
-                "owner": "over",
-                "label": "Over 52.5 points",
-                "displayPrice": 57.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
-                "id": "display-total-over-54p5",
-                "owner": "over",
-                "label": "Over 54.5 points",
-                "displayPrice": 49.0,
+                "displayPrice": 99.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -3456,16 +3456,25 @@
                 "id": "display-total-over-56p5",
                 "owner": "over",
                 "label": "Over 56.5 points",
-                "displayPrice": 40.0,
+                "displayPrice": 4.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
               },
               {
-                "id": "display-total-over-58p5",
+                "id": "display-total-over-52p5",
                 "owner": "over",
-                "label": "Over 58.5 points",
-                "displayPrice": 31.0,
+                "label": "Over 52.5 points",
+                "displayPrice": 1.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-total-over-54p5",
+                "owner": "over",
+                "label": "Over 54.5 points",
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -3482,20 +3491,19 @@
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/orlando-vs-sacramento-4th-quarter-winner-nov-10-2026/",
             "choices": [
               {
-                "id": "display-ORL",
-                "owner": "ORL",
-                "label": "Orlando",
-                "displayPrice": 52.0,
-                "yesAsk": 53.0,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)",
-                "askVerifiedFrom": "ticket"
-              },
-              {
                 "id": "display-SAC",
                 "owner": "SAC",
                 "label": "Sacramento",
-                "displayPrice": 40.0,
+                "displayPrice": 76.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-ORL",
+                "owner": "ORL",
+                "label": "Orlando",
+                "displayPrice": 3.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -3504,7 +3512,7 @@
                 "id": "display-tie",
                 "owner": "tie",
                 "label": "Tie",
-                "displayPrice": 4.0,
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -3519,46 +3527,46 @@
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/orlando-vs-sacramento-4th-quarter-spread-nov-10-2026/",
             "choices": [
               {
+                "id": "display-spread-SAC-6p5",
+                "owner": "SAC",
+                "label": "Sacramento wins by over 6.5 points",
+                "displayPrice": 11.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-SAC-10p5",
+                "owner": "SAC",
+                "label": "Sacramento wins by over 10.5 points",
+                "displayPrice": 2.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
                 "id": "display-spread-ORL-1p5",
                 "owner": "ORL",
                 "label": "Orlando wins by over 1.5 points",
-                "displayPrice": 49.0,
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
               },
               {
-                "id": "display-spread-SAC-1p5",
-                "owner": "SAC",
-                "label": "Sacramento wins by over 1.5 points",
-                "displayPrice": 39.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
-                "id": "display-spread-ORL-3p5",
+                "id": "display-spread-ORL-11p5",
                 "owner": "ORL",
-                "label": "Orlando wins by over 3.5 points",
-                "displayPrice": 38.0,
+                "label": "Orlando wins by over 11.5 points",
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
               },
               {
-                "id": "display-spread-SAC-2p5",
-                "owner": "SAC",
-                "label": "Sacramento wins by over 2.5 points",
-                "displayPrice": 32.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
-                "id": "display-spread-ORL-5p5",
+                "id": "display-spread-ORL-13p5",
                 "owner": "ORL",
-                "label": "Orlando wins by over 5.5 points",
-                "displayPrice": 30.0,
+                "label": "Orlando wins by over 13.5 points",
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -3573,10 +3581,37 @@
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/orlando-vs-sacramento-4th-quarter-total-nov-10-2026/",
             "choices": [
               {
-                "id": "display-total-over-40p5",
+                "id": "display-total-over-44p5",
                 "owner": "over",
-                "label": "Over 40.5 points",
-                "displayPrice": 94.0,
+                "label": "Over 44.5 points",
+                "displayPrice": 99.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-total-over-46p5",
+                "owner": "over",
+                "label": "Over 46.5 points",
+                "displayPrice": 99.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-total-over-48p5",
+                "owner": "over",
+                "label": "Over 48.5 points",
+                "displayPrice": 5.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-total-over-50p5",
+                "owner": "over",
+                "label": "Over 50.5 points",
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -3585,34 +3620,7 @@
                 "id": "display-total-over-52p5",
                 "owner": "over",
                 "label": "Over 52.5 points",
-                "displayPrice": 47.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
-                "id": "display-total-over-56p5",
-                "owner": "over",
-                "label": "Over 56.5 points",
-                "displayPrice": 31.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
-                "id": "display-total-over-60p5",
-                "owner": "over",
-                "label": "Over 60.5 points",
-                "displayPrice": 18.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
-                "id": "display-total-over-62p5",
-                "owner": "over",
-                "label": "Over 62.5 points",
-                "displayPrice": 13.0,
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -3634,29 +3642,28 @@
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/oklahoma-city-vs-portland-1st-half-winner-nov-10-2026/",
             "choices": [
               {
-                "id": "display-OKC",
-                "owner": "OKC",
-                "label": "Oklahoma City",
-                "displayPrice": 49.0,
-                "yesAsk": 50.0,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)",
-                "askVerifiedFrom": "ticket"
-              },
-              {
-                "id": "display-POR",
-                "owner": "POR",
-                "label": "Portland",
-                "displayPrice": 48.0,
+                "id": "display-tie",
+                "owner": "tie",
+                "label": "Tie",
+                "displayPrice": 99.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
               },
               {
-                "id": "display-tie",
-                "owner": "tie",
-                "label": "Tie",
-                "displayPrice": 4.0,
+                "id": "display-OKC",
+                "owner": "OKC",
+                "label": "Oklahoma City",
+                "displayPrice": 1.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-POR",
+                "owner": "POR",
+                "label": "Portland",
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -3674,43 +3681,43 @@
                 "id": "display-spread-OKC-1p5",
                 "owner": "OKC",
                 "label": "Oklahoma City wins by over 1.5 points",
-                "displayPrice": 46.0,
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
               },
               {
-                "id": "display-spread-POR-1p5",
-                "owner": "POR",
-                "label": "Portland wins by over 1.5 points",
-                "displayPrice": 44.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
-                "id": "display-spread-OKC-3p5",
+                "id": "display-spread-OKC-11p5",
                 "owner": "OKC",
-                "label": "Oklahoma City wins by over 3.5 points",
-                "displayPrice": 39.0,
+                "label": "Oklahoma City wins by over 11.5 points",
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
               },
               {
-                "id": "display-spread-POR-2p5",
-                "owner": "POR",
-                "label": "Portland wins by over 2.5 points",
-                "displayPrice": 39.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
-                "id": "display-spread-OKC-5p5",
+                "id": "display-spread-OKC-13p5",
                 "owner": "OKC",
-                "label": "Oklahoma City wins by over 5.5 points",
-                "displayPrice": 32.0,
+                "label": "Oklahoma City wins by over 13.5 points",
+                "displayPrice": 1.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-OKC-15p5",
+                "owner": "OKC",
+                "label": "Oklahoma City wins by over 15.5 points",
+                "displayPrice": 1.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-OKC-17p5",
+                "owner": "OKC",
+                "label": "Oklahoma City wins by over 17.5 points",
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -3725,10 +3732,37 @@
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/oklahoma-city-vs-portland-1st-half-total-nov-10-2026/",
             "choices": [
               {
+                "id": "display-total-over-101p5",
+                "owner": "over",
+                "label": "Over 101.5 points",
+                "displayPrice": 99.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-total-over-103p5",
+                "owner": "over",
+                "label": "Over 103.5 points",
+                "displayPrice": 99.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-total-over-105p5",
+                "owner": "over",
+                "label": "Over 105.5 points",
+                "displayPrice": 99.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
                 "id": "display-total-over-107p5",
                 "owner": "over",
                 "label": "Over 107.5 points",
-                "displayPrice": 61.0,
+                "displayPrice": 99.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -3737,34 +3771,7 @@
                 "id": "display-total-over-109p5",
                 "owner": "over",
                 "label": "Over 109.5 points",
-                "displayPrice": 54.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
-                "id": "display-total-over-111p5",
-                "owner": "over",
-                "label": "Over 111.5 points",
-                "displayPrice": 50.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
-                "id": "display-total-over-113p5",
-                "owner": "over",
-                "label": "Over 113.5 points",
-                "displayPrice": 41.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
-                "id": "display-total-over-115p5",
-                "owner": "over",
-                "label": "Over 115.5 points",
-                "displayPrice": 35.0,
+                "displayPrice": 99.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -3781,20 +3788,19 @@
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/oklahoma-city-vs-portland-2nd-half-winner-nov-10-2026/",
             "choices": [
               {
-                "id": "display-OKC",
-                "owner": "OKC",
-                "label": "Oklahoma City",
-                "displayPrice": 53.0,
-                "yesAsk": 52.0,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)",
-                "askVerifiedFrom": "ticket"
-              },
-              {
                 "id": "display-POR",
                 "owner": "POR",
                 "label": "Portland",
-                "displayPrice": 50.0,
+                "displayPrice": 99.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-OKC",
+                "owner": "OKC",
+                "label": "Oklahoma City",
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -3803,7 +3809,7 @@
                 "id": "display-tie",
                 "owner": "tie",
                 "label": "Tie",
-                "displayPrice": 8.0,
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -3818,19 +3824,46 @@
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/oklahoma-city-vs-portland-2nd-half-spread-nov-10-2026/",
             "choices": [
               {
-                "id": "display-spread-OKC-1p5",
-                "owner": "OKC",
-                "label": "Oklahoma City wins by over 1.5 points",
-                "displayPrice": 53.0,
+                "id": "display-spread-POR-6p5",
+                "owner": "POR",
+                "label": "Portland wins by over 6.5 points",
+                "displayPrice": 99.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
               },
               {
-                "id": "display-spread-POR-1p5",
+                "id": "display-spread-POR-8p5",
                 "owner": "POR",
-                "label": "Portland wins by over 1.5 points",
-                "displayPrice": 45.0,
+                "label": "Portland wins by over 8.5 points",
+                "displayPrice": 99.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-OKC-7p5",
+                "owner": "OKC",
+                "label": "Oklahoma City wins by over 7.5 points",
+                "displayPrice": 10.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-OKC-5p5",
+                "owner": "OKC",
+                "label": "Oklahoma City wins by over 5.5 points",
+                "displayPrice": 9.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-OKC-15p5",
+                "owner": "OKC",
+                "label": "Oklahoma City wins by over 15.5 points",
+                "displayPrice": 6.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -3838,7 +3871,7 @@
             ],
             "reason": null,
             "hiddenCount": 14,
-            "expectedMinChoices": 16,
+            "expectedMinChoices": 19,
             "completeness": "partial"
           },
           "total": {
@@ -3848,7 +3881,34 @@
                 "id": "display-total-over-98p5",
                 "owner": "over",
                 "label": "Over 98.5 points",
-                "displayPrice": 95.0,
+                "displayPrice": 99.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-total-over-102p5",
+                "owner": "over",
+                "label": "Over 102.5 points",
+                "displayPrice": 98.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-total-over-110p5",
+                "owner": "over",
+                "label": "Over 110.5 points",
+                "displayPrice": 59.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-total-over-122p5",
+                "owner": "over",
+                "label": "Over 122.5 points",
+                "displayPrice": 27.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -3865,7 +3925,7 @@
             ],
             "reason": null,
             "hiddenCount": 14,
-            "expectedMinChoices": 16,
+            "expectedMinChoices": 19,
             "completeness": "partial"
           }
         },
@@ -3877,17 +3937,16 @@
                 "id": "display-OKC",
                 "owner": "OKC",
                 "label": "Oklahoma City",
-                "displayPrice": 49.0,
-                "yesAsk": 49.0,
+                "displayPrice": 99.0,
+                "yesAsk": null,
                 "noAsk": null,
-                "priceSource": "RH public event selection (indicative)",
-                "askVerifiedFrom": "ticket"
+                "priceSource": "RH public event selection (indicative)"
               },
               {
                 "id": "display-POR",
                 "owner": "POR",
                 "label": "Portland",
-                "displayPrice": 47.0,
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -3896,7 +3955,7 @@
                 "id": "display-tie",
                 "owner": "tie",
                 "label": "Tie",
-                "displayPrice": 6.0,
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -3914,25 +3973,25 @@
                 "id": "display-spread-OKC-1p5",
                 "owner": "OKC",
                 "label": "Oklahoma City wins by over 1.5 points",
-                "displayPrice": 45.0,
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
               },
               {
-                "id": "display-spread-POR-1p5",
-                "owner": "POR",
-                "label": "Portland wins by over 1.5 points",
-                "displayPrice": 41.0,
+                "id": "display-spread-OKC-11p5",
+                "owner": "OKC",
+                "label": "Oklahoma City wins by over 11.5 points",
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
               },
               {
-                "id": "display-spread-POR-2p5",
-                "owner": "POR",
-                "label": "Portland wins by over 2.5 points",
-                "displayPrice": 38.0,
+                "id": "display-spread-OKC-13p5",
+                "owner": "OKC",
+                "label": "Oklahoma City wins by over 13.5 points",
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -3941,16 +4000,16 @@
                 "id": "display-spread-OKC-3p5",
                 "owner": "OKC",
                 "label": "Oklahoma City wins by over 3.5 points",
-                "displayPrice": 36.0,
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
               },
               {
-                "id": "display-spread-POR-4p5",
-                "owner": "POR",
-                "label": "Portland wins by over 4.5 points",
-                "displayPrice": 29.0,
+                "id": "display-spread-OKC-5p5",
+                "owner": "OKC",
+                "label": "Oklahoma City wins by over 5.5 points",
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -3965,46 +4024,46 @@
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/oklahoma-city-vs-portland-1st-quarter-total-nov-10-2026/",
             "choices": [
               {
+                "id": "display-total-over-43p5",
+                "owner": "over",
+                "label": "Over 43.5 points",
+                "displayPrice": 99.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-total-over-45p5",
+                "owner": "over",
+                "label": "Over 45.5 points",
+                "displayPrice": 99.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-total-over-47p5",
+                "owner": "over",
+                "label": "Over 47.5 points",
+                "displayPrice": 99.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-total-over-49p5",
+                "owner": "over",
+                "label": "Over 49.5 points",
+                "displayPrice": 99.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
                 "id": "display-total-over-51p5",
                 "owner": "over",
                 "label": "Over 51.5 points",
-                "displayPrice": 71.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
-                "id": "display-total-over-53p5",
-                "owner": "over",
-                "label": "Over 53.5 points",
-                "displayPrice": 62.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
-                "id": "display-total-over-55p5",
-                "owner": "over",
-                "label": "Over 55.5 points",
-                "displayPrice": 54.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
-                "id": "display-total-over-57p5",
-                "owner": "over",
-                "label": "Over 57.5 points",
-                "displayPrice": 43.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
-                "id": "display-total-over-59p5",
-                "owner": "over",
-                "label": "Over 59.5 points",
-                "displayPrice": 32.0,
+                "displayPrice": 99.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -4021,20 +4080,19 @@
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/oklahoma-city-vs-portland-2nd-quarter-winner-nov-10-2026/",
             "choices": [
               {
-                "id": "display-OKC",
-                "owner": "OKC",
-                "label": "Oklahoma City",
-                "displayPrice": 50.0,
-                "yesAsk": 50.0,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)",
-                "askVerifiedFrom": "ticket"
-              },
-              {
                 "id": "display-POR",
                 "owner": "POR",
                 "label": "Portland",
-                "displayPrice": 47.0,
+                "displayPrice": 99.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-OKC",
+                "owner": "OKC",
+                "label": "Oklahoma City",
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -4043,7 +4101,7 @@
                 "id": "display-tie",
                 "owner": "tie",
                 "label": "Tie",
-                "displayPrice": 7.0,
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -4061,7 +4119,25 @@
                 "id": "display-spread-OKC-1p5",
                 "owner": "OKC",
                 "label": "Oklahoma City wins by over 1.5 points",
-                "displayPrice": 42.0,
+                "displayPrice": 1.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-OKC-11p5",
+                "owner": "OKC",
+                "label": "Oklahoma City wins by over 11.5 points",
+                "displayPrice": 1.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-OKC-13p5",
+                "owner": "OKC",
+                "label": "Oklahoma City wins by over 13.5 points",
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -4070,16 +4146,16 @@
                 "id": "display-spread-OKC-3p5",
                 "owner": "OKC",
                 "label": "Oklahoma City wins by over 3.5 points",
-                "displayPrice": 39.0,
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
               },
               {
-                "id": "display-spread-OKC-9p5",
+                "id": "display-spread-OKC-5p5",
                 "owner": "OKC",
-                "label": "Oklahoma City wins by over 9.5 points",
-                "displayPrice": 16.0,
+                "label": "Oklahoma City wins by over 5.5 points",
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -4087,35 +4163,53 @@
             ],
             "reason": null,
             "hiddenCount": 8,
-            "expectedMinChoices": 11,
+            "expectedMinChoices": 13,
             "completeness": "partial"
           },
           "total": {
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/oklahoma-city-vs-portland-2nd-quarter-total-nov-10-2026/",
             "choices": [
               {
-                "id": "display-total-over-52p5",
+                "id": "display-total-over-42p5",
                 "owner": "over",
-                "label": "Over 52.5 points",
-                "displayPrice": 60.0,
+                "label": "Over 42.5 points",
+                "displayPrice": 99.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
               },
               {
-                "id": "display-total-over-54p5",
+                "id": "display-total-over-44p5",
                 "owner": "over",
-                "label": "Over 54.5 points",
-                "displayPrice": 53.0,
+                "label": "Over 44.5 points",
+                "displayPrice": 99.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
               },
               {
-                "id": "display-total-over-66p5",
+                "id": "display-total-over-46p5",
                 "owner": "over",
-                "label": "Over 66.5 points",
-                "displayPrice": 8.0,
+                "label": "Over 46.5 points",
+                "displayPrice": 99.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-total-over-48p5",
+                "owner": "over",
+                "label": "Over 48.5 points",
+                "displayPrice": 99.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-total-over-50p5",
+                "owner": "over",
+                "label": "Over 50.5 points",
+                "displayPrice": 99.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -4123,7 +4217,7 @@
             ],
             "reason": null,
             "hiddenCount": 8,
-            "expectedMinChoices": 11,
+            "expectedMinChoices": 13,
             "completeness": "partial"
           }
         },
@@ -4132,20 +4226,28 @@
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/oklahoma-city-vs-portland-3rd-quarter-winner-nov-10-2026/",
             "choices": [
               {
+                "id": "display-POR",
+                "owner": "POR",
+                "label": "Portland",
+                "displayPrice": 99.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
                 "id": "display-OKC",
                 "owner": "OKC",
                 "label": "Oklahoma City",
-                "displayPrice": 51.0,
-                "yesAsk": 50.0,
+                "displayPrice": 1.0,
+                "yesAsk": null,
                 "noAsk": null,
-                "priceSource": "RH public event selection (indicative)",
-                "askVerifiedFrom": "ticket"
+                "priceSource": "RH public event selection (indicative)"
               },
               {
                 "id": "display-tie",
                 "owner": "tie",
                 "label": "Tie",
-                "displayPrice": 6.0,
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -4153,26 +4255,17 @@
             ],
             "reason": null,
             "hiddenCount": 0,
-            "expectedMinChoices": 2,
+            "expectedMinChoices": 3,
             "completeness": "unverified"
           },
           "spread": {
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/oklahoma-city-vs-portland-3rd-quarter-spread-nov-10-2026/",
             "choices": [
               {
-                "id": "display-spread-OKC-1p5",
-                "owner": "OKC",
-                "label": "Oklahoma City wins by over 1.5 points",
-                "displayPrice": 46.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
-                "id": "display-spread-OKC-3p5",
-                "owner": "OKC",
-                "label": "Oklahoma City wins by over 3.5 points",
-                "displayPrice": 37.0,
+                "id": "display-spread-POR-1p5",
+                "owner": "POR",
+                "label": "Portland wins by over 1.5 points",
+                "displayPrice": 99.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -4181,7 +4274,34 @@
                 "id": "display-spread-POR-10p5",
                 "owner": "POR",
                 "label": "Portland wins by over 10.5 points",
-                "displayPrice": 13.0,
+                "displayPrice": 99.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-POR-2p5",
+                "owner": "POR",
+                "label": "Portland wins by over 2.5 points",
+                "displayPrice": 99.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-POR-4p5",
+                "owner": "POR",
+                "label": "Portland wins by over 4.5 points",
+                "displayPrice": 99.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-POR-6p5",
+                "owner": "POR",
+                "label": "Portland wins by over 6.5 points",
+                "displayPrice": 99.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -4189,26 +4309,53 @@
             ],
             "reason": null,
             "hiddenCount": 8,
-            "expectedMinChoices": 11,
+            "expectedMinChoices": 13,
             "completeness": "partial"
           },
           "total": {
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/oklahoma-city-vs-portland-3rd-quarter-total-nov-10-2026/",
             "choices": [
               {
-                "id": "display-total-over-59p5",
+                "id": "display-total-over-47p5",
                 "owner": "over",
-                "label": "Over 59.5 points",
-                "displayPrice": 49.0,
+                "label": "Over 47.5 points",
+                "displayPrice": 99.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
               },
               {
-                "id": "display-total-over-69p5",
+                "id": "display-total-over-49p5",
                 "owner": "over",
-                "label": "Over 69.5 points",
-                "displayPrice": 10.0,
+                "label": "Over 49.5 points",
+                "displayPrice": 99.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-total-over-51p5",
+                "owner": "over",
+                "label": "Over 51.5 points",
+                "displayPrice": 99.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-total-over-53p5",
+                "owner": "over",
+                "label": "Over 53.5 points",
+                "displayPrice": 99.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-total-over-55p5",
+                "owner": "over",
+                "label": "Over 55.5 points",
+                "displayPrice": 99.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -4216,7 +4363,7 @@
             ],
             "reason": null,
             "hiddenCount": 8,
-            "expectedMinChoices": 10,
+            "expectedMinChoices": 13,
             "completeness": "partial"
           }
         },
@@ -4225,30 +4372,31 @@
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/oklahoma-city-vs-portland-4th-quarter-winner-nov-10-2026/",
             "choices": [
               {
-                "id": "display-OKC",
-                "owner": "OKC",
-                "label": "Oklahoma City",
-                "displayPrice": 50.0,
-                "yesAsk": 50.0,
-                "noAsk": 53.0,
+                "id": "display-POR",
+                "owner": "POR",
+                "label": "Portland",
+                "displayPrice": 99.0,
+                "yesAsk": null,
+                "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
               },
               {
                 "id": "display-tie",
                 "owner": "tie",
                 "label": "Tie",
-                "displayPrice": 7.0,
-                "yesAsk": 6.0,
-                "noAsk": 97.0,
+                "displayPrice": 4.0,
+                "yesAsk": null,
+                "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
               },
               {
-                "id": "05f52794-f677-42b5-90a8-66627323448e",
-                "label": "Portland",
-                "yesAsk": 48.0,
-                "noAsk": 56.0,
-                "owner": "POR",
-                "displayPrice": null
+                "id": "display-OKC",
+                "owner": "OKC",
+                "label": "Oklahoma City",
+                "displayPrice": 1.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
               }
             ],
             "reason": null,
@@ -4258,20 +4406,93 @@
           },
           "spread": {
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/oklahoma-city-vs-portland-4th-quarter-spread-nov-10-2026/",
-            "choices": [],
-            "reason": "Ambiguous embedded event contract groups",
+            "choices": [
+              {
+                "id": "display-spread-POR-1p5",
+                "owner": "POR",
+                "label": "Portland wins by over 1.5 points",
+                "displayPrice": 99.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-POR-2p5",
+                "owner": "POR",
+                "label": "Portland wins by over 2.5 points",
+                "displayPrice": 99.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-POR-8p5",
+                "owner": "POR",
+                "label": "Portland wins by over 8.5 points",
+                "displayPrice": 7.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-OKC-1p5",
+                "owner": "OKC",
+                "label": "Oklahoma City wins by over 1.5 points",
+                "displayPrice": 1.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-OKC-11p5",
+                "owner": "OKC",
+                "label": "Oklahoma City wins by over 11.5 points",
+                "displayPrice": 1.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              }
+            ],
+            "reason": null,
             "hiddenCount": 8,
-            "expectedMinChoices": 8,
+            "expectedMinChoices": 13,
             "completeness": "partial"
           },
           "total": {
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/oklahoma-city-vs-portland-4th-quarter-total-nov-10-2026/",
             "choices": [
               {
+                "id": "display-total-over-44p5",
+                "owner": "over",
+                "label": "Over 44.5 points",
+                "displayPrice": 99.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
                 "id": "display-total-over-46p5",
                 "owner": "over",
                 "label": "Over 46.5 points",
-                "displayPrice": 85.0,
+                "displayPrice": 99.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-total-over-48p5",
+                "owner": "over",
+                "label": "Over 48.5 points",
+                "displayPrice": 99.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-total-over-50p5",
+                "owner": "over",
+                "label": "Over 50.5 points",
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -4280,16 +4501,7 @@
                 "id": "display-total-over-52p5",
                 "owner": "over",
                 "label": "Over 52.5 points",
-                "displayPrice": 66.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
-                "id": "display-total-over-56p5",
-                "owner": "over",
-                "label": "Over 56.5 points",
-                "displayPrice": 46.0,
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -4297,7 +4509,7 @@
             ],
             "reason": null,
             "hiddenCount": 8,
-            "expectedMinChoices": 11,
+            "expectedMinChoices": 13,
             "completeness": "partial"
           }
         }
