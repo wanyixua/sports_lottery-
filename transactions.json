@@ -2450,7 +2450,7 @@
       "usDate": "2026-11-11",
       "bet": "TOR +5.5",
       "stake": 20,
-      "payout": 34.0,
+      "payout": 34,
       "status": "win",
       "profitIfWin": 14,
       "legs": [
@@ -2519,6 +2519,91 @@
         }
       ],
       "note": "微信王老板三串一「马刺让4.5，湖人让5.5，火箭胜」$20；RH Filled 3-leg，43份，投入$20，若全中净赚$23。"
+    },
+    {
+      "id": 119,
+      "owner": "王老板",
+      "usDate": "2026-11-11",
+      "bet": "SAS",
+      "stake": 20,
+      "payout": null,
+      "status": "pending",
+      "profitIfWin": 8,
+      "legs": [
+        {
+          "team": "SAS",
+          "market": "moneyline",
+          "gameDate": "2026-11-11"
+        }
+      ],
+      "note": "微信11/11 17:38：王老板「买马刺胜20刀」，小王确认「20赚8」。RH Filled SAS Yes，投入$20，28份 @ $0.70；手续费$0.40。球队、市场和金额一致。"
+    },
+    {
+      "id": 120,
+      "owner": "王老板",
+      "usDate": "2026-11-11",
+      "bet": "HOU",
+      "stake": 20,
+      "payout": null,
+      "status": "pending",
+      "profitIfWin": 8,
+      "legs": [
+        {
+          "team": "HOU",
+          "market": "moneyline",
+          "gameDate": "2026-11-11"
+        }
+      ],
+      "note": "微信11/11 17:16：王老板「火箭胜20刀」，小王回复「20-8」。RH Filled HOU Yes 28份 @ $0.70，费用$0.40。球队、市场和金额一致。"
+    },
+    {
+      "id": 121,
+      "owner": "王老板",
+      "usDate": "2026-11-11",
+      "bet": "ORL +3.5",
+      "stake": 20,
+      "payout": null,
+      "status": "pending",
+      "profitIfWin": 7,
+      "legs": [
+        {
+          "team": "ORL",
+          "market": "spread",
+          "gameDate": "2026-11-11",
+          "line": 3.5
+        }
+      ],
+      "note": "微信11/11 17:16：王老板「魔术受让3点5胜，20刀」，小王回复「20-7」。RH Filled 「No · UTA by 3.5」，等价ORL +3.5，27份 @ $0.72，费用$0.38。盘口方向一致。"
+    },
+    {
+      "id": 122,
+      "owner": "王老板",
+      "usDate": "2026-11-11",
+      "bet": "DEN + LAL -2.5 + SAS -2.5",
+      "stake": 20,
+      "payout": null,
+      "status": "pending",
+      "profitIfWin": 22,
+      "legs": [
+        {
+          "team": "DEN",
+          "market": "moneyline",
+          "gameDate": "2026-11-11"
+        },
+        {
+          "team": "LAL",
+          "market": "spread",
+          "gameDate": "2026-11-11",
+          "line": -2.5
+        },
+        {
+          "team": "SAS",
+          "market": "spread",
+          "gameDate": "2026-11-11",
+          "line": -2.5
+        }
+      ],
+      "note": "微信11/11：王老板三串一掘金独赢、湖人让2.5、马刺原要求让3.5；小王最终通知改为马刺让2.5，并回复「20赚22」。RH Filled 3-leg DEN / LAL by 2.5 / SAS by 2.5，42份 @ $0.447。与最终要求一致。"
     }
   ]
 }
