@@ -2130,7 +2130,7 @@
       "usDate": "2026-11-10",
       "bet": "PHX + MIA",
       "stake": 20,
-      "payout": 41.0,
+      "payout": 41,
       "status": "win",
       "profitIfWin": 21,
       "legs": [
@@ -2274,6 +2274,216 @@
         "win"
       ],
       "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
+    },
+    {
+      "id": 113,
+      "owner": "王老板",
+      "usDate": "2026-11-11",
+      "bet": "NYK + DEN + BOS -2.5 + HOU -2.5 + LAL -4.5 + SAS -4.5",
+      "stake": 20,
+      "payout": null,
+      "status": "pending",
+      "profitIfWin": 142,
+      "legs": [
+        {
+          "team": "NYK",
+          "market": "moneyline",
+          "gameDate": "2026-11-11"
+        },
+        {
+          "team": "DEN",
+          "market": "moneyline",
+          "gameDate": "2026-11-11"
+        },
+        {
+          "team": "BOS",
+          "market": "spread",
+          "line": -2.5,
+          "gameDate": "2026-11-11"
+        },
+        {
+          "team": "HOU",
+          "market": "spread",
+          "line": -2.5,
+          "gameDate": "2026-11-11"
+        },
+        {
+          "team": "LAL",
+          "market": "spread",
+          "line": -4.5,
+          "gameDate": "2026-11-11"
+        },
+        {
+          "team": "SAS",
+          "market": "spread",
+          "line": -4.5,
+          "gameDate": "2026-11-11"
+        }
+      ],
+      "note": "微信11/11 14:34成交回复「20-142」；RH Filled 6-leg，162份，投入$20。逐腿与此前微信引用的六串一要求一致。"
+    },
+    {
+      "id": 114,
+      "owner": "王老板",
+      "usDate": "2026-11-11",
+      "bet": "ORL + PHX + DET + NOP -1.5 + BOS -3.5 + NYK -4.5 + DEN -4.5 + HOU -5.5 + LAL -4.5 + SAS -2.5 + WAS +5.5",
+      "stake": 20,
+      "payout": null,
+      "status": "pending",
+      "profitIfWin": 1117,
+      "legs": [
+        {
+          "team": "ORL",
+          "market": "moneyline",
+          "gameDate": "2026-11-11"
+        },
+        {
+          "team": "PHX",
+          "market": "moneyline",
+          "gameDate": "2026-11-11"
+        },
+        {
+          "team": "DET",
+          "market": "moneyline",
+          "gameDate": "2026-11-12"
+        },
+        {
+          "team": "NOP",
+          "market": "spread",
+          "line": -1.5,
+          "gameDate": "2026-11-11"
+        },
+        {
+          "team": "BOS",
+          "market": "spread",
+          "line": -3.5,
+          "gameDate": "2026-11-11"
+        },
+        {
+          "team": "NYK",
+          "market": "spread",
+          "line": -4.5,
+          "gameDate": "2026-11-11"
+        },
+        {
+          "team": "DEN",
+          "market": "spread",
+          "line": -4.5,
+          "gameDate": "2026-11-11"
+        },
+        {
+          "team": "HOU",
+          "market": "spread",
+          "line": -5.5,
+          "gameDate": "2026-11-11"
+        },
+        {
+          "team": "LAL",
+          "market": "spread",
+          "line": -4.5,
+          "gameDate": "2026-11-11"
+        },
+        {
+          "team": "SAS",
+          "market": "spread",
+          "line": -2.5,
+          "gameDate": "2026-11-11"
+        },
+        {
+          "team": "WAS",
+          "market": "spread",
+          "line": 5.5,
+          "gameDate": "2026-11-11"
+        }
+      ],
+      "note": "王老板11串一最终接受把马刺从让3.5改为让2.5；RH Filled 11-leg。RH「No · IND by 5.5」等价于WAS +5.5；DET为美国11/12比赛。微信小王确认「20刀赚1117刀」，未提供完整RH份数，盈利根据微信。其余未核到精确开赛日期的腿按美国11/11比赛日暂记，需留意跨日赛程。"
+    },
+    {
+      "id": 115,
+      "owner": "王老板",
+      "usDate": "2026-11-11",
+      "bet": "WAS +5.5",
+      "stake": 20,
+      "payout": null,
+      "status": "pending",
+      "profitIfWin": 9,
+      "legs": [
+        {
+          "team": "WAS",
+          "market": "spread",
+          "line": 5.5,
+          "gameDate": "2026-11-11"
+        }
+      ],
+      "note": "微信王老板「奇才受让5.5，20刀」，小王回复「20-9」。RH Filled No IND by 5.5，29份 @约$0.65，等价WAS +5.5，实际方向一致。"
+    },
+    {
+      "id": 116,
+      "owner": "王老板",
+      "usDate": "2026-11-11",
+      "bet": "TOR +5.5",
+      "stake": 20,
+      "payout": null,
+      "status": "pending",
+      "profitIfWin": 14,
+      "legs": [
+        {
+          "team": "TOR",
+          "market": "spread",
+          "line": 5.5,
+          "gameDate": "2026-11-11"
+        }
+      ],
+      "note": "微信王老板「猛龙受让5.5，20刀」，小王回复「20-14」。RH Filled No BOS by 5.5，34份，等价TOR +5.5，实际方向一致。"
+    },
+    {
+      "id": 117,
+      "owner": "王老板",
+      "usDate": "2026-11-11",
+      "bet": "NYK -2.5",
+      "stake": 20,
+      "payout": null,
+      "status": "pending",
+      "profitIfWin": 26,
+      "legs": [
+        {
+          "team": "NYK",
+          "market": "spread",
+          "line": -2.5,
+          "gameDate": "2026-11-11"
+        }
+      ],
+      "note": "王老板：尼克斯让2.5，本金$20，命中净赚$26。按双方约定的记账金额登记。"
+    },
+    {
+      "id": 118,
+      "owner": "王老板",
+      "usDate": "2026-11-11",
+      "bet": "LAL -5.5 + SAS -4.5 + HOU",
+      "stake": 20,
+      "payout": null,
+      "status": "pending",
+      "profitIfWin": 23,
+      "legs": [
+        {
+          "team": "LAL",
+          "market": "spread",
+          "line": -5.5,
+          "gameDate": "2026-11-11"
+        },
+        {
+          "team": "SAS",
+          "market": "spread",
+          "line": -4.5,
+          "gameDate": "2026-11-11"
+        },
+        {
+          "team": "HOU",
+          "market": "moneyline",
+          "gameDate": "2026-11-11"
+        }
+      ],
+      "note": "微信王老板三串一「马刺让4.5，湖人让5.5，火箭胜」$20；RH Filled 3-leg，43份，投入$20，若全中净赚$23。"
     }
   ]
 }
