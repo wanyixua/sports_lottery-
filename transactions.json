@@ -2158,8 +2158,8 @@
       "usDate": "2026-11-09",
       "bet": "BOS + NOP + LAL + SAS",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 0,
+      "status": "loss",
       "profitIfWin": 48,
       "legs": [
         {
@@ -2183,7 +2183,14 @@
           "gameDate": "2026-11-11"
         }
       ],
-      "note": "本人明确四串一归属小王；RH Filled 4-leg BOS/NOP/LAL/SAS 68份、Entered amount $20，命中净赚$48。RH Submitted 2026-11-09，比赛日均11/11。"
+      "note": "本人明确四串一归属小王；RH Filled 4-leg BOS/NOP/LAL/SAS 68份、Entered amount $20，命中净赚$48。RH Submitted 2026-11-09，比赛日均11/11。",
+      "legResults": [
+        "win",
+        "loss",
+        "win",
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "id": 110,
@@ -2566,8 +2573,8 @@
       "usDate": "2026-11-11",
       "bet": "ORL +3.5",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 27.0,
+      "status": "win",
       "profitIfWin": 7,
       "legs": [
         {
@@ -2577,7 +2584,11 @@
           "line": 3.5
         }
       ],
-      "note": "微信11/11 17:16：王老板「魔术受让3点5胜，20刀」，小王回复「20-7」。RH Filled 「No · UTA by 3.5」，等价ORL +3.5，27份 @ $0.72，费用$0.38。盘口方向一致。"
+      "note": "微信11/11 17:16：王老板「魔术受让3点5胜，20刀」，小王回复「20-7」。RH Filled 「No · UTA by 3.5」，等价ORL +3.5，27份 @ $0.72，费用$0.38。盘口方向一致。",
+      "legResults": [
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "id": 122,
@@ -2585,8 +2596,8 @@
       "usDate": "2026-11-11",
       "bet": "DEN + LAL -2.5 + SAS -2.5",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 42.0,
+      "status": "win",
       "profitIfWin": 22,
       "legs": [
         {
@@ -2607,7 +2618,13 @@
           "line": -2.5
         }
       ],
-      "note": "微信11/11：王老板三串一掘金独赢、湖人让2.5、马刺原要求让3.5；小王最终通知改为马刺让2.5，并回复「20赚22」。RH Filled 3-leg DEN / LAL by 2.5 / SAS by 2.5，42份 @ $0.447。与最终要求一致。"
+      "note": "微信11/11：王老板三串一掘金独赢、湖人让2.5、马刺原要求让3.5；小王最终通知改为马刺让2.5，并回复「20赚22」。RH Filled 3-leg DEN / LAL by 2.5 / SAS by 2.5，42份 @ $0.447。与最终要求一致。",
+      "legResults": [
+        "win",
+        "win",
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     }
   ]
 }
