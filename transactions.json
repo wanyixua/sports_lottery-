@@ -2526,8 +2526,8 @@
       "usDate": "2026-11-11",
       "bet": "SAS",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 28.0,
+      "status": "win",
       "profitIfWin": 8,
       "legs": [
         {
@@ -2536,7 +2536,11 @@
           "gameDate": "2026-11-11"
         }
       ],
-      "note": "微信11/11 17:38：王老板「买马刺胜20刀」，小王确认「20赚8」。RH Filled SAS Yes，投入$20，28份 @ $0.70；手续费$0.40。球队、市场和金额一致。"
+      "note": "微信11/11 17:38：王老板「买马刺胜20刀」，小王确认「20赚8」。RH Filled SAS Yes，投入$20，28份 @ $0.70；手续费$0.40。球队、市场和金额一致。",
+      "legResults": [
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "id": 120,
