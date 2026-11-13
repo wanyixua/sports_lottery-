@@ -2,8 +2,920 @@
   "season": "2026-27",
   "seasonEndYear": 2027,
   "source": "ESPN scoreboard (regular season completed games)",
-  "capturedAt": "2026-11-12T23:47:16.720030+00:00",
+  "capturedAt": "2026-11-13T06:04:10.319714+00:00",
   "teams": {
+    "CHA": {
+      "wins": 4,
+      "losses": 8,
+      "games": [
+        {
+          "id": "401909979",
+          "date": "2026-11-12",
+          "opponent": "PHX",
+          "home": false,
+          "score": 96,
+          "opponentScore": 101,
+          "result": "L"
+        },
+        {
+          "id": "401909953",
+          "date": "2026-11-09",
+          "opponent": "CLE",
+          "home": true,
+          "score": 124,
+          "opponentScore": 112,
+          "result": "W"
+        },
+        {
+          "id": "401909288",
+          "date": "2026-11-06",
+          "opponent": "BOS",
+          "home": true,
+          "score": 80,
+          "opponentScore": 119,
+          "result": "L"
+        },
+        {
+          "id": "401909925",
+          "date": "2026-11-04",
+          "opponent": "BKN",
+          "home": false,
+          "score": 104,
+          "opponentScore": 114,
+          "result": "L"
+        },
+        {
+          "id": "401909908",
+          "date": "2026-11-02",
+          "opponent": "DET",
+          "home": true,
+          "score": 91,
+          "opponentScore": 124,
+          "result": "L"
+        },
+        {
+          "id": "401909897",
+          "date": "2026-10-31",
+          "opponent": "PHI",
+          "home": true,
+          "score": 104,
+          "opponentScore": 109,
+          "result": "L"
+        },
+        {
+          "id": "401909277",
+          "date": "2026-10-30",
+          "opponent": "WAS",
+          "home": false,
+          "score": 79,
+          "opponentScore": 95,
+          "result": "L"
+        },
+        {
+          "id": "401909883",
+          "date": "2026-10-28",
+          "opponent": "DET",
+          "home": false,
+          "score": 89,
+          "opponentScore": 97,
+          "result": "L"
+        },
+        {
+          "id": "401909868",
+          "date": "2026-10-26",
+          "opponent": "WAS",
+          "home": true,
+          "score": 110,
+          "opponentScore": 103,
+          "result": "W"
+        },
+        {
+          "id": "401909853",
+          "date": "2026-10-24",
+          "opponent": "MIA",
+          "home": true,
+          "score": 115,
+          "opponentScore": 110,
+          "result": "W"
+        },
+        {
+          "id": "401909843",
+          "date": "2026-10-23",
+          "opponent": "ATL",
+          "home": true,
+          "score": 81,
+          "opponentScore": 128,
+          "result": "L"
+        },
+        {
+          "id": "401909836",
+          "date": "2026-10-21",
+          "opponent": "BKN",
+          "home": false,
+          "score": 110,
+          "opponentScore": 103,
+          "result": "W"
+        }
+      ]
+    },
+    "PHX": {
+      "wins": 5,
+      "losses": 6,
+      "games": [
+        {
+          "id": "401909979",
+          "date": "2026-11-12",
+          "opponent": "CHA",
+          "home": true,
+          "score": 101,
+          "opponentScore": 96,
+          "result": "W"
+        },
+        {
+          "id": "401909962",
+          "date": "2026-11-10",
+          "opponent": "LAC",
+          "home": true,
+          "score": 133,
+          "opponentScore": 110,
+          "result": "W"
+        },
+        {
+          "id": "401909958",
+          "date": "2026-11-09",
+          "opponent": "SAS",
+          "home": true,
+          "score": 96,
+          "opponentScore": 122,
+          "result": "L"
+        },
+        {
+          "id": "401909943",
+          "date": "2026-11-07",
+          "opponent": "HOU",
+          "home": true,
+          "score": 102,
+          "opponentScore": 99,
+          "result": "W"
+        },
+        {
+          "id": "401909936",
+          "date": "2026-11-05",
+          "opponent": "ORL",
+          "home": true,
+          "score": 117,
+          "opponentScore": 104,
+          "result": "W"
+        },
+        {
+          "id": "401909932",
+          "date": "2026-11-04",
+          "opponent": "POR",
+          "home": true,
+          "score": 119,
+          "opponentScore": 132,
+          "result": "L"
+        },
+        {
+          "id": "401909919",
+          "date": "2026-11-02",
+          "opponent": "GSW",
+          "home": false,
+          "score": 113,
+          "opponentScore": 116,
+          "result": "L"
+        },
+        {
+          "id": "401909286",
+          "date": "2026-10-30",
+          "opponent": "DEN",
+          "home": true,
+          "score": 120,
+          "opponentScore": 127,
+          "result": "L"
+        },
+        {
+          "id": "401909873",
+          "date": "2026-10-26",
+          "opponent": "OKC",
+          "home": false,
+          "score": 114,
+          "opponentScore": 125,
+          "result": "L"
+        },
+        {
+          "id": "401909860",
+          "date": "2026-10-24",
+          "opponent": "GSW",
+          "home": true,
+          "score": 131,
+          "opponentScore": 122,
+          "result": "W"
+        },
+        {
+          "id": "401909841",
+          "date": "2026-10-21",
+          "opponent": "POR",
+          "home": false,
+          "score": 83,
+          "opponentScore": 124,
+          "result": "L"
+        }
+      ]
+    },
+    "DAL": {
+      "wins": 7,
+      "losses": 5,
+      "games": [
+        {
+          "id": "401909978",
+          "date": "2026-11-12",
+          "opponent": "MIN",
+          "home": false,
+          "score": 94,
+          "opponentScore": 133,
+          "result": "L"
+        },
+        {
+          "id": "401909956",
+          "date": "2026-11-09",
+          "opponent": "IND",
+          "home": true,
+          "score": 125,
+          "opponentScore": 122,
+          "result": "W"
+        },
+        {
+          "id": "401909948",
+          "date": "2026-11-08",
+          "opponent": "BKN",
+          "home": true,
+          "score": 130,
+          "opponentScore": 93,
+          "result": "W"
+        },
+        {
+          "id": "401909290",
+          "date": "2026-11-06",
+          "opponent": "UTA",
+          "home": true,
+          "score": 112,
+          "opponentScore": 100,
+          "result": "W"
+        },
+        {
+          "id": "401909933",
+          "date": "2026-11-04",
+          "opponent": "SAS",
+          "home": false,
+          "score": 111,
+          "opponentScore": 112,
+          "result": "L"
+        },
+        {
+          "id": "401909913",
+          "date": "2026-11-02",
+          "opponent": "SAC",
+          "home": true,
+          "score": 100,
+          "opponentScore": 115,
+          "result": "L"
+        },
+        {
+          "id": "401909283",
+          "date": "2026-10-30",
+          "opponent": "HOU",
+          "home": true,
+          "score": 116,
+          "opponentScore": 111,
+          "result": "W"
+        },
+        {
+          "id": "401909891",
+          "date": "2026-10-28",
+          "opponent": "OKC",
+          "home": true,
+          "score": 120,
+          "opponentScore": 96,
+          "result": "W"
+        },
+        {
+          "id": "401909871",
+          "date": "2026-10-26",
+          "opponent": "MIA",
+          "home": false,
+          "score": 113,
+          "opponentScore": 109,
+          "result": "W"
+        },
+        {
+          "id": "401909858",
+          "date": "2026-10-24",
+          "opponent": "SAS",
+          "home": true,
+          "score": 106,
+          "opponentScore": 122,
+          "result": "L"
+        },
+        {
+          "id": "401909844",
+          "date": "2026-10-23",
+          "opponent": "IND",
+          "home": false,
+          "score": 121,
+          "opponentScore": 105,
+          "result": "W"
+        },
+        {
+          "id": "401909840",
+          "date": "2026-10-21",
+          "opponent": "HOU",
+          "home": false,
+          "score": 110,
+          "opponentScore": 128,
+          "result": "L"
+        }
+      ]
+    },
+    "MIN": {
+      "wins": 9,
+      "losses": 3,
+      "games": [
+        {
+          "id": "401909978",
+          "date": "2026-11-12",
+          "opponent": "DAL",
+          "home": true,
+          "score": 133,
+          "opponentScore": 94,
+          "result": "W"
+        },
+        {
+          "id": "401909947",
+          "date": "2026-11-08",
+          "opponent": "UTA",
+          "home": true,
+          "score": 115,
+          "opponentScore": 100,
+          "result": "W"
+        },
+        {
+          "id": "401909293",
+          "date": "2026-11-06",
+          "opponent": "NOP",
+          "home": false,
+          "score": 115,
+          "opponentScore": 109,
+          "result": "W"
+        },
+        {
+          "id": "401909930",
+          "date": "2026-11-04",
+          "opponent": "HOU",
+          "home": false,
+          "score": 117,
+          "opponentScore": 107,
+          "result": "W"
+        },
+        {
+          "id": "401909915",
+          "date": "2026-11-02",
+          "opponent": "MIL",
+          "home": true,
+          "score": 112,
+          "opponentScore": 100,
+          "result": "W"
+        },
+        {
+          "id": "401909901",
+          "date": "2026-10-31",
+          "opponent": "SAS",
+          "home": false,
+          "score": 111,
+          "opponentScore": 121,
+          "result": "L"
+        },
+        {
+          "id": "401909284",
+          "date": "2026-10-30",
+          "opponent": "LAC",
+          "home": true,
+          "score": 127,
+          "opponentScore": 101,
+          "result": "W"
+        },
+        {
+          "id": "401909888",
+          "date": "2026-10-28",
+          "opponent": "GSW",
+          "home": true,
+          "score": 114,
+          "opponentScore": 119,
+          "result": "L"
+        },
+        {
+          "id": "401909869",
+          "date": "2026-10-26",
+          "opponent": "CLE",
+          "home": false,
+          "score": 125,
+          "opponentScore": 127,
+          "result": "L"
+        },
+        {
+          "id": "401909864",
+          "date": "2026-10-25",
+          "opponent": "TOR",
+          "home": true,
+          "score": 117,
+          "opponentScore": 94,
+          "result": "W"
+        },
+        {
+          "id": "401909845",
+          "date": "2026-10-23",
+          "opponent": "ORL",
+          "home": false,
+          "score": 115,
+          "opponentScore": 93,
+          "result": "W"
+        },
+        {
+          "id": "401909091",
+          "date": "2026-10-21",
+          "opponent": "MIA",
+          "home": false,
+          "score": 131,
+          "opponentScore": 106,
+          "result": "W"
+        }
+      ]
+    },
+    "DET": {
+      "wins": 8,
+      "losses": 3,
+      "games": [
+        {
+          "id": "401909977",
+          "date": "2026-11-12",
+          "opponent": "WAS",
+          "home": false,
+          "score": 144,
+          "opponentScore": 140,
+          "result": "W"
+        },
+        {
+          "id": "401909954",
+          "date": "2026-11-09",
+          "opponent": "WAS",
+          "home": true,
+          "score": 122,
+          "opponentScore": 111,
+          "result": "W"
+        },
+        {
+          "id": "401909946",
+          "date": "2026-11-08",
+          "opponent": "LAL",
+          "home": true,
+          "score": 116,
+          "opponentScore": 121,
+          "result": "L"
+        },
+        {
+          "id": "401909922",
+          "date": "2026-11-04",
+          "opponent": "PHI",
+          "home": true,
+          "score": 106,
+          "opponentScore": 112,
+          "result": "L"
+        },
+        {
+          "id": "401909908",
+          "date": "2026-11-02",
+          "opponent": "CHA",
+          "home": false,
+          "score": 124,
+          "opponentScore": 91,
+          "result": "W"
+        },
+        {
+          "id": "401909279",
+          "date": "2026-10-30",
+          "opponent": "BKN",
+          "home": false,
+          "score": 110,
+          "opponentScore": 94,
+          "result": "W"
+        },
+        {
+          "id": "401909883",
+          "date": "2026-10-28",
+          "opponent": "CHA",
+          "home": true,
+          "score": 97,
+          "opponentScore": 89,
+          "result": "W"
+        },
+        {
+          "id": "401909878",
+          "date": "2026-10-27",
+          "opponent": "NYK",
+          "home": false,
+          "score": 97,
+          "opponentScore": 111,
+          "result": "L"
+        },
+        {
+          "id": "401909866",
+          "date": "2026-10-25",
+          "opponent": "PHI",
+          "home": false,
+          "score": 106,
+          "opponentScore": 93,
+          "result": "W"
+        },
+        {
+          "id": "401909847",
+          "date": "2026-10-23",
+          "opponent": "MIA",
+          "home": false,
+          "score": 128,
+          "opponentScore": 111,
+          "result": "W"
+        },
+        {
+          "id": "401909088",
+          "date": "2026-10-20",
+          "opponent": "BOS",
+          "home": true,
+          "score": 121,
+          "opponentScore": 113,
+          "result": "W"
+        }
+      ]
+    },
+    "WAS": {
+      "wins": 4,
+      "losses": 9,
+      "games": [
+        {
+          "id": "401909977",
+          "date": "2026-11-12",
+          "opponent": "DET",
+          "home": true,
+          "score": 140,
+          "opponentScore": 144,
+          "result": "L"
+        },
+        {
+          "id": "401909966",
+          "date": "2026-11-11",
+          "opponent": "IND",
+          "home": false,
+          "score": 101,
+          "opponentScore": 114,
+          "result": "L"
+        },
+        {
+          "id": "401909954",
+          "date": "2026-11-09",
+          "opponent": "DET",
+          "home": false,
+          "score": 111,
+          "opponentScore": 122,
+          "result": "L"
+        },
+        {
+          "id": "401909941",
+          "date": "2026-11-07",
+          "opponent": "OKC",
+          "home": false,
+          "score": 75,
+          "opponentScore": 114,
+          "result": "L"
+        },
+        {
+          "id": "401909287",
+          "date": "2026-11-06",
+          "opponent": "ATL",
+          "home": false,
+          "score": 132,
+          "opponentScore": 139,
+          "result": "L"
+        },
+        {
+          "id": "401909923",
+          "date": "2026-11-04",
+          "opponent": "ATL",
+          "home": true,
+          "score": 105,
+          "opponentScore": 120,
+          "result": "L"
+        },
+        {
+          "id": "401909911",
+          "date": "2026-11-02",
+          "opponent": "ORL",
+          "home": false,
+          "score": 103,
+          "opponentScore": 94,
+          "result": "W"
+        },
+        {
+          "id": "401909277",
+          "date": "2026-10-30",
+          "opponent": "CHA",
+          "home": true,
+          "score": 95,
+          "opponentScore": 79,
+          "result": "W"
+        },
+        {
+          "id": "401909882",
+          "date": "2026-10-28",
+          "opponent": "CLE",
+          "home": false,
+          "score": 111,
+          "opponentScore": 121,
+          "result": "L"
+        },
+        {
+          "id": "401909868",
+          "date": "2026-10-26",
+          "opponent": "CHA",
+          "home": false,
+          "score": 103,
+          "opponentScore": 110,
+          "result": "L"
+        },
+        {
+          "id": "401909857",
+          "date": "2026-10-24",
+          "opponent": "CHI",
+          "home": false,
+          "score": 124,
+          "opponentScore": 120,
+          "result": "W"
+        },
+        {
+          "id": "401909846",
+          "date": "2026-10-23",
+          "opponent": "TOR",
+          "home": true,
+          "score": 102,
+          "opponentScore": 112,
+          "result": "L"
+        },
+        {
+          "id": "401909835",
+          "date": "2026-10-21",
+          "opponent": "MIL",
+          "home": true,
+          "score": 128,
+          "opponentScore": 116,
+          "result": "W"
+        }
+      ]
+    },
+    "TOR": {
+      "wins": 5,
+      "losses": 7,
+      "games": [
+        {
+          "id": "401909976",
+          "date": "2026-11-12",
+          "opponent": "PHI",
+          "home": false,
+          "score": 112,
+          "opponentScore": 123,
+          "result": "L"
+        },
+        {
+          "id": "401909968",
+          "date": "2026-11-11",
+          "opponent": "BOS",
+          "home": true,
+          "score": 93,
+          "opponentScore": 98,
+          "result": "L"
+        },
+        {
+          "id": "401909955",
+          "date": "2026-11-09",
+          "opponent": "MEM",
+          "home": true,
+          "score": 102,
+          "opponentScore": 118,
+          "result": "L"
+        },
+        {
+          "id": "401909292",
+          "date": "2026-11-06",
+          "opponent": "MIL",
+          "home": false,
+          "score": 121,
+          "opponentScore": 107,
+          "result": "W"
+        },
+        {
+          "id": "401909931",
+          "date": "2026-11-04",
+          "opponent": "DEN",
+          "home": false,
+          "score": 109,
+          "opponentScore": 128,
+          "result": "L"
+        },
+        {
+          "id": "401909920",
+          "date": "2026-11-02",
+          "opponent": "LAC",
+          "home": false,
+          "score": 125,
+          "opponentScore": 118,
+          "result": "W"
+        },
+        {
+          "id": "401909906",
+          "date": "2026-11-01",
+          "opponent": "LAL",
+          "home": false,
+          "score": 125,
+          "opponentScore": 131,
+          "result": "L"
+        },
+        {
+          "id": "401909281",
+          "date": "2026-10-30",
+          "opponent": "ORL",
+          "home": true,
+          "score": 114,
+          "opponentScore": 121,
+          "result": "L"
+        },
+        {
+          "id": "401909885",
+          "date": "2026-10-28",
+          "opponent": "ORL",
+          "home": true,
+          "score": 129,
+          "opponentScore": 99,
+          "result": "W"
+        },
+        {
+          "id": "401909864",
+          "date": "2026-10-25",
+          "opponent": "MIN",
+          "home": false,
+          "score": 94,
+          "opponentScore": 117,
+          "result": "L"
+        },
+        {
+          "id": "401909846",
+          "date": "2026-10-23",
+          "opponent": "WAS",
+          "home": false,
+          "score": 112,
+          "opponentScore": 102,
+          "result": "W"
+        },
+        {
+          "id": "401909837",
+          "date": "2026-10-21",
+          "opponent": "CHI",
+          "home": true,
+          "score": 135,
+          "opponentScore": 92,
+          "result": "W"
+        }
+      ]
+    },
+    "PHI": {
+      "wins": 10,
+      "losses": 3,
+      "games": [
+        {
+          "id": "401909976",
+          "date": "2026-11-12",
+          "opponent": "TOR",
+          "home": true,
+          "score": 123,
+          "opponentScore": 112,
+          "result": "W"
+        },
+        {
+          "id": "401909961",
+          "date": "2026-11-10",
+          "opponent": "BOS",
+          "home": true,
+          "score": 101,
+          "opponentScore": 123,
+          "result": "L"
+        },
+        {
+          "id": "401909945",
+          "date": "2026-11-08",
+          "opponent": "CHI",
+          "home": false,
+          "score": 127,
+          "opponentScore": 121,
+          "result": "W"
+        },
+        {
+          "id": "401909289",
+          "date": "2026-11-06",
+          "opponent": "CLE",
+          "home": false,
+          "score": 95,
+          "opponentScore": 119,
+          "result": "L"
+        },
+        {
+          "id": "401909922",
+          "date": "2026-11-04",
+          "opponent": "DET",
+          "home": false,
+          "score": 112,
+          "opponentScore": 106,
+          "result": "W"
+        },
+        {
+          "id": "401909912",
+          "date": "2026-11-02",
+          "opponent": "CHI",
+          "home": true,
+          "score": 126,
+          "opponentScore": 107,
+          "result": "W"
+        },
+        {
+          "id": "401909897",
+          "date": "2026-10-31",
+          "opponent": "CHA",
+          "home": false,
+          "score": 109,
+          "opponentScore": 104,
+          "result": "W"
+        },
+        {
+          "id": "401909280",
+          "date": "2026-10-30",
+          "opponent": "NYK",
+          "home": true,
+          "score": 98,
+          "opponentScore": 93,
+          "result": "W"
+        },
+        {
+          "id": "401909884",
+          "date": "2026-10-28",
+          "opponent": "IND",
+          "home": false,
+          "score": 114,
+          "opponentScore": 109,
+          "result": "W"
+        },
+        {
+          "id": "401909866",
+          "date": "2026-10-25",
+          "opponent": "DET",
+          "home": true,
+          "score": 93,
+          "opponentScore": 106,
+          "result": "L"
+        },
+        {
+          "id": "401909855",
+          "date": "2026-10-24",
+          "opponent": "MIL",
+          "home": true,
+          "score": 127,
+          "opponentScore": 116,
+          "result": "W"
+        },
+        {
+          "id": "401909093",
+          "date": "2026-10-22",
+          "opponent": "CLE",
+          "home": true,
+          "score": 114,
+          "opponentScore": 106,
+          "result": "W"
+        },
+        {
+          "id": "401909089",
+          "date": "2026-10-20",
+          "opponent": "NYK",
+          "home": false,
+          "score": 106,
+          "opponentScore": 100,
+          "result": "W"
+        }
+      ]
+    },
     "OKC": {
       "wins": 8,
       "losses": 4,
@@ -1651,111 +2563,6 @@
         }
       ]
     },
-    "TOR": {
-      "wins": 5,
-      "losses": 6,
-      "games": [
-        {
-          "id": "401909968",
-          "date": "2026-11-11",
-          "opponent": "BOS",
-          "home": true,
-          "score": 93,
-          "opponentScore": 98,
-          "result": "L"
-        },
-        {
-          "id": "401909955",
-          "date": "2026-11-09",
-          "opponent": "MEM",
-          "home": true,
-          "score": 102,
-          "opponentScore": 118,
-          "result": "L"
-        },
-        {
-          "id": "401909292",
-          "date": "2026-11-06",
-          "opponent": "MIL",
-          "home": false,
-          "score": 121,
-          "opponentScore": 107,
-          "result": "W"
-        },
-        {
-          "id": "401909931",
-          "date": "2026-11-04",
-          "opponent": "DEN",
-          "home": false,
-          "score": 109,
-          "opponentScore": 128,
-          "result": "L"
-        },
-        {
-          "id": "401909920",
-          "date": "2026-11-02",
-          "opponent": "LAC",
-          "home": false,
-          "score": 125,
-          "opponentScore": 118,
-          "result": "W"
-        },
-        {
-          "id": "401909906",
-          "date": "2026-11-01",
-          "opponent": "LAL",
-          "home": false,
-          "score": 125,
-          "opponentScore": 131,
-          "result": "L"
-        },
-        {
-          "id": "401909281",
-          "date": "2026-10-30",
-          "opponent": "ORL",
-          "home": true,
-          "score": 114,
-          "opponentScore": 121,
-          "result": "L"
-        },
-        {
-          "id": "401909885",
-          "date": "2026-10-28",
-          "opponent": "ORL",
-          "home": true,
-          "score": 129,
-          "opponentScore": 99,
-          "result": "W"
-        },
-        {
-          "id": "401909864",
-          "date": "2026-10-25",
-          "opponent": "MIN",
-          "home": false,
-          "score": 94,
-          "opponentScore": 117,
-          "result": "L"
-        },
-        {
-          "id": "401909846",
-          "date": "2026-10-23",
-          "opponent": "WAS",
-          "home": false,
-          "score": 112,
-          "opponentScore": 102,
-          "result": "W"
-        },
-        {
-          "id": "401909837",
-          "date": "2026-10-21",
-          "opponent": "CHI",
-          "home": true,
-          "score": 135,
-          "opponentScore": 92,
-          "result": "W"
-        }
-      ]
-    },
     "CLE": {
       "wins": 6,
       "losses": 6,
@@ -1972,120 +2779,6 @@
           "score": 100,
           "opponentScore": 106,
           "result": "L"
-        }
-      ]
-    },
-    "WAS": {
-      "wins": 4,
-      "losses": 8,
-      "games": [
-        {
-          "id": "401909966",
-          "date": "2026-11-11",
-          "opponent": "IND",
-          "home": false,
-          "score": 101,
-          "opponentScore": 114,
-          "result": "L"
-        },
-        {
-          "id": "401909954",
-          "date": "2026-11-09",
-          "opponent": "DET",
-          "home": false,
-          "score": 111,
-          "opponentScore": 122,
-          "result": "L"
-        },
-        {
-          "id": "401909941",
-          "date": "2026-11-07",
-          "opponent": "OKC",
-          "home": false,
-          "score": 75,
-          "opponentScore": 114,
-          "result": "L"
-        },
-        {
-          "id": "401909287",
-          "date": "2026-11-06",
-          "opponent": "ATL",
-          "home": false,
-          "score": 132,
-          "opponentScore": 139,
-          "result": "L"
-        },
-        {
-          "id": "401909923",
-          "date": "2026-11-04",
-          "opponent": "ATL",
-          "home": true,
-          "score": 105,
-          "opponentScore": 120,
-          "result": "L"
-        },
-        {
-          "id": "401909911",
-          "date": "2026-11-02",
-          "opponent": "ORL",
-          "home": false,
-          "score": 103,
-          "opponentScore": 94,
-          "result": "W"
-        },
-        {
-          "id": "401909277",
-          "date": "2026-10-30",
-          "opponent": "CHA",
-          "home": true,
-          "score": 95,
-          "opponentScore": 79,
-          "result": "W"
-        },
-        {
-          "id": "401909882",
-          "date": "2026-10-28",
-          "opponent": "CLE",
-          "home": false,
-          "score": 111,
-          "opponentScore": 121,
-          "result": "L"
-        },
-        {
-          "id": "401909868",
-          "date": "2026-10-26",
-          "opponent": "CHA",
-          "home": false,
-          "score": 103,
-          "opponentScore": 110,
-          "result": "L"
-        },
-        {
-          "id": "401909857",
-          "date": "2026-10-24",
-          "opponent": "CHI",
-          "home": false,
-          "score": 124,
-          "opponentScore": 120,
-          "result": "W"
-        },
-        {
-          "id": "401909846",
-          "date": "2026-10-23",
-          "opponent": "TOR",
-          "home": true,
-          "score": 102,
-          "opponentScore": 112,
-          "result": "L"
-        },
-        {
-          "id": "401909835",
-          "date": "2026-10-21",
-          "opponent": "MIL",
-          "home": true,
-          "score": 128,
-          "opponentScore": 116,
-          "result": "W"
         }
       ]
     },
@@ -2509,522 +3202,6 @@
         }
       ]
     },
-    "PHX": {
-      "wins": 4,
-      "losses": 6,
-      "games": [
-        {
-          "id": "401909962",
-          "date": "2026-11-10",
-          "opponent": "LAC",
-          "home": true,
-          "score": 133,
-          "opponentScore": 110,
-          "result": "W"
-        },
-        {
-          "id": "401909958",
-          "date": "2026-11-09",
-          "opponent": "SAS",
-          "home": true,
-          "score": 96,
-          "opponentScore": 122,
-          "result": "L"
-        },
-        {
-          "id": "401909943",
-          "date": "2026-11-07",
-          "opponent": "HOU",
-          "home": true,
-          "score": 102,
-          "opponentScore": 99,
-          "result": "W"
-        },
-        {
-          "id": "401909936",
-          "date": "2026-11-05",
-          "opponent": "ORL",
-          "home": true,
-          "score": 117,
-          "opponentScore": 104,
-          "result": "W"
-        },
-        {
-          "id": "401909932",
-          "date": "2026-11-04",
-          "opponent": "POR",
-          "home": true,
-          "score": 119,
-          "opponentScore": 132,
-          "result": "L"
-        },
-        {
-          "id": "401909919",
-          "date": "2026-11-02",
-          "opponent": "GSW",
-          "home": false,
-          "score": 113,
-          "opponentScore": 116,
-          "result": "L"
-        },
-        {
-          "id": "401909286",
-          "date": "2026-10-30",
-          "opponent": "DEN",
-          "home": true,
-          "score": 120,
-          "opponentScore": 127,
-          "result": "L"
-        },
-        {
-          "id": "401909873",
-          "date": "2026-10-26",
-          "opponent": "OKC",
-          "home": false,
-          "score": 114,
-          "opponentScore": 125,
-          "result": "L"
-        },
-        {
-          "id": "401909860",
-          "date": "2026-10-24",
-          "opponent": "GSW",
-          "home": true,
-          "score": 131,
-          "opponentScore": 122,
-          "result": "W"
-        },
-        {
-          "id": "401909841",
-          "date": "2026-10-21",
-          "opponent": "POR",
-          "home": false,
-          "score": 83,
-          "opponentScore": 124,
-          "result": "L"
-        }
-      ]
-    },
-    "PHI": {
-      "wins": 9,
-      "losses": 3,
-      "games": [
-        {
-          "id": "401909961",
-          "date": "2026-11-10",
-          "opponent": "BOS",
-          "home": true,
-          "score": 101,
-          "opponentScore": 123,
-          "result": "L"
-        },
-        {
-          "id": "401909945",
-          "date": "2026-11-08",
-          "opponent": "CHI",
-          "home": false,
-          "score": 127,
-          "opponentScore": 121,
-          "result": "W"
-        },
-        {
-          "id": "401909289",
-          "date": "2026-11-06",
-          "opponent": "CLE",
-          "home": false,
-          "score": 95,
-          "opponentScore": 119,
-          "result": "L"
-        },
-        {
-          "id": "401909922",
-          "date": "2026-11-04",
-          "opponent": "DET",
-          "home": false,
-          "score": 112,
-          "opponentScore": 106,
-          "result": "W"
-        },
-        {
-          "id": "401909912",
-          "date": "2026-11-02",
-          "opponent": "CHI",
-          "home": true,
-          "score": 126,
-          "opponentScore": 107,
-          "result": "W"
-        },
-        {
-          "id": "401909897",
-          "date": "2026-10-31",
-          "opponent": "CHA",
-          "home": false,
-          "score": 109,
-          "opponentScore": 104,
-          "result": "W"
-        },
-        {
-          "id": "401909280",
-          "date": "2026-10-30",
-          "opponent": "NYK",
-          "home": true,
-          "score": 98,
-          "opponentScore": 93,
-          "result": "W"
-        },
-        {
-          "id": "401909884",
-          "date": "2026-10-28",
-          "opponent": "IND",
-          "home": false,
-          "score": 114,
-          "opponentScore": 109,
-          "result": "W"
-        },
-        {
-          "id": "401909866",
-          "date": "2026-10-25",
-          "opponent": "DET",
-          "home": true,
-          "score": 93,
-          "opponentScore": 106,
-          "result": "L"
-        },
-        {
-          "id": "401909855",
-          "date": "2026-10-24",
-          "opponent": "MIL",
-          "home": true,
-          "score": 127,
-          "opponentScore": 116,
-          "result": "W"
-        },
-        {
-          "id": "401909093",
-          "date": "2026-10-22",
-          "opponent": "CLE",
-          "home": true,
-          "score": 114,
-          "opponentScore": 106,
-          "result": "W"
-        },
-        {
-          "id": "401909089",
-          "date": "2026-10-20",
-          "opponent": "NYK",
-          "home": false,
-          "score": 106,
-          "opponentScore": 100,
-          "result": "W"
-        }
-      ]
-    },
-    "DAL": {
-      "wins": 7,
-      "losses": 4,
-      "games": [
-        {
-          "id": "401909956",
-          "date": "2026-11-09",
-          "opponent": "IND",
-          "home": true,
-          "score": 125,
-          "opponentScore": 122,
-          "result": "W"
-        },
-        {
-          "id": "401909948",
-          "date": "2026-11-08",
-          "opponent": "BKN",
-          "home": true,
-          "score": 130,
-          "opponentScore": 93,
-          "result": "W"
-        },
-        {
-          "id": "401909290",
-          "date": "2026-11-06",
-          "opponent": "UTA",
-          "home": true,
-          "score": 112,
-          "opponentScore": 100,
-          "result": "W"
-        },
-        {
-          "id": "401909933",
-          "date": "2026-11-04",
-          "opponent": "SAS",
-          "home": false,
-          "score": 111,
-          "opponentScore": 112,
-          "result": "L"
-        },
-        {
-          "id": "401909913",
-          "date": "2026-11-02",
-          "opponent": "SAC",
-          "home": true,
-          "score": 100,
-          "opponentScore": 115,
-          "result": "L"
-        },
-        {
-          "id": "401909283",
-          "date": "2026-10-30",
-          "opponent": "HOU",
-          "home": true,
-          "score": 116,
-          "opponentScore": 111,
-          "result": "W"
-        },
-        {
-          "id": "401909891",
-          "date": "2026-10-28",
-          "opponent": "OKC",
-          "home": true,
-          "score": 120,
-          "opponentScore": 96,
-          "result": "W"
-        },
-        {
-          "id": "401909871",
-          "date": "2026-10-26",
-          "opponent": "MIA",
-          "home": false,
-          "score": 113,
-          "opponentScore": 109,
-          "result": "W"
-        },
-        {
-          "id": "401909858",
-          "date": "2026-10-24",
-          "opponent": "SAS",
-          "home": true,
-          "score": 106,
-          "opponentScore": 122,
-          "result": "L"
-        },
-        {
-          "id": "401909844",
-          "date": "2026-10-23",
-          "opponent": "IND",
-          "home": false,
-          "score": 121,
-          "opponentScore": 105,
-          "result": "W"
-        },
-        {
-          "id": "401909840",
-          "date": "2026-10-21",
-          "opponent": "HOU",
-          "home": false,
-          "score": 110,
-          "opponentScore": 128,
-          "result": "L"
-        }
-      ]
-    },
-    "DET": {
-      "wins": 7,
-      "losses": 3,
-      "games": [
-        {
-          "id": "401909954",
-          "date": "2026-11-09",
-          "opponent": "WAS",
-          "home": true,
-          "score": 122,
-          "opponentScore": 111,
-          "result": "W"
-        },
-        {
-          "id": "401909946",
-          "date": "2026-11-08",
-          "opponent": "LAL",
-          "home": true,
-          "score": 116,
-          "opponentScore": 121,
-          "result": "L"
-        },
-        {
-          "id": "401909922",
-          "date": "2026-11-04",
-          "opponent": "PHI",
-          "home": true,
-          "score": 106,
-          "opponentScore": 112,
-          "result": "L"
-        },
-        {
-          "id": "401909908",
-          "date": "2026-11-02",
-          "opponent": "CHA",
-          "home": false,
-          "score": 124,
-          "opponentScore": 91,
-          "result": "W"
-        },
-        {
-          "id": "401909279",
-          "date": "2026-10-30",
-          "opponent": "BKN",
-          "home": false,
-          "score": 110,
-          "opponentScore": 94,
-          "result": "W"
-        },
-        {
-          "id": "401909883",
-          "date": "2026-10-28",
-          "opponent": "CHA",
-          "home": true,
-          "score": 97,
-          "opponentScore": 89,
-          "result": "W"
-        },
-        {
-          "id": "401909878",
-          "date": "2026-10-27",
-          "opponent": "NYK",
-          "home": false,
-          "score": 97,
-          "opponentScore": 111,
-          "result": "L"
-        },
-        {
-          "id": "401909866",
-          "date": "2026-10-25",
-          "opponent": "PHI",
-          "home": false,
-          "score": 106,
-          "opponentScore": 93,
-          "result": "W"
-        },
-        {
-          "id": "401909847",
-          "date": "2026-10-23",
-          "opponent": "MIA",
-          "home": false,
-          "score": 128,
-          "opponentScore": 111,
-          "result": "W"
-        },
-        {
-          "id": "401909088",
-          "date": "2026-10-20",
-          "opponent": "BOS",
-          "home": true,
-          "score": 121,
-          "opponentScore": 113,
-          "result": "W"
-        }
-      ]
-    },
-    "CHA": {
-      "wins": 4,
-      "losses": 7,
-      "games": [
-        {
-          "id": "401909953",
-          "date": "2026-11-09",
-          "opponent": "CLE",
-          "home": true,
-          "score": 124,
-          "opponentScore": 112,
-          "result": "W"
-        },
-        {
-          "id": "401909288",
-          "date": "2026-11-06",
-          "opponent": "BOS",
-          "home": true,
-          "score": 80,
-          "opponentScore": 119,
-          "result": "L"
-        },
-        {
-          "id": "401909925",
-          "date": "2026-11-04",
-          "opponent": "BKN",
-          "home": false,
-          "score": 104,
-          "opponentScore": 114,
-          "result": "L"
-        },
-        {
-          "id": "401909908",
-          "date": "2026-11-02",
-          "opponent": "DET",
-          "home": true,
-          "score": 91,
-          "opponentScore": 124,
-          "result": "L"
-        },
-        {
-          "id": "401909897",
-          "date": "2026-10-31",
-          "opponent": "PHI",
-          "home": true,
-          "score": 104,
-          "opponentScore": 109,
-          "result": "L"
-        },
-        {
-          "id": "401909277",
-          "date": "2026-10-30",
-          "opponent": "WAS",
-          "home": false,
-          "score": 79,
-          "opponentScore": 95,
-          "result": "L"
-        },
-        {
-          "id": "401909883",
-          "date": "2026-10-28",
-          "opponent": "DET",
-          "home": false,
-          "score": 89,
-          "opponentScore": 97,
-          "result": "L"
-        },
-        {
-          "id": "401909868",
-          "date": "2026-10-26",
-          "opponent": "WAS",
-          "home": true,
-          "score": 110,
-          "opponentScore": 103,
-          "result": "W"
-        },
-        {
-          "id": "401909853",
-          "date": "2026-10-24",
-          "opponent": "MIA",
-          "home": true,
-          "score": 115,
-          "opponentScore": 110,
-          "result": "W"
-        },
-        {
-          "id": "401909843",
-          "date": "2026-10-23",
-          "opponent": "ATL",
-          "home": true,
-          "score": 81,
-          "opponentScore": 128,
-          "result": "L"
-        },
-        {
-          "id": "401909836",
-          "date": "2026-10-21",
-          "opponent": "BKN",
-          "home": false,
-          "score": 110,
-          "opponentScore": 103,
-          "result": "W"
-        }
-      ]
-    },
     "ATL": {
       "wins": 7,
       "losses": 5,
@@ -3138,114 +3315,45 @@
           "result": "W"
         }
       ]
-    },
-    "MIN": {
-      "wins": 8,
-      "losses": 3,
-      "games": [
-        {
-          "id": "401909947",
-          "date": "2026-11-08",
-          "opponent": "UTA",
-          "home": true,
-          "score": 115,
-          "opponentScore": 100,
-          "result": "W"
-        },
-        {
-          "id": "401909293",
-          "date": "2026-11-06",
-          "opponent": "NOP",
-          "home": false,
-          "score": 115,
-          "opponentScore": 109,
-          "result": "W"
-        },
-        {
-          "id": "401909930",
-          "date": "2026-11-04",
-          "opponent": "HOU",
-          "home": false,
-          "score": 117,
-          "opponentScore": 107,
-          "result": "W"
-        },
-        {
-          "id": "401909915",
-          "date": "2026-11-02",
-          "opponent": "MIL",
-          "home": true,
-          "score": 112,
-          "opponentScore": 100,
-          "result": "W"
-        },
-        {
-          "id": "401909901",
-          "date": "2026-10-31",
-          "opponent": "SAS",
-          "home": false,
-          "score": 111,
-          "opponentScore": 121,
-          "result": "L"
-        },
-        {
-          "id": "401909284",
-          "date": "2026-10-30",
-          "opponent": "LAC",
-          "home": true,
-          "score": 127,
-          "opponentScore": 101,
-          "result": "W"
-        },
-        {
-          "id": "401909888",
-          "date": "2026-10-28",
-          "opponent": "GSW",
-          "home": true,
-          "score": 114,
-          "opponentScore": 119,
-          "result": "L"
-        },
-        {
-          "id": "401909869",
-          "date": "2026-10-26",
-          "opponent": "CLE",
-          "home": false,
-          "score": 125,
-          "opponentScore": 127,
-          "result": "L"
-        },
-        {
-          "id": "401909864",
-          "date": "2026-10-25",
-          "opponent": "TOR",
-          "home": true,
-          "score": 117,
-          "opponentScore": 94,
-          "result": "W"
-        },
-        {
-          "id": "401909845",
-          "date": "2026-10-23",
-          "opponent": "ORL",
-          "home": false,
-          "score": 115,
-          "opponentScore": 93,
-          "result": "W"
-        },
-        {
-          "id": "401909091",
-          "date": "2026-10-21",
-          "opponent": "MIA",
-          "home": false,
-          "score": 131,
-          "opponentScore": 106,
-          "result": "W"
-        }
-      ]
     }
   },
   "games": [
+    {
+      "id": "401909979",
+      "date": "2026-11-12",
+      "away": "CHA",
+      "home": "PHX",
+      "awayScore": 96,
+      "homeScore": 101,
+      "winner": "PHX"
+    },
+    {
+      "id": "401909978",
+      "date": "2026-11-12",
+      "away": "DAL",
+      "home": "MIN",
+      "awayScore": 94,
+      "homeScore": 133,
+      "winner": "MIN"
+    },
+    {
+      "id": "401909977",
+      "date": "2026-11-12",
+      "away": "DET",
+      "home": "WAS",
+      "awayScore": 144,
+      "homeScore": 140,
+      "winner": "DET"
+    },
+    {
+      "id": "401909976",
+      "date": "2026-11-12",
+      "away": "TOR",
+      "home": "PHI",
+      "awayScore": 112,
+      "homeScore": 123,
+      "winner": "PHI"
+    },
     {
       "id": "401909975",
       "date": "2026-11-11",
