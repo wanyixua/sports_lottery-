@@ -2503,7 +2503,7 @@
       "usDate": "2026-11-11",
       "bet": "LAL -5.5 + SAS -4.5 + HOU",
       "stake": 20,
-      "payout": 43.0,
+      "payout": 43,
       "status": "win",
       "profitIfWin": 23,
       "legs": [
@@ -2539,7 +2539,7 @@
       "usDate": "2026-11-11",
       "bet": "SAS",
       "stake": 20,
-      "payout": 28.0,
+      "payout": 28,
       "status": "win",
       "profitIfWin": 8,
       "legs": [
@@ -2561,7 +2561,7 @@
       "usDate": "2026-11-11",
       "bet": "HOU",
       "stake": 20,
-      "payout": 28.0,
+      "payout": 28,
       "status": "win",
       "profitIfWin": 8,
       "legs": [
@@ -2583,7 +2583,7 @@
       "usDate": "2026-11-11",
       "bet": "ORL +3.5",
       "stake": 20,
-      "payout": 27.0,
+      "payout": 27,
       "status": "win",
       "profitIfWin": 7,
       "legs": [
@@ -2606,7 +2606,7 @@
       "usDate": "2026-11-11",
       "bet": "DEN + LAL -2.5 + SAS -2.5",
       "stake": 20,
-      "payout": 42.0,
+      "payout": 42,
       "status": "win",
       "profitIfWin": 22,
       "legs": [
@@ -2635,6 +2635,156 @@
         "win"
       ],
       "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
+    },
+    {
+      "id": 123,
+      "owner": "小王",
+      "usDate": "2026-11-11",
+      "bet": "PHX + MIN + DET + PHI",
+      "stake": 20,
+      "payout": null,
+      "status": "pending",
+      "profitIfWin": 47,
+      "legs": [
+        {
+          "team": "PHX",
+          "market": "moneyline",
+          "gameDate": "2026-11-12"
+        },
+        {
+          "team": "MIN",
+          "market": "moneyline",
+          "gameDate": "2026-11-12"
+        },
+        {
+          "team": "DET",
+          "market": "moneyline",
+          "gameDate": "2026-11-12"
+        },
+        {
+          "team": "PHI",
+          "market": "moneyline",
+          "gameDate": "2026-11-12"
+        }
+      ],
+      "note": "本人独立四串一，RH Filled 4-leg PHX/MIN/DET/PHI 全部独赢；Submitted 11/11，Entered $20，67份 @ $0.284，若全中返还$67、净赚$47。比赛为美国11/12日，按首场比赛北京时间归档。"
+    },
+    {
+      "id": 124,
+      "owner": "王老板",
+      "usDate": "2026-11-12",
+      "bet": "DET + PHI",
+      "stake": 20,
+      "payout": null,
+      "status": "pending",
+      "profitIfWin": 14,
+      "legs": [
+        {
+          "team": "DET",
+          "market": "moneyline",
+          "gameDate": "2026-11-12"
+        },
+        {
+          "team": "PHI",
+          "market": "moneyline",
+          "gameDate": "2026-11-12"
+        }
+      ],
+      "note": "微信王老板「活塞胜、76人胜二串一」20刀，小王确认「20赚14」。RH Filled 2-leg DET/PHI，Entered $20，34份 @ $0.561，11/12 14:11。投注相符。"
+    },
+    {
+      "id": 125,
+      "owner": "王老板",
+      "usDate": "2026-11-12",
+      "bet": "PHI -3.5",
+      "stake": 20,
+      "payout": null,
+      "status": "pending",
+      "profitIfWin": 10,
+      "legs": [
+        {
+          "team": "PHI",
+          "market": "spread",
+          "gameDate": "2026-11-12",
+          "line": -3.5
+        }
+      ],
+      "note": "微信王老板「76人让3.5胜」$20，小王回复「20赚10」。RH Filled Yes PHI by 3.5，30份 @ $0.64，11/12 14:11。盘口、方向一致。"
+    },
+    {
+      "id": 126,
+      "owner": "王老板",
+      "usDate": "2026-11-12",
+      "bet": "DET -5.5",
+      "stake": 20,
+      "payout": null,
+      "status": "pending",
+      "profitIfWin": 8,
+      "legs": [
+        {
+          "team": "DET",
+          "market": "spread",
+          "gameDate": "2026-11-12",
+          "line": -5.5
+        }
+      ],
+      "note": "微信王老板「活塞让5.5胜」$20，小王回复「20赚8」。RH Filled Yes DET by 5.5，28份 @ $0.68，11/12 14:10。盘口一致。"
+    },
+    {
+      "id": 127,
+      "owner": "王老板",
+      "usDate": "2026-11-12",
+      "bet": "MIN",
+      "stake": 20,
+      "payout": null,
+      "status": "pending",
+      "profitIfWin": 9,
+      "legs": [
+        {
+          "team": "MIN",
+          "market": "moneyline",
+          "gameDate": "2026-11-12"
+        }
+      ],
+      "note": "微信王老板「森林狼胜」$20，小王回复「20赚9」。RH Filled Yes MIN，29份 @ $0.67，11/12 14:12。球队、金额一致。"
+    },
+    {
+      "id": 128,
+      "owner": "王老板",
+      "usDate": "2026-11-12",
+      "bet": "PHX -2.5",
+      "stake": 20,
+      "payout": null,
+      "status": "pending",
+      "profitIfWin": 10,
+      "legs": [
+        {
+          "team": "PHX",
+          "market": "spread",
+          "gameDate": "2026-11-12",
+          "line": -2.5
+        }
+      ],
+      "note": "微信王老板「太阳让2.5胜」$20，小王回复「20赚10」。RH Filled Yes PHX by 2.5，30份 @ $0.64，11/12 14:12。盘口一致。"
+    },
+    {
+      "id": 129,
+      "owner": "小王",
+      "usDate": "2026-11-12",
+      "bet": "PHI -1.5",
+      "stake": 20,
+      "payout": null,
+      "status": "pending",
+      "profitIfWin": 32,
+      "legs": [
+        {
+          "team": "PHI",
+          "market": "spread",
+          "line": -1.5,
+          "gameDate": "2026-11-12"
+        }
+      ],
+      "note": "本人新增订单。RH Filled：Yes · PHI by 1.5（76人 -1.5），美国11月12日 TOR vs PHI；投入$20，52份，平均成交价$0.37，手续费$0.76。全部命中返还$52，按投入本金计净赚$32。与王老板的PHI -3.5单关是不同订单。"
     }
   ]
 }
