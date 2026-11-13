@@ -1,6 +1,6 @@
 {
   "date": "2026-11-12",
-  "capturedAt": "2026-11-13T04:13:02+00:00",
+  "capturedAt": "2026-11-13T07:13:50+00:00",
   "source": "RH public event pages; displayPrice is INDICATIVE, yesAsk/noAsk only when verified",
   "games": [
     {
@@ -2791,29 +2791,28 @@
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/charlotte-vs-phoenix-2nd-half-winner-nov-12-2026/",
             "choices": [
               {
-                "id": "display-PHX",
-                "owner": "PHX",
-                "label": "Phoenix",
-                "displayPrice": 57.0,
-                "yesAsk": 57.0,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)",
-                "askVerifiedFrom": "ticket"
-              },
-              {
-                "id": "display-CHA",
-                "owner": "CHA",
-                "label": "Charlotte",
-                "displayPrice": 40.0,
+                "id": "display-tie",
+                "owner": "tie",
+                "label": "Tie",
+                "displayPrice": 99.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
               },
               {
-                "id": "display-tie",
-                "owner": "tie",
-                "label": "Tie",
-                "displayPrice": 10.0,
+                "id": "display-CHA",
+                "owner": "CHA",
+                "label": "Charlotte",
+                "displayPrice": 3.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-PHX",
+                "owner": "PHX",
+                "label": "Phoenix",
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -2827,33 +2826,6 @@
           "spread": {
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/charlotte-vs-phoenix-2nd-half-spread-nov-12-2026/",
             "choices": [
-              {
-                "id": "display-spread-PHX-1p5",
-                "owner": "PHX",
-                "label": "Phoenix wins by over 1.5 points",
-                "displayPrice": 44.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
-                "id": "display-spread-CHA-1p5",
-                "owner": "CHA",
-                "label": "Charlotte wins by over 1.5 points",
-                "displayPrice": 41.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
-                "id": "display-spread-PHX-2p5",
-                "owner": "PHX",
-                "label": "Phoenix wins by over 2.5 points",
-                "displayPrice": 29.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
               {
                 "id": "display-spread-CHA-9p5",
                 "owner": "CHA",
@@ -2871,6 +2843,33 @@
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-PHX-14p5",
+                "owner": "PHX",
+                "label": "Phoenix wins by over 14.5 points",
+                "displayPrice": 15.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-CHA-5p5",
+                "owner": "CHA",
+                "label": "Charlotte wins by over 5.5 points",
+                "displayPrice": 11.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-PHX-6p5",
+                "owner": "PHX",
+                "label": "Phoenix wins by over 6.5 points",
+                "displayPrice": 11.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
               }
             ],
             "reason": null,
@@ -2885,43 +2884,43 @@
                 "id": "display-total-over-91p5",
                 "owner": "over",
                 "label": "Over 91.5 points",
-                "displayPrice": 53.0,
+                "displayPrice": 99.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
               },
               {
-                "id": "display-total-over-97p5",
+                "id": "display-total-over-121p5",
                 "owner": "over",
-                "label": "Over 97.5 points",
-                "displayPrice": 44.0,
+                "label": "Over 121.5 points",
+                "displayPrice": 11.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
               },
               {
-                "id": "display-total-over-93p5",
+                "id": "display-total-over-123p5",
                 "owner": "over",
-                "label": "Over 93.5 points",
-                "displayPrice": 43.0,
+                "label": "Over 123.5 points",
+                "displayPrice": 6.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
               },
               {
-                "id": "display-total-over-95p5",
+                "id": "display-total-over-101p5",
                 "owner": "over",
-                "label": "Over 95.5 points",
-                "displayPrice": 40.0,
+                "label": "Over 101.5 points",
+                "displayPrice": 5.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
               },
               {
-                "id": "display-total-over-99p5",
+                "id": "display-total-over-107p5",
                 "owner": "over",
-                "label": "Over 99.5 points",
-                "displayPrice": 33.0,
+                "label": "Over 107.5 points",
+                "displayPrice": 5.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -3379,17 +3378,16 @@
                 "id": "display-PHX",
                 "owner": "PHX",
                 "label": "Phoenix",
-                "displayPrice": 96.0,
-                "yesAsk": 96.0,
+                "displayPrice": 97.0,
+                "yesAsk": null,
                 "noAsk": null,
-                "priceSource": "RH public event selection (indicative)",
-                "askVerifiedFrom": "ticket"
+                "priceSource": "RH public event selection (indicative)"
               },
               {
                 "id": "display-CHA",
                 "owner": "CHA",
                 "label": "Charlotte",
-                "displayPrice": 2.0,
+                "displayPrice": 4.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -3398,7 +3396,7 @@
                 "id": "display-tie",
                 "owner": "tie",
                 "label": "Tie",
-                "displayPrice": 1.0,
+                "displayPrice": 2.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -3413,10 +3411,19 @@
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/charlotte-vs-phoenix-4th-quarter-spread-nov-12-2026/",
             "choices": [
               {
+                "id": "display-spread-PHX-1p5",
+                "owner": "PHX",
+                "label": "Phoenix wins by over 1.5 points",
+                "displayPrice": 99.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
                 "id": "display-spread-PHX-3p5",
                 "owner": "PHX",
                 "label": "Phoenix wins by over 3.5 points",
-                "displayPrice": 90.0,
+                "displayPrice": 99.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -3425,16 +3432,7 @@
                 "id": "display-spread-PHX-5p5",
                 "owner": "PHX",
                 "label": "Phoenix wins by over 5.5 points",
-                "displayPrice": 81.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
-                "id": "display-spread-PHX-9p5",
-                "owner": "PHX",
-                "label": "Phoenix wins by over 9.5 points",
-                "displayPrice": 48.0,
+                "displayPrice": 99.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -3443,16 +3441,16 @@
                 "id": "display-spread-PHX-7p5",
                 "owner": "PHX",
                 "label": "Phoenix wins by over 7.5 points",
-                "displayPrice": 45.0,
+                "displayPrice": 99.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
               },
               {
-                "id": "display-spread-PHX-11p5",
-                "owner": "PHX",
-                "label": "Phoenix wins by over 11.5 points",
-                "displayPrice": 29.0,
+                "id": "display-spread-CHA-1p5",
+                "owner": "CHA",
+                "label": "Charlotte wins by over 1.5 points",
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -3467,10 +3465,19 @@
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/charlotte-vs-phoenix-4th-quarter-total-nov-12-2026/",
             "choices": [
               {
+                "id": "display-total-over-41p5",
+                "owner": "over",
+                "label": "Over 41.5 points",
+                "displayPrice": 99.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
                 "id": "display-total-over-43p5",
                 "owner": "over",
                 "label": "Over 43.5 points",
-                "displayPrice": 82.0,
+                "displayPrice": 99.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -3479,7 +3486,7 @@
                 "id": "display-total-over-45p5",
                 "owner": "over",
                 "label": "Over 45.5 points",
-                "displayPrice": 72.0,
+                "displayPrice": 99.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -3488,7 +3495,7 @@
                 "id": "display-total-over-47p5",
                 "owner": "over",
                 "label": "Over 47.5 points",
-                "displayPrice": 57.0,
+                "displayPrice": 99.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -3497,16 +3504,7 @@
                 "id": "display-total-over-49p5",
                 "owner": "over",
                 "label": "Over 49.5 points",
-                "displayPrice": 43.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
-                "id": "display-total-over-51p5",
-                "owner": "over",
-                "label": "Over 51.5 points",
-                "displayPrice": 24.0,
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
