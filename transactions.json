@@ -2652,8 +2652,8 @@
       "usDate": "2026-11-11",
       "bet": "PHX + MIN + DET + PHI",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 67.0,
+      "status": "win",
       "profitIfWin": 47,
       "legs": [
         {
@@ -2677,7 +2677,14 @@
           "gameDate": "2026-11-12"
         }
       ],
-      "note": "本人独立四串一，RH Filled 4-leg PHX/MIN/DET/PHI 全部独赢；Submitted 11/11，Entered $20，67份 @ $0.284，若全中返还$67、净赚$47。比赛为美国11/12日，按首场比赛北京时间归档。"
+      "note": "本人独立四串一，RH Filled 4-leg PHX/MIN/DET/PHI 全部独赢；Submitted 11/11，Entered $20，67份 @ $0.284，若全中返还$67、净赚$47。比赛为美国11/12日，按首场比赛北京时间归档。",
+      "legResults": [
+        "win",
+        "win",
+        "win",
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "id": 124,
@@ -2781,8 +2788,8 @@
       "usDate": "2026-11-12",
       "bet": "PHX -2.5",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 30.0,
+      "status": "win",
       "profitIfWin": 10,
       "legs": [
         {
@@ -2792,7 +2799,11 @@
           "line": -2.5
         }
       ],
-      "note": "微信王老板「太阳让2.5胜」$20，小王回复「20赚10」。RH Filled Yes PHX by 2.5，30份 @ $0.64，11/12 14:12。盘口一致。"
+      "note": "微信王老板「太阳让2.5胜」$20，小王回复「20赚10」。RH Filled Yes PHX by 2.5，30份 @ $0.64，11/12 14:12。盘口一致。",
+      "legResults": [
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "id": 129,
