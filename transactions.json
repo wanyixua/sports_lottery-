@@ -2004,8 +2004,8 @@
       "usDate": "2026-11-10",
       "bet": "LAL + SAS + DET + PHX -2.5 + MIA -2.5 + NYK -7.5 + ORL -2.5",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 135.0,
+      "status": "win",
       "profitIfWin": 115,
       "legs": [
         {
@@ -2048,7 +2048,17 @@
           "gameDate": "2026-11-10"
         }
       ],
-      "note": "微信王老板七串一最终确认：保留太阳PHX -2.5，只将热火MIA让分从-3.5改为-2.5；其他腿保持原要求。RH实际Filled 7-leg 135份，投入$20，命中净赚$115。实际买入七腿与最终确认一致。比赛跨11/10、11/11、11/12。"
+      "note": "微信王老板七串一最终确认：保留太阳PHX -2.5，只将热火MIA让分从-3.5改为-2.5；其他腿保持原要求。RH实际Filled 7-leg 135份，投入$20，命中净赚$115。实际买入七腿与最终确认一致。比赛跨11/10、11/11、11/12。",
+      "legResults": [
+        "win",
+        "win",
+        "win",
+        "win",
+        "win",
+        "win",
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "id": 105,
@@ -2675,8 +2685,8 @@
       "usDate": "2026-11-12",
       "bet": "DET + PHI",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 34.0,
+      "status": "win",
       "profitIfWin": 14,
       "legs": [
         {
@@ -2690,7 +2700,12 @@
           "gameDate": "2026-11-12"
         }
       ],
-      "note": "微信王老板「活塞胜、76人胜二串一」20刀，小王确认「20赚14」。RH Filled 2-leg DET/PHI，Entered $20，34份 @ $0.561，11/12 14:11。投注相符。"
+      "note": "微信王老板「活塞胜、76人胜二串一」20刀，小王确认「20赚14」。RH Filled 2-leg DET/PHI，Entered $20，34份 @ $0.561，11/12 14:11。投注相符。",
+      "legResults": [
+        "win",
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "id": 125,
@@ -2721,8 +2736,8 @@
       "usDate": "2026-11-12",
       "bet": "DET -5.5",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 0,
+      "status": "loss",
       "profitIfWin": 8,
       "legs": [
         {
@@ -2732,7 +2747,11 @@
           "line": -5.5
         }
       ],
-      "note": "微信王老板「活塞让5.5胜」$20，小王回复「20赚8」。RH Filled Yes DET by 5.5，28份 @ $0.68，11/12 14:10。盘口一致。"
+      "note": "微信王老板「活塞让5.5胜」$20，小王回复「20赚8」。RH Filled Yes DET by 5.5，28份 @ $0.68，11/12 14:10。盘口一致。",
+      "legResults": [
+        "loss"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "id": 127,
@@ -2740,8 +2759,8 @@
       "usDate": "2026-11-12",
       "bet": "MIN",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 29.0,
+      "status": "win",
       "profitIfWin": 9,
       "legs": [
         {
@@ -2750,7 +2769,11 @@
           "gameDate": "2026-11-12"
         }
       ],
-      "note": "微信王老板「森林狼胜」$20，小王回复「20赚9」。RH Filled Yes MIN，29份 @ $0.67，11/12 14:12。球队、金额一致。"
+      "note": "微信王老板「森林狼胜」$20，小王回复「20赚9」。RH Filled Yes MIN，29份 @ $0.67，11/12 14:12。球队、金额一致。",
+      "legResults": [
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "id": 128,
