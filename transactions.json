@@ -2698,8 +2698,8 @@
       "usDate": "2026-11-12",
       "bet": "PHI -3.5",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 30.0,
+      "status": "win",
       "profitIfWin": 10,
       "legs": [
         {
@@ -2709,7 +2709,11 @@
           "line": -3.5
         }
       ],
-      "note": "微信王老板「76人让3.5胜」$20，小王回复「20赚10」。RH Filled Yes PHI by 3.5，30份 @ $0.64，11/12 14:11。盘口、方向一致。"
+      "note": "微信王老板「76人让3.5胜」$20，小王回复「20赚10」。RH Filled Yes PHI by 3.5，30份 @ $0.64，11/12 14:11。盘口、方向一致。",
+      "legResults": [
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "id": 126,
@@ -2773,8 +2777,8 @@
       "usDate": "2026-11-12",
       "bet": "PHI -1.5",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 52.0,
+      "status": "win",
       "profitIfWin": 32,
       "legs": [
         {
@@ -2784,7 +2788,11 @@
           "gameDate": "2026-11-12"
         }
       ],
-      "note": "本人新增订单。RH Filled：Yes · PHI by 1.5（76人 -1.5），美国11月12日 TOR vs PHI；投入$20，52份，平均成交价$0.37，手续费$0.76。全部命中返还$52，按投入本金计净赚$32。与王老板的PHI -3.5单关是不同订单。"
+      "note": "本人新增订单。RH Filled：Yes · PHI by 1.5（76人 -1.5），美国11月12日 TOR vs PHI；投入$20，52份，平均成交价$0.37，手续费$0.76。全部命中返还$52，按投入本金计净赚$32。与王老板的PHI -3.5单关是不同订单。",
+      "legResults": [
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     }
   ]
 }
