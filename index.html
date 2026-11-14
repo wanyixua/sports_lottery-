@@ -982,13 +982,63 @@
       calculations.lastChild.append(newEl('strong','',money(s*(mult-1))));
       const cq=feeQuote(mult,s,plan.comboPriceCents??null,plan.exchangeFeeCents??1);
       if(cq)calculations.append(newEl('div','','普通账户含费预估净赚 '+money(cq.profit)+' · 费用 '+money(cq.fees)+' · '+cq.qty+'份'));
+      
+  // XW_CART_WORKER_BRIDGE_V1
+  const XW_WORKER='https://xiaowang-transactions-api.wanyixua.workers.dev';
+  function timeUtcFromGame(g){
+    if(!g)return null;
+    const direct=g.startTimeUtc||g.startTimeUTC||g.startTimeISO||g.startTimeIso;
+    if(typeof direct==='string'&&/(?:Z|[+-]\d{2}:\d{2})$/.test(direct)&&!Number.isNaN(Date.parse(direct)))return new Date(direct).toISOString();
+    const date=g.usDate||String(g.id||'').slice(0,10);
+    const hm=String(g.startTimePT||'').match(/^(\d{1,2}):(\d{2})$/);
+    if(!/^\d{4}-\d{2}-\d{2}$/.test(date)||!hm)return null;
+    const y=Number(date.slice(0,4)),m=Number(date.slice(5,7)),d=Number(date.slice(8,10));
+    const zonePart=new Intl.DateTimeFormat('en-US',{timeZone:'America/Los_Angeles',timeZoneName:'shortOffset'}).formatToParts(new Date(Date.UTC(y,m-1,d,12)));
+    const tz=zonePart.find(x=>x.type==='timeZoneName')?.value||'';
+    const match=tz.match(/GMT([+-])(\d{1,2})(?::(\d{2}))?/);
+    if(!match)return null;
+    const offset=(match[1]==='+'?1:-1)*(Number(match[2])*60+Number(match[3]||0));
+    return new Date(Date.UTC(y,m-1,d,Number(hm[1]),Number(hm[2]))-offset*60000).toISOString();
+  }
+  function toWorkerCart(plan){
+    if(!plan.picks.length||plan.picks.length>20)throw Error('单笔订单需有1–20个选项');
+    const legs=plan.picks.map(p=>{
+      if(!['moneyline','spread'].includes(p.kind))throw Error('当前后台仅支持胜负和让分。大小球、分节盘口暂不能直接提交。');
+      const game=(odds.games||[]).find(g=>g.id===p.gameId);
+      const usDate=game?.usDate||String(p.gameId||'').slice(0,10);
+      if(!/^\d{4}-\d{2}-\d{2}$/.test(usDate))throw Error('找不到 '+p.label+' 的美国比赛日期，请刷新赔率');
+      const team=String(p.team||'').toUpperCase();
+      if(!/^[A-Z]{2,4}$/.test(team))throw Error('无效球队代码 '+p.label);
+      const leg={gameId:String(p.gameId),team,market:p.kind,gameDate:usDate,label:String(p.label),contractId:String(p.contractId||'')};
+      if(p.kind==='spread'){
+        const spreadMatch=String(p.label).match(/([+-]\s*\d+(?:\.\d+)?)\s*$/);
+        if(!spreadMatch)throw Error('让分数值未能从 '+p.label+' 识别，请人工核对');
+        leg.line=Number(spreadMatch[1].replace(/\s/g,''));
+      }
+      const utc=timeUtcFromGame(game);if(utc)leg.startTimeUtc=utc;
+      return leg;
+    });
+    const stake=Number(plan.stake);
+    if(!Number.isFinite(stake)||stake<=0||stake>100000)throw Error('无效本金');
+    const date=legs.map(l=>l.gameDate).sort()[0];
+    return {cartId:String(plan.id),usDate:date,stake,legs};
+  }
+
       const controls=newEl('div','cart-plan-buttons');
       const restore=newEl('button','cart-mini-button','加载到计算器');restore.type='button';
       restore.addEventListener('click',()=>{
         selected.clear();for(const p of plan.picks){if(!selected.has(p.gameId))selected.set(p.gameId,{...p});}
         stake=s;stakeInput.value=String(s);feePriceInput.value=plan.comboPriceCents==null?'':String(plan.comboPriceCents);exchangeInput.value=String(plan.exchangeFeeCents??1);closeCart();render();
         if(window.matchMedia('(max-width:700px)').matches){document.getElementById('slip').classList.add('expanded');document.getElementById('slip-toggle').setAttribute('aria-expanded','true');updateSlip();}
-      });controls.append(restore);foot.append(calculations,controls);card.append(foot);cartContent.append(card);
+      });controls.append(restore);
+      const send=newEl('button','cart-open','📨 提交订单申请');send.type='button';
+      send.addEventListener('click',()=>{
+        try{const data=toWorkerCart(plan);const encoded=encodeURIComponent(JSON.stringify(data));
+          const url=XW_WORKER+'/cart-submit#'+encoded;
+          if(url.length>14000)throw Error('选盘信息过长，请减少选项');
+          window.open(url,'_blank','noopener,noreferrer');
+        }catch(e){alert(e.message)}
+      });controls.append(send);foot.append(calculations,controls);card.append(foot);cartContent.append(card);
     }
     cartContent.append(newEl('p','cart-warning','仅保存选择时的报价快照，并非真实投注订单。历史赔率可能过期；加载到计算器后请核对现价。理论串关收益不等于 RH 实际 Combo 报价。'));
   }
