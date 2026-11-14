@@ -2884,8 +2884,8 @@
       "usDate": "2026-11-13",
       "bet": "POR",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 24.0,
+      "status": "win",
       "profitIfWin": 4,
       "legs": [
         {
@@ -2894,7 +2894,11 @@
           "gameDate": "2026-11-13"
         }
       ],
-      "note": "RH_BATCH_20261113_03 | RH 11/13 16:33 Filled 24 shares; 微信开拓者独赢$20。"
+      "note": "RH_BATCH_20261113_03 | RH 11/13 16:33 Filled 24 shares; 微信开拓者独赢$20。",
+      "legResults": [
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "id": 133,
@@ -2902,8 +2906,8 @@
       "usDate": "2026-11-13",
       "bet": "SAS",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 22.0,
+      "status": "win",
       "profitIfWin": 2,
       "legs": [
         {
@@ -2912,7 +2916,11 @@
           "gameDate": "2026-11-13"
         }
       ],
-      "note": "RH_BATCH_20261113_04 | RH 11/13 16:32 Filled 22 shares; 微信马刺独赢$20。"
+      "note": "RH_BATCH_20261113_04 | RH 11/13 16:32 Filled 22 shares; 微信马刺独赢$20。",
+      "legResults": [
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "id": 134,
@@ -2920,8 +2928,8 @@
       "usDate": "2026-11-13",
       "bet": "OKC",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 0,
+      "status": "loss",
       "profitIfWin": 7,
       "legs": [
         {
@@ -2930,7 +2938,11 @@
           "gameDate": "2026-11-13"
         }
       ],
-      "note": "RH_BATCH_20261113_05 | RH 11/13 16:32 Filled 27 shares; 微信雷霆独赢$20。"
+      "note": "RH_BATCH_20261113_05 | RH 11/13 16:32 Filled 27 shares; 微信雷霆独赢$20。",
+      "legResults": [
+        "loss"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "id": 135,
