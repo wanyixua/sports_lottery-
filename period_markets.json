@@ -1,6 +1,6 @@
 {
   "date": "2026-11-14",
-  "capturedAt": "2026-11-14T08:23:55+00:00",
+  "capturedAt": "2026-11-14T10:26:57+00:00",
   "source": "RH public event pages; displayPrice is INDICATIVE, yesAsk/noAsk only when verified",
   "games": [
     {
@@ -28,11 +28,20 @@
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-tie",
+                "owner": "tie",
+                "label": "Tie",
+                "displayPrice": 5.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
               }
             ],
             "reason": null,
             "hiddenCount": 0,
-            "expectedMinChoices": 2,
+            "expectedMinChoices": 3,
             "completeness": "unverified"
           },
           "spread": {
@@ -105,7 +114,7 @@
               {
                 "id": "visible-ticket-DEN",
                 "label": "Denver",
-                "yesAsk": 87.0,
+                "yesAsk": 88.0,
                 "noAsk": null,
                 "owner": "DEN",
                 "displayPrice": null
@@ -182,10 +191,20 @@
           },
           "total": {
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/denver-vs-new-orleans-1st-quarter-total-nov-14-2026/",
-            "choices": [],
-            "reason": "Ambiguous embedded event contract groups",
+            "choices": [
+              {
+                "id": "display-total-over-53p5",
+                "owner": "over",
+                "label": "Over 53.5 points",
+                "displayPrice": 72.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              }
+            ],
+            "reason": null,
             "hiddenCount": 8,
-            "expectedMinChoices": 8,
+            "expectedMinChoices": 9,
             "completeness": "partial"
           }
         },
@@ -232,7 +251,7 @@
               {
                 "id": "visible-ticket-DEN",
                 "label": "Denver",
-                "yesAsk": 67.0,
+                "yesAsk": 68.0,
                 "noAsk": null,
                 "owner": "DEN",
                 "displayPrice": null
@@ -285,7 +304,7 @@
                 "id": "display-spread-NOP-8p5",
                 "owner": "NOP",
                 "label": "New Orleans wins by over 8.5 points",
-                "displayPrice": 15.0,
+                "displayPrice": 12.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -319,7 +338,7 @@
                 "owner": "CLE",
                 "label": "Cleveland",
                 "displayPrice": 59.0,
-                "yesAsk": 52.0,
+                "yesAsk": 51.0,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)",
                 "askVerifiedFrom": "ticket"
@@ -352,6 +371,24 @@
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/dallas-vs-cleveland-1st-half-spread-nov-14-2026/",
             "choices": [
               {
+                "id": "display-spread-CLE-1p5",
+                "owner": "CLE",
+                "label": "Cleveland wins by over 1.5 points",
+                "displayPrice": 49.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-DAL-12p5",
+                "owner": "DAL",
+                "label": "Dallas wins by over 12.5 points",
+                "displayPrice": 13.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
                 "id": "display-spread-DAL-14p5",
                 "owner": "DAL",
                 "label": "Dallas wins by over 14.5 points",
@@ -363,7 +400,7 @@
             ],
             "reason": null,
             "hiddenCount": 14,
-            "expectedMinChoices": 15,
+            "expectedMinChoices": 17,
             "completeness": "partial"
           },
           "total": {
@@ -438,10 +475,20 @@
           },
           "total": {
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/dallas-vs-cleveland-1st-quarter-total-nov-14-2026/",
-            "choices": [],
-            "reason": "Ambiguous embedded event contract groups",
+            "choices": [
+              {
+                "id": "display-total-over-60p5",
+                "owner": "over",
+                "label": "Over 60.5 points",
+                "displayPrice": 47.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              }
+            ],
+            "reason": null,
             "hiddenCount": 8,
-            "expectedMinChoices": 8,
+            "expectedMinChoices": 9,
             "completeness": "partial"
           }
         },
@@ -467,10 +514,46 @@
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/dallas-vs-cleveland-2nd-quarter-spread-nov-14-2026/",
             "choices": [
               {
-                "id": "display-spread-DAL-13p5",
+                "id": "display-spread-DAL-3p5",
                 "owner": "DAL",
-                "label": "Dallas wins by over 13.5 points",
-                "displayPrice": 9.0,
+                "label": "Dallas wins by over 3.5 points",
+                "displayPrice": 38.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-CLE-4p5",
+                "owner": "CLE",
+                "label": "Cleveland wins by over 4.5 points",
+                "displayPrice": 37.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-CLE-6p5",
+                "owner": "CLE",
+                "label": "Cleveland wins by over 6.5 points",
+                "displayPrice": 31.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-DAL-5p5",
+                "owner": "DAL",
+                "label": "Dallas wins by over 5.5 points",
+                "displayPrice": 30.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-CLE-8p5",
+                "owner": "CLE",
+                "label": "Cleveland wins by over 8.5 points",
+                "displayPrice": 25.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -478,7 +561,7 @@
             ],
             "reason": null,
             "hiddenCount": 8,
-            "expectedMinChoices": 9,
+            "expectedMinChoices": 13,
             "completeness": "partial"
           },
           "total": {
@@ -497,7 +580,7 @@
               {
                 "id": "visible-ticket-CLE",
                 "label": "Cleveland",
-                "yesAsk": 51.0,
+                "yesAsk": 52.0,
                 "noAsk": null,
                 "owner": "CLE",
                 "displayPrice": null
@@ -510,10 +593,56 @@
           },
           "spread": {
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/dallas-vs-cleveland-3rd-quarter-spread-nov-14-2026/",
-            "choices": [],
-            "reason": "Ambiguous embedded event contract groups",
+            "choices": [
+              {
+                "id": "display-spread-CLE-8p5",
+                "owner": "CLE",
+                "label": "Cleveland wins by over 8.5 points",
+                "displayPrice": 23.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-DAL-7p5",
+                "owner": "DAL",
+                "label": "Dallas wins by over 7.5 points",
+                "displayPrice": 23.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-CLE-10p5",
+                "owner": "CLE",
+                "label": "Cleveland wins by over 10.5 points",
+                "displayPrice": 18.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-DAL-9p5",
+                "owner": "DAL",
+                "label": "Dallas wins by over 9.5 points",
+                "displayPrice": 17.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-DAL-11p5",
+                "owner": "DAL",
+                "label": "Dallas wins by over 11.5 points",
+                "displayPrice": 14.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              }
+            ],
+            "reason": null,
             "hiddenCount": 8,
-            "expectedMinChoices": 8,
+            "expectedMinChoices": 13,
             "completeness": "partial"
           },
           "total": {
@@ -545,10 +674,38 @@
           },
           "spread": {
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/dallas-vs-cleveland-4th-quarter-spread-nov-14-2026/",
-            "choices": [],
-            "reason": "Ambiguous embedded event contract groups",
+            "choices": [
+              {
+                "id": "display-spread-CLE-9p5",
+                "owner": "CLE",
+                "label": "Cleveland wins by over 9.5 points",
+                "displayPrice": 17.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-DAL-10p5",
+                "owner": "DAL",
+                "label": "Dallas wins by over 10.5 points",
+                "displayPrice": 13.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-CLE-13p5",
+                "owner": "CLE",
+                "label": "Cleveland wins by over 13.5 points",
+                "displayPrice": 10.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              }
+            ],
+            "reason": null,
             "hiddenCount": 8,
-            "expectedMinChoices": 8,
+            "expectedMinChoices": 11,
             "completeness": "partial"
           },
           "total": {
@@ -628,7 +785,7 @@
                 "id": "display-spread-BKN-7p5",
                 "owner": "BKN",
                 "label": "Brooklyn wins by over 7.5 points",
-                "displayPrice": 18.0,
+                "displayPrice": 19.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -637,16 +794,16 @@
                 "id": "display-spread-BKN-9p5",
                 "owner": "BKN",
                 "label": "Brooklyn wins by over 9.5 points",
-                "displayPrice": 15.0,
+                "displayPrice": 14.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
               },
               {
-                "id": "display-spread-BKN-13p5",
+                "id": "display-spread-BKN-11p5",
                 "owner": "BKN",
-                "label": "Brooklyn wins by over 13.5 points",
-                "displayPrice": 7.0,
+                "label": "Brooklyn wins by over 11.5 points",
+                "displayPrice": 10.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -673,7 +830,7 @@
               {
                 "id": "visible-ticket-BKN",
                 "label": "Brooklyn",
-                "yesAsk": 58.0,
+                "yesAsk": 59.0,
                 "noAsk": null,
                 "owner": "BKN",
                 "displayPrice": null
@@ -710,7 +867,7 @@
                 "owner": "MEM",
                 "label": "Memphis",
                 "displayPrice": 66.0,
-                "yesAsk": 57.0,
+                "yesAsk": 56.0,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)",
                 "askVerifiedFrom": "ticket"
@@ -799,7 +956,7 @@
               {
                 "id": "visible-ticket-BKN",
                 "label": "Brooklyn",
-                "yesAsk": 43.0,
+                "yesAsk": 44.0,
                 "noAsk": null,
                 "owner": "BKN",
                 "displayPrice": null
@@ -875,7 +1032,7 @@
                 "id": "display-MIN",
                 "owner": "MIN",
                 "label": "Minnesota",
-                "displayPrice": 72.0,
+                "displayPrice": 75.0,
                 "yesAsk": 75.0,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)",
@@ -927,6 +1084,15 @@
                 "priceSource": "RH public event selection (indicative)"
               },
               {
+                "id": "display-spread-MIN-8p5",
+                "owner": "MIN",
+                "label": "Minnesota wins by over 8.5 points",
+                "displayPrice": 52.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
                 "id": "display-spread-CHI-1p5",
                 "owner": "CHI",
                 "label": "Chicago wins by over 1.5 points",
@@ -939,16 +1105,7 @@
                 "id": "display-spread-MIN-18p5",
                 "owner": "MIN",
                 "label": "Minnesota wins by over 18.5 points",
-                "displayPrice": 20.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
-                "id": "display-spread-CHI-3p5",
-                "owner": "CHI",
-                "label": "Chicago wins by over 3.5 points",
-                "displayPrice": 16.0,
+                "displayPrice": 18.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -1011,24 +1168,43 @@
                 "id": "display-CHI",
                 "owner": "CHI",
                 "label": "Chicago",
-                "displayPrice": 27.0,
+                "displayPrice": 26.0,
                 "yesAsk": 26.0,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)",
                 "askVerifiedFrom": "ticket"
+              },
+              {
+                "id": "display-tie",
+                "owner": "tie",
+                "label": "Tie",
+                "displayPrice": 6.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
               }
             ],
             "reason": null,
             "hiddenCount": 0,
-            "expectedMinChoices": 1,
+            "expectedMinChoices": 2,
             "completeness": "unverified"
           },
           "spread": {
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/chicago-vs-minnesota-1st-quarter-spread-nov-14-2026/",
-            "choices": [],
-            "reason": "Ambiguous embedded event contract groups",
+            "choices": [
+              {
+                "id": "display-spread-MIN-2p5",
+                "owner": "MIN",
+                "label": "Minnesota wins by over 2.5 points",
+                "displayPrice": 62.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              }
+            ],
+            "reason": null,
             "hiddenCount": 8,
-            "expectedMinChoices": 8,
+            "expectedMinChoices": 9,
             "completeness": "partial"
           },
           "total": {
@@ -1047,7 +1223,7 @@
               {
                 "id": "visible-ticket-CHI",
                 "label": "Chicago",
-                "yesAsk": 35.0,
+                "yesAsk": 34.0,
                 "noAsk": null,
                 "owner": "CHI",
                 "displayPrice": null
@@ -1176,7 +1352,7 @@
                 "id": "display-spread-DET-2p5",
                 "owner": "DET",
                 "label": "Detroit wins by over 2.5 points",
-                "displayPrice": 52.0,
+                "displayPrice": 51.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -1209,9 +1385,9 @@
                 "priceSource": "RH public event selection (indicative)"
               },
               {
-                "id": "display-spread-MIA-7p5",
-                "owner": "MIA",
-                "label": "Miami wins by over 7.5 points",
+                "id": "display-spread-DET-12p5",
+                "owner": "DET",
+                "label": "Detroit wins by over 12.5 points",
                 "displayPrice": 19.0,
                 "yesAsk": null,
                 "noAsk": null,
@@ -1275,8 +1451,8 @@
                 "id": "display-DET",
                 "owner": "DET",
                 "label": "Detroit",
-                "displayPrice": 55.0,
-                "yesAsk": 55.0,
+                "displayPrice": 49.0,
+                "yesAsk": 53.0,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)",
                 "askVerifiedFrom": "ticket"
@@ -1315,11 +1491,20 @@
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-total-over-67p5",
+                "owner": "over",
+                "label": "Over 67.5 points",
+                "displayPrice": 15.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
               }
             ],
             "reason": null,
             "hiddenCount": 8,
-            "expectedMinChoices": 9,
+            "expectedMinChoices": 10,
             "completeness": "partial"
           }
         },
@@ -1330,7 +1515,7 @@
               {
                 "id": "visible-ticket-DET",
                 "label": "Detroit",
-                "yesAsk": 56.0,
+                "yesAsk": 57.0,
                 "noAsk": null,
                 "owner": "DET",
                 "displayPrice": null
@@ -1343,10 +1528,38 @@
           },
           "spread": {
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/detroit-vs-miami-2nd-quarter-spread-nov-14-2026/",
-            "choices": [],
-            "reason": "Ambiguous embedded event contract groups",
+            "choices": [
+              {
+                "id": "display-spread-MIA-6p5",
+                "owner": "MIA",
+                "label": "Miami wins by over 6.5 points",
+                "displayPrice": 22.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-MIA-8p5",
+                "owner": "MIA",
+                "label": "Miami wins by over 8.5 points",
+                "displayPrice": 16.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-DET-11p5",
+                "owner": "DET",
+                "label": "Detroit wins by over 11.5 points",
+                "displayPrice": 14.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              }
+            ],
+            "reason": null,
             "hiddenCount": 8,
-            "expectedMinChoices": 8,
+            "expectedMinChoices": 11,
             "completeness": "partial"
           },
           "total": {
@@ -1365,7 +1578,7 @@
               {
                 "id": "visible-ticket-DET",
                 "label": "Detroit",
-                "yesAsk": 56.0,
+                "yesAsk": 57.0,
                 "noAsk": null,
                 "owner": "DET",
                 "displayPrice": null
