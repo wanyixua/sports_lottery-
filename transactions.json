@@ -2004,7 +2004,7 @@
       "usDate": "2026-11-10",
       "bet": "LAL + SAS + DET + PHX -2.5 + MIA -2.5 + NYK -7.5 + ORL -2.5",
       "stake": 20,
-      "payout": 135.0,
+      "payout": 135,
       "status": "win",
       "profitIfWin": 115,
       "legs": [
@@ -2652,7 +2652,7 @@
       "usDate": "2026-11-11",
       "bet": "PHX + MIN + DET + PHI",
       "stake": 20,
-      "payout": 67.0,
+      "payout": 67,
       "status": "win",
       "profitIfWin": 47,
       "legs": [
@@ -2692,7 +2692,7 @@
       "usDate": "2026-11-12",
       "bet": "DET + PHI",
       "stake": 20,
-      "payout": 34.0,
+      "payout": 34,
       "status": "win",
       "profitIfWin": 14,
       "legs": [
@@ -2720,7 +2720,7 @@
       "usDate": "2026-11-12",
       "bet": "PHI -3.5",
       "stake": 20,
-      "payout": 30.0,
+      "payout": 30,
       "status": "win",
       "profitIfWin": 10,
       "legs": [
@@ -2766,7 +2766,7 @@
       "usDate": "2026-11-12",
       "bet": "MIN",
       "stake": 20,
-      "payout": 29.0,
+      "payout": 29,
       "status": "win",
       "profitIfWin": 9,
       "legs": [
@@ -2788,7 +2788,7 @@
       "usDate": "2026-11-12",
       "bet": "PHX -2.5",
       "stake": 20,
-      "payout": 30.0,
+      "payout": 30,
       "status": "win",
       "profitIfWin": 10,
       "legs": [
@@ -2811,7 +2811,7 @@
       "usDate": "2026-11-12",
       "bet": "PHI -1.5",
       "stake": 20,
-      "payout": 52.0,
+      "payout": 52,
       "status": "win",
       "profitIfWin": 32,
       "legs": [
@@ -2827,6 +2827,396 @@
         "win"
       ],
       "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
+    },
+    {
+      "id": 130,
+      "owner": "王老板",
+      "usDate": "2026-11-13",
+      "bet": "ORL + NYK",
+      "stake": 30,
+      "payout": null,
+      "status": "pending",
+      "profitIfWin": 17,
+      "legs": [
+        {
+          "team": "ORL",
+          "market": "moneyline",
+          "gameDate": "2026-11-13"
+        },
+        {
+          "team": "NYK",
+          "market": "moneyline",
+          "gameDate": "2026-11-13"
+        }
+      ],
+      "note": "RH_BATCH_20261113_01 | RH 11/13 16:34 Filled 47 shares; 微信要求魔术+尼克斯二串一$30。"
+    },
+    {
+      "id": 131,
+      "owner": "王老板",
+      "usDate": "2026-11-13",
+      "bet": "HOU",
+      "stake": 50,
+      "payout": null,
+      "status": "pending",
+      "profitIfWin": 4,
+      "legs": [
+        {
+          "team": "HOU",
+          "market": "moneyline",
+          "gameDate": "2026-11-13"
+        }
+      ],
+      "note": "RH_BATCH_20261113_02 | RH 11/13 16:33 Filled 54 shares; 微信火箭独赢$50。"
+    },
+    {
+      "id": 132,
+      "owner": "王老板",
+      "usDate": "2026-11-13",
+      "bet": "POR",
+      "stake": 20,
+      "payout": null,
+      "status": "pending",
+      "profitIfWin": 4,
+      "legs": [
+        {
+          "team": "POR",
+          "market": "moneyline",
+          "gameDate": "2026-11-13"
+        }
+      ],
+      "note": "RH_BATCH_20261113_03 | RH 11/13 16:33 Filled 24 shares; 微信开拓者独赢$20。"
+    },
+    {
+      "id": 133,
+      "owner": "王老板",
+      "usDate": "2026-11-13",
+      "bet": "SAS",
+      "stake": 20,
+      "payout": null,
+      "status": "pending",
+      "profitIfWin": 2,
+      "legs": [
+        {
+          "team": "SAS",
+          "market": "moneyline",
+          "gameDate": "2026-11-13"
+        }
+      ],
+      "note": "RH_BATCH_20261113_04 | RH 11/13 16:32 Filled 22 shares; 微信马刺独赢$20。"
+    },
+    {
+      "id": 134,
+      "owner": "王老板",
+      "usDate": "2026-11-13",
+      "bet": "OKC",
+      "stake": 20,
+      "payout": null,
+      "status": "pending",
+      "profitIfWin": 7,
+      "legs": [
+        {
+          "team": "OKC",
+          "market": "moneyline",
+          "gameDate": "2026-11-13"
+        }
+      ],
+      "note": "RH_BATCH_20261113_05 | RH 11/13 16:32 Filled 27 shares; 微信雷霆独赢$20。"
+    },
+    {
+      "id": 135,
+      "owner": "王老板",
+      "usDate": "2026-11-13",
+      "bet": "POR + SAS -6.5 + HOU -7.5",
+      "stake": 20,
+      "payout": null,
+      "status": "pending",
+      "profitIfWin": 24,
+      "legs": [
+        {
+          "team": "POR",
+          "market": "moneyline",
+          "gameDate": "2026-11-13"
+        },
+        {
+          "team": "SAS",
+          "market": "spread",
+          "line": -6.5,
+          "gameDate": "2026-11-13"
+        },
+        {
+          "team": "HOU",
+          "market": "spread",
+          "line": -7.5,
+          "gameDate": "2026-11-13"
+        }
+      ],
+      "note": "RH_BATCH_20261113_06 | RH 11/13 16:30 Filled 44 shares; 微信马刺盘口已改为-6.5。"
+    },
+    {
+      "id": 136,
+      "owner": "王老板",
+      "usDate": "2026-11-13",
+      "bet": "MEM",
+      "stake": 20,
+      "payout": null,
+      "status": "pending",
+      "profitIfWin": 12,
+      "legs": [
+        {
+          "team": "MEM",
+          "market": "moneyline",
+          "gameDate": "2026-11-13"
+        }
+      ],
+      "note": "RH_BATCH_20261113_07 | RH 11/13 16:29 Filled 32 shares; 微信灰熊独赢$20。"
+    },
+    {
+      "id": 137,
+      "owner": "王老板",
+      "usDate": "2026-11-13",
+      "bet": "CLE +3.5",
+      "stake": 20,
+      "payout": null,
+      "status": "pending",
+      "profitIfWin": 15,
+      "legs": [
+        {
+          "team": "CLE",
+          "market": "spread",
+          "line": 3.5,
+          "gameDate": "2026-11-13"
+        }
+      ],
+      "note": "RH_BATCH_20261113_08 | RH 11/13 16:28 No MIA by 3.5=骑士+3.5; 35 shares; 微信一致。"
+    },
+    {
+      "id": 138,
+      "owner": "王老板",
+      "usDate": "2026-11-13",
+      "bet": "CHI +5.5",
+      "stake": 20,
+      "payout": null,
+      "status": "pending",
+      "profitIfWin": 23,
+      "legs": [
+        {
+          "team": "CHI",
+          "market": "spread",
+          "line": 5.5,
+          "gameDate": "2026-11-13"
+        }
+      ],
+      "note": "RH_BATCH_20261113_09 | RH 11/13 16:28 No ATL by 5.5=公牛+5.5; 43 shares; 微信一致。"
+    },
+    {
+      "id": 139,
+      "owner": "王老板",
+      "usDate": "2026-11-13",
+      "bet": "NYK -4.5",
+      "stake": 20,
+      "payout": null,
+      "status": "pending",
+      "profitIfWin": 9,
+      "legs": [
+        {
+          "team": "NYK",
+          "market": "spread",
+          "line": -4.5,
+          "gameDate": "2026-11-13"
+        }
+      ],
+      "note": "RH_BATCH_20261113_10 | RH 11/13 16:27 Filled 29 shares; 微信尼克斯-4.5。"
+    },
+    {
+      "id": 140,
+      "owner": "王老板",
+      "usDate": "2026-11-13",
+      "bet": "ORL -5.5",
+      "stake": 20,
+      "payout": null,
+      "status": "pending",
+      "profitIfWin": 8,
+      "legs": [
+        {
+          "team": "ORL",
+          "market": "spread",
+          "line": -5.5,
+          "gameDate": "2026-11-13"
+        }
+      ],
+      "note": "RH_BATCH_20261113_11 | RH 11/13 16:26 Filled 28 shares; 微信魔术-5.5。"
+    },
+    {
+      "id": 141,
+      "owner": "小王",
+      "usDate": "2026-11-13",
+      "bet": "MIN + PHI + HOU -1.5",
+      "stake": 50,
+      "payout": null,
+      "status": "pending",
+      "profitIfWin": 26,
+      "legs": [
+        {
+          "team": "MIN",
+          "market": "moneyline",
+          "gameDate": "2026-11-13"
+        },
+        {
+          "team": "PHI",
+          "market": "moneyline",
+          "gameDate": "2026-11-13"
+        },
+        {
+          "team": "HOU",
+          "market": "spread",
+          "line": -1.5,
+          "gameDate": "2026-11-13"
+        }
+      ],
+      "note": "RH_BATCH_20261113_12 | RH 11/13 15:25 Filled 76 shares; 无微信对应要求，按用户规则归小王。"
+    },
+    {
+      "id": 142,
+      "owner": "王老板",
+      "usDate": "2026-11-13",
+      "bet": "ORL + NYK + OKC + SAS -4.5 + POR -2.5 + HOU -5.5",
+      "stake": 20,
+      "payout": null,
+      "status": "pending",
+      "profitIfWin": 74,
+      "legs": [
+        {
+          "team": "ORL",
+          "market": "moneyline",
+          "gameDate": "2026-11-13"
+        },
+        {
+          "team": "NYK",
+          "market": "moneyline",
+          "gameDate": "2026-11-13"
+        },
+        {
+          "team": "OKC",
+          "market": "moneyline",
+          "gameDate": "2026-11-13"
+        },
+        {
+          "team": "SAS",
+          "market": "spread",
+          "line": -4.5,
+          "gameDate": "2026-11-13"
+        },
+        {
+          "team": "POR",
+          "market": "spread",
+          "line": -2.5,
+          "gameDate": "2026-11-13"
+        },
+        {
+          "team": "HOU",
+          "market": "spread",
+          "line": -5.5,
+          "gameDate": "2026-11-13"
+        }
+      ],
+      "note": "RH_BATCH_20261113_13 | RH 11/13 15:19 Filled 94 shares。注意：微信原要求开拓者-3.5，RH实际-2.5，存在盘口偏差；以实际RH盘口记账。"
+    },
+    {
+      "id": 143,
+      "owner": "小王",
+      "usDate": "2026-11-12",
+      "bet": "ORL + ATL + HOU + POR + OKC + MIN",
+      "stake": 20,
+      "payout": null,
+      "status": "pending",
+      "profitIfWin": 53,
+      "legs": [
+        {
+          "team": "ORL",
+          "market": "moneyline"
+        },
+        {
+          "team": "ATL",
+          "market": "moneyline"
+        },
+        {
+          "team": "HOU",
+          "market": "moneyline"
+        },
+        {
+          "team": "POR",
+          "market": "moneyline"
+        },
+        {
+          "team": "OKC",
+          "market": "moneyline"
+        },
+        {
+          "team": "MIN",
+          "market": "moneyline"
+        }
+      ],
+      "note": "RH_BATCH_20261113_14 | RH提交日11/12，Filled 73 shares; 无微信对应要求按小王记录。各腿比赛日未由截图确定，暂不自动结算。"
+    },
+    {
+      "id": 144,
+      "owner": "王老板",
+      "usDate": "2026-11-13",
+      "bet": "NYK + OKC + POR + MIN + DEN + HOU + PHI + OKC + SAS + SAS -2.5 + HOU -3.5",
+      "stake": 20,
+      "payout": null,
+      "status": "pending",
+      "profitIfWin": 138,
+      "legs": [
+        {
+          "team": "NYK",
+          "market": "moneyline"
+        },
+        {
+          "team": "OKC",
+          "market": "moneyline"
+        },
+        {
+          "team": "POR",
+          "market": "moneyline"
+        },
+        {
+          "team": "MIN",
+          "market": "moneyline"
+        },
+        {
+          "team": "DEN",
+          "market": "moneyline"
+        },
+        {
+          "team": "HOU",
+          "market": "moneyline"
+        },
+        {
+          "team": "PHI",
+          "market": "moneyline"
+        },
+        {
+          "team": "OKC",
+          "market": "moneyline"
+        },
+        {
+          "team": "SAS",
+          "market": "moneyline"
+        },
+        {
+          "team": "SAS",
+          "market": "spread",
+          "line": -2.5
+        },
+        {
+          "team": "HOU",
+          "market": "spread",
+          "line": -3.5
+        }
+      ],
+      "note": "RH_BATCH_20261113_15 | 新版11串一RH 11/13 16:54显示Filled，包含MIN森林狼；用户指定本金$20、命中净赚$138（总返还$158）。旧版含MEM灰熊已Filled但按要求暂不处理。马刺RH实际-2.5，微信初始-3.5。跨日每腿比赛日仍待核实，禁止自动结算。"
     }
   ]
 }
