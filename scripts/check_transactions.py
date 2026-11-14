@@ -25,15 +25,24 @@ def read_ledger(raw, name):
 
 
 def prior_revision(path):
-    # Choose the immediately previous *change to the ledger*, not HEAD^.
-    p = subprocess.run(['git', 'log', '--format=%H', '-n', '2', '--', path], capture_output=True, text=True, check=True)
+    # Compare to the most recent valid committed ledger, skipping malformed commits.
+    p = subprocess.run(
+        ['git', 'log', '--format=%H', '--', path],
+        capture_output=True, text=True, check=True,
+    )
     revs = p.stdout.splitlines()
-    if len(revs) < 2:
-        return None
-    p = subprocess.run(['git', 'show', f'{revs[1]}:{path}'], capture_output=True, text=True)
-    if p.returncode != 0:
-        return None
-    return read_ledger(p.stdout, f'previous revision {revs[1][:9]}')
+    for rev in revs[1:]:
+        result = subprocess.run(
+            ['git', 'show', f'{rev}:{path}'],
+            capture_output=True, text=True,
+        )
+        if result.returncode != 0:
+            continue
+        try:
+            return read_ledger(result.stdout, f'previous revision {rev[:9]}')
+        except ValueError:
+            print(f'::warning::Skipping invalid historical ledger {rev[:9]}')
+    return None
 
 
 def check(rows, before=None):
@@ -95,7 +104,7 @@ def check(rows, before=None):
 def main():
     parser=argparse.ArgumentParser()
     parser.add_argument('--file', default='transactions.json')
-    parser.add_argument('--previous-git', action='store_true', help='compare against preceding committed ledger version')
+    parser.add_argument('--previous-git', action='store_true', help='compare against preceding valid committed ledger version')
     parser.add_argument('--before-file', help='compare against snapshot taken before a job changed the ledger')
     args=parser.parse_args()
     try:
