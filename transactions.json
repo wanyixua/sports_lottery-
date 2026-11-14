@@ -2862,8 +2862,8 @@
       "usDate": "2026-11-13",
       "bet": "HOU",
       "stake": 50,
-      "payout": null,
-      "status": "pending",
+      "payout": 54.0,
+      "status": "win",
       "profitIfWin": 4,
       "legs": [
         {
@@ -2872,7 +2872,11 @@
           "gameDate": "2026-11-13"
         }
       ],
-      "note": "RH_BATCH_20261113_02 | RH 11/13 16:33 Filled 54 shares; 微信火箭独赢$50。"
+      "note": "RH_BATCH_20261113_02 | RH 11/13 16:33 Filled 54 shares; 微信火箭独赢$50。",
+      "legResults": [
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "id": 132,
@@ -2934,8 +2938,8 @@
       "usDate": "2026-11-13",
       "bet": "POR + SAS -6.5 + HOU -7.5",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 0,
+      "status": "loss",
       "profitIfWin": 24,
       "legs": [
         {
@@ -2956,7 +2960,13 @@
           "gameDate": "2026-11-13"
         }
       ],
-      "note": "RH_BATCH_20261113_06 | RH 11/13 16:30 Filled 44 shares; 微信马刺盘口已改为-6.5。"
+      "note": "RH_BATCH_20261113_06 | RH 11/13 16:30 Filled 44 shares; 微信马刺盘口已改为-6.5。",
+      "legResults": [
+        null,
+        null,
+        "loss"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "id": 136,
@@ -2964,8 +2974,8 @@
       "usDate": "2026-11-13",
       "bet": "MEM",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 32.0,
+      "status": "win",
       "profitIfWin": 12,
       "legs": [
         {
@@ -2974,7 +2984,11 @@
           "gameDate": "2026-11-13"
         }
       ],
-      "note": "RH_BATCH_20261113_07 | RH 11/13 16:29 Filled 32 shares; 微信灰熊独赢$20。"
+      "note": "RH_BATCH_20261113_07 | RH 11/13 16:29 Filled 32 shares; 微信灰熊独赢$20。",
+      "legResults": [
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "id": 137,
@@ -2982,8 +2996,8 @@
       "usDate": "2026-11-13",
       "bet": "CLE +3.5",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 0,
+      "status": "loss",
       "profitIfWin": 15,
       "legs": [
         {
@@ -2993,7 +3007,11 @@
           "gameDate": "2026-11-13"
         }
       ],
-      "note": "RH_BATCH_20261113_08 | RH 11/13 16:28 No MIA by 3.5=骑士+3.5; 35 shares; 微信一致。"
+      "note": "RH_BATCH_20261113_08 | RH 11/13 16:28 No MIA by 3.5=骑士+3.5; 35 shares; 微信一致。",
+      "legResults": [
+        "loss"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "id": 138,
@@ -3001,8 +3019,8 @@
       "usDate": "2026-11-13",
       "bet": "CHI +5.5",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 43.0,
+      "status": "win",
       "profitIfWin": 23,
       "legs": [
         {
@@ -3012,7 +3030,11 @@
           "gameDate": "2026-11-13"
         }
       ],
-      "note": "RH_BATCH_20261113_09 | RH 11/13 16:28 No ATL by 5.5=公牛+5.5; 43 shares; 微信一致。"
+      "note": "RH_BATCH_20261113_09 | RH 11/13 16:28 No ATL by 5.5=公牛+5.5; 43 shares; 微信一致。",
+      "legResults": [
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "id": 139,
@@ -3153,8 +3175,8 @@
       "usDate": "2026-11-13",
       "bet": "ORL + ATL + HOU + POR + OKC + MIN",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 0,
+      "status": "loss",
       "profitIfWin": 53,
       "legs": [
         {
@@ -3195,7 +3217,16 @@
         }
       ],
       "note": "RH_BATCH_20261113_14 | RH提交日11/12，Filled 73 shares; 无微信对应要求按小王记录。各腿比赛日未由截图确定，暂不自动结算。 | DATE_FIX_EARLIEST_V3: 已按全部6腿开赛时间比较：最早为ORL 11/13 19:00 ET，对应北京时间11/14",
-      "beijingDate": "2026-11-14"
+      "beijingDate": "2026-11-14",
+      "legResults": [
+        "win",
+        "loss",
+        "win",
+        null,
+        null,
+        null
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "id": 144,
