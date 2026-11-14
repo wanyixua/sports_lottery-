@@ -1030,15 +1030,7 @@
         selected.clear();for(const p of plan.picks){if(!selected.has(p.gameId))selected.set(p.gameId,{...p});}
         stake=s;stakeInput.value=String(s);feePriceInput.value=plan.comboPriceCents==null?'':String(plan.comboPriceCents);exchangeInput.value=String(plan.exchangeFeeCents??1);closeCart();render();
         if(window.matchMedia('(max-width:700px)').matches){document.getElementById('slip').classList.add('expanded');document.getElementById('slip-toggle').setAttribute('aria-expanded','true');updateSlip();}
-      });controls.append(restore);
-      const send=newEl('button','cart-open','📨 提交订单申请');send.type='button';
-      send.addEventListener('click',()=>{
-        try{const data=toWorkerCart(plan);const encoded=encodeURIComponent(JSON.stringify(data));
-          const url=XW_WORKER+'/cart-submit#'+encoded;
-          if(url.length>14000)throw Error('选盘信息过长，请减少选项');
-          window.open(url,'_blank','noopener,noreferrer');
-        }catch(e){alert(e.message)}
-      });controls.append(send);foot.append(calculations,controls);card.append(foot);cartContent.append(card);
+      });controls.append(restore);foot.append(calculations,controls);card.append(foot);cartContent.append(card);
     }
     cartContent.append(newEl('p','cart-warning','仅保存选择时的报价快照，并非真实投注订单。历史赔率可能过期；加载到计算器后请核对现价。理论串关收益不等于 RH 实际 Combo 报价。'));
   }
