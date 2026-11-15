@@ -3100,8 +3100,8 @@
       "usDate": "2026-11-13",
       "bet": "MIN + PHI + HOU -1.5",
       "stake": 50,
-      "payout": null,
-      "status": "pending",
+      "payout": 0,
+      "status": "loss",
       "profitIfWin": 26,
       "legs": [
         {
@@ -3124,7 +3124,13 @@
       ],
       "note": "RH_BATCH_20261113_12 | RH 11/13 15:25 Filled 76 shares; 无微信对应要求，按用户规则归小王。 | DATE_FIX_EARLIEST_V3: 用户确认北京时间11/14归类；HOU -1.5具体对阵及开赛时刻尚未核实，禁止自动结算",
       "beijingDate": "2026-11-14",
-      "dateReviewRequired": true
+      "dateReviewRequired": true,
+      "legResults": [
+        "loss",
+        null,
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "id": 142,
@@ -3319,8 +3325,8 @@
       "usDate": "2026-11-14",
       "bet": "MEM + MIN + MIA",
       "stake": 10,
-      "payout": null,
-      "status": "pending",
+      "payout": 0,
+      "status": "loss",
       "profitIfWin": 33,
       "legs": [
         {
@@ -3343,7 +3349,13 @@
         }
       ],
       "beijingDate": "2026-11-15",
-      "note": "RH_FILLED_20261113_2240_MEM_MIN_MIA_43 | RH Filled 43/43 shares; Entered $10; 命中总返还$43，净赚$33。无微信对应王老板要求，归小王。"
+      "note": "RH_FILLED_20261113_2240_MEM_MIN_MIA_43 | RH Filled 43/43 shares; Entered $10; 命中总返还$43，净赚$33。无微信对应王老板要求，归小王。",
+      "legResults": [
+        "win",
+        "loss",
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "id": 146,
@@ -3459,8 +3471,8 @@
       "usDate": "2026-11-14",
       "bet": "DEN -5.5 + BKN +8.5 + CHI +15.5",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 0,
+      "status": "loss",
       "profitIfWin": 57,
       "legs": [
         {
@@ -3486,7 +3498,13 @@
         }
       ],
       "beijingDate": "2026-11-15",
-      "note": "WECHAT_CONFIRMED_20261114_DEN_BKN_CHI | 王老板三串一本金$20；小王微信确认成交并回报“20-57”，按命中净利润+$57入账。没有RH截图，盘口和成交由小王本人确认。"
+      "note": "WECHAT_CONFIRMED_20261114_DEN_BKN_CHI | 王老板三串一本金$20；小王微信确认成交并回报“20-57”，按命中净利润+$57入账。没有RH截图，盘口和成交由小王本人确认。",
+      "legResults": [
+        "win",
+        "loss",
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "id": 149,
@@ -3494,8 +3512,8 @@
       "usDate": "2026-11-14",
       "bet": "DAL -8.5",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 0,
+      "status": "loss",
       "profitIfWin": 19,
       "legs": [
         {
@@ -3507,7 +3525,11 @@
         }
       ],
       "beijingDate": "2026-11-15",
-      "note": "WECHAT_CONFIRMED_20261114_DAL_MINUS8_5 | 王老板将原骑士-4.5撤销，最后买独行侠-8.5，本金$20；小王微信回报“20-19”，按命中净利润+$19入账。没有RH截图，由小王本人确认成交；原骑士-4.5不入账。"
+      "note": "WECHAT_CONFIRMED_20261114_DAL_MINUS8_5 | 王老板将原骑士-4.5撤销，最后买独行侠-8.5，本金$20；小王微信回报“20-19”，按命中净利润+$19入账。没有RH截图，由小王本人确认成交；原骑士-4.5不入账。",
+      "legResults": [
+        "loss"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     }
   ]
 }
