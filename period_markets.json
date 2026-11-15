@@ -1,6 +1,6 @@
 {
   "date": "2026-11-15",
-  "capturedAt": "2026-11-15T08:33:19+00:00",
+  "capturedAt": "2026-11-15T10:48:01+00:00",
   "source": "RH public event pages; displayPrice is INDICATIVE, yesAsk/noAsk only when verified",
   "games": [
     {
@@ -69,7 +69,7 @@
                 "id": "display-spread-PHI-5p5",
                 "owner": "PHI",
                 "label": "Philadelphia wins by over 5.5 points",
-                "displayPrice": 46.0,
+                "displayPrice": 41.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -105,7 +105,7 @@
                 "id": "display-total-over-115p5",
                 "owner": "over",
                 "label": "Over 115.5 points",
-                "displayPrice": 46.0,
+                "displayPrice": 48.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -126,7 +126,7 @@
                 "owner": "PHI",
                 "label": "Philadelphia",
                 "displayPrice": 95.0,
-                "yesAsk": 65.0,
+                "yesAsk": 62.0,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)",
                 "askVerifiedFrom": "ticket"
@@ -163,7 +163,7 @@
                 "owner": "PHI",
                 "label": "Philadelphia",
                 "displayPrice": 60.0,
-                "yesAsk": 60.0,
+                "yesAsk": 59.0,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)",
                 "askVerifiedFrom": "ticket"
@@ -264,7 +264,7 @@
                 "owner": "PHI",
                 "label": "Philadelphia",
                 "displayPrice": 59.0,
-                "yesAsk": 58.0,
+                "yesAsk": 57.0,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)",
                 "askVerifiedFrom": "ticket"
@@ -301,7 +301,7 @@
                 "owner": "PHI",
                 "label": "Philadelphia",
                 "displayPrice": 60.0,
-                "yesAsk": 59.0,
+                "yesAsk": 58.0,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)",
                 "askVerifiedFrom": "ticket"
@@ -338,7 +338,7 @@
                 "owner": "PHI",
                 "label": "Philadelphia",
                 "displayPrice": 58.0,
-                "yesAsk": 55.0,
+                "yesAsk": 52.0,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)",
                 "askVerifiedFrom": "ticket"
@@ -358,9 +358,12 @@
             "completeness": "partial"
           },
           "total": {
-            "url": null,
+            "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/indiana-vs-philadelphia-4th-quarter-total-nov-15-2026/",
             "choices": [],
-            "reason": "HTTP Error 404: Not Found"
+            "reason": "Ambiguous embedded event contract groups",
+            "hiddenCount": 8,
+            "expectedMinChoices": 8,
+            "completeness": "partial"
           }
         }
       }
@@ -591,7 +594,7 @@
                 "owner": "SAS",
                 "label": "San Antonio",
                 "displayPrice": 80.0,
-                "yesAsk": 80.0,
+                "yesAsk": 82.0,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)",
                 "askVerifiedFrom": "ticket"
@@ -819,7 +822,7 @@
               {
                 "id": "visible-ticket-SAS",
                 "label": "San Antonio",
-                "yesAsk": 69.0,
+                "yesAsk": 68.0,
                 "noAsk": null,
                 "owner": "SAS",
                 "displayPrice": null
@@ -864,7 +867,7 @@
               {
                 "id": "visible-ticket-SAS",
                 "label": "San Antonio",
-                "yesAsk": 73.0,
+                "yesAsk": 71.0,
                 "noAsk": null,
                 "owner": "SAS",
                 "displayPrice": null
@@ -899,7 +902,7 @@
               {
                 "id": "visible-ticket-SAS",
                 "label": "San Antonio",
-                "yesAsk": 81.0,
+                "yesAsk": 69.0,
                 "noAsk": null,
                 "owner": "SAS",
                 "displayPrice": null
@@ -1127,12 +1130,14 @@
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/dallas-vs-boston-2nd-quarter-winner-nov-15-2026/",
             "choices": [
               {
-                "id": "visible-ticket-BOS",
-                "label": "Boston",
-                "yesAsk": 66.0,
-                "noAsk": null,
+                "id": "display-BOS",
                 "owner": "BOS",
-                "displayPrice": null
+                "label": "Boston",
+                "displayPrice": 65.0,
+                "yesAsk": 64.0,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)",
+                "askVerifiedFrom": "ticket"
               }
             ],
             "reason": null,
@@ -1250,7 +1255,7 @@
                 "id": "display-tie",
                 "owner": "tie",
                 "label": "Tie",
-                "displayPrice": 6.0,
+                "displayPrice": 5.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -1332,15 +1337,24 @@
                 "owner": "NYK",
                 "label": "New York",
                 "displayPrice": 66.0,
-                "yesAsk": 53.0,
+                "yesAsk": 55.0,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)",
                 "askVerifiedFrom": "ticket"
+              },
+              {
+                "id": "display-TOR",
+                "owner": "TOR",
+                "label": "Toronto",
+                "displayPrice": 44.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
               }
             ],
             "reason": null,
             "hiddenCount": 0,
-            "expectedMinChoices": 1,
+            "expectedMinChoices": 2,
             "completeness": "unverified"
           },
           "spread": {
@@ -1423,7 +1437,7 @@
               {
                 "id": "visible-ticket-NYK",
                 "label": "New York",
-                "yesAsk": 56.0,
+                "yesAsk": 55.0,
                 "noAsk": null,
                 "owner": "NYK",
                 "displayPrice": null
@@ -1443,9 +1457,12 @@
             "completeness": "partial"
           },
           "total": {
-            "url": null,
+            "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/new-york-vs-toronto-2nd-quarter-total-nov-15-2026/",
             "choices": [],
-            "reason": "HTTP Error 404: Not Found"
+            "reason": "Ambiguous embedded event contract groups",
+            "hiddenCount": 8,
+            "expectedMinChoices": 8,
+            "completeness": "partial"
           }
         },
         "q3": {
@@ -1455,7 +1472,7 @@
               {
                 "id": "visible-ticket-NYK",
                 "label": "New York",
-                "yesAsk": 56.0,
+                "yesAsk": 55.0,
                 "noAsk": null,
                 "owner": "NYK",
                 "displayPrice": null
@@ -1490,7 +1507,7 @@
               {
                 "id": "visible-ticket-NYK",
                 "label": "New York",
-                "yesAsk": 68.0,
+                "yesAsk": 69.0,
                 "noAsk": null,
                 "owner": "NYK",
                 "displayPrice": null
@@ -1532,7 +1549,7 @@
                 "owner": "HOU",
                 "label": "Houston",
                 "displayPrice": 67.0,
-                "yesAsk": 66.0,
+                "yesAsk": 67.0,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)",
                 "askVerifiedFrom": "ticket"
@@ -1632,7 +1649,7 @@
                 "owner": "HOU",
                 "label": "Houston",
                 "displayPrice": 77.0,
-                "yesAsk": 60.0,
+                "yesAsk": 62.0,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)",
                 "askVerifiedFrom": "ticket"
@@ -1997,10 +2014,20 @@
           },
           "spread": {
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/atlanta-vs-milwaukee-2nd-quarter-spread-nov-15-2026/",
-            "choices": [],
-            "reason": "Ambiguous embedded event contract groups",
+            "choices": [
+              {
+                "id": "display-spread-ATL-9p5",
+                "owner": "ATL",
+                "label": "Atlanta wins by over 9.5 points",
+                "displayPrice": 15.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              }
+            ],
+            "reason": null,
             "hiddenCount": 8,
-            "expectedMinChoices": 8,
+            "expectedMinChoices": 9,
             "completeness": "partial"
           },
           "total": {
@@ -2019,7 +2046,7 @@
               {
                 "id": "visible-ticket-ATL",
                 "label": "Atlanta",
-                "yesAsk": 60.0,
+                "yesAsk": 59.0,
                 "noAsk": null,
                 "owner": "ATL",
                 "displayPrice": null
@@ -2096,7 +2123,7 @@
                 "owner": "OKC",
                 "label": "Oklahoma City",
                 "displayPrice": 67.0,
-                "yesAsk": 68.0,
+                "yesAsk": 70.0,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)",
                 "askVerifiedFrom": "ticket"
