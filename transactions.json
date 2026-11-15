@@ -2004,7 +2004,7 @@
       "usDate": "2026-11-10",
       "bet": "LAL + SAS + DET + PHX -2.5 + MIA -2.5 + NYK -7.5 + ORL -2.5",
       "stake": 20,
-      "payout": 135,
+      "payout": 135.0,
       "status": "win",
       "profitIfWin": 115,
       "legs": [
@@ -2652,7 +2652,7 @@
       "usDate": "2026-11-11",
       "bet": "PHX + MIN + DET + PHI",
       "stake": 20,
-      "payout": 67,
+      "payout": 67.0,
       "status": "win",
       "profitIfWin": 47,
       "legs": [
@@ -2692,7 +2692,7 @@
       "usDate": "2026-11-12",
       "bet": "DET + PHI",
       "stake": 20,
-      "payout": 34,
+      "payout": 34.0,
       "status": "win",
       "profitIfWin": 14,
       "legs": [
@@ -2720,7 +2720,7 @@
       "usDate": "2026-11-12",
       "bet": "PHI -3.5",
       "stake": 20,
-      "payout": 30,
+      "payout": 30.0,
       "status": "win",
       "profitIfWin": 10,
       "legs": [
@@ -2766,7 +2766,7 @@
       "usDate": "2026-11-12",
       "bet": "MIN",
       "stake": 20,
-      "payout": 29,
+      "payout": 29.0,
       "status": "win",
       "profitIfWin": 9,
       "legs": [
@@ -2788,7 +2788,7 @@
       "usDate": "2026-11-12",
       "bet": "PHX -2.5",
       "stake": 20,
-      "payout": 30,
+      "payout": 30.0,
       "status": "win",
       "profitIfWin": 10,
       "legs": [
@@ -2811,7 +2811,7 @@
       "usDate": "2026-11-12",
       "bet": "PHI -1.5",
       "stake": 20,
-      "payout": 52,
+      "payout": 52.0,
       "status": "win",
       "profitIfWin": 32,
       "legs": [
@@ -2862,7 +2862,7 @@
       "usDate": "2026-11-13",
       "bet": "HOU",
       "stake": 50,
-      "payout": 54.0,
+      "payout": 54,
       "status": "win",
       "profitIfWin": 4,
       "legs": [
@@ -2884,7 +2884,7 @@
       "usDate": "2026-11-13",
       "bet": "POR",
       "stake": 20,
-      "payout": 24.0,
+      "payout": 24,
       "status": "win",
       "profitIfWin": 4,
       "legs": [
@@ -2906,7 +2906,7 @@
       "usDate": "2026-11-13",
       "bet": "SAS",
       "stake": 20,
-      "payout": 22.0,
+      "payout": 22,
       "status": "win",
       "profitIfWin": 2,
       "legs": [
@@ -2986,7 +2986,7 @@
       "usDate": "2026-11-13",
       "bet": "MEM",
       "stake": 20,
-      "payout": 32.0,
+      "payout": 32,
       "status": "win",
       "profitIfWin": 12,
       "legs": [
@@ -3031,7 +3031,7 @@
       "usDate": "2026-11-13",
       "bet": "CHI +5.5",
       "stake": 20,
-      "payout": 43.0,
+      "payout": 43,
       "status": "win",
       "profitIfWin": 23,
       "legs": [
@@ -3077,7 +3077,7 @@
       "usDate": "2026-11-13",
       "bet": "ORL -5.5",
       "stake": 20,
-      "payout": 28.0,
+      "payout": 28,
       "status": "win",
       "profitIfWin": 8,
       "legs": [
@@ -3312,6 +3312,202 @@
         null
       ],
       "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
+    },
+    {
+      "id": 145,
+      "owner": "小王",
+      "usDate": "2026-11-14",
+      "bet": "MEM + MIN + MIA",
+      "stake": 10,
+      "payout": null,
+      "status": "pending",
+      "profitIfWin": 33,
+      "legs": [
+        {
+          "team": "MEM",
+          "market": "moneyline",
+          "gameDate": "2026-11-14",
+          "startTimeUtc": "2026-11-15T01:00:00Z"
+        },
+        {
+          "team": "MIN",
+          "market": "moneyline",
+          "gameDate": "2026-11-14",
+          "startTimeUtc": "2026-11-15T01:00:00Z"
+        },
+        {
+          "team": "MIA",
+          "market": "moneyline",
+          "gameDate": "2026-11-14",
+          "startTimeUtc": "2026-11-15T01:00:00Z"
+        }
+      ],
+      "beijingDate": "2026-11-15",
+      "note": "RH_FILLED_20261113_2240_MEM_MIN_MIA_43 | RH Filled 43/43 shares; Entered $10; 命中总返还$43，净赚$33。无微信对应王老板要求，归小王。"
+    },
+    {
+      "id": 146,
+      "owner": "王老板",
+      "usDate": "2026-11-15",
+      "bet": "PHI + LAL + SAS -4.5 + BOS -2.5 + HOU + ATL + BOS + PHI",
+      "stake": 20,
+      "payout": null,
+      "status": "pending",
+      "profitIfWin": 182,
+      "legs": [
+        {
+          "team": "PHI",
+          "market": "moneyline",
+          "gameDate": "2026-11-15",
+          "startTimeUtc": "2026-11-15T18:00:00Z"
+        },
+        {
+          "team": "LAL",
+          "market": "moneyline",
+          "gameDate": "2026-11-15",
+          "startTimeUtc": "2026-11-15T21:00:00Z"
+        },
+        {
+          "team": "SAS",
+          "market": "spread",
+          "gameDate": "2026-11-15",
+          "startTimeUtc": "2026-11-15T22:00:00Z",
+          "line": -4.5
+        },
+        {
+          "team": "BOS",
+          "market": "spread",
+          "gameDate": "2026-11-15",
+          "startTimeUtc": "2026-11-15T23:00:00Z",
+          "line": -2.5
+        },
+        {
+          "team": "HOU",
+          "market": "moneyline",
+          "gameDate": "2026-11-15",
+          "startTimeUtc": "2026-11-16T00:00:00Z"
+        },
+        {
+          "team": "ATL",
+          "market": "moneyline",
+          "gameDate": "2026-11-15",
+          "startTimeUtc": "2026-11-16T01:00:00Z"
+        },
+        {
+          "team": "BOS",
+          "market": "moneyline",
+          "gameDate": "2026-11-16",
+          "startTimeUtc": "2026-11-17T00:00:00Z"
+        },
+        {
+          "team": "PHI",
+          "market": "moneyline",
+          "gameDate": "2026-11-16",
+          "startTimeUtc": "2026-11-17T00:30:00Z"
+        }
+      ],
+      "beijingDate": "2026-11-16",
+      "note": "RH_FILLED_20261114_2151_8LEG_202 | RH Filled 202/202 shares; Entered $20; 命中净赚$182。王老板八串一按RH实际盘口记账：SAS -4.5，BOS -2.5；与微信提出的SAS -5.5、BOS -3.5不同。"
+    },
+    {
+      "id": 147,
+      "owner": "小王",
+      "usDate": "2026-11-15",
+      "bet": "PHI + SAS + BOS + BOS + DEN",
+      "stake": 30,
+      "payout": null,
+      "status": "pending",
+      "profitIfWin": 52,
+      "legs": [
+        {
+          "team": "PHI",
+          "market": "moneyline",
+          "gameDate": "2026-11-15",
+          "startTimeUtc": "2026-11-15T18:00:00Z"
+        },
+        {
+          "team": "SAS",
+          "market": "moneyline",
+          "gameDate": "2026-11-15",
+          "startTimeUtc": "2026-11-15T22:00:00Z"
+        },
+        {
+          "team": "BOS",
+          "market": "moneyline",
+          "gameDate": "2026-11-15",
+          "startTimeUtc": "2026-11-15T23:00:00Z"
+        },
+        {
+          "team": "BOS",
+          "market": "moneyline",
+          "gameDate": "2026-11-16",
+          "startTimeUtc": "2026-11-17T00:00:00Z"
+        },
+        {
+          "team": "DEN",
+          "market": "moneyline",
+          "gameDate": "2026-11-16",
+          "startTimeUtc": "2026-11-17T02:00:00Z"
+        }
+      ],
+      "beijingDate": "2026-11-16",
+      "note": "RH_FILLED_20261114_2159_5LEG_82 | RH Filled 82/82 shares; Entered $30; 命中净赚$52。两场BOS分别对应DAL@BOS及ORL@BOS；归小王。"
+    },
+    {
+      "id": 148,
+      "owner": "王老板",
+      "usDate": "2026-11-14",
+      "bet": "DEN -5.5 + BKN +8.5 + CHI +15.5",
+      "stake": 20,
+      "payout": null,
+      "status": "pending",
+      "profitIfWin": 57,
+      "legs": [
+        {
+          "team": "DEN",
+          "market": "spread",
+          "gameDate": "2026-11-14",
+          "startTimeUtc": "2026-11-15T00:00:00Z",
+          "line": -5.5
+        },
+        {
+          "team": "BKN",
+          "market": "spread",
+          "gameDate": "2026-11-14",
+          "startTimeUtc": "2026-11-15T01:00:00Z",
+          "line": 8.5
+        },
+        {
+          "team": "CHI",
+          "market": "spread",
+          "gameDate": "2026-11-14",
+          "startTimeUtc": "2026-11-15T01:00:00Z",
+          "line": 15.5
+        }
+      ],
+      "beijingDate": "2026-11-15",
+      "note": "WECHAT_CONFIRMED_20261114_DEN_BKN_CHI | 王老板三串一本金$20；小王微信确认成交并回报“20-57”，按命中净利润+$57入账。没有RH截图，盘口和成交由小王本人确认。"
+    },
+    {
+      "id": 149,
+      "owner": "王老板",
+      "usDate": "2026-11-14",
+      "bet": "DAL -8.5",
+      "stake": 20,
+      "payout": null,
+      "status": "pending",
+      "profitIfWin": 19,
+      "legs": [
+        {
+          "team": "DAL",
+          "market": "spread",
+          "gameDate": "2026-11-14",
+          "startTimeUtc": "2026-11-15T00:30:00Z",
+          "line": -8.5
+        }
+      ],
+      "beijingDate": "2026-11-15",
+      "note": "WECHAT_CONFIRMED_20261114_DAL_MINUS8_5 | 王老板将原骑士-4.5撤销，最后买独行侠-8.5，本金$20；小王微信回报“20-19”，按命中净利润+$19入账。没有RH截图，由小王本人确认成交；原骑士-4.5不入账。"
     }
   ]
 }
