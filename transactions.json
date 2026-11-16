@@ -3587,8 +3587,8 @@
       "usDate": "2026-11-15",
       "bet": "NYK + ATL + OKC",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 49.0,
+      "status": "win",
       "profitIfWin": 29,
       "legs": [
         {
@@ -3611,7 +3611,13 @@
         }
       ],
       "beijingDate": "2026-11-16",
-      "note": "RH_FILLED_20261115_152 | RH 11/15 12:57 Filled 49/49 shares; Entered $20; 命中返还$49、净赚$29。对应微信王老板尼克斯胜+老鹰胜+雷霆胜三串一；盘口均独赢。"
+      "note": "RH_FILLED_20261115_152 | RH 11/15 12:57 Filled 49/49 shares; Entered $20; 命中返还$49、净赚$29。对应微信王老板尼克斯胜+老鹰胜+雷霆胜三串一；盘口均独赢。",
+      "legResults": [
+        "win",
+        "win",
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "id": 153,
@@ -3693,8 +3699,8 @@
       "usDate": "2026-11-15",
       "bet": "OKC",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 24.0,
+      "status": "win",
       "profitIfWin": 4,
       "legs": [
         {
@@ -3705,7 +3711,11 @@
         }
       ],
       "beijingDate": "2026-11-16",
-      "note": "RH_FILLED_20261115_156 | RH 11/15 16:48 Filled 24/24 shares; Entered $20; 命中返还$24、净赚$4。对应微信王老板雷霆胜。"
+      "note": "RH_FILLED_20261115_156 | RH 11/15 16:48 Filled 24/24 shares; Entered $20; 命中返还$24、净赚$4。对应微信王老板雷霆胜。",
+      "legResults": [
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     }
   ]
 }
