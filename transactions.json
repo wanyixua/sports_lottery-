@@ -3363,8 +3363,8 @@
       "usDate": "2026-11-15",
       "bet": "PHI + LAL + SAS -4.5 + BOS -2.5 + HOU + ATL + BOS + PHI",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 0,
+      "status": "loss",
       "profitIfWin": 182,
       "legs": [
         {
@@ -3419,7 +3419,18 @@
         }
       ],
       "beijingDate": "2026-11-16",
-      "note": "RH_FILLED_20261114_2151_8LEG_202 | RH Filled 202/202 shares; Entered $20; 命中净赚$182。王老板八串一按RH实际盘口记账：SAS -4.5，BOS -2.5；与微信提出的SAS -5.5、BOS -3.5不同。"
+      "note": "RH_FILLED_20261114_2151_8LEG_202 | RH Filled 202/202 shares; Entered $20; 命中净赚$182。王老板八串一按RH实际盘口记账：SAS -4.5，BOS -2.5；与微信提出的SAS -5.5、BOS -3.5不同。",
+      "legResults": [
+        "win",
+        "win",
+        "win",
+        "win",
+        "win",
+        "win",
+        "loss",
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "id": 147,
@@ -3427,8 +3438,8 @@
       "usDate": "2026-11-15",
       "bet": "PHI + SAS + BOS + BOS + DEN",
       "stake": 30,
-      "payout": null,
-      "status": "pending",
+      "payout": 0,
+      "status": "loss",
       "profitIfWin": 52,
       "legs": [
         {
@@ -3463,7 +3474,15 @@
         }
       ],
       "beijingDate": "2026-11-16",
-      "note": "RH_FILLED_20261114_2159_5LEG_82 | RH Filled 82/82 shares; Entered $30; 命中净赚$52。两场BOS分别对应DAL@BOS及ORL@BOS；归小王。"
+      "note": "RH_FILLED_20261114_2159_5LEG_82 | RH Filled 82/82 shares; Entered $30; 命中净赚$52。两场BOS分别对应DAL@BOS及ORL@BOS；归小王。",
+      "legResults": [
+        "win",
+        "win",
+        "win",
+        "loss",
+        "loss"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "id": 148,
@@ -3723,8 +3742,8 @@
       "usDate": "2026-11-16",
       "bet": "MEM -3.5",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 34.0,
+      "status": "win",
       "profitIfWin": 14,
       "legs": [
         {
@@ -3735,7 +3754,11 @@
         }
       ],
       "beijingDate": "2026-11-17",
-      "note": "RH_FILLED_20261116_157 | RH 11/16 16:15 Filled 34 shares; Entered $20; 全中返还$34, 净赚$14; 灰熊让3.5；微信确认20-14。"
+      "note": "RH_FILLED_20261116_157 | RH 11/16 16:15 Filled 34 shares; Entered $20; 全中返还$34, 净赚$14; 灰熊让3.5；微信确认20-14。",
+      "legResults": [
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "id": 158,
@@ -3743,8 +3766,8 @@
       "usDate": "2026-11-16",
       "bet": "PHI",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 27.0,
+      "status": "win",
       "profitIfWin": 7,
       "legs": [
         {
@@ -3754,7 +3777,11 @@
         }
       ],
       "beijingDate": "2026-11-17",
-      "note": "RH_FILLED_20261116_158 | RH 11/16 16:41 Filled 27 shares; Entered $20; 全中返还$27, 净赚$7; 76人独赢；微信确认20-7。"
+      "note": "RH_FILLED_20261116_158 | RH 11/16 16:41 Filled 27 shares; Entered $20; 全中返还$27, 净赚$7; 76人独赢；微信确认20-7。",
+      "legResults": [
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "id": 159,
@@ -3762,8 +3789,8 @@
       "usDate": "2026-11-16",
       "bet": "NOP + MEM",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 77.0,
+      "status": "win",
       "profitIfWin": 57,
       "legs": [
         {
@@ -3778,7 +3805,12 @@
         }
       ],
       "beijingDate": "2026-11-17",
-      "note": "RH_FILLED_20261116_159 | RH 11/16 16:08 Filled 77 shares; Entered $20; 全中返还$77, 净赚$57; 鹈鹕胜勇士＋灰熊胜奇才；微信确认20-57。"
+      "note": "RH_FILLED_20261116_159 | RH 11/16 16:08 Filled 77 shares; Entered $20; 全中返还$77, 净赚$57; 鹈鹕胜勇士＋灰熊胜奇才；微信确认20-57。",
+      "legResults": [
+        "win",
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "id": 160,
@@ -3786,8 +3818,8 @@
       "usDate": "2026-11-16",
       "bet": "HOU -2.5 + MIN -3.5",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 0,
+      "status": "loss",
       "profitIfWin": 65,
       "legs": [
         {
@@ -3804,7 +3836,12 @@
         }
       ],
       "beijingDate": "2026-11-17",
-      "note": "RH_FILLED_20261116_160 | RH 11/16 16:07 Filled 85 shares; Entered $20; 全中返还$85, 净赚$65; 火箭-2.5＋森林狼-3.5；微信确认20-65。"
+      "note": "RH_FILLED_20261116_160 | RH 11/16 16:07 Filled 85 shares; Entered $20; 全中返还$85, 净赚$65; 火箭-2.5＋森林狼-3.5；微信确认20-65。",
+      "legResults": [
+        "loss",
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "id": 161,
@@ -3812,8 +3849,8 @@
       "usDate": "2026-11-16",
       "bet": "BOS + DEN + CHI +10.5",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 0,
+      "status": "loss",
       "profitIfWin": 33,
       "legs": [
         {
@@ -3834,7 +3871,13 @@
         }
       ],
       "beijingDate": "2026-11-17",
-      "note": "RH_FILLED_20261116_161 | RH 11/16 16:06 Filled 53 shares; Entered $20; 全中返还$53, 净赚$33; 凯尔特人独赢＋掘金独赢＋公牛受让10.5；RH No CLE by 10.5 等价 CHI +10.5；微信确认20-33。"
+      "note": "RH_FILLED_20261116_161 | RH 11/16 16:06 Filled 53 shares; Entered $20; 全中返还$53, 净赚$33; 凯尔特人独赢＋掘金独赢＋公牛受让10.5；RH No CLE by 10.5 等价 CHI +10.5；微信确认20-33。",
+      "legResults": [
+        "loss",
+        "loss",
+        "loss"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "id": 162,
@@ -3842,8 +3885,8 @@
       "usDate": "2026-11-16",
       "bet": "MIN",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 37.0,
+      "status": "win",
       "profitIfWin": 17,
       "legs": [
         {
@@ -3853,7 +3896,11 @@
         }
       ],
       "beijingDate": "2026-11-17",
-      "note": "RH_FILLED_20261116_162 | RH 11/16 17:33 Filled 37 shares; Entered $20; 全中返还$37, 净赚$17; 森林狼独赢；微信确认20-17。"
+      "note": "RH_FILLED_20261116_162 | RH 11/16 17:33 Filled 37 shares; Entered $20; 全中返还$37, 净赚$17; 森林狼独赢；微信确认20-17。",
+      "legResults": [
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "id": 163,
@@ -3861,8 +3908,8 @@
       "usDate": "2026-11-16",
       "bet": "DEN -3.5",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 0,
+      "status": "loss",
       "profitIfWin": 6,
       "legs": [
         {
@@ -3873,7 +3920,11 @@
         }
       ],
       "beijingDate": "2026-11-17",
-      "note": "RH_FILLED_20261116_163 | RH 11/16 17:37 Filled 26 shares; Entered $20; 全中返还$26, 净赚$6; 掘金-3.5；微信确认20-6。"
+      "note": "RH_FILLED_20261116_163 | RH 11/16 17:37 Filled 26 shares; Entered $20; 全中返还$26, 净赚$6; 掘金-3.5；微信确认20-6。",
+      "legResults": [
+        "loss"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "id": 164,
@@ -3881,8 +3932,8 @@
       "usDate": "2026-11-16",
       "bet": "BOS",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 0,
+      "status": "loss",
       "profitIfWin": 3,
       "legs": [
         {
@@ -3892,7 +3943,11 @@
         }
       ],
       "beijingDate": "2026-11-17",
-      "note": "RH_FILLED_20261116_164 | RH 11/16 16:14 Filled 23 shares; Entered $20; 全中返还$23, 净赚$3; 凯尔特人独赢；微信确认20-3。"
+      "note": "RH_FILLED_20261116_164 | RH 11/16 16:14 Filled 23 shares; Entered $20; 全中返还$23, 净赚$3; 凯尔特人独赢；微信确认20-3。",
+      "legResults": [
+        "loss"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     }
   ]
 }
