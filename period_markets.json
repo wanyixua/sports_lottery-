@@ -1,6 +1,6 @@
 {
   "date": "2026-11-17",
-  "capturedAt": "2026-11-17T11:17:22+00:00",
+  "capturedAt": "2026-11-17T13:30:59+00:00",
   "source": "RH public event pages; displayPrice is INDICATIVE, yesAsk/noAsk only when verified",
   "games": [
     {
@@ -33,7 +33,7 @@
                 "id": "display-spread-NYK-1p5",
                 "owner": "NYK",
                 "label": "New York wins by over 1.5 points",
-                "displayPrice": 51.0,
+                "displayPrice": 49.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -84,15 +84,6 @@
                 "priceSource": "RH public event selection (indicative)"
               },
               {
-                "id": "display-spread-NYK-17p5",
-                "owner": "NYK",
-                "label": "New York wins by over 17.5 points",
-                "displayPrice": 15.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
                 "id": "display-spread-TOR-10p5",
                 "owner": "TOR",
                 "label": "Toronto wins by over 10.5 points",
@@ -138,6 +129,15 @@
                 "priceSource": "RH public event selection (indicative)"
               },
               {
+                "id": "display-spread-NYK-17p5",
+                "owner": "NYK",
+                "label": "New York wins by over 17.5 points",
+                "displayPrice": 6.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
                 "id": "display-spread-NYK-19p5",
                 "owner": "NYK",
                 "label": "New York wins by over 19.5 points",
@@ -165,11 +165,29 @@
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-total-over-115p5",
+                "owner": "over",
+                "label": "Over 115.5 points",
+                "displayPrice": 33.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-total-over-123p5",
+                "owner": "over",
+                "label": "Over 123.5 points",
+                "displayPrice": 12.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
               }
             ],
             "reason": null,
             "hiddenCount": 0,
-            "expectedMinChoices": 1,
+            "expectedMinChoices": 3,
             "completeness": "expanded",
             "expandedWithBrowser": true,
             "stillCollapsed": false
@@ -182,7 +200,7 @@
               {
                 "id": "visible-ticket-NYK",
                 "label": "New York",
-                "yesAsk": 63.0,
+                "yesAsk": 62.0,
                 "noAsk": null,
                 "owner": "NYK",
                 "displayPrice": null
@@ -222,8 +240,8 @@
                 "id": "display-NYK",
                 "owner": "NYK",
                 "label": "New York",
-                "displayPrice": 53.0,
-                "yesAsk": 53.0,
+                "displayPrice": 52.0,
+                "yesAsk": 52.0,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)",
                 "askVerifiedFrom": "ticket"
@@ -241,7 +259,7 @@
                 "id": "display-tie",
                 "owner": "tie",
                 "label": "Tie",
-                "displayPrice": 7.0,
+                "displayPrice": 5.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -259,7 +277,7 @@
                 "id": "display-spread-NYK-1p5",
                 "owner": "NYK",
                 "label": "New York wins by over 1.5 points",
-                "displayPrice": 44.0,
+                "displayPrice": 43.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -337,7 +355,7 @@
                 "id": "display-NYK",
                 "owner": "NYK",
                 "label": "New York",
-                "displayPrice": 53.0,
+                "displayPrice": 52.0,
                 "yesAsk": 52.0,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)",
@@ -385,12 +403,13 @@
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/new-york-vs-toronto-3rd-quarter-winner-nov-17-2026/",
             "choices": [
               {
-                "id": "visible-ticket-NYK",
-                "label": "New York",
-                "yesAsk": 54.0,
+                "id": "display-tie",
+                "owner": "tie",
+                "label": "Tie",
+                "displayPrice": 7.0,
+                "yesAsk": null,
                 "noAsk": null,
-                "owner": "NYK",
-                "displayPrice": null
+                "priceSource": "RH public event selection (indicative)"
               }
             ],
             "reason": null,
@@ -423,7 +442,7 @@
                 "id": "display-spread-TOR-6p5",
                 "owner": "TOR",
                 "label": "Toronto wins by over 6.5 points",
-                "displayPrice": 22.0,
+                "displayPrice": 21.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -499,7 +518,7 @@
               {
                 "id": "visible-ticket-NYK",
                 "label": "New York",
-                "yesAsk": 66.0,
+                "yesAsk": 55.0,
                 "noAsk": null,
                 "owner": "NYK",
                 "displayPrice": null
@@ -572,8 +591,8 @@
                 "id": "display-SAS",
                 "owner": "SAS",
                 "label": "San Antonio",
-                "displayPrice": 67.0,
-                "yesAsk": 68.0,
+                "displayPrice": 68.0,
+                "yesAsk": 67.0,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)",
                 "askVerifiedFrom": "ticket"
@@ -582,7 +601,7 @@
                 "id": "display-DET",
                 "owner": "DET",
                 "label": "Detroit",
-                "displayPrice": 31.0,
+                "displayPrice": 30.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -759,10 +778,29 @@
           },
           "total": {
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/detroit-vs-san-antonio-1st-half-total-nov-17-2026/",
-            "choices": [],
-            "reason": "Ambiguous embedded event contract groups",
+            "choices": [
+              {
+                "id": "display-total-over-103p5",
+                "owner": "over",
+                "label": "Over 103.5 points",
+                "displayPrice": 81.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-total-over-115p5",
+                "owner": "over",
+                "label": "Over 115.5 points",
+                "displayPrice": 47.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              }
+            ],
+            "reason": null,
             "hiddenCount": 0,
-            "expectedMinChoices": 0,
+            "expectedMinChoices": 2,
             "completeness": "expanded",
             "expandedWithBrowser": true,
             "stillCollapsed": false
@@ -777,7 +815,7 @@
                 "owner": "SAS",
                 "label": "San Antonio",
                 "displayPrice": 70.0,
-                "yesAsk": 71.0,
+                "yesAsk": 67.0,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)",
                 "askVerifiedFrom": "ticket"
@@ -827,7 +865,7 @@
                 "id": "display-DET",
                 "owner": "DET",
                 "label": "Detroit",
-                "displayPrice": 33.0,
+                "displayPrice": 34.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -878,6 +916,24 @@
                 "priceSource": "RH public event selection (indicative)"
               },
               {
+                "id": "display-spread-DET-1p5",
+                "owner": "DET",
+                "label": "Detroit wins by over 1.5 points",
+                "displayPrice": 31.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-SAS-6p5",
+                "owner": "SAS",
+                "label": "San Antonio wins by over 6.5 points",
+                "displayPrice": 31.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
                 "id": "display-spread-DET-3p5",
                 "owner": "DET",
                 "label": "Detroit wins by over 3.5 points",
@@ -898,7 +954,7 @@
             ],
             "reason": null,
             "hiddenCount": 0,
-            "expectedMinChoices": 5,
+            "expectedMinChoices": 7,
             "completeness": "expanded",
             "expandedWithBrowser": true,
             "stillCollapsed": false
@@ -910,7 +966,7 @@
                 "id": "display-total-over-53p5",
                 "owner": "over",
                 "label": "Over 53.5 points",
-                "displayPrice": 70.0,
+                "displayPrice": 69.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -989,14 +1045,23 @@
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/detroit-vs-san-antonio-3rd-quarter-winner-nov-17-2026/",
             "choices": [
               {
+                "id": "display-SAS",
+                "owner": "SAS",
+                "label": "San Antonio",
+                "displayPrice": 61.0,
+                "yesAsk": 62.0,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)",
+                "askVerifiedFrom": "ticket"
+              },
+              {
                 "id": "display-DET",
                 "owner": "DET",
                 "label": "Detroit",
                 "displayPrice": 40.0,
-                "yesAsk": 41.0,
+                "yesAsk": null,
                 "noAsk": null,
-                "priceSource": "RH public event selection (indicative)",
-                "askVerifiedFrom": "ticket"
+                "priceSource": "RH public event selection (indicative)"
               },
               {
                 "id": "display-tie",
@@ -1010,7 +1075,7 @@
             ],
             "reason": null,
             "hiddenCount": 0,
-            "expectedMinChoices": 2,
+            "expectedMinChoices": 3,
             "completeness": "unverified"
           },
           "spread": {
@@ -1041,7 +1106,7 @@
               {
                 "id": "visible-ticket-DET",
                 "label": "Detroit",
-                "yesAsk": 44.0,
+                "yesAsk": 43.0,
                 "noAsk": null,
                 "owner": "DET",
                 "displayPrice": null
@@ -1087,7 +1152,7 @@
                 "owner": "MIN",
                 "label": "Minnesota",
                 "displayPrice": 51.0,
-                "yesAsk": 52.0,
+                "yesAsk": 51.0,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)",
                 "askVerifiedFrom": "ticket"
@@ -1246,7 +1311,7 @@
                 "owner": "MIN",
                 "label": "Minnesota",
                 "displayPrice": 61.0,
-                "yesAsk": 57.0,
+                "yesAsk": 53.0,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)",
                 "askVerifiedFrom": "ticket"
@@ -1287,7 +1352,7 @@
                 "owner": "MIN",
                 "label": "Minnesota",
                 "displayPrice": 53.0,
-                "yesAsk": 53.0,
+                "yesAsk": 52.0,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)",
                 "askVerifiedFrom": "ticket"
@@ -1384,7 +1449,7 @@
                 "owner": "MIN",
                 "label": "Minnesota",
                 "displayPrice": 97.0,
-                "yesAsk": 52.0,
+                "yesAsk": 51.0,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)",
                 "askVerifiedFrom": "ticket"
