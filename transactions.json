@@ -3955,8 +3955,8 @@
       "usDate": "2026-11-17",
       "bet": "CHA +5.5 + DET +4.5 + TOR -4.5 + MIN -5.5 + UTA +5.5",
       "stake": 10,
-      "payout": null,
-      "status": "pending",
+      "payout": 0,
+      "status": "loss",
       "profitIfWin": 466,
       "legs": [
         {
@@ -3991,7 +3991,15 @@
         }
       ],
       "beijingDate": "2026-11-18",
-      "note": "RH_FILLED_20261117_1637_5LEG_476 | RH Filled 476/476 shares, $10本金, 净赚+$466。微信王老板五串一：活塞+4.5、黄蜂+5.5、猛龙-4.5、爵士+5.5、森林狼-5.5；RH逐腿：No LAL by 5.5=CHA+5.5、No SAS by 4.5=DET+4.5、Yes TOR by 4.5、Yes MIN by 5.5、No LAC by 5.5=UTA+5.5。"
+      "note": "RH_FILLED_20261117_1637_5LEG_476 | RH Filled 476/476 shares, $10本金, 净赚+$466。微信王老板五串一：活塞+4.5、黄蜂+5.5、猛龙-4.5、爵士+5.5、森林狼-5.5；RH逐腿：No LAL by 5.5=CHA+5.5、No SAS by 4.5=DET+4.5、Yes TOR by 4.5、Yes MIN by 5.5、No LAC by 5.5=UTA+5.5。",
+      "legResults": [
+        "win",
+        "win",
+        "loss",
+        "loss",
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "id": 166,
@@ -3999,8 +4007,8 @@
       "usDate": "2026-11-17",
       "bet": "TOR",
       "stake": 10,
-      "payout": null,
-      "status": "pending",
+      "payout": 0,
+      "status": "loss",
       "profitIfWin": 11,
       "legs": [
         {
@@ -4010,7 +4018,11 @@
         }
       ],
       "beijingDate": "2026-11-18",
-      "note": "RH_FILLED_20261117_1650_TOR_21 | RH Filled 21/21 shares，Entered $10，命中返还$21、净赚+$11；微信王老板“买10刀猛龙胜”回复“10-11”。"
+      "note": "RH_FILLED_20261117_1650_TOR_21 | RH Filled 21/21 shares，Entered $10，命中返还$21、净赚+$11；微信王老板“买10刀猛龙胜”回复“10-11”。",
+      "legResults": [
+        "loss"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "id": 167,
@@ -4018,8 +4030,8 @@
       "usDate": "2026-11-17",
       "bet": "MIN",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 29.0,
+      "status": "win",
       "profitIfWin": 9,
       "legs": [
         {
@@ -4029,7 +4041,11 @@
         }
       ],
       "beijingDate": "2026-11-18",
-      "note": "WECHAT_MIN_COMBINED_20261117 | 王老板森林狼独赢原申请$20；RH分两笔Filled：11/17 17:10 买$10、15份、命中返还$15、净赚+$5；11/17 17:11 买$10、14份、命中返还$14、净赚+$4。仅为展示合并成一笔正式交易：本金$20、命中返还$29、净赚+$9；不另计重复订单。"
+      "note": "WECHAT_MIN_COMBINED_20261117 | 王老板森林狼独赢原申请$20；RH分两笔Filled：11/17 17:10 买$10、15份、命中返还$15、净赚+$5；11/17 17:11 买$10、14份、命中返还$14、净赚+$4。仅为展示合并成一笔正式交易：本金$20、命中返还$29、净赚+$9；不另计重复订单。",
+      "legResults": [
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "id": 168,
@@ -4037,8 +4053,8 @@
       "usDate": "2026-11-17",
       "bet": "CHA +10.5",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 31.0,
+      "status": "win",
       "profitIfWin": 11,
       "legs": [
         {
@@ -4049,7 +4065,11 @@
         }
       ],
       "beijingDate": "2026-11-18",
-      "note": "RH_FILLED_20261117_1712_CHA_31 | RH “No LAL by 10.5”=黄蜂CHA+10.5，Filled 31/31，Entered $20，净赚+$11；微信王老板确认黄蜂受让10.5，与森林狼独赢分别各买$20，回复“20-9 20-11”。"
+      "note": "RH_FILLED_20261117_1712_CHA_31 | RH “No LAL by 10.5”=黄蜂CHA+10.5，Filled 31/31，Entered $20，净赚+$11；微信王老板确认黄蜂受让10.5，与森林狼独赢分别各买$20，回复“20-9 20-11”。",
+      "legResults": [
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "id": 169,
@@ -4057,8 +4077,8 @@
       "usDate": "2026-11-17",
       "bet": "DET +8.5",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 48.0,
+      "status": "win",
       "profitIfWin": 28,
       "legs": [
         {
@@ -4069,7 +4089,11 @@
         }
       ],
       "beijingDate": "2026-11-18",
-      "note": "RH_FILLED_20261117_1723_DET_48 | RH “No SAS by 8.5”=活塞DET+8.5，Filled 48/48，Entered $20，净赚+$28；微信回复“20-28”。"
+      "note": "RH_FILLED_20261117_1723_DET_48 | RH “No SAS by 8.5”=活塞DET+8.5，Filled 48/48，Entered $20，净赚+$28；微信回复“20-28”。",
+      "legResults": [
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "id": 170,
@@ -4077,8 +4101,8 @@
       "usDate": "2026-11-17",
       "bet": "UTA +10.5",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 24.0,
+      "status": "win",
       "profitIfWin": 4,
       "legs": [
         {
@@ -4089,7 +4113,11 @@
         }
       ],
       "beijingDate": "2026-11-18",
-      "note": "RH_FILLED_20261117_2023_UTA_24 | RH “No LAC by 10.5”=爵士UTA+10.5，Filled 24/24，Entered $20，净赚+$4；微信回复“20-4”。"
+      "note": "RH_FILLED_20261117_2023_UTA_24 | RH “No LAC by 10.5”=爵士UTA+10.5，Filled 24/24，Entered $20，净赚+$4；微信回复“20-4”。",
+      "legResults": [
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "id": 171,
