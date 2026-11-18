@@ -1,6 +1,6 @@
 {
   "date": "2026-11-18",
-  "capturedAt": "2026-11-18T11:26:06+00:00",
+  "capturedAt": "2026-11-18T13:37:35+00:00",
   "source": "RH public event pages; displayPrice is INDICATIVE, yesAsk/noAsk only when verified",
   "games": [
     {
@@ -14,8 +14,8 @@
                 "id": "display-HOU",
                 "owner": "HOU",
                 "label": "Houston",
-                "displayPrice": 61.0,
-                "yesAsk": 61.0,
+                "displayPrice": 63.0,
+                "yesAsk": 63.0,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)",
                 "askVerifiedFrom": "ticket"
@@ -33,7 +33,7 @@
                 "id": "display-spread-HOU-3p5",
                 "owner": "HOU",
                 "label": "Houston wins by over 3.5 points",
-                "displayPrice": 53.0,
+                "displayPrice": 52.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -108,7 +108,7 @@
           "spread": {
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/houston-vs-indiana-2nd-half-spread-nov-18-2026/",
             "choices": [],
-            "reason": "Ambiguous embedded event contract groups",
+            "reason": "No contract selections or explicit asks found in HTML/Next.js",
             "hiddenCount": 0,
             "expectedMinChoices": 0,
             "completeness": "expanded",
@@ -131,12 +131,14 @@
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/houston-vs-indiana-1st-quarter-winner-nov-18-2026/",
             "choices": [
               {
-                "id": "visible-ticket-HOU",
-                "label": "Houston",
-                "yesAsk": 58.0,
+                "id": "display-IND",
+                "owner": "IND",
+                "label": "Indiana",
+                "displayPrice": 41.0,
+                "yesAsk": 40.0,
                 "noAsk": null,
-                "owner": "HOU",
-                "displayPrice": null
+                "priceSource": "RH public event selection (indicative)",
+                "askVerifiedFrom": "ticket"
               }
             ],
             "reason": null,
@@ -151,7 +153,7 @@
                 "id": "display-spread-HOU-1p5",
                 "owner": "HOU",
                 "label": "Houston wins by over 1.5 points",
-                "displayPrice": 54.0,
+                "displayPrice": 53.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -249,10 +251,38 @@
           },
           "spread": {
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/houston-vs-indiana-2nd-quarter-spread-nov-18-2026/",
-            "choices": [],
-            "reason": "Ambiguous embedded event contract groups",
+            "choices": [
+              {
+                "id": "display-spread-HOU-7p5",
+                "owner": "HOU",
+                "label": "Houston wins by over 7.5 points",
+                "displayPrice": 21.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-IND-4p5",
+                "owner": "IND",
+                "label": "Indiana wins by over 4.5 points",
+                "displayPrice": 21.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-IND-6p5",
+                "owner": "IND",
+                "label": "Indiana wins by over 6.5 points",
+                "displayPrice": 13.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              }
+            ],
+            "reason": null,
             "hiddenCount": 0,
-            "expectedMinChoices": 0,
+            "expectedMinChoices": 3,
             "completeness": "expanded",
             "expandedWithBrowser": true,
             "stillCollapsed": false
@@ -260,7 +290,7 @@
           "total": {
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/houston-vs-indiana-2nd-quarter-total-nov-18-2026/",
             "choices": [],
-            "reason": "Ambiguous embedded event contract groups",
+            "reason": "No contract selections or explicit asks found in HTML/Next.js",
             "hiddenCount": 0,
             "expectedMinChoices": 0,
             "completeness": "expanded",
@@ -314,7 +344,7 @@
               {
                 "id": "visible-ticket-HOU",
                 "label": "Houston",
-                "yesAsk": 60.0,
+                "yesAsk": 59.0,
                 "noAsk": null,
                 "owner": "HOU",
                 "displayPrice": null
@@ -336,9 +366,14 @@
             "stillCollapsed": false
           },
           "total": {
-            "url": null,
+            "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/houston-vs-indiana-4th-quarter-total-nov-18-2026/",
             "choices": [],
-            "reason": "HTTP Error 404: Not Found"
+            "reason": "Ambiguous embedded event contract groups",
+            "hiddenCount": 0,
+            "expectedMinChoices": 0,
+            "completeness": "expanded",
+            "expandedWithBrowser": true,
+            "stillCollapsed": false
           }
         }
       }
@@ -355,7 +390,7 @@
                 "owner": "CLE",
                 "label": "Cleveland",
                 "displayPrice": 53.0,
-                "yesAsk": 56.0,
+                "yesAsk": 57.0,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)",
                 "askVerifiedFrom": "ticket"
@@ -534,6 +569,15 @@
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/memphis-vs-cleveland-1st-half-total-nov-18-2026/",
             "choices": [
               {
+                "id": "display-total-over-120p5",
+                "owner": "over",
+                "label": "Over 120.5 points",
+                "displayPrice": 47.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
                 "id": "display-total-over-128p5",
                 "owner": "over",
                 "label": "Over 128.5 points",
@@ -545,7 +589,7 @@
             ],
             "reason": null,
             "hiddenCount": 0,
-            "expectedMinChoices": 1,
+            "expectedMinChoices": 2,
             "completeness": "expanded",
             "expandedWithBrowser": true,
             "stillCollapsed": false
@@ -556,17 +600,33 @@
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/memphis-vs-cleveland-2nd-half-winner-nov-18-2026/",
             "choices": [
               {
-                "id": "visible-ticket-CLE",
-                "label": "Cleveland",
-                "yesAsk": 65.0,
+                "id": "79ec0404-1ec9-4bd0-bc5c-621931912b49",
+                "label": "Tie",
+                "yesAsk": 8.0,
                 "noAsk": null,
+                "owner": "tie",
+                "displayPrice": null
+              },
+              {
+                "id": "ca694c8e-3467-419e-9598-7359ff9b43d5",
+                "label": "Memphis",
+                "yesAsk": 54.0,
+                "noAsk": 76.0,
+                "owner": "MEM",
+                "displayPrice": null
+              },
+              {
+                "id": "89e05971-6b59-4647-93ea-cccf59d0f389",
+                "label": "Cleveland",
+                "yesAsk": 63.0,
+                "noAsk": 60.0,
                 "owner": "CLE",
                 "displayPrice": null
               }
             ],
             "reason": null,
             "hiddenCount": 0,
-            "expectedMinChoices": 1,
+            "expectedMinChoices": 3,
             "completeness": "unverified"
           },
           "spread": {
@@ -598,7 +658,7 @@
                 "id": "display-CLE",
                 "owner": "CLE",
                 "label": "Cleveland",
-                "displayPrice": 68.0,
+                "displayPrice": 56.0,
                 "yesAsk": 56.0,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)",
@@ -666,7 +726,7 @@
               {
                 "id": "visible-ticket-CLE",
                 "label": "Cleveland",
-                "yesAsk": 58.0,
+                "yesAsk": 55.0,
                 "noAsk": null,
                 "owner": "CLE",
                 "displayPrice": null
@@ -749,17 +809,33 @@
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/memphis-vs-cleveland-3rd-quarter-winner-nov-18-2026/",
             "choices": [
               {
-                "id": "visible-ticket-CLE",
+                "id": "432be482-465f-45b7-8b85-9c1efe66567f",
+                "label": "Tie",
+                "yesAsk": 8.0,
+                "noAsk": 98.0,
+                "owner": "tie",
+                "displayPrice": null
+              },
+              {
+                "id": "a626f963-6f7c-4f52-b9a8-23e202c6acd4",
                 "label": "Cleveland",
-                "yesAsk": 58.0,
-                "noAsk": null,
+                "yesAsk": 56.0,
+                "noAsk": 50.0,
                 "owner": "CLE",
+                "displayPrice": null
+              },
+              {
+                "id": "271c908e-ce7a-4229-b20e-e3f89717b1c1",
+                "label": "Memphis",
+                "yesAsk": 45.0,
+                "noAsk": 61.0,
+                "owner": "MEM",
                 "displayPrice": null
               }
             ],
             "reason": null,
             "hiddenCount": 0,
-            "expectedMinChoices": 1,
+            "expectedMinChoices": 3,
             "completeness": "unverified"
           },
           "spread": {
@@ -790,7 +866,7 @@
               {
                 "id": "visible-ticket-CLE",
                 "label": "Cleveland",
-                "yesAsk": 66.0,
+                "yesAsk": 57.0,
                 "noAsk": null,
                 "owner": "CLE",
                 "displayPrice": null
@@ -835,8 +911,8 @@
                 "id": "display-MIA",
                 "owner": "MIA",
                 "label": "Miami",
-                "displayPrice": 73.0,
-                "yesAsk": 72.0,
+                "displayPrice": 74.0,
+                "yesAsk": 74.0,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)",
                 "askVerifiedFrom": "ticket"
@@ -869,6 +945,24 @@
                 "priceSource": "RH public event selection (indicative)"
               },
               {
+                "id": "display-spread-MIA-8p5",
+                "owner": "MIA",
+                "label": "Miami wins by over 8.5 points",
+                "displayPrice": 61.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-MIA-6p5",
+                "owner": "MIA",
+                "label": "Miami wins by over 6.5 points",
+                "displayPrice": 55.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
                 "id": "display-spread-MIA-20p5",
                 "owner": "MIA",
                 "label": "Miami wins by over 20.5 points",
@@ -876,11 +970,20 @@
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-MIA-2p5",
+                "owner": "MIA",
+                "label": "Miami wins by over 2.5 points",
+                "displayPrice": 69.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
               }
             ],
             "reason": null,
             "hiddenCount": 0,
-            "expectedMinChoices": 2,
+            "expectedMinChoices": 5,
             "completeness": "expanded",
             "expandedWithBrowser": true,
             "stillCollapsed": false
@@ -915,7 +1018,7 @@
                 "owner": "MIA",
                 "label": "Miami",
                 "displayPrice": 77.0,
-                "yesAsk": 76.0,
+                "yesAsk": 74.0,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)",
                 "askVerifiedFrom": "ticket"
@@ -955,16 +1058,34 @@
                 "id": "display-MIA",
                 "owner": "MIA",
                 "label": "Miami",
-                "displayPrice": 67.0,
-                "yesAsk": 66.0,
+                "displayPrice": 66.0,
+                "yesAsk": 67.0,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)",
                 "askVerifiedFrom": "ticket"
+              },
+              {
+                "id": "display-MIL",
+                "owner": "MIL",
+                "label": "Milwaukee",
+                "displayPrice": 30.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-tie",
+                "owner": "tie",
+                "label": "Tie",
+                "displayPrice": 6.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
               }
             ],
             "reason": null,
             "hiddenCount": 0,
-            "expectedMinChoices": 1,
+            "expectedMinChoices": 3,
             "completeness": "unverified"
           },
           "spread": {
@@ -974,7 +1095,25 @@
                 "id": "display-spread-MIA-1p5",
                 "owner": "MIA",
                 "label": "Miami wins by over 1.5 points",
-                "displayPrice": 64.0,
+                "displayPrice": 65.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-MIA-3p5",
+                "owner": "MIA",
+                "label": "Miami wins by over 3.5 points",
+                "displayPrice": 56.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-MIA-5p5",
+                "owner": "MIA",
+                "label": "Miami wins by over 5.5 points",
+                "displayPrice": 46.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -993,6 +1132,15 @@
                 "owner": "MIL",
                 "label": "Milwaukee wins by over 2.5 points",
                 "displayPrice": 25.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-MIA-11p5",
+                "owner": "MIA",
+                "label": "Miami wins by over 11.5 points",
+                "displayPrice": 22.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -1027,7 +1175,7 @@
             ],
             "reason": null,
             "hiddenCount": 0,
-            "expectedMinChoices": 6,
+            "expectedMinChoices": 9,
             "completeness": "expanded",
             "expandedWithBrowser": true,
             "stillCollapsed": false
@@ -1035,7 +1183,7 @@
           "total": {
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/milwaukee-vs-miami-1st-quarter-total-nov-18-2026/",
             "choices": [],
-            "reason": "Ambiguous embedded event contract groups",
+            "reason": "No contract selections or explicit asks found in HTML/Next.js",
             "hiddenCount": 0,
             "expectedMinChoices": 0,
             "completeness": "expanded",
@@ -1051,7 +1199,7 @@
                 "id": "display-MIA",
                 "owner": "MIA",
                 "label": "Miami",
-                "displayPrice": 64.0,
+                "displayPrice": 62.0,
                 "yesAsk": 63.0,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)",
@@ -1064,9 +1212,14 @@
             "completeness": "unverified"
           },
           "spread": {
-            "url": null,
+            "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/milwaukee-vs-miami-2nd-quarter-spread-nov-18-2026/",
             "choices": [],
-            "reason": "HTTP Error 404: Not Found"
+            "reason": "Ambiguous embedded event contract groups",
+            "hiddenCount": 0,
+            "expectedMinChoices": 0,
+            "completeness": "expanded",
+            "expandedWithBrowser": true,
+            "stillCollapsed": false
           },
           "total": {
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/milwaukee-vs-miami-2nd-quarter-total-nov-18-2026/",
@@ -1088,7 +1241,7 @@
                 "owner": "MIA",
                 "label": "Miami",
                 "displayPrice": 64.0,
-                "yesAsk": 64.0,
+                "yesAsk": 65.0,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)",
                 "askVerifiedFrom": "ticket"
@@ -1129,7 +1282,7 @@
                 "owner": "MIA",
                 "label": "Miami",
                 "displayPrice": 71.0,
-                "yesAsk": 65.0,
+                "yesAsk": 63.0,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)",
                 "askVerifiedFrom": "ticket"
@@ -1184,8 +1337,8 @@
                 "id": "display-PHI",
                 "owner": "PHI",
                 "label": "Philadelphia",
-                "displayPrice": 52.0,
-                "yesAsk": 52.0,
+                "displayPrice": 53.0,
+                "yesAsk": 53.0,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)",
                 "askVerifiedFrom": "ticket"
@@ -1221,7 +1374,25 @@
                 "id": "display-spread-PHI-1p5",
                 "owner": "PHI",
                 "label": "Philadelphia wins by over 1.5 points",
-                "displayPrice": 49.0,
+                "displayPrice": 48.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-ORL-1p5",
+                "owner": "ORL",
+                "label": "Orlando wins by over 1.5 points",
+                "displayPrice": 45.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-ORL-4p5",
+                "owner": "ORL",
+                "label": "Orlando wins by over 4.5 points",
+                "displayPrice": 37.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -1272,6 +1443,15 @@
                 "priceSource": "RH public event selection (indicative)"
               },
               {
+                "id": "display-spread-ORL-14p5",
+                "owner": "ORL",
+                "label": "Orlando wins by over 14.5 points",
+                "displayPrice": 7.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
                 "id": "display-spread-PHI-19p5",
                 "owner": "PHI",
                 "label": "Philadelphia wins by over 19.5 points",
@@ -1283,7 +1463,7 @@
             ],
             "reason": null,
             "hiddenCount": 0,
-            "expectedMinChoices": 7,
+            "expectedMinChoices": 10,
             "completeness": "expanded",
             "expandedWithBrowser": true,
             "stillCollapsed": false
@@ -1291,6 +1471,15 @@
           "total": {
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/philadelphia-vs-orlando-1st-half-total-nov-18-2026/",
             "choices": [
+              {
+                "id": "display-total-over-114p5",
+                "owner": "over",
+                "label": "Over 114.5 points",
+                "displayPrice": 47.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
               {
                 "id": "display-total-over-118p5",
                 "owner": "over",
@@ -1303,7 +1492,7 @@
             ],
             "reason": null,
             "hiddenCount": 0,
-            "expectedMinChoices": 1,
+            "expectedMinChoices": 2,
             "completeness": "expanded",
             "expandedWithBrowser": true,
             "stillCollapsed": false
@@ -1316,7 +1505,7 @@
               {
                 "id": "visible-ticket-ORL",
                 "label": "Orlando",
-                "yesAsk": 57.0,
+                "yesAsk": 55.0,
                 "noAsk": null,
                 "owner": "ORL",
                 "displayPrice": null
@@ -1356,30 +1545,46 @@
                 "id": "display-PHI",
                 "owner": "PHI",
                 "label": "Philadelphia",
-                "displayPrice": 48.0,
+                "displayPrice": 49.0,
                 "yesAsk": 49.0,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)",
-                "askVerifiedFrom": "ticket"
+                "noAsk": 54.0,
+                "priceSource": "RH public event selection (indicative)"
               },
               {
                 "id": "display-ORL",
                 "owner": "ORL",
                 "label": "Orlando",
                 "displayPrice": 46.0,
-                "yesAsk": null,
-                "noAsk": null,
+                "yesAsk": 46.0,
+                "noAsk": 58.0,
                 "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "9d5e5a23-5052-4edd-a47d-a62b44266e39",
+                "label": "Tie",
+                "yesAsk": 7.0,
+                "noAsk": 98.0,
+                "owner": "tie",
+                "displayPrice": null
               }
             ],
             "reason": null,
             "hiddenCount": 0,
-            "expectedMinChoices": 2,
+            "expectedMinChoices": 3,
             "completeness": "unverified"
           },
           "spread": {
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/philadelphia-vs-orlando-1st-quarter-spread-nov-18-2026/",
             "choices": [
+              {
+                "id": "display-spread-PHI-1p5",
+                "owner": "PHI",
+                "label": "Philadelphia wins by over 1.5 points",
+                "displayPrice": 46.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
               {
                 "id": "display-spread-ORL-6p5",
                 "owner": "ORL",
@@ -1410,7 +1615,7 @@
             ],
             "reason": null,
             "hiddenCount": 0,
-            "expectedMinChoices": 3,
+            "expectedMinChoices": 4,
             "completeness": "expanded",
             "expandedWithBrowser": true,
             "stillCollapsed": false
@@ -1426,11 +1631,29 @@
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-total-over-61p5",
+                "owner": "over",
+                "label": "Over 61.5 points",
+                "displayPrice": 37.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-total-over-63p5",
+                "owner": "over",
+                "label": "Over 63.5 points",
+                "displayPrice": 24.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
               }
             ],
             "reason": null,
             "hiddenCount": 0,
-            "expectedMinChoices": 1,
+            "expectedMinChoices": 3,
             "completeness": "expanded",
             "expandedWithBrowser": true,
             "stillCollapsed": false
@@ -1459,6 +1682,15 @@
           "spread": {
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/philadelphia-vs-orlando-2nd-quarter-spread-nov-18-2026/",
             "choices": [
+              {
+                "id": "display-spread-PHI-1p5",
+                "owner": "PHI",
+                "label": "Philadelphia wins by over 1.5 points",
+                "displayPrice": 46.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
               {
                 "id": "display-spread-PHI-9p5",
                 "owner": "PHI",
@@ -1498,7 +1730,7 @@
             ],
             "reason": null,
             "hiddenCount": 0,
-            "expectedMinChoices": 4,
+            "expectedMinChoices": 5,
             "completeness": "expanded",
             "expandedWithBrowser": true,
             "stillCollapsed": false
@@ -1524,24 +1756,39 @@
                 "label": "Philadelphia",
                 "displayPrice": 52.0,
                 "yesAsk": 51.0,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)",
-                "askVerifiedFrom": "ticket"
+                "noAsk": 54.0,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "2472ebbc-6610-48a8-af52-c6264edd154d",
+                "label": "Orlando",
+                "yesAsk": 49.0,
+                "noAsk": 58.0,
+                "owner": "ORL",
+                "displayPrice": null
+              },
+              {
+                "id": "53217bb5-e6a4-44e8-8c79-aa0de43a1bcc",
+                "label": "Tie",
+                "yesAsk": 8.0,
+                "noAsk": 98.0,
+                "owner": "tie",
+                "displayPrice": null
               }
             ],
             "reason": null,
             "hiddenCount": 0,
-            "expectedMinChoices": 1,
+            "expectedMinChoices": 3,
             "completeness": "unverified"
           },
           "spread": {
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/philadelphia-vs-orlando-3rd-quarter-spread-nov-18-2026/",
             "choices": [
               {
-                "id": "display-spread-PHI-9p5",
+                "id": "display-spread-PHI-1p5",
                 "owner": "PHI",
-                "label": "Philadelphia wins by over 9.5 points",
-                "displayPrice": 16.0,
+                "label": "Philadelphia wins by over 1.5 points",
+                "displayPrice": 48.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -1551,6 +1798,15 @@
                 "owner": "ORL",
                 "label": "Orlando wins by over 8.5 points",
                 "displayPrice": 15.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-PHI-9p5",
+                "owner": "PHI",
+                "label": "Philadelphia wins by over 9.5 points",
+                "displayPrice": 14.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -1576,7 +1832,7 @@
             ],
             "reason": null,
             "hiddenCount": 0,
-            "expectedMinChoices": 4,
+            "expectedMinChoices": 5,
             "completeness": "expanded",
             "expandedWithBrowser": true,
             "stillCollapsed": false
@@ -1599,7 +1855,7 @@
               {
                 "id": "visible-ticket-ORL",
                 "label": "Orlando",
-                "yesAsk": 63.0,
+                "yesAsk": 53.0,
                 "noAsk": null,
                 "owner": "ORL",
                 "displayPrice": null
@@ -1613,6 +1869,15 @@
           "spread": {
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/philadelphia-vs-orlando-4th-quarter-spread-nov-18-2026/",
             "choices": [
+              {
+                "id": "display-spread-PHI-1p5",
+                "owner": "PHI",
+                "label": "Philadelphia wins by over 1.5 points",
+                "displayPrice": 49.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
               {
                 "id": "display-spread-ORL-10p5",
                 "owner": "ORL",
@@ -1643,7 +1908,7 @@
             ],
             "reason": null,
             "hiddenCount": 0,
-            "expectedMinChoices": 3,
+            "expectedMinChoices": 4,
             "completeness": "expanded",
             "expandedWithBrowser": true,
             "stillCollapsed": false
@@ -1669,12 +1934,14 @@
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/chicago-vs-brooklyn-1st-half-winner-nov-18-2026/",
             "choices": [
               {
-                "id": "visible-ticket-BKN",
-                "label": "Brooklyn",
-                "yesAsk": 53.0,
+                "id": "display-CHI",
+                "owner": "CHI",
+                "label": "Chicago",
+                "displayPrice": 45.0,
+                "yesAsk": 44.0,
                 "noAsk": null,
-                "owner": "BKN",
-                "displayPrice": null
+                "priceSource": "RH public event selection (indicative)",
+                "askVerifiedFrom": "ticket"
               }
             ],
             "reason": null,
@@ -1729,7 +1996,7 @@
               {
                 "id": "visible-ticket-BKN",
                 "label": "Brooklyn",
-                "yesAsk": 63.0,
+                "yesAsk": 62.0,
                 "noAsk": null,
                 "owner": "BKN",
                 "displayPrice": null
@@ -1743,7 +2010,7 @@
           "spread": {
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/chicago-vs-brooklyn-2nd-half-spread-nov-18-2026/",
             "choices": [],
-            "reason": "Ambiguous embedded event contract groups",
+            "reason": "No contract selections or explicit asks found in HTML/Next.js",
             "hiddenCount": 0,
             "expectedMinChoices": 0,
             "completeness": "expanded",
@@ -1857,10 +2124,20 @@
           },
           "total": {
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/chicago-vs-brooklyn-1st-quarter-total-nov-18-2026/",
-            "choices": [],
-            "reason": "Ambiguous embedded event contract groups",
+            "choices": [
+              {
+                "id": "display-total-over-58p5",
+                "owner": "over",
+                "label": "Over 58.5 points",
+                "displayPrice": 48.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              }
+            ],
+            "reason": null,
             "hiddenCount": 0,
-            "expectedMinChoices": 0,
+            "expectedMinChoices": 1,
             "completeness": "expanded",
             "expandedWithBrowser": true,
             "stillCollapsed": false
@@ -1871,17 +2148,34 @@
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/chicago-vs-brooklyn-2nd-quarter-winner-nov-18-2026/",
             "choices": [
               {
-                "id": "visible-ticket-BKN",
+                "id": "display-CHI",
+                "owner": "CHI",
+                "label": "Chicago",
+                "displayPrice": 48.0,
+                "yesAsk": 48.0,
+                "noAsk": 58.0,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "e5b53b15-4ab4-4717-8bd8-9eda9b4ddcdb",
                 "label": "Brooklyn",
-                "yesAsk": 53.0,
-                "noAsk": null,
+                "yesAsk": 52.0,
+                "noAsk": 54.0,
                 "owner": "BKN",
+                "displayPrice": null
+              },
+              {
+                "id": "2a61152c-63d0-42dd-8666-59c900280fc2",
+                "label": "Tie",
+                "yesAsk": 8.0,
+                "noAsk": 98.0,
+                "owner": "tie",
                 "displayPrice": null
               }
             ],
             "reason": null,
             "hiddenCount": 0,
-            "expectedMinChoices": 1,
+            "expectedMinChoices": 3,
             "completeness": "unverified"
           },
           "spread": {
@@ -1941,7 +2235,7 @@
               {
                 "id": "visible-ticket-BKN",
                 "label": "Brooklyn",
-                "yesAsk": 53.0,
+                "yesAsk": 52.0,
                 "noAsk": null,
                 "owner": "BKN",
                 "displayPrice": null
@@ -1997,17 +2291,33 @@
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/chicago-vs-brooklyn-4th-quarter-winner-nov-18-2026/",
             "choices": [
               {
-                "id": "visible-ticket-BKN",
+                "id": "12e8003f-a978-4743-aa12-7f750ef3b0e5",
+                "label": "Tie",
+                "yesAsk": 8.0,
+                "noAsk": 98.0,
+                "owner": "tie",
+                "displayPrice": null
+              },
+              {
+                "id": "76513cb0-1a40-4190-b3d3-fe2f2f76e543",
+                "label": "Chicago",
+                "yesAsk": 51.0,
+                "noAsk": 67.0,
+                "owner": "CHI",
+                "displayPrice": null
+              },
+              {
+                "id": "462bc1cb-3717-41f9-9da5-5201bf510aab",
                 "label": "Brooklyn",
-                "yesAsk": 66.0,
-                "noAsk": null,
+                "yesAsk": 55.0,
+                "noAsk": 64.0,
                 "owner": "BKN",
                 "displayPrice": null
               }
             ],
             "reason": null,
             "hiddenCount": 0,
-            "expectedMinChoices": 1,
+            "expectedMinChoices": 3,
             "completeness": "unverified"
           },
           "spread": {
@@ -2101,19 +2411,28 @@
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/washington-vs-toronto-1st-quarter-winner-nov-18-2026/",
             "choices": [
               {
+                "id": "display-TOR",
+                "owner": "TOR",
+                "label": "Toronto",
+                "displayPrice": 58.0,
+                "yesAsk": 58.0,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)",
+                "askVerifiedFrom": "ticket"
+              },
+              {
                 "id": "display-WAS",
                 "owner": "WAS",
                 "label": "Washington",
                 "displayPrice": 50.0,
-                "yesAsk": 39.0,
+                "yesAsk": null,
                 "noAsk": null,
-                "priceSource": "RH public event selection (indicative)",
-                "askVerifiedFrom": "ticket"
+                "priceSource": "RH public event selection (indicative)"
               }
             ],
             "reason": null,
             "hiddenCount": 0,
-            "expectedMinChoices": 1,
+            "expectedMinChoices": 2,
             "completeness": "unverified"
           },
           "spread": {
@@ -2156,10 +2475,20 @@
           },
           "total": {
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/washington-vs-toronto-1st-quarter-total-nov-18-2026/",
-            "choices": [],
-            "reason": "Ambiguous embedded event contract groups",
+            "choices": [
+              {
+                "id": "display-total-over-67p5",
+                "owner": "over",
+                "label": "Over 67.5 points",
+                "displayPrice": 15.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              }
+            ],
+            "reason": null,
             "hiddenCount": 0,
-            "expectedMinChoices": 0,
+            "expectedMinChoices": 1,
             "completeness": "expanded",
             "expandedWithBrowser": true,
             "stillCollapsed": false
@@ -2187,7 +2516,7 @@
           "total": {
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/washington-vs-toronto-2nd-quarter-total-nov-18-2026/",
             "choices": [],
-            "reason": "Ambiguous embedded event contract groups",
+            "reason": "No contract selections or explicit asks found in HTML/Next.js",
             "hiddenCount": 0,
             "expectedMinChoices": 0,
             "completeness": "expanded",
@@ -2267,7 +2596,7 @@
               {
                 "id": "visible-ticket-ATL",
                 "label": "Atlanta",
-                "yesAsk": 36.0,
+                "yesAsk": 39.0,
                 "noAsk": null,
                 "owner": "ATL",
                 "displayPrice": null
@@ -2433,7 +2762,7 @@
               {
                 "id": "visible-ticket-ATL",
                 "label": "Atlanta",
-                "yesAsk": 46.0,
+                "yesAsk": 45.0,
                 "noAsk": null,
                 "owner": "ATL",
                 "displayPrice": null
@@ -2496,6 +2825,24 @@
                 "priceSource": "RH public event selection (indicative)"
               },
               {
+                "id": "display-spread-OKC-4p5",
+                "owner": "OKC",
+                "label": "Oklahoma City wins by over 4.5 points",
+                "displayPrice": 39.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-OKC-6p5",
+                "owner": "OKC",
+                "label": "Oklahoma City wins by over 6.5 points",
+                "displayPrice": 30.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
                 "id": "display-spread-OKC-8p5",
                 "owner": "OKC",
                 "label": "Oklahoma City wins by over 8.5 points",
@@ -2534,7 +2881,7 @@
             ],
             "reason": null,
             "hiddenCount": 0,
-            "expectedMinChoices": 5,
+            "expectedMinChoices": 7,
             "completeness": "expanded",
             "expandedWithBrowser": true,
             "stillCollapsed": false
@@ -2624,7 +2971,7 @@
               {
                 "id": "visible-ticket-ATL",
                 "label": "Atlanta",
-                "yesAsk": 42.0,
+                "yesAsk": 44.0,
                 "noAsk": null,
                 "owner": "ATL",
                 "displayPrice": null
@@ -2663,7 +3010,7 @@
               {
                 "id": "visible-ticket-ATL",
                 "label": "Atlanta",
-                "yesAsk": 58.0,
+                "yesAsk": 47.0,
                 "noAsk": null,
                 "owner": "ATL",
                 "displayPrice": null
@@ -2685,9 +3032,14 @@
             "stillCollapsed": false
           },
           "total": {
-            "url": null,
+            "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/atlanta-vs-oklahoma-city-4th-quarter-total-nov-18-2026/",
             "choices": [],
-            "reason": "HTTP Error 404: Not Found"
+            "reason": "Ambiguous embedded event contract groups",
+            "hiddenCount": 0,
+            "expectedMinChoices": 0,
+            "completeness": "expanded",
+            "expandedWithBrowser": true,
+            "stillCollapsed": false
           }
         }
       }
@@ -2704,7 +3056,7 @@
                 "owner": "DET",
                 "label": "Detroit",
                 "displayPrice": 62.0,
-                "yesAsk": 61.0,
+                "yesAsk": 62.0,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)",
                 "askVerifiedFrom": "ticket"
@@ -2857,7 +3209,7 @@
           "spread": {
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/detroit-vs-new-orleans-2nd-half-spread-nov-18-2026/",
             "choices": [],
-            "reason": "Ambiguous embedded event contract groups",
+            "reason": "No contract selections or explicit asks found in HTML/Next.js",
             "hiddenCount": 0,
             "expectedMinChoices": 0,
             "completeness": "expanded",
@@ -2880,17 +3232,34 @@
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/detroit-vs-new-orleans-1st-quarter-winner-nov-18-2026/",
             "choices": [
               {
-                "id": "visible-ticket-DET",
-                "label": "Detroit",
-                "yesAsk": 61.0,
-                "noAsk": null,
+                "id": "display-DET",
                 "owner": "DET",
+                "label": "Detroit",
+                "displayPrice": 61.0,
+                "yesAsk": 60.0,
+                "noAsk": 44.0,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "66fd1370-cd5e-49a9-b764-46e51a4da989",
+                "label": "New Orleans",
+                "yesAsk": 39.0,
+                "noAsk": 68.0,
+                "owner": "NOP",
+                "displayPrice": null
+              },
+              {
+                "id": "97d61d43-6cb4-47d8-94ed-d3af04a2a779",
+                "label": "Tie",
+                "yesAsk": 6.0,
+                "noAsk": 98.0,
+                "owner": "tie",
                 "displayPrice": null
               }
             ],
             "reason": null,
             "hiddenCount": 0,
-            "expectedMinChoices": 1,
+            "expectedMinChoices": 3,
             "completeness": "unverified"
           },
           "spread": {
@@ -2901,6 +3270,15 @@
                 "owner": "DET",
                 "label": "Detroit wins by over 2.5 points",
                 "displayPrice": 51.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-NOP-3p5",
+                "owner": "NOP",
+                "label": "New Orleans wins by over 3.5 points",
+                "displayPrice": 25.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -2935,17 +3313,27 @@
             ],
             "reason": null,
             "hiddenCount": 0,
-            "expectedMinChoices": 4,
+            "expectedMinChoices": 5,
             "completeness": "expanded",
             "expandedWithBrowser": true,
             "stillCollapsed": false
           },
           "total": {
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/detroit-vs-new-orleans-1st-quarter-total-nov-18-2026/",
-            "choices": [],
-            "reason": "Ambiguous embedded event contract groups",
+            "choices": [
+              {
+                "id": "display-total-over-67p5",
+                "owner": "over",
+                "label": "Over 67.5 points",
+                "displayPrice": 15.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              }
+            ],
+            "reason": null,
             "hiddenCount": 0,
-            "expectedMinChoices": 0,
+            "expectedMinChoices": 1,
             "completeness": "expanded",
             "expandedWithBrowser": true,
             "stillCollapsed": false
@@ -3036,7 +3424,7 @@
               {
                 "id": "visible-ticket-DET",
                 "label": "Detroit",
-                "yesAsk": 68.0,
+                "yesAsk": 60.0,
                 "noAsk": null,
                 "owner": "DET",
                 "displayPrice": null
@@ -3189,15 +3577,31 @@
                 "owner": "BOS",
                 "label": "Boston",
                 "displayPrice": 53.0,
-                "yesAsk": 53.0,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)",
-                "askVerifiedFrom": "ticket"
+                "yesAsk": 51.0,
+                "noAsk": 52.0,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-tie",
+                "owner": "tie",
+                "label": "Tie",
+                "displayPrice": 6.0,
+                "yesAsk": 6.0,
+                "noAsk": 97.0,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "1a599c5e-b535-4ee7-bee7-942b3745f152",
+                "label": "Denver",
+                "yesAsk": 46.0,
+                "noAsk": 58.0,
+                "owner": "DEN",
+                "displayPrice": null
               }
             ],
             "reason": null,
             "hiddenCount": 0,
-            "expectedMinChoices": 1,
+            "expectedMinChoices": 3,
             "completeness": "unverified"
           },
           "spread": {
@@ -3276,10 +3680,20 @@
           },
           "total": {
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/boston-vs-denver-1st-half-total-nov-18-2026/",
-            "choices": [],
+            "choices": [
+              {
+                "id": "display-total-over-113p5",
+                "owner": "over",
+                "label": "Over 113.5 points",
+                "displayPrice": 48.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              }
+            ],
             "reason": "Ambiguous embedded event contract groups",
             "hiddenCount": 0,
-            "expectedMinChoices": 0,
+            "expectedMinChoices": 1,
             "completeness": "expanded",
             "expandedWithBrowser": true,
             "stillCollapsed": false
@@ -3333,7 +3747,7 @@
                 "owner": "DEN",
                 "label": "Denver",
                 "displayPrice": 53.0,
-                "yesAsk": 47.0,
+                "yesAsk": 48.0,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)",
                 "askVerifiedFrom": "ticket"
@@ -3474,12 +3888,14 @@
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/boston-vs-denver-3rd-quarter-winner-nov-18-2026/",
             "choices": [
               {
-                "id": "visible-ticket-BOS",
+                "id": "display-BOS",
+                "owner": "BOS",
                 "label": "Boston",
+                "displayPrice": 53.0,
                 "yesAsk": 54.0,
                 "noAsk": null,
-                "owner": "BOS",
-                "displayPrice": null
+                "priceSource": "RH public event selection (indicative)",
+                "askVerifiedFrom": "ticket"
               }
             ],
             "reason": null,
@@ -3589,15 +4005,30 @@
                 "owner": "PHX",
                 "label": "Phoenix",
                 "displayPrice": 60.0,
-                "yesAsk": 60.0,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)",
-                "askVerifiedFrom": "ticket"
+                "yesAsk": 59.0,
+                "noAsk": 42.0,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "88e5ad4a-49f0-4781-990f-cc26ad2fcd3c",
+                "label": "Sacramento",
+                "yesAsk": 38.0,
+                "noAsk": 66.0,
+                "owner": "SAC",
+                "displayPrice": null
+              },
+              {
+                "id": "8e9a0635-7ed9-454d-9c21-32d51b7fa5d2",
+                "label": "Tie",
+                "yesAsk": 6.0,
+                "noAsk": 99.0,
+                "owner": "tie",
+                "displayPrice": null
               }
             ],
             "reason": null,
             "hiddenCount": 0,
-            "expectedMinChoices": 1,
+            "expectedMinChoices": 3,
             "completeness": "unverified"
           },
           "spread": {
@@ -3694,15 +4125,30 @@
                 "owner": "PHX",
                 "label": "Phoenix",
                 "displayPrice": 67.0,
-                "yesAsk": 66.0,
+                "yesAsk": 65.0,
+                "noAsk": 60.0,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "1cad532f-e4aa-45bc-9b02-d0d1b3a644c9",
+                "label": "Sacramento",
+                "yesAsk": 45.0,
+                "noAsk": 81.0,
+                "owner": "SAC",
+                "displayPrice": null
+              },
+              {
+                "id": "6c8cbee8-93e7-454c-890f-a78dab641890",
+                "label": "Tie",
+                "yesAsk": 13.0,
                 "noAsk": null,
-                "priceSource": "RH public event selection (indicative)",
-                "askVerifiedFrom": "ticket"
+                "owner": "tie",
+                "displayPrice": null
               }
             ],
             "reason": null,
             "hiddenCount": 0,
-            "expectedMinChoices": 1,
+            "expectedMinChoices": 3,
             "completeness": "unverified"
           },
           "spread": {
@@ -3762,7 +4208,7 @@
                 "id": "display-spread-SAC-4p5",
                 "owner": "SAC",
                 "label": "Sacramento wins by over 4.5 points",
-                "displayPrice": 24.0,
+                "displayPrice": 23.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -3822,15 +4268,30 @@
                 "owner": "PHX",
                 "label": "Phoenix",
                 "displayPrice": 57.0,
-                "yesAsk": 55.0,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)",
-                "askVerifiedFrom": "ticket"
+                "yesAsk": 57.0,
+                "noAsk": 49.0,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "524bbcd5-ea8f-4e9b-977f-a1357a9015e0",
+                "label": "Sacramento",
+                "yesAsk": 44.0,
+                "noAsk": 62.0,
+                "owner": "SAC",
+                "displayPrice": null
+              },
+              {
+                "id": "fd3209c5-5973-42e2-97d8-2577a884eb15",
+                "label": "Tie",
+                "yesAsk": 8.0,
+                "noAsk": 98.0,
+                "owner": "tie",
+                "displayPrice": null
               }
             ],
             "reason": null,
             "hiddenCount": 0,
-            "expectedMinChoices": 1,
+            "expectedMinChoices": 3,
             "completeness": "unverified"
           },
           "spread": {
@@ -3863,7 +4324,7 @@
                 "owner": "PHX",
                 "label": "Phoenix",
                 "displayPrice": 59.0,
-                "yesAsk": 59.0,
+                "yesAsk": 56.0,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)",
                 "askVerifiedFrom": "ticket"
@@ -3904,15 +4365,30 @@
                 "owner": "PHX",
                 "label": "Phoenix",
                 "displayPrice": 70.0,
-                "yesAsk": 67.0,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)",
-                "askVerifiedFrom": "ticket"
+                "yesAsk": 54.0,
+                "noAsk": 60.0,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "f378a2dc-a927-4c88-ae75-c0afaa2d362f",
+                "label": "Sacramento",
+                "yesAsk": 48.0,
+                "noAsk": 64.0,
+                "owner": "SAC",
+                "displayPrice": null
+              },
+              {
+                "id": "c2cfab3a-f2d1-4960-ad51-5271b8ecd055",
+                "label": "Tie",
+                "yesAsk": 8.0,
+                "noAsk": 98.0,
+                "owner": "tie",
+                "displayPrice": null
               }
             ],
             "reason": null,
             "hiddenCount": 0,
-            "expectedMinChoices": 1,
+            "expectedMinChoices": 3,
             "completeness": "unverified"
           },
           "spread": {
