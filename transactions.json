@@ -4154,8 +4154,8 @@
       "usDate": "2026-11-18",
       "bet": "MIA -4.5",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 25.0,
+      "status": "win",
       "profitIfWin": 5,
       "legs": [
         {
@@ -4166,7 +4166,11 @@
         }
       ],
       "beijingDate": "2026-11-19",
-      "note": "RH_FILLED_20261118_1613_MIA25 | RH 11/18 16:13 Filled 25/25 shares; $20本金，净赚+$5；热火对雄鹿让4.5。按未见王老板微信要求暂归小王。 | 2026-11-18微信核实更正：此笔实际为王老板订单；原归属小王为暂记错误。"
+      "note": "RH_FILLED_20261118_1613_MIA25 | RH 11/18 16:13 Filled 25/25 shares; $20本金，净赚+$5；热火对雄鹿让4.5。按未见王老板微信要求暂归小王。 | 2026-11-18微信核实更正：此笔实际为王老板订单；原归属小王为暂记错误。",
+      "legResults": [
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "id": 173,
@@ -4174,8 +4178,8 @@
       "usDate": "2026-11-18",
       "bet": "HOU",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 28.0,
+      "status": "win",
       "profitIfWin": 8,
       "legs": [
         {
@@ -4185,7 +4189,11 @@
         }
       ],
       "beijingDate": "2026-11-19",
-      "note": "RH_FILLED_20261118_1612_HOU28 | RH 11/18 16:12 Filled 28/28 shares; $20本金，净赚+$8；火箭对步行者独赢。按未见王老板微信要求暂归小王。 | 2026-11-18微信核实更正：此笔实际为王老板订单；原归属小王为暂记错误。"
+      "note": "RH_FILLED_20261118_1612_HOU28 | RH 11/18 16:12 Filled 28/28 shares; $20本金，净赚+$8；火箭对步行者独赢。按未见王老板微信要求暂归小王。 | 2026-11-18微信核实更正：此笔实际为王老板订单；原归属小王为暂记错误。",
+      "legResults": [
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "id": 174,
@@ -4193,8 +4201,8 @@
       "usDate": "2026-11-18",
       "bet": "CLE",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 0,
+      "status": "loss",
       "profitIfWin": 11,
       "legs": [
         {
@@ -4204,7 +4212,11 @@
         }
       ],
       "beijingDate": "2026-11-19",
-      "note": "RH_FILLED_20261118_1612_CLE31 | RH 11/18 16:12 Filled 31/31 shares; $20本金，净赚+$11；骑士对灰熊独赢。按未见王老板微信要求暂归小王。 | 2026-11-18微信核实更正：此笔实际为王老板订单；原归属小王为暂记错误。"
+      "note": "RH_FILLED_20261118_1612_CLE31 | RH 11/18 16:12 Filled 31/31 shares; $20本金，净赚+$11；骑士对灰熊独赢。按未见王老板微信要求暂归小王。 | 2026-11-18微信核实更正：此笔实际为王老板订单；原归属小王为暂记错误。",
+      "legResults": [
+        "loss"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "id": 175,
@@ -4212,8 +4224,8 @@
       "usDate": "2026-11-18",
       "bet": "MIA + HOU + TOR + DET + LAL + PHX",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 0,
+      "status": "loss",
       "profitIfWin": 107,
       "legs": [
         {
@@ -4248,7 +4260,16 @@
         }
       ],
       "beijingDate": "2026-11-19",
-      "note": "RH_FILLED_20261118_1502_6LEG127 | RH 11/18 15:02 Filled 127/127 shares; $20本金，全部命中返还$127、净赚+$107；六腿均为独赢。按未见王老板微信要求暂归小王。 | 2026-11-18微信核实更正：此笔实际为王老板订单；原归属小王为暂记错误。"
+      "note": "RH_FILLED_20261118_1502_6LEG127 | RH 11/18 15:02 Filled 127/127 shares; $20本金，全部命中返还$127、净赚+$107；六腿均为独赢。按未见王老板微信要求暂归小王。 | 2026-11-18微信核实更正：此笔实际为王老板订单；原归属小王为暂记错误。",
+      "legResults": [
+        "win",
+        "win",
+        "loss",
+        null,
+        null,
+        null
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "id": 176,
@@ -4256,8 +4277,8 @@
       "usDate": "2026-11-18",
       "bet": "DET -3.5 + HOU -4.5 + MIA -6.5 + PHX -5.5 + UTA +12.5 + TOR -8.5",
       "stake": 10,
-      "payout": null,
-      "status": "pending",
+      "payout": 0,
+      "status": "loss",
       "profitIfWin": 242,
       "legs": [
         {
@@ -4298,7 +4319,16 @@
         }
       ],
       "beijingDate": "2026-11-19",
-      "note": "RH_FILLED_20261118_1500_6LEG252 | RH 11/18 15:00 Filled 252/252 shares; $10本金，全部命中返还$252、净赚+$242；No LAL by 12.5 对应爵士+12.5。按未见王老板微信要求暂归小王。 | 2026-11-18微信核实更正：此笔实际为王老板订单；原归属小王为暂记错误。"
+      "note": "RH_FILLED_20261118_1500_6LEG252 | RH 11/18 15:00 Filled 252/252 shares; $10本金，全部命中返还$252、净赚+$242；No LAL by 12.5 对应爵士+12.5。按未见王老板微信要求暂归小王。 | 2026-11-18微信核实更正：此笔实际为王老板订单；原归属小王为暂记错误。",
+      "legResults": [
+        null,
+        "win",
+        "win",
+        null,
+        null,
+        "loss"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "id": 177,
@@ -4306,8 +4336,8 @@
       "usDate": "2026-11-18",
       "bet": "PHI -2.5",
       "stake": 10,
-      "payout": null,
-      "status": "pending",
+      "payout": 34.0,
+      "status": "win",
       "profitIfWin": 24,
       "legs": [
         {
@@ -4318,7 +4348,11 @@
         }
       ],
       "beijingDate": "2026-11-19",
-      "note": "RH_FILLED_20261118_1613_PHI_34 | 76人让2.5，RH Filled 34/34，本金$10，命中返还$34，净赚+$24；微信王老板76人让2.5买入，确认10-24。"
+      "note": "RH_FILLED_20261118_1613_PHI_34 | 76人让2.5，RH Filled 34/34，本金$10，命中返还$34，净赚+$24；微信王老板76人让2.5买入，确认10-24。",
+      "legResults": [
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "id": 178,
@@ -4326,8 +4360,8 @@
       "usDate": "2026-11-18",
       "bet": "CHI",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 41.0,
+      "status": "win",
       "profitIfWin": 21,
       "legs": [
         {
@@ -4337,7 +4371,11 @@
         }
       ],
       "beijingDate": "2026-11-19",
-      "note": "RH_FILLED_20261118_1614_CHI_41 | 公牛独赢对篮网，RH Filled 41/41，本金$20，命中返还$41，净赚+$21；微信王老板要求公牛胜篮网20刀，回报20-21。"
+      "note": "RH_FILLED_20261118_1614_CHI_41 | 公牛独赢对篮网，RH Filled 41/41，本金$20，命中返还$41，净赚+$21；微信王老板要求公牛胜篮网20刀，回报20-21。",
+      "legResults": [
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "id": 179,
@@ -4345,8 +4383,8 @@
       "usDate": "2026-11-18",
       "bet": "TOR",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 0,
+      "status": "loss",
       "profitIfWin": 11,
       "legs": [
         {
@@ -4356,7 +4394,11 @@
         }
       ],
       "beijingDate": "2026-11-19",
-      "note": "RH_FILLED_20261118_1614_TOR_31 | 猛龙独赢对奇才，RH Filled 31/31，本金$20，命中返还$31，净赚+$11；微信王老板要求猛龙胜20刀。"
+      "note": "RH_FILLED_20261118_1614_TOR_31 | 猛龙独赢对奇才，RH Filled 31/31，本金$20，命中返还$31，净赚+$11；微信王老板要求猛龙胜20刀。",
+      "legResults": [
+        "loss"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "id": 180,
@@ -4402,8 +4444,8 @@
       "usDate": "2026-11-18",
       "bet": "TOR + DAL -5.5",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 0,
+      "status": "loss",
       "profitIfWin": 42,
       "legs": [
         {
@@ -4419,7 +4461,12 @@
         }
       ],
       "beijingDate": "2026-11-19",
-      "note": "RH_FILLED_20261118_1617_TOR_DAL_62 | 猛龙独赢 + 独行侠让5.5分二串一；RH Filled 62/62，本金$20，命中返还$62，净赚+$42；微信王老板对应二串一20-42。"
+      "note": "RH_FILLED_20261118_1617_TOR_DAL_62 | 猛龙独赢 + 独行侠让5.5分二串一；RH Filled 62/62，本金$20，命中返还$62，净赚+$42；微信王老板对应二串一20-42。",
+      "legResults": [
+        "loss",
+        null
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "id": 183,
@@ -4427,8 +4474,8 @@
       "usDate": "2026-11-18",
       "bet": "HOU -3.5 + CLE -3.5 + MIA -2.5",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 0,
+      "status": "loss",
       "profitIfWin": 21,
       "legs": [
         {
@@ -4451,7 +4498,13 @@
         }
       ],
       "beijingDate": "2026-11-19",
-      "note": "RH_FILLED_20261118_1638_HOU_CLE_MIA_41 | RH Filled 41/41，本金$20，命中返还$41，净赚+$21；此三串一未见王老板对应微信指令，归小王本人。"
+      "note": "RH_FILLED_20261118_1638_HOU_CLE_MIA_41 | RH Filled 41/41，本金$20，命中返还$41，净赚+$21；此三串一未见王老板对应微信指令，归小王本人。",
+      "legResults": [
+        "win",
+        "loss",
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "id": 184,
