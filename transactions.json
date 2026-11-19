@@ -4125,8 +4125,8 @@
       "usDate": "2026-11-17",
       "bet": "LAL + LAL + MIA",
       "stake": 30,
-      "payout": null,
-      "status": "pending",
+      "payout": 0,
+      "status": "loss",
       "profitIfWin": 23,
       "legs": [
         {
@@ -4146,7 +4146,13 @@
         }
       ],
       "beijingDate": "2026-11-18",
-      "note": "RH_FILLED_20261116_2100_3LEG_53 | 小王本人独立三串一。RH 11/16 21:00 Filled 53/53 shares，Entered $30，Avg fill $0.547；全中返还 $53，净赚 +$23。三腿分别 UTA vs LAL（美国11/18，湖人独赢）、CHA vs LAL（美国11/17，湖人独赢）、MIL vs MIA（美国11/17，热火独赢）。按全部腿里最早开赛的北京时间归档11/18。"
+      "note": "RH_FILLED_20261116_2100_3LEG_53 | 小王本人独立三串一。RH 11/16 21:00 Filled 53/53 shares，Entered $30，Avg fill $0.547；全中返还 $53，净赚 +$23。三腿分别 UTA vs LAL（美国11/18，湖人独赢）、CHA vs LAL（美国11/17，湖人独赢）、MIL vs MIA（美国11/17，热火独赢）。按全部腿里最早开赛的北京时间归档11/18。",
+      "legResults": [
+        "loss",
+        "win",
+        null
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "id": 172,
@@ -4543,8 +4549,8 @@
       "usDate": "2026-11-18",
       "bet": "PHX",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 26.0,
+      "status": "win",
       "profitIfWin": 6,
       "legs": [
         {
@@ -4554,7 +4560,11 @@
         }
       ],
       "beijingDate": "2026-11-19",
-      "note": "RH_FILLED_20261118_1655_PHX_26 | RH 11/18 16:55 Filled 26/26, 太阳独赢（对国王），微信王老板要求太阳胜20刀、确认20-6。"
+      "note": "RH_FILLED_20261118_1655_PHX_26 | RH 11/18 16:55 Filled 26/26, 太阳独赢（对国王），微信王老板要求太阳胜20刀、确认20-6。",
+      "legResults": [
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "id": 186,
@@ -4562,8 +4572,8 @@
       "usDate": "2026-11-18",
       "bet": "LAL",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 0,
+      "status": "loss",
       "profitIfWin": 3,
       "legs": [
         {
@@ -4573,7 +4583,11 @@
         }
       ],
       "beijingDate": "2026-11-19",
-      "note": "RH_FILLED_20261118_1654_LAL_23 | RH 11/18 16:54 Filled 23/23, 湖人独赢（对爵士），微信王老板要求湖人胜20刀、确认20-3。"
+      "note": "RH_FILLED_20261118_1654_LAL_23 | RH 11/18 16:54 Filled 23/23, 湖人独赢（对爵士），微信王老板要求湖人胜20刀、确认20-3。",
+      "legResults": [
+        "loss"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "id": 187,
@@ -4581,8 +4595,8 @@
       "usDate": "2026-11-18",
       "bet": "BOS",
       "stake": 10,
-      "payout": null,
-      "status": "pending",
+      "payout": 0,
+      "status": "loss",
       "profitIfWin": 7,
       "legs": [
         {
@@ -4592,7 +4606,11 @@
         }
       ],
       "beijingDate": "2026-11-19",
-      "note": "RH_FILLED_20261118_1654_BOS_17 | RH 11/18 16:54 Filled 17/17, 凯尔特人独赢（对掘金），微信王老板要求凯尔特人胜10刀、确认10-7。"
+      "note": "RH_FILLED_20261118_1654_BOS_17 | RH 11/18 16:54 Filled 17/17, 凯尔特人独赢（对掘金），微信王老板要求凯尔特人胜10刀、确认10-7。",
+      "legResults": [
+        "loss"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     }
   ]
 }
