@@ -1,6 +1,6 @@
 {
   "date": "2026-11-18",
-  "capturedAt": "2026-11-19T05:29:16+00:00",
+  "capturedAt": "2026-11-19T07:47:32+00:00",
   "source": "RH public event pages; displayPrice is INDICATIVE, yesAsk/noAsk only when verified",
   "games": [
     {
@@ -18074,17 +18074,25 @@
                 "id": "display-DEN",
                 "owner": "DEN",
                 "label": "Denver",
-                "displayPrice": 67.0,
-                "yesAsk": 86.0,
+                "displayPrice": 99.0,
+                "yesAsk": null,
                 "noAsk": null,
-                "priceSource": "RH public event selection (indicative)",
-                "askVerifiedFrom": "ticket"
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-tie",
+                "owner": "tie",
+                "label": "Tie",
+                "displayPrice": 5.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
               },
               {
                 "id": "display-BOS",
                 "owner": "BOS",
                 "label": "Boston",
-                "displayPrice": 13.0,
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -18092,70 +18100,16 @@
             ],
             "reason": null,
             "hiddenCount": 0,
-            "expectedMinChoices": 2,
+            "expectedMinChoices": 3,
             "completeness": "unverified"
           },
           "spread": {
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/boston-vs-denver-2nd-half-spread-nov-18-2026/",
             "choices": [
               {
-                "id": "display-spread-DEN-1p5",
-                "owner": "DEN",
-                "label": "Denver wins by over 1.5 points",
-                "displayPrice": 99.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
-                "id": "display-spread-DEN-4p5",
-                "owner": "DEN",
-                "label": "Denver wins by over 4.5 points",
-                "displayPrice": 99.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
                 "id": "display-spread-DEN-8p5",
                 "owner": "DEN",
                 "label": "Denver wins by over 8.5 points",
-                "displayPrice": 99.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
-                "id": "display-spread-DEN-6p5",
-                "owner": "DEN",
-                "label": "Denver wins by over 6.5 points",
-                "displayPrice": 99.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
-                "id": "display-spread-DEN-12p5",
-                "owner": "DEN",
-                "label": "Denver wins by over 12.5 points",
-                "displayPrice": 99.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
-                "id": "display-spread-DEN-10p5",
-                "owner": "DEN",
-                "label": "Denver wins by over 10.5 points",
-                "displayPrice": 99.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
-                "id": "display-spread-DEN-14p5",
-                "owner": "DEN",
-                "label": "Denver wins by over 14.5 points",
                 "displayPrice": 99.0,
                 "yesAsk": null,
                 "noAsk": null,
@@ -18193,6 +18147,60 @@
                 "owner": "BOS",
                 "label": "Boston wins by over 15.5 points",
                 "displayPrice": 6.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-DEN-1p5",
+                "owner": "DEN",
+                "label": "Denver wins by over 1.5 points",
+                "displayPrice": 99.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-DEN-10p5",
+                "owner": "DEN",
+                "label": "Denver wins by over 10.5 points",
+                "displayPrice": 99.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-DEN-12p5",
+                "owner": "DEN",
+                "label": "Denver wins by over 12.5 points",
+                "displayPrice": 99.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-DEN-14p5",
+                "owner": "DEN",
+                "label": "Denver wins by over 14.5 points",
+                "displayPrice": 99.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-DEN-4p5",
+                "owner": "DEN",
+                "label": "Denver wins by over 4.5 points",
+                "displayPrice": 99.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-DEN-6p5",
+                "owner": "DEN",
+                "label": "Denver wins by over 6.5 points",
+                "displayPrice": 99.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
