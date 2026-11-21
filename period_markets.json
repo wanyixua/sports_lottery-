@@ -1,6 +1,6 @@
 {
   "date": "2026-11-20",
-  "capturedAt": "2026-11-21T03:58:18+00:00",
+  "capturedAt": "2026-11-21T06:41:10+00:00",
   "source": "RH public event pages; displayPrice is INDICATIVE, yesAsk/noAsk only when verified",
   "games": [
     {
@@ -1042,16 +1042,15 @@
                 "owner": "CLE",
                 "label": "Cleveland",
                 "displayPrice": 99.0,
-                "yesAsk": 99.0,
+                "yesAsk": null,
                 "noAsk": null,
-                "priceSource": "RH public event selection (indicative)",
-                "askVerifiedFrom": "ticket"
+                "priceSource": "RH public event selection (indicative)"
               },
               {
                 "id": "display-IND",
                 "owner": "IND",
                 "label": "Indiana",
-                "displayPrice": 1.0,
+                "displayPrice": 3.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -5141,16 +5140,33 @@
                 "id": "display-CHI",
                 "owner": "CHI",
                 "label": "Chicago",
-                "displayPrice": 51.0,
-                "yesAsk": 52.0,
+                "displayPrice": 99.0,
+                "yesAsk": null,
                 "noAsk": null,
-                "priceSource": "RH public event selection (indicative)",
-                "askVerifiedFrom": "ticket"
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-tie",
+                "owner": "tie",
+                "label": "Tie",
+                "displayPrice": 1.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-WAS",
+                "owner": "WAS",
+                "label": "Washington",
+                "displayPrice": 1.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
               }
             ],
             "reason": null,
             "hiddenCount": 0,
-            "expectedMinChoices": 1,
+            "expectedMinChoices": 3,
             "completeness": "unverified"
           },
           "spread": {
@@ -5421,17 +5437,16 @@
                 "id": "display-UTA",
                 "owner": "UTA",
                 "label": "Utah",
-                "displayPrice": 49.0,
-                "yesAsk": 50.0,
+                "displayPrice": 99.0,
+                "yesAsk": null,
                 "noAsk": null,
-                "priceSource": "RH public event selection (indicative)",
-                "askVerifiedFrom": "ticket"
+                "priceSource": "RH public event selection (indicative)"
               },
               {
                 "id": "display-PHX",
                 "owner": "PHX",
                 "label": "Phoenix",
-                "displayPrice": 48.0,
+                "displayPrice": 10.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -5440,7 +5455,7 @@
                 "id": "display-tie",
                 "owner": "tie",
                 "label": "Tie",
-                "displayPrice": 7.0,
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -5455,28 +5470,19 @@
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/phoenix-vs-utah-2nd-half-spread-nov-20-2026/",
             "choices": [
               {
-                "id": "display-spread-PHX-1p5",
-                "owner": "PHX",
-                "label": "Phoenix wins by over 1.5 points",
-                "displayPrice": 42.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
-                "id": "display-spread-PHX-3p5",
-                "owner": "PHX",
-                "label": "Phoenix wins by over 3.5 points",
-                "displayPrice": 41.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
                 "id": "display-spread-UTA-1p5",
                 "owner": "UTA",
                 "label": "Utah wins by over 1.5 points",
-                "displayPrice": 40.0,
+                "displayPrice": 93.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-PHX-11p5",
+                "owner": "PHX",
+                "label": "Phoenix wins by over 11.5 points",
+                "displayPrice": 14.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -5485,16 +5491,25 @@
                 "id": "display-spread-PHX-9p5",
                 "owner": "PHX",
                 "label": "Phoenix wins by over 9.5 points",
-                "displayPrice": 23.0,
+                "displayPrice": 11.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
               },
               {
-                "id": "display-spread-PHX-15p5",
-                "owner": "PHX",
-                "label": "Phoenix wins by over 15.5 points",
-                "displayPrice": 13.0,
+                "id": "display-spread-UTA-10p5",
+                "owner": "UTA",
+                "label": "Utah wins by over 10.5 points",
+                "displayPrice": 7.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-UTA-12p5",
+                "owner": "UTA",
+                "label": "Utah wins by over 12.5 points",
+                "displayPrice": 7.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -5509,46 +5524,46 @@
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/phoenix-vs-utah-2nd-half-total-nov-20-2026/",
             "choices": [
               {
-                "id": "display-total-over-104p5",
+                "id": "display-total-over-96p5",
                 "owner": "over",
-                "label": "Over 104.5 points",
-                "displayPrice": 69.0,
+                "label": "Over 96.5 points",
+                "displayPrice": 99.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
               },
               {
-                "id": "display-total-over-106p5",
+                "id": "display-total-over-98p5",
                 "owner": "over",
-                "label": "Over 106.5 points",
-                "displayPrice": 62.0,
+                "label": "Over 98.5 points",
+                "displayPrice": 99.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
               },
               {
-                "id": "display-total-over-108p5",
+                "id": "display-total-over-120p5",
                 "owner": "over",
-                "label": "Over 108.5 points",
-                "displayPrice": 49.0,
+                "label": "Over 120.5 points",
+                "displayPrice": 28.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
               },
               {
-                "id": "display-total-over-110p5",
+                "id": "display-total-over-118p5",
                 "owner": "over",
-                "label": "Over 110.5 points",
-                "displayPrice": 44.0,
+                "label": "Over 118.5 points",
+                "displayPrice": 20.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
               },
               {
-                "id": "display-total-over-114p5",
+                "id": "display-total-over-126p5",
                 "owner": "over",
-                "label": "Over 114.5 points",
-                "displayPrice": 36.0,
+                "label": "Over 126.5 points",
+                "displayPrice": 19.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -5860,17 +5875,7 @@
                 "id": "display-PHX",
                 "owner": "PHX",
                 "label": "Phoenix",
-                "displayPrice": 52.0,
-                "yesAsk": 50.0,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)",
-                "askVerifiedFrom": "ticket"
-              },
-              {
-                "id": "display-UTA",
-                "owner": "UTA",
-                "label": "Utah",
-                "displayPrice": 46.0,
+                "displayPrice": 99.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -5879,7 +5884,16 @@
                 "id": "display-tie",
                 "owner": "tie",
                 "label": "Tie",
-                "displayPrice": 6.0,
+                "displayPrice": 11.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-UTA",
+                "owner": "UTA",
+                "label": "Utah",
+                "displayPrice": 2.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -5894,10 +5908,28 @@
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/phoenix-vs-utah-3rd-quarter-spread-nov-20-2026/",
             "choices": [
               {
+                "id": "display-spread-PHX-13p5",
+                "owner": "PHX",
+                "label": "Phoenix wins by over 13.5 points",
+                "displayPrice": 3.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
                 "id": "display-spread-PHX-1p5",
                 "owner": "PHX",
                 "label": "Phoenix wins by over 1.5 points",
-                "displayPrice": 46.0,
+                "displayPrice": 1.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-PHX-11p5",
+                "owner": "PHX",
+                "label": "Phoenix wins by over 11.5 points",
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -5906,25 +5938,7 @@
                 "id": "display-spread-PHX-3p5",
                 "owner": "PHX",
                 "label": "Phoenix wins by over 3.5 points",
-                "displayPrice": 41.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
-                "id": "display-spread-UTA-2p5",
-                "owner": "UTA",
-                "label": "Utah wins by over 2.5 points",
-                "displayPrice": 37.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
-                "id": "display-spread-UTA-4p5",
-                "owner": "UTA",
-                "label": "Utah wins by over 4.5 points",
-                "displayPrice": 27.0,
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -5933,7 +5947,7 @@
                 "id": "display-spread-PHX-5p5",
                 "owner": "PHX",
                 "label": "Phoenix wins by over 5.5 points",
-                "displayPrice": 25.0,
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -5948,10 +5962,10 @@
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/phoenix-vs-utah-3rd-quarter-total-nov-20-2026/",
             "choices": [
               {
-                "id": "display-total-over-47p5",
+                "id": "display-total-over-51p5",
                 "owner": "over",
-                "label": "Over 47.5 points",
-                "displayPrice": 79.0,
+                "label": "Over 51.5 points",
+                "displayPrice": 99.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -5960,7 +5974,16 @@
                 "id": "display-total-over-53p5",
                 "owner": "over",
                 "label": "Over 53.5 points",
-                "displayPrice": 55.0,
+                "displayPrice": 99.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-total-over-47p5",
+                "owner": "over",
+                "label": "Over 47.5 points",
+                "displayPrice": 97.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -5969,7 +5992,7 @@
                 "id": "display-total-over-55p5",
                 "owner": "over",
                 "label": "Over 55.5 points",
-                "displayPrice": 52.0,
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -5978,7 +6001,7 @@
                 "id": "display-total-over-57p5",
                 "owner": "over",
                 "label": "Over 57.5 points",
-                "displayPrice": 41.0,
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -5986,7 +6009,7 @@
             ],
             "reason": null,
             "hiddenCount": 8,
-            "expectedMinChoices": 12,
+            "expectedMinChoices": 13,
             "completeness": "partial"
           }
         },
@@ -5998,17 +6021,25 @@
                 "id": "display-UTA",
                 "owner": "UTA",
                 "label": "Utah",
-                "displayPrice": 50.0,
-                "yesAsk": 50.0,
+                "displayPrice": 99.0,
+                "yesAsk": null,
                 "noAsk": null,
-                "priceSource": "RH public event selection (indicative)",
-                "askVerifiedFrom": "ticket"
+                "priceSource": "RH public event selection (indicative)"
               },
               {
                 "id": "display-PHX",
                 "owner": "PHX",
                 "label": "Phoenix",
-                "displayPrice": 46.0,
+                "displayPrice": 1.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-tie",
+                "owner": "tie",
+                "label": "Tie",
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -6016,26 +6047,35 @@
             ],
             "reason": null,
             "hiddenCount": 0,
-            "expectedMinChoices": 2,
+            "expectedMinChoices": 3,
             "completeness": "unverified"
           },
           "spread": {
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/phoenix-vs-utah-4th-quarter-spread-nov-20-2026/",
             "choices": [
               {
-                "id": "display-spread-UTA-2p5",
+                "id": "display-spread-UTA-1p5",
                 "owner": "UTA",
-                "label": "Utah wins by over 2.5 points",
-                "displayPrice": 44.0,
+                "label": "Utah wins by over 1.5 points",
+                "displayPrice": 99.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
               },
               {
-                "id": "display-spread-UTA-1p5",
+                "id": "display-spread-UTA-2p5",
                 "owner": "UTA",
-                "label": "Utah wins by over 1.5 points",
-                "displayPrice": 43.0,
+                "label": "Utah wins by over 2.5 points",
+                "displayPrice": 99.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-UTA-6p5",
+                "owner": "UTA",
+                "label": "Utah wins by over 6.5 points",
+                "displayPrice": 8.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -6044,25 +6084,16 @@
                 "id": "display-spread-PHX-1p5",
                 "owner": "PHX",
                 "label": "Phoenix wins by over 1.5 points",
-                "displayPrice": 41.0,
+                "displayPrice": 3.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
               },
               {
-                "id": "display-spread-UTA-4p5",
-                "owner": "UTA",
-                "label": "Utah wins by over 4.5 points",
-                "displayPrice": 35.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
-                "id": "display-spread-PHX-3p5",
+                "id": "display-spread-PHX-11p5",
                 "owner": "PHX",
-                "label": "Phoenix wins by over 3.5 points",
-                "displayPrice": 29.0,
+                "label": "Phoenix wins by over 11.5 points",
+                "displayPrice": 3.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -6077,46 +6108,46 @@
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/phoenix-vs-utah-4th-quarter-total-nov-20-2026/",
             "choices": [
               {
+                "id": "display-total-over-41p5",
+                "owner": "over",
+                "label": "Over 41.5 points",
+                "displayPrice": 99.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-total-over-43p5",
+                "owner": "over",
+                "label": "Over 43.5 points",
+                "displayPrice": 99.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-total-over-45p5",
+                "owner": "over",
+                "label": "Over 45.5 points",
+                "displayPrice": 99.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-total-over-47p5",
+                "owner": "over",
+                "label": "Over 47.5 points",
+                "displayPrice": 1.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
                 "id": "display-total-over-49p5",
                 "owner": "over",
                 "label": "Over 49.5 points",
-                "displayPrice": 71.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
-                "id": "display-total-over-51p5",
-                "owner": "over",
-                "label": "Over 51.5 points",
-                "displayPrice": 57.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
-                "id": "display-total-over-53p5",
-                "owner": "over",
-                "label": "Over 53.5 points",
-                "displayPrice": 47.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
-                "id": "display-total-over-55p5",
-                "owner": "over",
-                "label": "Over 55.5 points",
-                "displayPrice": 43.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
-                "id": "display-total-over-61p5",
-                "owner": "over",
-                "label": "Over 61.5 points",
-                "displayPrice": 16.0,
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -6141,17 +6172,16 @@
                 "id": "display-DEN",
                 "owner": "DEN",
                 "label": "Denver",
-                "displayPrice": 61.0,
-                "yesAsk": 63.0,
+                "displayPrice": 99.0,
+                "yesAsk": null,
                 "noAsk": null,
-                "priceSource": "RH public event selection (indicative)",
-                "askVerifiedFrom": "ticket"
+                "priceSource": "RH public event selection (indicative)"
               },
               {
                 "id": "display-HOU",
                 "owner": "HOU",
                 "label": "Houston",
-                "displayPrice": 32.0,
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -6160,7 +6190,7 @@
                 "id": "display-tie",
                 "owner": "tie",
                 "label": "Tie",
-                "displayPrice": 7.0,
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -6178,43 +6208,43 @@
                 "id": "display-spread-DEN-1p5",
                 "owner": "DEN",
                 "label": "Denver wins by over 1.5 points",
-                "displayPrice": 57.0,
+                "displayPrice": 99.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
               },
               {
-                "id": "display-spread-DEN-3p5",
+                "id": "display-spread-DEN-11p5",
                 "owner": "DEN",
-                "label": "Denver wins by over 3.5 points",
-                "displayPrice": 45.0,
+                "label": "Denver wins by over 11.5 points",
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
               },
               {
-                "id": "display-spread-HOU-1p5",
-                "owner": "HOU",
-                "label": "Houston wins by over 1.5 points",
-                "displayPrice": 24.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
-                "id": "display-spread-HOU-10p5",
-                "owner": "HOU",
-                "label": "Houston wins by over 10.5 points",
-                "displayPrice": 22.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
-                "id": "display-spread-DEN-7p5",
+                "id": "display-spread-DEN-13p5",
                 "owner": "DEN",
-                "label": "Denver wins by over 7.5 points",
-                "displayPrice": 21.0,
+                "label": "Denver wins by over 13.5 points",
+                "displayPrice": 1.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-DEN-15p5",
+                "owner": "DEN",
+                "label": "Denver wins by over 15.5 points",
+                "displayPrice": 1.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-DEN-17p5",
+                "owner": "DEN",
+                "label": "Denver wins by over 17.5 points",
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -6229,19 +6259,28 @@
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/houston-vs-denver-1st-half-total-nov-20-2026/",
             "choices": [
               {
-                "id": "display-total-over-119p5",
+                "id": "display-total-over-95p5",
                 "owner": "over",
-                "label": "Over 119.5 points",
-                "displayPrice": 88.0,
+                "label": "Over 95.5 points",
+                "displayPrice": 99.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
               },
               {
-                "id": "display-total-over-121p5",
+                "id": "display-total-over-99p5",
                 "owner": "over",
-                "label": "Over 121.5 points",
-                "displayPrice": 78.0,
+                "label": "Over 99.5 points",
+                "displayPrice": 99.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-total-over-97p5",
+                "owner": "over",
+                "label": "Over 97.5 points",
+                "displayPrice": 98.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -6250,7 +6289,7 @@
                 "id": "display-total-over-123p5",
                 "owner": "over",
                 "label": "Over 123.5 points",
-                "displayPrice": 66.0,
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -6259,16 +6298,7 @@
                 "id": "display-total-over-125p5",
                 "owner": "over",
                 "label": "Over 125.5 points",
-                "displayPrice": 55.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
-                "id": "display-total-over-127p5",
-                "owner": "over",
-                "label": "Over 127.5 points",
-                "displayPrice": 35.0,
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -6285,20 +6315,19 @@
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/houston-vs-denver-2nd-half-winner-nov-20-2026/",
             "choices": [
               {
-                "id": "display-HOU",
-                "owner": "HOU",
-                "label": "Houston",
-                "displayPrice": 52.0,
-                "yesAsk": 53.0,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)",
-                "askVerifiedFrom": "ticket"
-              },
-              {
                 "id": "display-DEN",
                 "owner": "DEN",
                 "label": "Denver",
-                "displayPrice": 49.0,
+                "displayPrice": 99.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-HOU",
+                "owner": "HOU",
+                "label": "Houston",
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -6307,7 +6336,7 @@
                 "id": "display-tie",
                 "owner": "tie",
                 "label": "Tie",
-                "displayPrice": 5.0,
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -6322,28 +6351,10 @@
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/houston-vs-denver-2nd-half-spread-nov-20-2026/",
             "choices": [
               {
-                "id": "display-spread-HOU-1p5",
-                "owner": "HOU",
-                "label": "Houston wins by over 1.5 points",
-                "displayPrice": 52.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
-                "id": "display-spread-DEN-1p5",
+                "id": "display-spread-DEN-3p5",
                 "owner": "DEN",
-                "label": "Denver wins by over 1.5 points",
-                "displayPrice": 44.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
-                "id": "display-spread-HOU-4p5",
-                "owner": "HOU",
-                "label": "Houston wins by over 4.5 points",
-                "displayPrice": 41.0,
+                "label": "Denver wins by over 3.5 points",
+                "displayPrice": 99.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -6352,16 +6363,34 @@
                 "id": "display-spread-DEN-5p5",
                 "owner": "DEN",
                 "label": "Denver wins by over 5.5 points",
-                "displayPrice": 31.0,
+                "displayPrice": 99.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
               },
               {
-                "id": "display-spread-HOU-6p5",
+                "id": "display-spread-HOU-8p5",
                 "owner": "HOU",
-                "label": "Houston wins by over 6.5 points",
-                "displayPrice": 30.0,
+                "label": "Houston wins by over 8.5 points",
+                "displayPrice": 24.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-HOU-12p5",
+                "owner": "HOU",
+                "label": "Houston wins by over 12.5 points",
+                "displayPrice": 17.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-HOU-14p5",
+                "owner": "HOU",
+                "label": "Houston wins by over 14.5 points",
+                "displayPrice": 15.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -6376,46 +6405,46 @@
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/houston-vs-denver-2nd-half-total-nov-20-2026/",
             "choices": [
               {
-                "id": "display-total-over-113p5",
+                "id": "display-total-over-131p5",
                 "owner": "over",
-                "label": "Over 113.5 points",
-                "displayPrice": 57.0,
+                "label": "Over 131.5 points",
+                "displayPrice": 99.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
               },
               {
-                "id": "display-total-over-115p5",
+                "id": "display-total-over-133p5",
                 "owner": "over",
-                "label": "Over 115.5 points",
-                "displayPrice": 56.0,
+                "label": "Over 133.5 points",
+                "displayPrice": 99.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
               },
               {
-                "id": "display-total-over-117p5",
+                "id": "display-total-over-97p5",
                 "owner": "over",
-                "label": "Over 117.5 points",
-                "displayPrice": 53.0,
+                "label": "Over 97.5 points",
+                "displayPrice": 99.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
               },
               {
-                "id": "display-total-over-121p5",
+                "id": "display-total-over-99p5",
                 "owner": "over",
-                "label": "Over 121.5 points",
-                "displayPrice": 35.0,
+                "label": "Over 99.5 points",
+                "displayPrice": 99.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
               },
               {
-                "id": "display-total-over-125p5",
+                "id": "display-total-over-105p5",
                 "owner": "over",
-                "label": "Over 125.5 points",
-                "displayPrice": 23.0,
+                "label": "Over 105.5 points",
+                "displayPrice": 96.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -6581,17 +6610,16 @@
                 "id": "display-DEN",
                 "owner": "DEN",
                 "label": "Denver",
-                "displayPrice": 74.0,
-                "yesAsk": 72.0,
+                "displayPrice": 99.0,
+                "yesAsk": null,
                 "noAsk": null,
-                "priceSource": "RH public event selection (indicative)",
-                "askVerifiedFrom": "ticket"
+                "priceSource": "RH public event selection (indicative)"
               },
               {
                 "id": "display-HOU",
                 "owner": "HOU",
                 "label": "Houston",
-                "displayPrice": 22.0,
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -6600,7 +6628,7 @@
                 "id": "display-tie",
                 "owner": "tie",
                 "label": "Tie",
-                "displayPrice": 6.0,
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -6618,7 +6646,7 @@
                 "id": "display-spread-DEN-1p5",
                 "owner": "DEN",
                 "label": "Denver wins by over 1.5 points",
-                "displayPrice": 58.0,
+                "displayPrice": 99.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -6627,7 +6655,16 @@
                 "id": "display-spread-DEN-3p5",
                 "owner": "DEN",
                 "label": "Denver wins by over 3.5 points",
-                "displayPrice": 57.0,
+                "displayPrice": 99.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-HOU-10p5",
+                "owner": "HOU",
+                "label": "Houston wins by over 10.5 points",
+                "displayPrice": 2.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -6636,7 +6673,7 @@
                 "id": "display-spread-DEN-5p5",
                 "owner": "DEN",
                 "label": "Denver wins by over 5.5 points",
-                "displayPrice": 46.0,
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -6645,16 +6682,7 @@
                 "id": "display-spread-DEN-7p5",
                 "owner": "DEN",
                 "label": "Denver wins by over 7.5 points",
-                "displayPrice": 34.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
-                "id": "display-spread-DEN-9p5",
-                "owner": "DEN",
-                "label": "Denver wins by over 9.5 points",
-                "displayPrice": 23.0,
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -6669,46 +6697,46 @@
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/houston-vs-denver-2nd-quarter-total-nov-20-2026/",
             "choices": [
               {
-                "id": "display-total-over-53p5",
+                "id": "display-total-over-41p5",
                 "owner": "over",
-                "label": "Over 53.5 points",
-                "displayPrice": 78.0,
+                "label": "Over 41.5 points",
+                "displayPrice": 99.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
               },
               {
-                "id": "display-total-over-55p5",
+                "id": "display-total-over-43p5",
                 "owner": "over",
-                "label": "Over 55.5 points",
-                "displayPrice": 72.0,
+                "label": "Over 43.5 points",
+                "displayPrice": 99.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
               },
               {
-                "id": "display-total-over-57p5",
+                "id": "display-total-over-45p5",
                 "owner": "over",
-                "label": "Over 57.5 points",
-                "displayPrice": 50.0,
+                "label": "Over 45.5 points",
+                "displayPrice": 99.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
               },
               {
-                "id": "display-total-over-59p5",
+                "id": "display-total-over-47p5",
                 "owner": "over",
-                "label": "Over 59.5 points",
-                "displayPrice": 44.0,
+                "label": "Over 47.5 points",
+                "displayPrice": 99.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
               },
               {
-                "id": "display-total-over-61p5",
+                "id": "display-total-over-49p5",
                 "owner": "over",
-                "label": "Over 61.5 points",
-                "displayPrice": 39.0,
+                "label": "Over 49.5 points",
+                "displayPrice": 99.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -6728,17 +6756,16 @@
                 "id": "display-HOU",
                 "owner": "HOU",
                 "label": "Houston",
-                "displayPrice": 51.0,
-                "yesAsk": 52.0,
+                "displayPrice": 99.0,
+                "yesAsk": null,
                 "noAsk": null,
-                "priceSource": "RH public event selection (indicative)",
-                "askVerifiedFrom": "ticket"
+                "priceSource": "RH public event selection (indicative)"
               },
               {
                 "id": "display-DEN",
                 "owner": "DEN",
                 "label": "Denver",
-                "displayPrice": 45.0,
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -6747,7 +6774,7 @@
                 "id": "display-tie",
                 "owner": "tie",
                 "label": "Tie",
-                "displayPrice": 7.0,
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -6762,10 +6789,10 @@
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/houston-vs-denver-3rd-quarter-spread-nov-20-2026/",
             "choices": [
               {
-                "id": "display-spread-HOU-1p5",
+                "id": "display-spread-HOU-2p5",
                 "owner": "HOU",
-                "label": "Houston wins by over 1.5 points",
-                "displayPrice": 47.0,
+                "label": "Houston wins by over 2.5 points",
+                "displayPrice": 99.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -6774,7 +6801,7 @@
                 "id": "display-spread-HOU-4p5",
                 "owner": "HOU",
                 "label": "Houston wins by over 4.5 points",
-                "displayPrice": 35.0,
+                "displayPrice": 99.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -6783,25 +6810,25 @@
                 "id": "display-spread-DEN-3p5",
                 "owner": "DEN",
                 "label": "Denver wins by over 3.5 points",
-                "displayPrice": 34.0,
+                "displayPrice": 6.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
               },
               {
-                "id": "display-spread-DEN-5p5",
+                "id": "display-spread-DEN-11p5",
                 "owner": "DEN",
-                "label": "Denver wins by over 5.5 points",
-                "displayPrice": 29.0,
+                "label": "Denver wins by over 11.5 points",
+                "displayPrice": 2.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
               },
               {
-                "id": "display-spread-HOU-6p5",
-                "owner": "HOU",
-                "label": "Houston wins by over 6.5 points",
-                "displayPrice": 25.0,
+                "id": "display-spread-DEN-1p5",
+                "owner": "DEN",
+                "label": "Denver wins by over 1.5 points",
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -6816,46 +6843,46 @@
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/houston-vs-denver-3rd-quarter-total-nov-20-2026/",
             "choices": [
               {
-                "id": "display-total-over-50p5",
-                "owner": "over",
-                "label": "Over 50.5 points",
-                "displayPrice": 83.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
-                "id": "display-total-over-52p5",
-                "owner": "over",
-                "label": "Over 52.5 points",
-                "displayPrice": 78.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
-                "id": "display-total-over-58p5",
-                "owner": "over",
-                "label": "Over 58.5 points",
-                "displayPrice": 52.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
-                "id": "display-total-over-60p5",
-                "owner": "over",
-                "label": "Over 60.5 points",
-                "displayPrice": 44.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
                 "id": "display-total-over-62p5",
                 "owner": "over",
                 "label": "Over 62.5 points",
-                "displayPrice": 35.0,
+                "displayPrice": 99.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-total-over-64p5",
+                "owner": "over",
+                "label": "Over 64.5 points",
+                "displayPrice": 99.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-total-over-68p5",
+                "owner": "over",
+                "label": "Over 68.5 points",
+                "displayPrice": 99.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-total-over-70p5",
+                "owner": "over",
+                "label": "Over 70.5 points",
+                "displayPrice": 99.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-total-over-66p5",
+                "owner": "over",
+                "label": "Over 66.5 points",
+                "displayPrice": 97.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -6872,20 +6899,28 @@
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/houston-vs-denver-4th-quarter-winner-nov-20-2026/",
             "choices": [
               {
-                "id": "display-HOU",
-                "owner": "HOU",
-                "label": "Houston",
-                "displayPrice": 50.0,
-                "yesAsk": 50.0,
+                "id": "display-DEN",
+                "owner": "DEN",
+                "label": "Denver",
+                "displayPrice": 99.0,
+                "yesAsk": null,
                 "noAsk": null,
-                "priceSource": "RH public event selection (indicative)",
-                "askVerifiedFrom": "ticket"
+                "priceSource": "RH public event selection (indicative)"
               },
               {
                 "id": "display-tie",
                 "owner": "tie",
                 "label": "Tie",
-                "displayPrice": 7.0,
+                "displayPrice": 4.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-HOU",
+                "owner": "HOU",
+                "label": "Houston",
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -6893,17 +6928,35 @@
             ],
             "reason": null,
             "hiddenCount": 0,
-            "expectedMinChoices": 2,
+            "expectedMinChoices": 3,
             "completeness": "unverified"
           },
           "spread": {
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/houston-vs-denver-4th-quarter-spread-nov-20-2026/",
             "choices": [
               {
-                "id": "display-spread-DEN-1p5",
+                "id": "display-spread-DEN-9p5",
                 "owner": "DEN",
-                "label": "Denver wins by over 1.5 points",
-                "displayPrice": 44.0,
+                "label": "Denver wins by over 9.5 points",
+                "displayPrice": 99.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-DEN-5p5",
+                "owner": "DEN",
+                "label": "Denver wins by over 5.5 points",
+                "displayPrice": 96.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-DEN-13p5",
+                "owner": "DEN",
+                "label": "Denver wins by over 13.5 points",
+                "displayPrice": 27.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -6912,16 +6965,16 @@
                 "id": "display-spread-HOU-1p5",
                 "owner": "HOU",
                 "label": "Houston wins by over 1.5 points",
-                "displayPrice": 40.0,
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
               },
               {
-                "id": "display-spread-DEN-3p5",
-                "owner": "DEN",
-                "label": "Denver wins by over 3.5 points",
-                "displayPrice": 37.0,
+                "id": "display-spread-HOU-2p5",
+                "owner": "HOU",
+                "label": "Houston wins by over 2.5 points",
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -6929,26 +6982,17 @@
             ],
             "reason": null,
             "hiddenCount": 8,
-            "expectedMinChoices": 11,
+            "expectedMinChoices": 13,
             "completeness": "partial"
           },
           "total": {
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/houston-vs-denver-4th-quarter-total-nov-20-2026/",
             "choices": [
               {
-                "id": "display-total-over-46p5",
+                "id": "display-total-over-52p5",
                 "owner": "over",
-                "label": "Over 46.5 points",
-                "displayPrice": 87.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
-                "id": "display-total-over-48p5",
-                "owner": "over",
-                "label": "Over 48.5 points",
-                "displayPrice": 81.0,
+                "label": "Over 52.5 points",
+                "displayPrice": 99.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -6957,7 +7001,25 @@
                 "id": "display-total-over-54p5",
                 "owner": "over",
                 "label": "Over 54.5 points",
-                "displayPrice": 60.0,
+                "displayPrice": 99.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-total-over-64p5",
+                "owner": "over",
+                "label": "Over 64.5 points",
+                "displayPrice": 3.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-total-over-56p5",
+                "owner": "over",
+                "label": "Over 56.5 points",
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -6966,16 +7028,7 @@
                 "id": "display-total-over-58p5",
                 "owner": "over",
                 "label": "Over 58.5 points",
-                "displayPrice": 39.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
-                "id": "display-total-over-60p5",
-                "owner": "over",
-                "label": "Over 60.5 points",
-                "displayPrice": 34.0,
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
