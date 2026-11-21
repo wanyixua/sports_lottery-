@@ -4824,8 +4824,8 @@
       "usDate": "2026-11-20",
       "bet": "HOU + CLE + ORL + ATL -7.5 + OKC -9.5 + CHI -2.5",
       "stake": 10,
-      "payout": null,
-      "status": "pending",
+      "payout": 0,
+      "status": "loss",
       "profitIfWin": 211,
       "legs": [
         {
@@ -4863,7 +4863,16 @@
         }
       ],
       "beijingDate": "2026-11-21",
-      "note": "RH_FILLED_20261120_1415_6LEG221 | RH Filled 221/221, 本金$10，微信确认10赚211；六串盘口以RH截图为准。"
+      "note": "RH_FILLED_20261120_1415_6LEG221 | RH Filled 221/221, 本金$10，微信确认10赚211；六串盘口以RH截图为准。",
+      "legResults": [
+        "loss",
+        "win",
+        "win",
+        "win",
+        "loss",
+        "loss"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "id": 195,
@@ -4894,8 +4903,8 @@
       "usDate": "2026-11-20",
       "bet": "DET",
       "stake": 10,
-      "payout": null,
-      "status": "pending",
+      "payout": 0,
+      "status": "loss",
       "profitIfWin": 3,
       "legs": [
         {
@@ -4905,7 +4914,11 @@
         }
       ],
       "beijingDate": "2026-11-21",
-      "note": "RH_FILLED_20261120_1416_DET_13 | RH Filled 13/13，活塞独赢10刀，微信确认10赚3。"
+      "note": "RH_FILLED_20261120_1416_DET_13 | RH Filled 13/13，活塞独赢10刀，微信确认10赚3。",
+      "legResults": [
+        "loss"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "id": 197,
@@ -4913,8 +4926,8 @@
       "usDate": "2026-11-20",
       "bet": "CLE",
       "stake": 10,
-      "payout": null,
-      "status": "pending",
+      "payout": 14.0,
+      "status": "win",
       "profitIfWin": 4,
       "legs": [
         {
@@ -4924,7 +4937,11 @@
         }
       ],
       "beijingDate": "2026-11-21",
-      "note": "RH_FILLED_20261120_1416_CLE_14 | RH Filled 14/14，骑士独赢10刀，微信确认10赚4。"
+      "note": "RH_FILLED_20261120_1416_CLE_14 | RH Filled 14/14，骑士独赢10刀，微信确认10赚4。",
+      "legResults": [
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "id": 198,
@@ -4932,8 +4949,8 @@
       "usDate": "2026-11-20",
       "bet": "ORL",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 28.0,
+      "status": "win",
       "profitIfWin": 8,
       "legs": [
         {
@@ -4943,7 +4960,11 @@
         }
       ],
       "beijingDate": "2026-11-21",
-      "note": "RH_FILLED_20261120_1417_ORL_28 | RH Filled 28/28，魔术独赢20刀，微信确认20赚8。"
+      "note": "RH_FILLED_20261120_1417_ORL_28 | RH Filled 28/28，魔术独赢20刀，微信确认20赚8。",
+      "legResults": [
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "id": 199,
@@ -4951,8 +4972,8 @@
       "usDate": "2026-11-20",
       "bet": "CHI",
       "stake": 10,
-      "payout": null,
-      "status": "pending",
+      "payout": 0,
+      "status": "loss",
       "profitIfWin": 7,
       "legs": [
         {
@@ -4962,7 +4983,11 @@
         }
       ],
       "beijingDate": "2026-11-21",
-      "note": "RH_FILLED_20261120_1417_CHI_17 | RH Filled 17/17，公牛独赢10刀，微信确认10赚7。"
+      "note": "RH_FILLED_20261120_1417_CHI_17 | RH Filled 17/17，公牛独赢10刀，微信确认10赚7。",
+      "legResults": [
+        "loss"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "id": 200,
@@ -4970,8 +4995,8 @@
       "usDate": "2026-11-20",
       "bet": "PHX",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 30.0,
+      "status": "win",
       "profitIfWin": 10,
       "legs": [
         {
@@ -4981,7 +5006,11 @@
         }
       ],
       "beijingDate": "2026-11-21",
-      "note": "RH_FILLED_20261120_1825_PHX_30 | RH Filled 30/30, 20刀太阳独赢；微信确认20赚10。"
+      "note": "RH_FILLED_20261120_1825_PHX_30 | RH Filled 30/30, 20刀太阳独赢；微信确认20赚10。",
+      "legResults": [
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "id": 201,
@@ -4989,8 +5018,8 @@
       "usDate": "2026-11-20",
       "bet": "LAL",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 22.0,
+      "status": "win",
       "profitIfWin": 2,
       "legs": [
         {
@@ -5000,7 +5029,11 @@
         }
       ],
       "beijingDate": "2026-11-21",
-      "note": "RH_FILLED_20261120_1826_LAL_22 | RH Filled 22/22, 20刀湖人独赢；微信确认20赚2。"
+      "note": "RH_FILLED_20261120_1826_LAL_22 | RH Filled 22/22, 20刀湖人独赢；微信确认20赚2。",
+      "legResults": [
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "id": 202,
@@ -5008,8 +5041,8 @@
       "usDate": "2026-11-20",
       "bet": "HOU",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 0,
+      "status": "loss",
       "profitIfWin": 17,
       "legs": [
         {
@@ -5019,7 +5052,11 @@
         }
       ],
       "beijingDate": "2026-11-21",
-      "note": "RH_FILLED_20261120_1826_HOU_37 | RH Filled 37/37, 20刀火箭独赢；微信确认20赚17。"
+      "note": "RH_FILLED_20261120_1826_HOU_37 | RH Filled 37/37, 20刀火箭独赢；微信确认20赚17。",
+      "legResults": [
+        "loss"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "id": 203,
@@ -5027,8 +5064,8 @@
       "usDate": "2026-11-20",
       "bet": "PHX -5.5 + LAL -6.5",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 0,
+      "status": "loss",
       "profitIfWin": 31,
       "legs": [
         {
@@ -5045,7 +5082,12 @@
         }
       ],
       "beijingDate": "2026-11-21",
-      "note": "RH_FILLED_20261120_1827_PHX_LAL_51 | RH Filled 51/51, 20刀二串一，净赚31；微信确认20赚31；盘口以RH实际成交PHX -5.5/LAL -6.5为准。"
+      "note": "RH_FILLED_20261120_1827_PHX_LAL_51 | RH Filled 51/51, 20刀二串一，净赚31；微信确认20赚31；盘口以RH实际成交PHX -5.5/LAL -6.5为准。",
+      "legResults": [
+        "win",
+        "loss"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     }
   ]
 }
