@@ -4618,8 +4618,8 @@
       "usDate": "2026-11-19",
       "bet": "MEM + SAS -8.5 + NYK -3.5 + MIL +13.5",
       "stake": 10,
-      "payout": 0,
-      "status": "loss",
+      "payout": null,
+      "status": "pending",
       "profitIfWin": 59,
       "legs": [
         {
@@ -4647,14 +4647,7 @@
         }
       ],
       "beijingDate": "2026-11-20",
-      "note": "RH_FILLED_20261119_1657_4LEG69 | RH Filled 69/69, 本金$10，净赚+$59。微信原要求MEM独赢/SAS -9.5/NYK -3.5/MIL +13.5，成交版本SAS -8.5（小王已微信告知）。",
-      "legResults": [
-        "win",
-        "win",
-        "loss",
-        "win"
-      ],
-      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
+      "note": "RH_FILLED_20261119_1657_4LEG69 | RH Filled 69/69, 本金$10，净赚+$59。微信原要求MEM独赢/SAS -9.5/NYK -3.5/MIL +13.5，成交版本SAS -8.5（小王已微信告知）。"
     },
     {
       "id": 189,
@@ -4662,8 +4655,8 @@
       "usDate": "2026-11-19",
       "bet": "MEM -7.5",
       "stake": 10,
-      "payout": 22.0,
-      "status": "win",
+      "payout": null,
+      "status": "pending",
       "profitIfWin": 12,
       "legs": [
         {
@@ -4674,11 +4667,7 @@
         }
       ],
       "beijingDate": "2026-11-20",
-      "note": "RH_FILLED_20261119_1707_MEM_22 | RH Filled 22/22, 本金$10，净赚+$12；对应微信灰熊让7.5，10赚12。",
-      "legResults": [
-        "win"
-      ],
-      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
+      "note": "RH_FILLED_20261119_1707_MEM_22 | RH Filled 22/22, 本金$10，净赚+$12；对应微信灰熊让7.5，10赚12。"
     },
     {
       "id": 190,
@@ -4686,8 +4675,8 @@
       "usDate": "2026-11-19",
       "bet": "SAS -2.5 + POR -3.5",
       "stake": 20,
-      "payout": 32.0,
-      "status": "win",
+      "payout": null,
+      "status": "pending",
       "profitIfWin": 12,
       "legs": [
         {
@@ -4704,12 +4693,7 @@
         }
       ],
       "beijingDate": "2026-11-20",
-      "note": "RH_FILLED_20261119_1708_SAS_POR_32 | RH Filled 32/32, 本金$20，净赚+$12。微信原要求SAS -3.5 + POR -3.5；小王确认买入的SAS盘口为-2.5，20赚12。",
-      "legResults": [
-        "win",
-        "win"
-      ],
-      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
+      "note": "RH_FILLED_20261119_1708_SAS_POR_32 | RH Filled 32/32, 本金$20，净赚+$12。微信原要求SAS -3.5 + POR -3.5；小王确认买入的SAS盘口为-2.5，20赚12。"
     },
     {
       "id": 191,
@@ -4717,8 +4701,8 @@
       "usDate": "2026-11-19",
       "bet": "NYK",
       "stake": 10,
-      "payout": 18.0,
-      "status": "win",
+      "payout": null,
+      "status": "pending",
       "profitIfWin": 8,
       "legs": [
         {
@@ -4728,11 +4712,7 @@
         }
       ],
       "beijingDate": "2026-11-20",
-      "note": "RH_FILLED_20261119_1709_NYK_18 | RH Filled 18/18, 本金$10，净赚+$8；微信王老板要求尼克斯独赢$10，确认10赚8。",
-      "legResults": [
-        "win"
-      ],
-      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
+      "note": "RH_FILLED_20261119_1709_NYK_18 | RH Filled 18/18, 本金$10，净赚+$8；微信王老板要求尼克斯独赢$10，确认10赚8。"
     },
     {
       "id": 192,
@@ -4740,8 +4720,8 @@
       "usDate": "2026-11-19",
       "bet": "SAS + MIN + POR",
       "stake": 20,
-      "payout": 0,
-      "status": "loss",
+      "payout": null,
+      "status": "pending",
       "profitIfWin": 34,
       "legs": [
         {
@@ -4761,13 +4741,7 @@
         }
       ],
       "beijingDate": "2026-11-20",
-      "note": "RH_FILLED_20261119_1429_SAS_MIN_POR_54 | RH Filled 54/54, 本金$20，净赚+$34；无王老板对应微信指令，归小王本人。",
-      "legResults": [
-        "win",
-        "loss",
-        "win"
-      ],
-      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
+      "note": "RH_FILLED_20261119_1429_SAS_MIN_POR_54 | RH Filled 54/54, 本金$20，净赚+$34；无王老板对应微信指令，归小王本人。"
     },
     {
       "id": 193,
@@ -4817,6 +4791,231 @@
       ],
       "beijingDate": "2026-11-20",
       "note": "RH_FILLED_20261119_1435_7LEG111 | RH Filled 111/111, 本金$20，净赚+$91；按RH实际7腿独赢录入，未见王老板对应微信指令，归小王本人。"
+    },
+    {
+      "id": 194,
+      "owner": "王老板",
+      "usDate": "2026-11-20",
+      "bet": "HOU + CLE + ORL + ATL -7.5 + OKC -9.5 + CHI -2.5",
+      "stake": 10,
+      "payout": null,
+      "status": "pending",
+      "profitIfWin": 211,
+      "legs": [
+        {
+          "team": "HOU",
+          "market": "moneyline",
+          "gameDate": "2026-11-20"
+        },
+        {
+          "team": "CLE",
+          "market": "moneyline",
+          "gameDate": "2026-11-20"
+        },
+        {
+          "team": "ORL",
+          "market": "moneyline",
+          "gameDate": "2026-11-20"
+        },
+        {
+          "team": "ATL",
+          "market": "spread",
+          "line": -7.5,
+          "gameDate": "2026-11-20"
+        },
+        {
+          "team": "OKC",
+          "market": "spread",
+          "line": -9.5,
+          "gameDate": "2026-11-20"
+        },
+        {
+          "team": "CHI",
+          "market": "spread",
+          "line": -2.5,
+          "gameDate": "2026-11-20"
+        }
+      ],
+      "beijingDate": "2026-11-21",
+      "note": "RH_FILLED_20261120_1415_6LEG221 | RH Filled 221/221, 本金$10，微信确认10赚211；六串盘口以RH截图为准。"
+    },
+    {
+      "id": 195,
+      "owner": "王老板",
+      "usDate": "2026-11-20",
+      "bet": "ATL",
+      "stake": 20,
+      "payout": null,
+      "status": "pending",
+      "profitIfWin": 7,
+      "legs": [
+        {
+          "team": "ATL",
+          "market": "moneyline",
+          "gameDate": "2026-11-20"
+        }
+      ],
+      "beijingDate": "2026-11-21",
+      "note": "WECHAT_CONFIRMED_20261120_ATL_ML_20_7 | 王老板微信要求老鹰独赢20刀，小王微信回报20赚7；本批未提供这笔RH成交截图，依据微信确认录入。"
+    },
+    {
+      "id": 196,
+      "owner": "王老板",
+      "usDate": "2026-11-20",
+      "bet": "DET",
+      "stake": 10,
+      "payout": null,
+      "status": "pending",
+      "profitIfWin": 3,
+      "legs": [
+        {
+          "team": "DET",
+          "market": "moneyline",
+          "gameDate": "2026-11-20"
+        }
+      ],
+      "beijingDate": "2026-11-21",
+      "note": "RH_FILLED_20261120_1416_DET_13 | RH Filled 13/13，活塞独赢10刀，微信确认10赚3。"
+    },
+    {
+      "id": 197,
+      "owner": "王老板",
+      "usDate": "2026-11-20",
+      "bet": "CLE",
+      "stake": 10,
+      "payout": null,
+      "status": "pending",
+      "profitIfWin": 4,
+      "legs": [
+        {
+          "team": "CLE",
+          "market": "moneyline",
+          "gameDate": "2026-11-20"
+        }
+      ],
+      "beijingDate": "2026-11-21",
+      "note": "RH_FILLED_20261120_1416_CLE_14 | RH Filled 14/14，骑士独赢10刀，微信确认10赚4。"
+    },
+    {
+      "id": 198,
+      "owner": "王老板",
+      "usDate": "2026-11-20",
+      "bet": "ORL",
+      "stake": 20,
+      "payout": null,
+      "status": "pending",
+      "profitIfWin": 8,
+      "legs": [
+        {
+          "team": "ORL",
+          "market": "moneyline",
+          "gameDate": "2026-11-20"
+        }
+      ],
+      "beijingDate": "2026-11-21",
+      "note": "RH_FILLED_20261120_1417_ORL_28 | RH Filled 28/28，魔术独赢20刀，微信确认20赚8。"
+    },
+    {
+      "id": 199,
+      "owner": "王老板",
+      "usDate": "2026-11-20",
+      "bet": "CHI",
+      "stake": 10,
+      "payout": null,
+      "status": "pending",
+      "profitIfWin": 7,
+      "legs": [
+        {
+          "team": "CHI",
+          "market": "moneyline",
+          "gameDate": "2026-11-20"
+        }
+      ],
+      "beijingDate": "2026-11-21",
+      "note": "RH_FILLED_20261120_1417_CHI_17 | RH Filled 17/17，公牛独赢10刀，微信确认10赚7。"
+    },
+    {
+      "id": 200,
+      "owner": "王老板",
+      "usDate": "2026-11-20",
+      "bet": "PHX",
+      "stake": 20,
+      "payout": null,
+      "status": "pending",
+      "profitIfWin": 10,
+      "legs": [
+        {
+          "team": "PHX",
+          "market": "moneyline",
+          "gameDate": "2026-11-20"
+        }
+      ],
+      "beijingDate": "2026-11-21",
+      "note": "RH_FILLED_20261120_1825_PHX_30 | RH Filled 30/30, 20刀太阳独赢；微信确认20赚10。"
+    },
+    {
+      "id": 201,
+      "owner": "王老板",
+      "usDate": "2026-11-20",
+      "bet": "LAL",
+      "stake": 20,
+      "payout": null,
+      "status": "pending",
+      "profitIfWin": 2,
+      "legs": [
+        {
+          "team": "LAL",
+          "market": "moneyline",
+          "gameDate": "2026-11-20"
+        }
+      ],
+      "beijingDate": "2026-11-21",
+      "note": "RH_FILLED_20261120_1826_LAL_22 | RH Filled 22/22, 20刀湖人独赢；微信确认20赚2。"
+    },
+    {
+      "id": 202,
+      "owner": "王老板",
+      "usDate": "2026-11-20",
+      "bet": "HOU",
+      "stake": 20,
+      "payout": null,
+      "status": "pending",
+      "profitIfWin": 17,
+      "legs": [
+        {
+          "team": "HOU",
+          "market": "moneyline",
+          "gameDate": "2026-11-20"
+        }
+      ],
+      "beijingDate": "2026-11-21",
+      "note": "RH_FILLED_20261120_1826_HOU_37 | RH Filled 37/37, 20刀火箭独赢；微信确认20赚17。"
+    },
+    {
+      "id": 203,
+      "owner": "王老板",
+      "usDate": "2026-11-20",
+      "bet": "PHX -5.5 + LAL -6.5",
+      "stake": 20,
+      "payout": null,
+      "status": "pending",
+      "profitIfWin": 31,
+      "legs": [
+        {
+          "team": "PHX",
+          "market": "spread",
+          "line": -5.5,
+          "gameDate": "2026-11-20"
+        },
+        {
+          "team": "LAL",
+          "market": "spread",
+          "line": -6.5,
+          "gameDate": "2026-11-20"
+        }
+      ],
+      "beijingDate": "2026-11-21",
+      "note": "RH_FILLED_20261120_1827_PHX_LAL_51 | RH Filled 51/51, 20刀二串一，净赚31；微信确认20赚31；盘口以RH实际成交PHX -5.5/LAL -6.5为准。"
     }
   ]
 }
