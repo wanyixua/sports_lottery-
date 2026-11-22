@@ -5095,8 +5095,8 @@
       "usDate": "2026-11-21",
       "bet": "BOS -5.5 + DAL -5.5 + PHI -4.5 + SAS -6.5 + NYK -6.5",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 0,
+      "status": "loss",
       "profitIfWin": 136,
       "legs": [
         {
@@ -5131,7 +5131,15 @@
         }
       ],
       "beijingDate": "2026-11-22",
-      "note": "RH_FILLED_20261121_0126_5LEG_156 | RH 11/21 01:26 Filled 156/156, $20本金、净赚$136；五串全部以RH实际让分盘口录入。 已据微信聊天确认属于王老板，按RH实际成交盘口记录。"
+      "note": "RH_FILLED_20261121_0126_5LEG_156 | RH 11/21 01:26 Filled 156/156, $20本金、净赚$136；五串全部以RH实际让分盘口录入。 已据微信聊天确认属于王老板，按RH实际成交盘口记录。",
+      "legResults": [
+        "loss",
+        "win",
+        "loss",
+        "win",
+        "loss"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "id": 205,
@@ -5139,8 +5147,8 @@
       "usDate": "2026-11-21",
       "bet": "PHI -2.5 + SAS -2.5",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 28.0,
+      "status": "win",
       "profitIfWin": 8,
       "legs": [
         {
@@ -5157,7 +5165,12 @@
         }
       ],
       "beijingDate": "2026-11-22",
-      "note": "RH_FILLED_20261121_1103_PHI_SAS_28 | RH 11/21 11:03 Filled 28/28, 净赚$8。 已据微信聊天确认属于王老板，按RH实际成交盘口记录。"
+      "note": "RH_FILLED_20261121_1103_PHI_SAS_28 | RH 11/21 11:03 Filled 28/28, 净赚$8。 已据微信聊天确认属于王老板，按RH实际成交盘口记录。",
+      "legResults": [
+        "win",
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "id": 206,
@@ -5165,8 +5178,8 @@
       "usDate": "2026-11-21",
       "bet": "DAL + NYK",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 63.0,
+      "status": "win",
       "profitIfWin": 43,
       "legs": [
         {
@@ -5181,7 +5194,12 @@
         }
       ],
       "beijingDate": "2026-11-22",
-      "note": "RH_FILLED_20261121_1554_DAL_NYK_63 | RH 11/21 15:54 Filled 63/63, 净赚$43。 已据微信聊天确认属于王老板，按RH实际成交盘口记录。"
+      "note": "RH_FILLED_20261121_1554_DAL_NYK_63 | RH 11/21 15:54 Filled 63/63, 净赚$43。 已据微信聊天确认属于王老板，按RH实际成交盘口记录。",
+      "legResults": [
+        "win",
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "id": 207,
@@ -5189,8 +5207,8 @@
       "usDate": "2026-11-21",
       "bet": "BOS -3.5 + SAS -4.5",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 0,
+      "status": "loss",
       "profitIfWin": 8,
       "legs": [
         {
@@ -5207,7 +5225,12 @@
         }
       ],
       "beijingDate": "2026-11-22",
-      "note": "RH_FILLED_20261121_1556_BOS_SAS_28 | RH 11/21 15:56 Filled 28/28, 净赚$8。 已据微信聊天确认属于王老板，按RH实际成交盘口记录。"
+      "note": "RH_FILLED_20261121_1556_BOS_SAS_28 | RH 11/21 15:56 Filled 28/28, 净赚$8。 已据微信聊天确认属于王老板，按RH实际成交盘口记录。",
+      "legResults": [
+        "loss",
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "id": 208,
@@ -5215,8 +5238,8 @@
       "usDate": "2026-11-21",
       "bet": "MIN -2.5 + SAS -2.5",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 34.0,
+      "status": "win",
       "profitIfWin": 14,
       "legs": [
         {
@@ -5233,7 +5256,12 @@
         }
       ],
       "beijingDate": "2026-11-22",
-      "note": "RH_FILLED_20261121_1644_MIN_SAS_34 | RH 11/21 16:44 Filled 34/34, 净赚$14。 已据微信聊天确认属于王老板，按RH实际成交盘口记录。 微信最初要求SAS -3.5，实际买入SAS -2.5；按RH成交记录。"
+      "note": "RH_FILLED_20261121_1644_MIN_SAS_34 | RH 11/21 16:44 Filled 34/34, 净赚$14。 已据微信聊天确认属于王老板，按RH实际成交盘口记录。 微信最初要求SAS -3.5，实际买入SAS -2.5；按RH成交记录。",
+      "legResults": [
+        "win",
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "id": 209,
@@ -5265,8 +5293,8 @@
       "usDate": "2026-11-22",
       "bet": "DET + DAL + DEN + NYK + BOS",
       "stake": 10,
-      "payout": null,
-      "status": "pending",
+      "payout": 0,
+      "status": "loss",
       "profitIfWin": 57,
       "legs": [
         {
@@ -5296,7 +5324,15 @@
         }
       ],
       "beijingDate": "2026-11-23",
-      "note": "RH_FILLED_20261121_2150_5LEG_67 | RH 11/21 21:50 Filled 67/67, 净赚$57；实际比赛日期11/22。 已据微信聊天确认属于王老板，按RH实际成交盘口记录。"
+      "note": "RH_FILLED_20261121_2150_5LEG_67 | RH 11/21 21:50 Filled 67/67, 净赚$57；实际比赛日期11/22。 已据微信聊天确认属于王老板，按RH实际成交盘口记录。",
+      "legResults": [
+        "loss",
+        null,
+        null,
+        null,
+        null
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "id": 211,
@@ -5304,8 +5340,8 @@
       "usDate": "2026-11-22",
       "bet": "ATL +5.5",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 30.0,
+      "status": "win",
       "profitIfWin": 10,
       "legs": [
         {
@@ -5316,7 +5352,11 @@
         }
       ],
       "beijingDate": "2026-11-23",
-      "note": "RH_FILLED_20261121_2151_NO_DET_5_5_30 | RH 11/21 21:51 Filled 30/30, No DET by 5.5等价ATL +5.5，净赚$10；实际比赛日期11/22。 已据微信聊天确认属于王老板，按RH实际成交盘口记录。"
+      "note": "RH_FILLED_20261121_2151_NO_DET_5_5_30 | RH 11/21 21:51 Filled 30/30, No DET by 5.5等价ATL +5.5，净赚$10；实际比赛日期11/22。 已据微信聊天确认属于王老板，按RH实际成交盘口记录。",
+      "legResults": [
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "id": 212,
