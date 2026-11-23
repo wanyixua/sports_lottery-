@@ -5417,8 +5417,8 @@
       "usDate": "2026-11-22",
       "bet": "NYK -5.5",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 31.0,
+      "status": "win",
       "profitIfWin": 11,
       "legs": [
         {
@@ -5428,7 +5428,11 @@
           "gameDate": "2026-11-22"
         }
       ],
-      "note": "RH_FILLED_20261122_1717_NYK-5.5 | RH Filled; 微信确认本金与命中净利润; 待赛果结算"
+      "note": "RH_FILLED_20261122_1717_NYK-5.5 | RH Filled; 微信确认本金与命中净利润; 待赛果结算",
+      "legResults": [
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "id": 216,
@@ -5436,8 +5440,8 @@
       "usDate": "2026-11-22",
       "bet": "WAS",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 27.0,
+      "status": "win",
       "profitIfWin": 7,
       "legs": [
         {
@@ -5446,7 +5450,11 @@
           "gameDate": "2026-11-22"
         }
       ],
-      "note": "RH_FILLED_20261122_1638_WAS | RH Filled; 微信确认本金与命中净利润; 待赛果结算"
+      "note": "RH_FILLED_20261122_1638_WAS | RH Filled; 微信确认本金与命中净利润; 待赛果结算",
+      "legResults": [
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "id": 217,
@@ -5454,8 +5462,8 @@
       "usDate": "2026-11-22",
       "bet": "DEN",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 29.0,
+      "status": "win",
       "profitIfWin": 9,
       "legs": [
         {
@@ -5464,7 +5472,11 @@
           "gameDate": "2026-11-22"
         }
       ],
-      "note": "RH_FILLED_20261122_1639_DEN | RH Filled; 微信确认本金与命中净利润; 待赛果结算"
+      "note": "RH_FILLED_20261122_1639_DEN | RH Filled; 微信确认本金与命中净利润; 待赛果结算",
+      "legResults": [
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "id": 218,
@@ -5472,8 +5484,8 @@
       "usDate": "2026-11-22",
       "bet": "DAL",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 35.0,
+      "status": "win",
       "profitIfWin": 15,
       "legs": [
         {
@@ -5482,7 +5494,11 @@
           "gameDate": "2026-11-22"
         }
       ],
-      "note": "RH_FILLED_20261122_1640_DAL | RH Filled; 微信确认本金与命中净利润; 待赛果结算"
+      "note": "RH_FILLED_20261122_1640_DAL | RH Filled; 微信确认本金与命中净利润; 待赛果结算",
+      "legResults": [
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "id": 219,
@@ -5490,8 +5506,8 @@
       "usDate": "2026-11-22",
       "bet": "DAL + DEN + WAS",
       "stake": 10,
-      "payout": null,
-      "status": "pending",
+      "payout": 44.0,
+      "status": "win",
       "profitIfWin": 34,
       "legs": [
         {
@@ -5510,7 +5526,13 @@
           "gameDate": "2026-11-22"
         }
       ],
-      "note": "RH_FILLED_20261122_1615_DAL_DEN_WAS_3LEG | RH Filled; 微信确认本金与命中净利润; 待赛果结算"
+      "note": "RH_FILLED_20261122_1615_DAL_DEN_WAS_3LEG | RH Filled; 微信确认本金与命中净利润; 待赛果结算",
+      "legResults": [
+        "win",
+        "win",
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     }
   ]
 }
