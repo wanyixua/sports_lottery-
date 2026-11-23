@@ -5269,8 +5269,8 @@
       "usDate": "2026-11-22",
       "bet": "BOS + DAL",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 0,
+      "status": "loss",
       "profitIfWin": 26,
       "legs": [
         {
@@ -5285,7 +5285,12 @@
         }
       ],
       "beijingDate": "2026-11-23",
-      "note": "RH_FILLED_20261121_1829_BOS_DAL_46 | RH 11/21 18:29 Filled 46/46, 净赚$26；实际比赛日期11/22。 已据微信聊天确认属于王老板，按RH实际成交盘口记录。"
+      "note": "RH_FILLED_20261121_1829_BOS_DAL_46 | RH 11/21 18:29 Filled 46/46, 净赚$26；实际比赛日期11/22。 已据微信聊天确认属于王老板，按RH实际成交盘口记录。",
+      "legResults": [
+        "loss",
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "id": 210,
@@ -5364,8 +5369,8 @@
       "usDate": "2026-11-22",
       "bet": "MIA -3.5",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 41.0,
+      "status": "win",
       "profitIfWin": 21,
       "legs": [
         {
@@ -5376,7 +5381,11 @@
         }
       ],
       "beijingDate": "2026-11-23",
-      "note": "RH_FILLED_20261121_2151_MIA_41 | RH 11/21 21:51 Filled 41/41, 净赚$21；实际比赛日期11/22。 已据微信聊天确认属于王老板，按RH实际成交盘口记录。"
+      "note": "RH_FILLED_20261121_2151_MIA_41 | RH 11/21 21:51 Filled 41/41, 净赚$21；实际比赛日期11/22。 已据微信聊天确认属于王老板，按RH实际成交盘口记录。",
+      "legResults": [
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "id": 213,
@@ -5384,8 +5393,8 @@
       "usDate": "2026-11-21",
       "bet": "PHI + SAS + NYK",
       "stake": 50,
-      "payout": null,
-      "status": "pending",
+      "payout": 82.0,
+      "status": "win",
       "profitIfWin": 32,
       "legs": [
         {
@@ -5405,7 +5414,13 @@
         }
       ],
       "beijingDate": "2026-11-22",
-      "note": "RH_POSITION_82YES_AT_0.59_PHI_SAS_NYK | 用户确认本人投注三串一：PHI+SAS+NYK独赢，$50本金、全中净赚$32（返还$82）；截图显示82 Yes @59.0¢。首场比赛2026-11-21，NYK比赛2026-11-22。勿与#141 MIN+PHI+HOU -1.5混淆。"
+      "note": "RH_POSITION_82YES_AT_0.59_PHI_SAS_NYK | 用户确认本人投注三串一：PHI+SAS+NYK独赢，$50本金、全中净赚$32（返还$82）；截图显示82 Yes @59.0¢。首场比赛2026-11-21，NYK比赛2026-11-22。勿与#141 MIN+PHI+HOU -1.5混淆。",
+      "legResults": [
+        "win",
+        "win",
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "id": 214,
