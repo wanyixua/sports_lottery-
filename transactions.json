@@ -5639,8 +5639,8 @@
       "usDate": "2026-11-23",
       "bet": "CLE",
       "stake": 10,
-      "payout": null,
-      "status": "pending",
+      "payout": 0,
+      "status": "loss",
       "profitIfWin": 2,
       "legs": [
         {
@@ -5650,7 +5650,11 @@
         }
       ],
       "beijingDate": "2026-11-24",
-      "note": "RH_FILLED_20261123_1513_CLE | 12 shares, 10本2利; 微信骑士胜10刀"
+      "note": "RH_FILLED_20261123_1513_CLE | 12 shares, 10本2利; 微信骑士胜10刀",
+      "legResults": [
+        "loss"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "id": 224,
@@ -5725,8 +5729,8 @@
       "usDate": "2026-11-23",
       "bet": "PHX",
       "stake": 10,
-      "payout": null,
-      "status": "pending",
+      "payout": 16.0,
+      "status": "win",
       "profitIfWin": 6,
       "legs": [
         {
@@ -5736,7 +5740,11 @@
         }
       ],
       "beijingDate": "2026-11-24",
-      "note": "RH_FILLED_20261123_1514_PHX | 16 shares, 10本6利; 微信太阳胜10刀"
+      "note": "RH_FILLED_20261123_1514_PHX | 16 shares, 10本6利; 微信太阳胜10刀",
+      "legResults": [
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "id": 227,
