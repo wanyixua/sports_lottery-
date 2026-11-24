@@ -1,6 +1,6 @@
 {
   "date": "2026-11-23",
-  "capturedAt": "2026-11-24T05:41:25+00:00",
+  "capturedAt": "2026-11-24T08:00:16+00:00",
   "source": "RH public event pages; displayPrice is INDICATIVE, yesAsk/noAsk only when verified",
   "games": [
     {
@@ -7015,20 +7015,19 @@
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/san-antonio-vs-sacramento-4th-quarter-winner-nov-23-2026/",
             "choices": [
               {
-                "id": "display-SAS",
-                "owner": "SAS",
-                "label": "San Antonio",
-                "displayPrice": 46.0,
-                "yesAsk": 46.0,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)",
-                "askVerifiedFrom": "ticket"
-              },
-              {
                 "id": "display-SAC",
                 "owner": "SAC",
                 "label": "Sacramento",
-                "displayPrice": 44.0,
+                "displayPrice": 99.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-SAS",
+                "owner": "SAS",
+                "label": "San Antonio",
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -7037,7 +7036,7 @@
                 "id": "display-tie",
                 "owner": "tie",
                 "label": "Tie",
-                "displayPrice": 6.0,
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
