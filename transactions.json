@@ -5383,8 +5383,8 @@
       "usDate": "2026-11-22",
       "bet": "NYK + MIN + HOU + LAL",
       "stake": 30,
-      "payout": null,
-      "status": "pending",
+      "payout": 61.0,
+      "status": "win",
       "profitIfWin": 31,
       "legs": [
         {
@@ -5409,7 +5409,14 @@
         }
       ],
       "beijingDate": "2026-11-23",
-      "note": "RH_FILLED_20261122_0106_4LEG_NYK_MIN_HOU_LAL_61YES | 用户确认本人投注；RH截图显示Filled 61/61，平均价$0.464，投入$30。按记账口径全中返还$61、净赚$31；首场IND@NYK为11/22，其他三场11/23。"
+      "note": "RH_FILLED_20261122_0106_4LEG_NYK_MIN_HOU_LAL_61YES | 用户确认本人投注；RH截图显示Filled 61/61，平均价$0.464，投入$30。按记账口径全中返还$61、净赚$31；首场IND@NYK为11/22，其他三场11/23。",
+      "legResults": [
+        "win",
+        "win",
+        "win",
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "id": 215,
@@ -5815,8 +5822,8 @@
       "usDate": "2026-11-23",
       "bet": "TOR -2.5",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 0,
+      "status": "loss",
       "profitIfWin": 5,
       "legs": [
         {
@@ -5827,7 +5834,11 @@
         }
       ],
       "beijingDate": "2026-11-24",
-      "note": "RH_FILLED_20261123_1628_TOR-2.5 | RH Filled; 25 shares @ $0.76; 20本5利; MIL vs TOR; 净利润按实际成交份数减记录本金计算，比赛结果待结算"
+      "note": "RH_FILLED_20261123_1628_TOR-2.5 | RH Filled; 25 shares @ $0.76; 20本5利; MIL vs TOR; 净利润按实际成交份数减记录本金计算，比赛结果待结算",
+      "legResults": [
+        "loss"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "id": 229,
@@ -5835,8 +5846,8 @@
       "usDate": "2026-11-23",
       "bet": "MIN -3.5",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 26.0,
+      "status": "win",
       "profitIfWin": 6,
       "legs": [
         {
@@ -5847,7 +5858,11 @@
         }
       ],
       "beijingDate": "2026-11-24",
-      "note": "RH_FILLED_20261123_1629_MIN-3.5 | RH Filled; 26 shares @ $0.75; 20本6利; BKN vs MIN; 净利润按实际成交份数减记录本金计算，比赛结果待结算"
+      "note": "RH_FILLED_20261123_1629_MIN-3.5 | RH Filled; 26 shares @ $0.75; 20本6利; BKN vs MIN; 净利润按实际成交份数减记录本金计算，比赛结果待结算",
+      "legResults": [
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "id": 230,
@@ -5855,8 +5870,8 @@
       "usDate": "2026-11-23",
       "bet": "HOU + LAL",
       "stake": 30,
-      "payout": null,
-      "status": "pending",
+      "payout": 39.0,
+      "status": "win",
       "profitIfWin": 9,
       "legs": [
         {
@@ -5871,7 +5886,12 @@
         }
       ],
       "beijingDate": "2026-11-24",
-      "note": "RH_FILLED_20261123_1630_HOU_LAL_2LEG | RH Filled; 39 shares @ $0.738; 30本9利; LAC vs HOU / UTA vs LAL; 净利润按实际成交份数减记录本金计算，比赛结果待结算"
+      "note": "RH_FILLED_20261123_1630_HOU_LAL_2LEG | RH Filled; 39 shares @ $0.738; 30本9利; LAC vs HOU / UTA vs LAL; 净利润按实际成交份数减记录本金计算，比赛结果待结算",
+      "legResults": [
+        "win",
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "id": 231,
@@ -5879,8 +5899,8 @@
       "usDate": "2026-11-23",
       "bet": "LAL + SAS",
       "stake": 30,
-      "payout": null,
-      "status": "pending",
+      "payout": 47.0,
+      "status": "win",
       "profitIfWin": 17,
       "legs": [
         {
@@ -5895,7 +5915,12 @@
         }
       ],
       "beijingDate": "2026-11-24",
-      "note": "RH_FILLED_20261123_1901_LAL_SAS_2LEG | RH Filled; 47 shares @ $0.62; 30本17利; UTA vs LAL / SAS vs SAC; 净利润按实际成交份数减记录本金计算，比赛结果待结算"
+      "note": "RH_FILLED_20261123_1901_LAL_SAS_2LEG | RH Filled; 47 shares @ $0.62; 30本17利; UTA vs LAL / SAS vs SAC; 净利润按实际成交份数减记录本金计算，比赛结果待结算",
+      "legResults": [
+        "win",
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     }
   ]
 }
