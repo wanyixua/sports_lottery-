@@ -5572,7 +5572,7 @@
         }
       ],
       "beijingDate": "2026-11-24",
-      "note": "RH_FILLED_20261123_1506_9LEG | RH Filled; 微信2026-11-22 22:20确认王老板九串一$10。微信要求MIN -3.5、HOU -5.5，RH实际成交MIN -2.5、HOU -4.5；按RH实际成交盘口记账。截图未显示成交份数，净利润待核实，不可自动结算金额。微信另图10-242回复引用不同盘口订单，不适用于本单。",
+      "note": "RH_FILLED_20261123_1506_9LEG | RH Filled; 微信2026-11-22 22:20确认王老板九串一$10。微信要求MIN -3.5、HOU -5.5，RH实际成交MIN -2.5、HOU -4.5；按RH实际成交盘口记账。截图未显示成交份数，净利润待核实，不可自动结算金额。微信另图10-242回复引用不同盘口订单，不适用于本单。 截图未显示成交份数，净利润待核实，不可自动结算金额。微信另图10-242回复引用不同盘口订单，不适用于本单。",
       "legResults": [
         null,
         "win",
@@ -5592,7 +5592,7 @@
       "usDate": "2026-11-23",
       "bet": "CHA +7.5",
       "stake": 20,
-      "payout": 29.0,
+      "payout": 29,
       "status": "win",
       "profitIfWin": 9,
       "legs": [
@@ -5729,7 +5729,7 @@
       "usDate": "2026-11-23",
       "bet": "PHX",
       "stake": 10,
-      "payout": 16.0,
+      "payout": 16,
       "status": "win",
       "profitIfWin": 6,
       "legs": [
@@ -5808,6 +5808,94 @@
         null
       ],
       "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
+    },
+    {
+      "id": 228,
+      "owner": "王老板",
+      "usDate": "2026-11-23",
+      "bet": "TOR -2.5",
+      "stake": 20,
+      "payout": null,
+      "status": "pending",
+      "profitIfWin": 5,
+      "legs": [
+        {
+          "team": "TOR",
+          "market": "spread",
+          "line": -2.5,
+          "gameDate": "2026-11-23"
+        }
+      ],
+      "beijingDate": "2026-11-24",
+      "note": "RH_FILLED_20261123_1628_TOR-2.5 | RH Filled; 25 shares @ $0.76; 20本5利; MIL vs TOR; 净利润按实际成交份数减记录本金计算，比赛结果待结算"
+    },
+    {
+      "id": 229,
+      "owner": "王老板",
+      "usDate": "2026-11-23",
+      "bet": "MIN -3.5",
+      "stake": 20,
+      "payout": null,
+      "status": "pending",
+      "profitIfWin": 6,
+      "legs": [
+        {
+          "team": "MIN",
+          "market": "spread",
+          "line": -3.5,
+          "gameDate": "2026-11-23"
+        }
+      ],
+      "beijingDate": "2026-11-24",
+      "note": "RH_FILLED_20261123_1629_MIN-3.5 | RH Filled; 26 shares @ $0.75; 20本6利; BKN vs MIN; 净利润按实际成交份数减记录本金计算，比赛结果待结算"
+    },
+    {
+      "id": 230,
+      "owner": "王老板",
+      "usDate": "2026-11-23",
+      "bet": "HOU + LAL",
+      "stake": 30,
+      "payout": null,
+      "status": "pending",
+      "profitIfWin": 9,
+      "legs": [
+        {
+          "team": "HOU",
+          "market": "moneyline",
+          "gameDate": "2026-11-23"
+        },
+        {
+          "team": "LAL",
+          "market": "moneyline",
+          "gameDate": "2026-11-23"
+        }
+      ],
+      "beijingDate": "2026-11-24",
+      "note": "RH_FILLED_20261123_1630_HOU_LAL_2LEG | RH Filled; 39 shares @ $0.738; 30本9利; LAC vs HOU / UTA vs LAL; 净利润按实际成交份数减记录本金计算，比赛结果待结算"
+    },
+    {
+      "id": 231,
+      "owner": "王老板",
+      "usDate": "2026-11-23",
+      "bet": "LAL + SAS",
+      "stake": 30,
+      "payout": null,
+      "status": "pending",
+      "profitIfWin": 17,
+      "legs": [
+        {
+          "team": "LAL",
+          "market": "moneyline",
+          "gameDate": "2026-11-23"
+        },
+        {
+          "team": "SAS",
+          "market": "moneyline",
+          "gameDate": "2026-11-23"
+        }
+      ],
+      "beijingDate": "2026-11-24",
+      "note": "RH_FILLED_20261123_1901_LAL_SAS_2LEG | RH Filled; 47 shares @ $0.62; 30本17利; UTA vs LAL / SAS vs SAC; 净利润按实际成交份数减记录本金计算，比赛结果待结算"
     }
   ]
 }
