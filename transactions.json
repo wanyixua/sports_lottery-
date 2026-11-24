@@ -5518,8 +5518,8 @@
       "usDate": "2026-11-23",
       "bet": "CLE + MEM + TOR + PHX + PHI + LAL + MIN -2.5 + HOU -4.5 + SAS -5.5",
       "stake": 10,
-      "payout": null,
-      "status": "pending",
+      "payout": 0,
+      "status": "loss",
       "profitIfWin": null,
       "legs": [
         {
@@ -5572,7 +5572,19 @@
         }
       ],
       "beijingDate": "2026-11-24",
-      "note": "RH_FILLED_20261123_1506_9LEG | RH Filled; 微信2026-11-22 22:20确认王老板九串一$10。微信要求MIN -3.5、HOU -5.5，RH实际成交MIN -2.5、HOU -4.5；按RH实际成交盘口记账。截图未显示成交份数，净利润待核实，不可自动结算金额。微信另图10-242回复引用不同盘口订单，不适用于本单。"
+      "note": "RH_FILLED_20261123_1506_9LEG | RH Filled; 微信2026-11-22 22:20确认王老板九串一$10。微信要求MIN -3.5、HOU -5.5，RH实际成交MIN -2.5、HOU -4.5；按RH实际成交盘口记账。截图未显示成交份数，净利润待核实，不可自动结算金额。微信另图10-242回复引用不同盘口订单，不适用于本单。",
+      "legResults": [
+        null,
+        "win",
+        "loss",
+        null,
+        "loss",
+        null,
+        "win",
+        null,
+        null
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "id": 221,
@@ -5580,8 +5592,8 @@
       "usDate": "2026-11-23",
       "bet": "CHA +7.5",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 29.0,
+      "status": "win",
       "profitIfWin": 9,
       "legs": [
         {
@@ -5592,7 +5604,11 @@
         }
       ],
       "beijingDate": "2026-11-24",
-      "note": "RH_FILLED_20261123_1510_NO_MEM_BY_7.5 | RH 29 shares, 20本9利; 微信黄蜂受让7.5"
+      "note": "RH_FILLED_20261123_1510_NO_MEM_BY_7.5 | RH 29 shares, 20本9利; 微信黄蜂受让7.5",
+      "legResults": [
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "id": 222,
@@ -5600,8 +5616,8 @@
       "usDate": "2026-11-23",
       "bet": "PHI",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 0,
+      "status": "loss",
       "profitIfWin": 16,
       "legs": [
         {
@@ -5611,7 +5627,11 @@
         }
       ],
       "beijingDate": "2026-11-24",
-      "note": "RH_FILLED_20261123_1510_PHI | 36 shares, 20本16利; 微信76人胜20刀"
+      "note": "RH_FILLED_20261123_1510_PHI | 36 shares, 20本16利; 微信76人胜20刀",
+      "legResults": [
+        "loss"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "id": 223,
@@ -5638,8 +5658,8 @@
       "usDate": "2026-11-23",
       "bet": "OKC",
       "stake": 10,
-      "payout": null,
-      "status": "pending",
+      "payout": 0,
+      "status": "loss",
       "profitIfWin": 5,
       "legs": [
         {
@@ -5649,7 +5669,11 @@
         }
       ],
       "beijingDate": "2026-11-24",
-      "note": "RH_FILLED_20261123_1513_OKC | 15 shares, 10本5利; 微信雷霆胜10刀"
+      "note": "RH_FILLED_20261123_1513_OKC | 15 shares, 10本5利; 微信雷霆胜10刀",
+      "legResults": [
+        "loss"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "id": 225,
@@ -5657,8 +5681,8 @@
       "usDate": "2026-11-23",
       "bet": "HOU + MIN -4.5 + TOR -3.5 + SAS -3.5",
       "stake": 30,
-      "payout": null,
-      "status": "pending",
+      "payout": 0,
+      "status": "loss",
       "profitIfWin": 51,
       "legs": [
         {
@@ -5686,7 +5710,14 @@
         }
       ],
       "beijingDate": "2026-11-24",
-      "note": "RH_FILLED_20261123_1512_4LEG | 81 shares, 30本51利; 微信确认四串一30刀，马刺实际让3.5"
+      "note": "RH_FILLED_20261123_1512_4LEG | 81 shares, 30本51利; 微信确认四串一30刀，马刺实际让3.5",
+      "legResults": [
+        null,
+        "win",
+        "loss",
+        null
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "id": 226,
@@ -5713,8 +5744,8 @@
       "usDate": "2026-11-23",
       "bet": "CLE + PHI + LAL + MIN -11.5 + HOU -11.5 + TOR -9.5 + SAS -10.5",
       "stake": 10,
-      "payout": null,
-      "status": "pending",
+      "payout": 0,
+      "status": "loss",
       "profitIfWin": 242,
       "legs": [
         {
@@ -5758,7 +5789,17 @@
         }
       ],
       "beijingDate": "2026-11-24",
-      "note": "RH_FILLED_20261123_1516_7LEG | 252 shares, 10本242利; 微信七串一10刀"
+      "note": "RH_FILLED_20261123_1516_7LEG | 252 shares, 10本242利; 微信七串一10刀",
+      "legResults": [
+        null,
+        "loss",
+        null,
+        "win",
+        null,
+        "loss",
+        null
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     }
   ]
 }
