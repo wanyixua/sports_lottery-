@@ -1,6 +1,6 @@
 {
   "date": "2026-11-23",
-  "capturedAt": "2026-11-24T03:41:05+00:00",
+  "capturedAt": "2026-11-24T05:41:25+00:00",
   "source": "RH public event pages; displayPrice is INDICATIVE, yesAsk/noAsk only when verified",
   "games": [
     {
@@ -5446,17 +5446,7 @@
                 "id": "display-PHX",
                 "owner": "PHX",
                 "label": "Phoenix",
-                "displayPrice": 86.0,
-                "yesAsk": 92.0,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)",
-                "askVerifiedFrom": "ticket"
-              },
-              {
-                "id": "display-tie",
-                "owner": "tie",
-                "label": "Tie",
-                "displayPrice": 10.0,
+                "displayPrice": 99.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -5465,7 +5455,16 @@
                 "id": "display-NOP",
                 "owner": "NOP",
                 "label": "New Orleans",
-                "displayPrice": 6.0,
+                "displayPrice": 1.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-tie",
+                "owner": "tie",
+                "label": "Tie",
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -5483,16 +5482,7 @@
                 "id": "display-spread-PHX-1p5",
                 "owner": "PHX",
                 "label": "Phoenix wins by over 1.5 points",
-                "displayPrice": 79.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
-                "id": "display-spread-PHX-3p5",
-                "owner": "PHX",
-                "label": "Phoenix wins by over 3.5 points",
-                "displayPrice": 59.0,
+                "displayPrice": 99.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -5507,19 +5497,28 @@
                 "priceSource": "RH public event selection (indicative)"
               },
               {
-                "id": "display-spread-NOP-4p5",
-                "owner": "NOP",
-                "label": "New Orleans wins by over 4.5 points",
-                "displayPrice": 6.0,
+                "id": "display-spread-PHX-19p5",
+                "owner": "PHX",
+                "label": "Phoenix wins by over 19.5 points",
+                "displayPrice": 4.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
               },
               {
-                "id": "display-spread-PHX-19p5",
-                "owner": "PHX",
-                "label": "Phoenix wins by over 19.5 points",
-                "displayPrice": 4.0,
+                "id": "display-spread-NOP-1p5",
+                "owner": "NOP",
+                "label": "New Orleans wins by over 1.5 points",
+                "displayPrice": 1.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-NOP-10p5",
+                "owner": "NOP",
+                "label": "New Orleans wins by over 10.5 points",
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -5534,37 +5533,46 @@
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/phoenix-vs-new-orleans-2nd-half-total-nov-23-2026/",
             "choices": [
               {
-                "id": "display-total-over-99p5",
+                "id": "display-total-over-101p5",
                 "owner": "over",
-                "label": "Over 99.5 points",
+                "label": "Over 101.5 points",
                 "displayPrice": 99.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
               },
               {
-                "id": "display-total-over-127p5",
+                "id": "display-total-over-103p5",
                 "owner": "over",
-                "label": "Over 127.5 points",
-                "displayPrice": 94.0,
+                "label": "Over 103.5 points",
+                "displayPrice": 99.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
               },
               {
-                "id": "display-total-over-129p5",
+                "id": "display-total-over-105p5",
                 "owner": "over",
-                "label": "Over 129.5 points",
-                "displayPrice": 84.0,
+                "label": "Over 105.5 points",
+                "displayPrice": 99.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
               },
               {
-                "id": "display-total-over-123p5",
+                "id": "display-total-over-107p5",
                 "owner": "over",
-                "label": "Over 123.5 points",
-                "displayPrice": 12.0,
+                "label": "Over 107.5 points",
+                "displayPrice": 99.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-total-over-109p5",
+                "owner": "over",
+                "label": "Over 109.5 points",
+                "displayPrice": 99.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -5572,7 +5580,7 @@
             ],
             "reason": null,
             "hiddenCount": 14,
-            "expectedMinChoices": 18,
+            "expectedMinChoices": 19,
             "completeness": "partial"
           }
         },
@@ -6277,20 +6285,19 @@
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/san-antonio-vs-sacramento-1st-half-winner-nov-23-2026/",
             "choices": [
               {
-                "id": "display-SAC",
-                "owner": "SAC",
-                "label": "Sacramento",
-                "displayPrice": 74.0,
-                "yesAsk": 75.0,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)",
-                "askVerifiedFrom": "ticket"
-              },
-              {
                 "id": "display-SAS",
                 "owner": "SAS",
                 "label": "San Antonio",
-                "displayPrice": 28.0,
+                "displayPrice": 99.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-SAC",
+                "owner": "SAC",
+                "label": "Sacramento",
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -6299,7 +6306,7 @@
                 "id": "display-tie",
                 "owner": "tie",
                 "label": "Tie",
-                "displayPrice": 5.0,
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -6314,46 +6321,46 @@
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/san-antonio-vs-sacramento-1st-half-spread-nov-23-2026/",
             "choices": [
               {
+                "id": "display-spread-SAS-6p5",
+                "owner": "SAS",
+                "label": "San Antonio wins by over 6.5 points",
+                "displayPrice": 99.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-SAS-8p5",
+                "owner": "SAS",
+                "label": "San Antonio wins by over 8.5 points",
+                "displayPrice": 99.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-SAS-16p5",
+                "owner": "SAS",
+                "label": "San Antonio wins by over 16.5 points",
+                "displayPrice": 7.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-SAS-14p5",
+                "owner": "SAS",
+                "label": "San Antonio wins by over 14.5 points",
+                "displayPrice": 6.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
                 "id": "display-spread-SAC-1p5",
                 "owner": "SAC",
                 "label": "Sacramento wins by over 1.5 points",
-                "displayPrice": 72.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
-                "id": "display-spread-SAC-3p5",
-                "owner": "SAC",
-                "label": "Sacramento wins by over 3.5 points",
-                "displayPrice": 56.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
-                "id": "display-spread-SAC-5p5",
-                "owner": "SAC",
-                "label": "Sacramento wins by over 5.5 points",
-                "displayPrice": 51.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
-                "id": "display-spread-SAC-7p5",
-                "owner": "SAC",
-                "label": "Sacramento wins by over 7.5 points",
-                "displayPrice": 40.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
-                "id": "display-spread-SAC-9p5",
-                "owner": "SAC",
-                "label": "Sacramento wins by over 9.5 points",
-                "displayPrice": 24.0,
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -6368,46 +6375,46 @@
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/san-antonio-vs-sacramento-1st-half-total-nov-23-2026/",
             "choices": [
               {
-                "id": "display-total-over-101p5",
+                "id": "display-total-over-97p5",
                 "owner": "over",
-                "label": "Over 101.5 points",
-                "displayPrice": 64.0,
+                "label": "Over 97.5 points",
+                "displayPrice": 99.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
               },
               {
-                "id": "display-total-over-103p5",
+                "id": "display-total-over-99p5",
                 "owner": "over",
-                "label": "Over 103.5 points",
-                "displayPrice": 63.0,
+                "label": "Over 99.5 points",
+                "displayPrice": 99.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
               },
               {
-                "id": "display-total-over-105p5",
+                "id": "display-total-over-125p5",
                 "owner": "over",
-                "label": "Over 105.5 points",
-                "displayPrice": 53.0,
+                "label": "Over 125.5 points",
+                "displayPrice": 7.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
               },
               {
-                "id": "display-total-over-107p5",
+                "id": "display-total-over-131p5",
                 "owner": "over",
-                "label": "Over 107.5 points",
-                "displayPrice": 45.0,
+                "label": "Over 131.5 points",
+                "displayPrice": 5.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
               },
               {
-                "id": "display-total-over-109p5",
+                "id": "display-total-over-129p5",
                 "owner": "over",
-                "label": "Over 109.5 points",
-                "displayPrice": 31.0,
+                "label": "Over 129.5 points",
+                "displayPrice": 4.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -6427,17 +6434,25 @@
                 "id": "display-SAS",
                 "owner": "SAS",
                 "label": "San Antonio",
-                "displayPrice": 65.0,
-                "yesAsk": 69.0,
+                "displayPrice": 99.0,
+                "yesAsk": null,
                 "noAsk": null,
-                "priceSource": "RH public event selection (indicative)",
-                "askVerifiedFrom": "ticket"
+                "priceSource": "RH public event selection (indicative)"
               },
               {
                 "id": "display-SAC",
                 "owner": "SAC",
                 "label": "Sacramento",
-                "displayPrice": 31.0,
+                "displayPrice": 1.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-tie",
+                "owner": "tie",
+                "label": "Tie",
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -6445,26 +6460,17 @@
             ],
             "reason": null,
             "hiddenCount": 0,
-            "expectedMinChoices": 2,
+            "expectedMinChoices": 3,
             "completeness": "unverified"
           },
           "spread": {
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/san-antonio-vs-sacramento-2nd-half-spread-nov-23-2026/",
             "choices": [
               {
-                "id": "display-spread-SAS-1p5",
-                "owner": "SAS",
-                "label": "San Antonio wins by over 1.5 points",
-                "displayPrice": 61.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
                 "id": "display-spread-SAS-4p5",
                 "owner": "SAS",
                 "label": "San Antonio wins by over 4.5 points",
-                "displayPrice": 54.0,
+                "displayPrice": 99.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -6473,25 +6479,34 @@
                 "id": "display-spread-SAS-6p5",
                 "owner": "SAS",
                 "label": "San Antonio wins by over 6.5 points",
-                "displayPrice": 45.0,
+                "displayPrice": 99.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
               },
               {
-                "id": "display-spread-SAS-8p5",
+                "id": "display-spread-SAS-20p5",
                 "owner": "SAS",
-                "label": "San Antonio wins by over 8.5 points",
-                "displayPrice": 42.0,
+                "label": "San Antonio wins by over 20.5 points",
+                "displayPrice": 9.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
               },
               {
-                "id": "display-spread-SAC-1p5",
+                "id": "display-spread-SAC-11p5",
                 "owner": "SAC",
-                "label": "Sacramento wins by over 1.5 points",
-                "displayPrice": 34.0,
+                "label": "Sacramento wins by over 11.5 points",
+                "displayPrice": 6.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-SAS-10p5",
+                "owner": "SAS",
+                "label": "San Antonio wins by over 10.5 points",
+                "displayPrice": 2.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -6506,37 +6521,19 @@
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/san-antonio-vs-sacramento-2nd-half-total-nov-23-2026/",
             "choices": [
               {
-                "id": "display-total-over-94p5",
+                "id": "display-total-over-96p5",
                 "owner": "over",
-                "label": "Over 94.5 points",
-                "displayPrice": 83.0,
+                "label": "Over 96.5 points",
+                "displayPrice": 99.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
               },
               {
-                "id": "display-total-over-102p5",
+                "id": "display-total-over-98p5",
                 "owner": "over",
-                "label": "Over 102.5 points",
-                "displayPrice": 66.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
-                "id": "display-total-over-108p5",
-                "owner": "over",
-                "label": "Over 108.5 points",
-                "displayPrice": 53.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
-                "id": "display-total-over-124p5",
-                "owner": "over",
-                "label": "Over 124.5 points",
-                "displayPrice": 13.0,
+                "label": "Over 98.5 points",
+                "displayPrice": 99.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -6545,7 +6542,25 @@
                 "id": "display-total-over-122p5",
                 "owner": "over",
                 "label": "Over 122.5 points",
-                "displayPrice": 12.0,
+                "displayPrice": 9.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-total-over-126p5",
+                "owner": "over",
+                "label": "Over 126.5 points",
+                "displayPrice": 8.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-total-over-124p5",
+                "owner": "over",
+                "label": "Over 124.5 points",
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -6711,17 +6726,7 @@
                 "id": "display-SAS",
                 "owner": "SAS",
                 "label": "San Antonio",
-                "displayPrice": 64.0,
-                "yesAsk": 66.0,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)",
-                "askVerifiedFrom": "ticket"
-              },
-              {
-                "id": "display-SAC",
-                "owner": "SAC",
-                "label": "Sacramento",
-                "displayPrice": 33.0,
+                "displayPrice": 99.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -6730,7 +6735,16 @@
                 "id": "display-tie",
                 "owner": "tie",
                 "label": "Tie",
-                "displayPrice": 7.0,
+                "displayPrice": 3.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-SAC",
+                "owner": "SAC",
+                "label": "Sacramento",
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -6745,46 +6759,46 @@
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/san-antonio-vs-sacramento-2nd-quarter-spread-nov-23-2026/",
             "choices": [
               {
-                "id": "display-spread-SAS-1p5",
-                "owner": "SAS",
-                "label": "San Antonio wins by over 1.5 points",
-                "displayPrice": 60.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
-                "id": "display-spread-SAS-2p5",
-                "owner": "SAS",
-                "label": "San Antonio wins by over 2.5 points",
-                "displayPrice": 54.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
-                "id": "display-spread-SAS-4p5",
-                "owner": "SAS",
-                "label": "San Antonio wins by over 4.5 points",
-                "displayPrice": 41.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
                 "id": "display-spread-SAS-6p5",
                 "owner": "SAS",
                 "label": "San Antonio wins by over 6.5 points",
-                "displayPrice": 39.0,
+                "displayPrice": 99.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
               },
               {
-                "id": "display-spread-SAC-1p5",
+                "id": "display-spread-SAS-8p5",
+                "owner": "SAS",
+                "label": "San Antonio wins by over 8.5 points",
+                "displayPrice": 99.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-SAC-9p5",
                 "owner": "SAC",
-                "label": "Sacramento wins by over 1.5 points",
-                "displayPrice": 30.0,
+                "label": "Sacramento wins by over 9.5 points",
+                "displayPrice": 6.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-SAC-3p5",
+                "owner": "SAC",
+                "label": "Sacramento wins by over 3.5 points",
+                "displayPrice": 5.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-SAC-5p5",
+                "owner": "SAC",
+                "label": "Sacramento wins by over 5.5 points",
+                "displayPrice": 2.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -6799,10 +6813,10 @@
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/san-antonio-vs-sacramento-2nd-quarter-total-nov-23-2026/",
             "choices": [
               {
-                "id": "display-total-over-49p5",
+                "id": "display-total-over-51p5",
                 "owner": "over",
-                "label": "Over 49.5 points",
-                "displayPrice": 84.0,
+                "label": "Over 51.5 points",
+                "displayPrice": 97.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -6811,34 +6825,34 @@
                 "id": "display-total-over-53p5",
                 "owner": "over",
                 "label": "Over 53.5 points",
-                "displayPrice": 62.0,
+                "displayPrice": 96.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
               },
               {
-                "id": "display-total-over-55p5",
+                "id": "display-total-over-69p5",
                 "owner": "over",
-                "label": "Over 55.5 points",
-                "displayPrice": 53.0,
+                "label": "Over 69.5 points",
+                "displayPrice": 5.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
               },
               {
-                "id": "display-total-over-57p5",
+                "id": "display-total-over-65p5",
                 "owner": "over",
-                "label": "Over 57.5 points",
-                "displayPrice": 46.0,
+                "label": "Over 65.5 points",
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
               },
               {
-                "id": "display-total-over-59p5",
+                "id": "display-total-over-67p5",
                 "owner": "over",
-                "label": "Over 59.5 points",
-                "displayPrice": 43.0,
+                "label": "Over 67.5 points",
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -6858,17 +6872,16 @@
                 "id": "display-SAS",
                 "owner": "SAS",
                 "label": "San Antonio",
-                "displayPrice": 60.0,
-                "yesAsk": 63.0,
+                "displayPrice": 99.0,
+                "yesAsk": null,
                 "noAsk": null,
-                "priceSource": "RH public event selection (indicative)",
-                "askVerifiedFrom": "ticket"
+                "priceSource": "RH public event selection (indicative)"
               },
               {
                 "id": "display-SAC",
                 "owner": "SAC",
                 "label": "Sacramento",
-                "displayPrice": 36.0,
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -6877,7 +6890,7 @@
                 "id": "display-tie",
                 "owner": "tie",
                 "label": "Tie",
-                "displayPrice": 7.0,
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -6892,19 +6905,28 @@
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/san-antonio-vs-sacramento-3rd-quarter-spread-nov-23-2026/",
             "choices": [
               {
-                "id": "display-spread-SAS-1p5",
+                "id": "display-spread-SAS-6p5",
                 "owner": "SAS",
-                "label": "San Antonio wins by over 1.5 points",
-                "displayPrice": 59.0,
+                "label": "San Antonio wins by over 6.5 points",
+                "displayPrice": 99.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
               },
               {
-                "id": "display-spread-SAS-2p5",
+                "id": "display-spread-SAS-8p5",
                 "owner": "SAS",
-                "label": "San Antonio wins by over 2.5 points",
-                "displayPrice": 49.0,
+                "label": "San Antonio wins by over 8.5 points",
+                "displayPrice": 99.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-SAC-9p5",
+                "owner": "SAC",
+                "label": "Sacramento wins by over 9.5 points",
+                "displayPrice": 4.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -6913,25 +6935,16 @@
                 "id": "display-spread-SAC-1p5",
                 "owner": "SAC",
                 "label": "Sacramento wins by over 1.5 points",
-                "displayPrice": 33.0,
+                "displayPrice": 3.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
               },
               {
-                "id": "display-spread-SAS-10p5",
-                "owner": "SAS",
-                "label": "San Antonio wins by over 10.5 points",
-                "displayPrice": 14.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
-                "id": "display-spread-SAS-14p5",
-                "owner": "SAS",
-                "label": "San Antonio wins by over 14.5 points",
-                "displayPrice": 10.0,
+                "id": "display-spread-SAC-7p5",
+                "owner": "SAC",
+                "label": "Sacramento wins by over 7.5 points",
+                "displayPrice": 3.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -6946,19 +6959,46 @@
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/san-antonio-vs-sacramento-3rd-quarter-total-nov-23-2026/",
             "choices": [
               {
-                "id": "display-total-over-43p5",
+                "id": "display-total-over-51p5",
                 "owner": "over",
-                "label": "Over 43.5 points",
-                "displayPrice": 90.0,
+                "label": "Over 51.5 points",
+                "displayPrice": 99.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
               },
               {
-                "id": "display-total-over-59p5",
+                "id": "display-total-over-53p5",
                 "owner": "over",
-                "label": "Over 59.5 points",
-                "displayPrice": 27.0,
+                "label": "Over 53.5 points",
+                "displayPrice": 99.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-total-over-67p5",
+                "owner": "over",
+                "label": "Over 67.5 points",
+                "displayPrice": 2.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-total-over-55p5",
+                "owner": "over",
+                "label": "Over 55.5 points",
+                "displayPrice": 1.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-total-over-57p5",
+                "owner": "over",
+                "label": "Over 57.5 points",
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -6966,7 +7006,7 @@
             ],
             "reason": null,
             "hiddenCount": 8,
-            "expectedMinChoices": 10,
+            "expectedMinChoices": 13,
             "completeness": "partial"
           }
         },
@@ -6978,8 +7018,8 @@
                 "id": "display-SAS",
                 "owner": "SAS",
                 "label": "San Antonio",
-                "displayPrice": 58.0,
-                "yesAsk": 63.0,
+                "displayPrice": 46.0,
+                "yesAsk": 46.0,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)",
                 "askVerifiedFrom": "ticket"
@@ -6988,7 +7028,7 @@
                 "id": "display-SAC",
                 "owner": "SAC",
                 "label": "Sacramento",
-                "displayPrice": 40.0,
+                "displayPrice": 44.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -6997,7 +7037,7 @@
                 "id": "display-tie",
                 "owner": "tie",
                 "label": "Tie",
-                "displayPrice": 7.0,
+                "displayPrice": 6.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -7012,19 +7052,28 @@
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/san-antonio-vs-sacramento-4th-quarter-spread-nov-23-2026/",
             "choices": [
               {
-                "id": "display-spread-SAS-1p5",
-                "owner": "SAS",
-                "label": "San Antonio wins by over 1.5 points",
-                "displayPrice": 53.0,
+                "id": "display-spread-SAC-1p5",
+                "owner": "SAC",
+                "label": "Sacramento wins by over 1.5 points",
+                "displayPrice": 99.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
               },
               {
-                "id": "display-spread-SAS-2p5",
+                "id": "display-spread-SAS-12p5",
                 "owner": "SAS",
-                "label": "San Antonio wins by over 2.5 points",
-                "displayPrice": 49.0,
+                "label": "San Antonio wins by over 12.5 points",
+                "displayPrice": 4.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-SAS-4p5",
+                "owner": "SAS",
+                "label": "San Antonio wins by over 4.5 points",
+                "displayPrice": 2.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -7033,25 +7082,16 @@
                 "id": "display-spread-SAS-6p5",
                 "owner": "SAS",
                 "label": "San Antonio wins by over 6.5 points",
-                "displayPrice": 29.0,
+                "displayPrice": 2.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
               },
               {
-                "id": "display-spread-SAS-10p5",
-                "owner": "SAS",
-                "label": "San Antonio wins by over 10.5 points",
-                "displayPrice": 15.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
-                "id": "display-spread-SAS-14p5",
-                "owner": "SAS",
-                "label": "San Antonio wins by over 14.5 points",
-                "displayPrice": 4.0,
+                "id": "display-spread-SAC-3p5",
+                "owner": "SAC",
+                "label": "Sacramento wins by over 3.5 points",
+                "displayPrice": 1.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -7066,28 +7106,19 @@
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/san-antonio-vs-sacramento-4th-quarter-total-nov-23-2026/",
             "choices": [
               {
-                "id": "display-total-over-41p5",
-                "owner": "over",
-                "label": "Over 41.5 points",
-                "displayPrice": 93.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
-                "id": "display-total-over-53p5",
-                "owner": "over",
-                "label": "Over 53.5 points",
-                "displayPrice": 46.0,
-                "yesAsk": null,
-                "noAsk": null,
-                "priceSource": "RH public event selection (indicative)"
-              },
-              {
                 "id": "display-total-over-57p5",
                 "owner": "over",
                 "label": "Over 57.5 points",
-                "displayPrice": 29.0,
+                "displayPrice": 99.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-total-over-59p5",
+                "owner": "over",
+                "label": "Over 59.5 points",
+                "displayPrice": 99.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -7096,7 +7127,16 @@
                 "id": "display-total-over-61p5",
                 "owner": "over",
                 "label": "Over 61.5 points",
-                "displayPrice": 16.0,
+                "displayPrice": 99.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-total-over-63p5",
+                "owner": "over",
+                "label": "Over 63.5 points",
+                "displayPrice": 31.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
@@ -7105,7 +7145,7 @@
                 "id": "display-total-over-65p5",
                 "owner": "over",
                 "label": "Over 65.5 points",
-                "displayPrice": 8.0,
+                "displayPrice": 2.0,
                 "yesAsk": null,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)"
