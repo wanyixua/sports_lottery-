@@ -1,6 +1,6 @@
 {
   "date": "2026-11-23",
-  "capturedAt": "2026-11-25T04:40:47+00:00",
+  "capturedAt": "2026-11-25T07:41:44+00:00",
   "source": "RH public event pages; displayPrice is INDICATIVE, yesAsk/noAsk only when verified",
   "games": [
     {
@@ -4414,18 +4414,92 @@
         "h1": {
           "winner": {
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/cleveland-vs-chicago-1st-half-winner-nov-23-2026/",
-            "choices": [],
-            "reason": "Ambiguous embedded event contract groups",
+            "choices": [
+              {
+                "id": "display-CHI",
+                "owner": "CHI",
+                "label": "Chicago",
+                "displayPrice": 99.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-CLE",
+                "owner": "CLE",
+                "label": "Cleveland",
+                "displayPrice": 1.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-tie",
+                "owner": "tie",
+                "label": "Tie",
+                "displayPrice": 1.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              }
+            ],
+            "reason": null,
             "hiddenCount": 0,
-            "expectedMinChoices": 0,
+            "expectedMinChoices": 3,
             "completeness": "unverified"
           },
           "spread": {
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/cleveland-vs-chicago-1st-half-spread-nov-23-2026/",
-            "choices": [],
-            "reason": "Ambiguous embedded event contract groups",
+            "choices": [
+              {
+                "id": "display-spread-CHI-5p5",
+                "owner": "CHI",
+                "label": "Chicago wins by over 5.5 points",
+                "displayPrice": 99.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-CHI-9p5",
+                "owner": "CHI",
+                "label": "Chicago wins by over 9.5 points",
+                "displayPrice": 99.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-CHI-7p5",
+                "owner": "CHI",
+                "label": "Chicago wins by over 7.5 points",
+                "displayPrice": 97.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-CLE-1p5",
+                "owner": "CLE",
+                "label": "Cleveland wins by over 1.5 points",
+                "displayPrice": 1.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-CLE-10p5",
+                "owner": "CLE",
+                "label": "Cleveland wins by over 10.5 points",
+                "displayPrice": 1.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              }
+            ],
+            "reason": null,
             "hiddenCount": 14,
-            "expectedMinChoices": 14,
+            "expectedMinChoices": 19,
             "completeness": "partial"
           },
           "total": {
@@ -4924,10 +4998,38 @@
         "q3": {
           "winner": {
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/cleveland-vs-chicago-3rd-quarter-winner-nov-23-2026/",
-            "choices": [],
-            "reason": "Ambiguous embedded event contract groups",
+            "choices": [
+              {
+                "id": "display-CLE",
+                "owner": "CLE",
+                "label": "Cleveland",
+                "displayPrice": 99.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-CHI",
+                "owner": "CHI",
+                "label": "Chicago",
+                "displayPrice": 2.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-tie",
+                "owner": "tie",
+                "label": "Tie",
+                "displayPrice": 1.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              }
+            ],
+            "reason": null,
             "hiddenCount": 0,
-            "expectedMinChoices": 0,
+            "expectedMinChoices": 3,
             "completeness": "unverified"
           },
           "spread": {
