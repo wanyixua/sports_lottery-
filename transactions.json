@@ -5928,8 +5928,8 @@
       "usDate": "2026-11-24",
       "bet": "DET + BOS + DEN",
       "stake": 10,
-      "payout": null,
-      "status": "pending",
+      "payout": 0,
+      "status": "loss",
       "profitIfWin": 29,
       "legs": [
         {
@@ -5949,7 +5949,13 @@
         }
       ],
       "beijingDate": "2026-11-25",
-      "note": "RH_FILLED_20261124_1542_DET_BOS_DEN_3LEG | RH Filled; 39 of 39 shares @ $0.239; 10本29利; DET vs ORL / BOS vs WAS / DAL vs DEN; 用户明确今天的三串一归王老板; 结果待结算"
+      "note": "RH_FILLED_20261124_1542_DET_BOS_DEN_3LEG | RH Filled; 39 of 39 shares @ $0.239; 10本29利; DET vs ORL / BOS vs WAS / DAL vs DEN; 用户明确今天的三串一归王老板; 结果待结算",
+      "legResults": [
+        "win",
+        "win",
+        "loss"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "id": 233,
