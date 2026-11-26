@@ -5963,8 +5963,8 @@
       "usDate": "2026-11-25",
       "bet": "GSW + HOU + MEM",
       "stake": 30,
-      "payout": null,
-      "status": "pending",
+      "payout": 78.0,
+      "status": "win",
       "profitIfWin": 48,
       "legs": [
         {
@@ -5984,7 +5984,13 @@
         }
       ],
       "beijingDate": "2026-11-26",
-      "note": "RH_FILLED_20261124_1109_GSW_HOU_MEM_3LEG | RH Filled; 78 of 78 shares @ $0.37; 30本48利; SAC vs GSW / PHX vs HOU / LAC vs MEM; 用户明确明天的三串一归本人; 结果待结算"
+      "note": "RH_FILLED_20261124_1109_GSW_HOU_MEM_3LEG | RH Filled; 78 of 78 shares @ $0.37; 30本48利; SAC vs GSW / PHX vs HOU / LAC vs MEM; 用户明确明天的三串一归本人; 结果待结算",
+      "legResults": [
+        "win",
+        "win",
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     }
   ]
 }
