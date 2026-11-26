@@ -1,6 +1,6 @@
 {
   "date": "2026-11-27",
-  "capturedAt": "2026-11-26T07:58:52+00:00",
+  "capturedAt": "2026-11-26T10:16:24+00:00",
   "source": "RH public event pages; displayPrice is INDICATIVE, yesAsk/noAsk only when verified",
   "games": [
     {
@@ -11,12 +11,13 @@
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/miami-vs-new-york-1st-half-winner-nov-27-2026/",
             "choices": [
               {
-                "id": "visible-ticket-MIA",
-                "label": "Miami",
-                "yesAsk": 43.0,
+                "id": "display-tie",
+                "owner": "tie",
+                "label": "Tie",
+                "displayPrice": 6.0,
+                "yesAsk": null,
                 "noAsk": null,
-                "owner": "MIA",
-                "displayPrice": null
+                "priceSource": "RH public event selection (indicative)"
               }
             ],
             "reason": null,
@@ -58,7 +59,7 @@
               {
                 "id": "visible-ticket-MIA",
                 "label": "Miami",
-                "yesAsk": 62.0,
+                "yesAsk": 64.0,
                 "noAsk": null,
                 "owner": "MIA",
                 "displayPrice": null
@@ -93,7 +94,7 @@
               {
                 "id": "visible-ticket-MIA",
                 "label": "Miami",
-                "yesAsk": 59.0,
+                "yesAsk": 60.0,
                 "noAsk": null,
                 "owner": "MIA",
                 "displayPrice": null
@@ -356,7 +357,7 @@
                 "owner": "TOR",
                 "label": "Toronto",
                 "displayPrice": 12.0,
-                "yesAsk": 92.0,
+                "yesAsk": 99.0,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)",
                 "askVerifiedFrom": "ticket"
@@ -714,7 +715,7 @@
               {
                 "id": "visible-ticket-IND",
                 "label": "Indiana",
-                "yesAsk": 69.0,
+                "yesAsk": 68.0,
                 "noAsk": null,
                 "owner": "IND",
                 "displayPrice": null
@@ -777,7 +778,7 @@
               {
                 "id": "visible-ticket-ATL",
                 "label": "Atlanta",
-                "yesAsk": 48.0,
+                "yesAsk": 33.0,
                 "noAsk": null,
                 "owner": "ATL",
                 "displayPrice": null
@@ -812,7 +813,7 @@
               {
                 "id": "visible-ticket-ATL",
                 "label": "Atlanta",
-                "yesAsk": 55.0,
+                "yesAsk": 52.0,
                 "noAsk": null,
                 "owner": "ATL",
                 "displayPrice": null
@@ -847,7 +848,7 @@
               {
                 "id": "visible-ticket-ATL",
                 "label": "Atlanta",
-                "yesAsk": 53.0,
+                "yesAsk": 50.0,
                 "noAsk": null,
                 "owner": "ATL",
                 "displayPrice": null
@@ -882,7 +883,7 @@
               {
                 "id": "visible-ticket-ATL",
                 "label": "Atlanta",
-                "yesAsk": 56.0,
+                "yesAsk": 55.0,
                 "noAsk": null,
                 "owner": "ATL",
                 "displayPrice": null
@@ -917,7 +918,7 @@
               {
                 "id": "visible-ticket-ATL",
                 "label": "Atlanta",
-                "yesAsk": 56.0,
+                "yesAsk": 52.0,
                 "noAsk": null,
                 "owner": "ATL",
                 "displayPrice": null
@@ -1379,7 +1380,7 @@
               {
                 "id": "visible-ticket-DEN",
                 "label": "Denver",
-                "yesAsk": 83.0,
+                "yesAsk": 84.0,
                 "noAsk": null,
                 "owner": "DEN",
                 "displayPrice": null
@@ -1495,7 +1496,7 @@
               {
                 "id": "visible-ticket-DEN",
                 "label": "Denver",
-                "yesAsk": 99.0,
+                "yesAsk": 88.0,
                 "noAsk": null,
                 "owner": "DEN",
                 "displayPrice": null
