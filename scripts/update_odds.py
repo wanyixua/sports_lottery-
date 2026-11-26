@@ -363,9 +363,13 @@ def process_html(html, now, *, dest=DEST, spread_dest=SPREAD_DEST, total_dest=TO
     if quoted == 0:
         print('Warning: no live spread ask quotes; publishing unavailable prices')
     print(f'{target}: {len(games)} games, {count // 2} spread contracts, {count} spread directions (YES/NO), {quoted} valid ask prices')
-    champion_markets = championships(events, quotes, TEAMS)
+    # Championship markets are optional: never block valid daily NBA data.
+    try:
+        champion_markets = championships(events, quotes, TEAMS)
+    except Exception as exc:
+        print(f'Warning: championship extraction failed ({exc}); daily caches still publish')
+        champion_markets = {}
     quoted_champions = sum(t['pricePercent'] is not None for m in champion_markets.values() for t in m['teams'])
-    if not quoted_champions: raise RuntimeError('No champion YES ask quotes; caches preserved')
     save_if_changed(dest, odds_payload, ('date', 'source', 'games'))
     save_if_changed(spread_dest, spread_payload, ('date', 'source', 'games'))
     save_if_changed(total_dest, total_payload, ('date', 'source', 'games'))
@@ -375,7 +379,8 @@ def process_html(html, now, *, dest=DEST, spread_dest=SPREAD_DEST, total_dest=TO
     }
     quoted_champions = sum(t['pricePercent'] is not None for m in champion_markets.values() for t in m['teams'])
     if not quoted_champions:
-        raise RuntimeError('No champion YES ask quotes; cache preserved')
+        print('Warning: championship quotes unavailable; preserving champions.json')
+        return odds_payload, spread_payload, total_payload, champion_payload
     print(f'Champions: {sum(len(m["teams"]) for m in champion_markets.values())} contracts, {quoted_champions} valid ask prices')
     save_if_changed(champion_dest, champion_payload, ('season', 'source', 'markets'))
     return odds_payload, spread_payload, total_payload, champion_payload
