@@ -836,6 +836,11 @@
       }
       card.append(toolbar,tabs,content);drawContent();frag.append(card);
     }
+    if(!(odds.games||[]).length){
+      const empty=document.createElement('p');
+      empty.textContent='目前没有已核实的今日或未来 NBA 盘口；旧比赛不会作为可下单盘口展示。';
+      frag.append(empty);
+    }
     list.replaceChildren(frag);
     // odds.date is the US Pacific slate date, NOT the Beijing calendar date.
     // Derive the Beijing slate date from real PT tipoff times. Never label the
@@ -1106,6 +1111,32 @@
     if(a.status==='fulfilled'&&Array.isArray(a.value.games)) odds=a.value;
     if(b.status==='fulfilled'&&Array.isArray(b.value.games)) spreads=b.value;
     if(c.status==='fulfilled'&&Array.isArray(c.value.games)) totals=c.value;
+    // Do not show previous-day games as if their quotes are still tradable.
+    const ptParts=new Intl.DateTimeFormat('en-US',{timeZone:'America/Los_Angeles',
+      year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(new Date());
+    const ptPart=k=>ptParts.find(p=>p.type===k)?.value||'';
+    const ptToday=`${ptPart('year')}-${ptPart('month')}-${ptPart('day')}`;
+    if(odds.date<ptToday){
+      const future=e.status==='fulfilled'&&Array.isArray(e.value.games)?e.value:null;
+      const futureGames=(future?.games||[]).filter(g=>g&&g.usDate>=ptToday&&g.id&&g.away&&g.home)
+        .sort((x,y)=>x.usDate.localeCompare(y.usDate)||String(x.startTimePT).localeCompare(String(y.startTimePT)));
+      if(futureGames.length){
+        const age=Date.now()-new Date(future.capturedAt).getTime();
+        const fresh=Number.isFinite(age)&&age>=0&&age<20*60*1000;
+        const ids=new Set(futureGames.map(g=>g.id));
+        const clearTeam=team=>({...team,pricePercent:null});
+        odds={...odds,date:futureGames[0].usDate,capturedAt:future.capturedAt,
+          games:futureGames.map(g=>fresh?g:{...g,away:clearTeam(g.away),home:clearTeam(g.home)})};
+        spreads={date:odds.date,capturedAt:future.capturedAt,games:(future.spreads||[])
+          .filter(g=>ids.has(g.id)).map(g=>fresh?g:{...g,lines:(g.lines||[]).map(l=>({...l,pricePercent:null}))})};
+        totals={date:odds.date,capturedAt:future.capturedAt,games:(future.totals||[])
+          .filter(g=>ids.has(g.id)).map(g=>fresh?g:{...g,lines:(g.lines||[]).map(l=>({...l,overPricePercent:null,underPricePercent:null}))})};
+      }else{
+        odds={...odds,date:ptToday,capturedAt:null,games:[]};
+        spreads={date:ptToday,games:[]};
+        totals={date:ptToday,games:[]};
+      }
+    }
     // Merge only the dates actually returned by RH; this is not a fabricated schedule.
     // Today's already-cached slate takes precedence, so games/finals remain visible.
     if(e.status==='fulfilled'&&Array.isArray(e.value.games)){
@@ -1140,6 +1171,14 @@
           totals.games.push(fresh?item:{...item,lines:[]});
         }
       }
+    }
+    // A stale capturedAt must never be shown as a current tradable price.
+    const mainAge=Date.now()-new Date(odds.capturedAt).getTime();
+    if(!Number.isFinite(mainAge)||mainAge<0||mainAge>=20*60*1000){
+      odds.games=(odds.games||[]).map(g=>({...g,
+        away:{...g.away,pricePercent:null},home:{...g.home,pricePercent:null}}));
+      spreads.games=(spreads.games||[]).map(g=>({...g,lines:(g.lines||[]).map(l=>({...l,pricePercent:null}))}));
+      totals.games=(totals.games||[]).map(g=>({...g,lines:(g.lines||[]).map(l=>({...l,overPricePercent:null,underPricePercent:null}))}));
     }
     // Remove selections whose price no longer exists in the current source.
     const gameIds=new Set((odds.games||[]).map(g=>g.id));
