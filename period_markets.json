@@ -1,6 +1,6 @@
 {
   "date": "2026-11-27",
-  "capturedAt": "2026-11-26T10:16:24+00:00",
+  "capturedAt": "2026-11-26T13:37:45+00:00",
   "source": "RH public event pages; displayPrice is INDICATIVE, yesAsk/noAsk only when verified",
   "games": [
     {
@@ -10,6 +10,16 @@
           "winner": {
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/miami-vs-new-york-1st-half-winner-nov-27-2026/",
             "choices": [
+              {
+                "id": "display-MIA",
+                "owner": "MIA",
+                "label": "Miami",
+                "displayPrice": 43.0,
+                "yesAsk": 42.0,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)",
+                "askVerifiedFrom": "ticket"
+              },
               {
                 "id": "display-tie",
                 "owner": "tie",
@@ -22,12 +32,21 @@
             ],
             "reason": null,
             "hiddenCount": 0,
-            "expectedMinChoices": 1,
+            "expectedMinChoices": 2,
             "completeness": "unverified"
           },
           "spread": {
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/miami-vs-new-york-1st-half-spread-nov-27-2026/",
             "choices": [
+              {
+                "id": "display-spread-NYK-1p5",
+                "owner": "NYK",
+                "label": "New York wins by over 1.5 points",
+                "displayPrice": 55.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
               {
                 "id": "display-spread-NYK-20p5",
                 "owner": "NYK",
@@ -40,7 +59,7 @@
             ],
             "reason": null,
             "hiddenCount": 14,
-            "expectedMinChoices": 15,
+            "expectedMinChoices": 16,
             "completeness": "partial"
           },
           "total": {
@@ -59,7 +78,7 @@
               {
                 "id": "visible-ticket-MIA",
                 "label": "Miami",
-                "yesAsk": 64.0,
+                "yesAsk": 62.0,
                 "noAsk": null,
                 "owner": "MIA",
                 "displayPrice": null
@@ -92,12 +111,14 @@
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/miami-vs-new-york-1st-quarter-winner-nov-27-2026/",
             "choices": [
               {
-                "id": "visible-ticket-MIA",
-                "label": "Miami",
-                "yesAsk": 60.0,
+                "id": "display-NYK",
+                "owner": "NYK",
+                "label": "New York",
+                "displayPrice": 56.0,
+                "yesAsk": 56.0,
                 "noAsk": null,
-                "owner": "MIA",
-                "displayPrice": null
+                "priceSource": "RH public event selection (indicative)",
+                "askVerifiedFrom": "ticket"
               }
             ],
             "reason": null,
@@ -357,7 +378,7 @@
                 "owner": "TOR",
                 "label": "Toronto",
                 "displayPrice": 12.0,
-                "yesAsk": 99.0,
+                "yesAsk": 92.0,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)",
                 "askVerifiedFrom": "ticket"
@@ -686,7 +707,7 @@
               {
                 "id": "visible-ticket-IND",
                 "label": "Indiana",
-                "yesAsk": 69.0,
+                "yesAsk": 68.0,
                 "noAsk": null,
                 "owner": "IND",
                 "displayPrice": null
@@ -776,12 +797,14 @@
             "url": "https://robinhood.com/us/en/prediction-markets/mens-pro-basketball/events/atlanta-vs-boston-1st-half-winner-nov-27-2026/",
             "choices": [
               {
-                "id": "visible-ticket-ATL",
-                "label": "Atlanta",
-                "yesAsk": 33.0,
+                "id": "display-BOS",
+                "owner": "BOS",
+                "label": "Boston",
+                "displayPrice": 69.0,
+                "yesAsk": 68.0,
                 "noAsk": null,
-                "owner": "ATL",
-                "displayPrice": null
+                "priceSource": "RH public event selection (indicative)",
+                "askVerifiedFrom": "ticket"
               }
             ],
             "reason": null,
@@ -848,7 +871,7 @@
               {
                 "id": "visible-ticket-ATL",
                 "label": "Atlanta",
-                "yesAsk": 50.0,
+                "yesAsk": 36.0,
                 "noAsk": null,
                 "owner": "ATL",
                 "displayPrice": null
@@ -883,7 +906,7 @@
               {
                 "id": "visible-ticket-ATL",
                 "label": "Atlanta",
-                "yesAsk": 55.0,
+                "yesAsk": 54.0,
                 "noAsk": null,
                 "owner": "ATL",
                 "displayPrice": null
@@ -1496,7 +1519,7 @@
               {
                 "id": "visible-ticket-DEN",
                 "label": "Denver",
-                "yesAsk": 88.0,
+                "yesAsk": 87.0,
                 "noAsk": null,
                 "owner": "DEN",
                 "displayPrice": null
