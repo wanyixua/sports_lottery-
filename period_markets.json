@@ -1,6 +1,6 @@
 {
   "date": "2026-11-27",
-  "capturedAt": "2026-11-26T15:39:51+00:00",
+  "capturedAt": "2026-11-26T18:24:03+00:00",
   "source": "RH public event pages; displayPrice is INDICATIVE, yesAsk/noAsk only when verified",
   "games": [
     {
@@ -152,7 +152,7 @@
                 "owner": "NYK",
                 "label": "New York",
                 "displayPrice": 58.0,
-                "yesAsk": 55.0,
+                "yesAsk": 57.0,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)",
                 "askVerifiedFrom": "ticket"
@@ -478,7 +478,7 @@
               {
                 "id": "visible-ticket-DET",
                 "label": "Detroit",
-                "yesAsk": 98.0,
+                "yesAsk": 88.0,
                 "noAsk": null,
                 "owner": "DET",
                 "displayPrice": null
@@ -507,7 +507,7 @@
               {
                 "id": "visible-ticket-DET",
                 "label": "Detroit",
-                "yesAsk": 99.0,
+                "yesAsk": 85.0,
                 "noAsk": null,
                 "owner": "DET",
                 "displayPrice": null
@@ -838,7 +838,7 @@
                 "owner": "BOS",
                 "label": "Boston",
                 "displayPrice": 69.0,
-                "yesAsk": 67.0,
+                "yesAsk": 68.0,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)",
                 "askVerifiedFrom": "ticket"
@@ -865,6 +865,15 @@
                 "id": "display-spread-ATL-2p5",
                 "owner": "ATL",
                 "label": "Atlanta wins by over 2.5 points",
+                "displayPrice": 7.0,
+                "yesAsk": null,
+                "noAsk": null,
+                "priceSource": "RH public event selection (indicative)"
+              },
+              {
+                "id": "display-spread-ATL-4p5",
+                "owner": "ATL",
+                "label": "Atlanta wins by over 4.5 points",
                 "displayPrice": 7.0,
                 "yesAsk": null,
                 "noAsk": null,
@@ -900,7 +909,7 @@
             ],
             "reason": null,
             "hiddenCount": 14,
-            "expectedMinChoices": 18,
+            "expectedMinChoices": 19,
             "completeness": "partial"
           },
           "total": {
@@ -973,7 +982,7 @@
               {
                 "id": "visible-ticket-ATL",
                 "label": "Atlanta",
-                "yesAsk": 50.0,
+                "yesAsk": 34.0,
                 "noAsk": null,
                 "owner": "ATL",
                 "displayPrice": null
@@ -1159,7 +1168,7 @@
               {
                 "id": "visible-ticket-MEM",
                 "label": "Memphis",
-                "yesAsk": 99.0,
+                "yesAsk": 67.0,
                 "noAsk": null,
                 "owner": "MEM",
                 "displayPrice": null
@@ -1309,7 +1318,7 @@
               {
                 "id": "visible-ticket-DAL",
                 "label": "Dallas",
-                "yesAsk": 98.0,
+                "yesAsk": 66.0,
                 "noAsk": null,
                 "owner": "DAL",
                 "displayPrice": null
@@ -1338,7 +1347,7 @@
               {
                 "id": "visible-ticket-DAL",
                 "label": "Dallas",
-                "yesAsk": 99.0,
+                "yesAsk": 68.0,
                 "noAsk": null,
                 "owner": "DAL",
                 "displayPrice": null
@@ -1668,8 +1677,8 @@
                 "id": "display-POR",
                 "owner": "POR",
                 "label": "Portland",
-                "displayPrice": 99.0,
-                "yesAsk": 98.0,
+                "displayPrice": 73.0,
+                "yesAsk": 72.0,
                 "noAsk": null,
                 "priceSource": "RH public event selection (indicative)",
                 "askVerifiedFrom": "ticket"
@@ -1698,7 +1707,7 @@
               {
                 "id": "visible-ticket-GSW",
                 "label": "Golden State",
-                "yesAsk": 99.0,
+                "yesAsk": 55.0,
                 "noAsk": null,
                 "owner": "GSW",
                 "displayPrice": null
