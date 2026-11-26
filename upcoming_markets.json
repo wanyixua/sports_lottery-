@@ -1,47 +1,26 @@
 {
   "timezone": "America/Los_Angeles",
   "source": "Robinhood public page (unofficial; rendered page only)",
-  "capturedAt": "2026-11-25T20:46:18-08:00",
+  "capturedAt": "2026-11-25T21:41:45-08:00",
   "games": [
-    {
-      "id": "2026-11-25-SAC-GSW",
-      "startTimePT": "19:00",
-      "status": "live",
-      "progress": "3rd 3:26",
-      "away": {
-        "code": "SAC",
-        "nameZh": "国王",
-        "record": "2-15",
-        "color": "#000000",
-        "pricePercent": 8.0
-      },
-      "home": {
-        "code": "GSW",
-        "nameZh": "勇士",
-        "record": "9-8",
-        "color": "#1D428A",
-        "pricePercent": 93.0
-      },
-      "usDate": "2026-11-25"
-    },
     {
       "id": "2026-11-25-SAS-POR",
       "startTimePT": "19:00",
       "status": "live",
-      "progress": "3rd 6:57",
+      "progress": "4th 0:37",
       "away": {
         "code": "SAS",
         "nameZh": "马刺",
         "record": "15-3",
         "color": "#6B7A80",
-        "pricePercent": 59.0
+        "pricePercent": 1.0
       },
       "home": {
         "code": "POR",
         "nameZh": "开拓者",
         "record": "11-6",
         "color": "#E03A3E",
-        "pricePercent": 44.0
+        "pricePercent": null
       },
       "usDate": "2026-11-25"
     },
@@ -55,14 +34,14 @@
         "nameZh": "热火",
         "record": "10-7",
         "color": "#98002E",
-        "pricePercent": 42.0
+        "pricePercent": 41.0
       },
       "home": {
         "code": "NYK",
         "nameZh": "尼克斯",
         "record": "12-6",
         "color": "#F58426",
-        "pricePercent": 61.0
+        "pricePercent": 62.0
       },
       "usDate": "2026-11-27"
     },
@@ -118,14 +97,14 @@
         "nameZh": "76人",
         "record": "15-4",
         "color": "#ED174C",
-        "pricePercent": 66.0
+        "pricePercent": 64.0
       },
       "home": {
         "code": "IND",
         "nameZh": "步行者",
         "record": "6-12",
         "color": "#002D62",
-        "pricePercent": 37.0
+        "pricePercent": 39.0
       },
       "usDate": "2026-11-27"
     },
@@ -139,14 +118,14 @@
         "nameZh": "老鹰",
         "record": "11-6",
         "color": "#C8102E",
-        "pricePercent": 28.0
+        "pricePercent": 26.0
       },
       "home": {
         "code": "BOS",
         "nameZh": "凯尔特人",
         "record": "12-6",
         "color": "#007A33",
-        "pricePercent": 76.0
+        "pricePercent": 77.0
       },
       "usDate": "2026-11-27"
     },
@@ -160,14 +139,14 @@
         "nameZh": "灰熊",
         "record": "14-5",
         "color": "#5D76A9",
-        "pricePercent": 38.0
+        "pricePercent": 39.0
       },
       "home": {
         "code": "MIN",
         "nameZh": "森林狼",
         "record": "14-5",
         "color": "#0C2340",
-        "pricePercent": 66.0
+        "pricePercent": 65.0
       },
       "usDate": "2026-11-27"
     },
@@ -181,7 +160,7 @@
         "nameZh": "独行侠",
         "record": "11-7",
         "color": "#00538C",
-        "pricePercent": 49.0
+        "pricePercent": 50.0
       },
       "home": {
         "code": "PHX",
@@ -265,1140 +244,19 @@
         "nameZh": "鹈鹕",
         "record": "5-14",
         "color": "#0C2340",
-        "pricePercent": 40.0
+        "pricePercent": 42.0
       },
       "home": {
         "code": "LAC",
         "nameZh": "快船",
         "record": "4-13",
         "color": "#C8102E",
-        "pricePercent": 62.0
+        "pricePercent": 61.0
       },
       "usDate": "2026-11-27"
     }
   ],
   "spreads": [
-    {
-      "id": "2026-11-25-SAC-GSW",
-      "lines": [
-        {
-          "id": "4b3cd794-bfc5-423e-a2d9-32215a3c703a:no",
-          "contractId": "4b3cd794-bfc5-423e-a2d9-32215a3c703a",
-          "side": "no",
-          "team": "GSW",
-          "teamNameZh": "勇士",
-          "margin": -45.5,
-          "pricePercent": null
-        },
-        {
-          "id": "8b714ecd-947b-40ac-b0e2-deb7071f6cf0:no",
-          "contractId": "8b714ecd-947b-40ac-b0e2-deb7071f6cf0",
-          "side": "no",
-          "team": "GSW",
-          "teamNameZh": "勇士",
-          "margin": -44.5,
-          "pricePercent": null
-        },
-        {
-          "id": "ecdc4f44-88b2-4092-ac78-d10cce59bb5f:no",
-          "contractId": "ecdc4f44-88b2-4092-ac78-d10cce59bb5f",
-          "side": "no",
-          "team": "GSW",
-          "teamNameZh": "勇士",
-          "margin": -42.5,
-          "pricePercent": null
-        },
-        {
-          "id": "98012c9d-e430-4e4c-98db-c3d0a853a258:no",
-          "contractId": "98012c9d-e430-4e4c-98db-c3d0a853a258",
-          "side": "no",
-          "team": "GSW",
-          "teamNameZh": "勇士",
-          "margin": -40.5,
-          "pricePercent": null
-        },
-        {
-          "id": "b289991e-9611-44c3-9be8-4720f29f8de6:no",
-          "contractId": "b289991e-9611-44c3-9be8-4720f29f8de6",
-          "side": "no",
-          "team": "GSW",
-          "teamNameZh": "勇士",
-          "margin": -38.5,
-          "pricePercent": null
-        },
-        {
-          "id": "4af2cd89-5b3e-47e7-87c5-b7962bfabf89:no",
-          "contractId": "4af2cd89-5b3e-47e7-87c5-b7962bfabf89",
-          "side": "no",
-          "team": "GSW",
-          "teamNameZh": "勇士",
-          "margin": -36.5,
-          "pricePercent": null
-        },
-        {
-          "id": "97eb0504-ca42-40e8-aff7-5be7e02398da:no",
-          "contractId": "97eb0504-ca42-40e8-aff7-5be7e02398da",
-          "side": "no",
-          "team": "GSW",
-          "teamNameZh": "勇士",
-          "margin": -34.5,
-          "pricePercent": null
-        },
-        {
-          "id": "68066d3b-9f4b-454e-82d6-d5f05a5effa5:no",
-          "contractId": "68066d3b-9f4b-454e-82d6-d5f05a5effa5",
-          "side": "no",
-          "team": "GSW",
-          "teamNameZh": "勇士",
-          "margin": -32.5,
-          "pricePercent": null
-        },
-        {
-          "id": "875a525c-d7e7-47b5-bad3-c3f4aad7138d:no",
-          "contractId": "875a525c-d7e7-47b5-bad3-c3f4aad7138d",
-          "side": "no",
-          "team": "GSW",
-          "teamNameZh": "勇士",
-          "margin": -30.5,
-          "pricePercent": null
-        },
-        {
-          "id": "e07bc1e3-6ff1-40b9-a9b6-1f18ad63fd75:no",
-          "contractId": "e07bc1e3-6ff1-40b9-a9b6-1f18ad63fd75",
-          "side": "no",
-          "team": "GSW",
-          "teamNameZh": "勇士",
-          "margin": -28.5,
-          "pricePercent": null
-        },
-        {
-          "id": "655d4154-a0b6-4a81-8ccb-ddb06ddc4265:no",
-          "contractId": "655d4154-a0b6-4a81-8ccb-ddb06ddc4265",
-          "side": "no",
-          "team": "GSW",
-          "teamNameZh": "勇士",
-          "margin": -26.5,
-          "pricePercent": null
-        },
-        {
-          "id": "376372e7-9111-4b7b-b85a-61facf384c18:no",
-          "contractId": "376372e7-9111-4b7b-b85a-61facf384c18",
-          "side": "no",
-          "team": "GSW",
-          "teamNameZh": "勇士",
-          "margin": -24.5,
-          "pricePercent": null
-        },
-        {
-          "id": "bcdcc31e-9665-42a1-bc39-5f970ab51a25:no",
-          "contractId": "bcdcc31e-9665-42a1-bc39-5f970ab51a25",
-          "side": "no",
-          "team": "GSW",
-          "teamNameZh": "勇士",
-          "margin": -22.5,
-          "pricePercent": null
-        },
-        {
-          "id": "2571d1da-0904-44a1-8e3a-0b59a413a1d2:no",
-          "contractId": "2571d1da-0904-44a1-8e3a-0b59a413a1d2",
-          "side": "no",
-          "team": "GSW",
-          "teamNameZh": "勇士",
-          "margin": -20.5,
-          "pricePercent": null
-        },
-        {
-          "id": "67dd95b4-34c0-4461-a6b5-69ab3603dc6c:no",
-          "contractId": "67dd95b4-34c0-4461-a6b5-69ab3603dc6c",
-          "side": "no",
-          "team": "GSW",
-          "teamNameZh": "勇士",
-          "margin": -18.5,
-          "pricePercent": null
-        },
-        {
-          "id": "45b7388b-6a87-4a77-b34f-da0bfe86f117:no",
-          "contractId": "45b7388b-6a87-4a77-b34f-da0bfe86f117",
-          "side": "no",
-          "team": "GSW",
-          "teamNameZh": "勇士",
-          "margin": -16.5,
-          "pricePercent": null
-        },
-        {
-          "id": "01922126-c6ae-4847-ab98-a710c454b2a3:no",
-          "contractId": "01922126-c6ae-4847-ab98-a710c454b2a3",
-          "side": "no",
-          "team": "GSW",
-          "teamNameZh": "勇士",
-          "margin": -15.5,
-          "pricePercent": null
-        },
-        {
-          "id": "2a30792d-4919-4fce-ac1d-a4daf6663b24:no",
-          "contractId": "2a30792d-4919-4fce-ac1d-a4daf6663b24",
-          "side": "no",
-          "team": "GSW",
-          "teamNameZh": "勇士",
-          "margin": -14.5,
-          "pricePercent": null
-        },
-        {
-          "id": "4ee292c7-d207-4b6b-bab0-76d8fc16c3d4:no",
-          "contractId": "4ee292c7-d207-4b6b-bab0-76d8fc16c3d4",
-          "side": "no",
-          "team": "GSW",
-          "teamNameZh": "勇士",
-          "margin": -13.5,
-          "pricePercent": null
-        },
-        {
-          "id": "1aeca939-20bd-4b88-84db-5ce480b1430a:no",
-          "contractId": "1aeca939-20bd-4b88-84db-5ce480b1430a",
-          "side": "no",
-          "team": "GSW",
-          "teamNameZh": "勇士",
-          "margin": -12.5,
-          "pricePercent": null
-        },
-        {
-          "id": "e5125539-b9e4-4fbc-a7c3-e3e2286b3425:no",
-          "contractId": "e5125539-b9e4-4fbc-a7c3-e3e2286b3425",
-          "side": "no",
-          "team": "GSW",
-          "teamNameZh": "勇士",
-          "margin": -11.5,
-          "pricePercent": null
-        },
-        {
-          "id": "f74bdf94-d59a-419c-8921-ddf10ac4fe6a:no",
-          "contractId": "f74bdf94-d59a-419c-8921-ddf10ac4fe6a",
-          "side": "no",
-          "team": "GSW",
-          "teamNameZh": "勇士",
-          "margin": -10.5,
-          "pricePercent": null
-        },
-        {
-          "id": "257b43e8-429c-4660-b658-e9a3b649d9b7:no",
-          "contractId": "257b43e8-429c-4660-b658-e9a3b649d9b7",
-          "side": "no",
-          "team": "GSW",
-          "teamNameZh": "勇士",
-          "margin": -9.5,
-          "pricePercent": null
-        },
-        {
-          "id": "8fcb9097-cedc-4642-accc-d4dd7cde4833:no",
-          "contractId": "8fcb9097-cedc-4642-accc-d4dd7cde4833",
-          "side": "no",
-          "team": "GSW",
-          "teamNameZh": "勇士",
-          "margin": -8.5,
-          "pricePercent": null
-        },
-        {
-          "id": "7a8b86c3-5804-435f-97f0-91088d15bbfa:no",
-          "contractId": "7a8b86c3-5804-435f-97f0-91088d15bbfa",
-          "side": "no",
-          "team": "GSW",
-          "teamNameZh": "勇士",
-          "margin": -7.5,
-          "pricePercent": null
-        },
-        {
-          "id": "79bec1a9-a6ee-49dc-aecc-c47ce48f297c:no",
-          "contractId": "79bec1a9-a6ee-49dc-aecc-c47ce48f297c",
-          "side": "no",
-          "team": "GSW",
-          "teamNameZh": "勇士",
-          "margin": -6.5,
-          "pricePercent": 99.0
-        },
-        {
-          "id": "01856963-5d38-4427-a983-947c4733c2c1:no",
-          "contractId": "01856963-5d38-4427-a983-947c4733c2c1",
-          "side": "no",
-          "team": "GSW",
-          "teamNameZh": "勇士",
-          "margin": -5.5,
-          "pricePercent": null
-        },
-        {
-          "id": "ce35eb9e-235f-4c40-bed8-d2e3b30c8dfa:no",
-          "contractId": "ce35eb9e-235f-4c40-bed8-d2e3b30c8dfa",
-          "side": "no",
-          "team": "GSW",
-          "teamNameZh": "勇士",
-          "margin": -4.5,
-          "pricePercent": 98.0
-        },
-        {
-          "id": "d2ead722-64f2-4ac8-abfa-7b127790bb4e:no",
-          "contractId": "d2ead722-64f2-4ac8-abfa-7b127790bb4e",
-          "side": "no",
-          "team": "GSW",
-          "teamNameZh": "勇士",
-          "margin": -3.5,
-          "pricePercent": null
-        },
-        {
-          "id": "da5a3ef3-f7c3-4402-9790-c94b94bc289f:no",
-          "contractId": "da5a3ef3-f7c3-4402-9790-c94b94bc289f",
-          "side": "no",
-          "team": "GSW",
-          "teamNameZh": "勇士",
-          "margin": -2.5,
-          "pricePercent": 96.0
-        },
-        {
-          "id": "cb61604e-735b-4b8f-9d5a-cb8ac7b8fda0:no",
-          "contractId": "cb61604e-735b-4b8f-9d5a-cb8ac7b8fda0",
-          "side": "no",
-          "team": "GSW",
-          "teamNameZh": "勇士",
-          "margin": -1.5,
-          "pricePercent": 95.0
-        },
-        {
-          "id": "20ab3d9b-613b-453f-be54-e0d993c37211:yes",
-          "contractId": "20ab3d9b-613b-453f-be54-e0d993c37211",
-          "side": "yes",
-          "team": "GSW",
-          "teamNameZh": "勇士",
-          "margin": 1.5,
-          "pricePercent": 93.0
-        },
-        {
-          "id": "902797c2-b023-468d-945a-cfa22748a5c1:yes",
-          "contractId": "902797c2-b023-468d-945a-cfa22748a5c1",
-          "side": "yes",
-          "team": "GSW",
-          "teamNameZh": "勇士",
-          "margin": 2.5,
-          "pricePercent": 92.0
-        },
-        {
-          "id": "06b8b80c-9dfd-4c15-9727-963e14e72723:yes",
-          "contractId": "06b8b80c-9dfd-4c15-9727-963e14e72723",
-          "side": "yes",
-          "team": "GSW",
-          "teamNameZh": "勇士",
-          "margin": 3.5,
-          "pricePercent": 89.0
-        },
-        {
-          "id": "df8b65ed-6e76-44bc-a10c-7d5ba82d6ec4:yes",
-          "contractId": "df8b65ed-6e76-44bc-a10c-7d5ba82d6ec4",
-          "side": "yes",
-          "team": "GSW",
-          "teamNameZh": "勇士",
-          "margin": 4.5,
-          "pricePercent": 86.0
-        },
-        {
-          "id": "a7d1939c-2891-4d75-8e89-27af1141b0ad:yes",
-          "contractId": "a7d1939c-2891-4d75-8e89-27af1141b0ad",
-          "side": "yes",
-          "team": "GSW",
-          "teamNameZh": "勇士",
-          "margin": 5.5,
-          "pricePercent": 83.0
-        },
-        {
-          "id": "9bed4ee1-7854-48ad-b02a-af49d735169a:yes",
-          "contractId": "9bed4ee1-7854-48ad-b02a-af49d735169a",
-          "side": "yes",
-          "team": "GSW",
-          "teamNameZh": "勇士",
-          "margin": 6.5,
-          "pricePercent": 80.0
-        },
-        {
-          "id": "48c647cf-796b-4a9e-85d0-19581bd14643:yes",
-          "contractId": "48c647cf-796b-4a9e-85d0-19581bd14643",
-          "side": "yes",
-          "team": "GSW",
-          "teamNameZh": "勇士",
-          "margin": 7.5,
-          "pricePercent": 75.0
-        },
-        {
-          "id": "dac9fb86-96d4-4f12-8f3f-4c8d659148c7:yes",
-          "contractId": "dac9fb86-96d4-4f12-8f3f-4c8d659148c7",
-          "side": "yes",
-          "team": "GSW",
-          "teamNameZh": "勇士",
-          "margin": 8.5,
-          "pricePercent": 71.0
-        },
-        {
-          "id": "380c6de9-4fe3-457b-8ec3-188ff58f6c21:yes",
-          "contractId": "380c6de9-4fe3-457b-8ec3-188ff58f6c21",
-          "side": "yes",
-          "team": "GSW",
-          "teamNameZh": "勇士",
-          "margin": 9.5,
-          "pricePercent": 64.0
-        },
-        {
-          "id": "554ddb6c-53f7-4747-bbab-c20c8f862024:yes",
-          "contractId": "554ddb6c-53f7-4747-bbab-c20c8f862024",
-          "side": "yes",
-          "team": "GSW",
-          "teamNameZh": "勇士",
-          "margin": 10.5,
-          "pricePercent": 60.0
-        },
-        {
-          "id": "7f7797f3-75f8-4d31-9c5b-9911efd52de9:yes",
-          "contractId": "7f7797f3-75f8-4d31-9c5b-9911efd52de9",
-          "side": "yes",
-          "team": "GSW",
-          "teamNameZh": "勇士",
-          "margin": 11.5,
-          "pricePercent": 55.0
-        },
-        {
-          "id": "698c975d-6e3f-466e-97ab-3713098a84df:yes",
-          "contractId": "698c975d-6e3f-466e-97ab-3713098a84df",
-          "side": "yes",
-          "team": "GSW",
-          "teamNameZh": "勇士",
-          "margin": 12.5,
-          "pricePercent": 50.0
-        },
-        {
-          "id": "d58c0aec-b3b6-4b00-9f99-41df374e8913:yes",
-          "contractId": "d58c0aec-b3b6-4b00-9f99-41df374e8913",
-          "side": "yes",
-          "team": "GSW",
-          "teamNameZh": "勇士",
-          "margin": 13.5,
-          "pricePercent": 45.0
-        },
-        {
-          "id": "a361b281-0f23-40d5-a1e5-742839b9d510:yes",
-          "contractId": "a361b281-0f23-40d5-a1e5-742839b9d510",
-          "side": "yes",
-          "team": "GSW",
-          "teamNameZh": "勇士",
-          "margin": 14.5,
-          "pricePercent": 41.0
-        },
-        {
-          "id": "c810234c-5402-4335-a0e7-28831c1114f4:yes",
-          "contractId": "c810234c-5402-4335-a0e7-28831c1114f4",
-          "side": "yes",
-          "team": "GSW",
-          "teamNameZh": "勇士",
-          "margin": 15.5,
-          "pricePercent": 37.0
-        },
-        {
-          "id": "9b238f96-6a0d-41ee-8d1d-8bf02349f5e5:yes",
-          "contractId": "9b238f96-6a0d-41ee-8d1d-8bf02349f5e5",
-          "side": "yes",
-          "team": "GSW",
-          "teamNameZh": "勇士",
-          "margin": 16.5,
-          "pricePercent": 33.0
-        },
-        {
-          "id": "1942d8bf-e2c4-4f93-a97f-0a855f03aa23:yes",
-          "contractId": "1942d8bf-e2c4-4f93-a97f-0a855f03aa23",
-          "side": "yes",
-          "team": "GSW",
-          "teamNameZh": "勇士",
-          "margin": 18.5,
-          "pricePercent": 25.0
-        },
-        {
-          "id": "72072581-9cb2-4991-826e-ba0a296d0d3f:yes",
-          "contractId": "72072581-9cb2-4991-826e-ba0a296d0d3f",
-          "side": "yes",
-          "team": "GSW",
-          "teamNameZh": "勇士",
-          "margin": 20.5,
-          "pricePercent": 20.0
-        },
-        {
-          "id": "de1e1958-2b06-48bc-83e4-0950dc12f024:yes",
-          "contractId": "de1e1958-2b06-48bc-83e4-0950dc12f024",
-          "side": "yes",
-          "team": "GSW",
-          "teamNameZh": "勇士",
-          "margin": 22.5,
-          "pricePercent": 15.0
-        },
-        {
-          "id": "286fd302-f60e-47c7-bf3a-b75de0f59ede:yes",
-          "contractId": "286fd302-f60e-47c7-bf3a-b75de0f59ede",
-          "side": "yes",
-          "team": "GSW",
-          "teamNameZh": "勇士",
-          "margin": 24.5,
-          "pricePercent": 12.0
-        },
-        {
-          "id": "38a51633-40d0-4e01-97bb-15e3d477cc07:yes",
-          "contractId": "38a51633-40d0-4e01-97bb-15e3d477cc07",
-          "side": "yes",
-          "team": "GSW",
-          "teamNameZh": "勇士",
-          "margin": 26.5,
-          "pricePercent": 11.0
-        },
-        {
-          "id": "6a60cc05-e801-4811-ac8d-e17d136c6add:yes",
-          "contractId": "6a60cc05-e801-4811-ac8d-e17d136c6add",
-          "side": "yes",
-          "team": "GSW",
-          "teamNameZh": "勇士",
-          "margin": 28.5,
-          "pricePercent": 8.0
-        },
-        {
-          "id": "f65a6753-2b74-4afe-b2b1-dd549502a853:yes",
-          "contractId": "f65a6753-2b74-4afe-b2b1-dd549502a853",
-          "side": "yes",
-          "team": "GSW",
-          "teamNameZh": "勇士",
-          "margin": 30.5,
-          "pricePercent": 7.0
-        },
-        {
-          "id": "8ab6667a-8271-42e0-8153-3e3ad3e05d76:yes",
-          "contractId": "8ab6667a-8271-42e0-8153-3e3ad3e05d76",
-          "side": "yes",
-          "team": "GSW",
-          "teamNameZh": "勇士",
-          "margin": 32.5,
-          "pricePercent": 8.0
-        },
-        {
-          "id": "18e08ae4-404f-4e74-8c9a-297d4f35a725:yes",
-          "contractId": "18e08ae4-404f-4e74-8c9a-297d4f35a725",
-          "side": "yes",
-          "team": "GSW",
-          "teamNameZh": "勇士",
-          "margin": 34.5,
-          "pricePercent": 8.0
-        },
-        {
-          "id": "372d1641-33b5-4ea3-9a61-9ffe186f32c0:yes",
-          "contractId": "372d1641-33b5-4ea3-9a61-9ffe186f32c0",
-          "side": "yes",
-          "team": "GSW",
-          "teamNameZh": "勇士",
-          "margin": 36.5,
-          "pricePercent": 13.0
-        },
-        {
-          "id": "330cf76f-a5af-4f07-b03b-8ce310f040c9:yes",
-          "contractId": "330cf76f-a5af-4f07-b03b-8ce310f040c9",
-          "side": "yes",
-          "team": "GSW",
-          "teamNameZh": "勇士",
-          "margin": 38.5,
-          "pricePercent": 13.0
-        },
-        {
-          "id": "8a8c1fc5-c786-4686-91ce-dabb6fec8e3b:yes",
-          "contractId": "8a8c1fc5-c786-4686-91ce-dabb6fec8e3b",
-          "side": "yes",
-          "team": "GSW",
-          "teamNameZh": "勇士",
-          "margin": 40.5,
-          "pricePercent": 13.0
-        },
-        {
-          "id": "d3c0f22a-d01d-4d5e-acd1-3617cbe62af8:yes",
-          "contractId": "d3c0f22a-d01d-4d5e-acd1-3617cbe62af8",
-          "side": "yes",
-          "team": "GSW",
-          "teamNameZh": "勇士",
-          "margin": 42.5,
-          "pricePercent": 13.0
-        },
-        {
-          "id": "0d13591f-4700-4b1f-b2e5-7a984e3aa630:yes",
-          "contractId": "0d13591f-4700-4b1f-b2e5-7a984e3aa630",
-          "side": "yes",
-          "team": "GSW",
-          "teamNameZh": "勇士",
-          "margin": 44.5,
-          "pricePercent": 13.0
-        },
-        {
-          "id": "05b9ec2c-b6b6-42f6-8665-62043dfec937:yes",
-          "contractId": "05b9ec2c-b6b6-42f6-8665-62043dfec937",
-          "side": "yes",
-          "team": "GSW",
-          "teamNameZh": "勇士",
-          "margin": 45.5,
-          "pricePercent": 13.0
-        },
-        {
-          "id": "05b9ec2c-b6b6-42f6-8665-62043dfec937:no",
-          "contractId": "05b9ec2c-b6b6-42f6-8665-62043dfec937",
-          "side": "no",
-          "team": "SAC",
-          "teamNameZh": "国王",
-          "margin": -45.5,
-          "pricePercent": null
-        },
-        {
-          "id": "0d13591f-4700-4b1f-b2e5-7a984e3aa630:no",
-          "contractId": "0d13591f-4700-4b1f-b2e5-7a984e3aa630",
-          "side": "no",
-          "team": "SAC",
-          "teamNameZh": "国王",
-          "margin": -44.5,
-          "pricePercent": null
-        },
-        {
-          "id": "d3c0f22a-d01d-4d5e-acd1-3617cbe62af8:no",
-          "contractId": "d3c0f22a-d01d-4d5e-acd1-3617cbe62af8",
-          "side": "no",
-          "team": "SAC",
-          "teamNameZh": "国王",
-          "margin": -42.5,
-          "pricePercent": null
-        },
-        {
-          "id": "8a8c1fc5-c786-4686-91ce-dabb6fec8e3b:no",
-          "contractId": "8a8c1fc5-c786-4686-91ce-dabb6fec8e3b",
-          "side": "no",
-          "team": "SAC",
-          "teamNameZh": "国王",
-          "margin": -40.5,
-          "pricePercent": null
-        },
-        {
-          "id": "330cf76f-a5af-4f07-b03b-8ce310f040c9:no",
-          "contractId": "330cf76f-a5af-4f07-b03b-8ce310f040c9",
-          "side": "no",
-          "team": "SAC",
-          "teamNameZh": "国王",
-          "margin": -38.5,
-          "pricePercent": null
-        },
-        {
-          "id": "372d1641-33b5-4ea3-9a61-9ffe186f32c0:no",
-          "contractId": "372d1641-33b5-4ea3-9a61-9ffe186f32c0",
-          "side": "no",
-          "team": "SAC",
-          "teamNameZh": "国王",
-          "margin": -36.5,
-          "pricePercent": null
-        },
-        {
-          "id": "18e08ae4-404f-4e74-8c9a-297d4f35a725:no",
-          "contractId": "18e08ae4-404f-4e74-8c9a-297d4f35a725",
-          "side": "no",
-          "team": "SAC",
-          "teamNameZh": "国王",
-          "margin": -34.5,
-          "pricePercent": null
-        },
-        {
-          "id": "8ab6667a-8271-42e0-8153-3e3ad3e05d76:no",
-          "contractId": "8ab6667a-8271-42e0-8153-3e3ad3e05d76",
-          "side": "no",
-          "team": "SAC",
-          "teamNameZh": "国王",
-          "margin": -32.5,
-          "pricePercent": null
-        },
-        {
-          "id": "f65a6753-2b74-4afe-b2b1-dd549502a853:no",
-          "contractId": "f65a6753-2b74-4afe-b2b1-dd549502a853",
-          "side": "no",
-          "team": "SAC",
-          "teamNameZh": "国王",
-          "margin": -30.5,
-          "pricePercent": null
-        },
-        {
-          "id": "6a60cc05-e801-4811-ac8d-e17d136c6add:no",
-          "contractId": "6a60cc05-e801-4811-ac8d-e17d136c6add",
-          "side": "no",
-          "team": "SAC",
-          "teamNameZh": "国王",
-          "margin": -28.5,
-          "pricePercent": null
-        },
-        {
-          "id": "38a51633-40d0-4e01-97bb-15e3d477cc07:no",
-          "contractId": "38a51633-40d0-4e01-97bb-15e3d477cc07",
-          "side": "no",
-          "team": "SAC",
-          "teamNameZh": "国王",
-          "margin": -26.5,
-          "pricePercent": null
-        },
-        {
-          "id": "286fd302-f60e-47c7-bf3a-b75de0f59ede:no",
-          "contractId": "286fd302-f60e-47c7-bf3a-b75de0f59ede",
-          "side": "no",
-          "team": "SAC",
-          "teamNameZh": "国王",
-          "margin": -24.5,
-          "pricePercent": 94.0
-        },
-        {
-          "id": "de1e1958-2b06-48bc-83e4-0950dc12f024:no",
-          "contractId": "de1e1958-2b06-48bc-83e4-0950dc12f024",
-          "side": "no",
-          "team": "SAC",
-          "teamNameZh": "国王",
-          "margin": -22.5,
-          "pricePercent": 91.0
-        },
-        {
-          "id": "72072581-9cb2-4991-826e-ba0a296d0d3f:no",
-          "contractId": "72072581-9cb2-4991-826e-ba0a296d0d3f",
-          "side": "no",
-          "team": "SAC",
-          "teamNameZh": "国王",
-          "margin": -20.5,
-          "pricePercent": 86.0
-        },
-        {
-          "id": "1942d8bf-e2c4-4f93-a97f-0a855f03aa23:no",
-          "contractId": "1942d8bf-e2c4-4f93-a97f-0a855f03aa23",
-          "side": "no",
-          "team": "SAC",
-          "teamNameZh": "国王",
-          "margin": -18.5,
-          "pricePercent": 80.0
-        },
-        {
-          "id": "9b238f96-6a0d-41ee-8d1d-8bf02349f5e5:no",
-          "contractId": "9b238f96-6a0d-41ee-8d1d-8bf02349f5e5",
-          "side": "no",
-          "team": "SAC",
-          "teamNameZh": "国王",
-          "margin": -16.5,
-          "pricePercent": 73.0
-        },
-        {
-          "id": "c810234c-5402-4335-a0e7-28831c1114f4:no",
-          "contractId": "c810234c-5402-4335-a0e7-28831c1114f4",
-          "side": "no",
-          "team": "SAC",
-          "teamNameZh": "国王",
-          "margin": -15.5,
-          "pricePercent": 65.0
-        },
-        {
-          "id": "a361b281-0f23-40d5-a1e5-742839b9d510:no",
-          "contractId": "a361b281-0f23-40d5-a1e5-742839b9d510",
-          "side": "no",
-          "team": "SAC",
-          "teamNameZh": "国王",
-          "margin": -14.5,
-          "pricePercent": 64.0
-        },
-        {
-          "id": "d58c0aec-b3b6-4b00-9f99-41df374e8913:no",
-          "contractId": "d58c0aec-b3b6-4b00-9f99-41df374e8913",
-          "side": "no",
-          "team": "SAC",
-          "teamNameZh": "国王",
-          "margin": -13.5,
-          "pricePercent": 56.0
-        },
-        {
-          "id": "698c975d-6e3f-466e-97ab-3713098a84df:no",
-          "contractId": "698c975d-6e3f-466e-97ab-3713098a84df",
-          "side": "no",
-          "team": "SAC",
-          "teamNameZh": "国王",
-          "margin": -12.5,
-          "pricePercent": 53.0
-        },
-        {
-          "id": "7f7797f3-75f8-4d31-9c5b-9911efd52de9:no",
-          "contractId": "7f7797f3-75f8-4d31-9c5b-9911efd52de9",
-          "side": "no",
-          "team": "SAC",
-          "teamNameZh": "国王",
-          "margin": -11.5,
-          "pricePercent": 46.0
-        },
-        {
-          "id": "554ddb6c-53f7-4747-bbab-c20c8f862024:no",
-          "contractId": "554ddb6c-53f7-4747-bbab-c20c8f862024",
-          "side": "no",
-          "team": "SAC",
-          "teamNameZh": "国王",
-          "margin": -10.5,
-          "pricePercent": 42.0
-        },
-        {
-          "id": "380c6de9-4fe3-457b-8ec3-188ff58f6c21:no",
-          "contractId": "380c6de9-4fe3-457b-8ec3-188ff58f6c21",
-          "side": "no",
-          "team": "SAC",
-          "teamNameZh": "国王",
-          "margin": -9.5,
-          "pricePercent": 37.0
-        },
-        {
-          "id": "dac9fb86-96d4-4f12-8f3f-4c8d659148c7:no",
-          "contractId": "dac9fb86-96d4-4f12-8f3f-4c8d659148c7",
-          "side": "no",
-          "team": "SAC",
-          "teamNameZh": "国王",
-          "margin": -8.5,
-          "pricePercent": 31.0
-        },
-        {
-          "id": "48c647cf-796b-4a9e-85d0-19581bd14643:no",
-          "contractId": "48c647cf-796b-4a9e-85d0-19581bd14643",
-          "side": "no",
-          "team": "SAC",
-          "teamNameZh": "国王",
-          "margin": -7.5,
-          "pricePercent": 26.0
-        },
-        {
-          "id": "9bed4ee1-7854-48ad-b02a-af49d735169a:no",
-          "contractId": "9bed4ee1-7854-48ad-b02a-af49d735169a",
-          "side": "no",
-          "team": "SAC",
-          "teamNameZh": "国王",
-          "margin": -6.5,
-          "pricePercent": 22.0
-        },
-        {
-          "id": "a7d1939c-2891-4d75-8e89-27af1141b0ad:no",
-          "contractId": "a7d1939c-2891-4d75-8e89-27af1141b0ad",
-          "side": "no",
-          "team": "SAC",
-          "teamNameZh": "国王",
-          "margin": -5.5,
-          "pricePercent": 18.0
-        },
-        {
-          "id": "df8b65ed-6e76-44bc-a10c-7d5ba82d6ec4:no",
-          "contractId": "df8b65ed-6e76-44bc-a10c-7d5ba82d6ec4",
-          "side": "no",
-          "team": "SAC",
-          "teamNameZh": "国王",
-          "margin": -4.5,
-          "pricePercent": 15.0
-        },
-        {
-          "id": "06b8b80c-9dfd-4c15-9727-963e14e72723:no",
-          "contractId": "06b8b80c-9dfd-4c15-9727-963e14e72723",
-          "side": "no",
-          "team": "SAC",
-          "teamNameZh": "国王",
-          "margin": -3.5,
-          "pricePercent": 13.0
-        },
-        {
-          "id": "902797c2-b023-468d-945a-cfa22748a5c1:no",
-          "contractId": "902797c2-b023-468d-945a-cfa22748a5c1",
-          "side": "no",
-          "team": "SAC",
-          "teamNameZh": "国王",
-          "margin": -2.5,
-          "pricePercent": 10.0
-        },
-        {
-          "id": "20ab3d9b-613b-453f-be54-e0d993c37211:no",
-          "contractId": "20ab3d9b-613b-453f-be54-e0d993c37211",
-          "side": "no",
-          "team": "SAC",
-          "teamNameZh": "国王",
-          "margin": -1.5,
-          "pricePercent": 8.0
-        },
-        {
-          "id": "cb61604e-735b-4b8f-9d5a-cb8ac7b8fda0:yes",
-          "contractId": "cb61604e-735b-4b8f-9d5a-cb8ac7b8fda0",
-          "side": "yes",
-          "team": "SAC",
-          "teamNameZh": "国王",
-          "margin": 1.5,
-          "pricePercent": 6.0
-        },
-        {
-          "id": "da5a3ef3-f7c3-4402-9790-c94b94bc289f:yes",
-          "contractId": "da5a3ef3-f7c3-4402-9790-c94b94bc289f",
-          "side": "yes",
-          "team": "SAC",
-          "teamNameZh": "国王",
-          "margin": 2.5,
-          "pricePercent": 5.0
-        },
-        {
-          "id": "d2ead722-64f2-4ac8-abfa-7b127790bb4e:yes",
-          "contractId": "d2ead722-64f2-4ac8-abfa-7b127790bb4e",
-          "side": "yes",
-          "team": "SAC",
-          "teamNameZh": "国王",
-          "margin": 3.5,
-          "pricePercent": 8.0
-        },
-        {
-          "id": "ce35eb9e-235f-4c40-bed8-d2e3b30c8dfa:yes",
-          "contractId": "ce35eb9e-235f-4c40-bed8-d2e3b30c8dfa",
-          "side": "yes",
-          "team": "SAC",
-          "teamNameZh": "国王",
-          "margin": 4.5,
-          "pricePercent": 3.0
-        },
-        {
-          "id": "01856963-5d38-4427-a983-947c4733c2c1:yes",
-          "contractId": "01856963-5d38-4427-a983-947c4733c2c1",
-          "side": "yes",
-          "team": "SAC",
-          "teamNameZh": "国王",
-          "margin": 5.5,
-          "pricePercent": 6.0
-        },
-        {
-          "id": "79bec1a9-a6ee-49dc-aecc-c47ce48f297c:yes",
-          "contractId": "79bec1a9-a6ee-49dc-aecc-c47ce48f297c",
-          "side": "yes",
-          "team": "SAC",
-          "teamNameZh": "国王",
-          "margin": 6.5,
-          "pricePercent": 2.0
-        },
-        {
-          "id": "7a8b86c3-5804-435f-97f0-91088d15bbfa:yes",
-          "contractId": "7a8b86c3-5804-435f-97f0-91088d15bbfa",
-          "side": "yes",
-          "team": "SAC",
-          "teamNameZh": "国王",
-          "margin": 7.5,
-          "pricePercent": 5.0
-        },
-        {
-          "id": "8fcb9097-cedc-4642-accc-d4dd7cde4833:yes",
-          "contractId": "8fcb9097-cedc-4642-accc-d4dd7cde4833",
-          "side": "yes",
-          "team": "SAC",
-          "teamNameZh": "国王",
-          "margin": 8.5,
-          "pricePercent": 2.0
-        },
-        {
-          "id": "257b43e8-429c-4660-b658-e9a3b649d9b7:yes",
-          "contractId": "257b43e8-429c-4660-b658-e9a3b649d9b7",
-          "side": "yes",
-          "team": "SAC",
-          "teamNameZh": "国王",
-          "margin": 9.5,
-          "pricePercent": 4.0
-        },
-        {
-          "id": "f74bdf94-d59a-419c-8921-ddf10ac4fe6a:yes",
-          "contractId": "f74bdf94-d59a-419c-8921-ddf10ac4fe6a",
-          "side": "yes",
-          "team": "SAC",
-          "teamNameZh": "国王",
-          "margin": 10.5,
-          "pricePercent": 2.0
-        },
-        {
-          "id": "e5125539-b9e4-4fbc-a7c3-e3e2286b3425:yes",
-          "contractId": "e5125539-b9e4-4fbc-a7c3-e3e2286b3425",
-          "side": "yes",
-          "team": "SAC",
-          "teamNameZh": "国王",
-          "margin": 11.5,
-          "pricePercent": 13.0
-        },
-        {
-          "id": "1aeca939-20bd-4b88-84db-5ce480b1430a:yes",
-          "contractId": "1aeca939-20bd-4b88-84db-5ce480b1430a",
-          "side": "yes",
-          "team": "SAC",
-          "teamNameZh": "国王",
-          "margin": 12.5,
-          "pricePercent": 1.0
-        },
-        {
-          "id": "4ee292c7-d207-4b6b-bab0-76d8fc16c3d4:yes",
-          "contractId": "4ee292c7-d207-4b6b-bab0-76d8fc16c3d4",
-          "side": "yes",
-          "team": "SAC",
-          "teamNameZh": "国王",
-          "margin": 13.5,
-          "pricePercent": 13.0
-        },
-        {
-          "id": "2a30792d-4919-4fce-ac1d-a4daf6663b24:yes",
-          "contractId": "2a30792d-4919-4fce-ac1d-a4daf6663b24",
-          "side": "yes",
-          "team": "SAC",
-          "teamNameZh": "国王",
-          "margin": 14.5,
-          "pricePercent": 1.0
-        },
-        {
-          "id": "01922126-c6ae-4847-ab98-a710c454b2a3:yes",
-          "contractId": "01922126-c6ae-4847-ab98-a710c454b2a3",
-          "side": "yes",
-          "team": "SAC",
-          "teamNameZh": "国王",
-          "margin": 15.5,
-          "pricePercent": 13.0
-        },
-        {
-          "id": "45b7388b-6a87-4a77-b34f-da0bfe86f117:yes",
-          "contractId": "45b7388b-6a87-4a77-b34f-da0bfe86f117",
-          "side": "yes",
-          "team": "SAC",
-          "teamNameZh": "国王",
-          "margin": 16.5,
-          "pricePercent": 4.0
-        },
-        {
-          "id": "67dd95b4-34c0-4461-a6b5-69ab3603dc6c:yes",
-          "contractId": "67dd95b4-34c0-4461-a6b5-69ab3603dc6c",
-          "side": "yes",
-          "team": "SAC",
-          "teamNameZh": "国王",
-          "margin": 18.5,
-          "pricePercent": 2.0
-        },
-        {
-          "id": "2571d1da-0904-44a1-8e3a-0b59a413a1d2:yes",
-          "contractId": "2571d1da-0904-44a1-8e3a-0b59a413a1d2",
-          "side": "yes",
-          "team": "SAC",
-          "teamNameZh": "国王",
-          "margin": 20.5,
-          "pricePercent": 1.0
-        },
-        {
-          "id": "bcdcc31e-9665-42a1-bc39-5f970ab51a25:yes",
-          "contractId": "bcdcc31e-9665-42a1-bc39-5f970ab51a25",
-          "side": "yes",
-          "team": "SAC",
-          "teamNameZh": "国王",
-          "margin": 22.5,
-          "pricePercent": 1.0
-        },
-        {
-          "id": "376372e7-9111-4b7b-b85a-61facf384c18:yes",
-          "contractId": "376372e7-9111-4b7b-b85a-61facf384c18",
-          "side": "yes",
-          "team": "SAC",
-          "teamNameZh": "国王",
-          "margin": 24.5,
-          "pricePercent": 13.0
-        },
-        {
-          "id": "655d4154-a0b6-4a81-8ccb-ddb06ddc4265:yes",
-          "contractId": "655d4154-a0b6-4a81-8ccb-ddb06ddc4265",
-          "side": "yes",
-          "team": "SAC",
-          "teamNameZh": "国王",
-          "margin": 26.5,
-          "pricePercent": 13.0
-        },
-        {
-          "id": "e07bc1e3-6ff1-40b9-a9b6-1f18ad63fd75:yes",
-          "contractId": "e07bc1e3-6ff1-40b9-a9b6-1f18ad63fd75",
-          "side": "yes",
-          "team": "SAC",
-          "teamNameZh": "国王",
-          "margin": 28.5,
-          "pricePercent": 13.0
-        },
-        {
-          "id": "875a525c-d7e7-47b5-bad3-c3f4aad7138d:yes",
-          "contractId": "875a525c-d7e7-47b5-bad3-c3f4aad7138d",
-          "side": "yes",
-          "team": "SAC",
-          "teamNameZh": "国王",
-          "margin": 30.5,
-          "pricePercent": 13.0
-        },
-        {
-          "id": "68066d3b-9f4b-454e-82d6-d5f05a5effa5:yes",
-          "contractId": "68066d3b-9f4b-454e-82d6-d5f05a5effa5",
-          "side": "yes",
-          "team": "SAC",
-          "teamNameZh": "国王",
-          "margin": 32.5,
-          "pricePercent": 13.0
-        },
-        {
-          "id": "97eb0504-ca42-40e8-aff7-5be7e02398da:yes",
-          "contractId": "97eb0504-ca42-40e8-aff7-5be7e02398da",
-          "side": "yes",
-          "team": "SAC",
-          "teamNameZh": "国王",
-          "margin": 34.5,
-          "pricePercent": 13.0
-        },
-        {
-          "id": "4af2cd89-5b3e-47e7-87c5-b7962bfabf89:yes",
-          "contractId": "4af2cd89-5b3e-47e7-87c5-b7962bfabf89",
-          "side": "yes",
-          "team": "SAC",
-          "teamNameZh": "国王",
-          "margin": 36.5,
-          "pricePercent": 13.0
-        },
-        {
-          "id": "b289991e-9611-44c3-9be8-4720f29f8de6:yes",
-          "contractId": "b289991e-9611-44c3-9be8-4720f29f8de6",
-          "side": "yes",
-          "team": "SAC",
-          "teamNameZh": "国王",
-          "margin": 38.5,
-          "pricePercent": 13.0
-        },
-        {
-          "id": "98012c9d-e430-4e4c-98db-c3d0a853a258:yes",
-          "contractId": "98012c9d-e430-4e4c-98db-c3d0a853a258",
-          "side": "yes",
-          "team": "SAC",
-          "teamNameZh": "国王",
-          "margin": 40.5,
-          "pricePercent": 13.0
-        },
-        {
-          "id": "ecdc4f44-88b2-4092-ac78-d10cce59bb5f:yes",
-          "contractId": "ecdc4f44-88b2-4092-ac78-d10cce59bb5f",
-          "side": "yes",
-          "team": "SAC",
-          "teamNameZh": "国王",
-          "margin": 42.5,
-          "pricePercent": 13.0
-        },
-        {
-          "id": "8b714ecd-947b-40ac-b0e2-deb7071f6cf0:yes",
-          "contractId": "8b714ecd-947b-40ac-b0e2-deb7071f6cf0",
-          "side": "yes",
-          "team": "SAC",
-          "teamNameZh": "国王",
-          "margin": 44.5,
-          "pricePercent": 13.0
-        },
-        {
-          "id": "4b3cd794-bfc5-423e-a2d9-32215a3c703a:yes",
-          "contractId": "4b3cd794-bfc5-423e-a2d9-32215a3c703a",
-          "side": "yes",
-          "team": "SAC",
-          "teamNameZh": "国王",
-          "margin": 45.5,
-          "pricePercent": 13.0
-        }
-      ]
-    },
     {
       "id": "2026-11-25-SAS-POR",
       "lines": [
@@ -1526,7 +384,7 @@
           "team": "POR",
           "teamNameZh": "开拓者",
           "margin": -20.5,
-          "pricePercent": 97.0
+          "pricePercent": null
         },
         {
           "id": "053d78d6-1076-4d3a-870c-ba6c2cdb3de8:no",
@@ -1535,7 +393,7 @@
           "team": "POR",
           "teamNameZh": "开拓者",
           "margin": -18.5,
-          "pricePercent": 96.0
+          "pricePercent": null
         },
         {
           "id": "eea5ca97-1913-4b26-84d3-d7b71a60e3dc:no",
@@ -1544,7 +402,7 @@
           "team": "POR",
           "teamNameZh": "开拓者",
           "margin": -16.5,
-          "pricePercent": 93.0
+          "pricePercent": null
         },
         {
           "id": "a26c3c58-9aa7-445e-b543-a63c360956ee:no",
@@ -1553,7 +411,7 @@
           "team": "POR",
           "teamNameZh": "开拓者",
           "margin": -15.5,
-          "pricePercent": 94.0
+          "pricePercent": null
         },
         {
           "id": "81232710-89d4-49e8-8b3e-88c72834b8bc:no",
@@ -1562,7 +420,7 @@
           "team": "POR",
           "teamNameZh": "开拓者",
           "margin": -14.5,
-          "pricePercent": 90.0
+          "pricePercent": null
         },
         {
           "id": "39931603-5a60-46bd-b350-5024b55c1861:no",
@@ -1571,7 +429,7 @@
           "team": "POR",
           "teamNameZh": "开拓者",
           "margin": -13.5,
-          "pricePercent": 90.0
+          "pricePercent": null
         },
         {
           "id": "12bc2955-ab58-42e1-b779-c840dd16ac19:no",
@@ -1580,7 +438,7 @@
           "team": "POR",
           "teamNameZh": "开拓者",
           "margin": -12.5,
-          "pricePercent": 85.0
+          "pricePercent": null
         },
         {
           "id": "57afacb1-7c56-4701-916e-d8e6f6f682cb:no",
@@ -1589,7 +447,7 @@
           "team": "POR",
           "teamNameZh": "开拓者",
           "margin": -11.5,
-          "pricePercent": 85.0
+          "pricePercent": null
         },
         {
           "id": "ee694abf-5ea7-48eb-8133-ca9a6bda7f45:no",
@@ -1598,7 +456,7 @@
           "team": "POR",
           "teamNameZh": "开拓者",
           "margin": -10.5,
-          "pricePercent": 80.0
+          "pricePercent": null
         },
         {
           "id": "337bccde-6d73-4a21-9ca7-0f4aeeb34dd7:no",
@@ -1607,7 +465,7 @@
           "team": "POR",
           "teamNameZh": "开拓者",
           "margin": -9.5,
-          "pricePercent": 78.0
+          "pricePercent": null
         },
         {
           "id": "4029b31a-6770-464d-beb1-d4430f19aa4b:no",
@@ -1616,7 +474,7 @@
           "team": "POR",
           "teamNameZh": "开拓者",
           "margin": -8.5,
-          "pricePercent": 72.0
+          "pricePercent": null
         },
         {
           "id": "49727095-139a-473c-95d0-15d375098995:no",
@@ -1625,7 +483,7 @@
           "team": "POR",
           "teamNameZh": "开拓者",
           "margin": -7.5,
-          "pricePercent": 67.0
+          "pricePercent": 98.0
         },
         {
           "id": "89d93705-1251-4a6b-884e-1722123ca30b:no",
@@ -1634,7 +492,7 @@
           "team": "POR",
           "teamNameZh": "开拓者",
           "margin": -6.5,
-          "pricePercent": 62.0
+          "pricePercent": 94.0
         },
         {
           "id": "eada0c8c-a899-4ac6-8261-0abcf0e4b33b:no",
@@ -1643,7 +501,7 @@
           "team": "POR",
           "teamNameZh": "开拓者",
           "margin": -5.5,
-          "pricePercent": 58.0
+          "pricePercent": 89.0
         },
         {
           "id": "b66cf788-921b-4bf9-bce2-58abd45e3264:no",
@@ -1652,7 +510,7 @@
           "team": "POR",
           "teamNameZh": "开拓者",
           "margin": -4.5,
-          "pricePercent": 54.0
+          "pricePercent": 84.0
         },
         {
           "id": "8521bcba-f3d6-401a-8781-4fd25c1a4f50:no",
@@ -1661,7 +519,7 @@
           "team": "POR",
           "teamNameZh": "开拓者",
           "margin": -3.5,
-          "pricePercent": 49.0
+          "pricePercent": 77.0
         },
         {
           "id": "1ed39e83-fed2-4414-9e3f-39fa7c20ff38:no",
@@ -1670,7 +528,7 @@
           "team": "POR",
           "teamNameZh": "开拓者",
           "margin": -2.5,
-          "pricePercent": 44.0
+          "pricePercent": 70.0
         },
         {
           "id": "40468ee3-4ed8-4765-96c0-d8e45bdd7a5f:no",
@@ -1679,7 +537,7 @@
           "team": "POR",
           "teamNameZh": "开拓者",
           "margin": -1.5,
-          "pricePercent": 40.0
+          "pricePercent": 62.0
         },
         {
           "id": "36b5c5d9-9af6-48dd-bd23-e331db23de3c:yes",
@@ -1688,7 +546,7 @@
           "team": "POR",
           "teamNameZh": "开拓者",
           "margin": 1.5,
-          "pricePercent": 34.0
+          "pricePercent": 50.0
         },
         {
           "id": "554104dc-0c01-45ca-8f37-5ba5e3369e9c:yes",
@@ -1697,7 +555,7 @@
           "team": "POR",
           "teamNameZh": "开拓者",
           "margin": 2.5,
-          "pricePercent": 30.0
+          "pricePercent": 42.0
         },
         {
           "id": "b68e832f-ac0d-4bff-aff0-d606a8534dcb:yes",
@@ -1706,7 +564,7 @@
           "team": "POR",
           "teamNameZh": "开拓者",
           "margin": 3.5,
-          "pricePercent": 26.0
+          "pricePercent": 36.0
         },
         {
           "id": "8186c477-a848-4968-927f-e36b364d7bc1:yes",
@@ -1715,7 +573,7 @@
           "team": "POR",
           "teamNameZh": "开拓者",
           "margin": 4.5,
-          "pricePercent": 23.0
+          "pricePercent": 28.0
         },
         {
           "id": "13062cb9-55d9-4575-b921-b5716b4bb4ec:yes",
@@ -1724,7 +582,7 @@
           "team": "POR",
           "teamNameZh": "开拓者",
           "margin": 5.5,
-          "pricePercent": 20.0
+          "pricePercent": 22.0
         },
         {
           "id": "6575ae8e-275e-4a2a-94b2-a1ef84200240:yes",
@@ -1733,7 +591,7 @@
           "team": "POR",
           "teamNameZh": "开拓者",
           "margin": 6.5,
-          "pricePercent": 18.0
+          "pricePercent": 20.0
         },
         {
           "id": "c1e122b4-f113-4e05-9570-75b147fffe5e:yes",
@@ -1742,7 +600,7 @@
           "team": "POR",
           "teamNameZh": "开拓者",
           "margin": 7.5,
-          "pricePercent": 14.0
+          "pricePercent": 10.0
         },
         {
           "id": "be8376f0-96a4-4576-9048-26feaf70a4ab:yes",
@@ -1760,7 +618,7 @@
           "team": "POR",
           "teamNameZh": "开拓者",
           "margin": 9.5,
-          "pricePercent": 10.0
+          "pricePercent": 6.0
         },
         {
           "id": "a64bab84-c2f2-48ac-9a8e-0e52185b534b:yes",
@@ -1769,7 +627,7 @@
           "team": "POR",
           "teamNameZh": "开拓者",
           "margin": 10.5,
-          "pricePercent": 9.0
+          "pricePercent": 7.0
         },
         {
           "id": "2fd84524-10e7-48ee-954a-d0a57df882df:yes",
@@ -1778,7 +636,7 @@
           "team": "POR",
           "teamNameZh": "开拓者",
           "margin": 11.5,
-          "pricePercent": 6.0
+          "pricePercent": 4.0
         },
         {
           "id": "8db02f31-f2cf-4f62-84bf-5acb477ab9ee:yes",
@@ -1787,7 +645,7 @@
           "team": "POR",
           "teamNameZh": "开拓者",
           "margin": 12.5,
-          "pricePercent": 6.0
+          "pricePercent": null
         },
         {
           "id": "fc683980-6b01-4e38-9598-61ff6b3e6086:yes",
@@ -1805,7 +663,7 @@
           "team": "POR",
           "teamNameZh": "开拓者",
           "margin": 14.5,
-          "pricePercent": 5.0
+          "pricePercent": null
         },
         {
           "id": "b39e77ec-d023-4483-ae40-473930087e79:yes",
@@ -1814,7 +672,7 @@
           "team": "POR",
           "teamNameZh": "开拓者",
           "margin": 15.5,
-          "pricePercent": 3.0
+          "pricePercent": 1.0
         },
         {
           "id": "3da576df-5235-4928-b8e9-9a191df92632:yes",
@@ -1823,7 +681,7 @@
           "team": "POR",
           "teamNameZh": "开拓者",
           "margin": 16.5,
-          "pricePercent": 4.0
+          "pricePercent": null
         },
         {
           "id": "8b2c132d-1f5a-42ce-9afa-30097e793368:yes",
@@ -1832,7 +690,7 @@
           "team": "POR",
           "teamNameZh": "开拓者",
           "margin": 18.5,
-          "pricePercent": 3.0
+          "pricePercent": null
         },
         {
           "id": "d32647c7-d4f8-409a-af49-9c78bae27db0:yes",
@@ -1841,7 +699,7 @@
           "team": "POR",
           "teamNameZh": "开拓者",
           "margin": 20.5,
-          "pricePercent": 3.0
+          "pricePercent": null
         },
         {
           "id": "d995da16-9e58-4bb6-9489-f42105a79a1b:yes",
@@ -1850,7 +708,7 @@
           "team": "POR",
           "teamNameZh": "开拓者",
           "margin": 22.5,
-          "pricePercent": 3.0
+          "pricePercent": null
         },
         {
           "id": "aa15eed7-fc7d-4f13-8429-fe196be5bb92:yes",
@@ -1859,7 +717,7 @@
           "team": "POR",
           "teamNameZh": "开拓者",
           "margin": 24.5,
-          "pricePercent": 3.0
+          "pricePercent": null
         },
         {
           "id": "d6bccc5b-9a8a-4be9-a347-61c061e86a6b:yes",
@@ -1868,7 +726,7 @@
           "team": "POR",
           "teamNameZh": "开拓者",
           "margin": 26.5,
-          "pricePercent": 3.0
+          "pricePercent": null
         },
         {
           "id": "29d3d5be-2a7d-4868-8521-1bbef55dd798:yes",
@@ -1877,7 +735,7 @@
           "team": "POR",
           "teamNameZh": "开拓者",
           "margin": 28.5,
-          "pricePercent": 3.0
+          "pricePercent": null
         },
         {
           "id": "f59de3b4-3cd0-40e5-bb8c-5ce8da2c55ec:yes",
@@ -1886,7 +744,7 @@
           "team": "POR",
           "teamNameZh": "开拓者",
           "margin": 30.5,
-          "pricePercent": 3.0
+          "pricePercent": null
         },
         {
           "id": "a1a2e26d-8d6c-4702-bea0-4d1f707e5ee8:yes",
@@ -1895,7 +753,7 @@
           "team": "POR",
           "teamNameZh": "开拓者",
           "margin": 32.5,
-          "pricePercent": 3.0
+          "pricePercent": null
         },
         {
           "id": "8b672a45-8c56-4699-b8f2-0e0b21b2919e:yes",
@@ -1904,7 +762,7 @@
           "team": "POR",
           "teamNameZh": "开拓者",
           "margin": 34.5,
-          "pricePercent": 3.0
+          "pricePercent": null
         },
         {
           "id": "5b42cf9a-3f3f-4e72-aae6-315aa94030f6:yes",
@@ -1913,7 +771,7 @@
           "team": "POR",
           "teamNameZh": "开拓者",
           "margin": 36.5,
-          "pricePercent": 3.0
+          "pricePercent": null
         },
         {
           "id": "1f03fd5d-b412-4bf5-8f5e-663318258cd7:yes",
@@ -1922,7 +780,7 @@
           "team": "POR",
           "teamNameZh": "开拓者",
           "margin": 38.5,
-          "pricePercent": 3.0
+          "pricePercent": null
         },
         {
           "id": "2815da5e-57c9-4a70-bab1-2f62e1a04f80:yes",
@@ -1931,7 +789,7 @@
           "team": "POR",
           "teamNameZh": "开拓者",
           "margin": 40.5,
-          "pricePercent": 3.0
+          "pricePercent": null
         },
         {
           "id": "af7100d3-7e8f-490b-8db0-709904d8648b:yes",
@@ -1940,7 +798,7 @@
           "team": "POR",
           "teamNameZh": "开拓者",
           "margin": 42.5,
-          "pricePercent": 3.0
+          "pricePercent": null
         },
         {
           "id": "d45f94b5-c4b2-42bc-82fa-6450f153dc6d:yes",
@@ -1949,7 +807,7 @@
           "team": "POR",
           "teamNameZh": "开拓者",
           "margin": 44.5,
-          "pricePercent": 3.0
+          "pricePercent": null
         },
         {
           "id": "1b0d8fed-224d-463b-944c-c76c0b920748:yes",
@@ -1958,7 +816,7 @@
           "team": "POR",
           "teamNameZh": "开拓者",
           "margin": 45.5,
-          "pricePercent": 3.0
+          "pricePercent": null
         },
         {
           "id": "1b0d8fed-224d-463b-944c-c76c0b920748:no",
@@ -2129,7 +987,7 @@
           "team": "SAS",
           "teamNameZh": "马刺",
           "margin": -13.5,
-          "pricePercent": 97.0
+          "pricePercent": null
         },
         {
           "id": "8db02f31-f2cf-4f62-84bf-5acb477ab9ee:no",
@@ -2138,7 +996,7 @@
           "team": "SAS",
           "teamNameZh": "马刺",
           "margin": -12.5,
-          "pricePercent": 98.0
+          "pricePercent": null
         },
         {
           "id": "2fd84524-10e7-48ee-954a-d0a57df882df:no",
@@ -2147,7 +1005,7 @@
           "team": "SAS",
           "teamNameZh": "马刺",
           "margin": -11.5,
-          "pricePercent": 95.0
+          "pricePercent": null
         },
         {
           "id": "a64bab84-c2f2-48ac-9a8e-0e52185b534b:no",
@@ -2156,7 +1014,7 @@
           "team": "SAS",
           "teamNameZh": "马刺",
           "margin": -10.5,
-          "pricePercent": 96.0
+          "pricePercent": null
         },
         {
           "id": "5f144fb1-6160-4eb8-b06e-289281069c2a:no",
@@ -2165,7 +1023,7 @@
           "team": "SAS",
           "teamNameZh": "马刺",
           "margin": -9.5,
-          "pricePercent": 92.0
+          "pricePercent": 99.0
         },
         {
           "id": "be8376f0-96a4-4576-9048-26feaf70a4ab:no",
@@ -2174,7 +1032,7 @@
           "team": "SAS",
           "teamNameZh": "马刺",
           "margin": -8.5,
-          "pricePercent": 92.0
+          "pricePercent": null
         },
         {
           "id": "c1e122b4-f113-4e05-9570-75b147fffe5e:no",
@@ -2183,7 +1041,7 @@
           "team": "SAS",
           "teamNameZh": "马刺",
           "margin": -7.5,
-          "pricePercent": 88.0
+          "pricePercent": 95.0
         },
         {
           "id": "6575ae8e-275e-4a2a-94b2-a1ef84200240:no",
@@ -2192,7 +1050,7 @@
           "team": "SAS",
           "teamNameZh": "马刺",
           "margin": -6.5,
-          "pricePercent": 87.0
+          "pricePercent": 91.0
         },
         {
           "id": "13062cb9-55d9-4575-b921-b5716b4bb4ec:no",
@@ -2201,7 +1059,7 @@
           "team": "SAS",
           "teamNameZh": "马刺",
           "margin": -5.5,
-          "pricePercent": 82.0
+          "pricePercent": 83.0
         },
         {
           "id": "8186c477-a848-4968-927f-e36b364d7bc1:no",
@@ -2210,7 +1068,7 @@
           "team": "SAS",
           "teamNameZh": "马刺",
           "margin": -4.5,
-          "pricePercent": 79.0
+          "pricePercent": 77.0
         },
         {
           "id": "b68e832f-ac0d-4bff-aff0-d606a8534dcb:no",
@@ -2219,7 +1077,7 @@
           "team": "SAS",
           "teamNameZh": "马刺",
           "margin": -3.5,
-          "pricePercent": 76.0
+          "pricePercent": 68.0
         },
         {
           "id": "554104dc-0c01-45ca-8f37-5ba5e3369e9c:no",
@@ -2228,7 +1086,7 @@
           "team": "SAS",
           "teamNameZh": "马刺",
           "margin": -2.5,
-          "pricePercent": 73.0
+          "pricePercent": 61.0
         },
         {
           "id": "36b5c5d9-9af6-48dd-bd23-e331db23de3c:no",
@@ -2237,7 +1095,7 @@
           "team": "SAS",
           "teamNameZh": "马刺",
           "margin": -1.5,
-          "pricePercent": 68.0
+          "pricePercent": 53.0
         },
         {
           "id": "40468ee3-4ed8-4765-96c0-d8e45bdd7a5f:yes",
@@ -2246,7 +1104,7 @@
           "team": "SAS",
           "teamNameZh": "马刺",
           "margin": 1.5,
-          "pricePercent": 62.0
+          "pricePercent": 41.0
         },
         {
           "id": "1ed39e83-fed2-4414-9e3f-39fa7c20ff38:yes",
@@ -2255,7 +1113,7 @@
           "team": "SAS",
           "teamNameZh": "马刺",
           "margin": 2.5,
-          "pricePercent": 57.0
+          "pricePercent": 33.0
         },
         {
           "id": "8521bcba-f3d6-401a-8781-4fd25c1a4f50:yes",
@@ -2264,7 +1122,7 @@
           "team": "SAS",
           "teamNameZh": "马刺",
           "margin": 3.5,
-          "pricePercent": 53.0
+          "pricePercent": 26.0
         },
         {
           "id": "b66cf788-921b-4bf9-bce2-58abd45e3264:yes",
@@ -2273,7 +1131,7 @@
           "team": "SAS",
           "teamNameZh": "马刺",
           "margin": 4.5,
-          "pricePercent": 48.0
+          "pricePercent": 19.0
         },
         {
           "id": "eada0c8c-a899-4ac6-8261-0abcf0e4b33b:yes",
@@ -2282,7 +1140,7 @@
           "team": "SAS",
           "teamNameZh": "马刺",
           "margin": 5.5,
-          "pricePercent": 44.0
+          "pricePercent": 17.0
         },
         {
           "id": "89d93705-1251-4a6b-884e-1722123ca30b:yes",
@@ -2291,7 +1149,7 @@
           "team": "SAS",
           "teamNameZh": "马刺",
           "margin": 6.5,
-          "pricePercent": 39.0
+          "pricePercent": 11.0
         },
         {
           "id": "49727095-139a-473c-95d0-15d375098995:yes",
@@ -2300,7 +1158,7 @@
           "team": "SAS",
           "teamNameZh": "马刺",
           "margin": 7.5,
-          "pricePercent": 34.0
+          "pricePercent": 7.0
         },
         {
           "id": "4029b31a-6770-464d-beb1-d4430f19aa4b:yes",
@@ -2309,7 +1167,7 @@
           "team": "SAS",
           "teamNameZh": "马刺",
           "margin": 8.5,
-          "pricePercent": 30.0
+          "pricePercent": 6.0
         },
         {
           "id": "337bccde-6d73-4a21-9ca7-0f4aeeb34dd7:yes",
@@ -2318,7 +1176,7 @@
           "team": "SAS",
           "teamNameZh": "马刺",
           "margin": 9.5,
-          "pricePercent": 26.0
+          "pricePercent": 8.0
         },
         {
           "id": "ee694abf-5ea7-48eb-8133-ca9a6bda7f45:yes",
@@ -2327,7 +1185,7 @@
           "team": "SAS",
           "teamNameZh": "马刺",
           "margin": 10.5,
-          "pricePercent": 22.0
+          "pricePercent": 4.0
         },
         {
           "id": "57afacb1-7c56-4701-916e-d8e6f6f682cb:yes",
@@ -2336,7 +1194,7 @@
           "team": "SAS",
           "teamNameZh": "马刺",
           "margin": 11.5,
-          "pricePercent": 19.0
+          "pricePercent": null
         },
         {
           "id": "12bc2955-ab58-42e1-b779-c840dd16ac19:yes",
@@ -2345,7 +1203,7 @@
           "team": "SAS",
           "teamNameZh": "马刺",
           "margin": 12.5,
-          "pricePercent": 16.0
+          "pricePercent": 4.0
         },
         {
           "id": "39931603-5a60-46bd-b350-5024b55c1861:yes",
@@ -2354,7 +1212,7 @@
           "team": "SAS",
           "teamNameZh": "马刺",
           "margin": 13.5,
-          "pricePercent": 14.0
+          "pricePercent": null
         },
         {
           "id": "81232710-89d4-49e8-8b3e-88c72834b8bc:yes",
@@ -2363,7 +1221,7 @@
           "team": "SAS",
           "teamNameZh": "马刺",
           "margin": 14.5,
-          "pricePercent": 11.0
+          "pricePercent": 4.0
         },
         {
           "id": "a26c3c58-9aa7-445e-b543-a63c360956ee:yes",
@@ -2372,7 +1230,7 @@
           "team": "SAS",
           "teamNameZh": "马刺",
           "margin": 15.5,
-          "pricePercent": 10.0
+          "pricePercent": null
         },
         {
           "id": "eea5ca97-1913-4b26-84d3-d7b71a60e3dc:yes",
@@ -2381,7 +1239,7 @@
           "team": "SAS",
           "teamNameZh": "马刺",
           "margin": 16.5,
-          "pricePercent": 9.0
+          "pricePercent": 1.0
         },
         {
           "id": "053d78d6-1076-4d3a-870c-ba6c2cdb3de8:yes",
@@ -2390,7 +1248,7 @@
           "team": "SAS",
           "teamNameZh": "马刺",
           "margin": 18.5,
-          "pricePercent": 5.0
+          "pricePercent": 1.0
         },
         {
           "id": "c229d069-80d9-42b4-90f9-46d1b5a19c47:yes",
@@ -2399,7 +1257,7 @@
           "team": "SAS",
           "teamNameZh": "马刺",
           "margin": 20.5,
-          "pricePercent": 4.0
+          "pricePercent": 1.0
         },
         {
           "id": "1f5e0a6e-eeb6-4fa0-8e2a-20a832854896:yes",
@@ -2417,7 +1275,7 @@
           "team": "SAS",
           "teamNameZh": "马刺",
           "margin": 24.5,
-          "pricePercent": 1.0
+          "pricePercent": 4.0
         },
         {
           "id": "492960fc-fb16-48bf-8082-7e288735ca8d:yes",
@@ -2426,7 +1284,7 @@
           "team": "SAS",
           "teamNameZh": "马刺",
           "margin": 26.5,
-          "pricePercent": 1.0
+          "pricePercent": 3.0
         },
         {
           "id": "a453690d-9423-4404-84d6-0b6104513fc8:yes",
@@ -2453,7 +1311,7 @@
           "team": "SAS",
           "teamNameZh": "马刺",
           "margin": 32.5,
-          "pricePercent": 13.0
+          "pricePercent": null
         },
         {
           "id": "335c0032-e433-40db-9524-bcdf87ce8359:yes",
@@ -2462,7 +1320,7 @@
           "team": "SAS",
           "teamNameZh": "马刺",
           "margin": 34.5,
-          "pricePercent": 13.0
+          "pricePercent": null
         },
         {
           "id": "6a352d58-43c5-44ac-a8fe-efe195593e1f:yes",
@@ -2471,7 +1329,7 @@
           "team": "SAS",
           "teamNameZh": "马刺",
           "margin": 36.5,
-          "pricePercent": 13.0
+          "pricePercent": null
         },
         {
           "id": "ba5a4c72-ef97-44a5-96a1-e4a3ec265e08:yes",
@@ -2480,7 +1338,7 @@
           "team": "SAS",
           "teamNameZh": "马刺",
           "margin": 38.5,
-          "pricePercent": 13.0
+          "pricePercent": null
         },
         {
           "id": "999539f9-eb3b-4f7a-8831-6e9db88ca129:yes",
@@ -2489,7 +1347,7 @@
           "team": "SAS",
           "teamNameZh": "马刺",
           "margin": 40.5,
-          "pricePercent": 13.0
+          "pricePercent": null
         },
         {
           "id": "8335fbf2-b5af-4e2b-ac10-8681ca88ae8c:yes",
@@ -2498,7 +1356,7 @@
           "team": "SAS",
           "teamNameZh": "马刺",
           "margin": 42.5,
-          "pricePercent": 13.0
+          "pricePercent": null
         },
         {
           "id": "4a80e74f-ef23-4aa5-9645-aa2f40f5ba0c:yes",
@@ -2507,7 +1365,7 @@
           "team": "SAS",
           "teamNameZh": "马刺",
           "margin": 44.5,
-          "pricePercent": 13.0
+          "pricePercent": null
         },
         {
           "id": "3fc486ee-f39a-42ab-949a-45b42acf764f:yes",
@@ -2516,7 +1374,7 @@
           "team": "SAS",
           "teamNameZh": "马刺",
           "margin": 45.5,
-          "pricePercent": 13.0
+          "pricePercent": null
         }
       ]
     },
@@ -2809,7 +1667,7 @@
           "team": "MIA",
           "teamNameZh": "热火",
           "margin": 1.5,
-          "pricePercent": null
+          "pricePercent": 39.0
         },
         {
           "id": "8de2290b-edaf-4abf-840c-a2a5257c8924:yes",
@@ -2818,7 +1676,7 @@
           "team": "MIA",
           "teamNameZh": "热火",
           "margin": 2.5,
-          "pricePercent": null
+          "pricePercent": 36.0
         },
         {
           "id": "b2582028-0de5-4839-81a2-653a1c0f501b:yes",
@@ -3349,7 +2207,7 @@
           "team": "NYK",
           "teamNameZh": "尼克斯",
           "margin": -2.5,
-          "pricePercent": null
+          "pricePercent": 69.0
         },
         {
           "id": "f1074f0a-2fa8-46e9-8e20-7b2267e04b6a:no",
@@ -3358,7 +2216,7 @@
           "team": "NYK",
           "teamNameZh": "尼克斯",
           "margin": -1.5,
-          "pricePercent": null
+          "pricePercent": 66.0
         },
         {
           "id": "5eea58bc-e389-4b93-ac76-c55e13813339:yes",
@@ -14854,348 +13712,91 @@
   ],
   "totals": [
     {
-      "id": "2026-11-25-SAC-GSW",
-      "lines": [
-        {
-          "id": "c2b0a7d5-71a1-4f84-b54c-db9a05969578",
-          "points": 170.5,
-          "overPricePercent": null,
-          "underPricePercent": 13.0
-        },
-        {
-          "id": "5938494b-08e7-457a-91b0-35b5841fc9c6",
-          "points": 172.5,
-          "overPricePercent": null,
-          "underPricePercent": 13.0
-        },
-        {
-          "id": "fe239ff6-9041-4ced-a7eb-5720f24c5921",
-          "points": 174.5,
-          "overPricePercent": null,
-          "underPricePercent": 13.0
-        },
-        {
-          "id": "c0927c56-3514-432b-a227-fb9df6c2b0be",
-          "points": 176.5,
-          "overPricePercent": null,
-          "underPricePercent": 13.0
-        },
-        {
-          "id": "ffadb49e-48d4-4194-9768-0027a5ef2d08",
-          "points": 178.5,
-          "overPricePercent": null,
-          "underPricePercent": 13.0
-        },
-        {
-          "id": "db83875e-33aa-48a8-8393-5cd1a5cfd625",
-          "points": 180.5,
-          "overPricePercent": null,
-          "underPricePercent": 13.0
-        },
-        {
-          "id": "b9bd963d-12fe-431e-9f44-08a198968887",
-          "points": 182.5,
-          "overPricePercent": null,
-          "underPricePercent": 13.0
-        },
-        {
-          "id": "f1addf14-724b-4db2-b8d5-40477350b1be",
-          "points": 184.5,
-          "overPricePercent": null,
-          "underPricePercent": 13.0
-        },
-        {
-          "id": "d9c4755a-5987-46d2-9b49-d9b083c8d5a5",
-          "points": 186.5,
-          "overPricePercent": null,
-          "underPricePercent": 13.0
-        },
-        {
-          "id": "cd0c9ae6-ad5d-4a73-9513-ff2fd7467068",
-          "points": 188.5,
-          "overPricePercent": null,
-          "underPricePercent": 13.0
-        },
-        {
-          "id": "4782328e-e607-4af2-a627-2f25c3c3c70c",
-          "points": 190.5,
-          "overPricePercent": null,
-          "underPricePercent": 1.0
-        },
-        {
-          "id": "a4729011-034f-493c-a5d5-60eab94d9e10",
-          "points": 192.5,
-          "overPricePercent": null,
-          "underPricePercent": 1.0
-        },
-        {
-          "id": "8b13961d-d344-4096-8626-21c8dde53e8f",
-          "points": 194.5,
-          "overPricePercent": null,
-          "underPricePercent": 1.0
-        },
-        {
-          "id": "1446e04d-48cc-48b5-a438-70feb9c05bd8",
-          "points": 196.5,
-          "overPricePercent": null,
-          "underPricePercent": 1.0
-        },
-        {
-          "id": "4b6aff3a-8c50-4ca4-9d68-3b3013532a38",
-          "points": 198.5,
-          "overPricePercent": null,
-          "underPricePercent": 1.0
-        },
-        {
-          "id": "f6dc5fa1-b993-42ab-adf3-85d08d23c1c1",
-          "points": 200.5,
-          "overPricePercent": null,
-          "underPricePercent": 1.0
-        },
-        {
-          "id": "3335cd6f-67ee-44fc-921c-cea2b06db2b8",
-          "points": 202.5,
-          "overPricePercent": null,
-          "underPricePercent": 1.0
-        },
-        {
-          "id": "aaea16b4-0ca0-45e9-995e-a20c2e9026e1",
-          "points": 204.5,
-          "overPricePercent": null,
-          "underPricePercent": 1.0
-        },
-        {
-          "id": "6d5092fd-3ed9-4fe6-98bb-0b33368a5064",
-          "points": 206.5,
-          "overPricePercent": null,
-          "underPricePercent": 1.0
-        },
-        {
-          "id": "a8c98689-f1db-4faf-9978-87dbd98b26d4",
-          "points": 208.5,
-          "overPricePercent": null,
-          "underPricePercent": 1.0
-        },
-        {
-          "id": "9069e022-bd83-4212-aec1-63333dbedf9b",
-          "points": 210.5,
-          "overPricePercent": null,
-          "underPricePercent": 1.0
-        },
-        {
-          "id": "7d8fc64c-5db7-4588-9cf7-3d6143c47d36",
-          "points": 212.5,
-          "overPricePercent": null,
-          "underPricePercent": 1.0
-        },
-        {
-          "id": "dfa0d34f-4ed5-4f2c-b75a-46fe36fa2aad",
-          "points": 214.5,
-          "overPricePercent": null,
-          "underPricePercent": 1.0
-        },
-        {
-          "id": "8c71f94b-f822-427b-a7f4-1f9c254e91a9",
-          "points": 216.5,
-          "overPricePercent": null,
-          "underPricePercent": 1.0
-        },
-        {
-          "id": "ffe20a8c-911c-469e-bef8-bf994acafc5a",
-          "points": 218.5,
-          "overPricePercent": null,
-          "underPricePercent": 1.0
-        },
-        {
-          "id": "e45a04aa-3077-42c3-af36-b2c77dc31040",
-          "points": 220.5,
-          "overPricePercent": 99.0,
-          "underPricePercent": 3.0
-        },
-        {
-          "id": "c66d0be3-4158-4169-8a44-2c0265102603",
-          "points": 222.5,
-          "overPricePercent": 98.0,
-          "underPricePercent": 3.0
-        },
-        {
-          "id": "40d5f5c0-71c0-4456-8df3-244815d34423",
-          "points": 224.5,
-          "overPricePercent": 96.0,
-          "underPricePercent": 6.0
-        },
-        {
-          "id": "b02d5a02-65df-405d-a774-611731ce64f2",
-          "points": 226.5,
-          "overPricePercent": 93.0,
-          "underPricePercent": 8.0
-        },
-        {
-          "id": "c56b6862-ff15-40b5-88fd-c7e463df6e41",
-          "points": 228.5,
-          "overPricePercent": 89.0,
-          "underPricePercent": 12.0
-        },
-        {
-          "id": "43dbd960-4c55-47a6-89a4-5e20354c6dbc",
-          "points": 230.5,
-          "overPricePercent": 85.0,
-          "underPricePercent": 17.0
-        },
-        {
-          "id": "3c2d88f4-32f3-4e73-9535-572ca3d48ca6",
-          "points": 232.5,
-          "overPricePercent": 78.0,
-          "underPricePercent": 24.0
-        },
-        {
-          "id": "c6d0eef2-bc07-451a-8415-4f8f731d0b90",
-          "points": 234.5,
-          "overPricePercent": 70.0,
-          "underPricePercent": 33.0
-        },
-        {
-          "id": "0940f1e6-9716-4fd3-811d-1968bcb8a072",
-          "points": 236.5,
-          "overPricePercent": 62.0,
-          "underPricePercent": 40.0
-        },
-        {
-          "id": "61a7a6f1-b825-4b7c-8dd3-32cacaa1a784",
-          "points": 238.5,
-          "overPricePercent": 52.0,
-          "underPricePercent": 49.0
-        },
-        {
-          "id": "7a379b16-b84b-4517-acf2-43a27acee47a",
-          "points": 240.5,
-          "overPricePercent": 44.0,
-          "underPricePercent": 57.0
-        },
-        {
-          "id": "a73aacf6-6906-4cfc-aaaa-d7aa6c541b47",
-          "points": 242.5,
-          "overPricePercent": 36.0,
-          "underPricePercent": 66.0
-        },
-        {
-          "id": "b938547f-ad22-41ca-95c5-c0cf73fa9944",
-          "points": 244.5,
-          "overPricePercent": 28.0,
-          "underPricePercent": 73.0
-        },
-        {
-          "id": "6bdab2dc-3ccf-45f4-bfbd-9e2b344f821f",
-          "points": 246.5,
-          "overPricePercent": 22.0,
-          "underPricePercent": 79.0
-        },
-        {
-          "id": "e2b69dc8-9a47-43af-9a0a-5988ded8302b",
-          "points": 248.5,
-          "overPricePercent": 18.0,
-          "underPricePercent": 84.0
-        },
-        {
-          "id": "9b73d131-480d-49c0-b4a8-12dd34616127",
-          "points": 250.5,
-          "overPricePercent": 14.0,
-          "underPricePercent": 88.0
-        },
-        {
-          "id": "f7d89b31-8dab-4812-9c22-a2f10c283159",
-          "points": 252.5,
-          "overPricePercent": 11.0,
-          "underPricePercent": 96.0
-        }
-      ]
-    },
-    {
       "id": "2026-11-25-SAS-POR",
       "lines": [
         {
           "id": "607a2bc7-0e21-4f20-b078-e2fc9a1b56fe",
           "points": 170.5,
           "overPricePercent": null,
-          "underPricePercent": 13.0
+          "underPricePercent": 49.0
         },
         {
           "id": "ae233951-956a-4f9e-92cf-c34a0463ffed",
           "points": 172.5,
           "overPricePercent": null,
-          "underPricePercent": 13.0
+          "underPricePercent": 50.0
         },
         {
           "id": "2203a359-0037-462b-abe8-4025781aa84f",
           "points": 174.5,
           "overPricePercent": null,
-          "underPricePercent": 13.0
+          "underPricePercent": null
         },
         {
           "id": "08b6de39-af58-4645-b62e-a7de6ce47461",
           "points": 176.5,
           "overPricePercent": null,
-          "underPricePercent": 13.0
+          "underPricePercent": null
         },
         {
           "id": "84f10eeb-04fe-4cee-974d-d9c0990fd041",
           "points": 178.5,
           "overPricePercent": null,
-          "underPricePercent": 13.0
+          "underPricePercent": null
         },
         {
           "id": "c37e3e63-f923-4a9b-9a4d-15ca224d56eb",
           "points": 180.5,
           "overPricePercent": null,
-          "underPricePercent": 13.0
+          "underPricePercent": null
         },
         {
           "id": "d0eb5cf6-1e2c-4bec-b646-8ee8c542bc37",
           "points": 182.5,
           "overPricePercent": null,
-          "underPricePercent": 13.0
+          "underPricePercent": null
         },
         {
           "id": "7060bca0-b826-4275-aab0-050c6c141aa3",
           "points": 184.5,
           "overPricePercent": null,
-          "underPricePercent": 13.0
+          "underPricePercent": null
         },
         {
           "id": "deff6760-081f-4666-aa0c-9eca67a27b10",
           "points": 186.5,
           "overPricePercent": null,
-          "underPricePercent": 13.0
+          "underPricePercent": null
         },
         {
           "id": "3b58c11f-4ec7-4b0d-99e7-e638c0582c1c",
           "points": 188.5,
           "overPricePercent": null,
-          "underPricePercent": 13.0
+          "underPricePercent": null
         },
         {
           "id": "def0e526-1937-4eff-adea-3a0b485df746",
           "points": 190.5,
           "overPricePercent": null,
-          "underPricePercent": 13.0
+          "underPricePercent": null
         },
         {
           "id": "7dd4197c-3a34-4a53-ab3d-6c30e333e789",
           "points": 192.5,
           "overPricePercent": null,
-          "underPricePercent": 13.0
+          "underPricePercent": null
         },
         {
           "id": "e7590aeb-abee-4b59-9ad1-d85cf4387eec",
           "points": 194.5,
           "overPricePercent": null,
-          "underPricePercent": 13.0
+          "underPricePercent": 50.0
         },
         {
           "id": "5b4ff10d-6a18-4d58-84b8-a5cb64a16d53",
           "points": 196.5,
           "overPricePercent": null,
-          "underPricePercent": 13.0
+          "underPricePercent": 50.0
         },
         {
           "id": "2e4c4b98-a5a2-478c-98f8-037272272357",
@@ -15242,134 +13843,134 @@
         {
           "id": "98a09173-b40e-4831-83e4-1328cec1483a",
           "points": 212.5,
-          "overPricePercent": 99.0,
-          "underPricePercent": 2.0
+          "overPricePercent": null,
+          "underPricePercent": 4.0
         },
         {
           "id": "487b4bb2-be80-42a5-b013-d41824483dc9",
           "points": 214.5,
-          "overPricePercent": 99.0,
-          "underPricePercent": 2.0
+          "overPricePercent": null,
+          "underPricePercent": 4.0
         },
         {
           "id": "d4ded636-e700-486f-9f3d-29e6d84ecc6a",
           "points": 216.5,
-          "overPricePercent": 98.0,
+          "overPricePercent": null,
           "underPricePercent": 4.0
         },
         {
           "id": "f4448f0e-119a-4ebd-a419-df49eafb3983",
           "points": 218.5,
-          "overPricePercent": 96.0,
-          "underPricePercent": 5.0
+          "overPricePercent": null,
+          "underPricePercent": 4.0
         },
         {
           "id": "538a61cf-3092-40e0-bdb6-a45715151116",
           "points": 220.5,
-          "overPricePercent": 94.0,
-          "underPricePercent": 8.0
+          "overPricePercent": 98.0,
+          "underPricePercent": 6.0
         },
         {
           "id": "a25e0034-4fdc-4df4-9ed2-d51713df1f6f",
           "points": 222.5,
-          "overPricePercent": 90.0,
+          "overPricePercent": 95.0,
           "underPricePercent": 11.0
         },
         {
           "id": "5e29d88d-0f5a-4892-8f55-f14128d7a6ff",
           "points": 224.5,
-          "overPricePercent": 86.0,
-          "underPricePercent": 15.0
+          "overPricePercent": 87.0,
+          "underPricePercent": 16.0
         },
         {
           "id": "ec7afd17-e9fb-4821-943c-8e1179a3e14c",
           "points": 226.5,
-          "overPricePercent": 81.0,
-          "underPricePercent": 20.0
+          "overPricePercent": 77.0,
+          "underPricePercent": 26.0
         },
         {
           "id": "e8f9b0cf-9ca4-4e10-9b48-189e45ad5467",
           "points": 228.5,
-          "overPricePercent": 76.0,
-          "underPricePercent": 26.0
+          "overPricePercent": 63.0,
+          "underPricePercent": 38.0
         },
         {
           "id": "09c3cc9b-e970-431d-816b-b5740b6261c9",
           "points": 230.5,
-          "overPricePercent": 70.0,
-          "underPricePercent": 32.0
+          "overPricePercent": 50.0,
+          "underPricePercent": 53.0
         },
         {
           "id": "f32d24a7-a7f2-4c2e-9a4b-36f902736fc4",
           "points": 232.5,
-          "overPricePercent": 63.0,
-          "underPricePercent": 40.0
+          "overPricePercent": 37.0,
+          "underPricePercent": 65.0
         },
         {
           "id": "3600470a-b867-4b1d-aae0-75eb90719782",
           "points": 234.5,
-          "overPricePercent": 56.0,
-          "underPricePercent": 46.0
+          "overPricePercent": 30.0,
+          "underPricePercent": 75.0
         },
         {
           "id": "0f73d8b7-6276-4083-b72f-9ae2d0fedd04",
           "points": 236.5,
-          "overPricePercent": 48.0,
-          "underPricePercent": 53.0
+          "overPricePercent": 24.0,
+          "underPricePercent": 81.0
         },
         {
           "id": "5a63e1cd-e555-4d2d-9d71-bd64bdd5744d",
           "points": 238.5,
-          "overPricePercent": 41.0,
-          "underPricePercent": 61.0
+          "overPricePercent": 19.0,
+          "underPricePercent": 86.0
         },
         {
           "id": "e45be9f6-e087-414c-aa45-cb5113318f96",
           "points": 240.5,
-          "overPricePercent": 34.0,
-          "underPricePercent": 68.0
+          "overPricePercent": 17.0,
+          "underPricePercent": 88.0
         },
         {
           "id": "a380c5e6-9771-4b0d-a2bf-7d2002a2a787",
           "points": 242.5,
-          "overPricePercent": 29.0,
-          "underPricePercent": 74.0
+          "overPricePercent": 14.0,
+          "underPricePercent": 91.0
         },
         {
           "id": "111c8e63-43f5-42f6-982a-f2261293f1e7",
           "points": 244.5,
-          "overPricePercent": 23.0,
-          "underPricePercent": 79.0
+          "overPricePercent": 13.0,
+          "underPricePercent": 94.0
         },
         {
           "id": "19678d4e-ec0a-43f3-8862-8a68b2c1d303",
           "points": 246.5,
-          "overPricePercent": 19.0,
-          "underPricePercent": 83.0
+          "overPricePercent": 13.0,
+          "underPricePercent": 94.0
         },
         {
           "id": "9aef38c1-0fd2-4ed3-b9c3-1d73502189be",
           "points": 248.5,
-          "overPricePercent": 15.0,
-          "underPricePercent": 87.0
+          "overPricePercent": 12.0,
+          "underPricePercent": 95.0
         },
         {
           "id": "60e8b5c6-3247-46b4-a14d-2363f426e79c",
           "points": 250.5,
-          "overPricePercent": 12.0,
-          "underPricePercent": 90.0
+          "overPricePercent": 10.0,
+          "underPricePercent": 97.0
         },
         {
           "id": "b1b5226f-2f15-4088-bc0f-3994cb8797fd",
           "points": 252.5,
-          "overPricePercent": 15.0,
-          "underPricePercent": 97.0
+          "overPricePercent": null,
+          "underPricePercent": null
         },
         {
           "id": "1b83cadd-470d-4303-aa98-fbac2f159d85",
           "points": 254.5,
-          "overPricePercent": 13.0,
-          "underPricePercent": 99.0
+          "overPricePercent": null,
+          "underPricePercent": null
         }
       ]
     },
