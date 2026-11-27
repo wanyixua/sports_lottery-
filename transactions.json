@@ -5992,7 +5992,7 @@
       "usDate": "2026-11-25",
       "bet": "PHI",
       "stake": 20,
-      "payout": 31.0,
+      "payout": 31,
       "status": "win",
       "profitIfWin": 11,
       "legs": [
@@ -6015,7 +6015,7 @@
       "usDate": "2026-11-25",
       "bet": "CHI +6.5",
       "stake": 20,
-      "payout": 32.0,
+      "payout": 32,
       "status": "win",
       "profitIfWin": 12,
       "legs": [
@@ -6039,7 +6039,7 @@
       "usDate": "2026-11-25",
       "bet": "NYK",
       "stake": 20,
-      "payout": 30.0,
+      "payout": 30,
       "status": "win",
       "profitIfWin": 10,
       "legs": [
@@ -6062,7 +6062,7 @@
       "usDate": "2026-11-25",
       "bet": "MIN",
       "stake": 20,
-      "payout": 42.0,
+      "payout": 42,
       "status": "win",
       "profitIfWin": 22,
       "legs": [
@@ -6085,7 +6085,7 @@
       "usDate": "2026-11-25",
       "bet": "MEM",
       "stake": 20,
-      "payout": 27.0,
+      "payout": 27,
       "status": "win",
       "profitIfWin": 7,
       "legs": [
@@ -6132,7 +6132,7 @@
       "usDate": "2026-11-25",
       "bet": "HOU",
       "stake": 20,
-      "payout": 24.0,
+      "payout": 24,
       "status": "win",
       "profitIfWin": 4,
       "legs": [
@@ -6196,6 +6196,256 @@
         "loss"
       ],
       "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
+    },
+    {
+      "id": 243,
+      "owner": "王老板",
+      "usDate": "2026-11-27",
+      "bet": "PHI + DET",
+      "stake": 20,
+      "payout": null,
+      "status": "pending",
+      "profitIfWin": 20,
+      "legs": [
+        {
+          "team": "PHI",
+          "market": "moneyline",
+          "gameDate": "2026-11-27"
+        },
+        {
+          "team": "DET",
+          "market": "moneyline",
+          "gameDate": "2026-11-27"
+        }
+      ],
+      "beijingDate": "2026-11-28",
+      "note": "RH_FILLED_20261127_1535_PHI_DET_2LEG | RH Filled 40/40 @ $0.482; 王老板微信指令：76人+活塞二串一; 本金$20，全中返还$40，净利润$20; 比赛待结算"
+    },
+    {
+      "id": 244,
+      "owner": "王老板",
+      "usDate": "2026-11-27",
+      "bet": "MIN + DAL",
+      "stake": 20,
+      "payout": null,
+      "status": "pending",
+      "profitIfWin": 56,
+      "legs": [
+        {
+          "team": "MIN",
+          "market": "moneyline",
+          "gameDate": "2026-11-27"
+        },
+        {
+          "team": "DAL",
+          "market": "moneyline",
+          "gameDate": "2026-11-27"
+        }
+      ],
+      "beijingDate": "2026-11-28",
+      "note": "RH_FILLED_20261127_1536_MIN_DAL_2LEG | RH Filled 76/76 @ $0.248; 王老板微信指令：森林狼+独行侠二串一; 本金$20，全中返还$76，净利润$56; 比赛待结算"
+    },
+    {
+      "id": 245,
+      "owner": "王老板",
+      "usDate": "2026-11-27",
+      "bet": "TOR + POR + DET",
+      "stake": 30,
+      "payout": null,
+      "status": "pending",
+      "profitIfWin": 36,
+      "legs": [
+        {
+          "team": "TOR",
+          "market": "moneyline",
+          "gameDate": "2026-11-27"
+        },
+        {
+          "team": "POR",
+          "market": "moneyline",
+          "gameDate": "2026-11-27"
+        },
+        {
+          "team": "DET",
+          "market": "moneyline",
+          "gameDate": "2026-11-27"
+        }
+      ],
+      "beijingDate": "2026-11-28",
+      "note": "RH_FILLED_20261127_1537_TOR_POR_DET_3LEG | RH Filled 66/66 @ $0.436; 王老板微信指令：猛龙+开拓者+活塞三串一; 本金$30，全中返还$66，净利润$36; 比赛待结算"
+    },
+    {
+      "id": 246,
+      "owner": "王老板",
+      "usDate": "2026-11-27",
+      "bet": "BOS",
+      "stake": 10,
+      "payout": null,
+      "status": "pending",
+      "profitIfWin": 2,
+      "legs": [
+        {
+          "team": "BOS",
+          "market": "moneyline",
+          "gameDate": "2026-11-27"
+        }
+      ],
+      "beijingDate": "2026-11-28",
+      "note": "RH_FILLED_20261127_1537_BOS | RH Filled 12/12 @ $0.78; 王老板微信指令：凯尔特人胜; 本金$10，全中返还$12，净利润$2; 比赛待结算"
+    },
+    {
+      "id": 247,
+      "owner": "王老板",
+      "usDate": "2026-11-27",
+      "bet": "SAS -5.5",
+      "stake": 10,
+      "payout": null,
+      "status": "pending",
+      "profitIfWin": 8,
+      "legs": [
+        {
+          "team": "SAS",
+          "market": "spread",
+          "line": -5.5,
+          "gameDate": "2026-11-27"
+        }
+      ],
+      "beijingDate": "2026-11-28",
+      "note": "RH_FILLED_20261127_1538_SAS_MINUS5.5 | RH Filled 18/18 @ $0.53; 王老板微信指令：马刺让5.5; 本金$10，全中返还$18，净利润$8; 比赛待结算"
+    },
+    {
+      "id": 248,
+      "owner": "王老板",
+      "usDate": "2026-11-27",
+      "bet": "DEN",
+      "stake": 20,
+      "payout": null,
+      "status": "pending",
+      "profitIfWin": 4,
+      "legs": [
+        {
+          "team": "DEN",
+          "market": "moneyline",
+          "gameDate": "2026-11-27"
+        }
+      ],
+      "beijingDate": "2026-11-28",
+      "note": "RH_FILLED_20261127_1538_DEN | RH Filled 24/24 @ $0.79; 王老板微信指令：掘金胜; 本金$20，全中返还$24，净利润$4; 比赛待结算"
+    },
+    {
+      "id": 249,
+      "owner": "王老板",
+      "usDate": "2026-11-27",
+      "bet": "NOP",
+      "stake": 10,
+      "payout": null,
+      "status": "pending",
+      "profitIfWin": 11,
+      "legs": [
+        {
+          "team": "NOP",
+          "market": "moneyline",
+          "gameDate": "2026-11-27"
+        }
+      ],
+      "beijingDate": "2026-11-28",
+      "note": "RH_FILLED_20261127_1539_NOP | RH Filled 21/21 @ $0.46; 王老板微信指令：鹈鹕胜; 本金$10，全中返还$21，净利润$11; 比赛待结算"
+    },
+    {
+      "owner": "王老板",
+      "usDate": "2026-11-27",
+      "bet": "NYK + TOR",
+      "stake": 10,
+      "payout": null,
+      "status": "pending",
+      "profitIfWin": 11,
+      "legs": [
+        {
+          "team": "NYK",
+          "market": "moneyline",
+          "gameDate": "2026-11-27"
+        },
+        {
+          "team": "TOR",
+          "market": "moneyline",
+          "gameDate": "2026-11-27"
+        }
+      ],
+      "beijingDate": "2026-11-28",
+      "note": "RH_FILLED_20261127_1534_NYK_TOR_2LEG | RH Filled 21/21 @ $0.455, 10本11利; MIA vs NYK / BKN vs TOR; 王老板微信尼克斯胜+猛龙胜10刀; 未结算",
+      "id": 250
+    },
+    {
+      "owner": "王老板",
+      "usDate": "2026-11-27",
+      "bet": "TOR -5.5 + DET -3.5 + BOS -1.5 + POR -4.5 + DEN",
+      "stake": 20,
+      "payout": null,
+      "status": "pending",
+      "profitIfWin": 97,
+      "legs": [
+        {
+          "team": "TOR",
+          "market": "spread",
+          "line": -5.5,
+          "gameDate": "2026-11-27"
+        },
+        {
+          "team": "DET",
+          "market": "spread",
+          "line": -3.5,
+          "gameDate": "2026-11-27"
+        },
+        {
+          "team": "BOS",
+          "market": "spread",
+          "line": -1.5,
+          "gameDate": "2026-11-27"
+        },
+        {
+          "team": "POR",
+          "market": "spread",
+          "line": -4.5,
+          "gameDate": "2026-11-27"
+        },
+        {
+          "team": "DEN",
+          "market": "moneyline",
+          "gameDate": "2026-11-27"
+        }
+      ],
+      "beijingDate": "2026-11-28",
+      "note": "RH_FILLED_20261127_1533_TOR_DET_BOS_POR_DEN_5LEG | RH Filled 117/117 @ $0.157, 20本97利; 王老板微信要求TOR -5.5, DET -3.5, BOS -2.5, POR -4.5, DEN胜; 实际RH BOS -1.5（盘口更有利但与指令不同）; 未结算",
+      "id": 251
+    },
+    {
+      "owner": "小王",
+      "usDate": "2026-11-27",
+      "bet": "DEN + DET + PHI",
+      "stake": 30,
+      "payout": null,
+      "status": "pending",
+      "profitIfWin": 46,
+      "legs": [
+        {
+          "team": "DEN",
+          "market": "moneyline",
+          "gameDate": "2026-11-27"
+        },
+        {
+          "team": "DET",
+          "market": "moneyline",
+          "gameDate": "2026-11-27"
+        },
+        {
+          "team": "PHI",
+          "market": "moneyline",
+          "gameDate": "2026-11-27"
+        }
+      ],
+      "beijingDate": "2026-11-28",
+      "note": "RH_FILLED_20261126_1759_DEN_DET_PHI_3LEG | RH Filled 76/76 @ $0.375, 30本46利; 2026-11-26成交, 2026-11-27比赛; 用户明确此三串一是本人; 未结算",
+      "id": 252
     }
   ]
 }
