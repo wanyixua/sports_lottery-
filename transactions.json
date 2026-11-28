@@ -6232,8 +6232,8 @@
       "usDate": "2026-11-27",
       "bet": "MIN + DAL",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 0,
+      "status": "loss",
       "profitIfWin": 56,
       "legs": [
         {
@@ -6248,7 +6248,12 @@
         }
       ],
       "beijingDate": "2026-11-28",
-      "note": "RH_FILLED_20261127_1536_MIN_DAL_2LEG | RH Filled 76/76 @ $0.248; 王老板微信指令：森林狼+独行侠二串一; 本金$20，全中返还$76，净利润$56; 比赛待结算"
+      "note": "RH_FILLED_20261127_1536_MIN_DAL_2LEG | RH Filled 76/76 @ $0.248; 王老板微信指令：森林狼+独行侠二串一; 本金$20，全中返还$76，净利润$56; 比赛待结算",
+      "legResults": [
+        "loss",
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "id": 245,
@@ -6285,8 +6290,8 @@
       "usDate": "2026-11-27",
       "bet": "BOS",
       "stake": 10,
-      "payout": null,
-      "status": "pending",
+      "payout": 0,
+      "status": "loss",
       "profitIfWin": 2,
       "legs": [
         {
@@ -6296,7 +6301,11 @@
         }
       ],
       "beijingDate": "2026-11-28",
-      "note": "RH_FILLED_20261127_1537_BOS | RH Filled 12/12 @ $0.78; 王老板微信指令：凯尔特人胜; 本金$10，全中返还$12，净利润$2; 比赛待结算"
+      "note": "RH_FILLED_20261127_1537_BOS | RH Filled 12/12 @ $0.78; 王老板微信指令：凯尔特人胜; 本金$10，全中返还$12，净利润$2; 比赛待结算",
+      "legResults": [
+        "loss"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "id": 247,
@@ -6390,8 +6399,8 @@
       "usDate": "2026-11-27",
       "bet": "TOR -5.5 + DET -3.5 + BOS -1.5 + POR -4.5 + DEN",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 0,
+      "status": "loss",
       "profitIfWin": 97,
       "legs": [
         {
@@ -6426,7 +6435,15 @@
       ],
       "beijingDate": "2026-11-28",
       "note": "RH_FILLED_20261127_1533_TOR_DET_BOS_POR_DEN_5LEG | RH Filled 117/117 @ $0.157, 20本97利; 王老板微信要求TOR -5.5, DET -3.5, BOS -2.5, POR -4.5, DEN胜; 实际RH BOS -1.5（盘口更有利但与指令不同）; 未结算",
-      "id": 251
+      "id": 251,
+      "legResults": [
+        "win",
+        "win",
+        "loss",
+        null,
+        null
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "owner": "小王",
