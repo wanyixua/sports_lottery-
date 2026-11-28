@@ -6319,8 +6319,8 @@
       "usDate": "2026-11-27",
       "bet": "SAS -5.5",
       "stake": 10,
-      "payout": null,
-      "status": "pending",
+      "payout": 0,
+      "status": "loss",
       "profitIfWin": 8,
       "legs": [
         {
@@ -6331,7 +6331,11 @@
         }
       ],
       "beijingDate": "2026-11-28",
-      "note": "RH_FILLED_20261127_1538_SAS_MINUS5.5 | RH Filled 18/18 @ $0.53; 王老板微信指令：马刺让5.5; 本金$10，全中返还$18，净利润$8; 比赛待结算"
+      "note": "RH_FILLED_20261127_1538_SAS_MINUS5.5 | RH Filled 18/18 @ $0.53; 王老板微信指令：马刺让5.5; 本金$10，全中返还$18，净利润$8; 比赛待结算",
+      "legResults": [
+        "loss"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "id": 248,
