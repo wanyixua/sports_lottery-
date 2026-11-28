@@ -6203,8 +6203,8 @@
       "usDate": "2026-11-27",
       "bet": "PHI + DET",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 40.0,
+      "status": "win",
       "profitIfWin": 20,
       "legs": [
         {
@@ -6219,7 +6219,12 @@
         }
       ],
       "beijingDate": "2026-11-28",
-      "note": "RH_FILLED_20261127_1535_PHI_DET_2LEG | RH Filled 40/40 @ $0.482; 王老板微信指令：76人+活塞二串一; 本金$20，全中返还$40，净利润$20; 比赛待结算"
+      "note": "RH_FILLED_20261127_1535_PHI_DET_2LEG | RH Filled 40/40 @ $0.482; 王老板微信指令：76人+活塞二串一; 本金$20，全中返还$40，净利润$20; 比赛待结算",
+      "legResults": [
+        "win",
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "id": 244,
@@ -6356,8 +6361,8 @@
       "usDate": "2026-11-27",
       "bet": "NYK + TOR",
       "stake": 10,
-      "payout": null,
-      "status": "pending",
+      "payout": 0,
+      "status": "loss",
       "profitIfWin": 11,
       "legs": [
         {
@@ -6373,7 +6378,12 @@
       ],
       "beijingDate": "2026-11-28",
       "note": "RH_FILLED_20261127_1534_NYK_TOR_2LEG | RH Filled 21/21 @ $0.455, 10本11利; MIA vs NYK / BKN vs TOR; 王老板微信尼克斯胜+猛龙胜10刀; 未结算",
-      "id": 250
+      "id": 250,
+      "legResults": [
+        "loss",
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "owner": "王老板",
