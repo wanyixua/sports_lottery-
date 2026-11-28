@@ -6261,8 +6261,8 @@
       "usDate": "2026-11-27",
       "bet": "TOR + POR + DET",
       "stake": 30,
-      "payout": null,
-      "status": "pending",
+      "payout": 66.0,
+      "status": "win",
       "profitIfWin": 36,
       "legs": [
         {
@@ -6282,7 +6282,13 @@
         }
       ],
       "beijingDate": "2026-11-28",
-      "note": "RH_FILLED_20261127_1537_TOR_POR_DET_3LEG | RH Filled 66/66 @ $0.436; 王老板微信指令：猛龙+开拓者+活塞三串一; 本金$30，全中返还$66，净利润$36; 比赛待结算"
+      "note": "RH_FILLED_20261127_1537_TOR_POR_DET_3LEG | RH Filled 66/66 @ $0.436; 王老板微信指令：猛龙+开拓者+活塞三串一; 本金$30，全中返还$66，净利润$36; 比赛待结算",
+      "legResults": [
+        "win",
+        "win",
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "id": 246,
@@ -6333,8 +6339,8 @@
       "usDate": "2026-11-27",
       "bet": "DEN",
       "stake": 20,
-      "payout": null,
-      "status": "pending",
+      "payout": 24.0,
+      "status": "win",
       "profitIfWin": 4,
       "legs": [
         {
@@ -6344,7 +6350,11 @@
         }
       ],
       "beijingDate": "2026-11-28",
-      "note": "RH_FILLED_20261127_1538_DEN | RH Filled 24/24 @ $0.79; 王老板微信指令：掘金胜; 本金$20，全中返还$24，净利润$4; 比赛待结算"
+      "note": "RH_FILLED_20261127_1538_DEN | RH Filled 24/24 @ $0.79; 王老板微信指令：掘金胜; 本金$20，全中返还$24，净利润$4; 比赛待结算",
+      "legResults": [
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "id": 249,
@@ -6352,8 +6362,8 @@
       "usDate": "2026-11-27",
       "bet": "NOP",
       "stake": 10,
-      "payout": null,
-      "status": "pending",
+      "payout": 21.0,
+      "status": "win",
       "profitIfWin": 11,
       "legs": [
         {
@@ -6363,7 +6373,11 @@
         }
       ],
       "beijingDate": "2026-11-28",
-      "note": "RH_FILLED_20261127_1539_NOP | RH Filled 21/21 @ $0.46; 王老板微信指令：鹈鹕胜; 本金$10，全中返还$21，净利润$11; 比赛待结算"
+      "note": "RH_FILLED_20261127_1539_NOP | RH Filled 21/21 @ $0.46; 王老板微信指令：鹈鹕胜; 本金$10，全中返还$21，净利润$11; 比赛待结算",
+      "legResults": [
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     },
     {
       "owner": "王老板",
@@ -6450,8 +6464,8 @@
       "usDate": "2026-11-27",
       "bet": "DEN + DET + PHI",
       "stake": 30,
-      "payout": null,
-      "status": "pending",
+      "payout": 76.0,
+      "status": "win",
       "profitIfWin": 46,
       "legs": [
         {
@@ -6472,7 +6486,13 @@
       ],
       "beijingDate": "2026-11-28",
       "note": "RH_FILLED_20261126_1759_DEN_DET_PHI_3LEG | RH Filled 76/76 @ $0.375, 30本46利; 2026-11-26成交, 2026-11-27比赛; 用户明确此三串一是本人; 未结算",
-      "id": 252
+      "id": 252,
+      "legResults": [
+        "win",
+        "win",
+        "win"
+      ],
+      "resultSource": "ESPN scoreboard (final scores by each leg gameDate); verify special RH settlement rules"
     }
   ]
 }
